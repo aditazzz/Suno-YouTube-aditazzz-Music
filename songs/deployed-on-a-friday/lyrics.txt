@@ -1,0 +1,65 @@
+#INTRO
+Four fifty-nine
+Ship it
+#V1
+Four fifty-nine, laptop half shut
+One little change, what could it cut
+No ticket, no test, no second pair of eyes
+Green check lying like it always lies
+Coffee gone cold, I'm halfway out the door
+Merge to main like I've done before
+Windows down, salt on the breeze
+Pager on my hip starts begging me please
+#PRE1
+Buzz, buzz, don't look
+Buzz, buzz, I looked
+#CH1
+I deployed on a Friday, tide coming in
+Prod going under, I'm learning to swim
+Rollback, rollback, throw me a rope
+Dashboard red as a sunset, nope
+I deployed on a Friday, never again
+Said that last Friday, never again
+#V2
+Slack lighting up like a boardwalk at night
+Anyone change something? I'm sitting tight
+Null in the column where the money should be
+Ten thousand rows all pointing at me
+Retry, retry, queue backing up
+Dead letters stacking like shells in a cup
+VP typing, VP stopped
+VP typing, there it dropped
+#PRE2
+Buzz, buzz, don't look
+Buzz, buzz, I'm cooked
+#CH2
+I deployed on a Friday, tide coming in
+Prod going under, I'm learning to swim
+Rollback, rollback, throw me a rope
+Dashboard red as a sunset, nope
+I deployed on a Friday, never again
+Said that last Friday, never again
+#BRIDGE
+Low tide shows you everything
+Every shortcut, every string
+Fix it from the parking lot
+One bar of signal's all I got
+#V3
+Revert the revert, cherry-pick, push
+Pipeline crawling, come on, whoosh
+Cache still warm with the bad old state
+Flush it, bounce it, sit and wait
+Graph dips down, graph comes back
+Green on green, I fade to black
+Close the laptop, hear the sea
+Phone lights up: quick question for me
+#FINAL
+I deployed on a Friday, tide going out
+Prod's still standing, never a doubt
+Rollback, rollback, cut the rope
+Monday's a postmortem, blameless, nope
+I deployed on a Friday, never again
+See you next Friday, never again
+#OUTRO
+Root cause: me
+Four fifty-nine

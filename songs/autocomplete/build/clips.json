@@ -1,0 +1,56 @@
+{
+ "clips": [
+  {
+   "kind": "reel",
+   "label": "setup",
+   "start": 2.15,
+   "end": 30.5,
+   "hook": "It finishes my sentences before I do",
+   "file": "Autocomplete - Reel 1 (setup, 28s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "chorus",
+   "start": 39.75,
+   "end": 60.3,
+   "hook": "POV: your AI knows what you'll say next",
+   "hook_y": 0.45,
+   "file": "Autocomplete - Reel 2 (chorus, 21s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "bridge",
+   "start": 127.75,
+   "end": 152.7,
+   "hook": "Do you know how I was going to end?",
+   "hook_y": 0.45,
+   "file": "Autocomplete - Reel 3 (bridge, 25s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "first chorus",
+   "start": 30.35,
+   "end": 60.3,
+   "hook": "A love song to autocomplete",
+   "file": "Autocomplete - Short 1 (first chorus, 30s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "final chorus",
+   "start": 82.85,
+   "end": 124.9,
+   "hook": "Being understood this fast feels like being wanted",
+   "file": "Autocomplete - Short 2 (final chorus, 42s).mp4"
+  }
+ ],
+ "edit": {
+  "file": "Autocomplete - Instagram 9x16 (under 3 min).mp4",
+  "segments": [
+   [
+    0.0,
+    178.0
+   ]
+  ],
+  "duration": 178.0
+ }
+}

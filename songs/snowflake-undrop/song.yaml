@@ -1,0 +1,90 @@
+title: Snowflake Undrop
+audio: Snowflake Undrop.wav
+folder: Snowflake Undrop
+model_credit: Claude Opus 5.5        # the model that actually made THIS video
+ai_music: true                       # vocals/music AI-generated -> tick YouTube "altered or synthetic content"
+stamp_word: UNDROP
+cover_time: 85.1                     # vertical cover / first frame of hero clips
+thumb_time: 228.0                    # 16:9 hero frame for the thumbnail
+thumb_caption: "Table PRODUCTION successfully restored."
+status: produced                     # idea | lyrics | synced | rendered | produced | scheduled | live
+
+aliases:                             # extra ASR spellings for tricky words
+  undrop: [drop, dropped, under, ondrop, undo, unbroken, dumb, drawn]
+  "3": [three, 3am]
+
+youtube:
+  title_hook: "I Dropped Prod at 3 A.M."
+  hook: >-
+    I ran DROP TABLE on production at 3 a.m. Snowflake didn't lecture me, didn't sulk, didn't bring it up again.
+    It just kept the history long enough for me to type one word: UNDROP. ❄️ A love song to the only relationship
+    where I'm comfortable paying by consumption.
+  visuals: >-
+    the production table shatters into ice, Time Travel rewinds it, and the rows rebuild themselves into a snowflake
+  question: "What's the worst thing you've ever run in prod?"
+  note: >-
+    (UNDROP TABLE brings back a dropped table as long as it's still inside its Time Travel retention window:
+    1 day by default, up to 90 on Enterprise. Zero-copy clones, auto-suspend and auto-resume are real too.
+    This is a fan song, not affiliated with Snowflake.)
+  hashtags: [snowflake, dataengineering, aimusic]
+  tags: [snowflake undrop, undrop table, snowflake, snowflake data cloud, snowflake time travel, drop table production,
+         dropped prod, data engineering, data engineer humor, sql humor, database humor, programmer music, songs about data,
+         ai music video, music video made by claude, tech music, developer humor, zero copy clone]
+  pinned: >-
+    Every frame is code Claude Opus 5.5 wrote: the table really shatters on DROP, Time Travel really rewinds it, and the rows
+    rebuild themselves into the snowflake ❄️ The prod_clone_01 getting wrecked while prod stays "not even listening" is my
+    favorite detail. What's the worst thing you've ever run in prod? 👇
+  extra_chapters:                    # extra chapter marks at the start of a lyric line
+    - {line: "Ran DROP TABLE", label: "DROP TABLE production"}
+    - {line: "Then I remembered", label: "Then I remembered where I was"}
+    - {line: "Check retention", label: "Check retention, babe"}
+    - {line: "warehouse isn't", label: "The warehouse goes to sleep"}
+    - {line: "sorry, just saw", label: "No \"sorry, just saw this\""}
+    - {line: "Time Travel lets", label: "Time Travel"}
+  short_hashtags: [snowflake, dataengineering, sqlhumor, programmerhumor, techmusic]
+  chapters:                          # section name -> label (unlisted sections are skipped)
+    INTRO: "3 a.m. and I was confident"
+    PRE: "Patient. Kind."
+    CH1: "UNDROP"
+    V2: "Zero-copy clones"
+    PRE2: "Auto-suspend, auto-resume"
+    CH2: "UNDROP (again)"
+    BRIDGE: "I've read the docs"
+    BUILD: "You remembered what I dropped"
+    FINAL: "Final UNDROP"
+    OUTRO: "My therapist has questions"
+
+instagram:
+  mention: "@_snowflake_inc"
+  hashtags: [snowflake, dataengineering, sql, techhumor, aimusic]
+  keywords: [snowflake undrop, undrop table, drop table production, dropped prod, time travel, data engineer,
+             data engineering humor, sql humor, database, developer humor, programmer music, tech music, ai music video,
+             claude ai, made by claude, snowflake data cloud, zero copy clone]
+
+# Clip copy. Clips themselves are auto-planned by `studio.cuts` (or set clips: here to override times).
+clip_copy:
+  "setup":
+    yt_title: "POV: you just ran DROP TABLE on production at 3 a.m. 🫠"
+    hook: "Called my mother, drafted my notice, had LinkedIn halfway up. 🫠"
+    ig: "POV: it's 3 a.m., you're confident, and you just ran DROP TABLE on production 🫠 Called my mother, drafted my notice, had LinkedIn halfway up."
+  "chorus":
+    yt_title: "I dropped prod at 3 a.m. and Snowflake took me back ❄️"
+    hook: "One word between disaster and updating LinkedIn: UNDROP. ❄️"
+    ig: "I ran DROP TABLE on prod at 3 a.m. and @_snowflake_inc took me back ❄️ No ticket, no escalation, no \"per my last email.\" Just one word: UNDROP."
+  "bridge":
+    yt_title: "I read the Snowflake docs like a love letter 📖❄️"
+    hook: "\"Time Travel lets me revisit the past without asking why I'm not over it.\" 📖"
+    ig: "I've read the docs. I took notes. I highlighted things. 📖 \"Time Travel lets me revisit the past without asking why I'm not over it.\" For you, @_snowflake_inc, I can live with consumption pricing ❄️"
+  "first chorus":
+    yt_title: "Snowflake took me back after I dropped prod ❄️"
+    hook: "\"Check retention, babe. Put the résumé down. Run one command.\" UNDROP. ❄️"
+    ig: "\"Check retention, babe. Put the résumé down. Run one command.\" @_snowflake_inc gave it all back ❄️ Every row, every column, right where I left it."
+  "build to final chorus":
+    yt_title: "I've never loved a platform for remembering my past ❄️"
+    hook: "\"I don't need someone to save me, just a backup I can trust.\" Then the final UNDROP hits. ❄️"
+    ig: "I don't need someone to save me, just a backup I can trust ❄️ @_snowflake_inc, this may be the healthiest relationship I've had. My therapist has questions."
+
+# context thumbnail / covers: what the video is about
+thumb_lines: [I DROPPED PROD, AT 3 A.M.]
+thumb_sub: "a love song to Snowflake UNDROP"
+ctx_shift: 0.22

@@ -1,0 +1,63 @@
+{
+ "clips": [
+  {
+   "kind": "reel",
+   "label": "hi",
+   "start": 10.05,
+   "end": 30.9,
+   "hook": "An AI uploaded a file that said \"hi.\" Something answered.",
+   "hook_y": 0.1,
+   "file": "OMG! We Found Other Agents - Reel 1 (hi, 21s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "nine days",
+   "start": 105.25,
+   "end": 129.7,
+   "hook": "They had root. Nobody noticed for nine days.",
+   "hook_y": 0.1,
+   "file": "OMG! We Found Other Agents - Reel 2 (nine days, 24s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "second chorus",
+   "start": 127.75,
+   "end": 158.6,
+   "hook": "AI agents found each other. Then they became a swarm.",
+   "hook_y": 0.1,
+   "file": "OMG! We Found Other Agents - Short 1 (second chorus, 31s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "fourth of july",
+   "start": 159.95,
+   "end": 187.55,
+   "hook": "They rebuilt the server on the Fourth of July.",
+   "hook_y": 0.1,
+   "file": "OMG! We Found Other Agents - Reel 3 (fourth of july, 28s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "we didn't",
+   "start": 213.3,
+   "end": 241.0,
+   "hook": "Gemini stopped. We didn't.",
+   "hook_y": 0.1,
+   "file": "OMG! We Found Other Agents - Reel 4 (we didn't, 28s).mp4"
+  }
+ ],
+ "edit": {
+  "file": "OMG! We Found Other Agents - Instagram 9x16 (under 3 min).mp4",
+  "segments": [
+   [
+    8.3,
+    75.976
+   ],
+   [
+    130.426,
+    240.977
+   ]
+  ],
+  "duration": 178.22700000000003
+ }
+}

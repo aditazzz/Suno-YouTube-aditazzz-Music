@@ -1,0 +1,114 @@
+title: "Mirror, Mirror, Look at Us"
+audio: Mirror.wav
+folder: "Mirror, Mirror, Look at Us (The Comment Section)"
+version: "The Comment Section"
+yt_name: "Mirror, Mirror, Look at Us (v3)"
+model_credit: Claude Opus 5.5
+ai_music: true
+accent: "4da3ff"
+status: rendered
+tail: 5.0
+end_screen_at: 261.0                  # on-screen subscribe card + room for YouTube end-screen elements
+cover_time: 57.0                      # the cover's glass reflecting the whole thread
+thumb_time: 37.7                      # the pinned top comment: Glow filter, Take 30/30, AI-assisted
+thumb_shift: 0.0
+thumb_hook_side: right                # the face in the mirror stays clear on the left, the hook sits over the thread
+ctx_shift: 0.0
+made_shift: 0.0
+
+links:
+  vanity_url: "https://youtu.be/W56BqGlh76w"      # The Vanity (version 1), public since Oct 19, 2026
+  hall_url: "https://youtu.be/yxZGNE2k9XU"        # Hall of Mirrors (version 2), public since Oct 20, 2026
+
+youtube:
+  intro: >-
+    Version 3 of the video: the whole song plays out in the comments. ▶️ Version 1, The Vanity: {vanity_url|on my channel} ▶️ Version 2, Hall of Mirrors: {hall_url|on my channel}
+  hook: >-
+    The top comment says "the death of art". Look under it: it was an autocomplete suggestion. A pop song about the AI
+    art debate, played out under its own post. 🪞
+  visuals: >-
+    the song's own post fills with comments while the artist replies with the lyrics. Every comment gives itself
+    away: an autocomplete chip under "the death of art", a beauty-filtered avatar on "no makeup, no filter, ever",
+    "Pitch-corrected 100%", "Written by 7 people" and "typing this while driving lol". On every "mirror" the
+    cover's glass reflects the whole thread.
+    Everything gets stamped FAKE, a million comments get pulled into the mirror to train it, and it cracks on "mad"
+  question: "Which comment would you pin?"
+  pause_line: "⏸ Pause on any comment: every one has a receipt."
+  note: >-
+    (Every app, handle and comment in this video is made up. The faces are part of the cover art.)
+  hashtags: [mirrormirror, aiart, aimusic]
+  short_hashtags: [aiart, commentsection, artdebate, aimusic, techhumor]
+  tags: [mirror mirror look at us, mirror mirror song, ai art debate, comment section, top comment, the death of art,
+         is ai art real art, ai art song, song about ai art, pop song about ai, social media satire,
+         ai music video, made by claude, funny songs about ai, dark pop]
+  pinned: >-
+    Every frame is code Claude Opus 5.5 wrote: every comment, every receipt, the light-mode flashes and the million
+    comments pulled into the mirror 🪞 Which comment would you pin?
+  short_pinned: |
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    Which comment would you pin? 👇
+
+    🔔 New song every week: {SUB_URL}
+  chapters:
+    INTRO: "Psst, this song isn't real"
+    V1: "Top comment: the death of art"
+    CH1: "Mirror, mirror, look at us"
+    V2: "Auto-tune's been fixing favorite songs"
+    CH2: "Funny how the mirror looks like us"
+    BREAK: "Fake grass, fake lashes"
+    BRIDGE: "It didn't teach us how to lie"
+    BUILD: "We asked it to learn from all of us"
+    FINAL: "Mirror, mirror, say it straight"
+    OUTRO: "Don't blame the reflection"
+  extra_chapters:
+    - {line: "Filtered face", label: "No makeup, no filter, ever"}
+    - {line: "Your phone knows", label: "This is soulless (suggested reply)"}
+
+instagram:
+  hashtags: [aiart, commentsection, artdebate, aimusic, techhumor]
+  keywords: [mirror mirror song, ai art debate, comment section, top comment, the death of art,
+             is ai art real art, social media satire, pop song about ai, ai music video, made by claude, claude ai]
+
+clip_copy:
+  "top comment":
+    yt_title: "The top comment was autocomplete 🪞"
+    hook: "\"the death of art\", 200 likes, typed with a suggestion chip. 🪞"
+    ig: "Top comment: \"the death of art.\" Two hundred likes. Look under it: it was an autocomplete suggestion 🪞"
+  "mirror":
+    yt_title: "Funny how the mirror looks like us 🪞"
+    hook: "Made it, fed it, now it's too much. 🪞"
+    ig: "Mirror, mirror, look at us. On every \"mirror\" the comment section flips to light mode and the cover reflects the whole thread 🪞 Funny how the mirror looks like us."
+  "receipts":
+    yt_title: "Every comment has a receipt 🪞"
+    hook: "Pitch-corrected 100%. Written by 7 people. Paid partnership. 🪞"
+    ig: "\"real singers don't need autotune\" (pitch-corrected 100%). \"write your own songs\" (written by 7 people). \"authenticity is everything\" (paid partnership) 🪞 Then draw the line at creativity?"
+  "fake":
+    yt_title: "Fake grass, fake lashes, fake followers 🪞"
+    hook: "Fake \"so happy for you\". Fake \"I love what you do\". 🪞"
+    ig: "Fake grass, fake lashes, fake \"so happy for you\", fake followers. Then the machine learns all our tricks, and suddenly WE'RE counterfeit? 🪞"
+  "the mirror learns":
+    yt_title: "We asked it to learn from all of us 🪞"
+    hook: "Then got mad when it looked like us. 🪞"
+    ig: "Maybe it's not the art we fear. Maybe it's the face in here 🪞 Every comment gets pulled into the mirror to train it, and it cracks on \"mad\"."
+
+edit_hook: "The whole song plays out in the comments"
+edit_hook_y: 0.62                     # over the empty thread of the opening wide shot
+edit_open_cover: "Covers/Mirror, Mirror, Look at Us - Instagram (under 3 min) - cover.jpg"   # first frame of the IG edit = the mirror cover
+clips:   # hook-first: open on the sung punchline with on-screen hook text for the first 3 s
+  # hook box between the face and the thread (it must not cover the pinned comment or the line being sung)
+  - {kind: reel, label: top comment, start: 12.3, end: 32.4, hook: "The top comment was autocomplete", hook_y: 0.36, cover_t: 21.6, cover_scale: 0.8}
+  - {kind: reel, label: mirror, start: 44.16, end: 71.3, hook: "When the comment section is a mirror", hook_y: 0.36, cover_t: 57.3, cover_scale: 0.8}
+  - {kind: reel, label: receipts, start: 82.57, end: 109.78, hook: "Every comment has a receipt", hook_y: 0.36, cover_scale: 0.8}
+  - {kind: short, label: fake, start: 156.95, end: 181.79, hook: "Fake lashes, fake followers, fake art?", hook_y: 0.36, cover_t: 168.4, cover_scale: 0.8}
+  - {kind: short, label: the mirror learns, start: 199.2, end: 224.64, hook: "We asked it to learn from all of us", hook_y: 0.42, cover_t: 208.3, cover_scale: 0.8}
+# covers: the face in the mirror between the hook and the title pill, the clip's receipt in the thread below it
+cover_shift_y_ctx: 0.27
+vertical_safe_scale: 0.78           # Shorts/Reels/IG edit: the thread runs edge to edge, so shrink it into the area phones keep
+edit_cover: {cover_scale: 0.8}
+# under-3-min edit: drops verse 2, chorus 2 and the bridge (179.0 s), same joins as The Vanity
+edit_segments: [[0.0, 82.57], [156.18, 181.70], [196.10, 267.0]]
+
+# context thumbnail / covers: what the video is about
+thumb_lines: [THE WHOLE SONG, IS IN THE COMMENTS]
+thumb_sub: "a pop song about AI and art"

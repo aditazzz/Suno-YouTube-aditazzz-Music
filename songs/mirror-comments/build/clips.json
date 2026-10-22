@@ -1,0 +1,76 @@
+{
+ "clips": [
+  {
+   "kind": "reel",
+   "label": "top comment",
+   "start": 12.3,
+   "end": 32.4,
+   "hook": "The top comment was autocomplete",
+   "hook_y": 0.36,
+   "cover_t": 21.6,
+   "cover_scale": 0.8,
+   "file": "Mirror, Mirror, Look at Us - Reel 1 (top comment, 20s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "mirror",
+   "start": 44.16,
+   "end": 71.3,
+   "hook": "When the comment section is a mirror",
+   "hook_y": 0.36,
+   "cover_t": 57.3,
+   "cover_scale": 0.8,
+   "file": "Mirror, Mirror, Look at Us - Reel 2 (mirror, 27s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "receipts",
+   "start": 82.57,
+   "end": 109.78,
+   "hook": "Every comment has a receipt",
+   "hook_y": 0.36,
+   "cover_scale": 0.8,
+   "file": "Mirror, Mirror, Look at Us - Reel 3 (receipts, 27s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "fake",
+   "start": 156.95,
+   "end": 181.79,
+   "hook": "Fake lashes, fake followers, fake art?",
+   "hook_y": 0.36,
+   "cover_t": 168.4,
+   "cover_scale": 0.8,
+   "file": "Mirror, Mirror, Look at Us - Short 1 (fake, 25s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "the mirror learns",
+   "start": 199.2,
+   "end": 224.64,
+   "hook": "We asked it to learn from all of us",
+   "hook_y": 0.42,
+   "cover_t": 208.3,
+   "cover_scale": 0.8,
+   "file": "Mirror, Mirror, Look at Us - Short 2 (the mirror learns, 25s).mp4"
+  }
+ ],
+ "edit": {
+  "file": "Mirror, Mirror, Look at Us - Instagram 9x16 (under 3 min).mp4",
+  "segments": [
+   [
+    0.0,
+    82.57
+   ],
+   [
+    156.18,
+    181.7
+   ],
+   [
+    196.1,
+    267.0
+   ]
+  ],
+  "duration": 178.98999999999998
+ }
+}

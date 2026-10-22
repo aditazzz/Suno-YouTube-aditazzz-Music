@@ -1,0 +1,82 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.46439909297052157,
+  "first_line": "Ladies and gentlemen, this is your captain speaking.",
+  "first_word_t": 1.2799999713897705,
+  "e": 16.532607709750568,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 16.532607709750568,
+  "first_line": "Two weeks of fires and a twelve-tab brain",
+  "first_word_t": 17.839999675750732,
+  "e": 37.17514739229025,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE1",
+  "s": 37.17514739229025,
+  "first_line": "Packed my PJs and a bag of chips",
+  "first_word_t": 37.03999996185303,
+  "e": 44.210793650793654,
+  "kind": "pre"
+ },
+ {
+  "name": "CH1",
+  "s": 44.210793650793654,
+  "first_line": "I'm goin' on vacation",
+  "first_word_t": 45.519999980926514,
+  "e": 73.95555555555555,
+  "kind": "chorus"
+ },
+ {
+  "name": "V2",
+  "s": 73.95555555555555,
+  "first_line": "The view is the ceiling, an ocean of sheets",
+  "first_word_t": 73.51999998092651,
+  "e": 90.00054421768708,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE2",
+  "s": 90.00054421768708,
+  "first_line": "Phone face down, the tide rolls in",
+  "first_word_t": 91.71999996900558,
+  "e": 99.1956462585034,
+  "kind": "pre"
+ },
+ {
+  "name": "CH2",
+  "s": 99.1956462585034,
+  "first_line": "I'm goin' on vacation",
+  "first_word_t": 100.47999998927116,
+  "e": 126.68807256235827,
+  "kind": "chorus"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 126.68807256235827,
+  "first_line": "Shhh, don't call, don't text",
+  "first_word_t": 128.22857080187117,
+  "e": 145.00861678004534,
+  "kind": "bridge"
+ },
+ {
+  "name": "FINAL",
+  "s": 145.00861678004534,
+  "first_line": "I'm goin' on vacation",
+  "first_word_t": 146.39999961853027,
+  "e": 172.4778231292517,
+  "kind": "chorus"
+ },
+ {
+  "name": "OUTRO",
+  "s": 172.4778231292517,
+  "first_line": "Wish you were here.",
+  "first_word_t": 173.5199999809265,
+  "e": 184.92,
+  "kind": "outro"
+ }
+]

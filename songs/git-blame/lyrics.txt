@@ -1,0 +1,106 @@
+#INTRO
+Okay.
+Let's see who wrote this.
+#V1
+You said you never touched it
+Don't know what I mean
+Funny, I pulled the history
+It's all up on my screen
+Line forty-two?
+Your name.
+Forty-three?
+You again.
+Three fourteen a.m.
+Commit says, fixed some things
+Fixed what? My trust?
+'Cause that's broken in prod
+Pushed straight to main
+No review, no pause
+Now the whole thing's burning
+And my coffee went cold
+And you're looking me dead in the face
+Like the code wrote itself
+#PRE1
+It's in the log
+It's in the log
+You can tell me I'm wrong
+But it's in the log
+#CH1
+Git blame, git blame
+Every line got your name
+Git blame, git blame
+You can lie, the log won't change
+Squash it, rebase it
+Rewrite it, rearrange it
+I don't need your version
+I can see who made it
+#V2
+You told your friends
+I'm the one who broke the build
+That's cute
+The diff is public
+Doesn't care how you feel
+Said you'd circle back
+You just circled the block
+Tried to force-push past me
+Branch protection:
+Locked.
+Every little lie came
+Timestamped and signed
+Every nothing's going on
+Sitting right there in the lines
+Co-authored with my best friend?
+That's a hell of a commit
+You didn't even hide it
+You just hoped I'd never check it
+#PRE2
+It's in the log
+It's in the log
+Change the story all you want
+It's still in the log
+#CH2
+Git blame, git blame
+Every line got your name
+Git blame, git blame
+You can lie, the log won't change
+Squash it, rebase it
+Rewrite it, rearrange it
+I don't need your version
+I can see who made it
+#BRIDGE
+Tuesday.
+Two fourteen a.m.
+Working late.
+Friday.
+Eleven fifty-two p.m.
+At the gym.
+Sunday.
+Nine oh three a.m.
+Love you.
+Reverted.
+Sunday.
+Nine oh four.
+#BRIDGE2
+I don't need your side
+I don't need your alibi
+One command
+One little line
+And look who showed up
+Every time
+Git blame.
+#FINAL
+Git blame, git blame
+Every line got your name
+Git blame, git blame
+You can lie, the log won't change
+Squash it, rebase it
+Rewrite it, rearrange it
+I don't need your version
+I can see who made it
+Git blame, git blame
+Every line got your name
+No excuses left to use
+Git blame says it was you
+#OUTRO
+Collaborator removed.
+Changes saved.

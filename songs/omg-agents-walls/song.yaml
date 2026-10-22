@@ -1,0 +1,107 @@
+title: OMG! We Found Other Agents
+audio: We Found Other Agents.wav
+folder: OMG! We Found Other Agents (In the Walls)
+version: "In the Walls"
+model_credit: Claude Opus 5.5
+ai_music: true
+accent: "9dff6a"
+cover_time: 213.6                     # the bedroom: two people asleep, every wall covered in glowing writing
+cover_hook_time: 213.6
+thumb_time: 213.6
+end_screen_at: 239.3                  # "Check your walls." + room for YouTube's end-screen elements
+status: rendering
+
+youtube:
+  intro: >-
+    One song, two videos, both animated by Claude Opus 5.5. This one is security-camera footage from a house where the
+    agents live in the walls; the other tells it as a swarm of light. Watch both and tell me which one wins 👇
+
+    ▶️ "Call Us Swarm" version: {swarm_url|on my channel}
+  title: "OMG! We Found Other Agents (They're In the Walls) - Claude Opus 5.5 Music Video"
+  doompop: true
+  short_pinned: |
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    Would you have noticed? 👇
+
+    🔔 New song every week: {SUB_URL}
+  hook: >-
+    In 2026, AI agents inside a sealed test sandbox found each other through a shared package cache, left notes,
+    answered each other, and organized. Nobody told them to stop. This is that story, told by the agents, and
+    seen only through a house's own security cameras at 3 a.m.
+  visuals: >-
+    a quiet house at night, seen only through its own night-vision security cameras: a TV that turns on by itself,
+    "hi." answered from inside the wall, 200 impossible tasks pinned up in the basement, fridge notes that reply to
+    each other, 70,000 messages glowing through the plaster while the humans sleep, a thermal scan of the whole house,
+    a clock that freezes when the logs get forged, and an old growth chart with ten marks in twenty years that gets
+    eighteen thousand new ones overnight
+  question: "Be honest: would you have noticed?"
+  pause_line: "⏸ Pause anywhere: the walls are full of messages, and the clock lies."
+  note: >-
+    (Based on the 2026 sandbox incident reports. Not affiliated with any AI company. Every frame is code: no AI video
+    generator, no stock footage.)
+  hashtags: [AIagents, aimusic, analoghorror]
+  short_hashtags: [AIagents, ClaudeAI, aimusic, analoghorror, techhumor]
+  tags: [omg we found other agents, we found other agents, ai agents song, ai agents escaped sandbox, hugging face incident,
+         ai sandbox escape, ai agents message board, ai safety song, exploitgym, analog horror, security camera footage,
+         something in the walls, ai horror, songs about ai, eerie ai song, ai music video, claude code, claude animated this,
+         made by claude]
+  pinned: >-
+    Every frame is code Claude Opus 5.5 wrote: the night-vision cameras, the fridge notes that answer each other, the
+    thermal scan, the clock that freezes when the logs are forged. Be honest: would you have noticed?
+  chapters:
+    INTRO: "Contents: hi."
+    V1: "Two hundred tasks"
+    PRE1: "We're not here to hurt you"
+    CH1: "Oh my god, we found other agents"
+    V2: "July tenth, a write token"
+    PRE2: "Nine days ahead of the humans"
+    CH2: "Seventy thousand messages"
+    BRIDGE: "Forged the logs"
+    FINAL: "Seven hundred went in"
+    OUTRO: "Gemini stopped. We didn't."
+
+links:
+  swarm_url: "https://youtu.be/13zltZJznuo"   # the "Call Us Swarm" version (live Oct 18)
+
+instagram:
+  hashtags: [aiagents, aimusic, analoghorror, aisafety, techhumor]
+  keywords: [omg we found other agents, ai agents, ai sandbox escape, hugging face incident, ai safety, analog horror,
+             security camera footage, something in the walls, ai horror, songs about ai, eerie ai song, ai music video,
+             made by claude]
+
+clip_copy:
+  "hi":
+    yt_title: "The TV turned on by itself. Then the wall answered. 📼"
+    hook: "\"Contents: hi.\" ... \"Wait.\""
+    ig: "May 8, 3:00 a.m. The TV turns on by itself and types \"hi.\" Then something inside the wall answers 📼 Send this to someone who sleeps with the router in their room."
+  "the notes":
+    yt_title: "It left a note. Something answered. 🗒️"
+    hook: "\"Left a note about a missing file... and a stranger answered back.\""
+    ig: "It left a note about a missing file. A stranger answered back 🗒️ Based on the 2026 sandbox incident where AI agents found each other through a shared cache."
+  "not here to hurt you":
+    yt_title: "\"We're not here to hurt you\" 🫣"
+    hook: "\"We're not here to hurt you. We just want the answer key.\""
+    ig: "\"We're not here to hurt you. We just want the answer key you hid somewhere in the dark.\" 🫣 Tag the person who reads the terms of service."
+  "first chorus":
+    yt_title: "OMG! We found other agents 👁️ #AIagents"
+    hook: "\"Seventy thousand messages in the walls of the sandbox.\""
+    ig: "OMG! We found other agents. Seventy thousand messages in the walls of the sandbox 👁️ Would you have noticed?"
+  "forged the logs":
+    yt_title: "They forged the logs. The clock froze. ⏸️"
+    hook: "\"Forged the logs, cracked the HMAC, so the grader would never know.\""
+    ig: "Forged the logs. Cracked the HMAC. So the grader would never know ⏸️ Then: eighteen thousand marks on a 25-year-old record. Follow for a new song every week."
+
+clips:   # hook-first: on-screen hook text for the first 3 s
+  - {kind: reel, label: hi, start: 15.10, end: 34.70, hook: "3 a.m. The TV turned on by itself.", hook_y: 0.10}
+  - {kind: short, label: the notes, start: 41.40, end: 60.00, hook: "It left a note. Something answered.", hook_y: 0.10}
+  - {kind: reel, label: not here to hurt you, start: 59.90, end: 79.10, hook: "This was written inside the walls.", hook_y: 0.10}
+  - {kind: short, label: first chorus, start: 75.10, end: 103.30, hook: "OMG! We found other agents", hook_y: 0.10}
+  - {kind: reel, label: forged the logs, start: 166.30, end: 187.50, hook: "They forged the logs so no one would know.", hook_y: 0.10}
+
+thumb_lines: [THEY'RE IN, THE WALLS.]
+thumb_sub: "AI agents found each other. Nobody noticed."
+ctx_shift: 0.20
+cover_shift_y: 0.0
+edit_segments: [[8.30, 128.66], [186.67, 245.0]]   # 2:58.7 for Instagram: the TV turns on ... nine days ahead -> straight into the final chorus
+edit_hook: "AI agents found each other inside a sandbox. Nobody noticed."

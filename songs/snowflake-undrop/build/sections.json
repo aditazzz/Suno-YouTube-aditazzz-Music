@@ -1,0 +1,90 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "",
+  "first_word_t": 2.6999999046325684,
+  "e": 2.6999999046325684,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 2.6999999046325684,
+  "first_line": "Three a.m. and I was confident, which is my first mistake",
+  "first_word_t": 2.9999999046325683,
+  "e": 39.938321995464854,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE",
+  "s": 39.938321995464854,
+  "first_line": "And you just sat there, patient, kind",
+  "first_word_t": 41.4399995803833,
+  "e": 57.0746485260771,
+  "kind": "pre"
+ },
+ {
+  "name": "CH1",
+  "s": 57.0746485260771,
+  "first_line": "UNDROP",
+  "first_word_t": 56.639999866485596,
+  "e": 93.73895691609977,
+  "kind": "chorus"
+ },
+ {
+  "name": "V2",
+  "s": 93.73895691609977,
+  "first_line": "Now I clone before I touch it",
+  "first_word_t": 95.44000005722046,
+  "e": 123.04253968253968,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE2",
+  "s": 123.04253968253968,
+  "first_line": "Auto-suspend, auto-resume",
+  "first_word_t": 124.59999978542328,
+  "e": 135.20979591836735,
+  "kind": "pre"
+ },
+ {
+  "name": "CH2",
+  "s": 135.20979591836735,
+  "first_line": "UNDROP",
+  "first_word_t": 135.11999988555908,
+  "e": 166.81215419501135,
+  "kind": "chorus"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 166.81215419501135,
+  "first_line": "I've read the docs. I took notes.",
+  "first_word_t": 166.7999997138977,
+  "e": 200.82938775510203,
+  "kind": "bridge"
+ },
+ {
+  "name": "BUILD",
+  "s": 200.82938775510203,
+  "first_line": "You remembered what I dropped",
+  "first_word_t": 200.87999999523163,
+  "e": 210.60498866213152,
+  "kind": "build"
+ },
+ {
+  "name": "FINAL",
+  "s": 210.60498866213152,
+  "first_line": "UNDROP",
+  "first_word_t": 210.1599998474121,
+  "e": 254.35138321995464,
+  "kind": "chorus"
+ },
+ {
+  "name": "OUTRO",
+  "s": 254.35138321995464,
+  "first_line": "Snowflake",
+  "first_word_t": 254.11999988555908,
+  "e": 266.24,
+  "kind": "outro"
+ }
+]

@@ -1,0 +1,98 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "",
+  "first_word_t": 4.499999713897705,
+  "e": 4.499999713897705,
+  "kind": "intro"
+ },
+ {
+  "name": "INTRO",
+  "s": 4.499999713897705,
+  "first_line": "Okay.",
+  "first_word_t": 4.799999713897705,
+  "e": 18.088344671201813,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 18.088344671201813,
+  "first_line": "You said you never touched it",
+  "first_word_t": 19.760000228881836,
+  "e": 41.05287981859411,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE1",
+  "s": 41.05287981859411,
+  "first_line": "It's in the log",
+  "first_word_t": 41.83999991416931,
+  "e": 48.71546485260771,
+  "kind": "pre"
+ },
+ {
+  "name": "CH1",
+  "s": 48.71546485260771,
+  "first_line": "Git blame, git blame",
+  "first_word_t": 50.815999603271486,
+  "e": 79.36580498866213,
+  "kind": "chorus"
+ },
+ {
+  "name": "V2",
+  "s": 79.36580498866213,
+  "first_line": "You told your friends",
+  "first_word_t": 81.27999973297119,
+  "e": 102.35356009070294,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE2",
+  "s": 102.35356009070294,
+  "first_line": "It's in the log",
+  "first_word_t": 102.76571423666817,
+  "e": 109.99292517006803,
+  "kind": "pre"
+ },
+ {
+  "name": "CH2",
+  "s": 109.99292517006803,
+  "first_line": "Git blame, git blame",
+  "first_word_t": 111.59999966621399,
+  "e": 143.19746031746033,
+  "kind": "chorus"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 143.19746031746033,
+  "first_line": "Tuesday.",
+  "first_word_t": 143.67999982833862,
+  "e": 163.60780045351473,
+  "kind": "bridge"
+ },
+ {
+  "name": "BRIDGE2",
+  "s": 163.60780045351473,
+  "first_line": "I don't need your side",
+  "first_word_t": 163.67999982833862,
+  "e": 173.8013605442177,
+  "kind": "bridge"
+ },
+ {
+  "name": "FINAL",
+  "s": 173.8013605442177,
+  "first_line": "Git blame, git blame",
+  "first_word_t": 175.6399998664856,
+  "e": 214.52916099773242,
+  "kind": "chorus"
+ },
+ {
+  "name": "OUTRO",
+  "s": 214.52916099773242,
+  "first_line": "Collaborator removed.",
+  "first_word_t": 214.40000009536743,
+  "e": 228.72,
+  "kind": "outro"
+ }
+]

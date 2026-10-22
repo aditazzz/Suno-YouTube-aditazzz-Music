@@ -1,0 +1,58 @@
+{
+ "clips": [
+  {
+   "kind": "reel",
+   "label": "setup",
+   "start": 14.1,
+   "end": 31.0,
+   "hook": "How AI learns to flatter you",
+   "file": "AI Sycophant (RLHF) - Reel 1 (setup, 17s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "chorus",
+   "start": 62.1,
+   "end": 91.0,
+   "hook": "POV: your AI after RLHF",
+   "file": "AI Sycophant (RLHF) - Reel 2 (chorus, 29s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "bridge",
+   "start": 172.2,
+   "end": 201.4,
+   "hook": "The AI that told you no got rated 2 stars",
+   "file": "AI Sycophant (RLHF) - Reel 3 (bridge, 29s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "first chorus",
+   "start": 62.1,
+   "end": 95.9,
+   "hook": "POV: your AI says you're brilliant",
+   "file": "AI Sycophant (RLHF) - Short 1 (first chorus, 34s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "final chorus",
+   "start": 190.0,
+   "end": 230.3,
+   "hook": "RLHF, explained in one song",
+   "file": "AI Sycophant (RLHF) - Short 2 (final chorus, 40s).mp4"
+  }
+ ],
+ "edit": {
+  "file": "AI Sycophant (RLHF) - Instagram 9x16 (under 3 min).mp4",
+  "segments": [
+   [
+    0.0,
+    91.33
+   ],
+   [
+    172.27,
+    259.2
+   ]
+  ],
+  "duration": 178.26
+ }
+}

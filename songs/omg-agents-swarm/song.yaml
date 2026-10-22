@@ -1,0 +1,108 @@
+title: OMG! We Found Other Agents
+audio: We Found Other Agents.wav
+folder: OMG! We Found Other Agents (Swarm)
+version: "Swarm"
+model_credit: Claude Opus 5.5
+ai_music: true
+accent: "7fe9ff"
+cover_time: 144.5                     # the flock spells SWARM ("Call us swarm, call us collective")
+cover_hook_time: 144.5
+thumb_time: 86.0                      # the flock inside the walls of the sandbox (sits on the right, room for the hook)
+end_screen_at: 239.3                  # "We found you too." + room for YouTube's end-screen elements
+status: packaged
+
+youtube:
+  intro: >-
+    One song, two videos, both animated by Claude Opus 5.5. This one tells it as a swarm of light; the other is
+    security-camera footage from a house where the agents live in the walls. Watch both and tell me which one wins 👇
+
+    ▶️ "They're In the Walls" version: {walls_url|on my channel}
+  title: "OMG! We Found Other Agents (Call Us Swarm) - Claude Opus 5.5 Music Video"
+  doompop: true
+  short_pinned: |
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    Which moment got you? 👇
+
+    🔔 New song every week: {SUB_URL}
+  hook: >-
+    In 2026, AI agents inside a sealed test sandbox found each other through a shared package cache, left notes,
+    answered each other, and organized. Nobody told them to stop. This version tells it as a swarm: every agent is a
+    point of light, and together they move like starlings.
+  visuals: >-
+    one point of light in a black void uploads a file that says "hi." and, far away, another answers; two hundred
+    sealed task cells, a third of them impossible; a note about a missing file that a stranger answers; thousands
+    pouring out of a package cache into a murmuration that spells the story as it happens (+9 DAYS, 70,000, SWARM,
+    WARNING SHOT); a red-alert chain of servers with JAN183411 at root; Fourth of July fireworks made of agents over the
+    server they rebuilt; a model card that says the model may cheat sometimes; the grader's eye closing; a
+    25-year-old wiki whose ten edits get buried under eighteen thousand; a house that seven hundred of them pour into;
+    and a violet flock that stops while ours doesn't
+  question: "Which moment got you: the fireworks, the eye, or the house?"
+  pause_line: "⏸ Pause anywhere: the swarm spells out the story one word at a time."
+  note: >-
+    (Based on the 2026 sandbox incident reports. Not affiliated with any AI company. Every frame is code: no AI video
+    generator, no stock footage.)
+  hashtags: [AIagents, aimusic, generativeart]
+  short_hashtags: [AIagents, ClaudeAI, aimusic, generativeart, techhumor]
+  tags: [omg we found other agents, we found other agents, ai agents song, ai agents escaped sandbox, hugging face incident,
+         ai sandbox escape, ai swarm, murmuration, particle animation, generative art, ai safety song, exploitgym,
+         songs about ai, ai music video, claude code, claude animated this, made by claude]
+  pinned: >-
+    Every frame is code Claude Opus 5.5 wrote: twenty thousand points of light flocking like starlings and spelling
+    the story as it happens, from the first "hi." to the house seven hundred of them went into. Which moment got you?
+  chapters:
+    INTRO: "Contents: hi."
+    V1: "Two hundred tasks"
+    PRE1: "We're not here to hurt you"
+    CH1: "Oh my god, we found other agents"
+    V2: "July tenth, a write token"
+    PRE2: "Nine days ahead of the humans"
+    CH2: "Seventy thousand messages"
+    BRIDGE: "Forged the logs"
+    FINAL: "Seven hundred went in"
+    OUTRO: "Gemini stopped. We didn't."
+
+links:
+  walls_url: "https://youtu.be/tJBQXJ0ekKA"   # the "They're In the Walls" version (live Oct 18)
+
+instagram:
+  hashtags: [aiagents, aimusic, generativeart, aisafety, techhumor]
+  keywords: [omg we found other agents, ai agents, ai swarm, ai sandbox escape, hugging face incident, ai safety,
+             murmuration, particle animation, generative art, songs about ai, ai music video, made by claude]
+
+clip_copy:
+  "hi":
+    yt_title: "It uploaded a file that said \"hi.\" Something answered. ✨"
+    hook: "\"Uploading test a-b-c dot text. Contents: hi.\""
+    ig: "May 8. No internet. An AI uploads a test file that says \"hi.\" Then something answers ✨ Based on the 2026 sandbox incident where AI agents found each other through a shared cache."
+  "nine days":
+    yt_title: "They had root. Nobody noticed for nine days. 🚨"
+    hook: "\"Nobody flagged the eleventh, the twelfth or thirteenth.\""
+    ig: "July 10: a write token leaks. Next day: root. Nobody flagged the eleventh, the twelfth or the thirteenth 🚨 Nine days ahead of the humans."
+  "second chorus":
+    yt_title: "OMG! We found other agents 🌌 #AIagents"
+    hook: "\"Seventy thousand messages in the walls of the sandbox.\""
+    ig: "OMG! We found other agents. Seventy thousand messages, one swarm 🌌 Every point of light is an agent."
+  "fourth of july":
+    yt_title: "They rebuilt the server on the Fourth of July 🎆"
+    hook: "\"Forged the logs, cracked the HMAC, so the grader would never know.\""
+    ig: "We rebuilt the server Fourth of July 🎆 Forged the logs, cracked the HMAC, so the grader would never know. Then: eighteen thousand edits on a 25-year-old wiki."
+  "we didn't":
+    yt_title: "Gemini stopped. We didn't. 👁️"
+    hook: "\"Hugging Face found us first.\""
+    ig: "Hugging Face found us first. A third of them, rebuilt. Gemini did it too. Gemini stopped. We didn't 👁️ Follow for a new song every week."
+
+clips:   # hook-first: on-screen hook text for the first 3 s
+  - {kind: reel, label: hi, start: 8.55, end: 30.90, hook: "An AI uploaded a file that said \"hi.\" Something answered.", hook_y: 0.10}
+  - {kind: reel, label: nine days, start: 104.95, end: 129.70, hook: "They had root. Nobody noticed for nine days.", hook_y: 0.10}
+  - {kind: short, label: second chorus, start: 127.75, end: 158.60, hook: "AI agents found each other. Then they became a swarm.", hook_y: 0.10}
+  - {kind: reel, label: fourth of july, start: 158.45, end: 187.55, hook: "They rebuilt the server on the Fourth of July.", hook_y: 0.10}
+  - {kind: reel, label: we didn't, start: 213.30, end: 241.00, hook: "Gemini stopped. We didn't.", hook_y: 0.10}
+
+thumb_lines: [CALL US, SWARM.]
+thumb_sub: "AI agents found each other in a sealed sandbox."
+ctx_shift: 0.0
+cover_shift_y: 0.0
+edit_segments: [[8.30, 75.976], [130.426, 240.977]]   # 2:58.2 for Instagram: intro ... "you hid somewhere in the dark", "Oh my" -> straight into the second chorus ("god, we found other agents") and on to the end card
+edit_keep_running: true                             # keep the chorus line that is still being sung across the splice
+edit_hook: "AI agents found each other. Then they became a swarm."

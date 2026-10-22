@@ -1,0 +1,67 @@
+{
+ "clips": [
+  {
+   "kind": "reel",
+   "label": "the mirrors",
+   "start": 12.3,
+   "end": 37.78,
+   "hook": "Every mirror here bends your face",
+   "hook_y": 0.13,
+   "file": "Mirror, Mirror, Look at Us - Reel 1 (the mirrors, 25s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "looks like us",
+   "start": 44.16,
+   "end": 71.3,
+   "hook": "When every mirror looks like us",
+   "hook_y": 0.13,
+   "file": "Mirror, Mirror, Look at Us - Reel 2 (looks like us, 27s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "which mirror",
+   "start": 82.57,
+   "end": 109.78,
+   "hook": "Guess which mirror doesn't lie",
+   "hook_y": 0.13,
+   "file": "Mirror, Mirror, Look at Us - Reel 3 (which mirror, 27s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "fake",
+   "start": 156.95,
+   "end": 181.79,
+   "hook": "Fake grass, fake lashes, fake followers",
+   "hook_y": 0.13,
+   "file": "Mirror, Mirror, Look at Us - Short 1 (fake, 25s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "the crack",
+   "start": 199.2,
+   "end": 224.64,
+   "hook": "Every mirror cracked on the same word",
+   "hook_y": 0.13,
+   "file": "Mirror, Mirror, Look at Us - Short 2 (the crack, 25s).mp4"
+  }
+ ],
+ "edit": {
+  "file": "Mirror, Mirror, Look at Us - Instagram 9x16 (under 3 min).mp4",
+  "segments": [
+   [
+    0.0,
+    82.57
+   ],
+   [
+    156.18,
+    181.7
+   ],
+   [
+    196.1,
+    267.0
+   ]
+  ],
+  "duration": 178.98999999999998
+ }
+}

@@ -1,0 +1,66 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "",
+  "first_word_t": 6.0836281179138325,
+  "e": 6.0836281179138325,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 6.0836281179138325,
+  "first_line": "He doesn't answer questions.",
+  "first_word_t": 6.960000038146973,
+  "e": 26.122448979591837,
+  "kind": "verse"
+ },
+ {
+  "name": "CH1",
+  "s": 26.122448979591837,
+  "first_line": "It's a Ted talk.",
+  "first_word_t": 27.27999973297119,
+  "e": 52.59319727891157,
+  "kind": "chorus"
+ },
+ {
+  "name": "V2",
+  "s": 52.59319727891157,
+  "first_line": "He starts every sentence with so.",
+  "first_word_t": 53.43999981880188,
+  "e": 75.62739229024943,
+  "kind": "verse"
+ },
+ {
+  "name": "CH2",
+  "s": 75.62739229024943,
+  "first_line": "It's a Ted talk.",
+  "first_word_t": 76.71999979019165,
+  "e": 100.35664399092971,
+  "kind": "chorus"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 100.35664399092971,
+  "first_line": "Ted.",
+  "first_word_t": 101.03999990224838,
+  "e": 121.51002267573696,
+  "kind": "bridge"
+ },
+ {
+  "name": "FINAL",
+  "s": 121.51002267573696,
+  "first_line": "It's a Ted talk.",
+  "first_word_t": 122.55999994277954,
+  "e": 140.9683446712018,
+  "kind": "chorus"
+ },
+ {
+  "name": "OUTRO",
+  "s": 140.9683446712018,
+  "first_line": "Anyway \u2014 happy to take this offline.",
+  "first_word_t": 141.59999990463257,
+  "e": 160.92,
+  "kind": "outro"
+ }
+]

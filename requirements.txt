@@ -1,0 +1,7 @@
+numpy
+opencv-python-headless
+pillow
+pyyaml
+librosa
+soundfile
+sherpa-onnx

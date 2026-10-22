@@ -1,0 +1,95 @@
+title: Vacation (To My Bed)
+audio: Vacation to My Bed.wav
+folder: Vacation to My Bed
+model_credit: Claude Opus 5.5
+ai_music: true
+tail: 4.0
+cover_time: 46.2
+thumb_time: 47.0
+accent: "e8473b"
+thumb_hook_color: "#ffd23f"
+thumb_hook_side: right
+cover_hook_time: 52.0
+thumb_label: "ADITAZZZ  ·  NEW SONG"
+thumb_caption: "travel time: 4 seconds"
+status: rendered
+
+youtube:
+  title_hook: "Travel Time: 4 Seconds"
+  hook: >-
+    Two weeks of fires and a twelve-tab brain, so I booked a trip. First class, no fee, one-way ticket down the hall.
+    Packed my PJs and a bag of chips. Travel time: 4 seconds. 🛏️✈️
+  credit: >-
+    Illustrations in risograph style, animated and lyric-synced with code by Claude Opus 5.5.
+  credit_short: "Animated and lyric-synced by Claude."
+  question: "Where are you going on vacation this weekend? Wrong answers only"
+  note: ""
+  hashtags: [outofoffice, bedrotting, funnysongs]
+  short_hashtags: [outofoffice, bedrotting, funnysongs, relatable, burnout]
+  tags: [vacation to my bed, vacation to my bed song, going on vacation to my bed, vacation in my bed, vacation (to my bed),
+         aditazzz, bed rotting, bed rot, bed rotting song, out of office, out of office song, ooo, pto, i need a vacation,
+         staycation, staycation song, burnout, burnout song, do not disturb, weekend mood, weekend song, sleepy song,
+         funny song about sleeping, relatable songs, introvert song, work humor, corporate humor, cozy music,
+         claude music video, claude opus 5.5, ai music video]
+  pinned: >-
+    Travel time: 4 seconds. Best trip of my life 🛏️✈️ If you need this vacation too, subscribe. I post a new song every
+    week 🔔 Where are YOU going this weekend? Wrong answers only 👇
+  chapters:
+    INTRO: "This is your captain speaking"
+    V1: "Two weeks of fires"
+    PRE1: "Packed my PJs and a bag of chips"
+    CH1: "I'm goin' on vacation (to my bed, bed, bed)"
+    V2: "Room service is me reaching for treats"
+    CH2: "Five-star destination"
+    BRIDGE: "Monday's a rumor"
+    FINAL: "Out of office, do not disturb"
+    OUTRO: "Wish you were here"
+
+instagram:
+  hashtags: [outofoffice, bedrotting, funnysongs, relatable, burnout]
+  keywords: [vacation to my bed, bed rotting, out of office, burnout, funny song, relatable, weekend, do not disturb, staycation, nap,
+             introvert, work humor, cozy, tropical pop, ukulele, new music, aditazzz]
+
+# Shorts plan: every clip opens on the illustration that IS the hook (the image's own headline does the work, so no
+# extra hook text on top), each is a different joke, and each loops back cleanly.
+clips:
+  - {kind: short, label: travel time, start: 45.7, end: 72.9}
+  - {kind: short, label: captain speaking, start: 1.15, end: 21.8}
+  - {kind: short, label: packing the essentials, start: 26.45, end: 54.6}
+  - {kind: short, label: room service, start: 73.3, end: 100.8}
+  - {kind: short, label: monday's a rumor, start: 127.45, end: 156.0}
+  - {kind: short, label: wish you were here, start: 164.05, end: 182.0}
+edit_segments: [[0.0, 9.6], [17.5, 184.92]]
+
+clip_copy:
+  "travel time":
+    yt_title: "Travel time to my vacation: 4 seconds"
+    hook: "I'm goin' on vacation. To my bed, bed, bed. 🛏️✈️"
+    ig: "Booked a one-way trip. Travel time: 4 seconds 🛏️✈️ Tag the friend who's coming with me (to their own bed)."
+  "captain speaking":
+    yt_title: "This is your captain speaking 🛏️"
+    hook: "\"We will not be going anywhere.\" 🛏️"
+    ig: "Ladies and gentlemen, this is your captain speaking. We will not be going anywhere 🛏️ Out of office."
+  "packing the essentials":
+    yt_title: "Packing the essentials for my trip 🧳"
+    hook: "Packed my PJs and a bag of chips. 🧳"
+    ig: "So I booked a trip. First class, no fee, one-way ticket down the hall. Packed my PJs and a bag of chips 🧳"
+  "room service":
+    yt_title: "5-star resort review: my bed ⭐⭐⭐⭐⭐"
+    hook: "Room service is me reaching over for treats. ⭐"
+    ig: "The view is the ceiling, an ocean of sheets. Room service is me reaching over for treats ⭐⭐⭐⭐⭐ Would book again."
+  "monday's a rumor":
+    yt_title: "Monday's a rumor 🤫"
+    hook: "Shhh. Don't call, don't text. Monday's a rumor. 🤫"
+    ig: "Shhh, don't call, don't text. Monday's a rumor, I'll check it next 🤫 Send this to someone who needs a weekend."
+  "wish you were here":
+    yt_title: "Wish you were here. No I don't. 🛏️"
+    hook: "\"Wish you were here.\" …No I don't. 🛏️"
+    ig: "Postcard from my vacation: wish you were here 🛏️ …No I don't."
+
+# context thumbnail / covers: what the video is about
+thumb_lines: [ONE-WAY TICKET, TO MY BED]
+thumb_sub: "a burnout anthem for the chronically tired"
+ctx_shift: 0.06
+ctx_scale: 1.0
+yt_name: "Vacation to My Bed"

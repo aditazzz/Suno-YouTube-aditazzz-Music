@@ -1,0 +1,44 @@
+{
+ "clips": [
+  {
+   "kind": "reel",
+   "label": "setup",
+   "start": 6.61,
+   "end": 26.122,
+   "cover": true,
+   "file": "TED Talk - Reel 1 (setup, 20s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "chorus",
+   "start": 22.779,
+   "end": 52.593,
+   "cover": true,
+   "file": "TED Talk - Reel 2 (chorus, 30s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "bridge",
+   "start": 100.957,
+   "end": 121.51,
+   "cover": false,
+   "file": "TED Talk - Reel 3 (bridge, 21s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "first chorus",
+   "start": 17.786,
+   "end": 52.593,
+   "cover": true,
+   "file": "TED Talk - Short 1 (first chorus, 35s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "final chorus",
+   "start": 111.781,
+   "end": 158.639,
+   "cover": false,
+   "file": "TED Talk - Short 2 (final chorus, 47s).mp4"
+  }
+ ]
+}

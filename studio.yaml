@@ -1,0 +1,18 @@
+# Where the song audio lives and where finished videos are saved: $MUSIC_DIR if set, else the first of these that
+# exists (relative to the repo), else ./music. The songs themselves aren't in this repo; put your own .wav files there.
+music_dir_candidates:
+  - "music"
+
+# These go into every description, pinned comment and end card. Making videos for your own channel? Change them.
+artist: aditazzz
+channel_handle: "@adita_zzz"
+instagram: "@aditazzz.music"
+spotify: https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv
+linktree: https://linktr.ee/aditazzz
+playlist: https://youtube.com/playlist?list=PLEK_i4m-04z0
+playlist_id: PLEK_i4m-04z0          # the uploader adds every full video to this playlist
+
+# AI Doompop songs (the AI-risk pop genre named on LessWrong, Oct 2026) get #AIDoompop in their YouTube titles,
+# hashtags and tags. doompop_videos: live videos of those songs that the uploader has no record of.
+doompop: [ai-sycophant, autocomplete, graceful-shutdown, graceful-shutdown-opus, lgtm, rage-against-the-machine-learning, rate-limited]
+doompop_videos: [ZYoCc55onzw, m8OEknCuK7o]

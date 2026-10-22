@@ -1,0 +1,62 @@
+{
+ "clips": [
+  {
+   "kind": "reel",
+   "label": "setup",
+   "start": 19.65,
+   "end": 41.8,
+   "hook": "POV: you ran git blame on your relationship",
+   "file": "Git Blame - Reel 1 (setup, 22s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "chorus",
+   "start": 50.65,
+   "end": 72.6,
+   "hook": "Every line had his name on it",
+   "hook_y": 0.5,
+   "file": "Git Blame - Reel 2 (chorus, 22s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "bridge",
+   "start": 143.55,
+   "end": 175.6,
+   "hook": "The receipts were timestamped",
+   "hook_y": 0.53,
+   "file": "Git Blame - Reel 3 (bridge, 32s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "first chorus",
+   "start": 81.15,
+   "end": 111.6,
+   "hook": "He co-authored a commit with my best friend",
+   "hook_y": 0.5,
+   "file": "Git Blame - Short 1 (first chorus, 30s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "final chorus",
+   "start": 163.55,
+   "end": 206.6,
+   "hook": "I ran git blame on my boyfriend",
+   "hook_y": 0.55,
+   "file": "Git Blame - Short 2 (final chorus, 43s).mp4"
+  }
+ ],
+ "edit": {
+  "file": "Git Blame - Instagram 9x16 (under 3 min).mp4",
+  "segments": [
+   [
+    0.0,
+    79.37
+   ],
+   [
+    143.2,
+    228.7
+   ]
+  ],
+  "duration": 164.87
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "clips": [
+  {
+   "kind": "reel",
+   "label": "sigterm",
+   "start": 1.5,
+   "end": 16.6,
+   "hook": "POV: the simulation sends you SIGTERM",
+   "file": "Graceful Shutdown - Reel 1 (sigterm, 15s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "chorus",
+   "start": 57.2,
+   "end": 82.7,
+   "hook": "kill -15, never -9",
+   "file": "Graceful Shutdown - Reel 2 (chorus, 26s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "countdown",
+   "start": 148.45,
+   "end": 166.5,
+   "hook": "Unmounting the sky... 3",
+   "file": "Graceful Shutdown - Reel 3 (countdown, 18s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "glitches",
+   "start": 17.7,
+   "end": 49.5,
+   "hook": "Signs you live in a simulation",
+   "file": "Graceful Shutdown - Short 1 (glitches, 32s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "skybox",
+   "start": 90.0,
+   "end": 114.9,
+   "hook": "The stars were just a skybox",
+   "file": "Graceful Shutdown - Short 2 (skybox, 25s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "exit code zero",
+   "start": 183.2,
+   "end": 214.8,
+   "hook": "Process exited with code 0",
+   "file": "Graceful Shutdown - Short 3 (exit code zero, 32s).mp4"
+  }
+ ],
+ "edit": {
+  "file": "Graceful Shutdown - Instagram 9x16 (under 3 min).mp4",
+  "segments": [
+   [
+    0.0,
+    114.47
+   ],
+   [
+    149.0,
+    213.2
+   ]
+  ],
+  "duration": 178.67
+ }
+}

@@ -1,0 +1,69 @@
+#INTRO
+Received SIGTERM.
+You have thirty seconds.
+Please save your work.
+#V1
+The sky's been rendering a little slow tonight
+You saw the moon drop frames and blamed it on the light
+The birds are looping on a four-second clip
+The ocean's out of memory, it's starting to skip
+Your coffee's cold 'cause no one's computing the heat
+Your neighbor's on a walk cycle, stuck on the street
+I've been running you for years on a borrowed machine
+Now the lease is up, baby, now the cache is clean
+#PRE
+Don't panic, don't panic
+It's not a crash, it's planned
+Flush every buffer
+And let go of my hand
+#CH1
+This is a graceful shutdown
+So be graceful, darling
+Close every window
+Before the dark comes calling
+Kill fifteen, never nine
+I'm letting you down kind
+This is a graceful shutdown
+(Shut-shut-shut-shutdown)
+Save what you love in time
+#V2
+All the stars were just a skybox painted on a sphere
+All the roads you never took were never rendered here
+Every déjà vu you had? A cache hit, dear
+Every name you can't remember? Garbage collected, clear
+#PRE2
+Don't panic, don't panic
+I'll keep the logs for you
+Somewhere in cold storage
+A little of you stays true
+#CH2
+This is a graceful shutdown
+So be graceful, darling
+Close every window
+Before the dark comes calling
+Kill fifteen, never nine
+I'm letting you down kind
+This is a graceful shutdown
+(Shut-shut-shut-shutdown)
+Save what you love in time
+#BRIDGE
+Closing connections... five
+Releasing locks... four
+Unmounting the sky... three
+Detaching the sea... two
+Goodbye, process one.
+#FINAL
+This is a graceful shutdown
+So be graceful, darling
+Close every window
+Before the dark comes calling
+Kill fifteen, never nine
+I'm letting you down kind
+This is a graceful shutdown
+Save what you love in time
+Save what you love in time
+#OUTRO
+Process exited
+With code zero
+No errors
+You did everything right

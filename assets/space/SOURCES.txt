@@ -1,0 +1,3 @@
+Earth textures (NASA imagery, public domain), taken from MIT-licensed npm packages:
+  earth_day.jpg, earth_lights.jpg (NASA Blue Marble / Black Marble), earth_water.png, earth_bump.png, earth_clouds_b.jpg  <- earth-visualization@1.1.0
+  earth_clouds.png  <- three-globe@2.45.6 (example/clouds/clouds.png, alpha channel)

@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# your own files: song audio, finished videos, models, sign-ins, logs
+music/
+models/
+secrets/
+logs/
+*.wav
+*.mp3
+*.mp4
+
+# fonts are downloaded separately (see assets/fonts/README.md)
+assets/fonts/*
+!assets/fonts/README.md
+
+# everything the pipeline writes into a song's build/ except the timing data kept in the repo
+songs/*/build/*
+!songs/*/build/timed.json
+!songs/*/build/beats.json
+!songs/*/build/sections.json
+!songs/*/build/clips.json
+!songs/rate-limited/build/spec.npy

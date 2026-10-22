@@ -1,0 +1,99 @@
+#V1
+Three a.m. and I was confident, which is my first mistake
+Ran DROP TABLE in production, watched the statement seal my fate
+Felt my whole career go silent, started packing up my heart
+Called my mother, drafted notice, had LinkedIn halfway up
+Then I remembered where I was, hands still shaking on the keys
+Some databases let you go without a second of reprieve
+But you don't panic, you don't blame, you don't make it something strange
+You keep history long enough for me to put it back in place
+#PRE
+And you just sat there, patient, kind
+Like nothing irreversible happened tonight
+"Check retention, babe
+Put the résumé down
+Run one command"
+#CH1
+UNDROP
+You gave it back
+Everything I swore was gone was waiting in the past
+UNDROP
+You held the line
+No ticket, no escalation, no "per my last email"
+Every row, every column
+Right where I had left it all
+I've known people less forgiving
+than a table that I dropped
+UNDROP, UNDROP, UNDROP
+You gave it back
+#V2
+Now I clone before I touch it
+Look at me, I learned a thing
+I can wreck the clone completely
+Prod's not even listening
+When the warehouse isn't needed
+you suspend and stop the spend
+Then I send a query, you resume
+like you knew I'd call again
+No "sorry, just saw this"
+No three-business-day delay
+No "let's take this offline"
+Just the rows rolled back right away
+#PRE2
+Auto-suspend, auto-resume
+You don't bill me for the silence
+when I'm not in the room
+#CH2
+UNDROP
+Snowflake, you gave it back
+Everything I swore was gone was waiting in the past
+UNDROP
+You held the line
+One command between disaster and a very awkward night
+Every row, every column
+Right where I had left it all
+I've known people less forgiving
+than a table that I dropped
+#BRIDGE
+I've read the docs. I took notes.
+I highlighted things.
+And your documentation
+actually says what it means.
+One day by default.
+Enterprise: permanent objects, up to ninety.
+Time Travel lets me revisit the past
+without asking why I'm not over it.
+And somebody built a command
+for the thing you never meant to drop.
+Maybe that's what trust is:
+not pretending nothing breaks,
+just keeping something recoverable
+long enough to fix mistakes.
+And for you, only you,
+I can live with consumption pricing.
+#BUILD
+You remembered what I dropped
+Not forever, just enough
+I don't need someone to save me
+just a backup I can trust
+#FINAL
+UNDROP
+Snowflake, you gave it back
+Everything I thought was gone was waiting in the past
+UNDROP
+You held the line
+Time Travel kept my yesterday, so I could take my time
+Every row, every column
+every 3 a.m. mistake
+You kept history long enough
+for me to choose what I could save
+UNDROP, say it again
+UNDROP, my beautiful friend
+I've never loved a platform
+for remembering my past
+UNDROP, UNDROP, UNDROP
+You gave it back
+#OUTRO
+Snowflake
+This may be the healthiest relationship I've had.
+My therapist has questions.

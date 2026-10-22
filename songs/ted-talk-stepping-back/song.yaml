@@ -1,0 +1,108 @@
+title: TED Talk (Stepping Back)
+audio: TED Talk.wav
+folder: TED Talk (Stepping Back)
+model_credit: Claude Opus 5.5
+ai_music: true
+accent: "d93a2b"
+status: rendering
+tail: 3.0                             # silent seconds after the song for the end screen
+end_screen_at: 157.2
+aliases:
+  ted: [said, dead, ted's, head, tad]
+  dana: [donna, dina, diana, dena]
+  q: [queue, cue, kyu]
+thumb_time: 76.0
+cover_time: 23.4
+links:
+  original: https://youtu.be/fj7HNVj7s1A
+yt_name: "TED Talk - Stepping Back to the Edge of the Universe"   # the name the Shorts descriptions link back to
+hook_y: 0.016                         # Shorts hook pill above the map's search bar (one-line hooks only)
+hook_fs: 76
+
+# Shorts / Reels: six different stops on the zoom
+clips:
+  - {kind: reel, label: setup, start: 6.61, end: 26.122, cover: true, hook: "One yes/no question"}
+  - {kind: short, label: stepping back, start: 22.3, end: 52.593, hook: "So, stepping back"}
+  - {kind: reel, label: buzzword county, start: 52.593, end: 72.9, hook: "Ted's buzzword county"}
+  - {kind: short, label: seen from space, start: 72.85, end: 100.9, hook: "Seen from space"}
+  - {kind: reel, label: bridge, start: 98.25, end: 121.51, cover: true, hook: "Back to the standup"}   # opens at the edge of the solar system
+  - {kind: short, label: final chorus, start: 122.41, end: 158.639, hook: "Out to the edge of it all"}
+
+clip_copy:
+  "setup":
+    yt_title: "I asked my coworker one yes/no question 🔭"
+    hook: "\"He doesn't answer questions. He responds to them.\" 🔭"
+    ig: "9:15 a.m. One question on the agenda: is the file ready? He said, so — stepping back 🔭 Send this to your standup."
+  "stepping back":
+    yt_title: "He said \"so, stepping back\" so the camera did 🔭"
+    hook: "\"I asked him if the file was ready. He said, so — stepping back.\" So the camera did. 🔭"
+    ig: "I asked if the file was ready. He said \"so — stepping back.\" So the camera did: out of the room, over the office, over a city where every street is named after something Ted says 🔭"
+  "buzzword county":
+    yt_title: "A map where every town is named after Ted's buzzwords 🗺️"
+    hook: "\"He starts every sentence with so. He ends every thought with right?\" 🗺️"
+    ig: "Zoomed out to 50 km: the towns are So, Right?, Synergy and Circle Back, next to Lake Pause and the 15-Minute Loop 🗺️ Tag the coworker who says journey."
+  "seen from space":
+    yt_title: "My question is still unanswered, even from space 🌍"
+    hook: "\"And I watched my calendar give up.\" 🌍"
+    ig: "Earth at night, the Moon, the Sun. My question is still pinned in the middle: Is the file ready? Delivered. Not answered 🌍"
+  "bridge":
+    yt_title: "Back to the standup, from the edge of the solar system 👻"
+    hook: "\"It is fifteen minutes for eight people. You have used six.\" 👻"
+    ig: "From the edge of the solar system straight back to the room: Ted has used 6 of our 15 minutes, and Dana has become a ghost 👻"
+  "final chorus":
+    yt_title: "From my standup to the edge of the observable universe 🔭"
+    hook: "\"Nobody scheduled it. Nobody can end it.\" 🔭"
+    ig: "The Moon, the stars, the Milky Way, the cosmic web, the edge of what anyone can see. Still a Ted talk 🔭"
+
+youtube:
+  title: "TED Talk - Claude Opus 5.5 Music Video"   # shortened on YouTube Oct 21 (was the long per-version title)
+  hook: >-
+    I asked Ted if the file was ready. He said "so — stepping back." So the camera did: from our standup all the way
+    out to the edge of the observable universe. My question is still pinned in the middle. Unanswered. 🔭
+  visuals: >-
+    one continuous zoom out, every power of ten timed to the song: the standup from the ceiling, the office with its
+    roof off, a city whose streets are named after Ted's buzzwords (Circle Back Blvd, Synergy St, Lake Pause, a town
+    called Right?), the clouds, the Earth while my calendar gives up, the Moon, the planets circling back, the stars,
+    the Milky Way, Andromeda, the cosmic web, and the edge of what anyone can see. At "Ted. This is a standup." it snaps
+    all the way back into the room, where Ted has used 6 of our 15 minutes and Dana has become a ghost
+  question: "How far has a meeting ever drifted from your question?"
+  credit_short: "Every frame of this zoom is code written by Claude Opus 5.5."
+  short_pinned: |-
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    I'm a data/AI engineer making these with Claude (Opus 5.5, Max Effort). Every frame of this zoom is code.
+
+    How far has a meeting ever drifted from your question? 👇
+
+    🔔 Follow the journey, a new song every week: {SUB_URL}
+  note: >-
+    (Ted is fictional. Every team has one. This song isn't affiliated with TED or TED Conferences. The office, the city
+    and its towns are made up; the Earth, the planets, the stars and the galaxies are roughly to scale. The first
+    music video for this song: https://youtu.be/fj7HNVj7s1A)
+  pause_line: "⏸ Pause anywhere: every street, town and lake is named after something Ted says."
+  hashtags: [standup, space, techhumor]
+  short_hashtags: [standup, meetings, space, corporatehumor, techhumor]
+  tags: [ted talk song, standup meeting, powers of ten, zoom out to the universe, observable universe, cosmic zoom,
+         scale of the universe, earth from space, milky way, cosmic web, meetings that should have been an email,
+         corporate humor, office humor, tech humor, funny songs about work, post punk, ai music video]
+  pinned: |-
+    I'm a data/AI engineer, and honestly, making these videos with Claude is as much fun for me as making the songs.
+
+    This is a remake of my first TED Talk video (https://youtu.be/fj7HNVj7s1A), made with Claude Opus 5.5 on Max Effort: one zoom from our standup to the edge of the observable universe, and every frame is code. 🔭
+
+    How far has a meeting ever drifted from your question? 👇
+
+    🔔 Follow the journey, a new song every week: https://www.youtube.com/@adita_zzz?sub_confirmation=1
+  chapters:
+    INTRO: "9:15 a.m., standup"
+    CH1: "So — stepping back"
+    V2: "Buzzword county"
+    CH2: "The Earth, the Moon, the planets"
+    BRIDGE: "Ted. This is a standup."
+    FINAL: "All the way out"
+    OUTRO: "The edge of the observable universe"
+
+instagram:
+  hashtags: [standup, meetings, space, corporatehumor, techhumor]
+  keywords: [ted talk song, standup meeting, powers of ten, zoom out, observable universe, scale of the universe, earth from space,
+             corporate humor, office humor, work humor, tech humor, funny work song, ai music video, made by claude]

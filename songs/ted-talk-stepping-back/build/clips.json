@@ -1,0 +1,54 @@
+{
+ "clips": [
+  {
+   "kind": "reel",
+   "label": "setup",
+   "start": 6.61,
+   "end": 26.122,
+   "cover": true,
+   "hook": "One yes/no question",
+   "file": "TED Talk (Stepping Back) - Reel 1 (setup, 20s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "stepping back",
+   "start": 22.3,
+   "end": 52.593,
+   "hook": "So, stepping back",
+   "file": "TED Talk (Stepping Back) - Short 1 (stepping back, 30s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "buzzword county",
+   "start": 52.593,
+   "end": 72.9,
+   "hook": "Ted's buzzword county",
+   "file": "TED Talk (Stepping Back) - Reel 2 (buzzword county, 20s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "seen from space",
+   "start": 72.85,
+   "end": 100.9,
+   "hook": "Seen from space",
+   "file": "TED Talk (Stepping Back) - Short 2 (seen from space, 28s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "bridge",
+   "start": 98.25,
+   "end": 121.51,
+   "cover": true,
+   "hook": "Back to the standup",
+   "file": "TED Talk (Stepping Back) - Reel 3 (bridge, 23s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "final chorus",
+   "start": 122.41,
+   "end": 158.639,
+   "hook": "Out to the edge of it all",
+   "file": "TED Talk (Stepping Back) - Short 3 (final chorus, 36s).mp4"
+  }
+ ]
+}

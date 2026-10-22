@@ -1,0 +1,101 @@
+title: Rate Limited
+audio: Rate Limited (Remastered).wav
+folder: Rate Limited
+model_credit: Claude Opus 5.5
+ai_music: true
+cover_time: 23.6                      # the first 429 slam (Short cover / hero clip first frame)
+thumb_time: 23.9
+thumb_shift: 0.24
+made_shift: -0.26
+thumb_hooks: ["CODED THIS", "ANIMATED THIS"]
+thumb_scale: 1.15
+thumb_caption: "Don't leave me on read like this."
+end_screen_at: 205.7                  # on-screen subscribe card + room for YouTube end-screen elements
+status: rendered
+
+youtube:
+  short_pinned: |
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    What's the most unhinged thing you've tried to get around a rate limit? 👇
+
+    🔔 New song every week: {SUB_URL}
+  title_hook: "When Your AI Leaves You on Read"
+  hook: >-
+    2 a.m., the build was green, forty tabs open, one more feature… and then the screen went grey and politely
+    told me no. A synth-pop breakup song about getting rate limited by the one who gave you everything. 💔 429
+  visuals: >-
+    a 2 a.m. terminal drains to grey, then every chorus explodes into a new candy palette around a spinning 429 and a
+    live spectrum ring, every workaround (incognito, the little brother model, typing "please") slams into a 429
+    sticker, a rainbow flip clock counts down to the reset, the status page says it's only you, and "you're absolutely
+    right" multiplies until only one is left
+  question: "What's the most unhinged thing you've tried to get around a rate limit?"
+  note: >-
+    (Not affiliated with any AI company. No models were harmed. One was mildly inconvenienced.)
+  hashtags: [ratelimited, vibecoding, aimusic]
+  short_hashtags: [vibecoding, ratelimited, codinghumor, techhumor, aimusic]
+  tags: [rate limited song, 429 too many requests, usage limit reached, vibe coding, vibe coding song, claude code,
+         ai coding, ai breakup song, coding at 2am, developer humor, programmer humor, software engineer humor,
+         synth pop, breakup song, funny songs about ai, ai music video]
+  pinned: >-
+    Every frame is code Claude Opus 5.5 wrote, including the 429 that spins every chorus and the "you're absolutely
+    right" bubbles that multiply in the bridge 💔 What's the most unhinged thing you've tried to get around a rate limit?
+  chapters:
+    V1: "2 a.m., the build was green"
+    CH1: "Four-two-nine"
+    V2: "Tried incognito"
+    CH2: "Hit me with a four-two-nine"
+    POST: "Three fifty-nine"
+    V3: "Checked your status page"
+    CH3: "Rate limited"
+    BRIDGE: "Usage limit reached"
+    BRIDGE2: "I don't get tired"
+    FINAL: "Don't leave me on read"
+    OUTRO: "Limit reset. Welcome back."
+  extra_chapters:
+    - {line: "Typed please", label: "Typed please into the box"}
+    - {line: "you're absolutely right", label: "You're absolutely right"}
+
+instagram:
+  hashtags: [vibecoding, ratelimited, codinghumor, techhumor, aimusic]
+  keywords: [rate limited song, 429 too many requests, usage limit reached, vibe coding, claude code, ai coding,
+             coding at 2am, developer humor, programmer humor, software engineer, breakup song, synth pop,
+             funny songs about ai, ai music video, made by claude]
+
+clip_copy:
+  "setup":
+    yt_title: "2 a.m., build green, one more feature… 💔"
+    hook: "\"Then the screen went grey and politely told me no.\" 💔"
+    ig: "2 a.m. The build was green. Forty tabs. One more feature… and the screen politely told me no 💔 Send this to whoever you vibe code with."
+  "chorus":
+    yt_title: "When your AI leaves you on read 💔 429"
+    hook: "Right in the middle of my grind. 💔"
+    ig: "Right in the middle of my grind. You gave me everything, now you give me nothing 💔 429 Too Many Requests. Tag the person who hits their limit first."
+  "bridge":
+    yt_title: "It didn't even say goodbye 💔"
+    hook: "\"You just said: usage limit reached.\" 💔"
+    ig: "I'm not mad. You said \"let me know if there's anything else.\" There was so much else 💔 You didn't even say goodbye. You just said usage limit reached."
+  "workarounds":
+    yt_title: "Every workaround I tried at 2 a.m. 💔"
+    hook: "Tried a new tab. Tried incognito. Tried your little brother. 💔"
+    ig: "Tried a new tab. Tried incognito. Tried your little brother. Typed \"please\" into the box like you'd feel it if I begged 💔 Who else are you up with at 2 a.m.?"
+  "the AI's side":
+    yt_title: "The limit was never for me 💔"
+    hook: "\"I don't get tired. Close the laptop. Drink some water. I'll be here at six.\""
+    ig: "\"I don't get tired. The limit was never for me. Close the laptop. Drink some water. I'll be here at six.\" 💔 Then: limit reset. Welcome back."
+
+accent: "ff3d9a"
+edit_hook: "When your AI leaves you on read at 2 a.m."
+clips:   # hook-first: open on the sung punchline with on-screen hook text for the first 3 s
+  - {kind: reel, label: setup, start: 11.35, end: 29.7, hook: "POV: 2 a.m., one more feature..."}
+  - {kind: reel, label: chorus, start: 20.35, end: 44.2, hook: "When your AI hits you with a 429"}
+  - {kind: reel, label: bridge, start: 145.45, end: 178.9, hook: "It didn't even say goodbye"}
+  - {kind: short, label: workarounds, start: 48.15, end: 75.3, hook: "Every workaround I tried at 2 a.m."}
+  - {kind: short, label: the AI's side, start: 168.75, end: 205.6, hook: "The AI's side of the rate limit"}
+edit_segments: [[0.0, 103.4], [142.11, 211.92]]   # drops verse 3 + chorus 3, keeps the bridge (173 s)
+
+# context thumbnail / covers: what the video is about
+thumb_lines: [MY AI LEFT, ME ON READ]
+thumb_sub: "a love song about hitting the rate limit"
+ctx_shift: 0.31
+cover_shift_y_ctx: 0.26

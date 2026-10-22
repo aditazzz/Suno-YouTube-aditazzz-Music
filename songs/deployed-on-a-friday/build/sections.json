@@ -1,0 +1,98 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "",
+  "first_word_t": 3.924172335600907,
+  "e": 3.924172335600907,
+  "kind": "intro"
+ },
+ {
+  "name": "INTRO",
+  "s": 3.924172335600907,
+  "first_line": "Four fifty-nine",
+  "first_word_t": 3.679999828338623,
+  "e": 13.955192743764172,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 13.955192743764172,
+  "first_line": "Four fifty-nine, laptop half shut",
+  "first_word_t": 13.999999618530273,
+  "e": 39.07918367346939,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE1",
+  "s": 39.07918367346939,
+  "first_line": "Buzz, buzz, don't look",
+  "first_word_t": 40.31999969482422,
+  "e": 44.18757369614512,
+  "kind": "pre"
+ },
+ {
+  "name": "CH1",
+  "s": 44.18757369614512,
+  "first_line": "I deployed on a Friday, tide coming in",
+  "first_word_t": 44.359999895095825,
+  "e": 64.2960544217687,
+  "kind": "chorus"
+ },
+ {
+  "name": "V2",
+  "s": 64.2960544217687,
+  "first_line": "Slack lighting up like a boardwalk at night",
+  "first_word_t": 65.31999969482422,
+  "e": 84.38131519274377,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE2",
+  "s": 84.38131519274377,
+  "first_line": "Buzz, buzz, don't look",
+  "first_word_t": 85.41333341598511,
+  "e": 89.30394557823129,
+  "kind": "pre"
+ },
+ {
+  "name": "CH2",
+  "s": 89.30394557823129,
+  "first_line": "I deployed on a Friday, tide coming in",
+  "first_word_t": 89.51999998092651,
+  "e": 119.4898866213152,
+  "kind": "chorus"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 119.4898866213152,
+  "first_line": "Low tide shows you everything",
+  "first_word_t": 120.63999998569489,
+  "e": 129.52090702947845,
+  "kind": "bridge"
+ },
+ {
+  "name": "V3",
+  "s": 129.52090702947845,
+  "first_line": "Revert the revert, cherry-pick, push",
+  "first_word_t": 130.55999946594238,
+  "e": 149.4900680272109,
+  "kind": "verse"
+ },
+ {
+  "name": "FINAL",
+  "s": 149.4900680272109,
+  "first_line": "I deployed on a Friday, tide going out",
+  "first_word_t": 150.87999999523163,
+  "e": 172.01342403628118,
+  "kind": "chorus"
+ },
+ {
+  "name": "OUTRO",
+  "s": 172.01342403628118,
+  "first_line": "Root cause: me",
+  "first_word_t": 171.5799997329712,
+  "e": 193.44,
+  "kind": "outro"
+ }
+]

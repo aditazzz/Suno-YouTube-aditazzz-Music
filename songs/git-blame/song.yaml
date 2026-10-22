@@ -1,0 +1,92 @@
+title: Git Blame
+audio: Git Blame.wav
+folder: Git Blame
+model_credit: Claude Opus 5.5
+ai_music: true
+cover_time: 3.2
+thumb_time: 54.0
+thumb_caption: "Every line got your name."
+thumb_shift: 0.27
+cover_shift_y: 0.2       # Reel covers: centerpiece below CLAUDE / ANIMATED THIS
+cover_hook_time: 3.2
+accent: "ff4d6d"
+status: rendered
+
+youtube:
+  short_pinned: |
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    What's the pettiest receipt you've ever pulled? 👀
+
+    🔔 New song every week: {SUB_URL}
+  title_hook: "I Ran It on My Boyfriend"
+  hook: >-
+    Pulled the history. Line forty-two? His name. Forty-three? Him again. And the co-author on that 3:14 a.m. commit
+    was my best friend. 💀 A breakup song in git blame.
+  visuals: >-
+    a blame view where every gutter fills with his name, prod catching fire at 3:14 a.m., a git log that scrolls
+    forever, a neon synthwave chorus where the lines get squashed and rebased and his name never moves, a force-push
+    bouncing off branch protection, git shortlog after every chorus (42 lines him, 0 me), and a corkboard of timestamped
+    receipts where "love you" gets reverted a minute later
+  question: "What's the pettiest receipt you've ever pulled? 👀"
+  hashtags: [gitblame, programmerhumor, breakupsong]
+  short_hashtags: [gitblame, programmerhumor, breakupsong, techhumor, aimusic]
+  tags: [git blame song, git blame, breakup song, cheating song, programmer humor, developer humor, software engineer humor,
+         git commit, force push, branch protection, coding song, tech humor, funny songs about coding, ai music video]
+  pinned: >-
+    Every frame is code Claude Opus 5.5 wrote, including the commit co-authored by "your bestie" and the "love you"
+    that gets reverted at 9:04 💀 What's the pettiest receipt you've ever pulled?
+  chapters:
+    INTRO: "Let's see who wrote this"
+    V1: "You said you never touched it"
+    PRE1: "It's in the log"
+    CH1: "Git blame, git blame"
+    V2: "Co-authored with my best friend?"
+    CH2: "Every line got your name"
+    BRIDGE: "The receipts"
+    BRIDGE2: "One command, one little line"
+    FINAL: "Git blame says it was you"
+    OUTRO: "Collaborator removed"
+
+instagram:
+  hashtags: [gitblame, programmerhumor, breakupsong, codinglife, techhumor]
+  keywords: [git blame, git, commit history, force push, branch protection, cheating song, breakup song, best friend betrayal,
+             receipts, dating a developer, programmer, software engineer, developer life, coding memes, tech humor, women in tech, ai music video]
+edit_hook: "POV: you ran git blame on your relationship"
+edit_hook_y: 0.56
+clips:
+  - {kind: reel, label: setup, start: 19.65, end: 41.8, hook: "POV: you ran git blame on your relationship"}
+  - {kind: reel, label: chorus, start: 50.65, end: 72.6, hook: "Every line had his name on it", hook_y: 0.5}
+  - {kind: reel, label: bridge, start: 143.55, end: 175.6, hook: "The receipts were timestamped", hook_y: 0.53}
+  - {kind: short, label: first chorus, start: 81.15, end: 111.6, hook: "He co-authored a commit with my best friend", hook_y: 0.5}
+  - {kind: short, label: final chorus, start: 163.55, end: 206.6, hook: "I ran git blame on my boyfriend", hook_y: 0.55}
+edit_segments: [[0.0, 79.37], [143.2, 228.7]]
+
+clip_copy:
+  "setup":
+    yt_title: "I ran git blame on my boyfriend 💀"
+    hook: "Line forty-two? Your name. Forty-three? You again. 💀"
+    ig: "POV: you ran git blame on your relationship 💀 Line forty-two? His name. Forty-three? Him again. Tag the friend who needs to check the commit history 👀"
+  "chorus":
+    yt_title: "Every line got your name 💀"
+    hook: "You can lie. The log won't change. 💀"
+    ig: "Squash it, rebase it, rewrite it, rearrange it. I can see who made it 💀 Send this to someone who keeps receipts."
+  "bridge":
+    yt_title: "\"Love you.\" 9:03 a.m. Reverted. 💀"
+    hook: "Tuesday 2:14 a.m. \"Working late.\" Sunday 9:03 a.m. \"Love you.\" Reverted."
+    ig: "Tuesday, 2:14 a.m.: \"working late.\" Friday, 11:52 p.m.: \"at the gym.\" Sunday, 9:03 a.m.: \"love you.\" Reverted. Sunday, 9:04 💀"
+  "first chorus":
+    yt_title: "Co-authored with my best friend? 💀"
+    hook: "Co-authored with my best friend? That's a hell of a commit. 💀"
+    ig: "He tried to force-push past me. Branch protection: locked 🔒 Co-authored with my best friend? That's a hell of a commit 💀"
+  "final chorus":
+    yt_title: "Git blame says it was you 💀"
+    hook: "One command. One little line. And look who showed up every time. 💀"
+    ig: "I don't need your side. I don't need your alibi. One command, one little line, and look who showed up every time 💀 Git blame says it was you."
+
+# context thumbnail / covers: what the video is about
+thumb_lines: [I RAN GIT BLAME, ON MY BOYFRIEND]
+thumb_sub: "the commit history doesn't lie"
+ctx_shift: 0.27
+ctx_dark: 0.78
+ctx_scale: 0.86

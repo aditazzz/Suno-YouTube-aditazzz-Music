@@ -1,0 +1,109 @@
+title: TED Talk (Screenlife)
+audio: TED Talk.wav
+folder: TED Talk (Screenlife)
+model_credit: Claude Opus 5.5
+ai_music: true
+accent: "e0352b"
+status: rendering
+tail: 3.0                             # silent seconds after the song for the end screen
+end_screen_at: 157.2
+aliases:
+  ted: [said, dead, ted's, head, tad]
+  dana: [donna, dina, diana, dena]
+  q: [queue, cue, kyu]
+links:
+  original: https://youtu.be/fj7HNVj7s1A
+yt_name: "TED Talk - The Standup, on My Laptop Screen"   # the name the Shorts descriptions link back to
+hook_y: 0.016                         # Shorts hook pill at the top of the screen (one-line hooks only)
+hook_fs: 76
+
+# Shorts / Reels: six moments from the call
+clips:
+  - {kind: reel, label: setup, start: 6.61, end: 26.122, cover: true, hook: "9:15 a.m. standup"}
+  - {kind: short, label: screen share, start: 22.3, end: 52.593, hook: "Ted shares his screen"}
+  - {kind: reel, label: buzzword bingo, start: 52.593, end: 72.9, hook: "Buzzword bingo"}
+  - {kind: short, label: calendar, start: 72.85, end: 100.9, hook: "My calendar gave up"}
+  - {kind: reel, label: bridge, start: 100.96, end: 121.51, hook: "Dana left the meeting"}
+  - {kind: short, label: final chorus, start: 122.41, end: 158.639, hook: "Only the host can end it"}
+
+clip_copy:
+  "setup":
+    yt_title: "Joining the 9:15 standup with one question 💻"
+    hook: "\"He doesn't answer questions. He responds to them.\" 💻"
+    ig: "9:14 a.m. Sticky note on my desktop: ask Ted: is the file ready?? (asked 3x). Joining the call now 💻 Send this to your standup."
+  "screen share":
+    yt_title: "When Ted shares his screen at standup 💻"
+    hook: "\"It's a Ted talk. Eighteen minutes, no slides, no point.\" 💻"
+    ig: "Ted is sharing his screen. Slide 1: Click to add title. Slide 2: me_age_7.jpg 💻 Tag the person who always says \"can everyone see my screen?\""
+  "buzzword bingo":
+    yt_title: "Buzzword bingo at standup: BINGO by 9:41 💻"
+    hook: "\"He said journey. He said unlock.\" 💻"
+    ig: "My standup notes: so (9), right? (6), BINGO at 9:41 💻 What's on your buzzword bingo card?"
+  "calendar":
+    yt_title: "I watched my calendar give up in real time 📅"
+    hook: "\"And I watched my calendar give up.\" 📅"
+    ig: "The 15-minute standup block grows over my 1:1 with Dana, then over lunch, until Calendar quits: \"couldn't keep up with today's schedule\" 📅"
+  "bridge":
+    yt_title: "Dana left the meeting. Two years ago. 👻"
+    hook: "\"Dana is a ghost now, Ted.\" 👻"
+    ig: "Ted. This is a standup. It is fifteen minutes for eight people. You have used six. Dana left the meeting (hard stop) two years ago 👻"
+  "final chorus":
+    yt_title: "Only the host can end this meeting 💻"
+    hook: "\"Nobody scheduled it. Nobody can end it.\" 💻"
+    ig: "End meeting for all? Only the host can end this meeting. Questions: 0. Answers: 0 💻"
+
+youtube:
+  title: "TED Talk - Claude Opus 5.5 Music Video"   # shortened on YouTube Oct 21 (was the long per-version title)
+  hook: >-
+    I asked Ted if the file was ready. He stepped back from his webcam, somebody turned on dark mode, everybody's
+    camera went off, and my calendar crashed. Our standup, told entirely on my laptop screen. 💻
+  visuals: >-
+    the whole song plays out on my laptop screen, like a screenlife film. The standup is a video call and Ted is the
+    host. My question sits in the chat while he answers it with a question, and four minutes in the meeting timer says
+    it all. At "so — stepping back" he literally steps back from his webcam, somebody dims the lights (dark mode),
+    everybody sits down (cameras off), and his virtual background turns into a keynote stage. He shares eighteen
+    minutes of blank slides, a photo of his father fishing, a loading circle for circling back and a picture of
+    himself at seven in the rain. I keep a tally of every "so" and every "right?", get buzzword bingo, and watch my
+    calendar crash. At "Ted. This is a standup." I unmute: eight people, fifteen minutes, Ted has used six, and Dana,
+    who left two years ago, is a ghost in her tile now. Nobody can end the meeting, the host has turned off Q&A, and
+    when he finally takes it offline, my message to him can't be delivered
+  question: "What's the longest 15-minute standup you've ever been in?"
+  credit_short: "Every window, app and frame is code written by Claude Opus 5.5."
+  short_pinned: |-
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    I'm a data/AI engineer making these with Claude (Opus 5.5, Max Effort). Every window and every frame is code.
+
+    What's the longest 15-minute standup you've ever been in? 👇
+
+    🔔 Follow the journey, a new song every week: {SUB_URL}
+  note: >-
+    (Ted is fictional. Every team has one. This song isn't affiliated with TED or TED Conferences, and the apps on the
+    screen are made up. The first music video for this song: https://youtu.be/fj7HNVj7s1A)
+  pause_line: "⏸ Pause anywhere: the chat, the notifications and the sticky note on the desktop all have their own jokes."
+  hashtags: [standup, wfh, techhumor]
+  short_hashtags: [standup, meetings, wfh, corporatehumor, techhumor]
+  tags: [ted talk song, standup meeting, video call, screenlife, computer screen movie, remote work humor, work from home,
+         meetings that should have been an email, corporate humor, office humor, work meme, tech humor,
+         funny songs about work, post punk, ai music video]
+  pinned: |-
+    I'm a data/AI engineer, and honestly, making these videos with Claude is as much fun for me as making the songs.
+
+    This is a remake of my first TED Talk video (https://youtu.be/fj7HNVj7s1A), made with Claude Opus 5.5 on Max Effort: one video call on one laptop screen, and every frame is code. 💻
+
+    What's the longest 15-minute standup you've ever been in? 👇
+
+    🔔 Follow the journey, a new song every week: https://www.youtube.com/@adita_zzz?sub_confirmation=1
+  chapters:
+    INTRO: "9:15 a.m., joining the call"
+    CH1: "Ted is presenting"
+    V2: "So. Right? Buzzword bingo"
+    CH2: "My calendar crashed"
+    BRIDGE: "Ted. This is a standup."
+    FINAL: "Only the host can end this meeting"
+    OUTRO: "Message not delivered"
+
+instagram:
+  hashtags: [standup, meetings, wfh, corporatehumor, techhumor]
+  keywords: [ted talk song, standup meeting, video call, screenlife, remote work, work from home, corporate humor,
+             office humor, work humor, tech humor, post punk, funny work song, ai music video, made by claude]

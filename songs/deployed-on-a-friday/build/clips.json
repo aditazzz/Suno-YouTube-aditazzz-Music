@@ -1,0 +1,58 @@
+{
+ "clips": [
+  {
+   "kind": "reel",
+   "label": "setup",
+   "start": 3.55,
+   "end": 29.5,
+   "hook": "POV: it's 4:59 on a Friday",
+   "file": "Deployed on a Friday - Reel 1 (setup, 26s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "chorus",
+   "start": 44.25,
+   "end": 65.3,
+   "hook": "Never deploy on a Friday",
+   "file": "Deployed on a Friday - Reel 2 (chorus, 21s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "bridge",
+   "start": 120.45,
+   "end": 151.0,
+   "hook": "Fixing prod from the parking lot",
+   "file": "Deployed on a Friday - Reel 3 (bridge, 31s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "first chorus",
+   "start": 65.15,
+   "end": 103.8,
+   "hook": "The incident channel at 5:01 PM",
+   "file": "Deployed on a Friday - Short 1 (first chorus, 39s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "final chorus",
+   "start": 150.75,
+   "end": 175.3,
+   "hook": "The postmortem was \"blameless\"",
+   "file": "Deployed on a Friday - Short 2 (final chorus, 25s).mp4"
+  }
+ ],
+ "edit": {
+  "file": "Deployed on a Friday - Instagram 9x16 (under 3 min).mp4",
+  "segments": [
+   [
+    0.0,
+    104.44
+   ],
+   [
+    119.49,
+    193.44
+   ]
+  ],
+  "duration": 178.39
+ }
+}

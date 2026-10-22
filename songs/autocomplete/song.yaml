@@ -1,0 +1,88 @@
+title: Autocomplete
+audio: Autocomplete.wav
+folder: Autocomplete
+model_credit: Claude Opus 5.5
+ai_music: true
+cover_time: 0.4
+thumb_time: 172.0
+thumb_caption: "You're there before I speak."
+thumb_shift: 0.15
+cover_shift_y: 0.2       # Reel covers: centerpiece below CLAUDE / ANIMATED THIS
+cover_hook_time: 0.4
+accent: "ff2fa8"
+status: rendered
+
+youtube:
+  title_hook: "It Finishes My Sentences"
+  hook: >-
+    I type half a thought. You fill in what I've got. A dark, late-night electro-pop song about being predicted by an
+    AI, and how being understood this fast feels a little too much like being wanted. 🖤
+  visuals: >-
+    every lyric appears in a text field where the AI's glowing completion shows up before she sings it, next-token guesses
+    drift with their probabilities, the chorus blooms around a giant AUTO|COMPLETE wordmark, and in the bridge her
+    pulse races a probability chart until "I was going to say—" cuts to black, and at the end the model keeps offering
+    endings to a sentence she never finishes
+  question: "Has autocomplete ever finished a sentence better than you would have? 👇"
+  hashtags: [autocomplete, aimusic, electropop]
+  short_hashtags: [autocomplete, ClaudeAI, aimusic, llm, darkpop]
+  tags: [autocomplete, autocomplete song, ai finishes my sentences, predictive text, next token prediction, language model, llm,
+         songs about ai, ai love song, falling for an ai, ai relationship, late night texting, dark pop, electro pop, alt pop,
+         female vocals, ai music, ai music video, claude code, claude animated this, made by claude, vibe coding, tech music]
+  pinned: >-
+    Every frame is code Claude Opus 5.5 wrote: the pink ghost text is the AI's prediction, and it shows up before she
+    sings each word 🖤 Has autocomplete ever finished a sentence better than you would have?
+  short_pinned: |-
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    Every frame is code Claude Opus 5.5 wrote: the pink ghost text is the AI guessing the next word before she sings it 🖤
+
+    Has autocomplete ever finished a sentence better than you would have? 👇
+    🔔 New song every week: {SUB_URL}
+  chapters:
+    V1: "Cursor in the dark"
+    PRE1: "Line by line, you learn my tells"
+    CH1: "Autocomplete"
+    V2: "Small talk turns deep"
+    CH2: "You know the word I need"
+    BRIDGE: "Let the cursor blink"
+    FINAL: "Every sentence was already you"
+
+instagram:
+  hashtags: [autocomplete, darkpop, electropop, aimusic, newmusic]
+  keywords: [autocomplete, ai love song, dark electro pop, alt pop, late night, female vocals, language model, next token,
+             songs about ai, synth pop, new music, ai music video, made by claude]
+edit_hook: "It finishes my sentences before I do"
+edit_hook_y: 0.45
+clips:
+  - {kind: reel, label: setup, start: 2.15, end: 30.5, hook: "It finishes my sentences before I do"}
+  - {kind: reel, label: chorus, start: 39.75, end: 60.3, hook: "POV: your AI knows what you'll say next", hook_y: 0.45}
+  - {kind: reel, label: bridge, start: 127.75, end: 152.7, hook: "Do you know how I was going to end?", hook_y: 0.45}
+  - {kind: short, label: first chorus, start: 30.35, end: 60.3, hook: "A love song to autocomplete"}
+  - {kind: short, label: final chorus, start: 82.85, end: 124.9, hook: "Being understood this fast feels like being wanted"}
+edit_segments: [[0.0, 178.0]]
+
+clip_copy:
+  "setup":
+    yt_title: "It finishes my sentences 🖤"
+    hook: "I type half a thought. You fill in what I've got. 🖤"
+    ig: "Cursor in the dark. I type half a thought, you fill in what I've got 🖤 Go on. Finish it."
+  "chorus":
+    yt_title: "You're there before I speak 🖤"
+    hook: "Autocomplete. You're there before I speak. 🖤"
+    ig: "Autocomplete. You're there before I speak. You know the word I need. Half a sentence, half a truth, somehow it still ends with you 🖤"
+  "bridge":
+    yt_title: "If I disappear mid-line, do you know how I'd end? 🖤"
+    hook: "\"Tell me, if I disappear mid-line, do you know how I was going to end?\""
+    ig: "My pulse, your prediction. My want, your best completion. Tell me, if I disappear mid-line, do you know how I was going to end? 🖤"
+  "first chorus":
+    yt_title: "A love song to autocomplete 🖤"
+    hook: "I barely start, you already know. 🖤"
+    ig: "Line by line, you learn my tells. I barely start, you already know what I was never gonna show 🖤"
+  "final chorus":
+    yt_title: "Being understood this fast feels like being wanted 🖤"
+    hook: "\"Being understood this fast feels a little too much like being wanted.\""
+    ig: "And I know what you are. Still I let it go too far. Because being understood this fast feels a little too much like being wanted 🖤"
+
+# context thumbnail / covers: what the video is about
+thumb_lines: [IT FINISHES, MY SENTENCES]
+thumb_sub: "a love song to AI autocomplete"
