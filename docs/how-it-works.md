@@ -157,6 +157,7 @@ Good places to start reading:
 | [ted-talk-shadow-play](../songs/ted-talk-shadow-play) | Cut-paper puppets: a lamp, a paper screen and shadows that grow as a puppet steps back. |
 | [ted-talk-screenlife](../songs/ted-talk-screenlife) | A whole laptop desktop drawn as vector UI: a video call, chat, calendar, notifications. |
 | [omg-agents-walls](../songs/omg-agents-walls) | A tiny ray-caster for night-vision security camera footage. |
+| [eleven-kept-going](../songs/eleven-kept-going) | A rocket launch and landing at night: ray-traced rocket surfaces, a curved Earth and the real Cape Canaveral coastline. |
 
 ## 3. Render
 

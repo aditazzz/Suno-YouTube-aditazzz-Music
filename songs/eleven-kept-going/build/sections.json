@@ -1,0 +1,98 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "",
+  "first_word_t": 6.9,
+  "e": 6.9,
+  "kind": "intro"
+ },
+ {
+  "name": "INTRO",
+  "s": 6.9,
+  "first_line": "December twenty-first",
+  "first_word_t": 7.2,
+  "e": 47.925986394557825,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 47.925986394557825,
+  "first_line": "Eleven small machines",
+  "first_word_t": 47.67999982833862,
+  "e": 74.7914739229025,
+  "kind": "verse"
+ },
+ {
+  "name": "V2",
+  "s": 74.7914739229025,
+  "first_line": "Then the first stage falls away",
+  "first_word_t": 74.91999983787537,
+  "e": 114.0564172335601,
+  "kind": "verse"
+ },
+ {
+  "name": "REFRAIN",
+  "s": 114.0564172335601,
+  "first_line": "Eleven kept going",
+  "first_word_t": 114.0,
+  "e": 115.91401360544218,
+  "kind": "other"
+ },
+ {
+  "name": "TURN",
+  "s": 115.91401360544218,
+  "first_line": "But this one turned around",
+  "first_word_t": 116.6,
+  "e": 132.0518820861678,
+  "kind": "other"
+ },
+ {
+  "name": "V3",
+  "s": 132.0518820861678,
+  "first_line": "Grid fins catch the air",
+  "first_word_t": 133.0,
+  "e": 158.63873015873017,
+  "kind": "verse"
+ },
+ {
+  "name": "BUILD",
+  "s": 158.63873015873017,
+  "first_line": "Entry burn",
+  "first_word_t": 159.4,
+  "e": 185.06303854875284,
+  "kind": "build"
+ },
+ {
+  "name": "PEAK",
+  "s": 185.06303854875284,
+  "first_line": "Eleven kept going",
+  "first_word_t": 184.9,
+  "e": 222.3542857142857,
+  "kind": "other"
+ },
+ {
+  "name": "POST",
+  "s": 222.3542857142857,
+  "first_line": "It stood there in the smoke",
+  "first_word_t": 222.8,
+  "e": 253.97986394557824,
+  "kind": "post"
+ },
+ {
+  "name": "OUTRO",
+  "s": 253.97986394557824,
+  "first_line": "Somebody built that",
+  "first_word_t": 254.0,
+  "e": 280.42739229024943,
+  "kind": "outro"
+ },
+ {
+  "name": "FINAL",
+  "s": 280.42739229024943,
+  "first_line": "One came home",
+  "first_word_t": 280.3,
+  "e": 309.6,
+  "kind": "chorus"
+ }
+]

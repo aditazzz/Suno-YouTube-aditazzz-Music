@@ -11,7 +11,7 @@ video editor, and not with an AI video generator: for each song, Claude writes a
 synced to the vocals word by word. Every video in this repo was made by Claude Opus 5.5. The songs are
 on [Spotify](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv).
 
-This repo is that code. It has **19 music videos**, **23,625 lines of scene code** and the pipeline
+This repo is that code. It has **20 music videos**, **27,709 lines of scene code** and the pipeline
 that turns a finished song into a full music video, Shorts, thumbnails and a YouTube upload. Every song folder links to
 its video, so you can watch one and then read how it was drawn.
 
@@ -237,6 +237,16 @@ AI agents in a sealed test sandbox found each other through a shared package cac
 <sub>▶ <a href="https://youtu.be/fwYfcvyjhYw">watch</a> · <a href="songs/snowflake-undrop">code</a> (1,291 lines)</sub>
 </td>
 </tr>
+<tr>
+<td width="33%" valign="top">
+<a href="https://youtu.be/ASM9dhhGtV8"><img src="songs/eleven-kept-going/thumbnail.jpg" alt="Eleven Kept Going"></a><br>
+<b><a href="https://youtu.be/ASM9dhhGtV8">Eleven Kept Going</a></b><br>
+<sub>The first Falcon 9 landing, at night: the camera only looks up until the Turn, then only down.</sub><br>
+<sub>▶ <a href="https://youtu.be/ASM9dhhGtV8">watch</a> · <a href="songs/eleven-kept-going">code</a> (4,084 lines)</sub>
+</td>
+<td width="33%"></td>
+<td width="33%"></td>
+</tr>
 </table>
 
 ### Also on the channel (code not in this repo)
@@ -252,12 +262,12 @@ Everything else is on the channel: [youtube.com/@adita_zzz](https://www.youtube.
 
 ## By the numbers
 
-- **19** music videos, each its own program: **23,625** lines of scene code in 50 files
+- **20** music videos, each its own program: **27,709** lines of scene code in 65 files
 - **2,287** lines of shared engine in `studio/`, and **1,342** lines of tools for covers, previews and uploads
-- **241,936** frames rendered for the 16:9 and 9:16 versions (about 2.2 hours of video at 30 fps)
-- **1,339** lyric lines and **6,997** words synced to the vocals
-- **100** Shorts and Reels cut on downbeats
-- The biggest single video: [TED Talk, Stepping Back](songs/ted-talk-stepping-back), 2,051 lines in 8 files
+- **260,692** frames rendered for the 16:9 and 9:16 versions (about 2.4 hours of video at 30 fps)
+- **1,409** lyric lines and **7,246** words synced to the vocals
+- **105** Shorts and Reels cut on downbeats
+- The biggest single video: [Eleven Kept Going](songs/eleven-kept-going), 4,084 lines in 15 files
 
 ## Run it yourself
 

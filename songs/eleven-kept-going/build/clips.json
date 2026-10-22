@@ -1,0 +1,40 @@
+{
+ "clips": [
+  {
+   "kind": "short",
+   "label": "came home",
+   "start": 159.3,
+   "end": 199.0,
+   "hook": "The first orbital booster that ever came home",
+   "file": "Eleven Kept Going - Short 1 (came home, 40s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "the turn",
+   "start": 106.5,
+   "end": 135.6,
+   "hook": "Once it's spent, it's gone"
+  },
+  {
+   "kind": "reel",
+   "label": "somebody built that",
+   "start": 253.85,
+   "end": 277.6,
+   "hook": "Somebody sat in a room and did the math"
+  },
+  {
+   "kind": "short",
+   "label": "liftoff",
+   "start": 47.45,
+   "end": 74.95,
+   "hook": "Eleven small machines, waiting in the dark"
+  },
+  {
+   "kind": "short",
+   "label": "landing zone one",
+   "start": 222.5,
+   "end": 253.9,
+   "hook": "No parachute. No ocean. Just concrete."
+  }
+ ]
+}
