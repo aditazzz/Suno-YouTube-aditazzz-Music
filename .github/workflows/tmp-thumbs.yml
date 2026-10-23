@@ -1,0 +1,22 @@
+name: tmp thumbs
+on:
+  push:
+    branches: [tmp-thumbs]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p tmp_thumbs
+          for id in 3xXaESu5lUA v1CRbHihiZk MXJEF6xaPtU m8OEknCuK7o ZYoCc55onzw; do
+            curl -fsSL -o "tmp_thumbs/$id.jpg" "https://i.ytimg.com/vi/$id/maxresdefault.jpg"
+          done
+          ls -la tmp_thumbs
+          git config user.name aditazzz
+          git config user.email 98121436+aditazzz@users.noreply.github.com
+          git add tmp_thumbs
+          git commit -m "tmp: thumbnails"
+          git push
