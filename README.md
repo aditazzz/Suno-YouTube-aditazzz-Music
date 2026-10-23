@@ -12,7 +12,7 @@ synced to the vocals word by word. Every video in this repo was made by Claude O
 on [Spotify](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv), and all of them, with lyrics, are on
 [aditazzz.github.io](https://aditazzz.github.io).
 
-This repo is that code. It has **20 music videos**, **27,709 lines of scene code** and the pipeline
+This repo is that code. It has **21 music videos**, **33,133 lines of scene code** and the pipeline
 that turns a finished song into a full music video, Shorts, thumbnails and a YouTube upload. Every song folder links to
 its video, so you can watch one and then read how it was drawn.
 
@@ -245,7 +245,12 @@ AI agents in a sealed test sandbox found each other through a shared package cac
 <sub>The first Falcon 9 landing, at night: the camera only looks up until the Turn, then only down.</sub><br>
 <sub>▶ <a href="https://youtu.be/ASM9dhhGtV8">watch</a> · <a href="songs/eleven-kept-going">code</a> (4,084 lines)</sub>
 </td>
-<td width="33%"></td>
+<td width="33%" valign="top">
+<a href="https://youtu.be/M6K-TuGXqAY"><img src="songs/ai-slop-city/thumbnail.jpg" alt="AI Slop? You're Absolutely Right"></a><br>
+<b><a href="https://youtu.be/M6K-TuGXqAY">AI Slop? You're Absolutely Right</a></b><br>
+<sub>A song about AI slop, sung by the AI: one woman on a bench, and a shadow that climbs the tower.</sub><br>
+<sub>▶ <a href="https://youtu.be/M6K-TuGXqAY">watch</a> · <a href="songs/ai-slop-city">code</a> (5,424 lines)</sub>
+</td>
 <td width="33%"></td>
 </tr>
 </table>
