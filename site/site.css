@@ -56,6 +56,10 @@ p { max-width: 68ch; }
 .btn:hover { color: var(--bg); filter: brightness(1.08); }
 .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
 .btn.ghost:hover { border-color: var(--ink); }
+.socials { display: flex; gap: 10px; margin: 18px 0 0; }
+.socials a { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); color: var(--muted); transition: color .2s, border-color .2s; }
+.socials a:hover { color: var(--accent); border-color: var(--accent); }
+.socials svg { width: 18px; height: 18px; fill: currentColor; }
 .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin: 44px 0 0; max-width: 620px; }
 .stats div { border-top: 1px solid var(--line); padding-top: 14px; display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 6px; }
 .stats dt { font: 500 11px/1.3 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }

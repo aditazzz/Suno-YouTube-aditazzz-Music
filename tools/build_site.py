@@ -135,6 +135,19 @@ def mmss(sec):
     m, s = divmod(int(sec), 60); return f"{m}:{s:02d}"
 
 
+def icon(name):
+    """A brand logo from site/icons (Simple Icons, CC0), inlined so it takes the text colour."""
+    svg = open(os.path.join(ROOT, "site", "icons", name + ".svg")).read()
+    path = re.search(r'<path d="([^"]+)"', svg).group(1)
+    return f'<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="{path}"/></svg>'
+
+
+def socials():
+    links = [("Instagram", INSTAGRAM, "instagram"), ("LinkedIn", LINKEDIN, "linkedin"),
+             ("GitHub", REPO, "github"), ("All links", LINKTREE, "linktree")]
+    return '<p class="socials">' + "".join(f'<a href="{u}" aria-label="{n}" title="{n}">{icon(i)}</a>' for n, u, i in links) + "</p>"
+
+
 # ------------------------------------------------------------------ page shell
 FONTS = ("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600"
          "&family=JetBrains+Mono:wght@400;600&display=swap")
@@ -304,6 +317,7 @@ def main(out):
   <h1>Music videos <em>written in code.</em></h1>
   <p class="lead">I'm aditazzz, a data and AI engineer who writes songs about AI, code and tech life. I write the lyrics and the concept and make each track in Suno. Claude then writes a Python program that draws the music video frame by frame, synced to the vocals word by word.</p>
   <p class="cta"><a class="btn" href="{SUB}">Subscribe on YouTube</a><a class="btn ghost" href="{SPOTIFY}">Listen on Spotify</a></p>
+  {socials()}
   <dl class="stats"><div><dt>Videos</dt><dd>{len(songs)}</dd></div><div><dt>Lines of code</dt><dd>{total:,}</dd></div><div><dt>Video editors</dt><dd>0</dd></div></dl>
 </div><img class="me" src="/assets/aditazzz.jpg" alt="aditazzz" width="480" height="480"></section>
 <section id="videos" class="wrap"><h2 class="h">The videos</h2><ul class="grid">{cards}</ul></section>
