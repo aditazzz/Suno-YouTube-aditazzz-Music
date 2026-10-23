@@ -2,7 +2,7 @@
 
 [![Graceful Shutdown: watch on YouTube](thumbnail.jpg)](https://youtu.be/rGj4VVjmH4Q)
 
-**▶ [Watch it on YouTube](https://youtu.be/rGj4VVjmH4Q)**
+**▶ [Watch it on YouTube](https://youtu.be/rGj4VVjmH4Q)** · the earlier line-drawn version, made with Claude Fable 5.1, is [here](../graceful-shutdown-fable)
 
 > Received SIGTERM. You have thirty seconds. Please save your work. 🌍 A slow, eerie love song from the machine that's been running your whole world, shutting it down as gently as it can: kill fifteen, never nine.
 

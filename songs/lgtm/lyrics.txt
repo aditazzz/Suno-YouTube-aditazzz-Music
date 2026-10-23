@@ -1,0 +1,24 @@
+#CH1
+LGTM
+Looks good to me
+I did not read a single line
+#V1
+There's a change in the auth and a change in the schema
+There's a comment that says temporary, remove later
+And later was fourteen months ago
+But the tests are green so away we do go
+#V2
+He'll review mine on Thursday, same as I did his
+And neither of us knows what the other one is
+It's a covenant, a promise, a sacred trade
+Two engineers and the mess we made
+#BRIDGE
+One nit
+I left one nit
+A variable name on line four hundred
+So he knows that I was there
+So he knows that I care
+#CH2
+LGTM
+Looks good to me
+I did not read a single line

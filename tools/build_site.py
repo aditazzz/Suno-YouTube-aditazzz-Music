@@ -88,13 +88,18 @@ def lyrics_html(path):
 
 
 def excerpt(folder):
-    """The heart of the scene: render_frame() from scene.py, or the top of the file."""
-    path = os.path.join(folder, "scene.py"); src = open(path, encoding="utf-8").read(); lines = src.splitlines()
+    """The heart of the scene: render_frame() from scene.py, or the top of the file. The earlier standalone videos have no
+    scene.py: their main file is the first row of the README's code table, and the excerpt is its render() or chorus."""
+    path = os.path.join(folder, "scene.py")
+    if not os.path.exists(path):
+        rows = code_table(open(os.path.join(folder, "README.md"), encoding="utf-8").read()); path = os.path.join(folder, rows[0][0])
+    src = open(path, encoding="utf-8").read(); lines = src.splitlines()
     a, b = 0, min(len(lines), 48)
-    for node in ast.parse(src).body:
-        if isinstance(node, ast.FunctionDef) and node.name == "render_frame":
-            a, b = node.lineno - 1, min(node.end_lineno, node.lineno - 1 + 56)
-    return "\n".join(lines[a:b]), a + 1, b < len(lines) and b != len(lines)
+    for want in ("render_frame", "render", "sec_chorus"):
+        hit = [n for n in ast.parse(src).body if isinstance(n, ast.FunctionDef) and n.name == want]
+        if hit:
+            node = hit[0]; a, b = node.lineno - 1, min(node.end_lineno, node.lineno - 1 + 56); break
+    return "\n".join(lines[a:b]), a + 1, b < len(lines) and b != len(lines), os.path.basename(path)
 
 
 def highlight(code):
@@ -212,9 +217,10 @@ def main(out):
         story = " ".join(l.lstrip("> ").strip() for l in md.splitlines() if l.startswith(">")).strip()
         rows = code_table(md); lines = sum(n for _, n, _ in rows)
         lyr, nlines = lyrics_html(os.path.join(folder, "lyrics.txt"))
-        code, first_line, more = excerpt(folder)
+        code, first_line, more, main = excerpt(folder)
+        mm = re.search(r"Video by (Claude [A-Za-z]+ [\d.]+)", md); model = mm.group(1) if mm else "Claude"
         songs.append(dict(slug=slug, id=v["id"], date=v["date"], secs=v["secs"], title=title, story=story, md=md,
-                          rows=rows, lines=lines, lyrics=lyr, code=code, first=first_line, more=more))
+                          rows=rows, lines=lines, lyrics=lyr, code=code, first=first_line, more=more, main=main, model=model))
     songs.sort(key=lambda s: s["date"], reverse=True)
 
     if os.path.isdir(out):
@@ -269,14 +275,14 @@ def main(out):
       <img src="thumbnail.jpg" alt="{esc(s['title'])}: music video thumbnail" width="960" height="540">
       <span class="play" aria-hidden="true"></span>
     </button>
-    <p class="under"><a href="{watch}">Watch on YouTube</a> · {mmss(s['secs'])} · <a class="subscribe" href="{SUB}">Subscribe to @adita_zzz</a></p>
+    <p class="under"><a href="{watch}">Watch on YouTube</a> · {mmss(s['secs'])} · video by {esc(s['model'])} · <a class="subscribe" href="{SUB}">Subscribe to @adita_zzz</a></p>
   </div>
 
   <section class="code" aria-labelledby="code-h">
     <div class="code-head"><h2 id="code-h">The code behind it</h2>
-      <p>Every frame of this video is drawn by a Python program. This is the heart of it, from <code>scene.py</code>, line {s['first']}.</p></div>
+      <p>Every frame of this video is drawn by a Python program. This is the heart of it, from <code>{esc(s['main'])}</code>, line {s['first']}.</p></div>
     <div class="term" data-lock>
-      <div class="term-bar"><span></span><span></span><span></span><b>songs/{s['slug']}/scene.py</b>
+      <div class="term-bar"><span></span><span></span><span></span><b>songs/{s['slug']}/{esc(s['main'])}</b>
         <button class="copy" type="button" data-copy>Copy with credit</button></div>
       <pre><code>{highlight(s['code'])}{chr(10) + '    ...' if s['more'] else ''}</code></pre>
       <div class="veil" aria-hidden="true"><p class="veil-t">ENCRYPTED</p><p>Press play on the video to decrypt the code.</p>

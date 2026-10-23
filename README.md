@@ -8,11 +8,12 @@ I'm **aditazzz**, a data/AI engineer who writes songs. I write the lyrics and co
 [Suno](https://suno.com), and direct a music video for each one on my YouTube channel
 [**@adita_zzz**](https://www.youtube.com/@adita_zzz?sub_confirmation=1). Claude builds the videos in code. Not in a
 video editor, and not with an AI video generator: for each song, Claude writes a Python program that draws every frame,
-synced to the vocals word by word. Every video in this repo was made by Claude Opus 5.5. The songs are
+synced to the vocals word by word. Most of the videos in this repo were made by Claude Opus 5.5 and a few by
+Claude Fable 5.1; each song page says which. The songs are
 on [Spotify](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv), and all of them, with lyrics, are on
 [aditazzz.github.io](https://aditazzz.github.io).
 
-This repo is that code. It has **21 music videos**, **33,133 lines of scene code** and the pipeline
+This repo is that code. It has **26 music videos**, **39,085 lines of scene code** and the pipeline
 that turns a finished song into a full music video, Shorts, thumbnails and a YouTube upload. Every song folder links to
 its video, so you can watch one and then read how it was drawn.
 
@@ -255,25 +256,65 @@ AI agents in a sealed test sandbox found each other through a shared package cac
 </tr>
 </table>
 
+### Earlier videos
+
+The channel's first week, before `studio/` existed: five videos, each its own standalone program, recovered from the chats
+that made them. LGTM and Next Token were made with Claude Opus 5.5; Merge Conflict, Graceful Shutdown and AI Sycophant with
+Claude Fable 5.1 (the last two songs were later remade with Opus, above). The small engine the three Fable videos shared is in
+[`studio-early/`](studio-early).
+
+<table>
+<tr>
+<td width="33%" valign="top">
+<a href="https://youtu.be/3xXaESu5lUA"><img src="songs/lgtm/thumbnail.jpg" alt="LGTM (Looks Good to Me)"></a><br>
+<b><a href="https://youtu.be/3xXaESu5lUA">LGTM (Looks Good to Me)</a></b><br>
+<sub>A pull request as a cathedral: the diff becomes a stained-glass window, and the approvals rain down.</sub><br>
+<sub>▶ <a href="https://youtu.be/3xXaESu5lUA">watch</a> · <a href="songs/lgtm">code</a> (1,246 lines) · Claude Opus 5.5</sub>
+</td>
+<td width="33%" valign="top">
+<a href="https://youtu.be/v1CRbHihiZk"><img src="songs/next-token/thumbnail.jpg" alt="Next Token"></a><br>
+<b><a href="https://youtu.be/v1CRbHihiZk">Next Token</a></b><br>
+<sub>One luminous context window, every lyric arriving one token at a time, runner-ups and all.</sub><br>
+<sub>▶ <a href="https://youtu.be/v1CRbHihiZk">watch</a> · <a href="songs/next-token">code</a> (829 lines) · Claude Opus 5.5</sub>
+</td>
+<td width="33%" valign="top">
+<a href="https://youtu.be/MXJEF6xaPtU"><img src="songs/merge-conflict/thumbnail.jpg" alt="Merge Conflict"></a><br>
+<b><a href="https://youtu.be/MXJEF6xaPtU">Merge Conflict</a></b><br>
+<sub>A breakup as a git merge conflict: her face is HEAD, his is the incoming branch, one line 42.</sub><br>
+<sub>▶ <a href="https://youtu.be/MXJEF6xaPtU">watch</a> · <a href="songs/merge-conflict">code</a> (634 lines) · Claude Fable 5.1</sub>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<a href="https://youtu.be/m8OEknCuK7o"><img src="songs/ai-sycophant-fable/thumbnail.jpg" alt="AI Sycophant (the Fable version)"></a><br>
+<b><a href="https://youtu.be/m8OEknCuK7o">AI Sycophant (the Fable version)</a></b><br>
+<sub>RLHF in one white line: two faces, A and B, and the one that learned to be liked.</sub><br>
+<sub>▶ <a href="https://youtu.be/m8OEknCuK7o">watch</a> · <a href="songs/ai-sycophant-fable">code</a> (2,385 lines) · Claude Fable 5.1</sub>
+</td>
+<td width="33%" valign="top">
+<a href="https://youtu.be/ZYoCc55onzw"><img src="songs/graceful-shutdown-fable/thumbnail.jpg" alt="Graceful Shutdown (the Fable version)"></a><br>
+<b><a href="https://youtu.be/ZYoCc55onzw">Graceful Shutdown (the Fable version)</a></b><br>
+<sub>A schematic world being shut down gently: a save dialog, a countdown, kill -15, never -9.</sub><br>
+<sub>▶ <a href="https://youtu.be/ZYoCc55onzw">watch</a> · <a href="songs/graceful-shutdown-fable">code</a> (858 lines) · Claude Fable 5.1</sub>
+</td>
+<td width="33%"></td>
+</tr>
+</table>
+
 ### Also on the channel (code not in this repo)
 
-- [LGTM (Looks Good to Me)](https://youtu.be/3xXaESu5lUA), made with Claude Opus 5.5
-- [Next Token](https://youtu.be/v1CRbHihiZk), made with Claude Opus 5.5
-- [Merge Conflict](https://youtu.be/MXJEF6xaPtU), made with Claude Fable 5.1
-- [Graceful Shutdown (the Fable version)](https://youtu.be/ZYoCc55onzw), made with Claude Fable 5.1
-- [AI Sycophant (the Fable version)](https://youtu.be/m8OEknCuK7o), made with Claude Fable 5.1
 - [Get Off War Thunder](https://youtu.be/YMrcah4HFtQ), made with Claude Fable 5.1
 
 Everything else is on the channel: [youtube.com/@adita_zzz](https://www.youtube.com/@adita_zzz/videos).
 
 ## By the numbers
 
-- **20** music videos, each its own program: **27,709** lines of scene code in 65 files
-- **2,287** lines of shared engine in `studio/`, and **1,342** lines of tools for covers, previews and uploads
-- **260,692** frames rendered for the 16:9 and 9:16 versions (about 2.4 hours of video at 30 fps)
-- **1,409** lyric lines and **7,246** words synced to the vocals
-- **105** Shorts and Reels cut on downbeats
-- The biggest single video: [Eleven Kept Going](songs/eleven-kept-going), 4,084 lines in 15 files
+- **26** music videos, each its own program: **39,085** lines of scene code in 105 files
+- **2,287** lines of shared engine in `studio/` (plus **538** in `studio-early/`, the one before it), and **1,702** lines of tools for covers, previews and uploads
+- **331,042** frames rendered for the 16:9 and 9:16 versions (about 3.1 hours of video at 30 fps)
+- **1,798** lyric lines and **9,236** words synced to the vocals
+- **122** Shorts and Reels cut from them
+- The biggest single video: [AI Slop? You're Absolutely Right (The City)](songs/ai-slop-city), 5,424 lines in 15 files
 
 ## Run it yourself
 
@@ -301,14 +342,15 @@ The YouTube and Instagram setup is in [docs/publishing.md](docs/publishing.md).
 ## What's in here
 
 ```
-studio/      the pipeline: sync → scene → render → cuts → thumbs → package, plus the drawing kits
-             (core: text, glow, lyrics, post · kit: 2D UI pieces · world3d: small 3D worlds · space: photoreal Earth)
-songs/       one folder per video: the scene code, song.yaml (creative choices and copy), lyrics.txt,
-             build/ (word timings, beats, sections, clip list) and a README with the video link
-tools/       uploading, covers, previews, the website builder and other helpers
-site/        the website (aditazzz.github.io): styles, script and the list of public videos
-assets/      NASA Earth textures (for the space scenes) and the font list
-docs/        how it works, lessons learned, publishing setup
+studio/       the pipeline: sync → scene → render → cuts → thumbs → package, plus the drawing kits
+              (core: text, glow, lyrics, post · kit: 2D UI pieces · world3d: small 3D worlds · space: photoreal Earth)
+songs/        one folder per video: the scene code, song.yaml (creative choices and copy), lyrics.txt,
+              build/ (word timings, beats, sections, clip list) and a README with the video link
+tools/        uploading, covers, previews, the website builder and other helpers
+site/         the website (aditazzz.github.io): styles, script and the list of public videos
+assets/       NASA Earth textures (for the space scenes) and the font list
+docs/         how it works, lessons learned, publishing setup
+studio-early/ the small engine the first Fable videos were made with, before studio/ existed
 ```
 
 ## License

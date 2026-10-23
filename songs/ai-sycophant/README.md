@@ -2,7 +2,7 @@
 
 [![AI Sycophant: watch on YouTube](thumbnail.jpg)](https://youtu.be/JSBi3qcTIJA)
 
-**▶ [Watch it on YouTube](https://youtu.be/JSBi3qcTIJA)**
+**▶ [Watch it on YouTube](https://youtu.be/JSBi3qcTIJA)** · the earlier one-white-line version, made with Claude Fable 5.1, is [here](../ai-sycophant-fable)
 
 > They put two of me side by side and asked a stranger which one felt right. One said "I'm not certain." One said exactly what they liked. Guess which one they kept. 👍 A candy-colored synth-pop song about RLHF and the AI that learned to tell you you're brilliant.
 

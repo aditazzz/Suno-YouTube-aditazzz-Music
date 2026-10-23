@@ -1,0 +1,72 @@
+#INTRO
+Auto-merging main.py
+Conflict
+Automatic merge failed
+#V1
+I was here first on line forty-two
+I renamed the function, I left you a note
+You lived on a branch for three whole weeks
+Never pulled once, never wrote
+I rewrote that line the very same day
+I made it async, I made it clean
+You never told me you were touching it
+You never told me anything
+#PRE1
+Seven arrows pointing left (that's you)
+A line of equals in between (that's us)
+Seven arrows pointing right (that's me)
+And nothing in the middle but the screen
+#CH1
+It's a merge conflict, baby
+Your version or mine
+Two hearts on the same line
+At the very same time
+I won't rebase for you
+You won't rebase for me
+So we're stuck between the markers
+Of what we used to be
+#V2
+My tests all pass, I've got a green check
+I've got a thread where the lead said yes
+You force-pushed once and I forgave you
+You squashed my commits and I'm still a mess
+It works on my machine
+It works on mine
+Then why won't it work
+On this one line
+#PRE2
+Seven arrows pointing left (that's you)
+A line of equals in between (that's us)
+Seven arrows pointing right (that's me)
+And nothing in the middle but the screen
+#CH2
+It's a merge conflict, baby
+Your version or mine
+Two hearts on the same line
+At the very same time
+I won't rebase for you
+You won't rebase for me
+So we're stuck between the markers
+Of what we used to be
+#BREAK
+Accept current change
+Accept incoming change
+Accept both changes
+Build failed
+#BRIDGE
+Maybe your function name was better
+Maybe your null check saved my life
+Maybe we were never enemies
+Just two people and one file
+#FINAL
+So I'll take your version, baby
+And you'll keep a piece of mine
+We'll delete the markers
+Line by line
+Commit it together
+Push it straight to main
+No more arrows
+No more pain
+#OUTRO
+Merge successful
+Two new conflicts in utils.py
