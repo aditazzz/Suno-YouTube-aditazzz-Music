@@ -12,7 +12,7 @@ tail: 3.0                            # silent seconds after the song for the end
 thumb_time: 61.0
 thumb_lines: ["YOU'RE", ABSOLUTELY, RIGHT]
 thumb_sub: "a song about AI slop, sung by the AI"
-thumb_hook_color: "ff3fbf"
+thumb_hook_color: "3daaff"
 thumb_hook_side: left
 ctx_shift: 0.285
 thumb_option_time: 52.0              # note only: option 3 = her on the bench, phone glowing, screens above (shift 0.12)
