@@ -165,7 +165,7 @@ def page(*, path, title, desc, image, body, ld, og_type="website", extra_head=""
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS}">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v={ASSET_V}">
 {extra_head}<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 </head>
 <body>
@@ -181,7 +181,7 @@ def page(*, path, title, desc, image, body, ld, og_type="website", extra_head=""
   <p class="links"><a href="{SUB}">YouTube</a><a href="{SPOTIFY}">Spotify</a><a href="{INSTAGRAM}">Instagram</a><a href="{REPO}">GitHub</a><a href="{LINKEDIN}">LinkedIn</a><a href="{LINKTREE}">All links</a></p>
   <p class="fine">Songs, lyrics and concepts by aditazzz. Videos written in code by Claude. The code is MIT-licensed; the songs, lyrics and artwork are all rights reserved.</p>
 </div></footer>
-<script src="/assets/site.js" defer></script>
+<script src="/assets/site.js?v={ASSET_V}" defer></script>
 </body>
 </html>
 """
@@ -304,7 +304,7 @@ def main(out):
   <h1>Music videos <em>written in code.</em></h1>
   <p class="lead">I'm aditazzz, a data and AI engineer who writes songs about AI, code and tech life. I write the lyrics and the concept and make each track in Suno. Claude then writes a Python program that draws the music video frame by frame, synced to the vocals word by word.</p>
   <p class="cta"><a class="btn" href="{SUB}">Subscribe on YouTube</a><a class="btn ghost" href="{SPOTIFY}">Listen on Spotify</a></p>
-  <dl class="stats"><div><dt>Videos</dt><dd>{len(songs)}</dd></div><div><dt>Lines of scene code</dt><dd>{total:,}</dd></div><div><dt>Video editors used</dt><dd>0</dd></div></dl>
+  <dl class="stats"><div><dt>Videos</dt><dd>{len(songs)}</dd></div><div><dt>Lines of code</dt><dd>{total:,}</dd></div><div><dt>Video editors</dt><dd>0</dd></div></dl>
 </div><img class="me" src="/assets/aditazzz.jpg" alt="aditazzz" width="480" height="480"></section>
 <section id="videos" class="wrap"><h2 class="h">The videos</h2><ul class="grid">{cards}</ul></section>
 <section id="how" class="wrap how"><h2 class="h">How a video gets made</h2>
@@ -339,6 +339,8 @@ def main(out):
     print(f"built {len(songs)} video pages, {total:,} lines of code -> {out}")
 
 
+import hashlib
+ASSET_V = hashlib.sha1(b"".join(open(os.path.join(ROOT, "site", f), "rb").read() for f in ("site.css", "site.js", "aditazzz.jpg"))).hexdigest()[:8]
 CUR_SLUG = ""
 if __name__ == "__main__":
     main(os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "..", "aditazzz.github.io")))
