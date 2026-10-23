@@ -23,7 +23,7 @@ SPOTIFY = "https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv"
 INSTAGRAM = "https://www.instagram.com/aditazzz.music/"
 LINKTREE = "https://linktr.ee/aditazzz"
 LINKEDIN = "https://www.linkedin.com/in/aditazeqollari"
-ARTIST = {"@type": "MusicGroup", "@id": SITE + "/#artist", "name": "aditazzz", "url": SITE + "/",
+ARTIST = {"@type": "MusicGroup", "@id": SITE + "/#artist", "name": "aditazzz", "url": SITE + "/", "image": SITE + "/assets/aditazzz.jpg",
           "genre": ["AI Doompop", "Darkwave", "Synthpop"],
           "sameAs": [YT, SPOTIFY, INSTAGRAM, LINKTREE, LINKEDIN, "https://github.com/aditazzz"]}
 SECTION_NAMES = {"INTRO": "Intro", "V": "Verse", "PRE": "Pre-chorus", "CH": "Chorus", "POST": "Post-chorus",
@@ -209,7 +209,7 @@ def main(out):
             if name in (".git", "CNAME", "googleverify.html") or name.startswith("google"): continue
             p = os.path.join(out, name); shutil.rmtree(p) if os.path.isdir(p) else os.remove(p)
     os.makedirs(os.path.join(out, "assets"), exist_ok=True)
-    for f in ("site.css", "site.js", "favicon.svg"):
+    for f in ("site.css", "site.js", "favicon.svg", "aditazzz.jpg"):
         shutil.copy(os.path.join(ROOT, "site", f), os.path.join(out, "assets" if f != "favicon.svg" else "", f))
     shutil.copy(os.path.join(ROOT, "docs", "img", "wall.jpg"), os.path.join(out, "assets", "wall.jpg"))
     open(os.path.join(out, ".nojekyll"), "w").close()
@@ -302,7 +302,8 @@ def main(out):
     body = f"""<section class="hero wrap">
   <p class="eyebrow">AI Doompop · darkwave · synthpop</p>
   <h1>Music videos <em>written in code.</em></h1>
-  <p class="lead">I'm aditazzz, a data and AI engineer who writes songs about AI, code and tech life. I write the lyrics and the concept and make each track in Suno. Claude then writes a Python program that draws the music video frame by frame, synced to the vocals word by word.</p>
+  <div class="intro"><img class="me" src="/assets/aditazzz.jpg" alt="aditazzz" width="240" height="240">
+  <p class="lead">I'm aditazzz, a data and AI engineer who writes songs about AI, code and tech life. I write the lyrics and the concept and make each track in Suno. Claude then writes a Python program that draws the music video frame by frame, synced to the vocals word by word.</p></div>
   <p class="cta"><a class="btn" href="{SUB}">Subscribe on YouTube</a><a class="btn ghost" href="{SPOTIFY}">Listen on Spotify</a></p>
   <dl class="stats"><div><dt>Videos</dt><dd>{len(songs)}</dd></div><div><dt>Lines of scene code</dt><dd>{total:,}</dd></div><div><dt>Video editors used</dt><dd>0</dd></div></dl>
 </section>
