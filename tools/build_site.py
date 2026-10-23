@@ -299,14 +299,13 @@ def main(out):
         ARTIST,
         {"@type": "ItemList", "name": "Music videos made in code", "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "url": f"{SITE}/videos/{s['slug']}/", "name": s["title"]} for i, s in enumerate(songs)]}]}
-    body = f"""<section class="hero wrap">
+    body = f"""<section class="hero wrap"><div class="hero-text">
   <p class="eyebrow">AI Doompop · darkwave · synthpop</p>
   <h1>Music videos <em>written in code.</em></h1>
-  <div class="intro"><img class="me" src="/assets/aditazzz.jpg" alt="aditazzz" width="240" height="240">
-  <p class="lead">I'm aditazzz, a data and AI engineer who writes songs about AI, code and tech life. I write the lyrics and the concept and make each track in Suno. Claude then writes a Python program that draws the music video frame by frame, synced to the vocals word by word.</p></div>
+  <p class="lead">I'm aditazzz, a data and AI engineer who writes songs about AI, code and tech life. I write the lyrics and the concept and make each track in Suno. Claude then writes a Python program that draws the music video frame by frame, synced to the vocals word by word.</p>
   <p class="cta"><a class="btn" href="{SUB}">Subscribe on YouTube</a><a class="btn ghost" href="{SPOTIFY}">Listen on Spotify</a></p>
   <dl class="stats"><div><dt>Videos</dt><dd>{len(songs)}</dd></div><div><dt>Lines of scene code</dt><dd>{total:,}</dd></div><div><dt>Video editors used</dt><dd>0</dd></div></dl>
-</section>
+</div><img class="me" src="/assets/aditazzz.jpg" alt="aditazzz" width="480" height="480"></section>
 <section id="videos" class="wrap"><h2 class="h">The videos</h2><ul class="grid">{cards}</ul></section>
 <section id="how" class="wrap how"><h2 class="h">How a video gets made</h2>
   <ol>
@@ -324,7 +323,7 @@ def main(out):
     # ---- 404, robots, sitemap
     open(os.path.join(out, "404.html"), "w", encoding="utf-8").write(page(
         path="/404.html", title="Not found | aditazzz", desc="That page isn't here.", image="/assets/wall.jpg",
-        body='<section class="wrap hero"><h1>Not found.</h1><p class="lead">You\'re absolutely right, that page doesn\'t exist. <a href="/">See all the videos</a>.</p></section>',
+        body='<section class="wrap hero plain"><h1>Not found.</h1><p class="lead">You\'re absolutely right, that page doesn\'t exist. <a href="/">See all the videos</a>.</p></section>',
         ld={"@context": "https://schema.org", "@type": "WebPage", "name": "Not found"}).replace(
         '<meta name="description"', '<meta name="robots" content="noindex">\n<meta name="description"'))
     open(os.path.join(out, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
