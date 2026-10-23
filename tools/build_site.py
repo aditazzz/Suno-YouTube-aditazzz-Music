@@ -22,9 +22,10 @@ SUB = YT + "?sub_confirmation=1"
 SPOTIFY = "https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv"
 INSTAGRAM = "https://www.instagram.com/aditazzz.music/"
 LINKTREE = "https://linktr.ee/aditazzz"
+LINKEDIN = "https://www.linkedin.com/in/aditazeqollari"
 ARTIST = {"@type": "MusicGroup", "@id": SITE + "/#artist", "name": "aditazzz", "url": SITE + "/",
           "genre": ["AI Doompop", "Darkwave", "Synthpop"],
-          "sameAs": [YT, SPOTIFY, INSTAGRAM, LINKTREE, "https://github.com/aditazzz"]}
+          "sameAs": [YT, SPOTIFY, INSTAGRAM, LINKTREE, LINKEDIN, "https://github.com/aditazzz"]}
 SECTION_NAMES = {"INTRO": "Intro", "V": "Verse", "PRE": "Pre-chorus", "CH": "Chorus", "POST": "Post-chorus",
                  "BRIDGE": "Bridge", "BREAK": "Break", "BREAKDOWN": "Breakdown", "FINAL": "Final chorus",
                  "OUTRO": "Outro", "BUILD": "Build", "TAG": "Tag", "TURN": "Turn", "REFRAIN": "Refrain", "PEAK": "Peak"}
@@ -177,7 +178,7 @@ def page(*, path, title, desc, image, body, ld, og_type="website", extra_head=""
 {body}
 </main>
 <footer class="foot"><div class="wrap">
-  <p class="links"><a href="{SUB}">YouTube</a><a href="{SPOTIFY}">Spotify</a><a href="{INSTAGRAM}">Instagram</a><a href="{REPO}">GitHub</a><a href="{LINKTREE}">All links</a></p>
+  <p class="links"><a href="{SUB}">YouTube</a><a href="{SPOTIFY}">Spotify</a><a href="{INSTAGRAM}">Instagram</a><a href="{REPO}">GitHub</a><a href="{LINKEDIN}">LinkedIn</a><a href="{LINKTREE}">All links</a></p>
   <p class="fine">Songs, lyrics and concepts by aditazzz. Videos written in code by Claude. The code is MIT-licensed; the songs, lyrics and artwork are all rights reserved.</p>
 </div></footer>
 <script src="/assets/site.js" defer></script>

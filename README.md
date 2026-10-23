@@ -1,6 +1,6 @@
 # aditazzz music videos, made in code by Claude
 
-[![YouTube: @adita_zzz](https://img.shields.io/badge/YouTube-%40adita__zzz-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/@adita_zzz?sub_confirmation=1) [![Spotify: aditazzz](https://img.shields.io/badge/Spotify-aditazzz-1DB954?logo=spotify&logoColor=white)](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv) [![Instagram: @aditazzz.music](https://img.shields.io/badge/Instagram-%40aditazzz.music-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/aditazzz.music/)
+[![YouTube: @adita_zzz](https://img.shields.io/badge/YouTube-%40adita__zzz-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/@adita_zzz?sub_confirmation=1) [![Spotify: aditazzz](https://img.shields.io/badge/Spotify-aditazzz-1DB954?logo=spotify&logoColor=white)](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv) [![Instagram: @aditazzz.music](https://img.shields.io/badge/Instagram-%40aditazzz.music-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/aditazzz.music/) [![LinkedIn: Adita Zeqollari](https://img.shields.io/badge/LinkedIn-Adita%20Zeqollari-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aditazeqollari)
 
 [![A wall of thumbnails from the music videos in this repo](docs/img/wall.jpg)](https://www.youtube.com/@adita_zzz/videos)
 
@@ -322,4 +322,5 @@ New songs and videos every week. Every video, with its lyrics and a look at its 
 [YouTube](https://www.youtube.com/@adita_zzz?sub_confirmation=1) ·
 [Instagram](https://www.instagram.com/aditazzz.music/) ·
 [Spotify](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv) ·
+[LinkedIn](https://www.linkedin.com/in/aditazeqollari) ·
 [all links](https://linktr.ee/aditazzz)
