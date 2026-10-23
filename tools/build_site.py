@@ -12,7 +12,6 @@ Video dates and lengths live in site/videos.json (slug -> YouTube id, upload dat
 when a video goes public; songs without an entry are left off the site.
 """
 import ast, html, io, json, keyword, os, re, shutil, sys, tokenize
-from datetime import date
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://aditazzz.github.io"
@@ -23,9 +22,20 @@ SPOTIFY = "https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv"
 INSTAGRAM = "https://www.instagram.com/aditazzz.music/"
 LINKTREE = "https://linktr.ee/aditazzz"
 LINKEDIN = "https://www.linkedin.com/in/aditazeqollari"
+# Google Search Console ownership token (URL-prefix property for SITE). It is public by design: Google reads it from the
+# live home page. Keep it here so a rebuild never drops it.
+GSC_VERIFY = "KsjTLDJ1Qvirn6xuLeXUbLTs20i_d3ELdcQKPKiwSVM"
+ABOUT = ("aditazzz makes AI-assisted music about technology, artificial intelligence, coding, philosophy and the human "
+         "experience. Every music video is animated entirely in code with Claude.")
 ARTIST = {"@type": "MusicGroup", "@id": SITE + "/#artist", "name": "aditazzz", "url": SITE + "/", "image": SITE + "/assets/aditazzz.jpg",
-          "genre": ["AI Doompop", "Darkwave", "Synthpop"],
+          "description": ABOUT, "genre": ["AI Doompop", "Darkwave", "Synthpop"],
           "sameAs": [YT, SPOTIFY, INSTAGRAM, LINKTREE, LINKEDIN, "https://github.com/aditazzz"]}
+WEBSITE = {"@type": "WebSite", "@id": SITE + "/#site", "name": "aditazzz", "url": SITE + "/", "inLanguage": "en",
+           "description": ABOUT, "publisher": {"@id": ARTIST["@id"]}}
+# The social card: a 1200x630 (1.91:1) crop of the right four tile columns of the video wall, which keeps the "26 music videos"
+# and @adita_zzz panel. The full wall is 3.1:1, which Facebook, X and LinkedIn crop at the edges.
+CARD = "/assets/card.jpg"
+IMG_SIZES = {CARD: (1200, 630)}   # filled in for the thumbnails as they are copied
 SECTION_NAMES = {"INTRO": "Intro", "V": "Verse", "PRE": "Pre-chorus", "CH": "Chorus", "POST": "Post-chorus",
                  "BRIDGE": "Bridge", "BREAK": "Break", "BREAKDOWN": "Breakdown", "FINAL": "Final chorus",
                  "OUTRO": "Outro", "BUILD": "Build", "TAG": "Tag", "TURN": "Turn", "REFRAIN": "Refrain", "PEAK": "Peak"}
@@ -158,33 +168,54 @@ FONTS = ("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&fam
          "&family=JetBrains+Mono:wght@400;600&display=swap")
 
 
-def page(*, path, title, desc, image, body, ld, og_type="website", extra_head=""):
+def song_title(t):
+    """A search title that keeps the artist name inside the ~60 characters Google shows."""
+    for c in (f"{t} by aditazzz: music video made in code", f"{t} by aditazzz: music video", f"{t} by aditazzz"):
+        if len(c) <= 62: return c
+    return f"{t} | aditazzz"
+
+
+def clip(s, n=158):
+    s = " ".join(s.split())
+    return s if len(s) <= n else s[:n - 1].rsplit(" ", 1)[0].rstrip(",;:—-") + "…"
+
+
+def page(*, path, title, desc, image, image_alt, body, ld, og_type="website", extra_head="", indexable=True):
     url = SITE + path
+    w, h = IMG_SIZES.get(image, (None, None))
+    size = f'\n<meta property="og:image:width" content="{w}">\n<meta property="og:image:height" content="{h}">' if w else ""
+    # a page that isn't meant to be indexed (the 404) gets noindex and no canonical or og:url
+    meta = (f'<meta name="robots" content="index, follow, max-image-preview:large">\n<link rel="canonical" href="{url}">'
+            if indexable else '<meta name="robots" content="noindex">')
+    og_url = f'\n<meta property="og:url" content="{url}">' if indexable else ""
     return f"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(title)}</title>
+{extra_head}<title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
-<link rel="canonical" href="{url}">
+{meta}
+<meta name="author" content="aditazzz">
 <meta name="theme-color" content="#0c0c0b">
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="aditazzz">
+<meta property="og:locale" content="en_US">
 <meta property="og:title" content="{esc(title)}">
-<meta property="og:description" content="{esc(desc)}">
-<meta property="og:url" content="{url}">
-<meta property="og:image" content="{SITE + image}">
+<meta property="og:description" content="{esc(desc)}">{og_url}
+<meta property="og:image" content="{SITE + image}">{size}
+<meta property="og:image:alt" content="{esc(image_alt)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{SITE + image}">
+<meta name="twitter:image:alt" content="{esc(image_alt)}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS}">
 <link rel="stylesheet" href="/assets/site.css?v={ASSET_V}">
-{extra_head}<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -231,6 +262,11 @@ def main(out):
     for f in ("site.css", "site.js", "favicon.svg", "aditazzz.jpg"):
         shutil.copy(os.path.join(ROOT, "site", f), os.path.join(out, "assets" if f != "favicon.svg" else "", f))
     shutil.copy(os.path.join(ROOT, "docs", "img", "wall.jpg"), os.path.join(out, "assets", "wall.jpg"))
+    from PIL import Image
+    wall = Image.open(os.path.join(ROOT, "docs", "img", "wall.jpg")).convert("RGB")
+    cw = wall.width * 4 // 7; ch = round(cw * 630 / 1200); top = (wall.height - ch) // 2   # the last 4 of 7 tile columns
+    wall.crop((wall.width - cw, top, wall.width, top + ch)).resize((1200, 630), Image.LANCZOS).save(
+        os.path.join(out, CARD.lstrip("/")), quality=88, optimize=True, progressive=True)
     open(os.path.join(out, ".nojekyll"), "w").close()
 
     total = sum(s["lines"] for s in songs)
@@ -240,10 +276,13 @@ def main(out):
         d = os.path.join(out, "videos", s["slug"]); os.makedirs(d, exist_ok=True)
         shutil.copy(os.path.join(ROOT, "songs", s["slug"], "thumbnail.jpg"), os.path.join(d, "thumbnail.jpg"))
         path = f"/videos/{s['slug']}/"; img = path + "thumbnail.jpg"
+        IMG_SIZES[img] = Image.open(os.path.join(d, "thumbnail.jpg")).size
         watch = f"https://www.youtube.com/watch?v={s['id']}"
-        desc = (s["story"] or f"{s['title']}, a music video by aditazzz written entirely in code.")
-        desc = desc if len(desc) <= 158 else desc[:155].rsplit(" ", 1)[0] + "…"
-        title = f"{s['title']}: music video made in code | aditazzz"
+        story = re.sub(r"\*+|`|\[([^\]]+)\]\([^)]+\)", r"\1", s["story"])   # plain text for meta tags
+        long_desc = story or f"{s['title']}, a music video by aditazzz animated entirely in code with Claude."
+        # leading with the title and artist keeps every description unique (alternate versions share a story)
+        desc = clip(f"{s['title']} by aditazzz. {long_desc}" if story else long_desc)
+        title = song_title(s["title"])
         seen = md_section(s["md"], "What you see")
         nums = md_section(s["md"], "By the numbers")
         table = "".join(f'<tr><td><a href="{REPO}/blob/main/songs/{s["slug"]}/{f}"><code>{esc(f)}</code></a></td>'
@@ -253,17 +292,21 @@ def main(out):
                   f"# Code: {REPO}/tree/main/songs/{s['slug']} (MIT). If you use it, please credit aditazzz and link the video.\n\n")
         nxt = songs[(i + 1) % len(songs)]
         ld = {"@context": "https://schema.org", "@graph": [
-            ARTIST,
-            {"@type": "VideoObject", "@id": SITE + path + "#video", "name": s["title"], "description": desc,
+            WEBSITE, ARTIST,
+            {"@type": "WebPage", "@id": SITE + path, "url": SITE + path, "name": title, "description": desc,
+             "inLanguage": "en", "isPartOf": {"@id": WEBSITE["@id"]}, "primaryImageOfPage": SITE + img,
+             "mainEntity": {"@id": SITE + path + "#video"}, "breadcrumb": {"@id": SITE + path + "#crumbs"}},
+            {"@type": "VideoObject", "@id": SITE + path + "#video", "name": s["title"], "description": long_desc,
              "thumbnailUrl": [SITE + img, f"https://i.ytimg.com/vi/{s['id']}/maxresdefault.jpg"],
              "uploadDate": s["date"], "duration": iso_dur(s["secs"]), "embedUrl": f"https://www.youtube.com/embed/{s['id']}",
-             "url": watch, "author": {"@id": ARTIST["@id"]}, "genre": "AI Doompop"},
-            {"@type": "MusicRecording", "name": s["title"], "url": SITE + path, "byArtist": {"@id": ARTIST["@id"]},
+             "url": watch, "author": {"@id": ARTIST["@id"]}, "genre": "AI Doompop", "inLanguage": "en"},
+            {"@type": "MusicRecording", "@id": SITE + path + "#recording", "name": s["title"], "url": SITE + path,
+             "image": SITE + img, "subjectOf": {"@id": SITE + path + "#video"}, "byArtist": {"@id": ARTIST["@id"]},
              "duration": iso_dur(s["secs"]), "recordingOf": {"@type": "MusicComposition", "name": s["title"],
              "lyricist": {"@id": ARTIST["@id"]}}},
             {"@type": "SoftwareSourceCode", "name": f"{s['title']} scene code", "codeRepository": f"{REPO}/tree/main/songs/{s['slug']}",
              "programmingLanguage": "Python", "license": "https://opensource.org/licenses/MIT"},
-            {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "BreadcrumbList", "@id": SITE + path + "#crumbs", "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "Videos", "item": SITE + "/"},
                 {"@type": "ListItem", "position": 2, "name": s["title"], "item": SITE + path}]}]}
         body = f"""<article class="wrap song">
@@ -306,17 +349,21 @@ def main(out):
     <span><small>Next video</small>{esc(nxt['title'])}</span></a></aside>
 </article>"""
         open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(
-            page(path=path, title=title, desc=desc, image=img, body=body, ld=ld, og_type="video.other"))
+            page(path=path, title=title, desc=desc, image=img, image_alt=f"{s['title']} by aditazzz: music video thumbnail",
+                 body=body, ld=ld, og_type="video.other"))
 
     # ---- home
     cards = "".join(f"""<li><a href="/videos/{s['slug']}/"><img src="/videos/{s['slug']}/thumbnail.jpg" alt="{esc(s['title'])}" width="960" height="540" loading="{'eager' if i < 3 else 'lazy'}">
       <span class="t">{esc(s['title'])}</span><span class="m">{mmss(s['secs'])} · {s['lines']:,} lines of code</span></a></li>""" for i, s in enumerate(songs))
-    home_desc = (f"AI Doompop by aditazzz: {len(songs)} music videos about AI, code and tech life, each one drawn frame by frame "
-                 f"by a Python program Claude wrote. Watch them and read the code.")
+    home_title = "aditazzz: AI music & music videos made in code with Claude"
+    home_desc = (f"aditazzz makes AI-assisted music about technology, AI, coding, philosophy and the human experience. "
+                 f"{len(songs)} music videos, every frame animated in code with Claude.")
     ld = {"@context": "https://schema.org", "@graph": [
-        {"@type": "WebSite", "@id": SITE + "/#site", "name": "aditazzz", "url": SITE + "/", "publisher": {"@id": ARTIST["@id"]}},
-        ARTIST,
-        {"@type": "ItemList", "name": "Music videos made in code", "itemListElement": [
+        WEBSITE, ARTIST,
+        {"@type": "WebPage", "@id": SITE + "/", "url": SITE + "/", "name": home_title, "description": home_desc,
+         "inLanguage": "en", "isPartOf": {"@id": WEBSITE["@id"]}, "about": {"@id": ARTIST["@id"]},
+         "primaryImageOfPage": SITE + CARD, "mainEntity": {"@id": SITE + "/#videos"}},
+        {"@type": "ItemList", "@id": SITE + "/#videos", "name": "Music videos made in code", "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "url": f"{SITE}/videos/{s['slug']}/", "name": s["title"]} for i, s in enumerate(songs)]}]}
     body = f"""<section class="hero wrap"><div class="hero-text">
   <p class="eyebrow">AI Doompop · darkwave · synthpop</p>
@@ -325,7 +372,7 @@ def main(out):
   <p class="cta"><a class="btn" href="{SUB}">Subscribe on YouTube</a><a class="btn ghost" href="{SPOTIFY}">Listen on Spotify</a></p>
   {socials()}
   <dl class="stats"><div><dt>Videos</dt><dd>{len(songs)}</dd></div><div><dt>Lines of code</dt><dd>{total:,}</dd></div><div><dt>Video editors</dt><dd>0</dd></div></dl>
-</div><img class="me" src="/assets/aditazzz.jpg" alt="aditazzz" width="480" height="480"></section>
+</div><img class="me" src="/assets/aditazzz.jpg" alt="Portrait of aditazzz" width="480" height="480"></section>
 <section id="videos" class="wrap"><h2 class="h">The videos</h2><ul class="grid">{cards}</ul></section>
 <section id="how" class="wrap how"><h2 class="h">How a video gets made</h2>
   <ol>
@@ -337,21 +384,24 @@ def main(out):
   <p class="more">All of it is open source: <a href="{REPO}">the pipeline and every scene on GitHub</a>.</p>
 </section>"""
     open(os.path.join(out, "index.html"), "w", encoding="utf-8").write(page(
-        path="/", title="aditazzz: AI Doompop music videos made in code with Claude", desc=home_desc,
-        image="/assets/wall.jpg", body=body, ld=ld))
+        path="/", title=home_title, desc=home_desc, image=CARD, image_alt=f"aditazzz: {len(songs)} music videos, every frame is code",
+        body=body, ld=ld, extra_head=f'<meta name="google-site-verification" content="{GSC_VERIFY}">\n'))
 
     # ---- 404, robots, sitemap
     open(os.path.join(out, "404.html"), "w", encoding="utf-8").write(page(
-        path="/404.html", title="Not found | aditazzz", desc="That page isn't here.", image="/assets/wall.jpg",
+        path="/404.html", title="Not found | aditazzz", desc="That page isn't here.", image=CARD,
+        image_alt="aditazzz music videos", indexable=False,
         body='<section class="wrap hero plain"><h1>Not found.</h1><p class="lead">You\'re absolutely right, that page doesn\'t exist. <a href="/">See all the videos</a>.</p></section>',
-        ld={"@context": "https://schema.org", "@type": "WebPage", "name": "Not found"}).replace(
-        '<meta name="description"', '<meta name="robots" content="noindex">\n<meta name="description"'))
+        ld={"@context": "https://schema.org", "@type": "WebPage", "name": "Not found"}))
     open(os.path.join(out, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
-    today = date.today().isoformat()
-    urls = [(SITE + "/", today)] + [(f"{SITE}/videos/{s['slug']}/", s["date"][:10]) for s in songs]
+    # lastmod is the date a page's content last changed: a video page on its upload day, the home page with the newest video
+    def img_tag(u, t): return f"<image:image><image:loc>{SITE + u}</image:loc></image:image>"
+    urls = [(SITE + "/", songs[0]["date"][:10], img_tag(CARD, "aditazzz"))] + [
+        (f"{SITE}/videos/{s['slug']}/", s["date"][:10], img_tag(f"/videos/{s['slug']}/thumbnail.jpg", s["title"])) for s in songs]
     open(os.path.join(out, "sitemap.xml"), "w").write(
-        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-        "".join(f"  <url><loc>{u}</loc><lastmod>{d}</lastmod></url>\n" for u, d in urls) + "</urlset>\n")
+        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+        'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' +
+        "".join(f"  <url><loc>{u}</loc><lastmod>{d}</lastmod>{i}</url>\n" for u, d, i in urls) + "</urlset>\n")
     open(os.path.join(out, "README.md"), "w").write(
         f"# aditazzz.github.io\n\nThe website for [aditazzz]({SITE}): AI Doompop music videos written in code with Claude.\n\n"
         f"It's generated by [`tools/build_site.py`]({REPO}/blob/main/tools/build_site.py) in the "
