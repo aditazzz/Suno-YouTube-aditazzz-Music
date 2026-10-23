@@ -1,6 +1,6 @@
-# AI Slop? YOU're Absolutely Right (The City)
+# AI Slop? You're Absolutely Right (The City)
 
-![AI Slop? YOU're Absolutely Right: an illustrated city tower full of glowing screens over a woman on a bench](thumbnail.jpg)
+![AI Slop? You're Absolutely Right: an illustrated city tower full of glowing screens over a woman on a bench](thumbnail.jpg)
 
 > A song about AI slop, sung by the AI. 2 a.m., one woman on one bench, and a phone that agrees with everything she says. 🌆
 
