@@ -9,7 +9,8 @@ I'm **aditazzz**, a data/AI engineer who writes songs. I write the lyrics and co
 [**@adita_zzz**](https://www.youtube.com/@adita_zzz?sub_confirmation=1). Claude builds the videos in code. Not in a
 video editor, and not with an AI video generator: for each song, Claude writes a Python program that draws every frame,
 synced to the vocals word by word. Every video in this repo was made by Claude Opus 5.5. The songs are
-on [Spotify](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv).
+on [Spotify](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv), and all of them, with lyrics, are on
+[aditazzz.github.io](https://aditazzz.github.io).
 
 This repo is that code. It has **20 music videos**, **27,709 lines of scene code** and the pipeline
 that turns a finished song into a full music video, Shorts, thumbnails and a YouTube upload. Every song folder links to
@@ -299,7 +300,8 @@ studio/      the pipeline: sync → scene → render → cuts → thumbs → pac
              (core: text, glow, lyrics, post · kit: 2D UI pieces · world3d: small 3D worlds · space: photoreal Earth)
 songs/       one folder per video: the scene code, song.yaml (creative choices and copy), lyrics.txt,
              build/ (word timings, beats, sections, clip list) and a README with the video link
-tools/       uploading, covers, previews and other helpers
+tools/       uploading, covers, previews, the website builder and other helpers
+site/        the website (aditazzz.github.io): styles, script and the list of public videos
 assets/      NASA Earth textures (for the space scenes) and the font list
 docs/        how it works, lessons learned, publishing setup
 ```
@@ -309,9 +311,14 @@ docs/        how it works, lessons learned, publishing setup
 The code is MIT-licensed ([LICENSE](LICENSE)): use it, learn from it, make your own videos with it. The songs,
 lyrics, song copy and artwork are mine and all rights reserved ([LICENSE-CONTENT.md](LICENSE-CONTENT.md)).
 
+If you build something with it, I'd love a credit: name aditazzz and link the video the code came from. It isn't a
+condition of the license, just a nice thing to do.
+
 ## Follow along
 
-New songs and videos every week:
+New songs and videos every week. Every video, with its lyrics and a look at its code, is on
+**[aditazzz.github.io](https://aditazzz.github.io)**.
+
 [YouTube](https://www.youtube.com/@adita_zzz?sub_confirmation=1) ·
 [Instagram](https://www.instagram.com/aditazzz.music/) ·
 [Spotify](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv) ·
