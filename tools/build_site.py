@@ -22,7 +22,7 @@ SPOTIFY = "https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv"
 INSTAGRAM = "https://www.instagram.com/aditazzz.music/"
 LINKTREE = "https://linktr.ee/aditazzz"
 LINKEDIN = "https://www.linkedin.com/in/aditazeqollari"
-REDDIT = "https://www.reddit.com/r/aidoompop/"   # the AI Doompop community; aditazzz founded it and moderates it
+REDDIT = "https://www.reddit.com/r/aidoompop/"   # the AI Doompop subreddit
 # Google Search Console ownership token (URL-prefix property for SITE). It is public by design: Google reads it from the
 # live home page. Keep it here so a rebuild never drops it.
 GSC_VERIFY = "KsjTLDJ1Qvirn6xuLeXUbLTs20i_d3ELdcQKPKiwSVM"
@@ -159,7 +159,7 @@ def icon(name):
 
 
 def socials():
-    links = [("Instagram", INSTAGRAM, "instagram"), ("r/aidoompop, the AI Doompop subreddit I founded and moderate", REDDIT, "reddit"),
+    links = [("Instagram", INSTAGRAM, "instagram"), ("r/aidoompop on Reddit", REDDIT, "reddit"),
              ("LinkedIn", LINKEDIN, "linkedin"), ("GitHub", REPO, "github"), ("All links", LINKTREE, "linktree")]
     return '<p class="socials">' + "".join(f'<a href="{u}" aria-label="{n}" title="{n}">{icon(i)}</a>' for n, u, i in links) + "</p>"
 
@@ -369,7 +369,7 @@ def main(out):
     body = f"""<section class="hero wrap"><div class="hero-text">
   <p class="eyebrow">AI Doompop · darkwave · synthpop</p>
   <h1>Music videos <em>written in code.</em></h1>
-  <p class="lead">I'm aditazzz, a data and AI engineer who writes songs about AI, code and tech life. I write the lyrics and the concept and make each track in Suno. Claude then writes a Python program that draws the music video frame by frame, synced to the vocals word by word. I also founded and moderate <a href="{REDDIT}">r/aidoompop</a>, the subreddit for AI Doompop.</p>
+  <p class="lead">I'm aditazzz, a data and AI engineer who writes songs about AI, code and tech life. I write the lyrics and the concept and make each track in Suno. Claude then writes a Python program that draws the music video frame by frame, synced to the vocals word by word.</p>
   <p class="cta"><a class="btn" href="{SUB}">Subscribe on YouTube</a><a class="btn ghost" href="{SPOTIFY}">Listen on Spotify</a></p>
   {socials()}
   <dl class="stats"><div><dt>Videos</dt><dd>{len(songs)}</dd></div><div><dt>Lines of code</dt><dd>{total:,}</dd></div><div><dt>Video editors</dt><dd>0</dd></div></dl>

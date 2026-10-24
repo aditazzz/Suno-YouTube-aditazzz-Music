@@ -83,7 +83,7 @@ def build(song_dir):
             f"🔔 Subscribe for a new song every week: {sub_url}\n"
             f"▶️ The whole series of music videos made by Claude: {CFG.get('playlist', '')}\n\n"
             f"🎵 Spotify: {CFG.get('spotify', '')}\n📸 Instagram: {CFG.get('instagram', '')}\n"
-            + (f"👽 r/aidoompop, the AI Doompop subreddit I founded and moderate: {CFG['reddit']}\n" if CFG.get('reddit') else "")
+            + (f"👽 AI Doompop on Reddit: {CFG['reddit']}\n" if CFG.get('reddit') else "")
             + (f"🔗 All my links: {CFG['linktree']}\n" if CFG.get('linktree') else "") + "\n"
             + (f"{yt['note'].strip()}\n\n" if yt.get("note") else "")
             + made_with + numbers
