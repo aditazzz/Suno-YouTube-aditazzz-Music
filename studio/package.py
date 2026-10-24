@@ -76,21 +76,25 @@ def build(song_dir):
     credit_line = (yt['credit'].strip() + " ") if yt.get('credit') else (yt['story'].strip() + " ") if yt.get('story') else f"Every frame was written as code by {model}, all synced to the vocals: {yt.get('visuals', '').strip()}. "
     links = song.get("links", {}) or {}
     intro = fill_links(yt.get("intro", "").strip(), links)
+    code_line = ""   # the video's own code on GitHub (studio.yaml code_repo + code_songs)
+    if CFG.get("code_repo") and song["slug"] in (CFG.get("code_songs") or []):
+        code_line = f"💻 Every line of code behind this video is open source: {CFG['code_repo'].rstrip('/')}/tree/main/songs/{song['slug']}\n\n"
     desc = ((intro + "\n\n" if intro else "") + f"{yt.get('hook', '').strip()}\n\n"
             f"{credit_line}"
-            f"Song, lyrics and concept by {artist}.\n\n"
+            f"Song, lyrics and concept by {artist}.\n\n{code_line}"
             f"💬 {yt.get('question', 'What did you think?')} 👇\n"
             f"🔔 Subscribe for a new song every week: {sub_url}\n"
             f"▶️ The whole series of music videos made by Claude: {CFG.get('playlist', '')}\n\n"
             f"🎵 Spotify: {CFG.get('spotify', '')}\n📸 Instagram: {CFG.get('instagram', '')}\n"
             + (f"👽 AI Doompop on Reddit: {CFG['reddit']}\n" if CFG.get('reddit') else "")
             + (f"🔗 All my links: {CFG['linktree']}\n" if CFG.get('linktree') else "") + "\n"
-            + (f"{yt['note'].strip()}\n\n" if yt.get("note") else "")
+            + (f"{fill_links(yt['note'].strip(), links)}\n\n" if yt.get("note") else "")
             + made_with + numbers
             + ((yt.get("pause_line") or "⏸ Pause anywhere: the screens are full of hidden jokes.") + "\n\n" if yt.get("hidden_jokes", claude_made) else "")
             + "CHAPTERS\n" + "\n".join(f"{mmss(t)} {lab}" for t, lab in chs) + "\n\n"
             + "LYRICS\n" + lyrics_block(song_dir) + "\n\n" + tags3)
     if dp: desc = doompop_desc(desc, long_title)
+    if code_line and len(desc) > 5000: desc = desc.replace(code_line, "", 1)   # YouTube's limit: drop the code line rather than the lyrics
     tags = list(dict.fromkeys([*(DOOMPOP_TAGS if dp else []), *yt.get("tags", []), model.lower(), "claude ai", artist]))
     ytlen = lambda ts: sum(len(t) + (2 if " " in t else 0) for t in ts) + max(0, len(ts) - 1)   # YouTube quotes tags with spaces
     while ytlen(tags) > 480: tags.pop(-4)

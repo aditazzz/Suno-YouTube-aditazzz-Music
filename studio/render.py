@@ -3,7 +3,7 @@
 usage:
   python -m studio.render songs/<slug> --stills 10 60 120      # contact sheet for review (build/stills_<fmt>.jpg)
   python -m studio.render songs/<slug> --fmt 16x9 --jobs 4     # full video (parallel chunks, resumable)
-  python -m studio.render songs/<slug> --fmt 9x16 --jobs 4
+  python -m studio.render songs/<slug> --fmt 9x16 --jobs 4     # needs a passing `python -m studio.safezone songs/<slug>`
 Outputs build/video_<fmt>.mp4 (no audio) then the final files in the song's output folder.
 """
 import os, sys, time, json, argparse, subprocess, importlib.util
@@ -46,7 +46,13 @@ def stills(song_dir, fmt, times, clean=False):
     for t, im in zip(times, ims): im.save(os.path.join(song_dir, "build", f"still_{fmt}_{t:07.2f}{'_clean' if clean else ''}.png"))
     print(out)
 
-def full(song_dir, fmt, jobs, step=300, budget=None, finalize=True):
+def full(song_dir, fmt, jobs, step=300, budget=None, finalize=True, skip_safe=False):
+    if fmt == "9x16" and not skip_safe:   # every lyric line must land inside the phone-safe area (see core.SAFE_9x16)
+        from .safezone import require_ok
+        ok, why = require_ok(song_dir)
+        if not ok:
+            raise SystemExit(f"9:16 render blocked: {why}. Run `python -m studio.safezone {song_dir}` and fix what it flags "
+                             f"(or pass --skip-safe-check for a song with no on-screen lyrics).")
     song = load_song(song_dir); b = song["build"]; ch = os.path.join(b, f"chunks_{fmt}"); os.makedirs(ch, exist_ok=True)
     dur = json.load(open(os.path.join(b, "beats.json")))["duration"] + float(song.get("tail", 0)); N = int(dur * core.FPS)
     # many small chunks so a crash or sleep only loses one piece; resumable
@@ -104,9 +110,10 @@ if __name__ == "__main__":
     ap.add_argument("--worker", nargs=4); ap.add_argument("--finals-only", action="store_true")
     ap.add_argument("--step", type=int, default=300); ap.add_argument("--budget", type=float, help="seconds; stop launching chunks after this (for time-limited shells)")
     ap.add_argument("--no-finalize", action="store_true"); ap.add_argument("--concat-only", action="store_true")
+    ap.add_argument("--skip-safe-check", action="store_true", help="9:16 only: render without a passing studio.safezone check")
     a = ap.parse_args()
     if a.worker: worker(a.song_dir, a.worker[0], int(a.worker[1]), int(a.worker[2]), a.worker[3])
     elif a.stills: stills(a.song_dir, a.fmt, a.stills, a.clean)
     elif a.finals_only: finals(load_song(a.song_dir), a.fmt)
     elif a.concat_only: full(a.song_dir, a.fmt, a.jobs, a.step, finalize=False) if False else concat(a.song_dir, a.fmt, a.step)
-    else: full(a.song_dir, a.fmt, a.jobs, a.step, a.budget, not a.no_finalize)
+    else: full(a.song_dir, a.fmt, a.jobs, a.step, a.budget, not a.no_finalize, a.skip_safe_check)

@@ -122,7 +122,8 @@ def hook_png(song, text, accent=None, y=None):
     from PIL import Image
     W, H = SIZES["9x16"]; img = np.zeros((H, W, 3), np.float32); alpha = np.zeros((H, W), np.float32)
     accent = core.hexc(accent) if isinstance(accent, str) else (accent if accent is not None else core.hexc('ff3d9a'))
-    fs = int(song.get("hook_fs", 86)); maxw = W * 0.80   # song.yaml hook_fs: a smaller pill for scenes with a full top band
+    S = core.SAFE_9x16
+    fs = int(song.get("hook_fs", 86)); maxw = W * (S['right'] - S['left'] - 0.06)   # song.yaml hook_fs: a smaller pill for scenes with a full top band
     while True:
         words = text.split(); rows = [[]]
         for w in words:
@@ -131,7 +132,9 @@ def hook_png(song, text, accent=None, y=None):
         if len(rows) <= 3 or fs <= 58: break
         fs -= 4
     lh = fs * 1.18; bw = max(core.text_w(" ".join(r), core.F_DISP, fs) for r in rows) + fs * 1.2; bh = lh * len(rows) + fs * 0.9
-    x0, y0 = (W - bw) / 2, H * float(y if y is not None else song.get("hook_y", 0.135))   # per-song (or per-clip) height
+    y = float(y if y is not None else song.get("hook_y", 0.135))                        # per-song (or per-clip) height
+    y = min(max(y, S['top']), S['bottom'] - bh / H)                                     # never under the top bar or the captions
+    x0, y0 = (W - bw) / 2, H * y
     m = np.zeros((H, W), np.float32); r = int(fs * 0.45)
     xi, yi, wi, hi = int(x0), int(y0), int(bw), int(bh)
     cv2.rectangle(m, (xi + r, yi), (xi + wi - r, yi + hi), 1.0, -1); cv2.rectangle(m, (xi, yi + r), (xi + wi, yi + hi - r), 1.0, -1)

@@ -26,8 +26,12 @@ platforms change often, so check them again before you rely on them (sources at 
   read at least 34 px and bold, code panels in 9:16 at least 38 to 40 px. If it doesn't fit, widen the panel or split
   the line; don't shrink the text. Outlined words need a faint fill and a dark shadow behind the line, or they vanish
   on a bright background. Two lines that share a spot hand off without overlapping.
-- **Keep the safe frame.** Vertical text stays inside the area Reels and Shorts don't cover with buttons, and the
-  hook pill sits where it won't cover the scene's own titles (it's placed per song).
+- **Keep the safe frame.** On a phone, Shorts, Reels and TikTok crop about 9% off each side of a 9:16 video and draw
+  their own controls on top: the back/search bar down to about 12% of the height, the channel name and caption from
+  about 70% down, and the like/comment/share column on the right from about halfway down. `core.SAFE_9x16` holds that
+  box, the lyric code fits each line into it (a line that already fits doesn't move), and
+  `python -m studio.safezone songs/<slug>` renders every lyric line plus the end card and flags anything outside it.
+  `studio.render` won't start a 9:16 render until that check passes. The hook pill is clamped below the top bar too.
 - **Keep hooks playful.** Captions, hooks and thumbnails that pick a fight get attention you don't want.
 - **Thumbnails say what the video is.** "CLAUDE ANIMATED THIS" alone told nobody anything. A short hook about the song,
   one plain line saying what kind of song it is, and a small badge works better. It also needs a bright subject you

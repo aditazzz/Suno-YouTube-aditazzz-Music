@@ -13,7 +13,7 @@ Claude Fable 5.1; each song page says which. The songs are
 on [Spotify](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv), and all of them, with lyrics, are on
 [aditazzz.github.io](https://aditazzz.github.io).
 
-This repo is that code. It has **26 music videos**, **39,085 lines of scene code** and the pipeline
+This repo is that code. It has **27 music videos**, **41,833 lines of scene code** and the pipeline
 that turns a finished song into a full music video, Shorts, thumbnails and a YouTube upload. Every song folder links to
 its video, so you can watch one and then read how it was drawn.
 
@@ -252,7 +252,12 @@ AI agents in a sealed test sandbox found each other through a shared package cac
 <sub>A song about AI slop, sung by the AI: one woman on a bench, and a shadow that climbs the tower.</sub><br>
 <sub>▶ <a href="https://youtu.be/M6K-TuGXqAY">watch</a> · <a href="songs/ai-slop-city">code</a> (5,424 lines)</sub>
 </td>
-<td width="33%"></td>
+<td width="33%" valign="top">
+<a href="https://youtu.be/FRhtSqMPmFY"><img src="songs/deployed-on-a-friday-fable/thumbnail.jpg" alt="Deployed on a Friday (the Fable version)"></a><br>
+<b><a href="https://youtu.be/FRhtSqMPmFY">Deployed on a Friday: The Drive</a></b><br>
+<sub>The drive home after shipping at 4:59, every lyric a road sign, and the tide coming in over the road. · Claude Fable 5.1</sub><br>
+<sub>▶ <a href="https://youtu.be/FRhtSqMPmFY">watch</a> · <a href="songs/deployed-on-a-friday-fable">code</a> (1,468 lines)</sub>
+</td>
 </tr>
 </table>
 
@@ -309,11 +314,11 @@ Everything else is on the channel: [youtube.com/@adita_zzz](https://www.youtube.
 
 ## By the numbers
 
-- **26** music videos, each its own program: **39,085** lines of scene code in 105 files
-- **2,287** lines of shared engine in `studio/` (plus **538** in `studio-early/`, the one before it), and **1,702** lines of tools for covers, previews and uploads
-- **331,042** frames rendered for the 16:9 and 9:16 versions (about 3.1 hours of video at 30 fps)
-- **1,798** lyric lines and **9,236** words synced to the vocals
-- **122** Shorts and Reels cut from them
+- **27** music videos, each its own program: **41,833** lines of scene code in 111 files
+- **2,509** lines of shared engine in `studio/` (plus **538** in `studio-early/`, the one before it), and **1,702** lines of tools for covers, previews and uploads
+- **342,948** frames rendered for the 16:9 and 9:16 versions (about 3.2 hours of video at 30 fps)
+- **1,852** lyric lines and **9,560** words synced to the vocals
+- **127** Shorts and Reels cut from them
 - The biggest single video: [AI Slop? You're Absolutely Right (The City)](songs/ai-slop-city), 5,424 lines in 15 files
 
 ## Run it yourself

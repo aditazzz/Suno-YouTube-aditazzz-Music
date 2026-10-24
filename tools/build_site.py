@@ -33,7 +33,7 @@ ARTIST = {"@type": "MusicGroup", "@id": SITE + "/#artist", "name": "aditazzz", "
           "sameAs": [YT, SPOTIFY, INSTAGRAM, LINKTREE, LINKEDIN, REDDIT, "https://github.com/aditazzz"]}
 WEBSITE = {"@type": "WebSite", "@id": SITE + "/#site", "name": "aditazzz", "url": SITE + "/", "inLanguage": "en",
            "description": ABOUT, "publisher": {"@id": ARTIST["@id"]}}
-# The social card: a 1200x630 (1.91:1) crop of the right four tile columns of the video wall, which keeps the "26 music videos"
+# The social card: a 1200x630 (1.91:1) crop of the right four tile columns of the video wall, which keeps the "27 music videos"
 # and @adita_zzz panel. The full wall is 3.1:1, which Facebook, X and LinkedIn crop at the edges.
 CARD = "/assets/card.jpg"
 IMG_SIZES = {CARD: (1200, 630)}   # filled in for the thumbnails as they are copied

@@ -2,7 +2,7 @@
 
 [![Deployed on a Friday: watch on YouTube](thumbnail.jpg)](https://youtu.be/8DQ2izFZiO0)
 
-**▶ [Watch it on YouTube](https://youtu.be/8DQ2izFZiO0)**
+**▶ [Watch it on YouTube](https://youtu.be/8DQ2izFZiO0)** · the Claude Fable 5.1 version of the same song, The Drive, is [here](../deployed-on-a-friday-fable)
 
 > Four fifty-nine, laptop half shut. One little change, what could it cut? No ticket, no test, no second pair of eyes, and a green check lying like it always lies. 🌊 A beach-day folk-pop song about taking prod down on a Friday.
 

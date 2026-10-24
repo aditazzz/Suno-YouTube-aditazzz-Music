@@ -50,9 +50,17 @@ def lyrics(img, t, W, H, timing, place=None, active=AMBER, band=0.5, skip_word=N
         fs = int(fs0 * (0.96 if ital else 1.0))
         words = [(w, tt) for w, tt in zip(L['words'], L['wt']) if not (skip_word and C.norm(w) == skip_word)]
         if not words: continue
-        rows, sp = _layout(words, fs, W * mw, path)
         lh = fs * 1.18
-        y0 = H * cy - (len(rows) - 1) * lh / 2 - lh * 0.55 - lh * 0.25 * (1 - opl)
+        lcx, lcy, lmw = cx, cy, mw
+        if vert:   # keep the line inside the phone-safe area (core.SAFE_9x16); a line that already fits is left exactly where it was
+            def box_of(a, b_, c, words=words, fs=fs, path=path, lh=lh):
+                rr, spp = _layout(words, fs, W * c, path)
+                tw = max(sum(r[2] for r in row) + spp * (len(row) - 1) for row in rr)
+                yy = H * b_ - (len(rr) - 1) * lh / 2 - lh * 0.55
+                return (W * a - tw / 2, yy, W * a + tw / 2, yy + (len(rr) - 1) * lh + fs * 1.3 + 12 * ts)
+            lcx, lcy, lmw = C.fit_9x16(box_of, cx, cy, mw, W, H)
+        rows, sp = _layout(words, fs, W * lmw, path)
+        y0 = H * lcy - (len(rows) - 1) * lh / 2 - lh * 0.55 - lh * 0.25 * (1 - opl)
         if band > 0 and not drew:
             yb0 = max(0, int(y0 - lh * 0.9)); yb1 = min(H, int(y0 + len(rows) * lh + lh * 0.9))
             prof = np.sin(np.linspace(0, math.pi, yb1 - yb0)) ** 1.5
@@ -60,7 +68,7 @@ def lyrics(img, t, W, H, timing, place=None, active=AMBER, band=0.5, skip_word=N
         drew = True
         for ri, row in enumerate(rows):
             tw = sum(r[2] for r in row) + sp * (len(row) - 1)
-            x = W * cx - tw / 2
+            x = W * lcx - tw / 2
             for w, tt, ww in row:
                 k = C.sstep(tt - 0.16, tt + 0.08, t)
                 act = math.exp(-max(0.0, t - tt) * 2.4) if t >= tt - 0.05 else 0.0

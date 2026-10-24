@@ -29,6 +29,55 @@ STATE = {"clean": False, "lyric_filter": None,
 #   any text meant to be READ (UI cards, labels, jokes) >= 34 px at 1080p and bold weight; tiny text only for pure texture
 MIN_READ = 34
 
+# 9:16 safe zone, as fractions of the 1080x1920 frame. On a phone, YouTube Shorts, Instagram Reels and TikTok scale the
+# video to the screen height and crop ~9% off each side, then draw their own controls over the picture:
+#   top     the back / search / menu bar, down to ~12% H                       -> nothing to read above `top`
+#   bottom  channel name, title, caption, related-video chip, from ~70% H down -> nothing to read below `bottom`
+#   left / right   the crop                                                    -> nothing to read outside them
+#   buttons the like / comment / save / share column, x > 80% W from ~50% H down
+# Measured on an iPhone (Oct 23, 2026): a lyric placed at 8.5% H sat under the back arrow and the search icon.
+# Lyrics, titles, hooks and cards stay inside; `python -m studio.safezone songs/<slug>` checks every lyric line of a
+# song before its 9:16 render (studio.render refuses to start a 9:16 render without a passing, up-to-date check).
+SAFE_9x16 = dict(top=0.13, bottom=0.70, left=0.10, right=0.90, buttons_x=0.80, buttons_y=0.50)
+
+def safe_place_9x16(cx, cy, maxw, rows=1, lh=0.04):
+    """Clamp a text block (center x, center y, max width, as frame fractions; `rows` lines of height `lh`) into the
+    9:16 safe zone. Returns (cx, cy, maxw)."""
+    S = SAFE_9x16; half_h = rows * lh / 2
+    cy = min(max(cy, S['top'] + half_h), S['bottom'] - half_h)
+    right = S['buttons_x'] if cy + half_h > S['buttons_y'] else S['right']
+    left = S['left'] + 0.01; right -= 0.01
+    maxw = min(maxw, right - left)
+    cx = min(max(cx, left + maxw / 2), right - maxw / 2)
+    return cx, cy, maxw
+
+def fit_9x16(box_of, cx, cy, mw, W=1080, H=1920):
+    """Move / re-wrap a text block until it sits inside SAFE_9x16. box_of(cx, cy, mw) -> pixel box (x0, y0, x1, y1) of
+    the block laid out there. A block that is already safe comes back unchanged, so fixing a scene only moves the lines
+    that were in the way."""
+    S = SAFE_9x16; m = 0.012
+    for _ in range(12):
+        b = box_of(cx, cy, mw)
+        if not safe_violations(b, W, H): break
+        x0, y0, x1, y1 = b[0] / W, b[1] / H, b[2] / W, b[3] / H
+        right = (S['buttons_x'] if y1 > S['buttons_y'] else S['right']) - m; left = S['left'] + m
+        if x1 - x0 > right - left: mw = min(mw, right - left) * 0.97          # too wide: wrap onto more rows
+        elif x0 < left: cx += left - x0                                       # slide it in from the crop
+        elif x1 > right: cx -= x1 - right
+        if y0 < S['top'] + m: cy += S['top'] + m - y0                         # out from under the top bar
+        elif y1 > S['bottom'] - m: cy -= y1 - (S['bottom'] - m)               # up off the caption block
+    return cx, cy, mw
+
+def safe_violations(box, W=1080, H=1920):
+    """box = (x0, y0, x1, y1) in pixels of a 9:16 frame -> list of the safe-zone rules it breaks."""
+    S = SAFE_9x16; x0, y0, x1, y1 = box[0] / W, box[1] / H, box[2] / W, box[3] / H; v = []
+    if y0 < S['top']: v.append('top bar')
+    if y1 > S['bottom']: v.append('bottom captions')
+    if x0 < S['left']: v.append('left crop')
+    if x1 > S['right']: v.append('right crop')
+    elif x1 > S['buttons_x'] and y1 > S['buttons_y']: v.append('buttons')
+    return v
+
 # ------------------------------------------------------------------ math
 def clamp(x, a=0.0, b=1.0): return max(a, min(b, x))
 def sstep(a, b, x):
@@ -288,8 +337,9 @@ def overlay_lyrics(img, t, W, H, timing, active=ICE2, glow=ICE, hide_sections=()
     vert = H > W; ts = min(W, H) / 1080
     if band: img *= (1 - 0.55 * post(W, H).bot)
     # readability floor: lyrics are never smaller than ~64 px (16:9) / ~58 px (9:16) at 1080
-    fs = int((64 if not vert else 58) * ts); maxw = W * (0.80 if not vert else 0.78)
-    ybase = H * (0.835 if not vert else 0.70)
+    fs = int((64 if not vert else 58) * ts); maxw = W * (0.80 if not vert else 0.66)
+    ybase = H * (0.835 if not vert else 0.62)   # 9:16: inside SAFE_9x16 (above the caption block, left of the buttons)
+    xc = W * (0.5 if not vert else 0.45)
     flt = STATE["lyric_filter"]
     vis = [L for L in timing.lines if L.get('sec') not in hide_sections and (flt is None or flt(L)) and not (skip is not None and skip(L))]
     for li, L in enumerate(vis):
@@ -307,7 +357,7 @@ def overlay_lyrics(img, t, W, H, timing, active=ICE2, glow=ICE, hide_sections=()
         if opl <= 0.003: continue
         lh = fs * 1.3; y0 = ybase - (len(rows) - 1) * lh / 2 - lh * 0.3 * (1 - opl)
         for ri, row in enumerate(rows):
-            x = (W - (sum(r[2] for r in row) + sp * (len(row) - 1))) / 2
+            x = xc - (sum(r[2] for r in row) + sp * (len(row) - 1)) / 2
             for w, tt, ww in row:
                 k = sstep(tt - 0.14, tt + 0.06, t)
                 act = math.exp(-max(0, t - tt) * 2.2) if t >= tt - 0.05 else 0
@@ -327,7 +377,8 @@ def overlay_stamp(img, t, W, H, timing, word=None, caption="", hide=lambda t: Fa
     x = t - s; vert = H > W; ts = min(W, H) / 1080
     word = word or timing.stamp_word.upper()
     size = int((235 if not vert else 190) * ts)
-    if text_w(word, F_DISP, size) > W * 0.9: size = int(size * W * 0.9 / text_w(word, F_DISP, size))
+    fitw = W * (0.9 if not vert else (SAFE_9x16['right'] - SAFE_9x16['left'] - 0.04))   # 9:16: inside the phone crop
+    if text_w(word, F_DISP, size) > fitw: size = int(size * fitw / text_w(word, F_DISP, size))
     sp = sprite(word, F_DISP, size, 14, track=int(10 * ts))
     sc = 1.0 + 0.32 * (1 - ease_out(x / 0.22)) + 0.04 * x
     op = (1 - sstep(0.55, 1.3, x)) * sstep(0, 0.04, x)
@@ -434,14 +485,18 @@ def end_screen(img, t, W, H, t0, dur, headline, sub_line=None, accent=None, titl
             blit(img, sprite(title.upper(), TH('mono', F_MONOB), int(36 * ts), track=int(8 * ts)), x, H * 0.80, accent * 1.0, e * 0.95)
     else:
         ig = cfg.get("instagram", "@aditazzz.music")
-        hs = int(118 * ts)
-        while text_w(headline, TH('disp', F_DISP), hs) > W * 0.86: hs -= 4
+        hs = int(118 * ts); fitw = W * (SAFE_9x16['right'] - SAFE_9x16['left'] - 0.04)   # inside the phone crop
+        while text_w(headline, TH('disp', F_DISP), hs) > fitw: hs -= 4
         blit(img, sprite(headline, TH('disp', F_DISP), hs, 12), W / 2, H * 0.36, WHITE, e, 0.45 * e, glow_color=accent, anchor='c')
         fs = int(52 * ts)
         blit(img, sprite("new song every week", TH('body', F_INTER), fs, 6), W / 2, H * 0.36 + hs * 1.05, WHITE * 0.95, e, anchor='c')
         lab = f"subscribe {cfg.get('channel_handle', '@adita_zzz')}" if STATE.get("platform") == "youtube" else f"follow {ig}"
-        fs3 = int(54 * ts); bh = int(fs3 * 1.9); bw = int(text_w(lab, TH('dispb', F_DISPB), fs3) + bh)
-        _pill(img, W / 2 - bw / 2, H * 0.48, bw, bh, accent, e)
-        blit(img, sprite(lab, TH('dispb', F_DISPB), fs3), W / 2, H * 0.48 + bh / 2, WHITE, e, anchor='c')
+        fs3 = int(54 * ts)   # the pill stays left of the like/share column: at most 56% of the width, label >= 40 px
+        while text_w(lab, TH('dispb', F_DISPB), fs3) + fs3 * 1.9 > W * 0.56 and fs3 > int(40 * ts): fs3 -= 2
+        bh = int(fs3 * 1.9); bw = int(text_w(lab, TH('dispb', F_DISPB), fs3) + bh); py = H * 0.495 - bh   # ends above the column's top
+        _pill(img, W / 2 - bw / 2, py, bw, bh, accent, e)
+        blit(img, sprite(lab, TH('dispb', F_DISPB), fs3), W / 2, py + bh / 2, WHITE, e, anchor='c')
         if title:
-            blit(img, sprite(title.upper(), TH('mono', F_MONOB), int(40 * ts), track=int(8 * ts)), W / 2, H * 0.60, accent, e * 0.95, anchor='c')
+            fsT = int(40 * ts)
+            while text_w(title.upper(), TH('mono', F_MONOB), fsT) + len(title) * 8 * ts > W * 0.56 and fsT > 24: fsT -= 2   # left of the like/share column
+            blit(img, sprite(title.upper(), TH('mono', F_MONOB), fsT, track=int(8 * ts)), W / 2, H * 0.60, accent, e * 0.95, anchor='c')
