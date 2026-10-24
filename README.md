@@ -1,6 +1,6 @@
 # aditazzz music videos, made in code by Claude
 
-[![YouTube: @adita_zzz](https://img.shields.io/badge/YouTube-%40adita__zzz-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/@adita_zzz?sub_confirmation=1) [![Spotify: aditazzz](https://img.shields.io/badge/Spotify-aditazzz-1DB954?logo=spotify&logoColor=white)](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv) [![Instagram: @aditazzz.music](https://img.shields.io/badge/Instagram-%40aditazzz.music-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/aditazzz.music/) [![LinkedIn: Adita Zeqollari](https://img.shields.io/badge/LinkedIn-Adita%20Zeqollari-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aditazeqollari)
+[![YouTube: @adita_zzz](https://img.shields.io/badge/YouTube-%40adita__zzz-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/@adita_zzz?sub_confirmation=1) [![Spotify: aditazzz](https://img.shields.io/badge/Spotify-aditazzz-1DB954?logo=spotify&logoColor=white)](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv) [![Instagram: @aditazzz.music](https://img.shields.io/badge/Instagram-%40aditazzz.music-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/aditazzz.music/) [![LinkedIn: Adita Zeqollari](https://img.shields.io/badge/LinkedIn-Adita%20Zeqollari-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aditazeqollari) [![Reddit: r/aidoompop (founder and mod)](https://img.shields.io/badge/Reddit-r%2Faidoompop%20%C2%B7%20founder%20%26%20mod-FF4500?logo=reddit&logoColor=white)](https://www.reddit.com/r/aidoompop/)
 
 [![A wall of thumbnails from the music videos in this repo](docs/img/wall.jpg)](https://www.youtube.com/@adita_zzz/videos)
 
@@ -369,5 +369,6 @@ New songs and videos every week. Every video, with its lyrics and a look at its 
 [YouTube](https://www.youtube.com/@adita_zzz?sub_confirmation=1) ·
 [Instagram](https://www.instagram.com/aditazzz.music/) ·
 [Spotify](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv) ·
+[r/aidoompop](https://www.reddit.com/r/aidoompop/) (I founded and moderate it) ·
 [LinkedIn](https://www.linkedin.com/in/aditazeqollari) ·
 [all links](https://linktr.ee/aditazzz)
