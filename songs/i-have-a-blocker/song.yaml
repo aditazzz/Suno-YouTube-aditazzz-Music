@@ -1,0 +1,141 @@
+title: "I have a blocker. (Take It Offline)"
+yt_name: "I have a blocker. (Take It Offline)"
+audio: "Take It Offline (clean).wav"   # hum-cleaned with tools/enhance_audio.py (32 Hz rumble notched); original: Take It Offline.wav
+folder: "I have a blocker. (Take It Offline) v2"   # v2: the hall of screens (high-end look)
+model_credit: Claude Opus 5.5
+ai_music: true
+tail: 3.5
+end_screen_at: 174.5                  # "Same time tomorrow." card on the left, right half clear for YouTube's end-screen elements
+cover_time: 97.75                     # the letterboard: TAKE IT OFFLINE, and the new guy's "?"
+thumb_time: 97.75
+status: building   # v2: the 3D film (web/), masters in build/v2master_*.mp4
+aliases:
+  "15": [fifteen]
+  "22": [twentytwo, twenty]
+  "915": [nine, ninefifteen]
+  offline: [off, offmine, offmy, mine, my, line, flying, offlineoff]
+  ticket: [took, tookit, ticked, tickets, tick, ticketed]
+  blockers: [blocker, blockersnext]
+
+youtube:
+  title: "I have a blocker. (Take It Offline) - Claude Opus 5.5 Music Video"   # she picked the name (2026-10-25); keeps the parenthetical
+  intro: |-   # the Spotify line proves the song's date (released Sept 9, 2026, weeks before the video); she asked for it up top
+    I have a blocker. (Take It Offline) · aditazzz
+    🎵 The one that started it all: the original song, released on Spotify Sept 9: https://open.spotify.com/track/2E53tiqiVsm5kNq0v78UIl
+    Finally got around to making a proper video for it.
+
+    A deadpan song about the daily standup: 9:15, cameras off, and nobody ever has a blocker.
+  hook: >-
+    9:15, cameras off, fifteen squares and somebody's dog. Yesterday: ticket. Today: ticket. No blockers. Then the new guy
+    says "I have a blocker." Out loud. On the call. Fifteen people say the magic words, and we finally went to see where
+    "offline" actually goes.
+  visuals: >-
+    a 3D film. The standup is fifteen floating rooms over the city at 9:15, one clay mannequin per square, cameras off,
+    and Somebody's Dog in a headset. TAKE IT OFFLINE is exactly fifteen characters, spaces included, so in the choruses
+    every room holds up a letter. The new guy's sixteenth room only gets a question mark. When he says "I have a blocker",
+    a giant pink BLOCKER slams onto the roof and every other room goes dark. Five "take it offline"s shove it off the edge,
+    and the bridge follows it down into Offline: a shaft through the years, and a field of every blocker ever taken
+    offline, all the way down to the dinosaur and the asteroid
+  story: >-
+    I made every frame of this video in code with Claude Opus 5.5: a 3D city, fifteen floating rooms, the mannequins and
+    the lyrics made of green particles, all rendered frame by frame and synced to the vocal. TAKE IT OFFLINE is exactly
+    fifteen characters, spaces included, so the fifteen rooms are a letterboard, and the new guy's sixteenth room only gets
+    a question mark. When he says it out loud, a giant pink BLOCKER lands on the roof, and it takes five "take it
+    offline"s to shove it off the edge. The bridge follows it down into Offline: a shaft through the years and a field of
+    every blocker ever taken offline, all the way down to the dinosaur and the asteroid.
+  credit_short: "Every frame is code I made with Claude Opus 5.5."
+  hashtag_count: 5
+  question: "What's been \"offline\" the longest at your job?"
+  note: >-
+    (Sam, Ted, Dana and Somebody's Dog are fictional. Every team has them. Dana still has a hard stop.)
+  hashtags: [slopcore, standup, techhumor]
+  short_hashtags: [slopcore, standup, takeitoffline, corporatehumor, techhumor]
+  tags: [i have a blocker, take it offline, slopcore, take it offline song, let's take it offline, daily standup, standup meeting,
+         standup song, no blockers, yesterday today blockers, scrum, agile humor, video call, zoom meeting, meetings,
+         corporate humor, corporate jargon, office humor, work humor, software engineer humor, developer humor, tech humor,
+         circle back, women in tech, funny songs about work, aditazzz, claude code, claude animated this, ai music video]
+  pinned: >-
+    TAKE IT OFFLINE is exactly 15 characters. The new guy is the 16th square 🚪 Every frame is code I made with Claude
+    Opus 5.5. What's been "offline" the longest at your job? 👇
+  short_pinned: |
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    What's been "offline" the longest at your job? 👇
+
+    🔔 Subscribe: {SUB_URL}
+  chapters:
+    INTRO: "Ready to join?"
+    V1: "9:15 and the camera's off"
+    CH1: "I have no blockers"
+    V2: "Somebody picked up my thing"
+    BUILD: "And then somebody said it"
+    CH2: "I have a blocker"
+    BRIDGE: "Where offline actually goes"
+    FINAL: "Nothing gets solved, but we're doing fine"
+  extra_chapters:
+    - {line: "He'll say it again", label: "Same time tomorrow"}
+
+instagram:
+  hashtags: [slopcore, standup, takeitoffline, corporatehumor, techhumor]
+  keywords: [i have a blocker, take it offline, daily standup, standup meeting, no blockers, scrum, agile, jira, circle back,
+             let's sync, video call, meetings, this meeting could have been an email, corporate humor, corporate jargon,
+             office humor, work humor, software engineer, developer, product manager, women in tech, tech humor, funny work song,
+             new music, ai music video, slopcore, made with claude]
+  edit_caption: ""
+
+accent: "ff3d8b"
+thumb_hook_color: "#ffd84d"
+thumb_lines: ["\"I HAVE A", "BLOCKER.\""]
+thumb_sub: "a song about the daily standup"
+ctx_shift: 0.253
+ctx_shift_y: 0.109
+ctx_scale: 0.82
+ctx_dark: 0.50
+cover_sub: "a deadpan song about the daily standup"
+cover_shift_y: 0.0
+edit_hook: "Every daily standup, in one song"
+edit_hook_y: 0.14
+hook_y: 0.14
+
+clips:   # each one a different joke; hook text on screen for the first 3 s
+  - {kind: short, label: the blocker, start: 86.30, end: 113.57, hook: "POV: the new guy says \"I have a blocker\" at standup", hook_y: 0.14,
+     cover_lines: ["\"I HAVE A", "BLOCKER.\""]}
+  - {kind: short, label: fifteen squares, start: 29.14, end: 59.40, hook: "TAKE IT OFFLINE is exactly 15 squares", hook_y: 0.14,
+     cover_lines: ["TAKE IT", "OFFLINE."]}
+  - {kind: short, label: where offline goes, start: 113.57, end: 134.62, hook: "Where does \"let's take it offline\" actually go?", hook_y: 0.14,
+     cover_lines: ["WHERE DOES", "\"OFFLINE\" GO?"]}
+  - {kind: short, label: doing fine, start: 146.87, end: 176.00, hook: "Every standup on Earth at 9:15", hook_y: 0.14,
+     cover_lines: ["WE'RE DOING", "FINE."]}
+  - {kind: reel, label: setup, start: 10.95, end: 29.14, hook: "Every daily standup at 9:15", hook_y: 0.14,
+     cover_lines: ["9:15. EVERY", "CAMERA OFF."]}
+  - {kind: reel, label: five and a half hours, start: 59.62, end: 78.04, hook: "22 min × 15 people = 5.5 hours. Every day.", hook_y: 0.14,
+     cover_lines: ["22 MIN ×", "15 HEADS"]}
+edit_segments: [[0.0, 179.6]]          # the whole song (with the pre-join gag), cut at 2:59.6 for Instagram's 3:00
+
+clip_copy:
+  "chorus":   # caption for the full-song Instagram Reel (the under-3-minute edit)
+    ig: "Every daily standup, in one song: 9:15, cameras off, nobody has blockers, and the one person who does gets taken offline 🚪 So where does \"offline\" actually go? Watch to the end. Send this to your standup."
+  "the blocker":
+    yt_title: "POV: the new guy says \"I have a blocker\" at standup 🚪"
+    hook: "\"I have a blocker.\" Out loud. On the call. 🚪"
+    ig: "POV: the new guy says \"I have a blocker\" at standup and fifteen people say \"let's take it offline\" 🚪 Send this to the person who still says it."
+  "fifteen squares":
+    yt_title: "TAKE IT OFFLINE is exactly 15 characters 🟩"
+    hook: "15 squares. 15 characters. Take it offline. 🟩"
+    ig: "TAKE IT OFFLINE is exactly 15 characters, spaces included. That's one per square 🟩 Nobody at standup has ever had a blocker. Send this to your standup."
+  "where offline goes":
+    yt_title: "Where does \"let's take it offline\" actually go? 🚪"
+    hook: "\"Offline is a place we invented to put the things we won't attend to.\" 🚪"
+    ig: "Where does \"let's take it offline\" actually go? We went and looked. It goes all the way down 🦖 Tag the person who said \"let's circle back\" in 2023."
+  "doing fine":
+    yt_title: "Every standup on Earth at 9:15 👍"
+    hook: "Nothing gets solved, but we're doing fine. 👍"
+    ig: "Nothing gets solved, but we're doing fine 👍 Every standup on Earth, 9:15 local time. Same time tomorrow."
+  "setup":
+    yt_title: "9:15 and the camera's off 📷"
+    hook: "9:15, cameras off, fifteen squares and somebody's dog. 📷"
+    ig: "9:15 and the camera's off. 15 squares and somebody's dog 📷 Tag the coworker who's been muted for a year (if he's alive)."
+  "five and a half hours":
+    yt_title: "22 minutes × 15 people = 5.5 hours of standup ☠️"
+    hook: "22 minutes, 15 heads. That's five and a half hours dead. ☠️"
+    ig: "22 minutes, 15 heads. That's five and a half hours dead ☠️ Nothing decided, nothing resolved. But the ritual's clean, so the ritual holds."

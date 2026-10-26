@@ -1,0 +1,69 @@
+title: "Thirsty (The Data Center Next Door)"   # release title (DistroKid, YouTube); working title was "You're So Thirsty"
+audio: "Thirsty (clean).wav"         # hum removed with tools/enhance_audio.py (850 + 900 Hz whine, 27 Hz rumble); original: Thirsty.wav
+folder: "You're So Thirsty"
+version: ""
+model_credit: Claude Opus 5.5        # the model that actually made THIS video
+ai_music: true
+accent: "c8243c"                     # deep crimson (electric pink ff3d8b is the brand accent, used sparingly)
+status: video-ready                  # 1080p + native 1440p, hum-cleaned audio
+tail: 4.0                            # silent seconds after the song for the end screen
+
+aliases:
+  twentyfourseven: ["247", "twentyfour", "24", "twentyfourseven"]
+  twentyfive: ["25", "twentyfive"]
+  five: ["5"]
+  ten: ["10"]
+  thousand: ["1000"]
+  mm: ["hmm", "mmm", "um"]
+  okay: ["ok"]
+  cause: ["because", "cos", "cuz"]
+  hums: ["humps", "hum"]
+  creeks: ["creek", "creaks"]
+end_screen_at: 221.6                  # end card (subscribe + right half clear for YouTube elements) from here
+
+youtube:
+  title: "Thirsty (The Data Center Next Door) - Claude Opus 5.5 Music Video"
+  intro: "Thirsty (The Data Center Next Door) · aditazzz"
+  doompop: true                        # AI Doompop: #AIDoompop in the title and hashtags, "ai doompop" tags
+  hook: >-
+    It rolled into town with a ribbon and a shovel, promised a thousand jobs, and built a big gray house without a
+    single window. Now it hums all night, drinks the river and runs up the light bill. A small town in a toxic
+    relationship with the data center next door. 🎃 This Halloween, the scariest house on the block has no windows and
+    never sleeps.
+  visuals: >-
+    a windowless facility breathing steam across the river, a glass of water draining on every chorus, an electric
+    meter spinning up, a bill whose bars climb to YOUR LIMIT, two minutes of public comment at the town hall, and a
+    river that sits a little lower every time the chorus comes back
+  question: "So what's your number? Five? Ten? Twenty-five?"
+  pause_line: "⏸ Pause on the electric bill: the bars climb all the way to YOUR LIMIT."
+  note: |-
+    🌐 Every video and how it was made: https://aditazzz.github.io/
+
+    (The town, Willow Road and the facility are imagined.)
+  hashtags: [Halloween, DataCenter, Thirsty, darkwave]   # first one shows above the title with #ClaudeAI #AIMusicVideo
+  short_hashtags: [thirsty, halloween, datacenter, darkwave, newmusic]
+  tags: [thirsty, thirsty the data center next door, the data center next door, halloween song, halloween 2026,
+         spooky song, haunted house song, creepy music video, data center song, song about a data center, ai data center,
+         data centers, small town, electric bill, darkwave, synth pop, dark pop, ai music video, made by claude,
+         music video made with code, female vocals]
+  pinned: >-
+    Every frame is code Claude Opus 5.5 wrote: the windowless facility breathing across the river, the glass that
+    drains on every chorus, the bill climbing to YOUR LIMIT 💧 So what's your number? Five? Ten? Twenty-five?
+  short_pinned: |
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    So what's your number? 👇
+
+    🔔 New song every week: {SUB_URL}
+  chapters:
+    INTRO: "Thirsty..."
+    V1: "A ribbon and a shovel"
+    PRE1: "Lights on twenty-four-seven"
+    CH1: "You're so thirsty"
+    POST1: "Always wanting more"
+    V2: "It fixed the high school roof"
+    PRE2: "Everybody's got a number"
+    CH2: "Drinking up my river"
+    BRIDGE: "Public comment. Two minutes."
+    FINAL: "Get your servers out my yard"
+    OUTRO: "Who's paying yours?"

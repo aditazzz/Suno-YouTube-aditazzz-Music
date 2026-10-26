@@ -1,0 +1,62 @@
+{
+ "clips": [
+  {
+   "kind": "reel",
+   "label": "setup",
+   "start": 2.65,
+   "end": 20.387,
+   "cover": true,
+   "file": "Snowflake Undrop - Reel 1 (setup, 18s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "chorus",
+   "start": 52.222,
+   "end": 81.548,
+   "cover": true,
+   "file": "Snowflake Undrop - Reel 2 (chorus, 29s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "bridge",
+   "start": 166.812,
+   "end": 195.976,
+   "cover": false,
+   "file": "Snowflake Undrop - Reel 3 (bridge, 29s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "first chorus",
+   "start": 39.938,
+   "end": 93.739,
+   "cover": true,
+   "file": "Snowflake Undrop - Short 1 (first chorus, 54s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "build to final chorus",
+   "start": 200.829,
+   "end": 256.766,
+   "cover": false,
+   "file": "Snowflake Undrop - Short 2 (build to final chorus, 56s).mp4"
+  }
+ ],
+ "edit": {
+  "file": "Snowflake Undrop - Instagram 9x16 (under 3 min).mp4",
+  "segments": [
+   [
+    0.0,
+    93.73895691609977
+   ],
+   [
+    166.81215419501135,
+    186.2704761904762
+   ],
+   [
+    200.82938775510203,
+    266.24
+   ]
+  ],
+  "duration": 178.60789115646259
+ }
+}

@@ -1,0 +1,106 @@
+title: TED Talk (Charts)
+audio: TED Talk.wav
+folder: TED Talk (Charts)
+model_credit: Claude Opus 5.5
+ai_music: true
+accent: "d93a2b"
+status: live
+tail: 3.0                             # silent seconds after the song for the end screen
+end_screen_at: 157.2
+thumb_time: 44.0
+cover_time: 29.5
+aliases:
+  ted: [said, dead, ted's, head, tad]
+  dana: [donna, dina, diana, dena]
+  q: [queue, cue, kyu]
+links:
+  original: https://youtu.be/fj7HNVj7s1A
+yt_name: "TED Talk - The Standup, in Charts"   # the name the Shorts descriptions link back to
+hook_y: 0.016                                  # Shorts hook pill above the masthead (one-line hooks only)
+hook_fs: 76
+
+# Shorts / Reels: five different moments, no two the same clip
+clips:
+  - {kind: reel, label: setup, start: 6.61, end: 26.122, cover: true, hook: "My standup, charted"}
+  - {kind: short, label: first chorus, start: 19.92, end: 52.593, hook: "Is the file ready?"}
+  - {kind: reel, label: most-used words, start: 52.593, end: 78.4, hook: "Ted's word count"}
+  - {kind: reel, label: bridge, start: 100.96, end: 121.51, hook: "Minute 6 of 15"}
+  - {kind: short, label: final chorus, start: 122.41, end: 158.639, hook: "Nobody can end it"}
+
+clip_copy:
+  "setup":
+    yt_title: "I turned my standup into charts 📊"
+    hook: "\"He doesn't answer questions. He responds to them.\" Fig. 1: How Ted handles a question 📊"
+    ig: "Fig. 1: How Ted handles a question. Fig. 2: My will to live, by minute (you'll feel it about four minutes in) 📊 Send this to your standup."
+  "first chorus":
+    yt_title: "I asked one yes/no question at standup 📊"
+    hook: "\"I asked him if the file was ready. He said, so — stepping back.\" 📊"
+    ig: "Question 1 of 1: Is the file ready? Yes / No. Answer: a keynote 📊 Topics covered: his father 38%, your question 0%."
+  "most-used words":
+    yt_title: "Ted's most-used words this morning: so (214) 📊"
+    hook: "\"He starts every sentence with so. He ends every thought with right?\" 📊"
+    ig: "Ted's most-used words this morning: so (214), right? (61), the file (0) 📊 Buzzword bingo by 9:41 a.m. Tag the coworker who says journey."
+  "bridge":
+    yt_title: "Dana is a ghost now, Ted 👻"
+    hook: "\"It is fifteen minutes for eight people. You have used six.\" 👻"
+    ig: "Correction: this is a standup. Fifteen minutes for eight people. Ted has used six. Dana's attendance: 0 since 2024 👻"
+  "final chorus":
+    yt_title: "There's no Q&A because there was never a Q 📊"
+    hook: "\"Nobody scheduled it. Nobody can end it.\" 📊"
+    ig: "Meeting length, projected: ∞. There's no Q&A, because there's no A, because there was never a Q 📊 Ted. Location unknown. Last seen taking it offline."
+
+youtube:
+  title: "TED Talk - Claude Opus 5.5 Music Video"   # shortened on YouTube Oct 21 (was the long per-version title)
+  hook: >-
+    I asked Ted if the file was ready. He said "so — stepping back," somebody dimmed the lights, and our
+    fifteen-minute standup became an eighteen-minute keynote with no slides and no point. This time, in charts. 📊
+  visuals: >-
+    the whole song is one issue of a newspaper called The Daily Standup, with a new chart every few seconds: how Ted
+    handles a question (it never reaches ANSWER), my will to live by minute (it falls off a cliff at minute four), the
+    topics he covered (your question: 0%), his most-used words (so: 214, the file: 0), buzzword bingo, and a zoom-out on
+    the one question nobody answered. When somebody dims the lights the paper sits under a spotlight; at Dana's hard
+    stop the office lights snap back on and the paper prints a CORRECTION. In the end Ted's dot unplugs from the team
+    network and drifts down into a footnote
+  question: "Which chart is your standup?"
+  credit_short: "Every chart and every frame is code written by Claude Opus 5.5."
+  short_pinned: |-
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    I'm a data/AI engineer making these with Claude (Opus 5.5, Max Effort). Every chart is code.
+
+    Which chart is your standup? 👇
+
+    🔔 Follow the journey, a new song every week: {SUB_URL}
+  note: >-
+    (Ted is fictional. Every team has one. This song isn't affiliated with TED or TED Conferences. The first music
+    video for this song: https://youtu.be/fj7HNVj7s1A)
+  pause_line: "⏸ Pause anywhere: the sources, footnotes and margin notes are part of the joke."
+  hashtags: [standup, dataviz, techhumor]
+  short_hashtags: [standup, meetings, dataviz, corporatehumor, techhumor]
+  tags: [ted talk song, standup meeting, daily standup, standup in charts, funny charts, data visualization, infographic,
+         meetings that should have been an email, corporate humor, office humor, work meme, agile humor, scrum,
+         software engineer humor, tech humor, post punk, funny songs about work, ai music video]
+  pinned: |-
+    I'm a data/AI engineer, and honestly, making these videos with Claude is as much fun for me as making the songs. 📊
+
+    This is a remake of my first TED Talk video (https://youtu.be/fj7HNVj7s1A), made with Claude Opus 5.5 on Max Effort: every chart and every frame is code.
+
+    Which chart is your standup? 👇
+
+    🔔 Follow the journey, a new song every week: https://www.youtube.com/@adita_zzz?sub_confirmation=1
+  chapters:
+    INTRO: "Fig. 1: How Ted handles a question"
+    CH1: "It's a Ted talk"
+    V2: "Fig. 8: Ted's most-used words"
+    CH2: "Fig. 13: Minutes talked vs. points made"
+    BRIDGE: "Correction: this is a standup"
+    FINAL: "Nobody scheduled it. Nobody can end it."
+    OUTRO: "Fig. 19: Ted takes it offline"
+  extra_chapters:
+    - {line: "difference", label: "Fig. 2: Will to live, by minute"}
+
+instagram:
+  hashtags: [standup, meetings, dataviz, corporatehumor, techhumor]
+  keywords: [ted talk song, standup meeting, daily standup, meetings in charts, funny charts, data visualization,
+             corporate humor, office humor, work humor, agile, scrum, software engineer, product manager, tech humor,
+             post punk, funny work song, ai music video, made by claude]

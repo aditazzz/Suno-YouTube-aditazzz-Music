@@ -1,0 +1,45 @@
+{
+ "clips": [
+  {
+   "kind": "reel",
+   "label": "setup",
+   "start": 6.61,
+   "end": 26.122,
+   "cover": true,
+   "hook": "My standup, charted",
+   "file": "TED Talk (Charts) - Reel 1 (setup, 20s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "first chorus",
+   "start": 19.92,
+   "end": 52.593,
+   "hook": "Is the file ready?",
+   "file": "TED Talk (Charts) - Short 1 (first chorus, 33s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "most-used words",
+   "start": 52.593,
+   "end": 78.4,
+   "hook": "Ted's word count",
+   "file": "TED Talk (Charts) - Reel 2 (most-used words, 26s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "bridge",
+   "start": 100.96,
+   "end": 121.51,
+   "hook": "Minute 6 of 15",
+   "file": "TED Talk (Charts) - Reel 3 (bridge, 21s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "final chorus",
+   "start": 122.41,
+   "end": 158.639,
+   "hook": "Nobody can end it",
+   "file": "TED Talk (Charts) - Short 2 (final chorus, 36s).mp4"
+  }
+ ]
+}

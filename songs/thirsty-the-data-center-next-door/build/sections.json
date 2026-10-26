@@ -1,0 +1,90 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "Thirsty...",
+  "first_word_t": 2.84,
+  "e": 16.950566893424035,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 16.950566893424035,
+  "first_line": "You rolled into town with a ribbon and a shovel,",
+  "first_word_t": 17.12,
+  "e": 31.43981859410431,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE1",
+  "s": 31.43981859410431,
+  "first_line": "You keep your lights on twenty-four-seven,",
+  "first_word_t": 32.08,
+  "e": 45.88263038548753,
+  "kind": "pre"
+ },
+ {
+  "name": "CH1",
+  "s": 45.88263038548753,
+  "first_line": "You're so thirsty (thirsty)",
+  "first_word_t": 46.16,
+  "e": 74.74503401360545,
+  "kind": "chorus"
+ },
+ {
+  "name": "POST1",
+  "s": 74.74503401360545,
+  "first_line": "Thirsty... (thirsty)",
+  "first_word_t": 75.98,
+  "e": 89.16462585034013,
+  "kind": "post"
+ },
+ {
+  "name": "V2",
+  "s": 89.16462585034013,
+  "first_line": "Okay, I'll give you this: you fixed the high school roof,",
+  "first_word_t": 89.02,
+  "e": 118.00380952380952,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE2",
+  "s": 118.00380952380952,
+  "first_line": "You keep your lights on twenty-four-seven,",
+  "first_word_t": 118.64,
+  "e": 132.4234013605442,
+  "kind": "pre"
+ },
+ {
+  "name": "CH2",
+  "s": 132.4234013605442,
+  "first_line": "You're so thirsty (thirsty)",
+  "first_word_t": 132.68,
+  "e": 163.0505215419501,
+  "kind": "chorus"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 163.0505215419501,
+  "first_line": "Public comment. Two minutes.",
+  "first_word_t": 162.88,
+  "e": 175.65895691609978,
+  "kind": "bridge"
+ },
+ {
+  "name": "FINAL",
+  "s": 175.65895691609978,
+  "first_line": "You're so thirsty (thirsty)",
+  "first_word_t": 175.96,
+  "e": 206.28607709750568,
+  "kind": "chorus"
+ },
+ {
+  "name": "OUTRO",
+  "s": 206.28607709750568,
+  "first_line": "So what's your number?",
+  "first_word_t": 206.8,
+  "e": 222.64,
+  "kind": "outro"
+ }
+]

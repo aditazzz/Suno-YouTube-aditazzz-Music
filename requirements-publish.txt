@@ -1,0 +1,5 @@
+# only for tools/youtube_upload.py and tools/instagram_post.py
+google-api-python-client
+google-auth
+google-auth-oauthlib
+requests

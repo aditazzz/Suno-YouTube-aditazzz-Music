@@ -1,0 +1,17 @@
+{
+  "_about": "Measured from Fangs for Asking.wav (vocal stem via spleeter, pyin note onsets, Parakeet ASR on the stem, onset/RMS analysis). Seconds from the start of the file. The recording is the authority; these replace the interpolated values in the old fangs-for-asking/build/timed.json for the intro, choruses, break and outro.",
+  "duration": 239.2,
+  "tempo": {"bpm": 101.016, "beat": 0.593968, "phase": 0.1552, "meter": "3/4 waltz, kick every 2 bars (3.564 s)", "note": "steady except 176-192 where the pulse loosens; the 2-bar kick cycle shifts by one bar after the break"},
+  "intro": {"music_from": 0.09, "whisper_notifications": [10.32, 14.8], "band_dropout": [14.0, 17.0], "taps": [15.28, 15.57, 15.87], "band_slam": 17.07, "allow_whisper": 22.12},
+  "v1": {"start": 24.32, "taps_on_glass": 27.76, "manners": 31.28, "velvet": 32.96, "without_your_choice": 34.32, "stories": 38.0, "garlic": 41.84, "bolt": 45.52, "window": 46.32, "lock": 47.28, "tight": 48.08, "open": 49.28, "door": 49.92, "tonight": 51.36},
+  "pre1": {"start": 53.28, "bows": 61.6, "may_i": 62.96, "goodnight_line": 63.8, "breath_dip": [64.0, 67.5]},
+  "ch1": {"allows": [[67.5, 68.0], [69.3, 69.95]], "downbeat": 68.46, "every_night": 70.88, "drinks": 74.64, "politely": 78.08, "fangs": 83.85, "allows2": [[88.05, 88.52], [89.39, 90.26]], "undead": 93.28},
+  "v2": {"start": 95.76, "pale": 96.36, "three_am": 98.08, "tired": [98.96, 100.48], "marks": [103.44, 106.0], "checks": [106.71, 107.77, 108.83, 109.89], "sun": 110.48, "seven": 111.44, "snooze": 112.56, "curtains": 114.96, "day": 116.88, "mirror": 117.52, "hair": 120.16, "room_looks_back": 120.96, "not_there": [122.88, 123.84]},
+  "pre2": {"start": 124.64, "bows": 132.88, "may_i": 134.26, "goodnight_line": 135.1},
+  "ch2": {"allows": [[138.76, 139.25], [140.57, 141.04]], "downbeat": 139.74, "drinks": 145.92, "politely": 149.36, "fangs": 155.17, "allows2": [[159.29, 159.79], [160.58, 161.5]], "undead": 164.5},
+  "bridge": {"start": 167.12, "break_a_thing": 168.4, "held_the_door": 170.64, "let_him_in": 172.64, "two_am": 174.08, "send": 175.28, "sister": 175.92, "link": 176.72, "see_this": 177.6, "oh_no": 180.64, "her_door": 183.28},
+  "break": {"taps": [187.24, 189.03, 190.81], "allow_q": 191.34, "band_drops_under_allow": [191.4, 192.2]},
+  "final": {"allow_q": [194.03, 195.83], "a_cappella_stop": [194.4, 196.9], "band_slam": 197.04, "funny": 197.28, "drink_you": 201.2, "answer": 204.56, "fangs": 210.96, "allows": [[214.55, 215.05], [215.79, 216.72]], "sleep": 218.2},
+  "outro": {"next_door": 223.92, "light_comes_on": 227.28, "stabs": [228.2, 230.57, 232.65, 234.14], "taps": [229.97, 231.75, 233.53], "chord_release": 235.3, "silence": 238.4},
+  "hard_cuts": [17.07, 68.46, 95.76, 117.52, 139.74, 167.12, 197.04, 228.2, 235.3]
+}

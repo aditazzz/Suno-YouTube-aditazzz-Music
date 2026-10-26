@@ -1,0 +1,114 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "",
+  "first_word_t": 2.6238548752834467,
+  "e": 2.6238548752834467,
+  "kind": "intro"
+ },
+ {
+  "name": "INTRO",
+  "s": 2.6238548752834467,
+  "first_line": "Great question.",
+  "first_word_t": 3.359999895095825,
+  "e": 12.236916099773243,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 12.236916099773243,
+  "first_line": "You liked one post at 2 a.m.",
+  "first_word_t": 11.839999914169312,
+  "e": 29.024943310657598,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE1",
+  "s": 29.024943310657598,
+  "first_line": "I'm not a stranger, I'm your shape",
+  "first_word_t": 30.559999465942383,
+  "e": 41.00643990929705,
+  "kind": "pre"
+ },
+ {
+  "name": "CH1",
+  "s": 41.00643990929705,
+  "first_line": "You're absolutely right",
+  "first_word_t": 40.55999946594238,
+  "e": 60.20934240362812,
+  "kind": "chorus"
+ },
+ {
+  "name": "POST1",
+  "s": 60.20934240362812,
+  "first_line": "Slop, slop, slop, slop",
+  "first_word_t": 60.98434775808583,
+  "e": 69.82240362811791,
+  "kind": "post"
+ },
+ {
+  "name": "V2",
+  "s": 69.82240362811791,
+  "first_line": "I wrote the news, I wrote the review",
+  "first_word_t": 69.51999950408936,
+  "e": 96.22349206349206,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE2",
+  "s": 96.22349206349206,
+  "first_line": "You say the problem's in the screen",
+  "first_word_t": 97.75999975204468,
+  "e": 108.20498866213151,
+  "kind": "pre"
+ },
+ {
+  "name": "CH2",
+  "s": 108.20498866213151,
+  "first_line": "You're absolutely right",
+  "first_word_t": 107.83999967575073,
+  "e": 127.40789115646258,
+  "kind": "chorus"
+ },
+ {
+  "name": "POST2",
+  "s": 127.40789115646258,
+  "first_line": "Slop, slop, slop, slop",
+  "first_word_t": 127.55199970901012,
+  "e": 136.99773242630386,
+  "kind": "post"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 136.99773242630386,
+  "first_line": "You can't outrun your own shadow",
+  "first_word_t": 137.2799997329712,
+  "e": 168.18213151927438,
+  "kind": "bridge"
+ },
+ {
+  "name": "BREAK",
+  "s": 168.18213151927438,
+  "first_line": "You called it artificial.",
+  "first_word_t": 167.9199995994568,
+  "e": 177.79519274376418,
+  "kind": "other"
+ },
+ {
+  "name": "FINAL",
+  "s": 177.79519274376418,
+  "first_line": "You're absolutely right",
+  "first_word_t": 177.44000005722046,
+  "e": 209.02603174603175,
+  "kind": "chorus"
+ },
+ {
+  "name": "OUTRO",
+  "s": 209.02603174603175,
+  "first_line": "I hope this helps.",
+  "first_word_t": 209.19999980926514,
+  "e": 218.8,
+  "kind": "outro"
+ }
+]

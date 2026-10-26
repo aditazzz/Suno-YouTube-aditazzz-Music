@@ -1,0 +1,114 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "",
+  "first_word_t": 4.2260317460317465,
+  "e": 4.2260317460317465,
+  "kind": "intro"
+ },
+ {
+  "name": "INTRO",
+  "s": 4.2260317460317465,
+  "first_line": "Psst, this song isn\u2019t real",
+  "first_word_t": 5.140000057220459,
+  "e": 12.236916099773243,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 12.236916099773243,
+  "first_line": "Top comment: \u201cthe death of art\u201d",
+  "first_word_t": 13.199999809265137,
+  "e": 37.77886621315193,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE1",
+  "s": 37.77886621315193,
+  "first_line": "You call it fake, you call it cheap",
+  "first_word_t": 37.91999959945679,
+  "e": 44.1643537414966,
+  "kind": "pre"
+ },
+ {
+  "name": "CH1",
+  "s": 44.1643537414966,
+  "first_line": "Mirror, mirror, look at us",
+  "first_word_t": 44.991999816894534,
+  "e": 82.57015873015872,
+  "kind": "chorus"
+ },
+ {
+  "name": "V2",
+  "s": 82.57015873015872,
+  "first_line": "Auto-tune\u2019s been fixing favorite songs",
+  "first_word_t": 82.90666627883911,
+  "e": 109.7839455782313,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE2",
+  "s": 109.7839455782313,
+  "first_line": "We made the rules, we fed the feed",
+  "first_word_t": 110.0,
+  "e": 116.19265306122449,
+  "kind": "pre"
+ },
+ {
+  "name": "CH2",
+  "s": 116.19265306122449,
+  "first_line": "Mirror, mirror, look at us",
+  "first_word_t": 117.32999974489212,
+  "e": 156.1774149659864,
+  "kind": "chorus"
+ },
+ {
+  "name": "BREAK",
+  "s": 156.1774149659864,
+  "first_line": "Fake grass, fake lashes",
+  "first_word_t": 157.19999980926514,
+  "e": 181.78902494331066,
+  "kind": "other"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 181.78902494331066,
+  "first_line": "It didn\u2019t teach us how to lie",
+  "first_word_t": 182.0,
+  "e": 196.18539682539682,
+  "kind": "bridge"
+ },
+ {
+  "name": "BUILD",
+  "s": 196.18539682539682,
+  "first_line": "Maybe it\u2019s not the art we fear",
+  "first_word_t": 196.1599998474121,
+  "e": 208.9795918367347,
+  "kind": "build"
+ },
+ {
+  "name": "FINAL",
+  "s": 208.9795918367347,
+  "first_line": "Mirror, mirror, look at us",
+  "first_word_t": 209.19999980926514,
+  "e": 247.38539682539684,
+  "kind": "chorus"
+ },
+ {
+  "name": "OUTRO",
+  "s": 247.38539682539684,
+  "first_line": "We built the mirror",
+  "first_word_t": 247.2799997329712,
+  "e": 258.69351473922904,
+  "kind": "outro"
+ },
+ {
+  "name": "TAG",
+  "s": 258.69351473922904,
+  "first_line": "See you in the comments",
+  "first_word_t": 259.2799997329712,
+  "e": 262.0,
+  "kind": "other"
+ }
+]

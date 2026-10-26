@@ -1,0 +1,14 @@
+<!doctype html><html><head><meta charset="utf-8">
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+</head><body><script type="module">
+import { drawFool, drawMagician, drawTower, drawStar, drawSun, drawRobot, drawRedPlanet, drawGardener, drawEngraving } from '/js/cards2.js';
+import { loadFilmFonts } from '/js/lib2.js';
+await loadFilmFonts();
+window.out = {};
+const list = { fool: () => drawFool(13), foolTurn: () => drawFool(13, { turn: 1 }), magician: drawMagician, tower: () => drawTower(41), star: drawStar, sun: () => drawSun(61), sunBurn: () => drawSun(61, { burning: true }),
+  robot: drawRobot, red: drawRedPlanet, gardener: drawGardener, engr0: () => drawEngraving(0), engr1: () => drawEngraving(1), engrH: () => drawEngraving(1, { human: 1 }) };
+const only = new URLSearchParams(location.search).get('only');
+try { for (const [k, fn] of Object.entries(list)) { if (only && !only.split(',').includes(k)) continue; const a = performance.now(); window.out[k] = fn().toDataURL('image/png'); console.log(k, Math.round(performance.now() - a), 'ms'); } }
+catch (e) { console.log('ERR', e.stack); }
+window.ready = true;
+</script></body></html>

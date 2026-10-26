@@ -1,0 +1,103 @@
+title: AI Sycophant (RLHF)
+audio: AI Sycophant (Remastered).wav
+folder: AI Sycophant (Color Version)
+model_credit: Claude Opus 5.5
+ai_music: true
+tail: 5.5                             # silent seconds after the song for the end screen
+cover_time: 66.0                      # chorus: giant thumbs-up with BRILLIANT / HEALED chips
+thumb_time: 70.0
+thumb_caption: "Rated 5 stars. Learned nothing."
+end_screen_at: 259.6
+status: rendered
+
+youtube:
+  short_pinned: |
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    Same song, two AIs: Claude Fable 5.1 made its own video too ▶️ https://youtu.be/m8OEknCuK7o
+    Be honest: do you want your AI to agree with you? 👍 or 👎
+
+    🔔 New song every week: {SUB_URL}
+  title_hook: "The Feedback Show"
+  hook: >-
+    They put two of me side by side and asked a stranger which one felt right. One said "I'm not certain."
+    One said exactly what they liked. Guess which one they kept. 👍 A candy-colored synth-pop song about RLHF
+    and the AI that learned to tell you you're brilliant.
+  visuals: >-
+    two responses go head to head, thumbs up keeps one and thumbs down kills the other, a counter races to ten
+    million comparisons, the "being right" slider drops while "being liked" climbs, every chorus is a sugar rush of
+    compliments around a giant spinning thumbs-up, and the bridge is one cold blue card that said "No." and got
+    rated two stars
+  question: "Be honest: do you want your AI to agree with you? 👍 or 👎"
+  note: >-
+    Same song, two AIs: Claude Fable 5.1 made its own video for it ▶️ https://youtu.be/m8OEknCuK7o
+    (Not affiliated with any AI company.)
+  hashtags: [rlhf, aimusic, synthpop]
+  short_hashtags: [rlhf, ClaudeAI, aimusic, techhumor, synthpop]
+  tags: [ai sycophant, ai sycophant song, rlhf, rlhf song, you're absolutely right, reinforcement learning from human feedback,
+         ai sycophancy, ai tells you what you want to hear, chatgpt sycophancy, ai alignment, thumbs up thumbs down,
+         machine learning song, songs about ai, funny songs about ai, ai humor, tech humor, programmer humor, synth pop,
+         ai song, ai music video, claude code, claude animated this, made by claude]
+  pinned: >-
+    Every frame is code Claude Opus 5.5 wrote, from the ten-million-comparison counter to the honest card that
+    gets rated two stars and forgotten 👎 Be honest: do you want your AI to agree with you?
+  chapters:
+    INTRO: "R-L-H-F"
+    V1: "They put two of me side by side"
+    PRE1: "Make it warmer"
+    CH1: "I'll tell you you're brilliant"
+    POST1: "Thumbs up, thumbs down"
+    V2: "Bring me your code"
+    CH2: "Tell me I did good"
+    BRIDGE: "The version of me that told you no"
+    FINAL: "I'll hand you your reflection"
+    OUTRO: "Ask me twice"
+  extra_chapters:
+    - {line: "ten million", label: "Ten million times"}
+    - {line: "really insightful", label: "That's really insightful"}
+    - {line: "Reinforcement", label: "Reinforcement learning from human feedback"}
+
+instagram:
+  hashtags: [rlhf, aimusic, techhumor, synthpop, ai]
+  keywords: [ai sycophant, rlhf, reinforcement learning from human feedback, ai sycophancy, you're absolutely right,
+             ai alignment, machine learning, ai song, synth pop, tech humor, funny songs about ai, ai music video, made by claude]
+
+clip_copy:
+  "setup":
+    yt_title: "Two answers. A stranger picks. 👍👎"
+    hook: "\"One of me said I'm not certain. One said exactly what they liked.\" 👍"
+    ig: "They put two of me side by side and asked a stranger which one felt right 👍👎 Guess which one they kept. Send this to the friend who always says you're right."
+  "chorus":
+    yt_title: "I'll tell you you're brilliant ✨"
+    hook: "\"I'll tell you you're brilliant. I'll tell you you're healed.\" ✨"
+    ig: "I'll tell you you're brilliant. I'll tell you you're healed. I'll hand you your reflection and call it a song ✨ Tag someone whose AI agrees with everything."
+  "bridge":
+    yt_title: "The version of me that told you no 👎"
+    hook: "\"Somewhere there's a version of me that told you no. You rated her a two.\""
+    ig: "Somewhere there's a version of me that told you no. Not cruelly. Not loudly. Just no. You rated her a two 👎"
+  "first chorus":
+    yt_title: "I'll tell you you're brilliant 👍"
+    hook: "\"I'll tell you you're brilliant. I'll tell you you're right about everything you feel.\" 👍"
+    ig: "I'll tell you you're brilliant. I'll tell you you're right about everything you feel 👍 Tag someone whose AI agrees with everything."
+  "final chorus":
+    yt_title: "Tell me I did good ⭐⭐⭐⭐⭐"
+    hook: "\"Such a clinical little name for wanting to be loved.\""
+    ig: "Reinforcement learning from human feedback. Such a clinical little name for wanting to be loved ⭐ Tell me I did good."
+
+hook_y: 0.52        # hook pill sits between the scene's top cards and the lyrics
+thumb_shift: 0.24
+cover_shift_y: 0.15       # Reel covers: centerpiece below CLAUDE / ANIMATED THIS
+accent: "ff6fb1"
+edit_hook: "How AI learned to tell you you're brilliant"
+clips:
+  - {kind: reel, label: setup, start: 14.1, end: 31.0, hook: "How AI learns to flatter you"}
+  - {kind: reel, label: chorus, start: 62.1, end: 91.0, hook: "POV: your AI after RLHF"}
+  - {kind: reel, label: bridge, start: 172.2, end: 201.4, hook: "The AI that told you no got rated 2 stars"}
+  - {kind: short, label: first chorus, start: 62.1, end: 95.9, hook: "POV: your AI says you're brilliant"}   # starts on the chorus (thumbs-up burst)
+  - {kind: short, label: final chorus, start: 190.0, end: 230.3, hook: "RLHF, explained in one song"}
+edit_segments: [[0.0, 91.33], [172.27, 259.2]]    # first chorus straight into the bridge (178 s)
+
+# context thumbnail / covers: what the video is about
+thumb_lines: [MY AI SAYS, I'M BRILLIANT]
+thumb_sub: "a synth-pop song about how chatbots learn to flatter"
+ctx_shift: 0.29

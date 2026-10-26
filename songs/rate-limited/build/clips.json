@@ -1,0 +1,58 @@
+{
+ "clips": [
+  {
+   "kind": "reel",
+   "label": "setup",
+   "start": 11.35,
+   "end": 29.7,
+   "hook": "POV: 2 a.m., one more feature...",
+   "file": "Rate Limited - Reel 1 (setup, 18s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "chorus",
+   "start": 20.35,
+   "end": 44.2,
+   "hook": "When your AI hits you with a 429",
+   "file": "Rate Limited - Reel 2 (chorus, 24s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "bridge",
+   "start": 145.45,
+   "end": 178.9,
+   "hook": "It didn't even say goodbye",
+   "file": "Rate Limited - Reel 3 (bridge, 33s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "workarounds",
+   "start": 48.15,
+   "end": 75.3,
+   "hook": "Every workaround I tried at 2 a.m.",
+   "file": "Rate Limited - Short 1 (workarounds, 27s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "the AI's side",
+   "start": 168.75,
+   "end": 205.6,
+   "hook": "The AI's side of the rate limit",
+   "file": "Rate Limited - Short 2 (the AI's side, 37s).mp4"
+  }
+ ],
+ "edit": {
+  "file": "Rate Limited - Instagram 9x16 (under 3 min).mp4",
+  "segments": [
+   [
+    0.0,
+    103.4
+   ],
+   [
+    142.11,
+    211.92
+   ]
+  ],
+  "duration": 173.20999999999998
+ }
+}

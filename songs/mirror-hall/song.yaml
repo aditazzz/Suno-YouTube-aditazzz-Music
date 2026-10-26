@@ -1,0 +1,108 @@
+title: "Mirror, Mirror, Look at Us"
+audio: Mirror.wav
+folder: "Mirror, Mirror, Look at Us (Hall of Mirrors)"
+version: "Hall of Mirrors"
+yt_name: "Mirror, Mirror, Look at Us (v2)"
+model_credit: Claude Opus 5.5
+ai_music: true
+accent: "e8b45a"
+status: rendered
+tail: 5.0
+end_screen_at: 261.0                  # on-screen subscribe card + room for YouTube end-screen elements
+cover_time: 245.5                     # the cover at the end of the hall, "Funny how the mirror looks like us"
+cover_hook_time: 222.0                # the hall with the cracked cover at its end (clean) for the CLAUDE ANIMATED THIS cover
+thumb_time: 222.0
+ctx_shift: 0.22                       # slide the hall right so its far end shows beside the hook text
+vertical_safe_scale: 0.78           # Shorts/Reels/IG edit: the lyric lines run edge to edge, so shrink into the area phones keep
+
+links:
+  vanity_url: "https://youtu.be/W56BqGlh76w"      # The Vanity (version 1), public since Oct 19, 2026
+
+youtube:
+  intro: >-
+    Version 2 of the video: a walk down a hall of mirrors. ▶️ Version 1, The Vanity: {vanity_url|on my channel}
+  hook: >-
+    Every mirror in this hall bends the face a different way: autocomplete, the beauty filter, take 30 of 30,
+    auto-tune, ghostwriters. Guess which one is the only mirror that doesn't. 🪞
+  visuals: >-
+    a long dark hall lined with the bulb-lit vanity mirror from the cover art, each one bending the same face like a
+    funhouse mirror. Every verse line turns to the mirror it's about and names what bends it, from AUTOCOMPLETE to
+    AUTOPILOT. On every
+    "mirror, mirror" the whole picture turns over like a hand mirror; on "look at us" every mirror in the hall straightens
+    out and shows the same face. The lyrics are mirror-written and flip the right way round as each word is sung. The
+    hall goes dark in the bridge, and on "mad" every mirror cracks at once, exactly where the cover is cracked
+  question: "Be honest: which of these mirrors did you look into today?"
+  pause_line: "⏸ Pause on any mirror: every label is something we already let bend our reflection."
+  hidden_jokes: false                 # keeps the description under 5,000 characters
+  note: >-
+    (No real platforms or people. Every face in the hall is the cover art.)
+  hashtags: [mirrormirror, aiart, aimusic]
+  short_hashtags: [aiart, hallofmirrors, artdebate, aimusic, techhumor]
+  tags: [mirror mirror look at us, mirror mirror song, hall of mirrors, funhouse mirror, ai art debate, is ai art real art,
+         ai art song, song about ai art, pop song about ai, beauty filter, autotune, ghostwriters, social media satire,
+         ai music video, made by claude, funny songs about ai, dark pop]
+  pinned: >-
+    Every frame is code Claude Opus 5.5 wrote: the hall, every funhouse mirror, the flip on every "mirror, mirror" and the
+    crack on "mad" 🪞 Be honest: which of these mirrors did you look into today?
+  short_pinned: |
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    Which of these mirrors did you look into today? 👇
+
+    🔔 New song every week: {SUB_URL}
+  chapters:
+    INTRO: "Psst, this song isn't real"
+    V1: "Top comment: the death of art"
+    CH1: "Mirror, mirror, look at us"
+    V2: "Auto-tune's been fixing favorite songs"
+    CH2: "Funny how the mirror looks like us"
+    BREAK: "Fake grass, fake lashes"
+    BRIDGE: "It didn't teach us how to lie"
+    BUILD: "Then got mad when it looked like us"
+    FINAL: "Mirror, mirror, say it straight"
+    OUTRO: "Don't blame the reflection"
+  extra_chapters:
+    - {line: "Filtered face", label: "The beauty filter mirror"}
+    - {line: "You let a machine", label: "Guess which mirror doesn't bend"}
+
+instagram:
+  hashtags: [aiart, hallofmirrors, artdebate, aimusic, techhumor]
+  keywords: [mirror mirror song, hall of mirrors, funhouse mirror, ai art debate, is ai art real art, beauty filter,
+             autotune, social media satire, pop song about ai, ai music video, made by claude, claude ai]
+
+clip_copy:
+  "the mirrors":
+    yt_title: "Every mirror in this hall bends your face 🪞"
+    hook: "Autocomplete, the beauty filter, take 30 of 30. 🪞"
+    ig: "A hall of mirrors where every one bends your face a different way: autocomplete, the beauty filter, take 30 of 30 🪞 Which one did you look into today?"
+  "looks like us":
+    yt_title: "Funny how the mirror looks like us 🪞"
+    hook: "On \"look at us\" every mirror straightens out. 🪞"
+    ig: "Mirror, mirror, look at us 🪞 On every \"mirror\" the picture turns over, and on \"look at us\" every mirror in the hall straightens out. Funny how the mirror looks like us."
+  "which mirror":
+    yt_title: "Guess which mirror doesn't lie 🪞"
+    hook: "Auto-tune, ghostwriters, a laugh track, autopilot. 🪞"
+    ig: "Auto-tune. Ghostwriters. A laugh track. A car on autopilot. Every mirror here bends the face, except one 🪞 Guess which."
+  "fake":
+    yt_title: "Fake grass, fake lashes, fake followers 🪞"
+    hook: "Every \"fake\" gets a stamp. 🪞"
+    ig: "Fake grass, fake lashes, fake \"so happy for you\", fake followers. Then the machine learns all our tricks, and suddenly WE'RE counterfeit? 🪞"
+  "the crack":
+    yt_title: "Every mirror cracked on the same word 🪞"
+    hook: "We asked it to learn from all of us. 🪞"
+    ig: "We asked it to learn from all of us, then got mad when it looked like us 🪞 Every mirror in the hall cracks on \"mad\"."
+
+edit_hook: "Every mirror here bends your face but one"
+edit_hook_y: 0.13
+clips:   # hook-first: open on the sung punchline with on-screen hook text for the first 3 s (over the dark ceiling)
+  - {kind: reel, label: the mirrors, start: 12.3, end: 37.78, hook: "Every mirror here bends your face", hook_y: 0.13}
+  - {kind: reel, label: looks like us, start: 44.16, end: 71.3, hook: "When every mirror looks like us", hook_y: 0.13}
+  - {kind: reel, label: which mirror, start: 82.57, end: 109.78, hook: "Guess which mirror doesn't lie", hook_y: 0.13}
+  - {kind: short, label: fake, start: 156.95, end: 181.79, hook: "Fake grass, fake lashes, fake followers", hook_y: 0.13}
+  - {kind: short, label: the crack, start: 199.2, end: 224.64, hook: "Every mirror cracked on the same word", hook_y: 0.13}
+# under-3-min edit: drops verse 2, chorus 2 and the bridge (179.0 s), same joins as the other two versions
+edit_segments: [[0.0, 82.57], [156.18, 181.70], [196.10, 267.0]]
+
+# context thumbnail / covers: what the video is about
+thumb_lines: [WHICH MIRROR, "DOESN'T BEND?"]
+thumb_sub: "a pop song about AI and art, in a hall of mirrors"

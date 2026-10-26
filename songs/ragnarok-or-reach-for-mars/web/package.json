@@ -1,0 +1,17 @@
+{
+  "name": "ragnarok-or-reach-for-mars",
+  "private": true,
+  "description": "Ragnarök or Reach for Mars by aditazzz: the music video, a Three.js film rendered frame by frame in headless Chromium",
+  "type": "module",
+  "scripts": {
+    "bake": "node bake.mjs",
+    "stills": "node render.mjs stills 1600 900 ../build/stills 5.5 52.9 227.2"
+  },
+  "dependencies": {
+    "three": "0.169.0"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  },
+  "license": "MIT"
+}

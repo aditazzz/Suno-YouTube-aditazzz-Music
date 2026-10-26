@@ -1,0 +1,66 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "",
+  "first_word_t": 1.3235374149659864,
+  "e": 30.627120181405896,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 30.627120181405896,
+  "first_line": "They scraped my blog from two thousand nine",
+  "first_word_t": 30.439999961853026,
+  "e": 50.155102040816324,
+  "kind": "verse"
+ },
+ {
+  "name": "CH1",
+  "s": 50.155102040816324,
+  "first_line": "Alternative metal, rap metal, funk metal learning",
+  "first_word_t": 49.94,
+  "e": 69.70630385487529,
+  "kind": "chorus"
+ },
+ {
+  "name": "V2",
+  "s": 69.70630385487529,
+  "first_line": "Boardroom bragging 'bout efficiency gains",
+  "first_word_t": 69.63999988555909,
+  "e": 89.25750566893424,
+  "kind": "verse"
+ },
+ {
+  "name": "CH2",
+  "s": 89.25750566893424,
+  "first_line": "Alternative metal, rap metal, funk metal learning",
+  "first_word_t": 89.10666666666667,
+  "e": 101.49442176870748,
+  "kind": "chorus"
+ },
+ {
+  "name": "BREAKDOWN",
+  "s": 101.49442176870748,
+  "first_line": "Loss goes down!",
+  "first_word_t": 103.2,
+  "e": 121.06884353741496,
+  "kind": "other"
+ },
+ {
+  "name": "FINAL",
+  "s": 121.06884353741496,
+  "first_line": "Alternative metal, rap metal, funk metal learning",
+  "first_word_t": 122.9,
+  "e": 152.48544217687075,
+  "kind": "chorus"
+ },
+ {
+  "name": "OUTRO",
+  "s": 152.48544217687075,
+  "first_line": "Unsubscribe!",
+  "first_word_t": 152.42,
+  "e": 166.92,
+  "kind": "outro"
+ }
+]

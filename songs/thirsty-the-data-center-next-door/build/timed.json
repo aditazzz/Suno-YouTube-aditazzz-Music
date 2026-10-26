@@ -1,0 +1,1304 @@
+[
+{
+"sec": "INTRO",
+"text": "Thirsty...",
+"words": [
+"Thirsty..."
+],
+"wt": [
+2.84
+],
+"s": 2.84,
+"e": 4.4399999999999995
+},
+{
+"sec": "INTRO",
+"text": "You're so thirsty.",
+"words": [
+"You're",
+"so",
+"thirsty."
+],
+"wt": [
+9.92,
+10.48,
+10.88
+],
+"s": 9.92,
+"e": 12.48
+},
+{
+"sec": "V1",
+"text": "You rolled into town with a ribbon and a shovel,",
+"words": [
+"You",
+"rolled",
+"into",
+"town",
+"with",
+"a",
+"ribbon",
+"and",
+"a",
+"shovel,"
+],
+"wt": [
+17.12,
+17.34,
+17.88,
+18.26,
+18.74,
+18.94,
+19.1,
+19.74,
+19.9,
+20.06
+],
+"s": 17.12,
+"e": 20.98
+},
+{
+"sec": "V1",
+"text": "promised me the future and a thousand jobs.",
+"words": [
+"promised",
+"me",
+"the",
+"future",
+"and",
+"a",
+"thousand",
+"jobs."
+],
+"wt": [
+20.98,
+21.36,
+21.6,
+21.9,
+22.4,
+22.62,
+22.8,
+23.42
+],
+"s": 20.98,
+"e": 24.16
+},
+{
+"sec": "V1",
+"text": "Built a big gray house without a single window,",
+"words": [
+"Built",
+"a",
+"big",
+"gray",
+"house",
+"without",
+"a",
+"single",
+"window,"
+],
+"wt": [
+24.16,
+24.54,
+24.7,
+25.06,
+25.5,
+26.18,
+26.7,
+26.86,
+27.26
+],
+"s": 24.16,
+"e": 27.84
+},
+{
+"sec": "V1",
+"text": "and you hum all night, and you never stop.",
+"words": [
+"and",
+"you",
+"hum",
+"all",
+"night,",
+"and",
+"you",
+"never",
+"stop."
+],
+"wt": [
+27.84,
+28.06,
+28.24,
+28.7,
+28.92,
+29.66,
+29.88,
+30.18,
+30.56
+],
+"s": 27.84,
+"e": 32.08
+},
+{
+"sec": "PRE1",
+"text": "You keep your lights on twenty-four-seven,",
+"words": [
+"You",
+"keep",
+"your",
+"lights",
+"on",
+"twenty-four-seven,"
+],
+"wt": [
+32.08,
+32.26,
+32.58,
+32.76,
+33.22,
+33.6
+],
+"s": 32.08,
+"e": 35.2
+},
+{
+"sec": "PRE1",
+"text": "I turn mine off just to pay the bill.",
+"words": [
+"I",
+"turn",
+"mine",
+"off",
+"just",
+"to",
+"pay",
+"the",
+"bill."
+],
+"wt": [
+35.66,
+35.84,
+36.18,
+36.42,
+36.8,
+37.04,
+37.28,
+37.68,
+37.92
+],
+"s": 35.66,
+"e": 39.52
+},
+{
+"sec": "PRE1",
+"text": "Everybody's got a number, baby,",
+"words": [
+"Everybody's",
+"got",
+"a",
+"number,",
+"baby,"
+],
+"wt": [
+39.6,
+40.5,
+40.66,
+40.84,
+41.54
+],
+"s": 39.6,
+"e": 42.96
+},
+{
+"sec": "PRE1",
+"text": "and you're about to hit mine.",
+"words": [
+"and",
+"you're",
+"about",
+"to",
+"hit",
+"mine."
+],
+"wt": [
+42.96,
+43.18,
+43.82,
+44.14,
+44.42,
+44.88
+],
+"s": 42.96,
+"e": 46.16
+},
+{
+"sec": "CH1",
+"text": "You're so thirsty (thirsty)",
+"words": [
+"You're",
+"so",
+"thirsty",
+"(thirsty)"
+],
+"wt": [
+46.16,
+46.7,
+47.1,
+48.08
+],
+"s": 46.16,
+"e": 49.68
+},
+{
+"sec": "CH1",
+"text": "drinking up my river every night.",
+"words": [
+"drinking",
+"up",
+"my",
+"river",
+"every",
+"night."
+],
+"wt": [
+49.84,
+50.4,
+50.64,
+50.8,
+51.8,
+52.22
+],
+"s": 49.84,
+"e": 53.36
+},
+{
+"sec": "CH1",
+"text": "You're so thirsty (thirsty)",
+"words": [
+"You're",
+"so",
+"thirsty",
+"(thirsty)"
+],
+"wt": [
+53.36,
+53.8,
+54.26,
+55.34
+],
+"s": 53.36,
+"e": 56.940000000000005
+},
+{
+"sec": "CH1",
+"text": "running up my light bill out of sight.",
+"words": [
+"running",
+"up",
+"my",
+"light",
+"bill",
+"out",
+"of",
+"sight."
+],
+"wt": [
+57.06,
+57.68,
+57.84,
+58.0,
+58.42,
+58.96,
+59.18,
+59.44
+],
+"s": 57.06,
+"e": 61.04
+},
+{
+"sec": "CH1",
+"text": "Five dollars? Baby, you can stay.",
+"words": [
+"Five",
+"dollars?",
+"Baby,",
+"you",
+"can",
+"stay."
+],
+"wt": [
+61.12,
+61.6,
+62.68,
+63.94,
+64.1,
+64.3
+],
+"s": 61.12,
+"e": 64.86
+},
+{
+"sec": "CH1",
+"text": "Ten dollars? Mm, okay, okay.",
+"words": [
+"Ten",
+"dollars?",
+"Mm,",
+"okay,",
+"okay."
+],
+"wt": [
+64.86,
+65.2,
+65.78,
+66.94,
+67.64
+],
+"s": 64.86,
+"e": 68.4
+},
+{
+"sec": "CH1",
+"text": "Twenty-five? Get your servers out my yard,",
+"words": [
+"Twenty-five?",
+"Get",
+"your",
+"servers",
+"out",
+"my",
+"yard,"
+],
+"wt": [
+68.4,
+69.28,
+69.5,
+69.68,
+70.24,
+70.52,
+70.66
+],
+"s": 68.4,
+"e": 71.12
+},
+{
+"sec": "CH1",
+"text": "'cause you're drinking my water and charging my card.",
+"words": [
+"'cause",
+"you're",
+"drinking",
+"my",
+"water",
+"and",
+"charging",
+"my",
+"card."
+],
+"wt": [
+71.12,
+71.36,
+71.6,
+72.1,
+72.34,
+73.1,
+73.28,
+73.88,
+74.1
+],
+"s": 71.12,
+"e": 75.69999999999999
+},
+{
+"sec": "POST1",
+"text": "Thirsty... (thirsty)",
+"words": [
+"Thirsty...",
+"(thirsty)"
+],
+"wt": [
+75.98,
+77.02
+],
+"s": 75.98,
+"e": 78.61999999999999
+},
+{
+"sec": "POST1",
+"text": "Always wanting more.",
+"words": [
+"Always",
+"wanting",
+"more."
+],
+"wt": [
+79.8,
+80.38,
+81.12
+],
+"s": 79.8,
+"e": 82.72
+},
+{
+"sec": "POST1",
+"text": "Thirsty... (thirsty)",
+"words": [
+"Thirsty...",
+"(thirsty)"
+],
+"wt": [
+83.24,
+84.2
+],
+"s": 83.24,
+"e": 85.8
+},
+{
+"sec": "POST1",
+"text": "What you asking for?",
+"words": [
+"What",
+"you",
+"asking",
+"for?"
+],
+"wt": [
+86.86,
+87.26,
+87.66,
+88.38
+],
+"s": 86.86,
+"e": 89.02
+},
+{
+"sec": "V2",
+"text": "Okay, I'll give you this: you fixed the high school roof,",
+"words": [
+"Okay,",
+"I'll",
+"give",
+"you",
+"this:",
+"you",
+"fixed",
+"the",
+"high",
+"school",
+"roof,"
+],
+"wt": [
+89.02,
+89.42,
+89.66,
+89.84,
+90.08,
+90.72,
+90.88,
+91.2,
+91.36,
+91.58,
+92.02
+],
+"s": 89.02,
+"e": 92.72
+},
+{
+"sec": "V2",
+"text": "paid your taxes early, gave my cousin work.",
+"words": [
+"paid",
+"your",
+"taxes",
+"early,",
+"gave",
+"my",
+"cousin",
+"work."
+],
+"wt": [
+92.72,
+93.04,
+93.2,
+93.74,
+94.48,
+94.8,
+95.02,
+95.6
+],
+"s": 92.72,
+"e": 96.14
+},
+{
+"sec": "V2",
+"text": "He watches your front gate from a little booth,",
+"words": [
+"He",
+"watches",
+"your",
+"front",
+"gate",
+"from",
+"a",
+"little",
+"booth,"
+],
+"wt": [
+96.14,
+96.34,
+96.86,
+97.12,
+97.6,
+98.18,
+98.44,
+98.7,
+98.96
+],
+"s": 96.14,
+"e": 99.9
+},
+{
+"sec": "V2",
+"text": "thinks you're not so bad, thinks you're worth it.",
+"words": [
+"thinks",
+"you're",
+"not",
+"so",
+"bad,",
+"thinks",
+"you're",
+"worth",
+"it."
+],
+"wt": [
+99.9,
+100.24,
+100.54,
+100.72,
+100.96,
+101.6,
+102.0,
+102.24,
+102.56
+],
+"s": 99.9,
+"e": 103.48
+},
+{
+"sec": "V2",
+"text": "But the creek's running low, and the summer's getting long,",
+"words": [
+"But",
+"the",
+"creek's",
+"running",
+"low,",
+"and",
+"the",
+"summer's",
+"getting",
+"long,"
+],
+"wt": [
+103.48,
+103.74,
+103.9,
+104.48,
+104.96,
+105.4,
+105.56,
+105.72,
+106.3,
+106.74
+],
+"s": 103.48,
+"e": 107.24
+},
+{
+"sec": "V2",
+"text": "and the hum's in my sleep, and the hum's in my song.",
+"words": [
+"and",
+"the",
+"hum's",
+"in",
+"my",
+"sleep,",
+"and",
+"the",
+"hum's",
+"in",
+"my",
+"song."
+],
+"wt": [
+107.24,
+107.42,
+107.56,
+108.14,
+108.3,
+108.46,
+109.04,
+109.2,
+109.36,
+109.92,
+110.08,
+110.3
+],
+"s": 107.24,
+"e": 110.88
+},
+{
+"sec": "V2",
+"text": "And you're asking for a second house next door,",
+"words": [
+"And",
+"you're",
+"asking",
+"for",
+"a",
+"second",
+"house",
+"next",
+"door,"
+],
+"wt": [
+110.88,
+111.04,
+111.28,
+111.64,
+112.0,
+112.48,
+113.02,
+113.52,
+113.86
+],
+"s": 110.88,
+"e": 114.4
+},
+{
+"sec": "V2",
+"text": "like you've never heard the word \"no\" before.",
+"words": [
+"like",
+"you've",
+"never",
+"heard",
+"the",
+"word",
+"\"no\"",
+"before."
+],
+"wt": [
+114.4,
+114.64,
+114.96,
+115.22,
+115.58,
+115.74,
+116.6,
+117.28
+],
+"s": 114.4,
+"e": 118.64
+},
+{
+"sec": "PRE2",
+"text": "You keep your lights on twenty-four-seven,",
+"words": [
+"You",
+"keep",
+"your",
+"lights",
+"on",
+"twenty-four-seven,"
+],
+"wt": [
+118.64,
+118.86,
+119.1,
+119.28,
+119.76,
+120.2
+],
+"s": 118.64,
+"e": 121.8
+},
+{
+"sec": "PRE2",
+"text": "I turn mine off just to pay the bill.",
+"words": [
+"I",
+"turn",
+"mine",
+"off",
+"just",
+"to",
+"pay",
+"the",
+"bill."
+],
+"wt": [
+122.24,
+122.4,
+122.72,
+123.12,
+123.36,
+123.6,
+123.84,
+124.24,
+124.48
+],
+"s": 122.24,
+"e": 126.08
+},
+{
+"sec": "PRE2",
+"text": "Everybody's got a number, baby,",
+"words": [
+"Everybody's",
+"got",
+"a",
+"number,",
+"baby,"
+],
+"wt": [
+126.14,
+127.08,
+127.26,
+127.46,
+128.08
+],
+"s": 126.14,
+"e": 129.52
+},
+{
+"sec": "PRE2",
+"text": "and you're about to hit mine.",
+"words": [
+"and",
+"you're",
+"about",
+"to",
+"hit",
+"mine."
+],
+"wt": [
+129.52,
+129.74,
+130.32,
+130.64,
+130.96,
+131.36
+],
+"s": 129.52,
+"e": 132.68
+},
+{
+"sec": "CH2",
+"text": "You're so thirsty (thirsty)",
+"words": [
+"You're",
+"so",
+"thirsty",
+"(thirsty)"
+],
+"wt": [
+132.68,
+133.14,
+133.62,
+134.64
+],
+"s": 132.68,
+"e": 136.23999999999998
+},
+{
+"sec": "CH2",
+"text": "drinking up my river every night.",
+"words": [
+"drinking",
+"up",
+"my",
+"river",
+"every",
+"night."
+],
+"wt": [
+136.34,
+136.96,
+137.12,
+137.38,
+138.36,
+138.68
+],
+"s": 136.34,
+"e": 139.92
+},
+{
+"sec": "CH2",
+"text": "You're so thirsty (thirsty)",
+"words": [
+"You're",
+"so",
+"thirsty",
+"(thirsty)"
+],
+"wt": [
+139.92,
+140.32,
+140.72,
+141.84
+],
+"s": 139.92,
+"e": 143.44
+},
+{
+"sec": "CH2",
+"text": "running up my light bill out of sight.",
+"words": [
+"running",
+"up",
+"my",
+"light",
+"bill",
+"out",
+"of",
+"sight."
+],
+"wt": [
+143.6,
+144.18,
+144.38,
+144.54,
+144.98,
+145.46,
+145.74,
+146.04
+],
+"s": 143.6,
+"e": 147.64
+},
+{
+"sec": "CH2",
+"text": "Five dollars? Baby, you can stay.",
+"words": [
+"Five",
+"dollars?",
+"Baby,",
+"you",
+"can",
+"stay."
+],
+"wt": [
+147.68,
+148.14,
+149.24,
+150.48,
+150.68,
+150.84
+],
+"s": 147.68,
+"e": 151.34
+},
+{
+"sec": "CH2",
+"text": "Ten dollars? Mm, okay, okay.",
+"words": [
+"Ten",
+"dollars?",
+"Mm,",
+"okay,",
+"okay."
+],
+"wt": [
+151.34,
+151.66,
+152.24,
+153.42,
+154.16
+],
+"s": 151.34,
+"e": 154.9
+},
+{
+"sec": "CH2",
+"text": "Twenty-five? Get your servers out my yard,",
+"words": [
+"Twenty-five?",
+"Get",
+"your",
+"servers",
+"out",
+"my",
+"yard,"
+],
+"wt": [
+154.9,
+155.78,
+156.06,
+156.22,
+156.78,
+157.04,
+157.2
+],
+"s": 154.9,
+"e": 157.62
+},
+{
+"sec": "CH2",
+"text": "'cause you're drinking my water and charging my card.",
+"words": [
+"'cause",
+"you're",
+"drinking",
+"my",
+"water",
+"and",
+"charging",
+"my",
+"card."
+],
+"wt": [
+157.62,
+157.9,
+158.12,
+158.62,
+158.8,
+159.58,
+159.82,
+160.38,
+160.56
+],
+"s": 157.62,
+"e": 162.16
+},
+{
+"sec": "BRIDGE",
+"text": "Public comment. Two minutes.",
+"words": [
+"Public",
+"comment.",
+"Two",
+"minutes."
+],
+"wt": [
+162.88,
+163.38,
+163.98,
+164.22
+],
+"s": 162.88,
+"e": 165.54
+},
+{
+"sec": "BRIDGE",
+"text": "Hi. I live on Willow Road.",
+"words": [
+"Hi.",
+"I",
+"live",
+"on",
+"Willow",
+"Road."
+],
+"wt": [
+165.54,
+166.42,
+166.64,
+166.88,
+167.04,
+167.6
+],
+"s": 165.54,
+"e": 168.6
+},
+{
+"sec": "BRIDGE",
+"text": "I'm not against the future.",
+"words": [
+"I'm",
+"not",
+"against",
+"the",
+"future."
+],
+"wt": [
+168.6,
+168.9,
+169.1,
+169.42,
+169.6
+],
+"s": 168.6,
+"e": 171.2
+},
+{
+"sec": "BRIDGE",
+"text": "I just want to know who's paying for it.",
+"words": [
+"I",
+"just",
+"want",
+"to",
+"know",
+"who's",
+"paying",
+"for",
+"it."
+],
+"wt": [
+172.58,
+172.74,
+173.0,
+173.32,
+173.54,
+174.22,
+174.7,
+175.1,
+175.32
+],
+"s": 172.58,
+"e": 175.96
+},
+{
+"sec": "FINAL",
+"text": "You're so thirsty (thirsty)",
+"words": [
+"You're",
+"so",
+"thirsty",
+"(thirsty)"
+],
+"wt": [
+175.96,
+176.34,
+176.78,
+177.98
+],
+"s": 175.96,
+"e": 179.57999999999998
+},
+{
+"sec": "FINAL",
+"text": "drinking up my river every night.",
+"words": [
+"drinking",
+"up",
+"my",
+"river",
+"every",
+"night."
+],
+"wt": [
+179.66,
+180.22,
+180.4,
+180.62,
+181.36,
+181.88
+],
+"s": 179.66,
+"e": 183.2
+},
+{
+"sec": "FINAL",
+"text": "You're so thirsty (thirsty)",
+"words": [
+"You're",
+"so",
+"thirsty",
+"(thirsty)"
+],
+"wt": [
+183.2,
+183.62,
+183.96,
+185.14
+],
+"s": 183.2,
+"e": 186.73999999999998
+},
+{
+"sec": "FINAL",
+"text": "running up my light bill out of sight.",
+"words": [
+"running",
+"up",
+"my",
+"light",
+"bill",
+"out",
+"of",
+"sight."
+],
+"wt": [
+186.84,
+187.44,
+187.6,
+187.76,
+188.26,
+188.72,
+188.98,
+189.22
+],
+"s": 186.84,
+"e": 190.82
+},
+{
+"sec": "FINAL",
+"text": "Five dollars? Baby, you can stay.",
+"words": [
+"Five",
+"dollars?",
+"Baby,",
+"you",
+"can",
+"stay."
+],
+"wt": [
+190.88,
+191.32,
+192.44,
+193.72,
+193.88,
+194.0
+],
+"s": 190.88,
+"e": 194.62
+},
+{
+"sec": "FINAL",
+"text": "Ten dollars? Mm, okay, okay.",
+"words": [
+"Ten",
+"dollars?",
+"Mm,",
+"okay,",
+"okay."
+],
+"wt": [
+194.62,
+194.94,
+195.78,
+196.2,
+197.36
+],
+"s": 194.62,
+"e": 198.12
+},
+{
+"sec": "FINAL",
+"text": "Twenty-five? Get your servers out my yard,",
+"words": [
+"Twenty-five?",
+"Get",
+"your",
+"servers",
+"out",
+"my",
+"yard,"
+],
+"wt": [
+198.12,
+199.0,
+199.22,
+199.4,
+200.02,
+200.24,
+200.4
+],
+"s": 198.12,
+"e": 200.82
+},
+{
+"sec": "FINAL",
+"text": "'cause you're drinking my water and charging my card.",
+"words": [
+"'cause",
+"you're",
+"drinking",
+"my",
+"water",
+"and",
+"charging",
+"my",
+"card."
+],
+"wt": [
+200.82,
+201.12,
+201.32,
+201.84,
+202.08,
+202.8,
+203.04,
+203.58,
+203.8
+],
+"s": 200.82,
+"e": 205.4
+},
+{
+"sec": "OUTRO",
+"text": "So what's your number?",
+"words": [
+"So",
+"what's",
+"your",
+"number?"
+],
+"wt": [
+206.8,
+207.02,
+207.36,
+207.6
+],
+"s": 206.8,
+"e": 208.82
+},
+{
+"sec": "OUTRO",
+"text": "Five? Ten?",
+"words": [
+"Five?",
+"Ten?"
+],
+"wt": [
+208.82,
+210.6
+],
+"s": 208.82,
+"e": 211.44
+},
+{
+"sec": "OUTRO",
+"text": "Twenty-five?",
+"words": [
+"Twenty-five?"
+],
+"wt": [
+211.44
+],
+"s": 211.44,
+"e": 213.04
+},
+{
+"sec": "OUTRO",
+"text": "And who's paying yours?",
+"words": [
+"And",
+"who's",
+"paying",
+"yours?"
+],
+"wt": [
+218.56,
+218.8,
+219.2,
+219.68
+],
+"s": 218.56,
+"e": 222.18
+}
+]

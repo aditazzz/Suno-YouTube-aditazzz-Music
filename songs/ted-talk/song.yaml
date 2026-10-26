@@ -1,0 +1,72 @@
+title: TED Talk
+audio: TED Talk.wav
+folder: TED Talk
+model_credit: Claude Opus 5.5
+ai_music: true
+cover_time: 27.75                     # the first TED TALK hit
+thumb_time: 44.0
+thumb_caption: "Ted has used 6 of 15 minutes."
+status: rendered
+aliases:
+  ted: [said, dead, ted's, head, tad]
+  dana: [donna, dina, diana, dena]
+  q: [queue, cue, kyu]
+
+youtube:
+  title_hook: "He Turned Our Standup Into a Keynote"
+  hook: >-
+    I asked Ted if the file was ready. He said "so — stepping back," somebody dimmed the lights, and our
+    fifteen-minute standup became an eighteen-minute keynote with no slides and no point. 🎤
+  visuals: >-
+    the standup circle turns into a stage, the red rug unrolls, the meeting clock blows past 15:00, and Dana's
+    video tile slowly becomes a ghost
+  question: "Who's the Ted on your team? (Don't tag him.)"
+  note: >-
+    (Ted is fictional. Every team has one. This song isn't affiliated with TED or TED Conferences.)
+  hashtags: [standup, techhumor, aimusic]
+  short_hashtags: [standup, meetings, corporatehumor, techhumor, aimusic]
+  tags: [ted talk song, standup meeting, daily standup, meetings that should have been an email, corporate humor,
+         office humor, work meme, agile humor, scrum, product manager humor, software engineer humor, tech humor,
+         post punk, funny songs about work, ai music video]
+  pinned: >-
+    Every frame is code Claude Opus 5.5 wrote, including the meeting clock that never stops and Dana slowly turning
+    into a ghost 👻 Who's the Ted on your team? (Don't tag him.)
+  chapters:
+    V1: "He doesn't answer questions"
+    CH1: "It's a Ted talk"
+    V2: "He starts every sentence with so"
+    CH2: "Eighteen minutes, no point"
+    BRIDGE: "Ted. This is a standup."
+    FINAL: "There's no Q and A"
+    OUTRO: "Happy to take this offline"
+  extra_chapters:
+    - {line: "I asked him if the file", label: "Is the file ready?"}
+    - {line: "Dana is a ghost", label: "Dana is a ghost now"}
+
+instagram:
+  hashtags: [standup, meetings, corporatehumor, techhumor, worklife]
+  keywords: [ted talk song, standup meeting, daily standup, meetings, this meeting could have been an email, corporate humor,
+             office humor, work humor, agile, scrum, software engineer, product manager, tech humor, post punk, funny work song,
+             ai music video, made by claude]
+
+clip_copy:
+  "setup":
+    yt_title: "I asked a yes/no question at standup 🙃"
+    hook: "\"He doesn't answer questions. He responds to them.\" 🙃"
+    ig: "I asked if the file was ready. He said \"so — stepping back.\" 🙃 Send this to the person who has to sit next to Ted."
+  "chorus":
+    yt_title: "Every standup has a Ted 🎤"
+    hook: "Eighteen minutes, no slides, no point. 🎤"
+    ig: "It's a Ted talk. Eighteen minutes, no slides, no point 🎤 Tag the coworker who's about to circle back."
+  "bridge":
+    yt_title: "Dana is a ghost now, Ted 👻"
+    hook: "\"It is fifteen minutes for eight people. You have used six.\" 👻"
+    ig: "Ted. This is a standup. It is fifteen minutes for eight people. You have used six. 👻 RIP Dana's hard stop."
+  "first chorus":
+    yt_title: "POV: your standup just became a keynote 🎤"
+    hook: "\"Somebody dim the lights, everybody sit down.\" 🎤"
+    ig: "POV: you asked one question at standup and now you're at a keynote 🎤 Send this to your standup."
+  "final chorus":
+    yt_title: "There's no Q&A because there was never a Q 🎤"
+    hook: "\"Nobody scheduled it. Nobody can end it.\" 🎤"
+    ig: "Nobody scheduled it. Nobody can end it. There's no Q&A, because there was never a Q 🎤"

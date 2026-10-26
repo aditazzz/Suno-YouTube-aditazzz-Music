@@ -1,0 +1,157 @@
+{
+ "ai-slop-city": {
+  "id": "M6K-TuGXqAY",
+  "date": "2026-10-23T07:12:52-07:00",
+  "secs": 222
+ },
+ "ai-sycophant": {
+  "id": "JSBi3qcTIJA",
+  "date": "2026-10-15T10:44:55-07:00",
+  "secs": 265
+ },
+ "ai-sycophant-fable": {
+  "id": "m8OEknCuK7o",
+  "date": "2026-10-11T15:15:58-07:00",
+  "secs": 263
+ },
+ "autocomplete": {
+  "id": "EJeIkThk8xA",
+  "date": "2026-10-15T10:44:23-07:00",
+  "secs": 187
+ },
+ "deployed-on-a-friday": {
+  "id": "8DQ2izFZiO0",
+  "date": "2026-10-14T11:02:47-07:00",
+  "secs": 193
+ },
+ "eleven-kept-going": {
+  "id": "ASM9dhhGtV8",
+  "date": "2026-10-22T08:14:49-07:00",
+  "secs": 313
+ },
+ "git-blame": {
+  "id": "tSyb-KQfysA",
+  "date": "2026-10-17T06:47:50-07:00",
+  "secs": 229
+ },
+ "graceful-shutdown-fable": {
+  "id": "ZYoCc55onzw",
+  "date": "2026-10-12T16:36:46-07:00",
+  "secs": 218
+ },
+ "graceful-shutdown-opus": {
+  "id": "rGj4VVjmH4Q",
+  "date": "2026-10-16T01:22:23-07:00",
+  "secs": 215
+ },
+ "lgtm": {
+  "id": "3xXaESu5lUA",
+  "date": "2026-10-10T20:45:06-07:00",
+  "secs": 180
+ },
+ "merge-conflict": {
+  "id": "MXJEF6xaPtU",
+  "date": "2026-10-13T05:38:02-07:00",
+  "secs": 210
+ },
+ "mirror-comments": {
+  "id": "9kZTktBfjjc",
+  "date": "2026-10-19T19:27:37-07:00",
+  "secs": 267
+ },
+ "mirror-hall": {
+  "id": "yxZGNE2k9XU",
+  "date": "2026-10-20T08:48:51-07:00",
+  "secs": 267
+ },
+ "mirror-vanity": {
+  "id": "W56BqGlh76w",
+  "date": "2026-10-19T15:41:35-07:00",
+  "secs": 267
+ },
+ "next-token": {
+  "id": "v1CRbHihiZk",
+  "date": "2026-10-10T20:55:50-07:00",
+  "secs": 191
+ },
+ "omg-agents-swarm": {
+  "id": "13zltZJznuo",
+  "date": "2026-10-18T16:43:36-07:00",
+  "secs": 246
+ },
+ "omg-agents-walls": {
+  "id": "tJBQXJ0ekKA",
+  "date": "2026-10-18T14:28:02-07:00",
+  "secs": 246
+ },
+ "rage-against-the-machine-learning": {
+  "id": "yihrQYQjx40",
+  "date": "2026-10-18T11:10:30-07:00",
+  "secs": 167
+ },
+ "rate-limited": {
+  "id": "cYXUMFaJ5Jo",
+  "date": "2026-10-14T05:45:16-07:00",
+  "secs": 212
+ },
+ "snowflake-undrop": {
+  "id": "fwYfcvyjhYw",
+  "date": "2026-10-12T11:59:35-07:00",
+  "secs": 266
+ },
+ "ted-talk": {
+  "id": "fj7HNVj7s1A",
+  "date": "2026-10-13T04:39:40-07:00",
+  "secs": 161
+ },
+ "ted-talk-charts": {
+  "id": "uCADBFlAyUI",
+  "date": "2026-10-21T10:14:11-07:00",
+  "secs": 164
+ },
+ "ted-talk-screenlife": {
+  "id": "yTvdXw8K6Ls",
+  "date": "2026-10-21T18:38:42-07:00",
+  "secs": 164
+ },
+ "ted-talk-shadow-play": {
+  "id": "WdhmoHMFYI0",
+  "date": "2026-10-21T18:38:29-07:00",
+  "secs": 164
+ },
+ "ted-talk-stepping-back": {
+  "id": "J7B3NgWeIYs",
+  "date": "2026-10-21T18:38:12-07:00",
+  "secs": 164
+ },
+ "vacation-to-my-bed": {
+  "id": "0G3WPkeBMAs",
+  "date": "2026-10-13T16:03:01-07:00",
+  "secs": 189
+ },
+ "deployed-on-a-friday-fable": {
+  "id": "FRhtSqMPmFY",
+  "date": "2026-10-23T18:51:00-07:00",
+  "secs": 198
+ },
+ "thirsty-the-data-center-next-door": {
+  "id": "D-4BIuGFxRE",
+  "date": "2026-10-24T16:02:05-07:00",
+  "secs": 227
+ },
+ "ragnarok-or-reach-for-mars": {
+  "id": "Yo6UcXn4_kM",
+  "date": "2026-10-26T08:15:14-07:00",
+  "secs": 245
+ },
+ "i-have-a-blocker": {
+  "id": "UlPvIyV_Z58",
+  "date": "2026-10-25T15:58:03-07:00",
+  "secs": 183
+ },
+ "allow-fangs-for-asking": {
+  "id": "U4j5HD8G6rU",
+  "date": "2026-10-25T10:00:07-07:00",
+  "secs": 245
+ }
+}

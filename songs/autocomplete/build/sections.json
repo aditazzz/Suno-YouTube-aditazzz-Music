@@ -1,0 +1,82 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "",
+  "first_word_t": 2.019999933242798,
+  "e": 2.019999933242798,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 2.019999933242798,
+  "first_line": "Cursor in the dark",
+  "first_word_t": 2.319999933242798,
+  "e": 30.55746031746032,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE1",
+  "s": 30.55746031746032,
+  "first_line": "Line by line, you learn my tells",
+  "first_word_t": 30.479999989271164,
+  "e": 39.497142857142855,
+  "kind": "pre"
+ },
+ {
+  "name": "CH1",
+  "s": 39.497142857142855,
+  "first_line": "Autocomplete",
+  "first_word_t": 39.879999816417694,
+  "e": 66.43229024943311,
+  "kind": "chorus"
+ },
+ {
+  "name": "V2",
+  "s": 66.43229024943311,
+  "first_line": "Small talk turns deep",
+  "first_word_t": 66.07999992370605,
+  "e": 91.06866213151928,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE2",
+  "s": 91.06866213151928,
+  "first_line": "Line by line, you learn my tells",
+  "first_word_t": 91.8199999332428,
+  "e": 100.00834467120181,
+  "kind": "pre"
+ },
+ {
+  "name": "CH2",
+  "s": 100.00834467120181,
+  "first_line": "Autocomplete",
+  "first_word_t": 101.59999990463257,
+  "e": 126.78095238095239,
+  "kind": "chorus"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 126.78095238095239,
+  "first_line": "Hold up",
+  "first_word_t": 127.90769230287809,
+  "e": 151.3012244897959,
+  "kind": "bridge"
+ },
+ {
+  "name": "FINAL",
+  "s": 151.3012244897959,
+  "first_line": "You're there before I speak",
+  "first_word_t": 153.03999996185303,
+  "e": 164.62947845804987,
+  "kind": "chorus"
+ },
+ {
+  "name": "OUTRO",
+  "s": 164.62947845804987,
+  "first_line": "Finish it",
+  "first_word_t": 165.75999989509583,
+  "e": 187.2,
+  "kind": "outro"
+ }
+]

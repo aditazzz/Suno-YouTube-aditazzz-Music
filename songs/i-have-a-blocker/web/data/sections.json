@@ -1,0 +1,74 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "",
+  "first_word_t": 11.377777777777778,
+  "e": 11.377777777777778,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 11.377777777777778,
+  "first_line": "9:15 and the camera's off",
+  "first_word_t": 11.27999997138977,
+  "e": 29.141043083900225,
+  "kind": "verse"
+ },
+ {
+  "name": "CH1",
+  "s": 29.141043083900225,
+  "first_line": "I have no blockers",
+  "first_word_t": 29.27999973297119,
+  "e": 60.25578231292517,
+  "kind": "chorus"
+ },
+ {
+  "name": "V2",
+  "s": 60.25578231292517,
+  "first_line": "Somebody says they picked up my thing",
+  "first_word_t": 59.920000076293945,
+  "e": 78.04226757369615,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE2",
+  "s": 78.04226757369615,
+  "first_line": "I have no blockers",
+  "first_word_t": 78.15999984741211,
+  "e": 86.91229024943311,
+  "kind": "pre"
+ },
+ {
+  "name": "BUILD",
+  "s": 86.91229024943311,
+  "first_line": "And then somebody said it",
+  "first_word_t": 87.27999973297119,
+  "e": 95.78231292517007,
+  "kind": "build"
+ },
+ {
+  "name": "CH2",
+  "s": 95.78231292517007,
+  "first_line": "Take it offline, take it offline",
+  "first_word_t": 97.03999996185303,
+  "e": 113.56879818594105,
+  "kind": "chorus"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 113.56879818594105,
+  "first_line": "Nobody took it offline",
+  "first_word_t": 114.88000011444092,
+  "e": 146.86621315192744,
+  "kind": "bridge"
+ },
+ {
+  "name": "FINAL",
+  "s": 146.86621315192744,
+  "first_line": "Take it offline, take it offline",
+  "first_word_t": 148.07999992370605,
+  "e": 179.8,
+  "kind": "chorus"
+ }
+]

@@ -1,0 +1,106 @@
+title: "Mirror, Mirror, Look at Us"
+audio: Mirror.wav
+folder: "Mirror, Mirror, Look at Us (The Vanity)"
+version: "The Vanity"
+model_credit: Claude Opus 5.5
+ai_music: true
+accent: "e8324a"
+status: rendered
+tail: 5.0
+end_screen_at: 261.0                  # on-screen subscribe card + room for YouTube end-screen elements
+cover_time: 209.8                     # the cover itself: the cracked vanity mirror, every bulb on
+thumb_time: 219.6
+thumb_shift: 0.25
+ctx_shift: 0.27
+made_shift: -0.25
+
+youtube:
+  hook: >-
+    Top comment: "the death of art." Typed on a phone that finished the sentence for you. A pop song about the AI art
+    debate, sung to a dressing-room mirror whose glass is made of the feed. 🪞
+  visuals: >-
+    the vanity from the cover art comes alive. The title is written on the glass in lipstick, a fingertip writes in
+    breath fog, and twelve bulbs come on one by one. Every verse shows the receipts for things we already let machines
+    do (predictive text, beauty filters, take 30 of 30, auto-tune, ghostwriters, laugh tracks, a self-driving car).
+    In every chorus the feed's tiles fly home and become a face that looks like us. Then it gets measured in red
+    marker, pointed at, stamped FAKE, and cracked on "mad", exactly where the glass is cracked on the cover
+  question: "Be honest: how many takes did your last selfie need?"
+  pause_line: "⏸ Pause on any card in the mirror: every receipt has a joke in it."
+  note: >-
+    (Every app, card and comment in this video is made up. The faces in the mirror are part of the cover art.)
+  hashtags: [mirrormirror, aiart, aimusic]
+  short_hashtags: [aiart, mirrormirror, artdebate, aimusic, techhumor]
+  tags: [mirror mirror look at us, mirror mirror song, ai art debate, is ai art real art, the death of art, ai art song,
+         song about ai art, pop song about ai, social media satire, beauty filter, no makeup filter, autotune,
+         ghostwriters, predictive text, ai music video, made by claude, funny songs about ai, dark pop]
+  pinned: >-
+    Every frame is code Claude Opus 5.5 wrote, from the lipstick on the glass to the face that assembles out of the
+    feed and the crack on "mad" 🪞 Be honest: how many takes did your last selfie need?
+  short_pinned: |
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    Be honest: how many takes did your last selfie need? 👇
+
+    🔔 New song every week: {SUB_URL}
+  chapters:
+    INTRO: "Psst, this song isn't real"
+    V1: "Top comment: the death of art"
+    CH1: "Mirror, mirror, look at us"
+    V2: "Auto-tune's been fixing favorite songs"
+    CH2: "Funny how the mirror looks like us"
+    BREAK: "Fake grass, fake lashes"
+    BRIDGE: "It didn't teach us how to lie"
+    BUILD: "Then got mad when it looked like us"
+    FINAL: "Mirror, mirror, say it straight"
+    OUTRO: "Don't blame the reflection"
+  extra_chapters:
+    - {line: "Filtered face", label: "The no makeup post"}
+    - {line: "Your phone knows", label: "Your phone knows before you do"}
+
+instagram:
+  hashtags: [aiart, mirrormirror, artdebate, aimusic, techhumor]
+  keywords: [mirror mirror song, ai art debate, is ai art real art, the death of art, beauty filter, no makeup filter,
+             autotune, ghostwriters, predictive text, social media satire, pop song about ai, ai music video,
+             made by claude, claude ai]
+
+clip_copy:
+  "top comment":
+    yt_title: "Top comment: \"the death of art\" 🪞"
+    hook: "Top comment: \"the death of art.\" Typed on a phone built by a machine. 🪞"
+    ig: "Top comment: \"the death of art.\" Two hundred likes. Typed on a phone that finished the sentence for you 🪞 Send this to the friend who writes those comments."
+  "chorus":
+    yt_title: "We trained AI on us… funny how it looks like us 🪞"
+    hook: "Made it, fed it, now it's too much. 🪞"
+    ig: "Mirror, mirror, look at us. Made it, fed it, now it's too much. Funny how the mirror looks like us 🪞 Who taught it what to do?"
+  "fake":
+    yt_title: "Fake grass, fake lashes, fake followers… 🪞"
+    hook: "Fake grass, fake lashes, fake \"so happy for you\". 🪞"
+    ig: "Fake grass, fake lashes, fake \"so happy for you\", fake followers. Then the machine learns all our tricks, and suddenly WE'RE counterfeit? 🪞"
+  "receipts":
+    yt_title: "Things we already let machines do 🪞"
+    hook: "Auto-tune, ghostwriters, laugh tracks, a car that drives itself. 🪞"
+    ig: "Auto-tune's been fixing your favorite songs. Ghostwriters helped all along. A laugh track told you what to feel. Then you draw the line at creativity? 🪞"
+  "the crack":
+    yt_title: "Then we got mad when it looked like us 🪞"
+    hook: "We taught the mirror, then got mad when it looked like us. 🪞"
+    yt_tags: [ai art, ai art debate, is ai art real art, ai art vs human art, song about ai, ai song, ai music, beauty filter,
+              social media, mirror mirror, mirror mirror look at us, funny songs about ai, pop song, claude ai, made by claude,
+              aditazzz]
+    ig: "Maybe it's not the art we fear. Maybe it's the face in here 🪞 We asked it to learn from all of us, then got mad when it looked like us."
+
+edit_hook: "We taught the mirror, then got mad when it looked like us"
+edit_hook_y: 0.50                     # below the lipstick title, above the fog writing
+edit_open_cover: "Covers/Mirror, Mirror, Look at Us - Instagram (under 3 min) - cover.jpg"
+clips:   # hook-first: open on the sung punchline with on-screen hook text for the first 3 s
+  - {kind: reel, label: top comment, start: 12.9, end: 37.78, hook: "Top comment: \"the death of art\"", hook_y: 0.47}
+  - {kind: reel, label: chorus, start: 44.16, end: 71.3, hook: "Funny how the mirror looks like us"}
+  - {kind: reel, label: fake, start: 156.95, end: 181.79, hook: "Fake grass, fake lashes, fake followers", hook_y: 0.47}
+  - {kind: short, label: receipts, start: 82.57, end: 109.78, hook: "Things we already let machines do", hook_y: 0.47}
+  - {kind: short, label: the crack, start: 202.2, end: 241.0, hook: "Then we got mad when it looked like us"}
+# under-3-min edit: drops verse 2, chorus 2 and the bridge (179.0 s). The last join is shifted 0.09 s early on both
+# sides (bar-aligned) so "Maybe" isn't clipped: the bridge's "away" runs legato into it.
+edit_segments: [[0.0, 82.57], [156.18, 181.70], [196.10, 267.0]]
+
+# context thumbnail / covers: what the video is about
+thumb_lines: [FUNNY HOW, IT LOOKS LIKE US]
+thumb_sub: "a pop song about the AI art debate"

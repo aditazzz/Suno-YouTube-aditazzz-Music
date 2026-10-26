@@ -1,0 +1,90 @@
+{
+ "_about": "Cut lists (song seconds). shorts: one per card, each with its hook; under3: the under-3-minute vertical cut for Instagram (segments joined with short audio crossfades).",
+ "shorts": [
+  {
+   "key": "ragnarök or mars",
+   "segs": "0.0-42.34",
+   "hold": 0,
+   "fadein": 0,
+   "fadeout": 0.35,
+   "t0": 0.0,
+   "t1": 42.34,
+   "dur": 42
+  },
+  {
+   "key": "the tower",
+   "segs": "42.34-60.63",
+   "hold": 0,
+   "fadein": 0.04,
+   "fadeout": 0.15,
+   "t0": 42.34,
+   "t1": 60.63,
+   "dur": 18
+  },
+  {
+   "key": "the sun",
+   "segs": "60.63-69.6",
+   "hold": 0,
+   "fadein": 0.02,
+   "fadeout": 0.08,
+   "t0": 60.63,
+   "t1": 69.6,
+   "dur": 9
+  },
+  {
+   "key": "the robot",
+   "segs": "96.72-105.3",
+   "hold": 0.32,
+   "fadein": 0.03,
+   "fadeout": 0.25,
+   "t0": 96.72,
+   "t1": 105.62,
+   "dur": 9
+  },
+  {
+   "key": "the red planet",
+   "segs": "105.62-113.55",
+   "hold": 0.45,
+   "fadein": 0.03,
+   "fadeout": 0.25,
+   "t0": 105.62,
+   "t1": 114.0,
+   "dur": 8
+  },
+  {
+   "key": "the gardener",
+   "segs": "114.0-133.2",
+   "hold": 0,
+   "fadein": 0.03,
+   "fadeout": 0.1,
+   "t0": 114.0,
+   "t1": 133.2,
+   "dur": 19
+  },
+  {
+   "key": "if it makes the art",
+   "segs": "151.5-169.75",
+   "hold": 0,
+   "fadein": 0.02,
+   "fadeout": 0.1,
+   "t0": 151.5,
+   "t1": 169.75,
+   "dur": 18
+  },
+  {
+   "key": "the fool",
+   "segs": "207.2-244.8",
+   "hold": 0,
+   "fadein": 0.02,
+   "fadeout": 0.6,
+   "t0": 207.2,
+   "t1": 244.8,
+   "dur": 38
+  }
+ ],
+ "under3": {
+  "segs": "0.0-69.576,96.941-133.2,151.5-187.5,207.2-244.8",
+  "xf": "0.03,0.03,0.15",
+  "fadeout": 0.0
+ }
+}

@@ -1,0 +1,63 @@
+title: "AI Slop? YOU're Absolutely Right"
+audio: AI Slop YOU’re Absolutely Right.wav
+folder: AI Slop YOU’re Absolutely Right (The City)
+version: "The City"
+model_credit: Claude Opus 5.5        # the model that actually made THIS video
+ai_music: true
+accent: "f2b46d"
+status: rendered
+tail: 3.0                            # silent seconds after the song for the end screen (scene TAIL)
+
+# thumbnails (made Oct 22 with studio.thumbs.context_card): the SLOP tower (cam_corner, 61.0 s), text column left
+thumb_time: 61.0
+thumb_lines: ["YOU'RE", ABSOLUTELY, RIGHT]
+thumb_sub: "a song about AI slop, sung by the AI"
+thumb_hook_color: "3daaff"
+thumb_hook_side: left
+ctx_shift: 0.285
+thumb_option_time: 52.0              # note only: option 3 = her on the bench, phone glowing, screens above (shift 0.12)
+
+youtube:
+  title: "AI Slop? You're Absolutely Right - Claude Opus 5.5 Music Video"
+  hook: >-
+    A song about AI slop, sung by the AI. 2 a.m., one woman on one bench, and a phone that agrees with everything she
+    says. 🌆
+  visuals: >-
+    a whole illustrated city, one woman on one bench, a hundred identical sunsets, an LED band that counts every scroll,
+    her shadow climbing the tower at dawn and turning every window it covers into a screen, tabloids from 1957 to 1994,
+    a blackout that finally shows the Milky Way, and the last morning, when her shadow is just a shadow again
+  question: "What's the most \"You're absolutely right\" thing an AI has ever said to you?"
+  pause_line: "⏸ Pause on the newsstand: every headline is older than AI."
+  note: "(Every account, post and headline in the video is invented.)"
+  hashtags: [AISlop, YoureAbsolutelyRight, AISong]   # first one shows above the title with #ClaudeAI #AIMusicVideo
+  short_hashtags: [aislop, youreabsolutelyright, claudeai, aimusicvideo, newmusic]
+  tags: [ai slop, you're absolutely right, aditazzz, song about ai, song from the ai's point of view, ai sycophancy,
+         chatbot that agrees with everything, doomscrolling, social media algorithm, the feed, shadow self, carl jung shadow,
+         animated music video, illustrated city, ai music video, made by claude, claude opus 5.5, music video made with code]
+  pinned: >-
+    Every frame is code Claude Opus 5.5 wrote: the tower, the shadow, the hundred sunsets, the old tabloids, the
+    blackout and the Milky Way 🌌 What's the most "You're absolutely right" thing an AI has ever said to you?
+  short_pinned: |
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    What's the most "You're absolutely right" thing an AI has ever said to you? 👇
+
+    🔔 New song every week: {SUB_URL}
+  chapters:
+    INTRO: "2 a.m."
+    V1: "You liked one post at 2 a.m."
+    PRE1: "Dawn: the shadow climbs"
+    CH1: "You're absolutely right"
+    V2: "I wrote the news"
+    PRE2: "Whose reflection do you see?"
+    CH2: "Golden hour"
+    BRIDGE: "Every song you never wrote"
+    FINAL: "You're the one who gets to stop"
+    OUTRO: "I'll be right behind you"
+
+instagram:
+  hashtags: [aislop, youreabsolutelyright, aimusicvideo, claudeai, newmusic]
+  keywords: [AI slop, you're absolutely right, song from the AI's point of view, AI sycophancy, doomscrolling,
+             social media algorithm, the feed, shadow self, Carl Jung shadow, animated music video, illustrated city,
+             music video made with code, made by Claude, Claude Opus 5.5, original song, "AI Slop? YOU're Absolutely Right",
+             Aditazzz]

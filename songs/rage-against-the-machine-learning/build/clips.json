@@ -1,0 +1,59 @@
+{
+ "clips": [
+  {
+   "kind": "reel",
+   "label": "the evidence",
+   "start": 30.25,
+   "end": 49.85,
+   "hook": "POV: your 2009 blog is in the training data",
+   "hook_y": 0.1,
+   "file": "Rage Against the Machine Learning - Reel 1 (the evidence, 20s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "first chorus",
+   "start": 49.82,
+   "end": 69.55,
+   "hook": "When you said no but the model kept learning",
+   "hook_y": 0.66,
+   "file": "Rage Against the Machine Learning - Short 1 (first chorus, 20s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "the memo",
+   "start": 69.55,
+   "end": 89.05,
+   "hook": "Every AI-first all-hands, in one song",
+   "hook_y": 0.1,
+   "file": "Rage Against the Machine Learning - Reel 2 (the memo, 20s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "loss goes down",
+   "start": 101.4,
+   "end": 121.0,
+   "hook": "The model's loss goes down. Your rent goes up.",
+   "hook_y": 0.3,
+   "file": "Rage Against the Machine Learning - Short 2 (loss goes down, 20s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "the finale",
+   "start": 128.3,
+   "end": 156.4,
+   "hook": "I said no. It kept learning.",
+   "hook_y": 0.66,
+   "file": "Rage Against the Machine Learning - Reel 3 (the finale, 28s).mp4"
+  }
+ ],
+ "edit": {
+  "file": "Rage Against the Machine Learning - Instagram 9x16 (under 3 min).mp4",
+  "segments": [
+   [
+    0.0,
+    166.9
+   ]
+  ],
+  "duration": 166.9
+ }
+}

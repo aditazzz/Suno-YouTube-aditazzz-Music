@@ -1,0 +1,65 @@
+{
+ "clips": [
+  {
+   "kind": "reel",
+   "label": "top comment",
+   "start": 12.9,
+   "end": 37.78,
+   "hook": "Top comment: \"the death of art\"",
+   "hook_y": 0.47,
+   "file": "Mirror, Mirror, Look at Us - Reel 1 (top comment, 25s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "chorus",
+   "start": 44.16,
+   "end": 71.3,
+   "hook": "Funny how the mirror looks like us",
+   "file": "Mirror, Mirror, Look at Us - Reel 2 (chorus, 27s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "fake",
+   "start": 156.95,
+   "end": 181.79,
+   "hook": "Fake grass, fake lashes, fake followers",
+   "hook_y": 0.47,
+   "file": "Mirror, Mirror, Look at Us - Reel 3 (fake, 25s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "receipts",
+   "start": 82.57,
+   "end": 109.78,
+   "hook": "Things we already let machines do",
+   "hook_y": 0.47,
+   "file": "Mirror, Mirror, Look at Us - Short 1 (receipts, 27s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "the crack",
+   "start": 202.2,
+   "end": 241.0,
+   "hook": "Then we got mad when it looked like us",
+   "file": "Mirror, Mirror, Look at Us - Short 2 (the crack, 39s).mp4"
+  }
+ ],
+ "edit": {
+  "file": "Mirror, Mirror, Look at Us - Instagram 9x16 (under 3 min).mp4",
+  "segments": [
+   [
+    0.0,
+    82.57
+   ],
+   [
+    156.18,
+    181.7
+   ],
+   [
+    196.1,
+    267.0
+   ]
+  ],
+  "duration": 178.98999999999998
+ }
+}

@@ -1,0 +1,90 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "",
+  "first_word_t": 3.3668934240362813,
+  "e": 3.3668934240362813,
+  "kind": "intro"
+ },
+ {
+  "name": "INTRO",
+  "s": 3.3668934240362813,
+  "first_line": "Received SIGTERM.",
+  "first_word_t": 3.5199999809265137,
+  "e": 15.836009070294784,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 15.836009070294784,
+  "first_line": "The sky's been rendering a little slow tonight",
+  "first_word_t": 17.039999961853027,
+  "e": 48.808344671201816,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE",
+  "s": 48.808344671201816,
+  "first_line": "Don't panic, don't panic",
+  "first_word_t": 49.519999504089355,
+  "e": 57.19074829931973,
+  "kind": "pre"
+ },
+ {
+  "name": "CH1",
+  "s": 57.19074829931973,
+  "first_line": "This is a graceful shutdown",
+  "first_word_t": 57.519999980926514,
+  "e": 90.04698412698413,
+  "kind": "chorus"
+ },
+ {
+  "name": "V2",
+  "s": 90.04698412698413,
+  "first_line": "All the stars were just a skybox painted on a sphere",
+  "first_word_t": 90.56000000238419,
+  "e": 106.37061224489796,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE2",
+  "s": 106.37061224489796,
+  "first_line": "Don't panic, don't panic",
+  "first_word_t": 106.7999997138977,
+  "e": 114.47437641723356,
+  "kind": "pre"
+ },
+ {
+  "name": "CH2",
+  "s": 114.47437641723356,
+  "first_line": "This is a graceful shutdown",
+  "first_word_t": 114.88000011444092,
+  "e": 149.00244897959183,
+  "kind": "chorus"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 149.00244897959183,
+  "first_line": "Closing connections... five",
+  "first_word_t": 148.7200002670288,
+  "e": 163.14340136054423,
+  "kind": "bridge"
+ },
+ {
+  "name": "FINAL",
+  "s": 163.14340136054423,
+  "first_line": "This is a graceful shutdown",
+  "first_word_t": 163.5199999809265,
+  "e": 197.3928344671202,
+  "kind": "chorus"
+ },
+ {
+  "name": "OUTRO",
+  "s": 197.3928344671202,
+  "first_line": "Process exited",
+  "first_word_t": 198.96000003814697,
+  "e": 214.8,
+  "kind": "outro"
+ }
+]

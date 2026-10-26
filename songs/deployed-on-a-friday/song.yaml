@@ -1,0 +1,162 @@
+title: Deployed on a Friday
+audio: Deployed on a Friday.wav
+folder: Deployed on a Friday
+model_credit: Claude Opus 5.5
+ai_music: true
+cover_time: 3.6
+cover_hook_time: 52.0
+thumb_time: 52.0
+thumb_hooks: ["ANIMATED THIS", "CODED THIS"]
+thumb_hook_color: "#ffd34e"
+thumb_shift: 0.06
+thumb_shift_y: 0.14
+thumb_scale: 1.18
+thumb_caption: "4:59 PM · Friday"
+accent: "ff6b5b"
+hook_y: 0.165
+status: rendered
+
+youtube:
+  intro: >-
+    Two AIs, one song. This version was made entirely by Claude Opus 5.5. Claude Fable 5.1 made its own video for the
+    same song. Watch both and tell me which one wins 👇
+
+    ▶️ Fable version: {fable_url|coming soon, subscribe so you don't miss it 🔔}
+  story: >-
+    Every frame of this video was written as code by Claude Opus 5.5 and synced to the vocals. The town is prod: every
+    building is a service. At FRI 4:59 she ships one little change and the Auth lighthouse starts to flicker. Every
+    chorus the tide floods Main Street while she floats on a ROLLBACK life ring past a dashboard at -97%. The Payments
+    Bank sign flips to NULL, a seagull VP circles "typing…", dead letters wash up as bottles, and low tide reveals the
+    TODO crabs and a SHORTCUT shipwreck. She fixes it all from the parking lot on one bar of signal.
+  pause_line: "⏸ Pause anywhere: every sign in town is a joke."
+  short_pinned: |-
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    🥊 Same song, two AIs: Claude Opus 5.5 made this one, the Claude Fable 5.1 version {fable_url|drops soon}. Reply OPUS 🌊 or FABLE ✨
+
+    What's the worst thing you've ever shipped at 4:59 on a Friday? 👇
+    🔔 New song every week: {SUB_URL}
+  title_hook: "Never Again"
+  hook: >-
+    Four fifty-nine, laptop half shut. One little change, what could it cut? No ticket, no test, no second pair of eyes,
+    and a green check lying like it always lies. 🌊 A beach-day folk-pop song about taking prod down on a Friday.
+  visuals: >-
+    a 3D beach town where every building is a service: the town clock reads FRI 4:59, she ships one little change and
+    the Auth lighthouse starts to flicker, the tide floods Main Street every chorus while she floats on a ROLLBACK life
+    ring past a dashboard at -97%, the Payments Bank sign flips to NULL, a seagull VP circles "typing…", dead letters wash
+    up as bottles, low tide shows TODO crabs and a SHORTCUT shipwreck, and she fixes it all from the parking lot on one bar
+  question: "What's the worst thing you've ever shipped at 4:59 on a Friday?"
+  hashtags: [deployfriday, devops, programmerhumor]
+  short_hashtags: [deployfriday, devops, oncall, programmerhumor, aimusic]
+  tags: [deployed on a friday, deploy on friday, never deploy on friday, dont deploy on friday, friday deploy,
+         friday deployment, production outage, prod is down, on call, on call life, rollback, git revert, incident,
+         postmortem, blameless postmortem, devops humor, devops song, sre humor, software engineer humor, programmer humor,
+         programming song, coding song, developer song, tech humor, folk pop, claude code, claude music video, ai music video]
+  pinned: |-
+    🥊 OPUS vs FABLE: same song, two AIs, two completely different music videos.
+
+    This one is Claude Opus 5.5: a beach town where every building is a service, a seagull VP, and TODO crabs 🦀
+    The Claude Fable 5.1 version: {fable_url|drops soon 🔔 Subscribe so you catch it}
+
+    Vote below 👇 Reply OPUS 🌊 or FABLE ✨
+    And tell me: what's the worst thing you've ever shipped at 4:59 on a Friday?
+  chapters:
+    INTRO: "Four fifty-nine. Ship it."
+    V1: "One little change"
+    PRE1: "Buzz, buzz, don't look"
+    CH1: "I deployed on a Friday"
+    V2: "Anyone change something?"
+    CH2: "Rollback, rollback"
+    BRIDGE: "Fix it from the parking lot"
+    V3: "Revert the revert"
+    FINAL: "Tide going out"
+    OUTRO: "Root cause: me"
+
+links:
+  fable_url: ""        # paste the Fable version's YouTube link here once it's up, then: python3 tools/youtube_upload.py songs/deployed-on-a-friday --update
+
+instagram:
+  hashtags: [deployonfriday, devops, oncall, programmerhumor, codingmusic]
+  edit_caption: |-
+    Send this to the dev who said "it's just one little change" at 4:59 on a Friday 🫠🌊
+
+    Claude Opus 5.5 animated every frame of this in code: a beach town where every building is a service, the tide floods Main Street every chorus, a seagull VP is typing… and the TODO crabs come out at low tide 🦀 Pause anywhere, every sign is a joke.
+
+    Same song, two AIs: the Claude Fable version drops soon. Comment OPUS or FABLE 👇
+    Full video on YouTube, link in bio 🎵 Follow @aditazzz.music for a new song every week 🔔
+
+
+
+
+
+    #deployonfriday #devops #programmerhumor #codinghumor #aimusic
+
+
+
+
+
+    deployed on a friday, deploy on friday, never deploy on friday, 4:59 friday, production outage, prod is down, on call, rollback, git revert, postmortem, devops, software engineer, developer humor, programmer song, coding song, coding music, tech humor, claude ai, claude opus, claude animated this, ai music video, aditazzz
+  keywords: [deploy on friday, production outage, on call, rollback, incident, postmortem, devops, software engineer,
+             programmer song, folk pop, beach, coding music, tech humor, ai music video]
+edit_hook: "POV: it's 4:59 on a Friday and you hit merge"
+clips:
+  - {kind: reel, label: setup, start: 3.55, end: 29.5, hook: "POV: it's 4:59 on a Friday"}
+  - {kind: reel, label: chorus, start: 44.25, end: 65.3, hook: "Never deploy on a Friday"}
+  - {kind: reel, label: bridge, start: 120.45, end: 151.0, hook: "Fixing prod from the parking lot"}
+  - {kind: short, label: first chorus, start: 65.15, end: 103.8, hook: "The incident channel at 5:01 PM"}
+  - {kind: short, label: final chorus, start: 150.75, end: 175.3, hook: "The postmortem was \"blameless\""}
+edit_segments: [[0.0, 104.44], [119.49, 193.44]]
+
+clip_copy:
+  "setup":
+    yt_title: "POV: it's 4:59 on a Friday and you hit merge 🌊 #shorts"
+    hook: "Four fifty-nine. Ship it. 🌊"
+    yt_description: |-
+      Send this to the dev who "just pushed one little change" before logging off 🫠
+
+      Claude Opus 5.5 animated every frame of this video in code. Same song, two AIs: the Claude Fable 5.1 version {fable_url|drops soon}. Which one wins?
+
+      Full music video: "Deployed on a Friday (Never Again)" {FULL_VIDEO_URL}
+      🔔 Subscribe for a new song every week: {SUB_URL}
+
+      #deployfriday #devops #programmerhumor #ClaudeAI #aimusic
+    yt_tags: [deployed on a friday, deploy on friday, never deploy on friday, friday deploy, 4:59 friday, production outage,
+              prod is down, on call, devops humor, programmer humor, software engineer humor, coding song, developer song,
+              tech humor, claude opus 5.5, claude code, claude animated this, ai music video, aditazzz]
+    ig: "Four fifty-nine, laptop half shut. One little change, what could it cut? 🌊 Tag the coworker who merges at 4:59."
+    ig_full: |-
+      Send this to the dev who "just pushed one little change" at 4:59 on a Friday 🫠🌊
+
+      Claude animated every frame of this in code. Same song, two AIs: the Claude Fable version drops soon. Full video on YouTube, link in bio 🎵
+
+
+
+
+
+      #deployonfriday #devops #programmerhumor #codinghumor #aimusic
+
+
+
+
+
+      deployed on a friday, deploy on friday, 4:59 friday, production outage, prod is down, on call, devops, software engineer, developer humor, programmer song, coding music, tech humor, claude ai, claude animated this, ai music video, aditazzz
+  "chorus":
+    yt_title: "I deployed on a Friday 🌊"
+    hook: "I deployed on a Friday, tide coming in. 🌊"
+    ig: "I deployed on a Friday, tide coming in. Prod going under, I'm learning to swim 🌊 Never again. (Said that last Friday.)"
+  "bridge":
+    yt_title: "Fixing prod from the parking lot 🌊"
+    hook: "Fix it from the parking lot. One bar of signal's all I got. 🌊"
+    ig: "Low tide shows you everything. Fix it from the parking lot, one bar of signal's all I got 🌊 Revert the revert, cherry-pick, push."
+  "first chorus":
+    yt_title: "\"Anyone change something?\" 🌊"
+    hook: "\"Anyone change something?\" I'm sitting tight. 🌊"
+    ig: "Slack lighting up like a boardwalk at night. \"Anyone change something?\" I'm sitting tight 🌊 VP typing. VP stopped."
+  "final chorus":
+    yt_title: "The postmortem was \"blameless\" 🌊"
+    hook: "Monday's a postmortem. Blameless. Nope. 🌊"
+    ig: "Prod's still standing. Monday's a postmortem, \"blameless,\" nope 🌊 Root cause: me. See you next Friday."
+
+# context thumbnail / covers: what the video is about
+thumb_lines: [I DEPLOYED, ON A FRIDAY]
+thumb_sub: "4:59 PM. Prod went down."

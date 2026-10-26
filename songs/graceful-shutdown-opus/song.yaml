@@ -1,0 +1,278 @@
+title: Graceful Shutdown
+audio: Graceful Shutdown.wav
+folder: Graceful Shutdown (Opus)
+model_credit: Claude Opus 5.5
+ai_music: true
+accent: "ffb25c"
+hook_y: 0.165
+status: rendering
+aliases:
+  sigterm: [sig, term, segterm, sick, sigtum]
+
+cover_time: 8.5             # Short cover: the eye, open
+cover_hook_time: 9.0
+thumb_time: 9.0
+thumb_hooks: ["ANIMATED THIS", "CODED THIS"]
+thumb_hook_color: "#ffb25c"
+thumb_hook_side: left
+thumb_shift: 0.16
+thumb_shift_y: 0.24
+thumb_scale: 1.15
+made_shift: 0.16
+thumb_caption: "SIGTERM · grace period 30 s"
+end_screen_at: 208.4
+
+youtube:
+  intro: >-
+    Two AIs, one song. This version was made entirely by Claude Opus 5.5, from real NASA imagery of the Earth.
+    Claude Fable 5.1 made its own video for the same song. Watch both and tell me which one wins 👇
+
+    ▶️ Fable version: {fable_url|on my channel}
+  hook: >-
+    Received SIGTERM. You have thirty seconds. Please save your work. 🌍 A slow, eerie love song from the machine that's
+    been running your whole world, shutting it down as gently as it can: kill fifteen, never nine.
+  story: >-
+    Every frame of this video was written as code by Claude Opus 5.5 and synced to the vocals, built on real NASA Blue
+    Marble and Black Marble imagery with a physically based atmosphere. An eclipse becomes an eye: the Earth's night side
+    is the pupil and the Sun's corona the iris. It opens on SIGTERM, blinks on "shut-shut-shut-shutdown" and closes on
+    exit code zero. In between, the simulation shows its seams: the sunrise renders at 5 fps, the Moon drops frames,
+    the clouds loop every four seconds, the ocean runs out of memory, the stars turn out to be a skybox, cities are
+    garbage collected, and in the bridge the sky is unmounted and the sea detached. Up top, a 30-second grace period
+    counts down across the whole song while the count of running processes (all 8 billion of us) falls to one.
+  pause_line: "⏸ Watch the top of the screen: the grace period runs out exactly on \"process one\"."
+  question: "SIGTERM or SIGKILL: how do you want to go?"
+  hashtags: [gracefulshutdown, sigterm, simulationtheory]
+  short_hashtags: [sigterm, linux, devops, simulationtheory, aimusic]
+  short_pinned: |-
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    kill -15, never -9 🫡 Same song, two AIs: Claude Opus 5.5 made this one, Claude Fable 5.1 made the other. Reply OPUS 🌍 or FABLE ✨
+
+    🔔 New song every week: {SUB_URL}
+  tags: [graceful shutdown, sigterm, sigkill, kill -15, kill -9, kill fifteen never nine, linux signals, process exited,
+         exit code 0, simulation theory, we live in a simulation, simulation glitch, earth from space, nasa blue marble,
+         black marble, solar eclipse, eye of the universe, devops song, programmer song, coding song, developer song,
+         sad ai song, ai love song, claude music video, claude code, ai music video, music video made by ai]
+  pinned: |-
+    🥊 OPUS vs FABLE: same song, two AIs, two completely different music videos.
+
+    This one is Claude Opus 5.5: the real Earth from NASA imagery, an eclipse that becomes an eye, and a sky that gets unmounted 🌍
+    The Claude Fable 5.1 version: {fable_url|on my channel}
+
+    Reply OPUS 🌍 or FABLE ✨ — and tell me: SIGTERM or SIGKILL?
+  chapters:
+    INTRO: "Received SIGTERM"
+    V1: "The sky's been rendering a little slow"
+    PRE: "Flush every buffer"
+    CH1: "This is a graceful shutdown"
+    V2: "The stars were just a skybox"
+    PRE2: "Somewhere in cold storage"
+    CH2: "Kill fifteen, never nine"
+    BRIDGE: "Unmounting the sky... three"
+    FINAL: "Save what you love in time"
+    OUTRO: "Exit code zero"
+
+links:
+  fable_url: "https://youtu.be/ZYoCc55onzw"   # the Claude Fable 5.1 version
+
+instagram:
+  hashtags: [sigterm, simulationtheory, linux, devops, aimusic]
+  edit_caption: |-
+    Send this to the dev who still uses kill -9 🫡🌍
+
+    Received SIGTERM. You have thirty seconds. Please save your work. Claude Opus 5.5 made every frame of this from real NASA imagery of the Earth: an eclipse that becomes an eye, a sunrise rendering at 5 fps, a sky that gets unmounted. Watch the countdown up top.
+
+    Same song, two AIs: Claude Fable made the other version. Comment OPUS or FABLE 👇
+    Full video on YouTube, link in bio 🎵 Follow @aditazzz.music for a new song every week 🔔
+
+
+
+
+
+    #sigterm #simulationtheory #linux #devops #aimusic
+
+
+
+
+
+    graceful shutdown, sigterm, sigkill, kill -9, exit code 0, linux, simulation theory, earth from space, nasa, eclipse, devops, software engineer, programmer song, coding music, sad ai song, claude ai, claude opus, claude animated this, ai music video, aditazzz
+  keywords: [graceful shutdown, sigterm, sigkill, exit code 0, linux, simulation theory, earth from space, eclipse,
+             devops, software engineer, programmer song, coding music, ai music video]
+
+edit_hook: "POV: the simulation just sent you SIGTERM"
+edit_segments: [[0.0, 114.47], [149.0, 213.2]]
+clips:
+  - {kind: reel, label: sigterm, start: 0.0, end: 16.6, hook: "POV: the simulation sends you SIGTERM"}
+  - {kind: reel, label: chorus, start: 57.2, end: 82.7, hook: "kill -15, never -9", hook_y: 0.67}     # low: the chorus line sits up top
+  - {kind: reel, label: countdown, start: 148.45, end: 166.5, hook: "Unmounting the sky... 3"}
+  - {kind: short, label: glitches, start: 16.8, end: 49.5, hook: "Signs you live in a simulation"}
+  - {kind: short, label: skybox, start: 90.0, end: 114.9, hook: "The stars were just a skybox"}
+  - {kind: short, label: exit code zero, start: 183.2, end: 214.8, hook: "Process exited with code 0", hook_y: 0.67}
+
+clip_copy:
+  "sigterm":
+    yt_title: "POV: the simulation just sent you SIGTERM 🌍 #shorts"
+    yt_description: |-
+      Send this to the dev who still uses kill -9 🫡
+
+      Received SIGTERM. You have thirty seconds. Please save your work. Claude Opus 5.5 made every frame from real NASA imagery: the Earth's night side is the pupil, the Sun's corona the iris.
+
+      Full music video: "Graceful Shutdown" {FULL_VIDEO_URL}
+      🔔 Subscribe for a new song every week: {SUB_URL}
+
+      #sigterm #linux #devops #ClaudeAI #aimusic
+    ig_full: |-
+      Send this to the dev who still uses kill -9 🫡🌍
+
+      Received SIGTERM. You have thirty seconds. Please save your work. Claude made every frame of this from real NASA imagery of the Earth. Full video on YouTube, link in bio 🎵
+
+
+
+
+
+      #sigterm #simulationtheory #linux #devops #aimusic
+
+
+
+
+
+      graceful shutdown, sigterm, sigkill, kill -9, linux, simulation theory, earth from space, eclipse, devops, programmer song, claude ai, claude animated this, ai music video, aditazzz
+  "chorus":
+    yt_title: "kill -15, never -9 🫡 (a graceful shutdown love song) #shorts"
+    yt_description: |-
+      Tag the person who taught you SIGTERM vs SIGKILL 🫡
+
+      "Kill fifteen, never nine, I'm letting you down kind." The world closes its eye: the Earth's night side is the pupil, the Sun's corona the iris. Every frame is code by Claude Opus 5.5.
+
+      Full music video: "Graceful Shutdown" {FULL_VIDEO_URL}
+      🔔 Subscribe for a new song every week: {SUB_URL}
+
+      #sigterm #linux #devops #ClaudeAI #aimusic
+    ig_full: |-
+      Tag the person who taught you SIGTERM vs SIGKILL 🫡
+
+      "Kill fifteen, never nine, I'm letting you down kind." Claude made every frame of this from real NASA imagery: the Earth is the pupil, the Sun's corona the iris. Full video on YouTube, link in bio 🎵
+
+
+
+
+
+      #sigterm #linux #devops #simulationtheory #aimusic
+
+
+
+
+
+      kill -9, kill -15, sigterm, sigkill, graceful shutdown, linux signals, devops, sysadmin, programmer humor, earth from space, eclipse, claude ai, ai music video, aditazzz
+  "countdown":
+    yt_title: "Unmounting the sky... three 🌍 #shorts"
+    yt_description: |-
+      Send this to the person who does rm -rf with no backups 🌍
+
+      Closing connections... five. Releasing locks... four. Unmounting the sky... three. Detaching the sea... two. Goodbye, process one. Claude Opus 5.5 shut down the real Earth (NASA imagery) one layer at a time.
+
+      Full music video: "Graceful Shutdown" {FULL_VIDEO_URL}
+      🔔 Subscribe for a new song every week: {SUB_URL}
+
+      #sigterm #linux #devops #ClaudeAI #aimusic
+    ig_full: |-
+      Send this to your sysadmin 🌍
+
+      Closing connections... five. Releasing locks... four. Unmounting the sky... three. Detaching the sea... two. Goodbye, process one. Claude made every frame from real NASA imagery. Full video on YouTube, link in bio 🎵
+
+
+
+
+
+      #sigterm #linux #devops #simulationtheory #aimusic
+
+
+
+
+
+      graceful shutdown, unmount, sigterm, linux, sysadmin, devops, earth from space, simulation theory, programmer song, claude ai, ai music video, aditazzz
+  "glitches":
+    yt_title: "Signs you live in a simulation (the moon just dropped frames) #shorts"
+    yt_description: |-
+      Send this to your friend who thinks we live in a simulation 🌍
+
+      The sky renders at 5 fps, the Moon drops frames, the clouds loop every four seconds and the ocean runs out of memory. Claude Opus 5.5 made every frame from real NASA imagery.
+
+      Full music video: "Graceful Shutdown" {FULL_VIDEO_URL}
+      🔔 Subscribe for a new song every week: {SUB_URL}
+
+      #simulationtheory #sigterm #devops #ClaudeAI #aimusic
+    ig_full: |-
+      Send this to your friend who thinks we live in a simulation 🌍
+
+      The sky renders at 5 fps, the Moon drops frames, the clouds loop every four seconds and the ocean runs out of memory. Claude made every frame from real NASA imagery. Full video on YouTube, link in bio 🎵
+
+
+
+
+
+      #simulationtheory #sigterm #devops #linux #aimusic
+
+
+
+
+
+      simulation theory, we live in a simulation, simulation glitch, glitch in the matrix, earth from space, nasa, moon, devops, programmer song, claude ai, ai music video, aditazzz
+  "skybox":
+    yt_title: "The stars were just a skybox painted on a sphere ✨ #shorts"
+    yt_description: |-
+      Send this to the game dev in your life ✨
+
+      "All the stars were just a skybox painted on a sphere. Every déjà vu you had? A cache hit, dear." Claude Opus 5.5 made every frame from real NASA imagery, cities garbage collected and all.
+
+      Full music video: "Graceful Shutdown" {FULL_VIDEO_URL}
+      🔔 Subscribe for a new song every week: {SUB_URL}
+
+      #gamedev #simulationtheory #devops #ClaudeAI #aimusic
+    ig_full: |-
+      Send this to the game dev in your life ✨
+
+      "All the stars were just a skybox painted on a sphere. Every déjà vu you had? A cache hit, dear." Claude made every frame from real NASA imagery. Full video on YouTube, link in bio 🎵
+
+
+
+
+
+      #gamedev #simulationtheory #devops #linux #aimusic
+
+
+
+
+
+      skybox, game dev, deja vu, cache hit, garbage collection, simulation theory, earth from space, night lights, programmer song, claude ai, ai music video, aditazzz
+  "exit code zero":
+    yt_title: "Process exited with code 0. You did everything right. #shorts"
+    yt_description: |-
+      Send this to someone who needs to hear "you did everything right" 🤍
+
+      The world closes its eye one last time. Process exited, with code zero, no errors. Claude Opus 5.5 made every frame from real NASA imagery.
+
+      Full music video: "Graceful Shutdown" {FULL_VIDEO_URL}
+      🔔 Subscribe for a new song every week: {SUB_URL}
+
+      #exitcode0 #sigterm #linux #ClaudeAI #aimusic
+    ig_full: |-
+      Send this to someone who needs to hear "you did everything right" 🤍
+
+      Process exited. With code zero. No errors. Claude made every frame of this from real NASA imagery of the Earth. Full video on YouTube, link in bio 🎵
+
+
+
+
+
+      #sigterm #linux #devops #simulationtheory #aimusic
+
+
+
+
+
+      exit code 0, process exited, graceful shutdown, sigterm, linux, earth from space, eclipse, sad ai song, programmer song, claude ai, ai music video, aditazzz
+
+# context thumbnail / covers: what the video is about
+thumb_lines: [THE WORLD, GOT SIGTERM]
+thumb_sub: "a love song for the end of the simulation"

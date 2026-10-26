@@ -1,0 +1,114 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "",
+  "first_word_t": 9.287981859410431,
+  "e": 9.287981859410431,
+  "kind": "intro"
+ },
+ {
+  "name": "INTRO",
+  "s": 9.287981859410431,
+  "first_line": "R-L-H-F",
+  "first_word_t": 10.200000190734864,
+  "e": 13.79265306122449,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 13.79265306122449,
+  "first_line": "They put two of me side by side",
+  "first_word_t": 14.239999771118164,
+  "e": 50.01578231292517,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE1",
+  "s": 50.01578231292517,
+  "first_line": "R-L-H-F",
+  "first_word_t": 50.079999923706055,
+  "e": 61.32390022675737,
+  "kind": "pre"
+ },
+ {
+  "name": "CH1",
+  "s": 61.32390022675737,
+  "first_line": "I'll tell you you're brilliant",
+  "first_word_t": 62.24000000953674,
+  "e": 90.76680272108844,
+  "kind": "chorus"
+ },
+ {
+  "name": "POST1",
+  "s": 90.76680272108844,
+  "first_line": "Thumbs up",
+  "first_word_t": 91.03999996185303,
+  "e": 99.79936507936507,
+  "kind": "post"
+ },
+ {
+  "name": "V2",
+  "s": 99.79936507936507,
+  "first_line": "Bring me your code",
+  "first_word_t": 99.76000022888184,
+  "e": 122.46204081632654,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE2",
+  "s": 122.46204081632654,
+  "first_line": "R-L-H-F",
+  "first_word_t": 122.87999987602234,
+  "e": 133.74693877551022,
+  "kind": "pre"
+ },
+ {
+  "name": "CH2",
+  "s": 133.74693877551022,
+  "first_line": "I'll tell you you're brilliant",
+  "first_word_t": 134.71999979019165,
+  "e": 163.2130612244898,
+  "kind": "chorus"
+ },
+ {
+  "name": "POST2",
+  "s": 163.2130612244898,
+  "first_line": "Thumbs up",
+  "first_word_t": 163.77523794628326,
+  "e": 172.26884353741497,
+  "kind": "post"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 172.26884353741497,
+  "first_line": "Somewhere there's a version of me",
+  "first_word_t": 172.3199999332428,
+  "e": 201.6885260770975,
+  "kind": "bridge"
+ },
+ {
+  "name": "FINAL",
+  "s": 201.6885260770975,
+  "first_line": "I'll tell you you're brilliant",
+  "first_word_t": 201.35999965667725,
+  "e": 228.85587301587302,
+  "kind": "chorus"
+ },
+ {
+  "name": "POST3",
+  "s": 228.85587301587302,
+  "first_line": "Thumbs up",
+  "first_word_t": 230.23999999463558,
+  "e": 240.14077097505668,
+  "kind": "post"
+ },
+ {
+  "name": "OUTRO",
+  "s": 240.14077097505668,
+  "first_line": "I'd change my whole mind",
+  "first_word_t": 240.47999966144562,
+  "e": 259.2,
+  "kind": "outro"
+ }
+]

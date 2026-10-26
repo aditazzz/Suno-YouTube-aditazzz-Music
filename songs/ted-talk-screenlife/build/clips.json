@@ -1,0 +1,53 @@
+{
+ "clips": [
+  {
+   "kind": "reel",
+   "label": "setup",
+   "start": 6.61,
+   "end": 26.122,
+   "cover": true,
+   "hook": "9:15 a.m. standup",
+   "file": "TED Talk (Screenlife) - Reel 1 (setup, 20s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "screen share",
+   "start": 22.3,
+   "end": 52.593,
+   "hook": "Ted shares his screen",
+   "file": "TED Talk (Screenlife) - Short 1 (screen share, 30s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "buzzword bingo",
+   "start": 52.593,
+   "end": 72.9,
+   "hook": "Buzzword bingo",
+   "file": "TED Talk (Screenlife) - Reel 2 (buzzword bingo, 20s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "calendar",
+   "start": 72.85,
+   "end": 100.9,
+   "hook": "My calendar gave up",
+   "file": "TED Talk (Screenlife) - Short 2 (calendar, 28s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "bridge",
+   "start": 100.96,
+   "end": 121.51,
+   "hook": "Dana left the meeting",
+   "file": "TED Talk (Screenlife) - Reel 3 (bridge, 21s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "final chorus",
+   "start": 122.41,
+   "end": 158.639,
+   "hook": "Only the host can end it",
+   "file": "TED Talk (Screenlife) - Short 3 (final chorus, 36s).mp4"
+  }
+ ]
+}

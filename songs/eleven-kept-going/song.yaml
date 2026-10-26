@@ -1,0 +1,113 @@
+title: Eleven Kept Going
+audio: Eleven Kept Going.wav
+folder: Eleven Kept Going
+version: ""
+model_credit: Claude Opus 5.5
+ai_music: true
+accent: "ff7a1e"
+status: rendered
+tail: 3.0                             # silent seconds after the song for the end screen (scene TAIL)
+end_screen_at: 305.2
+thumb_time: 166.0                     # the entry burn, the only orange: reads at phone size (the two arcs at 279 were too dark)
+thumb_shift: 0.22                     # booster to the right of the text column
+thumb_shift_y: 0.07                   # keep the grid fins in frame
+thumb_scale: 1.15
+ctx_shift_y: 0.07
+ctx_dark: 0.70
+thumb_option_time: 203.0              # note only (thumbs.py doesn't read it): option 2 = context_card on this frame, shift 0.24, shift_y -0.02, scale 1.15
+cover_hook_time: 166.0                # clean entry-burn frame for the Short cover
+cover_time: 163.0                     # the entry burn: the first orange
+thumb_hook_side: left
+
+youtube:
+  title: "Eleven Kept Going - The First Falcon 9 Landing - Claude Opus 5.5 Music Video"   # names the event so space fans find it (the video itself shows no names or logos)
+  hook: >-
+    December 21, 2015. Cape Canaveral, night. A SpaceX Falcon 9 carried eleven ORBCOMM satellites to orbit, and they
+    kept going. Its first stage turned around in the dark, came back, and landed standing up at Landing Zone 1: the
+    first orbital-class rocket booster ever to come home. A song for whoever sat in a room and did the math. 🚀
+  visuals: >-
+    until the Turn the camera only ever looks up: the floodlit rocket on the pad, nine engines lighting, the climb, the
+    first stage falling away. On "But this one" the screen goes black, and from "turned around" on it only looks down:
+    the booster flipping over the night Earth, grid fins, the long way down to one light on the coast, the entry burn
+    (the only orange in the whole video), four legs unfolding, touchdown at Landing Zone 1. Then the desk where somebody
+    did the math, and the plan on the whiteboard turning into the two real arcs of light
+  question: "Do you remember the first time you saw a Falcon 9 land itself?"
+  pause_line: "⏸ Pause on the desk and the whiteboard: the whole landing is in the notes."
+  note: >-
+    (No logos or names on screen, on purpose. The times on screen follow the December 21, 2015 flight; the desk and the
+    whiteboard are imagined.)
+  hashtags: [SpaceX, Falcon9, elevenkeptgoing, rocketlanding]   # first one shows above the title with #ClaudeAI #AIMusicVideo
+  short_hashtags: [elevenkeptgoing, spacex, falcon9, rocketlanding, newmusic]
+  tags: [eleven kept going, aditazzz, rocket landing, first rocket landing, falcon 9 landing, orbcomm 2, landing zone 1,
+         cape canaveral, reusable rocket, booster landing, december 21 2015, spacex, song about a rocket,
+         song about engineers, cinematic music video, ai music video, made by claude, claude opus 5.5, post rock,
+         female vocals]
+  pinned: >-
+    Every frame is code Claude Opus 5.5 wrote: the pad at night, the flip in the dark, the one orange of the entry burn,
+    and the whiteboard where somebody did the math 🚀 Do you remember the first time you saw a Falcon 9 land itself?
+  short_pinned: |
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    Do you remember the first time you saw a Falcon 9 land itself? 👇
+
+    🔔 New song every week: {SUB_URL}
+  chapters:
+    INTRO: "December 21, 2015. Cape Canaveral"
+    V1: "Eleven small machines"
+    V2: "Then the first stage falls away"
+    TURN: "But this one turned around"
+    V3: "Grid fins catch the air"
+    BUILD: "Entry burn"
+    PEAK: "Eleven kept going, one came home"
+    POST: "Landing Zone One"
+    OUTRO: "Somebody built that"
+    FINAL: "One came home"
+
+instagram:
+  hashtags: [elevenkeptgoing, spacex, falcon9, rocketlanding, newmusic]
+  keywords: [December 21 2015, Cape Canaveral Florida, Falcon 9, first orbital-class booster landing, Landing Zone 1,
+             eleven satellites to orbit, nine engines, first stage separation, grid fins, cold gas thrusters, entry burn,
+             landing burn, four landing legs, reusable rocket, original song, cinematic post-rock, piano and strings,
+             female vocal, music video made by Claude, Eleven Kept Going, aditazzz]
+
+clip_copy:
+  "came home":
+    yt_title: "The first orbital-class booster that ever came home 🚀"
+    hook: "Entry burn. Landing burn. One engine. Four legs. 🚀"
+    ig: "Entry burn. Landing burn. One engine. Four legs unfolding into the dark. December 21, 2015: the first orbital-class booster that ever came back and landed 🚀"
+  "the turn":
+    yt_title: "But this one turned around 🚀"
+    hook: "Once it's spent, it's gone. But this one turned around. 🚀"
+    ig: "You wanted the sky, you left the ladder behind. Eleven kept going. But this one turned around 🚀"
+  "somebody built that":
+    yt_title: "Somebody sat in a room and did the math 🚀"
+    hook: "Somebody sat in a room and did the math. 🚀"
+    ig: "Somebody built that. Somebody sat in a room, looked at the numbers, did the math, and said: it will turn here, burn here, fall this far, light again, and come back. And it came back 🚀 Send this to the engineer in your life."
+  "liftoff":
+    yt_title: "Eleven small machines, waiting in the dark 🚀"
+    hook: "Eleven small machines, waiting in the dark. 🚀"
+    ig: "December 21, 2015. Cape Canaveral. Night. Eleven small machines waiting in the dark, built to leave the ground and never come back. Nine engines came alive 🚀"
+  "landing zone one":
+    yt_title: "No parachute. No ocean. Just concrete. 🚀"
+    hook: "No parachute. No ocean. Just concrete. 🚀"
+    ig: "It stood there in the smoke. Upright. Landing Zone One: no parachute, no ocean, just concrete under its feet. Like it had somewhere to be tomorrow 🚀"
+
+edit_hook: "The first orbital booster that ever came home"
+# "orbital" matters in hooks/titles: New Shepard (suborbital) landed first, Nov 23 2015
+clips:   # hook-first: open on a real image (never black) with on-screen hook text for the first 3 s
+  - {kind: short, label: came home, start: 159.3, end: 199.0, hook: "The first orbital booster that ever came home"}
+  - {kind: reel, label: the turn, start: 106.5, end: 135.6, hook: "Once it's spent, it's gone"}
+  - {kind: reel, label: somebody built that, start: 253.85, end: 277.6, hook: "Somebody sat in a room and did the math"}
+  - {kind: short, label: liftoff, start: 47.45, end: 74.95, hook: "Eleven small machines, waiting in the dark"}
+  - {kind: short, label: landing zone one, start: 222.5, end: 253.9, hook: "No parachute. No ocean. Just concrete."}
+
+# under-3-min edit (178.96 s): every join on a downbeat where the vocal is silent (the verses are sung legato, so the
+# cuts sit between lines): after "Night" into V1's pickup bar; "For a few seconds" into "You wanted the sky"; two bars
+# out of the band after the Turn; after "One came home" (touchdown) into the last bar of the post-landing section
+# before "Somebody built that"; four bars of the final instrumental.
+edit_segments: [[7.0, 17.48], [46.11, 71.19], [105.23, 124.9], [128.48, 199.3], [252.22, 294.55], [301.67, 312.25]]
+edit_xfade: {4: 0.35}                 # join index -> audio crossfade (s): the full band into the bare piano
+
+# context thumbnail / covers: what the video is about
+thumb_lines: [ELEVEN KEPT GOING., ONE CAME HOME.]
+thumb_sub: "a song about the first Falcon 9 landing"   # names the event for space fans (not "first booster ever": New Shepard landed first, Nov 23 2015)

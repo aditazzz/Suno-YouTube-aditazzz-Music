@@ -1,0 +1,74 @@
+{
+ "clips": [
+  {
+   "kind": "short",
+   "label": "opening",
+   "start": 0.0,
+   "end": 52.2,
+   "hook": "Shipped at 4:59 on a Friday. Then the drive home.",
+   "hook_y": 0.14,
+   "cover_t": 8.6,
+   "cover_lines": [
+    "4:59 PM.",
+    "SHIP IT."
+   ],
+   "file": "Deployed on a Friday - Short 1 (opening, 52s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "first chorus",
+   "start": 40.0,
+   "end": 92.0,
+   "hook": "The tide came in over the road.",
+   "hook_y": 0.14,
+   "cover_t": 53.0,
+   "cover_lines": [
+    "TIDE",
+    "COMING IN."
+   ],
+   "file": "Deployed on a Friday - Short 2 (first chorus, 52s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "night",
+   "start": 64.0,
+   "end": 118.0,
+   "hook": "Slack lit up like a boardwalk at night.",
+   "hook_y": 0.14,
+   "cover_t": 81.2,
+   "cover_lines": [
+    "VP IS",
+    "TYPING\u2026"
+   ],
+   "file": "Deployed on a Friday - Short 3 (night, 54s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "bridge",
+   "start": 118.0,
+   "end": 150.3,
+   "hook": "Low tide shows you everything.",
+   "hook_y": 0.14,
+   "cover_t": 123.5,
+   "cover_lines": [
+    "LOW TIDE SHOWS",
+    "YOU EVERYTHING."
+   ],
+   "file": "Deployed on a Friday - Short 4 (bridge, 32s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "ending",
+   "start": 150.3,
+   "end": 198.44,
+   "hook": "Prod's still standing. See you next Friday.",
+   "hook_y": 0.14,
+   "cover_t": 157.6,
+   "cover_lines": [
+    "PROD'S STILL",
+    "STANDING."
+   ],
+   "file": "Deployed on a Friday - Short 5 (ending, 48s).mp4"
+  }
+ ]
+}

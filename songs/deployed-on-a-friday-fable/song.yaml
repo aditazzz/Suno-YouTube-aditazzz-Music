@@ -1,0 +1,133 @@
+title: Deployed on a Friday
+audio: Deployed on a Friday.wav          # in Original Music
+folder: Deployed on a Friday (Fable)     # output folder inside Original Music (the Opus version lives in "Deployed on a Friday")
+model_credit: Claude Fable 5.1           # the model that made THIS video
+ai_music: true                           # vocals/music AI-generated -> tick YouTube "altered or synthetic content"
+tail: 5.0                                # silent seconds after the song for the end screen
+cover_time: 53.0                         # vertical cover / hero clips: the flooded highway, the ROLLBACK ring on the windshield, the dashboard red
+cover_hook_time: 53.0
+thumb_time: 53.0                         # 16:9 hero frame for the thumbnail
+thumb_shift: 0.18
+thumb_scale: 1.12
+thumb_shift_y: 0.04
+thumb_hooks: ["ANIMATED THIS", "CODED THIS"]
+thumb_label: "CLAUDE FABLE 5.1  ·  DEADLETTER"
+thumb_caption: "The drive home after shipping at 4:59."
+accent: "ff5d4f"
+hook_y: 0.14                             # Shorts hook card in the sky, above the horizon and the signs
+end_screen_at: 191.9
+status: rendered
+concept: >-
+  THE DRIVE: the whole video is the drive home after shipping at 4:59, from the driver's seat of a car on a coast
+  highway. The dashboard carries the clock, the gauges and the phone in its mount; the road carries the lyrics as
+  highway signs (NO TICKET, NO TEST, NO SECOND PAIR OF EYES; MERGE → MAIN). Every chorus the tide comes in over the
+  road and the car floats, water rising inside it, a ROLLBACK life ring thrown through the windshield, the gauges
+  going sunset red. Verse two is night on a pier of neon Slack channels, the bank sign flipping to NULL, a queue of
+  RETRY cars, dead letters stacked on the shoulder, VP IS TYPING on a billboard. The bridge is the car parked at an
+  overlook at low tide, the seabed full of shortcuts, one bar on the phone. Verse three is the U-turn and the fix:
+  the pipeline as the road's center line, the road dipping and coming back for the graph, green on green. The
+  finale is dawn, the tide going out, the PROD lighthouse still standing, MONDAY: POSTMORTEM. The outro is the clock
+  reading 4:59 again at the office gate, the PR back on the phone: a loop.
+
+aliases:
+  "fifty-nine": [fifty, nine, fiftynine]
+
+youtube:
+  title_hook: "The Drive"
+  hook: >-
+    4:59 on a Friday. One little change, no ticket, no test, no second pair of eyes, a big green button that says
+    SHIP IT, and then the drive home down the coast highway 🚗 Every lyric is a road sign. Every chorus the tide comes
+    in over the road. A surf-pop song about the deploy you swore you'd never do again (you said that last Friday, too).
+  visuals: >-
+    the whole video is seen from the driver's seat, the lyrics are highway signs (NO TICKET, NO TEST, NO SECOND PAIR
+    OF EYES), the tide of production traffic comes in over the road and the car floats with the water rising over the
+    dashboard, a ROLLBACK life ring comes through the windshield, the gauges go sunset red, night falls on a pier of
+    neon Slack channels, the bank sign flips to NULL, a queue of RETRY cars backs up, dead letters stack on the
+    shoulder, VP IS TYPING on a billboard, low tide at the overlook shows every shortcut in the seabed, the fix goes
+    out from the parking lot on one bar of signal, the pipeline crawls along the center line, the road dips for the
+    graph and comes back, dawn finds the PROD lighthouse still standing, and the clock reads 4:59 again
+  question: "What's the latest on a Friday you've ever deployed?"
+  note: >-
+    (This is the Claude Fable 5.1 version. Claude Opus 5.5 animated its own take on the same song, with a different
+    concept and the same lyrics: {opus_url|on my channel}. Watch both and tell me which one wins.)
+  hashtags: [deployedonafriday, devops, programmerhumor]
+  short_hashtags: [devops, programmerhumor, techmusic, deployfriday, sre]
+  tags: [deployed on a friday, friday deploy, deploy on friday song, never deploy on friday, devops song, devops humor,
+         sre humor, rollback, postmortem, on call, pagerduty, production incident, programmer music, developer humor,
+         software engineering humor, tech music, ai music video, music video made by claude, surf pop, dead letter queue]
+  pinned: >-
+    Every frame is code Claude Fable 5.1 wrote: the road signs really say NO TICKET and NO TEST, the tide really comes
+    in over the highway, and the clock really reads 4:59 again at the end 🚗 My favorite hidden joke is the pipeline
+    crawling along the center line of the road. What's the latest on a Friday you've ever deployed? 👇
+  short_pinned: |
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    What's the latest on a Friday you've ever deployed? 👇
+
+    🔔 New song every week: {SUB_URL}
+  chapters:
+    INTRO: "4:59 PM. SHIP IT."
+    V1: "The drive: one little change"
+    PRE1: "Buzz, buzz, don't look"
+    CH1: "The tide comes in over the road"
+    V2: "Night on the Slack boardwalk"
+    PRE2: "Buzz, buzz, I'm cooked"
+    CH2: "The second flood"
+    BRIDGE: "Low tide at the overlook"
+    V3: "The U-turn and the fix"
+    FINAL: "Dawn: tide going out"
+    OUTRO: "4:59 again"
+  extra_chapters:
+    - {line: "Null in the column", label: "The bank sign says NULL"}
+    - {line: "Retry, retry", label: "A queue of RETRY cars"}
+    - {line: "VP typing, VP stopped", label: "VP is typing…"}
+    - {line: "Green on green", label: "Green on green"}
+    - {line: "Monday's a postmortem", label: "Monday's a postmortem (blameless, nope)"}
+
+links:
+  opus_url: https://youtu.be/8DQ2izFZiO0   # the Claude Opus 5.5 version of the same song
+
+instagram:
+  hashtags: [devops, programmerhumor, techmusic, aimusic, softwareengineering]
+  keywords: [deployed on a friday, friday deploy, never deploy on friday, devops, sre, on call, rollback, postmortem,
+             production incident, programmer humor, developer humor, software engineering, tech music, surf pop,
+             ai music video, made by claude, claude ai, dead letter queue, pagerduty]
+
+clips:
+  - {kind: short, label: opening, start: 0.0, end: 52.2, hook: "Shipped at 4:59 on a Friday. Then the drive home.", hook_y: 0.14,
+     cover_t: 8.6, cover_lines: ["4:59 PM.", "SHIP IT."]}
+  - {kind: short, label: first chorus, start: 40.0, end: 92.0, hook: "The tide came in over the road.", hook_y: 0.14,
+     cover_t: 53.0, cover_lines: ["TIDE", "COMING IN."]}
+  - {kind: short, label: night, start: 64.0, end: 118.0, hook: "Slack lit up like a boardwalk at night.", hook_y: 0.14,
+     cover_t: 81.2, cover_lines: ["VP IS", "TYPING…"]}
+  - {kind: short, label: bridge, start: 118.0, end: 150.3, hook: "Low tide shows you everything.", hook_y: 0.14,
+     cover_t: 123.5, cover_lines: ["LOW TIDE SHOWS", "YOU EVERYTHING."]}
+  - {kind: short, label: ending, start: 150.3, end: 198.44, hook: "Prod's still standing. See you next Friday.", hook_y: 0.14,
+     cover_t: 157.6, cover_lines: ["PROD'S STILL", "STANDING."]}
+
+clip_copy:
+  "opening":
+    yt_title: "Shipped at 4:59 on a Friday, then the drive home 🚗"
+    hook: "4:59 PM. One little change. SHIP IT. Then the drive home."
+    ig: "POV: it's 4:59 on a Friday, the button says SHIP IT, and every road sign on the drive home is a warning you ignored 🚗 NO TICKET. NO TEST. NO SECOND PAIR OF EYES. Send this to the coworker who merges at 4:59."
+  "first chorus":
+    yt_title: "I deployed on a Friday and the tide came in over the road 🌊"
+    hook: "I deployed on a Friday. The tide came in over the road. 🌊"
+    ig: "I deployed on a Friday, tide coming in 🌊 Prod going under, the car is floating, the dashboard is red as the sunset. Rollback, rollback, throw me a rope. Tag the person who said \"never again\" last Friday."
+  "night":
+    yt_title: "Slack lighting up like a boardwalk at night 🌃"
+    hook: "Slack lit up like a boardwalk. The VP is typing. 🌃"
+    ig: "Slack lighting up like a boardwalk at night 🌃 The money column is NULL, the queue is backing up, dead letters are stacking on the shoulder, and the VP is typing. Send this to your on-call."
+  "bridge":
+    yt_title: "Low tide shows you everything (fixing prod from the parking lot) 📶"
+    hook: "Low tide shows you everything. Fix it from the parking lot. 📶"
+    ig: "Low tide shows you everything: every shortcut, every string 📶 Then you fix it from the parking lot on one bar of signal. Revert the revert, cherry-pick, push. Green on green."
+  "ending":
+    yt_title: "Prod's still standing. See you next Friday 🗼"
+    hook: "Prod's still standing. Monday's a postmortem. See you next Friday. 🗼"
+    ig: "Tide going out, prod's still standing 🗼 Monday's a postmortem, blameless (nope). Root cause: me. The clock says 4:59 again. See you next Friday, never again."
+
+edit_hook: "I deployed on a Friday. Never again."
+# Under-3:00 Instagram edit (178.4 s): keep the whole intro; drop the drive to the overlook after chorus 2 and the
+# parked seconds at the gate, so the Instagram follow card at the end survives.
+edit_segments: [[0.0, 111.97], [119.49, 174.54], [187.08, 198.43]]

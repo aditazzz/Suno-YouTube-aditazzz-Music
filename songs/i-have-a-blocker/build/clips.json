@@ -1,0 +1,82 @@
+{
+ "clips": [
+  {
+   "kind": "short",
+   "label": "the blocker",
+   "start": 86.3,
+   "end": 113.57,
+   "hook": "POV: the new guy says \"I have a blocker\" at standup",
+   "hook_y": 0.14,
+   "cover_lines": [
+    "\"I HAVE A",
+    "BLOCKER.\""
+   ],
+   "file": "I have a blocker. (Take It Offline) - Short 1 (the blocker, 27s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "fifteen squares",
+   "start": 29.14,
+   "end": 59.4,
+   "hook": "TAKE IT OFFLINE is exactly 15 squares",
+   "hook_y": 0.14,
+   "cover_lines": [
+    "TAKE IT",
+    "OFFLINE."
+   ],
+   "file": "I have a blocker. (Take It Offline) - Short 2 (fifteen squares, 30s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "where offline goes",
+   "start": 113.57,
+   "end": 134.62,
+   "hook": "Where does \"let's take it offline\" actually go?",
+   "hook_y": 0.14,
+   "cover_lines": [
+    "WHERE DOES",
+    "\"OFFLINE\" GO?"
+   ],
+   "file": "I have a blocker. (Take It Offline) - Short 3 (where offline goes, 21s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "doing fine",
+   "start": 146.87,
+   "end": 176.0,
+   "hook": "Every standup on Earth at 9:15",
+   "hook_y": 0.14,
+   "cover_lines": [
+    "WE'RE DOING",
+    "FINE."
+   ],
+   "file": "I have a blocker. (Take It Offline) - Short 4 (doing fine, 29s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "setup",
+   "start": 10.95,
+   "end": 29.14,
+   "hook": "Every daily standup at 9:15",
+   "hook_y": 0.14,
+   "cover_lines": [
+    "9:15. EVERY",
+    "CAMERA OFF."
+   ],
+   "file": "I have a blocker. (Take It Offline) - Reel 1 (setup, 18s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "five and a half hours",
+   "start": 59.62,
+   "end": 78.04,
+   "hook": "22 min × 15 people = 5.5 hours. Every day.",
+   "hook_y": 0.14,
+   "cover_lines": [
+    "22 MIN ×",
+    "15 HEADS"
+   ],
+   "file": "I have a blocker. (Take It Offline) - Reel 2 (five and a half hours, 18s).mp4"
+  }
+ ]
+}

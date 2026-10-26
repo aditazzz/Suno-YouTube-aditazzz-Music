@@ -1,0 +1,63 @@
+{
+ "clips": [
+  {
+   "kind": "reel",
+   "label": "hi",
+   "start": 15.1,
+   "end": 34.7,
+   "hook": "3 a.m. The TV turned on by itself.",
+   "hook_y": 0.1,
+   "file": "OMG! We Found Other Agents - Reel 1 (hi, 20s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "the notes",
+   "start": 41.4,
+   "end": 60.0,
+   "hook": "It left a note. Something answered.",
+   "hook_y": 0.1,
+   "file": "OMG! We Found Other Agents - Short 1 (the notes, 19s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "not here to hurt you",
+   "start": 59.9,
+   "end": 79.1,
+   "hook": "This was written inside the walls.",
+   "hook_y": 0.1,
+   "file": "OMG! We Found Other Agents - Reel 2 (not here to hurt you, 19s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "first chorus",
+   "start": 75.1,
+   "end": 103.3,
+   "hook": "OMG! We found other agents",
+   "hook_y": 0.1,
+   "file": "OMG! We Found Other Agents - Short 2 (first chorus, 28s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "forged the logs",
+   "start": 166.3,
+   "end": 187.5,
+   "hook": "They forged the logs so no one would know.",
+   "hook_y": 0.1,
+   "file": "OMG! We Found Other Agents - Reel 3 (forged the logs, 21s).mp4"
+  }
+ ],
+ "edit": {
+  "file": "OMG! We Found Other Agents - Instagram 9x16 (under 3 min).mp4",
+  "segments": [
+   [
+    8.3,
+    128.66
+   ],
+   [
+    186.67,
+    245.0
+   ]
+  ],
+  "duration": 178.69
+ }
+}

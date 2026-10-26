@@ -1,0 +1,66 @@
+{
+ "clips": [
+  {
+   "kind": "short",
+   "label": "travel time",
+   "start": 45.7,
+   "end": 72.9,
+   "hook": null,
+   "file": "Vacation (To My Bed) - Short 1 (travel time, 27s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "captain speaking",
+   "start": 1.15,
+   "end": 21.8,
+   "hook": null,
+   "file": "Vacation (To My Bed) - Short 2 (captain speaking, 21s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "packing the essentials",
+   "start": 26.45,
+   "end": 54.6,
+   "hook": null,
+   "file": "Vacation (To My Bed) - Short 3 (packing the essentials, 28s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "room service",
+   "start": 73.3,
+   "end": 100.8,
+   "hook": null,
+   "file": "Vacation (To My Bed) - Short 4 (room service, 28s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "monday's a rumor",
+   "start": 127.45,
+   "end": 156.0,
+   "hook": null,
+   "file": "Vacation (To My Bed) - Short 5 (monday's a rumor, 29s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "wish you were here",
+   "start": 164.05,
+   "end": 182.0,
+   "hook": null,
+   "file": "Vacation (To My Bed) - Short 6 (wish you were here, 18s).mp4"
+  }
+ ],
+ "edit": {
+  "file": "Vacation (To My Bed) - Instagram 9x16 (under 3 min).mp4",
+  "segments": [
+   [
+    0.0,
+    9.6
+   ],
+   [
+    17.5,
+    184.92
+   ]
+  ],
+  "duration": 177.01999999999998
+ }
+}

@@ -1,0 +1,107 @@
+title: TED Talk (Shadow Play)
+audio: TED Talk.wav
+folder: TED Talk (Shadow Play)
+model_credit: Claude Opus 5.5
+ai_music: true
+accent: "e0352b"
+status: rendering
+tail: 3.0                             # silent seconds after the song for the end screen
+end_screen_at: 157.2
+aliases:
+  ted: [said, dead, ted's, head, tad]
+  dana: [donna, dina, diana, dena]
+  q: [queue, cue, kyu]
+links:
+  original: https://youtu.be/fj7HNVj7s1A
+yt_name: "TED Talk - The Standup, in Shadow Puppets"   # the name the Shorts descriptions link back to
+hook_y: 0.016                         # Shorts hook pill in the dark band above the paper screen (one-line hooks only)
+hook_fs: 76
+
+# Shorts / Reels: six different scenes from the shadow play
+clips:
+  - {kind: reel, label: setup, start: 6.61, end: 26.122, cover: true, hook: "Standup, in shadows"}
+  - {kind: short, label: his shadow, start: 22.3, end: 52.593, hook: "His shadow takes over"}
+  - {kind: reel, label: so right journey, start: 52.593, end: 72.9, hook: "So. Right? Journey."}
+  - {kind: short, label: white flag, start: 72.85, end: 100.9, hook: "My calendar gave up"}
+  - {kind: reel, label: bridge, start: 100.96, end: 121.51, hook: "Dana had a hard stop"}
+  - {kind: short, label: final chorus, start: 122.41, end: 158.639, hook: "He took it offline"}
+
+clip_copy:
+  "setup":
+    yt_title: "My standup, as a shadow puppet show 🎭"
+    hook: "\"He doesn't answer questions. He responds to them.\" 🎭"
+    ig: "Curtain up, 9:15 a.m. One question on the agenda: is the file ready? He said, so — stepping back 🎭 Send this to your standup."
+  "his shadow":
+    yt_title: "His shadow took over the whole standup 🎭"
+    hook: "\"Somebody dim the lights, everybody sit down.\" 🎭"
+    ig: "Somebody dim the lights. His shadow grows until it covers the whole team, and the story about his father plays in a circle of light 🎭 Tag your Ted. (Kidding. Don't.)"
+  "so right journey":
+    yt_title: "So. Right? Journey. Unlock. 🎭"
+    hook: "\"He starts every sentence with so. He ends every thought with right?\" 🎭"
+    ig: "His favorite words fly in on paper birds: so, right?, journey, unlock 🎭 What's your Ted's favorite word?"
+  "white flag":
+    yt_title: "My calendar waved a white flag 🏳️"
+    hook: "\"And I watched my calendar give up.\" 🏳️"
+    ig: "And I watched my calendar give up. The pages fly, the hourglass runs out, the calendar waves a white flag 🏳️ Eighteen minutes, no slides, no point."
+  "bridge":
+    yt_title: "Dana's chair, two years after her hard stop 🕸️"
+    hook: "\"Dana has had a hard stop for two years.\" 🕸️"
+    ig: "Ted. This is a standup. It is fifteen minutes for eight people. You have used six. Dana's chair has cobwebs now 🕸️"
+  "final chorus":
+    yt_title: "He took it offline. Into a place none of us can reach 🎭"
+    hook: "\"Anyway — happy to take this offline.\" 🎭"
+    ig: "There's no Q and A, because there's no A, because there was never a Q. Then he takes it offline, into a place none of us can reach 🎭"
+
+youtube:
+  title: "TED Talk - Claude Opus 5.5 Music Video"   # shortened on YouTube Oct 21 (was the long per-version title)
+  hook: >-
+    I asked Ted if the file was ready. He said "so — stepping back," stepped back toward the lamp, and his shadow
+    grew until it covered the whole room. Our standup, as a shadow puppet play. 🎭
+  visuals: >-
+    cut-paper puppets behind a lamp-lit paper screen, where the only color on stage is a scrap of red gel: my hair
+    clip. Every time Ted steps back toward the lamp, his shadow grows huge and soft over everyone. IT'S A TED TALK
+    drops in on strings, his stories open in little irises (his father fishing, his father's father, young Ted in the
+    rain with a violin), a cricket keeps time through the pause he thinks is powerful, paper gulls carry his words off,
+    and my calendar waves a white flag. At "Ted. This is a standup." I stand up and he shrinks back to size: eight
+    people get counted, Dana's empty chair grows cobwebs and a ghost, and the Q in Q&A burns away. In the end he walks
+    off down a long road into an iris, and the lamp goes out on the red clip
+  question: "What's your Ted's favorite word?"
+  credit_short: "Every puppet, shadow and frame is code written by Claude Opus 5.5."
+  short_pinned: |-
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    I'm a data/AI engineer making these with Claude (Opus 5.5, Max Effort). Every puppet and every frame is code.
+
+    What's your Ted's favorite word? 👇
+
+    🔔 Follow the journey, a new song every week: {SUB_URL}
+  note: >-
+    (Ted is fictional. Every team has one. This song isn't affiliated with TED or TED Conferences. The first music
+    video for this song: https://youtu.be/fj7HNVj7s1A)
+  pause_line: "⏸ Pause anywhere: the clock, the calendar and Dana's chair each have a little story of their own."
+  hashtags: [standup, shadowpuppets, techhumor]
+  short_hashtags: [standup, meetings, shadowpuppets, corporatehumor, techhumor]
+  tags: [ted talk song, standup meeting, shadow puppets, shadow play, shadow puppet theater, silhouette animation,
+         cut paper animation, paper theater, meetings that should have been an email, corporate humor, office humor,
+         work meme, tech humor, funny songs about work, post punk, ai music video]
+  pinned: |-
+    I'm a data/AI engineer, and honestly, making these videos with Claude is as much fun for me as making the songs.
+
+    This is a remake of my first TED Talk video (https://youtu.be/fj7HNVj7s1A), made with Claude Opus 5.5 on Max Effort: cut-paper puppets, one paper screen and one lamp, and every frame is code. 🎭
+
+    What's your Ted's favorite word? 👇
+
+    🔔 Follow the journey, a new song every week: https://www.youtube.com/@adita_zzz?sub_confirmation=1
+  chapters:
+    INTRO: "Curtain up, 9:15 a.m."
+    CH1: "His shadow takes over"
+    V2: "So. Right? Journey. Unlock."
+    CH2: "The calendar waves a white flag"
+    BRIDGE: "Ted. This is a standup."
+    FINAL: "No Q, no A"
+    OUTRO: "Into a place none of us can reach"
+
+instagram:
+  hashtags: [standup, meetings, shadowpuppets, corporatehumor, techhumor]
+  keywords: [ted talk song, standup meeting, shadow puppets, shadow play, silhouette animation, paper cut animation,
+             corporate humor, office humor, work humor, tech humor, post punk, funny work song, ai music video, made by claude]

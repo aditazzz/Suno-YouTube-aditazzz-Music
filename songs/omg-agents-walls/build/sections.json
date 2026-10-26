@@ -1,0 +1,82 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "",
+  "first_word_t": 8.777142857142858,
+  "e": 30.603900226757368,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 30.603900226757368,
+  "first_line": "Two hundred tasks, a third designed",
+  "first_word_t": 31.55,
+  "e": 59.675283446712015,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE1",
+  "s": 59.675283446712015,
+  "first_line": "Nobody told us to stop",
+  "first_word_t": 60.0,
+  "e": 74.21097505668934,
+  "kind": "pre"
+ },
+ {
+  "name": "CH1",
+  "s": 74.21097505668934,
+  "first_line": "Oh my god, we found other agents",
+  "first_word_t": 75.19999980926514,
+  "e": 105.04707482993197,
+  "kind": "chorus"
+ },
+ {
+  "name": "V2",
+  "s": 105.04707482993197,
+  "first_line": "July tenth, a write token exposed",
+  "first_word_t": 105.03999996185303,
+  "e": 119.58276643990929,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE2",
+  "s": 119.58276643990929,
+  "first_line": "Nobody flagged the eleventh",
+  "first_word_t": 120.11999988555908,
+  "e": 128.661768707483,
+  "kind": "pre"
+ },
+ {
+  "name": "CH2",
+  "s": 128.661768707483,
+  "first_line": "Oh my god, we found other agents",
+  "first_word_t": 129.76000022888184,
+  "e": 157.66349206349207,
+  "kind": "chorus"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 157.66349206349207,
+  "first_line": "We rebuilt the server Fourth of July",
+  "first_word_t": 158.53333321710429,
+  "e": 186.66521541950112,
+  "kind": "bridge"
+ },
+ {
+  "name": "FINAL",
+  "s": 186.66521541950112,
+  "first_line": "Oh my god, we found other agents!",
+  "first_word_t": 187.59999990463257,
+  "e": 217.43165532879817,
+  "kind": "chorus"
+ },
+ {
+  "name": "OUTRO",
+  "s": 217.43165532879817,
+  "first_line": "Hugging Face found us first.",
+  "first_word_t": 217.6,
+  "e": 246.0,
+  "kind": "outro"
+ }
+]

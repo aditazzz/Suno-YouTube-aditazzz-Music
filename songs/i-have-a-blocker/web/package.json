@@ -1,0 +1,13 @@
+{
+  "name": "i-have-a-blocker",
+  "private": true,
+  "description": "I have a blocker. (Take It Offline) by aditazzz: the music video, a Three.js film rendered frame by frame in headless Chromium",
+  "type": "module",
+  "dependencies": {
+    "three": "0.169.0"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,93 @@
+title: Rage Against the Machine Learning
+audio: Rage Against the Machine Learning.wav
+folder: Rage Against the Machine Learning
+model_credit: Claude Opus 5.5
+ai_music: true
+cover_time: 126.0                     # final chorus, wide: the plastered wall, red light, fists up
+thumb_time: 126.0
+end_screen_at: 158.3                  # "Unsubscribe from them. Subscribe here instead." + room for YouTube's end-screen elements
+status: rendered
+
+youtube:
+  short_pinned: |
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    What's the most embarrassing thing of yours that's probably in a training set? 👇
+
+    🔔 New song every week: {SUB_URL}
+  hook: >-
+    They scraped my blog from 2009. My terrible poems. My cat's full name. I never clicked accept, and the
+    model kept learning anyway. A 90s rap-rock protest anthem for everyone whose whole personality is now a vector. ✊
+  visuals: >-
+    a night wall gets wheat-pasted with photocopied evidence of a life scraped into a training set (the 2009 blog
+    stamped SCRAPED, a router poem marked "awful", the cat's full name circled, Clause 62 in size-two font), then the
+    boardroom memo that followed (efficiency gains, 10,000 tally marks, a bunker for sale, an invoice stamped UNPAID).
+    Every hook is a crowd chant slammed onto torn paper, the breakdown chart lets LOSS fall while RENT punches through
+    the poster, and OPT OUT gets spray-painted across the whole wall
+  question: "What's the most embarrassing thing of yours that's probably in a training set?"
+  note: >-
+    (Not affiliated with any AI company. The reject button is still size two.)
+  hashtags: [machinelearning, aimusic, raprock]
+  short_hashtags: [machinelearning, ClaudeAI, aimusic, raprock, techhumor]
+  tags: [rage against the machine learning, rage against the machine learning song, ai training data, opt out of ai training,
+         ai data scraping, my data trained ai, ai protest song, machine learning song, gradient descent, loss function,
+         ai layoffs, ai first, rap rock, funk metal, songs about ai, funny songs about ai, tech humor, programmer humor,
+         ai music video, claude code, claude animated this, made by claude]
+  pinned: >-
+    Every frame is code Claude Opus 5.5 wrote, from the cookie banner with no reject button to the rent bar that punches
+    straight through the chart ✊ What's the most embarrassing thing of yours that's probably in a training set?
+  chapters:
+    INTRO: "Opt out!"
+    V1: "They scraped my blog"
+    CH1: "Alternative metal, rap metal, funk metal learning"
+    V2: "Boardroom bragging"
+    CH2: "Fine-tuned, fired"
+    BREAKDOWN: "Loss goes down, rent goes up"
+    FINAL: "I said no, but the model kept learning"
+    OUTRO: "Unsubscribe!"
+  extra_chapters:
+    - {line: "Gradient descent", label: "Gradient descent on me"}
+
+instagram:
+  hashtags: [machinelearning, aimusic, raprock, techhumor, optout]
+  keywords: [rage against the machine learning, ai training data, opt out of ai training, data scraping, machine learning,
+             gradient descent, ai protest song, ai layoffs, rap rock, funk metal, tech humor, funny songs about ai,
+             ai music video, made by claude]
+
+clip_copy:
+  "the evidence":
+    yt_title: "They scraped my blog from 2009 📎"
+    hook: "\"My terrible poems in your weights now. Fine.\""
+    ig: "They scraped my blog from 2009. My terrible poems. My cat's full name. I never clicked accept 📎 Send this to the friend whose LiveJournal is definitely in a training set."
+  "first chorus":
+    yt_title: "I said no, but the model kept learning ✊"
+    hook: "\"Fine-tuned, fired, and the GPUs burning.\" ✊"
+    ig: "Alternative metal, rap metal, funk metal learning. I said no, but the model kept learning ✊ Tag the person who still hasn't found the opt-out button."
+  "the memo":
+    yt_title: "\"AI-first,\" says the guy who can't code 📈"
+    hook: "\"Who's buying your product when nobody gets paid?\""
+    ig: "Boardroom bragging 'bout efficiency gains. Who's buying your product when nobody gets paid? 📈 Send this to whoever just sat through the AI-first all-hands."
+  "loss goes down":
+    yt_title: "Loss goes down. Rent goes up. 📉📈"
+    hook: "\"Gradient descent on me!\""
+    ig: "Loss goes down. Rent goes up. Gradient descent on me 📉📈 Tag someone whose rent went up faster than the model improved."
+  "the finale":
+    yt_title: "I said no. It kept LEARNING. 🎨"
+    hook: "\"I said no, but the model kept... LEARNING!\""
+    ig: "I said no, but the model kept... LEARNING! Then we spray-painted the whole wall 🎨 Unsubscribe from them. Follow for a new song every week."
+
+accent: "e3242f"
+edit_hook: "When you said no but the model kept learning"
+clips:   # hook-first: open on the shouted line with on-screen hook text for the first 3 s
+  - {kind: reel, label: the evidence, start: 30.25, end: 49.85, hook: "POV: your 2009 blog is in the training data", hook_y: 0.10}
+  - {kind: short, label: first chorus, start: 49.82, end: 69.55, hook: "When you said no but the model kept learning", hook_y: 0.66}
+  - {kind: reel, label: the memo, start: 69.55, end: 89.05, hook: "Every AI-first all-hands, in one song", hook_y: 0.10}
+  - {kind: short, label: loss goes down, start: 101.40, end: 121.00, hook: "The model's loss goes down. Your rent goes up.", hook_y: 0.30}
+  - {kind: reel, label: the finale, start: 128.30, end: 156.40, hook: "I said no. It kept learning.", hook_y: 0.66}
+
+# context thumbnail / covers: what the video is about
+thumb_lines: [I SAID NO., IT KEPT LEARNING.]
+thumb_sub: "a rap-rock protest song about AI training on your data"
+ctx_shift: 0.30
+cover_shift_y: 0.10
+edit_segments: [[0.0, 166.9]]      # the whole song already fits under 3:00; this adds the hook to the full-song Reel

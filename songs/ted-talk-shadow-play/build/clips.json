@@ -1,0 +1,53 @@
+{
+ "clips": [
+  {
+   "kind": "reel",
+   "label": "setup",
+   "start": 6.61,
+   "end": 26.122,
+   "cover": true,
+   "hook": "Standup, in shadows",
+   "file": "TED Talk (Shadow Play) - Reel 1 (setup, 20s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "his shadow",
+   "start": 22.3,
+   "end": 52.593,
+   "hook": "His shadow takes over",
+   "file": "TED Talk (Shadow Play) - Short 1 (his shadow, 30s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "so right journey",
+   "start": 52.593,
+   "end": 72.9,
+   "hook": "So. Right? Journey.",
+   "file": "TED Talk (Shadow Play) - Reel 2 (so right journey, 20s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "white flag",
+   "start": 72.85,
+   "end": 100.9,
+   "hook": "My calendar gave up",
+   "file": "TED Talk (Shadow Play) - Short 2 (white flag, 28s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "bridge",
+   "start": 100.96,
+   "end": 121.51,
+   "hook": "Dana had a hard stop",
+   "file": "TED Talk (Shadow Play) - Reel 3 (bridge, 21s).mp4"
+  },
+  {
+   "kind": "short",
+   "label": "final chorus",
+   "start": 122.41,
+   "end": 158.639,
+   "hook": "He took it offline",
+   "file": "TED Talk (Shadow Play) - Short 3 (final chorus, 36s).mp4"
+  }
+ ]
+}
