@@ -31,13 +31,19 @@ youtube:
     when they're left waiting, all rendered frame by frame and synced to the vocal. The robot is from the same family as the robots in Ragnarök or
     Reach for Mars, and the man with the rocket makes a cameo on the tower.
   credit_short: "Every frame is code I made with Claude Opus 5.5."
+  news: >-
+    On Oct 25, 2026, Elon Musk announced that Grok Bot can now call a person or a business for you: it makes the
+    request on your behalf, takes notes on the answer and sends you a summary of the conversation. The other end of the
+    line is going robot too: Starlink's support line already runs on Grok Voice, which xAI says handles about 20,000
+    calls a day and resolves about 70% of them without a human. We built machines to make us wait. Now our machines
+    wait on their machines.
   question: "Millennials, be honest: when did you last make a phone call on purpose? 📞"
   note: >-
-    (The robot is our own design. Every bill, brand and headline on screen is invented, and the onion rings are
-    unbranded.)
+    (The robot is our own design, and this video isn't affiliated with xAI or Starlink. Every bill, brand and headline
+    on screen is invented, and the onion rings are unbranded.)
   hashtags: [PleaseHold, Millennials, TechHumor]
   short_hashtags: [pleasehold, millennials, onhold, techhumor, aiagents]
-  tags: [please hold, i'd rather chew glass than call, on hold, hold music, customer service, call center, millennials,
+  tags: [please hold, grok, grok bot, i'd rather chew glass than call, on hold, hold music, customer service, call center, millennials,
          millennial humor, phone anxiety, millennials hate phone calls, ai agent, ai assistant, robot on hold, internet bill,
          your call is important to us, press 1, gen z, tech humor, funny song, aditazzz, claude animated this, ai music video,
          3d music video, music video made with code, claude opus 5.5]

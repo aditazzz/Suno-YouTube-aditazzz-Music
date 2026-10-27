@@ -57,17 +57,24 @@ def build(song_dir):
     chs = chapters(song, secs, lines)
     handle = CFG.get("channel_handle", "@adita_zzz"); sub_url = f"https://www.youtube.com/{handle}?sub_confirmation=1"
     pinned = fill_links(yt.get("pinned", "").strip(), song.get("links", {}))
-    if "sub_confirmation" not in pinned: pinned += f"\n\n🔔 New song every week. Subscribe so you don't miss the next one: {sub_url}"
+    if "sub_confirmation" not in pinned: pinned += f"\n\n🔔 Subscribe so you don't miss the next one: {sub_url}"
     claude_made = not yt.get("credit")
     hs = list(yt.get("hashtags", []))
     if claude_made: hs = hs[:1] + ["ClaudeAI", "AIMusicVideo"] + hs[1:]
-    tags3 = " ".join("#" + h for h in hs[:3])
+    tags3 = " ".join("#" + h for h in hs[:int(yt.get("hashtag_count", 3))])   # song.yaml youtube.hashtag_count: more topic hashtags
     made_with = numbers = ""
     if claude_made:
         made_with = ("MADE WITH\nSong: Suno (lyrics, concept and direction by " + artist + ")\n"
                      f"Animation, editing, timing and kinetic type: {model}, every frame rendered from code\n\n")
         try:
             scene_lines = sum(sum(1 for _ in open(os.path.join(song["dir"], f))) for f in os.listdir(song["dir"]) if f.endswith(".py"))
+            for wd in ("web_dev", "web"):   # a 3D film's source (three.js); web_dev is the live copy of web, so count one
+                wp = os.path.join(song["dir"], wd)
+                if not os.path.isdir(wp): continue
+                for r, ds, fs in os.walk(wp):
+                    ds[:] = [d for d in ds if d != "node_modules"]
+                    scene_lines += sum(sum(1 for _ in open(os.path.join(r, f))) for f in fs if f.endswith((".js", ".mjs", ".html")))
+                break
             bt = json.load(open(os.path.join(b, "beats.json"))); frames = int((bt["duration"] + float(song.get("tail", 0))) * 30) * 2
             words = sum(len(L["words"]) for L in lines)
             numbers = (f"BY THE NUMBERS\n{scene_lines:,} lines of scene code written for this song\n{frames:,} frames rendered (16:9 + 9:16)\n"
@@ -79,11 +86,13 @@ def build(song_dir):
     code_line = ""   # the video's own code on GitHub (studio.yaml code_repo + code_songs)
     if CFG.get("code_repo") and song["slug"] in (CFG.get("code_songs") or []):
         code_line = f"💻 Every line of code behind this video is open source: {CFG['code_repo'].rstrip('/')}/tree/main/songs/{song['slug']}\n\n"
+    news = fill_links(" ".join(yt.get("news", "").split()), links)   # a topical song: the story it's about, in a few sentences
     desc = ((intro + "\n\n" if intro else "") + f"{yt.get('hook', '').strip()}\n\n"
-            f"{credit_line}"
+            + (f"THE NEWS BEHIND THE SONG\n{news}\n\n" if news else "")
+            + f"{credit_line}"
             f"Song, lyrics and concept by {artist}.\n\n{code_line}"
             f"💬 {yt.get('question', 'What did you think?')} 👇\n"
-            f"🔔 Subscribe for a new song every week: {sub_url}\n"
+            f"🔔 Subscribe so you don't miss the next one: {sub_url}\n"
             f"▶️ The whole series of music videos made by Claude: {CFG.get('playlist', '')}\n\n"
             f"🎵 Spotify: {CFG.get('spotify', '')}\n📸 Instagram: {CFG.get('instagram', '')}\n"
             + (f"👽 AI Doompop on Reddit: {CFG['reddit']}\n" if CFG.get('reddit') else "")
@@ -114,7 +123,7 @@ def build(song_dir):
             d = fill_links(cp["yt_description"].strip(), links).replace("{SUB_URL}", sub_url)
         else:
             d = (f"{hook} {yt.get('credit_short') or 'Every frame is code written by ' + model + '.'}\n\nFull music video: \"{full_name}\" {{FULL_VIDEO_URL}}"
-                 f"\n💬 {yt.get('question', '')} 👇\n🔔 Subscribe for a new song every week: {sub_url}\n\n{short_tags}")
+                 f"\n💬 {yt.get('question', '')} 👇\n🔔 Subscribe so you don't miss the next one: {sub_url}\n\n{short_tags}")
         yt_title = cp.get("yt_title", f"{T} — {c['label']}"); yt_tags = cp.get("yt_tags") or tags
         if dp: yt_title = doompop_title(yt_title); d = doompop_desc(d, yt_title); yt_tags = doompop_tags(yt_tags)
         entry = {"file": c.get("file"), "kind": c["kind"], "label": c["label"], "start": c["start"], "end": c["end"],
@@ -158,7 +167,7 @@ def write_md(song, pkg):
             "- [ ] Shorts: pick the cover frame at the start of the clip (the hero clips open on it).",
             "- [ ] Instagram: post the under-3-min version as the full Reel (only ≤3:00 is recommended to non-followers).",
             "- [ ] Instagram: try 1–2 clips as Trial Reels first; invite relevant accounts as collaborators; set the cover image.",
-            "- [ ] Space releases out: 3–5 vertical clips a week, one long video every 1–2 weeks (see docs/lessons.md)."]
+            "- [ ] Space releases out: 3–5 vertical clips a week, one long video every 1–2 weeks (see PLAYBOOK.md)."]
     p = os.path.join(song["out_dir"], f"{pkg['title']} - copy.md"); os.makedirs(song["out_dir"], exist_ok=True)
     open(p, "w").write("\n".join(out) + "\n"); print("wrote", p)
 

@@ -361,7 +361,7 @@ Everything else is on the channel: [youtube.com/@adita_zzz](https://www.youtube.
 ## By the numbers
 
 - **32** music videos, each its own program: **57,124** lines of scene code in 194 files
-- **2,870** lines of shared engine in `studio/` (plus **538** in `studio-early/`, the one before it), and **2,013** lines of tools for audio cleanup, covers, previews, uploads and the website
+- **2,879** lines of shared engine in `studio/` (plus **538** in `studio-early/`, the one before it), and **2,013** lines of tools for audio cleanup, covers, previews, uploads and the website
 - **402,368** frames rendered for the 16:9 and 9:16 versions (about 3.7 hours of video at 30 fps)
 - **2,134** lyric lines and **11,214** words synced to the vocals
 - **136** Shorts and Reels cut from them

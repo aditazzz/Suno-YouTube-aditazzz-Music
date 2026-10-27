@@ -251,7 +251,8 @@ Reel and Short covers.
 ## 6. Package: titles, descriptions, captions
 
 [`studio/package.py`](../studio/package.py) writes `copy.md` (every field ready to paste) and `build/package.json`
-(for the uploader) from `song.yaml`: the title, a description with the hook, how it was made, a *by the numbers*
+(for the uploader) from `song.yaml`: the title, a description with the hook, the news behind it for a topical song
+(`youtube.news`), how it was made, a *by the numbers*
 block filled from the build (lines of scene code, frames rendered, lyric lines synced), chapters from the sections and
 the full lyrics. Each Short gets its own title and description with a link back to the full video.
 
