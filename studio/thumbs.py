@@ -1,7 +1,10 @@
-"""Step 5 — thumbnails in the series style: wide-tracked mono title over a clean hero frame.
+"""Step 5 — thumbnails: every video gets the brand cover (studio/brand.py) over a clean hero frame.
 
-usage: python -m studio.thumbs songs/<slug> [--times 120 228]   (several times -> several options for Test & Compare)
-Writes  "<Title> - YouTube thumbnail.jpg", "(no text)", extra "option N" files, and "Short cover (9x16).jpg".
+usage: python -m studio.thumbs songs/<slug> [--times 120 228] [--legacy]
+Writes "<Title> - YouTube thumbnail.jpg" (the brand cover: lockup chip, Anton headline from song.yaml thumb_lines,
+italic thumb_sub line), "(no text)", one "option N" brand cover per extra --times frame for Test & Compare, and
+"Short cover (9x16).jpg". --legacy also writes the older card styles below (context, CLAUDE / ANIMATED THIS, MADE IN,
+title); they're kept for re-making old covers, not for new videos.
 """
 import os, sys, argparse
 import numpy as np
@@ -180,28 +183,30 @@ def ctx_args(song):
                 side=song.get("thumb_hook_side", "left"), shift=g("shift", 0), shift_y=float(song.get("ctx_shift_y", float(song.get("thumb_shift_y", 0)) * 0.5)),
                 scale=g("scale", 1), dark=float(song.get("ctx_dark", 0.62)), badge=song.get("ctx_badge", "CLAUDE ANIMATED THIS"))
 
-def main(song_dir, times=None):
+def legacy_cards(song, base, out, T):
+    """The card styles used before the brand covers (Oct 2026), written under their own names, never as the thumbnail."""
+    hooks = song.get("thumb_hooks", ["ANIMATED THIS", "CODED THIS"])
+    side = song.get("thumb_hook_side", "left"); col = song.get("thumb_hook_color", song.get("accent"))
+    fr = dict(side=side, shift=float(song.get("thumb_shift", 0)), scale=float(song.get("thumb_scale", 1)), shift_y=float(song.get("thumb_shift_y", 0)))
+    if song.get("thumb_lines"):
+        Image.fromarray(context_card(base, **ctx_args(song))).save(os.path.join(out, f"{T} - YouTube thumbnail (context card).jpg"), quality=93)
+    for hk in hooks:
+        Image.fromarray(claude_card(base, hk, col, **fr)).save(os.path.join(out, f"{T} - YouTube thumbnail (CLAUDE {hk.title()}).jpg"), quality=93)
+    Image.fromarray(made_in_card(base, side if song.get("thumb_hook_side") else "right", float(song.get("made_shift", 0)), float(song.get("thumb_scale", 1)))).save(os.path.join(out, f"{T} - YouTube thumbnail (MADE IN CLAUDE CODE).jpg"), quality=93)
+    Image.fromarray(title_card(base, song.get("thumb_title", T), song.get("thumb_caption"), song.get("accent"), song.get("thumb_label"))).save(os.path.join(out, f"{T} - YouTube thumbnail (title style).jpg"), quality=93)
+
+def main(song_dir, times=None, legacy=False):
+    from . import brand
     song = load_song(song_dir); sc = load_scene(song_dir); out = song["out_dir"]; os.makedirs(out, exist_ok=True); T = song["title"]
+    slug = os.path.basename(os.path.normpath(song_dir))
     times = times or [float(song.get("thumb_time", 60))]
     core.STATE["clean"] = True
     for k, t in enumerate(times):
         base = sc.render_frame(t, 1920, 1080, 5)
-        suffix = "" if k == 0 else f" option {k + 1}"
         if k == 0: Image.fromarray(base).save(os.path.join(out, f"{T} - YouTube thumbnail (no text).jpg"), quality=93)
-        hooks = song.get("thumb_hooks", ["ANIMATED THIS", "CODED THIS"])
-        if k == 0 and song.get("thumb_lines"):
-            Image.fromarray(context_card(base, **ctx_args(song))).save(os.path.join(out, f"{T} - YouTube thumbnail.jpg"), quality=93)
-            hooks = [h for h in hooks if h != hooks[0]] or []
-            nm0 = f"{T} - YouTube thumbnail (CLAUDE {song.get('thumb_hooks', ['ANIMATED THIS'])[0].title()}).jpg"
-            Image.fromarray(claude_card(base, song.get("thumb_hooks", ["ANIMATED THIS"])[0], song.get("thumb_hook_color", song.get("accent")), side=song.get("thumb_hook_side", "left"), shift=float(song.get("thumb_shift", 0)), scale=float(song.get("thumb_scale", 1)), shift_y=float(song.get("thumb_shift_y", 0)))).save(os.path.join(out, nm0), quality=93)
-        if k == 0:
-            for j, hk in enumerate(hooks):
-                if song.get("thumb_lines"): j += 1
-                nm = f"{T} - YouTube thumbnail.jpg" if j == 0 else f"{T} - YouTube thumbnail (CLAUDE {hk.title()}).jpg"
-                Image.fromarray(claude_card(base, hk, song.get("thumb_hook_color", song.get("accent")), side=song.get("thumb_hook_side", "left"), shift=float(song.get("thumb_shift", 0)), scale=float(song.get("thumb_scale", 1)), shift_y=float(song.get("thumb_shift_y", 0)))).save(os.path.join(out, nm), quality=93)
-            Image.fromarray(made_in_card(base, song.get("thumb_hook_side", "left") if song.get("thumb_hook_side") else "right", float(song.get("made_shift", 0)), float(song.get("thumb_scale", 1)))).save(os.path.join(out, f"{T} - YouTube thumbnail (MADE IN CLAUDE CODE).jpg"), quality=93)
-            suffix = " (title style)"
-        Image.fromarray(title_card(base, song.get("thumb_title", T), song.get("thumb_caption"), song.get("accent"), song.get("thumb_label"))).save(os.path.join(out, f"{T} - YouTube thumbnail{suffix}.jpg"), quality=93)
+        nm = f"{T} - YouTube thumbnail.jpg" if k == 0 else f"{T} - YouTube thumbnail option {k + 1}.jpg"
+        brand.song_cover(song, base, slug=slug).save(os.path.join(out, nm), quality=93)   # the same brand layer as every video
+        if k == 0 and legacy: legacy_cards(song, base, out, T)
     core.STATE["clean"] = False
     ct = float(song.get("cover_time", times[0]))
     cov = sc.render_frame(ct, 1080, 1920, int(ct * 30))
@@ -214,4 +219,5 @@ def main(song_dir, times=None):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("song_dir"); ap.add_argument("--times", nargs="*", type=float)
-    a = ap.parse_args(); main(a.song_dir, a.times)
+    ap.add_argument("--legacy", action="store_true", help="also write the pre-brand card styles (never used as the thumbnail)")
+    a = ap.parse_args(); main(a.song_dir, a.times, a.legacy)

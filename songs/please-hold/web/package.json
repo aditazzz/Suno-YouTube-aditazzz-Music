@@ -1,0 +1,13 @@
+{
+  "name": "please-hold",
+  "private": true,
+  "description": "Please Hold by aditazzz: the music video, a Three.js film rendered frame by frame in headless Chromium",
+  "type": "module",
+  "dependencies": {
+    "three": "0.169.0"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,66 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.5799999952316284,
+  "first_line": "Your call is very important to us.",
+  "first_word_t": 0.8799999952316284,
+  "e": 18.483083900226756,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 18.483083900226756,
+  "first_line": "Four-dollar charge on my internet bill",
+  "first_word_t": 19.27999997138977,
+  "e": 62.461678004535145,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE",
+  "s": 62.461678004535145,
+  "first_line": "We built machines to make us wait",
+  "first_word_t": 62.639999866485596,
+  "e": 70.4261224489796,
+  "kind": "pre"
+ },
+ {
+  "name": "CH1",
+  "s": 70.4261224489796,
+  "first_line": "Please hold, please hold",
+  "first_word_t": 70.88000011444092,
+  "e": 102.35356009070294,
+  "kind": "chorus"
+ },
+ {
+  "name": "V2",
+  "s": 102.35356009070294,
+  "first_line": "One little bot on a customer line",
+  "first_word_t": 103.19999980926514,
+  "e": 136.09215419501135,
+  "kind": "verse"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 136.09215419501135,
+  "first_line": "Call duration: forty-seven minutes.",
+  "first_word_t": 135.92000007629395,
+  "e": 149.95446712018142,
+  "kind": "bridge"
+ },
+ {
+  "name": "FINAL",
+  "s": 149.95446712018142,
+  "first_line": "Please hold, please hold",
+  "first_word_t": 150.39999961853027,
+  "e": 181.34784580498865,
+  "kind": "chorus"
+ },
+ {
+  "name": "OUTRO",
+  "s": 181.34784580498865,
+  "first_line": "Thank you for calling.",
+  "first_word_t": 181.59999990463257,
+  "e": 206.28,
+  "kind": "outro"
+ }
+]

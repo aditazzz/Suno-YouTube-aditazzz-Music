@@ -219,11 +219,34 @@ clips:
 
 ## 5. Thumbnails and covers
 
-[`studio/thumbs.py`](../studio/thumbs.py) renders clean frames (no lyrics) and composes thumbnails in a few styles.
-The main one, `context_card`, says what the video is about in a few words, because "CLAUDE ANIMATED THIS" on its own
-told viewers nothing. It also makes extra options for YouTube's Test & Compare and a 9:16 cover for Shorts.
+Every video's thumbnail is the same **brand cover** over a clean frame of that video, so the channel reads as one
+artist. [`studio/thumbs.py`](../studio/thumbs.py) renders the clean frame (no lyrics) and hands it to
+[`studio/brand.py`](../studio/brand.py), which adds one fixed top layer:
+
+1. the lockup chip, top-left: my photo in a green ring, "aditazzz" and `</> CLAUDE ANIMATED THIS`
+2. the headline: two short lines in Anton with a black outline, the last line in one accent color (neon green, or
+   red, amber, yellow or ice to suit the frame; never pink), always the same size
+3. one italic line in Instrument Serif saying what kind of song it is
+
+The words and framing come from `song.yaml`:
+
+```yaml
+thumb_time: 0.5                 # the clean frame underneath
+thumb_lines: [PLEASE, HOLD]     # the headline (a long hook gets another line, never a smaller font)
+thumb_sub: "a song about sending a robot to sit on hold"
+brand_accent: amber             # the last headline line
+ctx_shift_y: 0.09               # slide/zoom the frame (ctx_shift, ctx_shift_y, ctx_scale, ctx_dark) to clear the text
+```
+
+[`brand_covers.yaml`](../brand_covers.yaml) can override any of that per video (and covers videos without a song
+folder); `python -m studio.brand` re-makes covers in bulk. `--times` gives extra frames, each written as an
+"option N" brand cover for YouTube's Test & Compare, and the step also writes a 9:16 cover for Shorts. Songs that
+render their own thumbnail plates, like the 3D films, run the same `brand.song_cover()` on them
+([`songs/please-hold/make_thumbs.py`](../songs/please-hold/make_thumbs.py)). The older card styles are still in
+`thumbs.py` for re-making old covers (`--legacy`), never as a new video's thumbnail.
+
 [`tools/clip_covers.py`](../tools/clip_covers.py) picks the most colorful clean frame after each clip's hook for
-Reel and Short covers. The TED Talk remakes draw their own thumbnails (`thumb.py` in each folder).
+Reel and Short covers.
 
 ## 6. Package: titles, descriptions, captions
 

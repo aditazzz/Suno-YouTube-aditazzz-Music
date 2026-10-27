@@ -1,0 +1,44 @@
+{
+ "clips": [
+  {
+   "kind": "short",
+   "label": "millennial",
+   "start": 38.72,
+   "end": 92.56,
+   "hook": "millennials would rather chew glass than call",
+   "hook_y": 0.14,
+   "cover_lines": [
+    "I'D RATHER",
+    "CHEW GLASS"
+   ],
+   "file": "Please Hold - Short 1 (millennial, 54s).mp4"
+  },
+  {
+   "kind": "reel",
+   "label": "five dollars",
+   "start": 135.84,
+   "end": 157.52,
+   "hook": "$4 charge. 47 minutes on hold.",
+   "hook_y": 0.14,
+   "cover_lines": [
+    "$4 CHARGE.",
+    "47 MIN HOLD."
+   ],
+   "file": "Please Hold - Reel 1 (five dollars, 22s).mp4"
+  }
+ ],
+ "edit": {
+  "file": "Please Hold - Instagram 9x16 (under 3 min).mp4",
+  "segments": [
+   [
+    0.0,
+    102.1
+   ],
+   [
+    135.84,
+    213.0
+   ]
+  ],
+  "duration": 179.26
+ }
+}

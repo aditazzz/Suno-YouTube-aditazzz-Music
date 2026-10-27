@@ -1,0 +1,85 @@
+title: "Please Hold"
+audio: "Please Hold 2 (clean, end beep).wav"   # Please Hold 2 (clean).wav (hum notched by studio.clean, 850 + 900 Hz) + one keypad "1" on the end card; original: Please Hold 2.wav
+folder: "Please Hold"
+model_credit: Claude Opus 5.5
+ai_music: true
+tail: 6.72                            # the audio stops dead at 206.28 (the battery dies); black, then the keypad end card to 213.0
+end_screen_at: 206.98                 # "To subscribe, press 1." on the left, right half clear for YouTube's end-screen elements
+status: live   # unlisted on YouTube since Oct 27: https://youtu.be/RFosHOuu5JM (the 3D film is in web/)
+accent: "ff6a1a"
+aliases:
+  grok: [grok, groc, rock, crook, brock, gronk]
+  comcast: [comcast, come, cast, comcasts]
+  zero: [zero, zeros]
+
+youtube:
+  title: "Please Hold (I'd Rather Chew Glass Than Call) - Claude Opus 5.5 Music Video"
+  doompop: true
+  hook: >-
+    A $4 charge on my internet bill, 47 minutes on hold, and a millennial who would rather chew glass than read her card
+    number out loud. So I sent a robot. It's got all day.
+  visuals: >-
+    a 3D film. A $4 charge circled in hot orange, a keypad where 2 is for despair, an empty call-center cubicle with the
+    chair still spinning, and a robot that sits down in her exact pose and holds. Days pass over the plaza. The tower's
+    windows spell HOLD, with a robot on hold in every one of them. She goes to the salon and eats onion rings under the
+    dryer, and on "I don't wait anymore" the foils burst off and she walks out blonde. The robot prints a receipt longer
+    than a pharmacy receipt, the $4 charge turns into $5, the city reboots in neon, and the little robots run the show.
+    Even the captions get tired of waiting and fall over
+  story: >-
+    I made every frame of this video in code with Claude Opus 5.5: the plaza and the HOLD tower, the robot and its coiled
+    cord, me in clay (and my glow-up), the phone screens, the receipt, the neon finale and the captions that topple over
+    when they're left waiting, all rendered frame by frame and synced to the vocal. The robot is from the same family as the robots in Ragnarök or
+    Reach for Mars, and the man with the rocket makes a cameo on the tower.
+  credit_short: "Every frame is code I made with Claude Opus 5.5."
+  question: "Millennials, be honest: when did you last make a phone call on purpose? 📞"
+  note: >-
+    (The robot is our own design. Every bill, brand and headline on screen is invented, and the onion rings are
+    unbranded.)
+  hashtags: [PleaseHold, Millennials, TechHumor]
+  short_hashtags: [pleasehold, millennials, onhold, techhumor, aiagents]
+  tags: [please hold, i'd rather chew glass than call, on hold, hold music, customer service, call center, millennials,
+         millennial humor, phone anxiety, millennials hate phone calls, ai agent, ai assistant, robot on hold, internet bill,
+         your call is important to us, press 1, gen z, tech humor, funny song, aditazzz, claude animated this, ai music video,
+         3d music video, music video made with code, claude opus 5.5]
+  pinned: "Millennials, be honest: when did you last make a phone call on purpose? 📞 Gen Z, back me up."
+  short_pinned: |
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    Millennials, be honest: when did you last make a phone call on purpose? 📞 Gen Z, back me up.
+
+    🔔 Subscribe: {SUB_URL}
+  chapters:
+    INTRO: "Your call is very important to us"
+    V1: "A $4 charge on my internet bill"
+    PRE: "Machines wait on machines"
+    CH1: "Please hold"
+    V2: "One little bot on a customer line"
+    BRIDGE: "Call duration: forty-seven minutes"
+    FINAL: "Let the little robots run the show"
+    OUTRO: "Would you like to complete a brief survey?"
+
+instagram:
+  hashtags: [pleasehold, millennials, onhold, techhumor, aidoompop]
+  keywords: [please hold, I'd rather chew glass than call, on hold, hold music, customer service, call center, millennials,
+             millennial humor, phone anxiety, AI agent, AI assistant, robot, internet bill, your call is important to us,
+             press 1, gen z, tech humor, funny song, 3D music video, music video made with code, made with Claude, aditazzz]
+  edit_caption: ""
+
+clips:   # each one a different joke; hook text on screen for the first 3 s
+  - {kind: short, label: millennial, start: 38.72, end: 92.56, hook: "millennials would rather chew glass than call", hook_y: 0.14,
+     cover_lines: ["I'D RATHER", "CHEW GLASS"], cover_t: 39.80}
+  - {kind: reel, label: five dollars, start: 135.84, end: 157.52, hook: "$4 charge. 47 minutes on hold.", hook_y: 0.14,
+     cover_lines: ["$4 CHARGE.", "47 MIN HOLD."], cover_t: 149.70}
+edit_segments: [[0.0, 102.10], [135.84, 213.0]]   # Instagram (3:00 max): Verse 2 out, one cut on the beat; 2:59.3 with the end card
+edit_hook: ""                         # the film's first frame already carries the hook
+edit_cover: {cover_t: 72.10}          # covers use the clean stills in build/covers_raw (no lyrics on them)
+
+cover_time: 0.5
+thumb_time: 0.5
+cover_sub: "a song about sending a robot to sit on hold"
+
+# the YouTube thumbnail: the brand cover (studio/brand.py) over the plate rendered with web/?look=thumb (make_thumbs.py)
+thumb_lines: [PLEASE, HOLD]
+thumb_sub: "a song about sending a robot to sit on hold"
+brand_accent: amber                   # echoes the LED band; the lockup stays neon green
+ctx_shift_y: 0.09                     # slides the plate down so HOLD 47:00 sits just under the lockup chip

@@ -7,13 +7,13 @@
 I'm **aditazzz**, a data/AI engineer who writes songs. I write the lyrics and concepts, make the tracks with
 [Suno](https://suno.com), and direct a music video for each one on my YouTube channel
 [**@adita_zzz**](https://www.youtube.com/@adita_zzz?sub_confirmation=1). Claude builds the videos in code. Not in a
-video editor, and not with an AI video generator: for each song, Claude writes a program (Python, and for two of them JavaScript with Three.js) that draws every frame,
+video editor, and not with an AI video generator: for each song, Claude writes a program (Python, and for three of them JavaScript with Three.js) that draws every frame,
 synced to the vocals word by word. Most of the videos in this repo were made by Claude Opus 5.5 and a few by
 Claude Fable 5.1; each song page says which. The songs are
 on [Spotify](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv), and all of them, with lyrics, are on
 [aditazzz.github.io](https://aditazzz.github.io).
 
-This repo is that code. It has **31 music videos**, **54,194 lines of scene code** and the pipeline
+This repo is that code. It has **32 music videos**, **57,124 lines of scene code** and the pipeline
 that turns a finished song into a full music video, Shorts, thumbnails and a YouTube upload. Every song folder links to
 its video, so you can watch one and then read how it was drawn.
 
@@ -26,7 +26,7 @@ flowchart LR
     B --> C["scene.py<br>Claude writes the video<br>as a program"]
     C --> D["studio.render<br>every frame, 30 fps<br>16:9 + 9:16"]
     D --> E["studio.cuts<br>Shorts and Reels,<br>cut on downbeats"]
-    D --> F["studio.thumbs<br>thumbnails and covers"]
+    D --> F["studio.thumbs + studio.brand<br>the brand cover: photo chip,<br>headline, italic line"]
     E --> G["studio.package<br>titles, descriptions,<br>captions"]
     F --> G
     G --> H["tools/youtube_upload.py<br>YouTube"]
@@ -51,8 +51,11 @@ flowchart LR
    at 1440p or 4K.
 6. **Cuts, thumbnails, copy** ([`studio/cuts.py`](studio/cuts.py), [`studio/thumbs.py`](studio/thumbs.py),
    [`studio/package.py`](studio/package.py)). Shorts are cut on downbeats, kept under 60 seconds and open on a real
-   picture (never a black frame) with the hook already on screen. Thumbnails and every title, description, tag and
-   caption come out of the song's `song.yaml`.
+   picture (never a black frame) with the hook already on screen. Every thumbnail is the same brand cover
+   ([`studio/brand.py`](studio/brand.py)): my photo chip and `</> CLAUDE ANIMATED THIS` in the top-left, a two-line
+   headline in Anton (the last line in one accent color) and one italic line saying what the song is about, over a
+   clean frame of the video, so a new video looks like the rest of the channel without any hand work. The words on it
+   and every title, description, tag and caption come out of the song's `song.yaml`.
 7. **Upload** ([`tools/youtube_upload.py`](tools/youtube_upload.py)). Full videos, Shorts, thumbnails, playlists
    and the comment I pin, through the YouTube API and my own sign-in.
 
@@ -87,7 +90,8 @@ goes out.
 
 Along the way my notes turned into rules the pipeline follows on its own: when the text was too small to read on a
 phone, the engine got a minimum text size; when a Short opened on a black frame, "frame 0 is a real picture" became a
-check; when a hook came out too combative, "keep hooks playful" became a rule. Those lessons are in
+check; when a hook came out too combative, "keep hooks playful" became a rule; when a new video's thumbnail didn't
+match the rest of the channel, the brand cover became the only thumbnail the pipeline makes. Those lessons are in
 [docs/lessons.md](docs/lessons.md), and they're probably the most useful thing here if you make videos too.
 
 ## The videos
@@ -293,7 +297,12 @@ AI agents in a sealed test sandbox found each other through a shared package cac
 <sub>A Viking seeress reads the future of a man with a rocket, in carved puppets and tarot cards that open into pop-up worlds. A Three.js film, like the standup one.</sub><br>
 <sub>▶ <a href="https://youtu.be/Yo6UcXn4_kM">watch</a> · <a href="songs/ragnarok-or-reach-for-mars">code</a> (4,271 lines)</sub>
 </td>
-<td width="33%"></td>
+<td width="33%" valign="top">
+<a href="https://youtu.be/RFosHOuu5JM"><img src="songs/please-hold/thumbnail.jpg" alt="Please Hold (I'd Rather Chew Glass Than Call)"></a><br>
+<b><a href="https://youtu.be/RFosHOuu5JM">Please Hold (I'd Rather Chew Glass Than Call)</a></b><br>
+<sub>A millennial sends a robot to sit through a 47-minute hold over a $4 charge, the week Grok learned to make your calls for you. Clay figures, a HOLD tower, and captions that fall over waiting. The third Three.js film.</sub><br>
+<sub>▶ <a href="https://youtu.be/RFosHOuu5JM">watch</a> · <a href="songs/please-hold">code</a> (2,930 lines)</sub>
+</td>
 <td width="33%"></td>
 </tr>
 </table>
@@ -351,11 +360,11 @@ Everything else is on the channel: [youtube.com/@adita_zzz](https://www.youtube.
 
 ## By the numbers
 
-- **31** music videos, each its own program: **54,194** lines of scene code in 179 files
-- **2,511** lines of shared engine in `studio/` (plus **538** in `studio-early/`, the one before it), and **2,013** lines of tools for audio cleanup, covers, previews, uploads and the website
-- **389,588** frames rendered for the 16:9 and 9:16 versions (about 3.6 hours of video at 30 fps)
-- **2,087** lyric lines and **10,910** words synced to the vocals
-- **134** Shorts and Reels cut from them
+- **32** music videos, each its own program: **57,124** lines of scene code in 194 files
+- **2,870** lines of shared engine in `studio/` (plus **538** in `studio-early/`, the one before it), and **2,013** lines of tools for audio cleanup, covers, previews, uploads and the website
+- **402,368** frames rendered for the 16:9 and 9:16 versions (about 3.7 hours of video at 30 fps)
+- **2,134** lyric lines and **11,214** words synced to the vocals
+- **136** Shorts and Reels cut from them
 - The biggest single video: [AI Slop? You're Absolutely Right (The City)](songs/ai-slop-city), 5,432 lines in 15 files
 
 ## Run it yourself
@@ -389,12 +398,14 @@ The YouTube and Instagram setup is in [docs/publishing.md](docs/publishing.md).
 
 ```
 studio/       the pipeline: sync → scene → render → cuts → thumbs → package, plus the drawing kits
-              (core: text, glow, lyrics, post · kit: 2D UI pieces · world3d: small 3D worlds · space: photoreal Earth)
+              (core: text, glow, lyrics, post · kit: 2D UI pieces · world3d: small 3D worlds · space: photoreal Earth
+              · brand: the brand cover every thumbnail gets)
 songs/        one folder per video: the scene code, song.yaml (creative choices and copy), lyrics.txt,
               build/ (word timings, beats, sections, clip list) and a README with the video link
 tools/        audio cleanup, uploading, covers, previews, the website builder and other helpers
 site/         the website (aditazzz.github.io): styles, script and the list of public videos
-assets/       NASA Earth textures (for the space scenes) and the font list
+assets/       NASA Earth textures (for the space scenes), the font list and where the cover photo goes
+brand_covers.yaml  per-video overrides for the brand covers (words, accent, framing)
 docs/         how it works, lessons learned, publishing setup
 studio-early/ the small engine the first Fable videos were made with, before studio/ existed
 ```

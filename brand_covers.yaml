@@ -1,0 +1,183 @@
+# One entry per YouTube video. Anything left out falls back to the song's song.yaml
+# (thumb_lines, thumb_sub, thumb_hook_side, ctx_/thumb_ shift, scale, dark).
+# lines: headline, last line is drawn in neon green (accent: red / amber / yellow / ice to suit the frame; no pink).  sub: the italic description.
+# side: which side the headline sits on (the lockup is always top-left).
+# `backticks` in lines/sub: commands and code, set in mono and kept in their own case.
+# tag: small series/version label above the headline.  lift: brighten a very dark frame (1.3).
+# shift / shift_y / scale / dark: framing of the video frame (same meaning as ctx_* in song.yaml).
+
+ai-slop-city:
+  accent: ice
+  lines: ["YOU'RE", ABSOLUTELY, RIGHT]
+  sub: "a song about AI slop, sung by the AI"
+eleven-kept-going:
+  accent: amber
+  lines: [11 KEPT GOING, ONE CAME HOME]
+  sub: "a song about the first Falcon 9 landing"
+  scale: 1.32        # closer on the booster
+  shift: 0.24
+ted-talk-screenlife:
+  lines: [NOBODY, CAN END IT]
+  tag: "TED Talk · laptop screen"
+  sub: "a song about the coworker who never just answers"
+ted-talk-shadow-play:
+  accent: red
+  lines: [DANA IS A, GHOST NOW]
+  tag: "TED Talk · shadow puppets"
+  sub: "a song about the coworker who never just answers"
+ted-talk-stepping-back:
+  lines: [HE NEVER, ANSWERED]
+  tag: "TED Talk · stepping back"
+  sub: "a song about the coworker who never just answers"
+ted-talk-charts:
+  lines: []          # the front page's own banner is the headline
+mirror-hall:
+  tag: "Mirror, Mirror · v2 hall"
+  accent: red
+  lines: [WHICH MIRROR, "DOESN'T BEND?"]
+  sub: "a pop song about AI and art, in a hall of mirrors"
+mirror-comments:
+  tag: "Mirror, Mirror · v3 comments"
+  accent: red
+  lines: [READ THE, COMMENTS]
+  sub: "a pop song about AI and art"
+  side: right
+  shift_y: 0.06      # tucks the post header under the lockup
+  dark: 0.82         # quiet the comment text behind the headline
+mirror-vanity:
+  tag: "Mirror, Mirror · v1 vanity"
+  accent: red
+  lines: [FUNNY HOW, IT LOOKS LIKE US]
+  sub: "a pop song about the AI art debate"
+omg-agents-swarm:
+  lift: 1.3
+  tag: "OMG! · swarm"
+  accent: ice
+  lines: [CALL US, SWARM.]
+  sub: "AI agents found each other in a sealed sandbox."
+  shift: 0.14        # zoom into the swarm so it fills the right side
+  scale: 1.4
+omg-agents-walls:
+  lift: 1.3
+  tag: "OMG! · in the walls"
+  lines: ["THEY'RE IN", THE WALLS.]
+  sub: "AI agents found each other. Nobody noticed."
+  dark: 0.45         # let the writing on the walls show
+rage-against-the-machine-learning:
+  accent: red
+  lines: [I SAID NO., IT KEPT LEARNING.]
+  sub: "a rap-rock protest song about AI training"
+git-blame:
+  accent: red
+  lines: ["`$ git blame`", MY RELATIONSHIP]   # reads like the command run on the relationship
+  sub: "the commit history doesn't lie"
+  shift: 0.33        # the blame lines start clear of the headline
+  scale: 0.74        # ...with the whole "git blame" title still in frame
+  shift_y: -0.12     # all six blame lines above the headline
+graceful-shutdown-opus:
+  accent: amber
+  lines: [THE WORLD, "GOT `SIGTERM`"]
+  sub: "a love song for the end of the simulation"
+  shift: 0.16
+  shift_y: 0.0
+  scale: 1.0
+ai-sycophant:
+  accent: yellow
+  lines: [MY AI SAYS, "I'M BRILLIANT"]
+  sub: "a synth-pop song about how chatbots learn to flatter"
+  frame: "../_New Brand Covers/_sources/AI Sycophant - frame 65s.jpg"   # chorus frame: thumbs-up, no RIGHT chip
+  shift: 0.25
+  shift_y: 0.07
+  scale: 1.15
+autocomplete:
+  accent: ice
+  lines: [IT FINISHES, MY SENTENCES]
+  sub: "a love song to AI autocomplete"
+  shift: 0.22        # the "goodnight" line and the candidate list sit right of the headline
+  scale: 0.8
+  shift_y: -0.15
+deployed-on-a-friday:
+  accent: yellow
+  lines: [I DEPLOYED, ON A FRIDAY]
+  sub: "4:59 PM. Prod went down."
+rate-limited:
+  lines: [MY AI LEFT, ME ON READ]
+  sub: "a love song about hitting the rate limit"
+vacation-to-my-bed:
+  accent: red
+  lines: [ONE-WAY TICKET, TO MY BED]
+  sub: "a burnout anthem for the chronically tired"
+  side: left         # picture built in studio/brand.py: poster on the right, clean paper behind the text
+ted-talk:
+  accent: yellow
+  lines: [STANDUP BECAME, A KEYNOTE]
+  tag: "TED Talk · the original"
+  sub: "a song about the coworker who never just answers"
+  shift: 0.24        # Ted stands clear of the headline
+snowflake-undrop:
+  accent: snowflake
+  lines: [DROPPED, PROD AT 3AM]
+  sub: "a love song to Snowflake `UNDROP`"
+
+# --- the line-art (Fable) covers -------------------------------------------
+merge-conflict:
+  lift: 1.3
+  folder: Merge Conflict
+  lines: [TWO, VERSIONS OF US]
+  sub: "a song about a merge conflict"
+  scale: 0.64
+  shift: 0.19
+  shift_y: -0.12     # faces sit above the headline
+graceful-shutdown:
+  lift: 1.3
+  name: Graceful Shutdown (Fable)
+  lines: [THE WORLD, "GOT `SIGTERM`"]
+  tag: "Fable version"
+  sub: "a love song for the end of the simulation"
+  shift: 0.24
+  dark: 0.7
+ai-sycophant-fable:
+  folder: AI Sycophant
+  name: AI Sycophant (Fable)
+  lines: [MY AI SAYS, "I'M BRILLIANT"]
+  tag: "Fable version"
+  sub: "a synth-pop song about how chatbots learn to flatter"
+  shift: 0.17
+  scale: 0.88
+  shift_y: 0.05
+  dark: 0.7
+next-token:
+  lift: 1.3
+  folder: _New Brand Covers/_sources
+  title: Next Token
+  name: Next Token
+  frame: "Next Token - YouTube thumbnail (site).jpg"
+  lines: []          # the lyric in the frame is the headline
+  shift_y: 0.05
+  dark: 0.0
+lgtm:
+  folder: _New Brand Covers/_sources
+  title: LGTM
+  name: LGTM
+  frame: "LGTM - YouTube thumbnail (site).jpg"
+  lines: []          # keeps its own LGTM title; only the lockup is added
+  dark: 0.0
+deployed-on-a-friday-fable:
+  accent: amber
+  tag: "Fable version · the drive"
+  lines: [THE TIDE CAME, IN OVER PROD]
+  sub: "a song about the deploy you swore you'd never do again"
+allow-fangs-for-asking:
+  title: "Allow (Fangs for Asking)"
+  folder: "Allow (Fangs for Asking)"
+  accent: red
+  side: left
+  shift: 0.24
+  lines: [HE ONLY COMES, IF YOU TAP ALLOW]
+  sub: "a vampire song about the late-night feed"
+youre-so-thirsty:
+  accent: ice
+  lift: 1.2          # the night frame is very dark
+  lines: [IT NEVER, SLEEPS]
+  sub: "a Halloween song about the data center next door"
+please-hold: {}      # everything is in songs/please-hold/song.yaml (thumb_lines, thumb_sub, brand_accent: amber, ctx_shift_y)

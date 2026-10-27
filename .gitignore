@@ -27,3 +27,12 @@ songs/*/build/*
 songs/allow-fangs-for-asking/plates/
 songs/allow-fangs-for-asking/stills/
 songs/allow-fangs-for-asking/*.parts/
+
+# the brand covers' lockup photo stays local (see assets/brand/README.md)
+assets/brand/*
+!assets/brand/README.md
+
+# the 3D films' fonts, baked textures and npm installs stay local (see assets/fonts/README.md)
+songs/*/web/fonts/
+songs/*/web/tex/
+songs/*/web/node_modules/

@@ -39,6 +39,11 @@ platforms change often, so check them again before you rely on them (sources at 
 - **Thumbnails say what the video is.** "CLAUDE ANIMATED THIS" alone told nobody anything. A short hook about the song,
   one plain line saying what kind of song it is, and a small badge works better. It also needs a bright subject you
   can recognize at phone size: two thin arcs over dark water read as a black square.
+- **Every thumbnail matches the channel.** One video went out with a one-off card (a different badge, a different
+  italic) and it looked like someone else's channel next to the others. Now the pipeline only makes the brand cover
+  (`studio/brand.py`): the same photo chip, headline size and italic line on every video, with only the frame, the
+  words and one accent color changing. A song that needs something special gets it added to the brand layer, not a
+  hand-made card.
 - **Titles: no parentheses.** `Name - Claude Opus 5.5 Music Video` keeps the model name visible where long titles get
   cut off. The funny hook goes on the thumbnail instead.
 
