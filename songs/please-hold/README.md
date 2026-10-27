@@ -30,8 +30,10 @@ The news behind it: on Oct 25, 2026, Elon Musk announced that Grok Bot can now c
 | [`web/js/lib.js`](web/js/lib.js) | 132 | Shared helpers: easing and keyframes, seeded randomness, clay and gloss materials with a soft rim, canvas textures, fonts. |
 | [`web/js/font5.js`](web/js/font5.js) | 42 | A 5x7 dot-matrix font for the LED band, the windows that spell HOLD, the robot's eye strip and its captions. |
 | [`web/render.mjs`](web/render.mjs) | 36 | The renderer: serves the film to headless Chromium (WebGL on the CPU through SwiftShader) and saves every frame as a JPEG master. Resumable. |
+| [`web/index.html`](web/index.html) | 3 | The page the renderer opens. |
 | [`scene.py`](scene.py) | 83 | The bridge to the Python pipeline: reads the rendered 3D masters, upscales them and adds the subscribe pill, so `studio.render`, `studio.cuts` and `studio.thumbs` work unchanged. |
 | [`make_thumbs.py`](make_thumbs.py) | 22 | The thumbnail: the brand cover from [`studio/brand.py`](../../studio/brand.py) (the same photo chip, Anton headline and italic line as every video) over 3D plates rendered for it (`?look=thumb`). The words and framing are in `song.yaml`. |
+| [`assemble.sh`](assemble.sh) | 19 | Assembles the silent 3D masters (16:9 and 9:16) from the rendered frames, and stops if a single frame is missing. |
 
 The man with the rocket on the tower screen is a clip of frames rendered from the [Ragnarök or Reach for Mars](../ragnarok-or-reach-for-mars) film code (`web/tex/cameo/`, 124 JPEGs, not in the repo; without them the tower screen stays dark).
 

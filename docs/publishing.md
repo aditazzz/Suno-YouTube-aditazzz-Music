@@ -60,6 +60,7 @@ python tools/youtube_upload.py songs/<slug> --publish-now       # make a song's 
 python tools/youtube_upload.py songs/<slug> --post-comments     # post the comment you'll pin
 python tools/youtube_upload.py songs/<slug> --update            # re-send titles, descriptions and tags after edits
 python tools/yt_recent.py                                       # the latest uploads: privacy, processing, schedule
+python tools/release.py <slug> --id <YouTube id> --push         # once it's public: its page on aditazzz.github.io
 ```
 
 Still by hand in YouTube Studio: pin the comment, set each Short's **Related video** to the full video, end screens and

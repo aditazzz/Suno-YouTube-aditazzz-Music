@@ -14,6 +14,7 @@ how to make one for your own song.
 - [5. Thumbnails and covers](#5-thumbnails-and-covers)
 - [6. Package: titles, descriptions, captions](#6-package-titles-descriptions-captions)
 - [7. Publish](#7-publish)
+- [8. The website](#8-the-website)
 - [Make your own](#make-your-own)
 
 ## The idea
@@ -266,6 +267,22 @@ release plan, sets thumbnails and playlists, posts the comment to pin, and keeps
 Two things still need YouTube Studio by hand: pinning the comment and setting each Short's **Related video** to the
 full video (that link is the main way viewers get from a Short to the long video).
 
+## 8. The website
+
+Every posted video also gets a page on [aditazzz.github.io](https://aditazzz.github.io), built from this repo. Once the
+song's folder is in `songs/` (its README with the video link, `lyrics.txt`, `thumbnail.jpg` and the code its README
+lists), one command does the rest:
+
+```bash
+python tools/release.py <slug> --id <YouTube id> --date <publish time> --push
+```
+
+[`tools/release.py`](../tools/release.py) adds the video to `site/videos.json` (its YouTube id, publish time and
+length), redraws the wall of thumbnails at the top of the README ([`tools/wall.py`](../tools/wall.py)) and rebuilds the
+site into the GitHub Pages repo ([`tools/build_site.py`](../tools/build_site.py)): the video's own page with the
+video, the story, the lyrics, the numbers and a panel of real code from its scene, plus the home page, the sitemap and
+the share card. `--push` commits and pushes both repos; Pages updates a minute or two later.
+
 ## Make your own
 
 1. **Install.** Python 3.10+, ffmpeg, then `pip install -r requirements.txt`, the fonts from
@@ -280,5 +297,7 @@ full video (that link is the main way viewers get from a Short to the long video
    concepts for this one. After I pick, write songs/my-song/scene.py and show me stills."*
 5. **Review stills, then render** both formats, then `python -m studio.cuts`, `python -m studio.thumbs` and
    `python -m studio.package`. Finished files land in `music/<title>/`.
+6. **Post it,** then put it on your site: `python tools/release.py songs/<your-song> --id <YouTube id> --push` (point
+   `--pages` at your own GitHub Pages checkout).
 
 Read [lessons.md](lessons.md) before your first long render. Most of it was learned the hard way.

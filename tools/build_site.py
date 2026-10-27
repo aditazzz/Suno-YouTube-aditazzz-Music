@@ -478,7 +478,7 @@ def main(out):
     <li><h3>The song</h3><p>I write the lyrics and the concept, then make the track in Suno. A small script notches out the steady hum AI music generators leave under a track.</p></li>
     <li><h3>The sync</h3><p>The vocals are separated, transcribed and lined up with the lyrics, so every sung word gets a timestamp. Beats and sections come from the audio too.</p></li>
     <li><h3>The scene</h3><p>Claude writes one program per song, a function that returns the picture at any moment of the song. I direct it and review every still.</p></li>
-    <li><h3>The render</h3><p>Every frame is drawn at 30 fps, in 16:9 for YouTube and 9:16 for Shorts, then cut, packaged and uploaded by the same pipeline.</p></li>
+    <li><h3>The render</h3><p>Every frame is drawn at 30 fps, in 16:9 for YouTube and 9:16 for Shorts. The same pipeline cuts the Shorts, makes the thumbnail (one design on every video), writes the copy, uploads it and adds its page to this site.</p></li>
   </ol>
   <p class="more">All of it is open source: <a href="{REPO}">the pipeline and every scene on GitHub</a>.</p>
 </section>"""

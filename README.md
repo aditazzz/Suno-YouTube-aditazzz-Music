@@ -30,6 +30,7 @@ flowchart LR
     E --> G["studio.package<br>titles, descriptions,<br>captions"]
     F --> G
     G --> H["tools/youtube_upload.py<br>YouTube"]
+    H --> I["tools/release.py<br>aditazzz.github.io:<br>a page for the video"]
 ```
 
 1. **The song.** I write the lyrics and the concept and make the track in Suno. The audio isn't in this repo; the
@@ -58,6 +59,10 @@ flowchart LR
    and every title, description, tag and caption come out of the song's `song.yaml`.
 7. **Upload** ([`tools/youtube_upload.py`](tools/youtube_upload.py)). Full videos, Shorts, thumbnails, playlists
    and the comment I pin, through the YouTube API and my own sign-in.
+8. **The website** ([`tools/release.py`](tools/release.py), [`tools/build_site.py`](tools/build_site.py)). Once a
+   video is up and its folder is in `songs/`, one command adds it to [aditazzz.github.io](https://aditazzz.github.io):
+   its own page (the video, the story, the lyrics and a panel of its code), the home page, the sitemap, the share card
+   and the wall of thumbnails at the top of this README.
 
 The long version, with how to make your own, is in [docs/how-it-works.md](docs/how-it-works.md).
 
@@ -402,7 +407,7 @@ studio/       the pipeline: sync → scene → render → cuts → thumbs → pa
               · brand: the brand cover every thumbnail gets)
 songs/        one folder per video: the scene code, song.yaml (creative choices and copy), lyrics.txt,
               build/ (word timings, beats, sections, clip list) and a README with the video link
-tools/        audio cleanup, uploading, covers, previews, the website builder and other helpers
+tools/        audio cleanup, uploading, covers, previews, the website (release.py, build_site.py) and other helpers
 site/         the website (aditazzz.github.io): styles, script and the list of public videos
 assets/       NASA Earth textures (for the space scenes), the font list and where the cover photo goes
 brand_covers.yaml  per-video overrides for the brand covers (words, accent, framing)
