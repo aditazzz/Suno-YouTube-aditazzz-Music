@@ -159,7 +159,9 @@ def enc_piece(src, a, b, out, cover=None, extra_vf=None, hook=None, open_cover=N
     cover) shown full-frame for the first OPEN_HOLD s and faded out over OPEN_FADE s, so the file's first frame (what
     Instagram and phones show) is the cover. cover: a still shown for the first 0.2 s (clips without a hook)."""
     W, H = SIZES["9x16"]; safe = safe or SAFE_SCALE
-    cmd = ["ffmpeg", "-v", "error", "-y", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", src]; n = 1; ch = []; cur = "[0:v]"
+    cmd = ["ffmpeg", "-v", "error", "-y", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", src]; n = 1
+    # standard range first: a full-range (yuvj420p) master, like Remotion's, makes the overlaid images come out darker
+    ch = ["[0:v]format=yuv420p[b0]"]; cur = "[b0]"
     if hook:
         cmd += ["-loop", "1", "-t", f"{HOOK_DUR + 0.1}", "-i", hook]; hi = n; n += 1
         ch.append(f"[{hi}:v]format=rgba,fade=t=out:st={HOOK_DUR - 0.35:.2f}:d=0.35:alpha=1[h]")

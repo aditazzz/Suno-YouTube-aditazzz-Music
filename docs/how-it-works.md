@@ -247,7 +247,8 @@ render their own thumbnail plates, like the 3D films, run the same `brand.song_c
 `thumbs.py` for re-making old covers (`--legacy`), never as a new video's thumbnail.
 
 [`tools/clip_covers.py`](../tools/clip_covers.py) picks the most colorful clean frame after each clip's hook for
-Reel and Short covers.
+Reel and Short covers. Per clip in `song.yaml`, `cover_t` picks the frame by hand, `cover_shift_y` moves it down the
+cover, and `cover_tone: false` keeps a pale frame's own colors instead of the brand duotone.
 
 ## 6. Package: titles, descriptions, captions
 
@@ -255,7 +256,8 @@ Reel and Short covers.
 (for the uploader) from `song.yaml`: the title, a description with the hook, the news behind it for a topical song
 (`youtube.news`), how it was made, a *by the numbers*
 block filled from the build (lines of scene code, frames rendered, lyric lines synced), chapters from the sections and
-the full lyrics. Each Short gets its own title and description with a link back to the full video.
+the full lyrics. Each Short gets its own title, description and first comment to pin, each with a link back to the
+full video. Shorts stay out of playlists; only full videos go in one.
 
 ## 7. Publish
 

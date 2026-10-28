@@ -54,7 +54,7 @@ def main(song_dir):
     od = os.path.join(song["out_dir"], "Covers"); os.makedirs(od, exist_ok=True)
     cl = {c["label"]: c for c in song.get("clips", [])}
     # per cover (a clip in song.yaml, or song.yaml `edit_cover` for the under-3-min edit): cover_lines, and optionally
-    # cover_t (song time of the frame, instead of the automatic pick), cover_shift_y and cover_scale
+    # cover_t (song time of the frame, instead of the automatic pick), cover_shift_y, cover_scale and cover_tone
     items = [(c["file"], c["start"], c["end"] - c["start"], None, cl.get(c.get("label"), c)) for c in st["clips"] if c.get("file")]
     if st.get("edit"): items.append((st["edit"]["file"], 0.0, st["edit"]["duration"], [tuple(s) for s in st["edit"]["segments"]], song.get("edit_cover") or {}))
     lines0 = song.get("cover_lines") or song.get("thumb_lines"); sub = song.get("cover_sub", song.get("thumb_sub"))
@@ -71,7 +71,8 @@ def main(song_dir):
             if s > bs: best, bs = t, s
         fr = place(sc.render_frame(best, 1080, 1920, int(best * 30)), float(cfg.get("cover_shift_y", sy)), float(cfg.get("cover_scale", 1.0)))
         out = os.path.join(od, os.path.splitext(name)[0].replace("Instagram 9x16", "Instagram") + " - cover.jpg")
-        RC.cover(Image.fromarray(fr), public_name(song), hook, acc, lines=cfg.get("cover_lines") or lines0, sub=sub).save(out, quality=92); picks[name] = round(best, 2)
+        tone = bool(cfg.get("cover_tone", song.get("cover_tone", True)))   # false: keep the frame's own colours (no duotone for pale UI frames)
+        RC.cover(Image.fromarray(fr), public_name(song), hook, acc, tone=tone, lines=cfg.get("cover_lines") or lines0, sub=sub).save(out, quality=92); picks[name] = round(best, 2)
         print("cover", os.path.basename(out), "from t =", round(best, 2), flush=True)
     core.STATE["clean"] = False
     json.dump(picks, open(os.path.join(od, "picks.json"), "w"), indent=1)

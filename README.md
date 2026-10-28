@@ -425,8 +425,7 @@ condition of the license, just a nice thing to do.
 
 ## Follow along
 
-New songs and videos every week. Every video, with its lyrics and a look at its code, is on
-**[aditazzz.github.io](https://aditazzz.github.io)**.
+Every video, with its lyrics and a look at its code, is on **[aditazzz.github.io](https://aditazzz.github.io)**.
 
 [YouTube](https://www.youtube.com/@adita_zzz?sub_confirmation=1) ·
 [Instagram](https://www.instagram.com/aditazzz.music/) ·

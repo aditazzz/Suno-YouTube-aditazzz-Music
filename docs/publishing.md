@@ -48,9 +48,9 @@ python tools/youtube_upload.py --plan plans/my-release.yaml             # review
 ```
 
 You see every title, file and publish time before anything is sent. Each Short's description links to its full video
-automatically, and the thumbnail, playlist and AI-disclosure flag are set for you. Every upload is recorded in
-`songs/<slug>/build/uploads.json`, so nothing is uploaded twice. YouTube allows about 100 API uploads a day; if a limit
-is hit, run the same command the next day and it continues.
+automatically, and the thumbnail, playlist (full videos only; Shorts stay out of playlists) and AI-disclosure flag are
+set for you. Every upload is recorded in `songs/<slug>/build/uploads.json`, so nothing is uploaded twice. YouTube
+allows about 100 API uploads a day; if a limit is hit, run the same command the next day and it continues.
 
 ### After an upload
 

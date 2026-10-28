@@ -75,7 +75,16 @@ def build(song_dir):
                     ds[:] = [d for d in ds if d != "node_modules"]
                     scene_lines += sum(sum(1 for _ in open(os.path.join(r, f))) for f in fs if f.endswith((".js", ".mjs", ".html")))
                 break
+            for sub, exts in (("remotion", (".ts", ".tsx", ".mjs")), ("people3d", (".py",))):   # a Remotion (React) video and its 3D cast
+                for r, ds, fs in os.walk(os.path.join(song["dir"], sub)):
+                    ds[:] = [d for d in ds if d not in ("node_modules", "public", "out", "cache", "__pycache__")]
+                    scene_lines += sum(sum(1 for _ in open(os.path.join(r, f))) for f in fs if f.endswith(exts))
             bt = json.load(open(os.path.join(b, "beats.json"))); frames = int((bt["duration"] + float(song.get("tail", 0))) * 30) * 2
+            masters = [os.path.join(b, f"master_{x}.mp4") for x in ("16x9", "9x16")]
+            if all(os.path.exists(p) for p in masters):   # rendered outside the studio (e.g. Remotion): count the masters' frames
+                import subprocess
+                frames = sum(int(subprocess.check_output(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=nb_frames",
+                                                          "-of", "default=nw=1:nk=1", p]).decode().strip()) for p in masters)
             words = sum(len(L["words"]) for L in lines)
             numbers = (f"BY THE NUMBERS\n{scene_lines:,} lines of scene code written for this song\n{frames:,} frames rendered (16:9 + 9:16)\n"
                        f"{len(lines)} lyric lines and {words} words synced to the vocal\n{len(secs)} sections, every cut timed to the song\n\n")
@@ -111,10 +120,10 @@ def build(song_dir):
                                  "thumbnail": f"{T} - YouTube thumbnail.jpg", "pinned_comment": pinned,
                                  "synthetic": bool(song.get("ai_music", True)), "category": 10}, "shorts": [], "reels": []}
     short_tags = " ".join("#" + h for h in (yt.get("short_hashtags") or yt.get("hashtags", []))[:5])
-    ig_credit = yt.get("credit_short") or "Every frame of this video is code written by Claude."
+    ig_credit = yt.get("credit_short") or "Every frame of this video is code I made with Claude."
     ig_tail = lambda cap: (f"{cap}\n\n{ig_credit} Full video on YouTube, link in bio 🎵 {artist}"
                            + "\n" * 6 + " ".join("#" + h for h in ig.get("hashtags", [])[:5]) + "\n" * 6
-                           + ", ".join([*ig.get("keywords", []), artist]))
+                           + ", ".join([*ig.get("keywords", []), *([] if artist.lower() in (k.lower() for k in ig.get("keywords", [])) else [artist])]))
     cc = song.get("clip_copy", {})
     for c in clips.get("clips", []):
         cp = cc.get(c["label"], {}); hook = cp.get("hook", yt.get("hook", "").split(".")[0] + ".")
@@ -122,7 +131,7 @@ def build(song_dir):
         if cp.get("yt_description"):
             d = fill_links(cp["yt_description"].strip(), links).replace("{SUB_URL}", sub_url)
         else:
-            d = (f"{hook} {yt.get('credit_short') or 'Every frame is code written by ' + model + '.'}\n\nFull music video: \"{full_name}\" {{FULL_VIDEO_URL}}"
+            d = (f"{hook} {yt.get('credit_short') or 'Every frame is code I made with ' + model + '.'}\n\nFull music video: \"{full_name}\" {{FULL_VIDEO_URL}}"
                  f"\n💬 {yt.get('question', '')} 👇\n🔔 Subscribe so you don't miss the next one: {sub_url}\n\n{short_tags}")
         yt_title = cp.get("yt_title", f"{T} — {c['label']}"); yt_tags = cp.get("yt_tags") or tags
         if dp: yt_title = doompop_title(yt_title); d = doompop_desc(d, yt_title); yt_tags = doompop_tags(yt_tags)
@@ -153,7 +162,10 @@ def write_md(song, pkg):
         for c in items:
             out += [f"## {c['file'] or c['label']}\n", f"From {mmss(c['start'])} to {mmss(c['end'])} of the song.\n",
                     "**YouTube title**\n", block(c["yt_title"]), "**YouTube description**\n", block(c["yt_description"].replace("{FULL_VIDEO_URL}", "on my channel 🎵")),
-                    "**YouTube tags**\n", block(", ".join(c["yt_tags"])), "**Instagram caption**\n", block(c["ig_caption"])]
+                    "**YouTube tags**\n", block(", ".join(c["yt_tags"]))]
+            if c.get("pinned_comment"):   # every Short gets its first comment posted and pinned too
+                out += ["**Pinned comment**\n", block(c["pinned_comment"].replace("{FULL_VIDEO_URL}", "(link to the full video)"))]
+            out += ["**Instagram caption**\n", block(c["ig_caption"])]
     if pkg.get("instagram_full"):
         out += [f"## {pkg['instagram_full']['file']}\n", "**Instagram caption**\n", block(pkg["instagram_full"]["ig_caption"])]
     out += ["## Upload checklist\n",
@@ -167,6 +179,7 @@ def write_md(song, pkg):
             f"- [ ] Website: in the code repo, `python3 tools/release.py {song['slug']} --id <YouTube id> --date <publish time> --push` puts it on aditazzz.github.io (its page, the home page, the sitemap, the share card and the README wall).",
             "- [ ] Shorts: keep under 60 s (Content ID blocks longer Shorts with claims), set **Related video** → the full video (desktop Studio).",
             "- [ ] Shorts: pick the cover frame at the start of the clip (the hero clips open on it).",
+            "- [ ] Shorts: post and pin each Short's first comment (below), and leave Shorts out of every playlist.",
             "- [ ] Instagram: post the under-3-min version as the full Reel (only ≤3:00 is recommended to non-followers).",
             "- [ ] Instagram: try 1–2 clips as Trial Reels first; invite relevant accounts as collaborators; set the cover image.",
             "- [ ] Space releases out: 3–5 vertical clips a week, one long video every 1–2 weeks (see PLAYBOOK.md)."]

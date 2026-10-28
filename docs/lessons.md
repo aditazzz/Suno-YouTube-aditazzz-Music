@@ -44,8 +44,9 @@ platforms change often, so check them again before you rely on them (sources at 
   (`studio/brand.py`): the same photo chip, headline size and italic line on every video, with only the frame, the
   words and one accent color changing. A song that needs something special gets it added to the brand layer, not a
   hand-made card.
-- **Titles: no parentheses.** `Name - Claude Opus 5.5 Music Video` keeps the model name visible where long titles get
-  cut off. The funny hook goes on the thumbnail instead.
+- **Titles: `Name (hook) - Claude Opus 5.5 Music Video`.** The hook in parentheses tells someone who has never heard
+  the song what it's about ("Please Hold (I'd Rather Chew Glass Than Call)"), and the title always names the model
+  that made the video. Covers and the title pill use the name alone (`config.public_name`).
 
 ## Shorts and Reels
 
@@ -101,6 +102,9 @@ platforms change often, so check them again before you rely on them (sources at 
   next render can run out of disk halfway through a chunk.
 - **Compare videos by stream, not md5.** Metadata can change on the way (some tools add a Content Credentials
   manifest, for example) while the picture and sound are identical. Check frame counts and `ffmpeg -f streamhash`.
+- **Overlay on standard range.** A browser-rendered master (Remotion writes full-range `yuvj420p`) made the covers
+  and hooks laid over it come out darker than the same images on their own. `studio/cuts.py` converts the video to
+  standard range (`format=yuv420p`) before anything goes on top.
 - **Contact sheets: sample exact frames.** `fps=1/8` gives the frame about 4 seconds after each label, so when you
   compare two versions, pick frames with `select=eq(n\,N)` or the captions will look out of sync when they aren't.
 
