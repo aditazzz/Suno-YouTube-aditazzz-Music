@@ -35,15 +35,30 @@ platforms change often, so check them again before you rely on them (sources at 
   box, the lyric code fits each line into it (a line that already fits doesn't move), and
   `python -m studio.safezone songs/<slug>` renders every lyric line plus the end card and flags anything outside it.
   `studio.render` won't start a 9:16 render until that check passes. The hook pill is clamped below the top bar too.
+- **Captions never cover the story.** Lyrics go on the dark, empty parts of the frame: never over the characters, the
+  thing the scene is about, or anything mid-action, and their effects (words gathering, exploding, drifting away)
+  stay off it too. The 3D Blocker video picks each line's spot in code: it renders the frame without captions at a
+  few moments while the line is on screen, scores every horizontal band inside the safe frame by brightness, detail
+  and how much of the plot it overlaps (the squares' and the cube's projected outlines), and puts the line in the
+  quietest band. In close-ups the neighbouring rooms dim a little so there's somewhere dark to put the words.
+- **Plain text beats effects over a busy picture.** Particle lettering looked great over a dark sky and fought with the
+  city lights everywhere else: glowing, twinkling dots read as more lights. Plain white text with a soft dark shadow,
+  each word fading in as it's sung, reads over anything.
+- **Captions are their own layer.** Render the picture without lyrics and the lyrics separately (a transparent layer
+  that renders in minutes), then put them together at the end. A caption tweak (size, spot, colour) is a few minutes
+  instead of a full 3D re-render, and a caption-free version of every video comes for free.
 - **Keep hooks playful.** Captions, hooks and thumbnails that pick a fight get attention you don't want.
 - **Thumbnails say what the video is.** "CLAUDE ANIMATED THIS" alone told nobody anything. A short hook about the song,
   one plain line saying what kind of song it is, and a small badge works better. It also needs a bright subject you
   can recognize at phone size: two thin arcs over dark water read as a black square.
 - **Every thumbnail matches the channel.** One video went out with a one-off card (a different badge, a different
   italic) and it looked like someone else's channel next to the others. Now the pipeline only makes the brand cover
-  (`studio/brand.py`): the same photo chip, headline size and italic line on every video, with only the frame, the
-  words and one accent color changing. A song that needs something special gets it added to the brand layer, not a
-  hand-made card.
+  (`studio/brand.py`): the same headline size and "MADE WITH CLAUDE <model>" credit on every video, with only the
+  frame, the words and one accent color changing. A song that needs something special gets it added to the brand
+  layer, not a hand-made card.
+- **Less on the thumbnail.** The first brand covers had a photo chip with the channel name and an italic line about the
+  song ("a love song about…"). Next to the covers that do well in this niche, that was clutter: they show the song's
+  title big, one picture, and at most a small credit. The covers now carry the headline and the model credit only.
 - **Titles: `Name (hook) - Claude Opus 5.5 Music Video`.** The hook in parentheses tells someone who has never heard
   the song what it's about ("Please Hold (I'd Rather Chew Glass Than Call)"), and the title always names the model
   that made the video. Covers and the title pill use the name alone (`config.public_name`).
@@ -98,8 +113,15 @@ platforms change often, so check them again before you rely on them (sources at 
   `-shortest` cuts everything after the song. Pad the audio (`apad`) and cut to the planned length (`-t`) instead.
 - **Cap caches by bytes, not entries.** 600 large float32 sprites came to about 1 GB per render worker.
 - **Kill renders by PID.** `pkill -f <pattern>` and `pgrep -f` loops match the shell that's running them.
-- **Clean up.** A full 16:9 + 9:16 render needs about 1 GB of chunks. Delete them once the final files are safe, or the
-  next render can run out of disk halfway through a chunk.
+- **Clean up the chunks, keep the masters.** A full 16:9 + 9:16 render needs about 1 GB of chunks. Delete them once the
+  final files are safe, or the next render can run out of disk halfway through a chunk. But keep the joined,
+  caption-free master: without it, any later change to the video (even moving a caption) means rendering every frame
+  again. That happened once, and a caption fix turned into a 2½-hour 3D render.
+- **Copy everything back from a temporary machine.** A cloud workspace is wiped when the session ends. Renders done
+  there (masters, caption layers, Blender frames) go back to the project before it ends, not just the finished
+  videos.
+- **Render where it's fastest.** The same three.js frames take about 3 s each on a 2-core cloud machine with software
+  WebGL; a laptop's GPU is many times faster. Long renders belong on the fastest machine available.
 - **Compare videos by stream, not md5.** Metadata can change on the way (some tools add a Content Credentials
   manifest, for example) while the picture and sound are identical. Check frame counts and `ffmpeg -f streamhash`.
 - **Overlay on standard range.** A browser-rendered master (Remotion writes full-range `yuvj420p`) made the covers
@@ -117,6 +139,9 @@ platforms change often, so check them again before you rely on them (sources at 
   and they catch most problems (small text, overlaps, an empty first frame).
 - **Keep the copy in `song.yaml`.** Titles, hooks, descriptions and captions live next to the creative settings, so
   fixing one and regenerating the package updates everything.
+- **Keep asking what can be faster.** After each video, look at what was slow or redone by hand and fix the
+  workflow, not just the video: cache what's expensive, layer changes on top of a render instead of redoing it,
+  make long steps resumable.
 - **Ask for concepts before code.** "Propose three visual concepts for this song" gets more original videos than
   "make a video for this song".
 
