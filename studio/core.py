@@ -434,7 +434,7 @@ def subscribe_pill(img, t, W, H, t0, dur=5.0, line=None):
     a = sstep(t0, t0 + 0.35, t) * (1 - sstep(t0 + dur - 0.4, t0 + dur, t))
     if a <= 0.01: return
     ts = H / 1080; cfg = _cfg(); handle = cfg.get("channel_handle", "@adita_zzz")
-    line = line or f"{handle}  ·  a new song every week"
+    line = line or f"{handle}  ·  songs about tech life"   # never promise a schedule
     pop = 1 + 0.12 * math.exp(-max(0, t - t0) * 8)
     fs = int(46 * ts * pop); bh = int(fs * 1.9); bw = int(text_w("SUBSCRIBE", TH('disp', F_DISP), fs) + bh * 1.55)
     x = int(48 * ts); y = int(44 * ts) - int((1 - ease_out((t - t0) / 0.35)) * 40 * ts)
@@ -469,7 +469,7 @@ def end_screen(img, t, W, H, t0, dur, headline, sub_line=None, accent=None, titl
         blit(img, sp, x, y, WHITE, e, 0.45 * e, glow_color=accent)
         y += hs * 1.35
         fs = int(48 * ts)
-        sub_line = sub_line or "Subscribe for a new song every week"
+        sub_line = sub_line or "Subscribe for more songs about tech life"
         blit(img, sprite(sub_line, TH('body', F_INTER), fs, 6), x, y, WHITE * 0.96, e)
         y += fs * 1.6
         handle = cfg.get("channel_handle", "@adita_zzz")
@@ -489,7 +489,7 @@ def end_screen(img, t, W, H, t0, dur, headline, sub_line=None, accent=None, titl
         while text_w(headline, TH('disp', F_DISP), hs) > fitw: hs -= 4
         blit(img, sprite(headline, TH('disp', F_DISP), hs, 12), W / 2, H * 0.36, WHITE, e, 0.45 * e, glow_color=accent, anchor='c')
         fs = int(52 * ts)
-        blit(img, sprite("new song every week", TH('body', F_INTER), fs, 6), W / 2, H * 0.36 + hs * 1.05, WHITE * 0.95, e, anchor='c')
+        blit(img, sprite("songs about tech life", TH('body', F_INTER), fs, 6), W / 2, H * 0.36 + hs * 1.05, WHITE * 0.95, e, anchor='c')
         lab = f"subscribe {cfg.get('channel_handle', '@adita_zzz')}" if STATE.get("platform") == "youtube" else f"follow {ig}"
         fs3 = int(54 * ts)   # the pill stays left of the like/share column: at most 56% of the width, label >= 40 px
         while text_w(lab, TH('dispb', F_DISPB), fs3) + fs3 * 1.9 > W * 0.56 and fs3 > int(40 * ts): fs3 -= 2
