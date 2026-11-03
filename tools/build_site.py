@@ -286,7 +286,7 @@ def page(*, path, title, desc, image, image_alt, body, ld, og_type="website", ex
 </main>
 <footer class="foot"><div class="wrap">
   <p class="links"><a href="{SUB}">YouTube</a><a href="{SPOTIFY}">Spotify</a><a href="{INSTAGRAM}">Instagram</a><a href="{X}">X</a><a href="{REDDIT}">r/aidoompop</a><a href="{REPO}">GitHub</a><a href="{LINKEDIN}">LinkedIn</a><a href="{LINKTREE}">All links</a></p>
-  <p class="fine">Songs, lyrics and concepts by aditazzz. Videos written in code by Claude. The code is MIT-licensed; the songs, lyrics and artwork are all rights reserved.</p>
+  <p class="fine">Songs, lyrics and concepts by aditazzz. Videos made in code with Claude. The code is MIT-licensed; the songs, lyrics and artwork are all rights reserved.</p>
 </div></footer>
 <script src="/assets/site.js?v={ASSET_V}" defer></script>
 </body>
@@ -521,8 +521,8 @@ def main(out):
   <ol>
     <li><h3>The song</h3><p>I write the lyrics and the concept, then make the track in Suno. A small script notches out the steady hum AI music generators leave under a track.</p></li>
     <li><h3>The sync</h3><p>The vocals are separated, transcribed and lined up with the lyrics, so every sung word gets a timestamp. Beats and sections come from the audio too.</p></li>
-    <li><h3>The scene</h3><p>Claude writes one program per song, a function that returns the picture at any moment of the song. I direct it and review every still.</p></li>
-    <li><h3>The render</h3><p>Every frame is drawn at 30 fps, in 16:9 for YouTube and 9:16 for Shorts. The same pipeline cuts the Shorts, makes the thumbnail (one design on every video), writes the copy, uploads it and adds its page to this site.</p></li>
+    <li><h3>The scene</h3><p>Each video is its own program, made with Claude: Python for the 2D videos, a three.js 3D scene for the newer ones. I direct it like a film and review every still.</p></li>
+    <li><h3>The render</h3><p>Every frame is drawn at 30 fps on my own computer, in 16:9 for YouTube and 9:16 for Shorts. Captions are a separate layer that goes on the quiet part of the picture, so every video also exists without them. The same pipeline cuts the Shorts, makes the thumbnail (one design on every video), writes the copy, uploads it and adds its page to this site.</p></li>
   </ol>
   <p class="more">All of it is open source: <a href="{REPO}">the pipeline and every scene on GitHub</a>.</p>
 </section>"""
