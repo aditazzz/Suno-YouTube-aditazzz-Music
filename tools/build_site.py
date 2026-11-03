@@ -9,7 +9,9 @@ usage:
   python3 tools/build_site.py ../aditazzz.github.io          # writes the site into that folder (the Pages repo)
 
 Video dates and lengths live in site/videos.json (slug -> YouTube id, upload date, length in seconds). Add a line there
-when a video goes public; songs without an entry are left off the site.
+when a video goes public; songs without an entry are left off the site. The home page's other two tabs come from
+site/shorts.json (the public Shorts, newest first; their covers in site/shorts/<id>.jpg) and site/behind.json (the "Behind the code" videos: how they're made);
+tools/add_video.py adds to either.
 """
 import ast, html, io, json, keyword, os, re, shutil, sys, textwrap, tokenize
 
@@ -363,6 +365,10 @@ def main(out):
     for f in ("site.css", "site.js", "favicon.svg", "aditazzz.jpg"):
         shutil.copy(os.path.join(ROOT, "site", f), os.path.join(out, "assets" if f != "favicon.svg" else "", f))
     shutil.copy(os.path.join(ROOT, "docs", "img", "wall.jpg"), os.path.join(out, "assets", "wall.jpg"))
+    short_covers = set()                                   # site/shorts/<id>.jpg: each Short's own cover, 360x640
+    if os.path.isdir(os.path.join(ROOT, "site", "shorts")):
+        shutil.copytree(os.path.join(ROOT, "site", "shorts"), os.path.join(out, "assets", "shorts"))
+        short_covers = {f[:-4] for f in os.listdir(os.path.join(ROOT, "site", "shorts")) if f.endswith(".jpg")}
     from PIL import Image
     global CARD_V
     card_path = os.path.join(out, CARD.lstrip("/"))
@@ -461,6 +467,22 @@ def main(out):
     # ---- home
     cards = "".join(f"""<li><a href="/videos/{s['slug']}/"><img src="/videos/{s['slug']}/thumbnail.jpg" alt="{esc(s['title'])}" width="960" height="540" loading="{'eager' if i < 3 else 'lazy'}">
       <span class="t">{esc(s['title'])}</span><span class="m">{mmss(s['secs'])} · {s['lines']:,} lines of code</span></a></li>""" for i, s in enumerate(songs))
+    shorts = json.load(open(os.path.join(ROOT, "site", "shorts.json"), encoding="utf-8"))
+    behind = json.load(open(os.path.join(ROOT, "site", "behind.json"), encoding="utf-8"))
+    titles = {s["slug"]: s["title"] for s in songs}
+    # Shorts covers load only once the Shorts tab is opened (data-src): the Short's own cover from site/shorts/ when
+    # there is one, else YouTube's frame grab
+    def short_img(i):
+        return f"/assets/shorts/{i}.jpg" if i in short_covers else f"https://i.ytimg.com/vi/{i}/hqdefault.jpg"
+    short_cards = "".join(f"""<li><a href="https://www.youtube.com/shorts/{x['id']}"><img data-src="{short_img(x['id'])}" alt="" width="360" height="640">
+      <span class="t">{esc(x['title'])}</span></a>{f'<a class="m from" href="/videos/{x["song"]}/">from {esc(titles[x["song"]])}</a>' if x.get("song") in titles else ''}</li>""" for x in shorts)
+    if behind:
+        behind_html = '<ul class="grid">' + "".join(f"""<li><a href="https://youtu.be/{b['id']}"><img data-src="https://i.ytimg.com/vi/{b['id']}/hqdefault.jpg" alt="" width="960" height="540">
+      <span class="t">{esc(b['title'])}</span><span class="m">{mmss(b['secs']) + ' · ' if b.get('secs') else ''}{esc(b.get('blurb', ''))}</span></a></li>""" for b in behind) + '</ul>'
+    else:
+        behind_html = (f'<div class="empty"><p class="big">The first one is on its way.</p><p>Until then: '
+                       f'<a href="#how">how a video gets made</a>, <a href="{REPO}">every line of code on GitHub</a>, or '
+                       f'<a href="{SUB}">subscribe on YouTube</a> to catch it when it lands.</p></div>')
     home_title = "aditazzz: AI music & music videos made in code with Claude"
     home_desc = (f"aditazzz makes AI-assisted music about technology, AI, coding, philosophy and the human experience. "
                  f"{len(songs)} music videos, every frame animated in code with Claude.")
@@ -479,7 +501,22 @@ def main(out):
   {socials()}
   <dl class="stats"><div><dt>Videos</dt><dd>{len(songs)}</dd></div><div><dt>Lines of code</dt><dd>{total:,}</dd></div><div><dt>Video editors</dt><dd>0</dd></div></dl>
 </div><img class="me" src="/assets/aditazzz.jpg" alt="Portrait of aditazzz" width="480" height="480"></section>
-<section id="videos" class="wrap"><h2 class="h">The videos</h2><ul class="grid">{cards}</ul></section>
+<div class="wrap shelf">
+  <h2 class="h">The videos</h2>
+  <div class="tabs" role="tablist" aria-label="Videos" hidden>
+    <button role="tab" id="tab-videos" aria-controls="videos" aria-selected="true">Music videos <span>{len(songs)}</span></button>
+    <button role="tab" id="tab-shorts" aria-controls="shorts" aria-selected="false" tabindex="-1">Shorts <span>{len(shorts)}</span></button>
+    <button role="tab" id="tab-behind" aria-controls="behind" aria-selected="false" tabindex="-1">Behind the code{f' <span>{len(behind)}</span>' if behind else ' <span class="new">new</span>'}</button>
+  </div>
+  <section id="videos" class="panel" role="tabpanel" aria-labelledby="tab-videos"><h3 class="ph">Music videos</h3><ul class="grid">{cards}</ul></section>
+  <section id="shorts" class="panel" role="tabpanel" aria-labelledby="tab-shorts"><h3 class="ph">Shorts</h3>
+    <p class="intro">One hook from a song, under a minute. Each one links back to its full music video.</p>
+    <ul class="grid shorts">{short_cards}</ul>
+    <p class="more"><a href="{YT}/shorts">All Shorts on YouTube</a></p></section>
+  <section id="behind" class="panel" role="tabpanel" aria-labelledby="tab-behind"><h3 class="ph">Behind the code</h3>
+    <p class="intro">How the videos get made: the prompts, the pipeline, what broke and how it got fixed. Real sessions, real code.</p>
+    {behind_html}</section>
+</div>
 <section id="how" class="wrap how"><h2 class="h">How a video gets made</h2>
   <ol>
     <li><h3>The song</h3><p>I write the lyrics and the concept, then make the track in Suno. A small script notches out the steady hum AI music generators leave under a track.</p></li>

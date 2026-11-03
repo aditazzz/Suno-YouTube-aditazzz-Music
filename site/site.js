@@ -1,4 +1,4 @@
-/* aditazzz.github.io: the video player and the code panel.
+/* aditazzz.github.io: the home page's tabs, the video player and the code panel.
  *
  * 1. The video loads as a thumbnail and only becomes a YouTube player when someone clicks it (fast pages, no
  *    tracking until then). It uses the YouTube IFrame Player API so the page knows when the video is really playing.
@@ -9,6 +9,32 @@
  */
 (function () {
   "use strict";
+
+  // ---- home: the tabs (music videos, Shorts, behind the code). Covers from YouTube load only when their tab opens.
+  const tablist = document.querySelector(".tabs");
+  if (tablist) {
+    const tabs = [...tablist.querySelectorAll("[role=tab]")];
+    const panels = tabs.map((t) => document.getElementById(t.getAttribute("aria-controls")));
+    function show(i, focus) {
+      tabs.forEach((t, j) => {
+        const on = i === j;
+        t.setAttribute("aria-selected", on); t.tabIndex = on ? 0 : -1; panels[j].hidden = !on;
+      });
+      panels[i].querySelectorAll("img[data-src]").forEach((img) => { img.src = img.dataset.src; img.removeAttribute("data-src"); });
+      if (focus) tabs[i].focus();
+    }
+    document.documentElement.classList.add("js-tabs");
+    tablist.hidden = false;
+    tabs.forEach((t, i) => {
+      t.addEventListener("click", () => { show(i); history.replaceState(null, "", i ? "#" + panels[i].id : location.pathname); });
+      t.addEventListener("keydown", (e) => {
+        const k = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+        if (k) { e.preventDefault(); const n = (i + k + tabs.length) % tabs.length; show(n, true); }
+      });
+    });
+    const start = panels.findIndex((p) => "#" + p.id === location.hash);
+    show(start > 0 ? start : 0);
+  }
 
   const term = document.querySelector("[data-lock]");
   const ytButton = document.querySelector(".yt[data-id]");
