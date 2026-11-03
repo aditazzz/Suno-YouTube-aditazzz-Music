@@ -1,0 +1,7 @@
+{"clips": [
+ {"kind": "short", "label": "moon --capture", "start": 0.0, "end": 33.1333, "file": "The Promptress - Short 1 (moon --capture, 33s).mp4"},
+ {"kind": "short", "label": "hex hex execute", "start": 72.3, "end": 106.4667, "file": "The Promptress - Short 2 (hex hex execute, 34s).mp4"},
+ {"kind": "short", "label": "terms and conditions", "start": 213.7667, "end": 268.4, "file": "The Promptress - Short 3 (terms and conditions, 55s).mp4"},
+ {"kind": "short", "label": "2-41 cut", "start": 0.0, "end": 161.1, "file": "The Promptress - Instagram 9x16 (under 3 min).mp4"}
+],
+ "edit": {"file": "The Promptress - Instagram 9x16 (under 3 min).mp4", "segments": [[0.0, 106.4667], [213.7667, 268.4]], "duration": 161.1}}

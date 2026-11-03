@@ -18,6 +18,28 @@ SONG = 206.28; TAIL = 6.72; DUR = SONG + TAIL          # the audio stops dead at
 PILL_AT, PILL_DUR = 102.35, 4.6                         # right after the first chorus (16:9 only)
 C.THEME.update(red=C.hexc("ff6a1a"))
 
+# 9:16 captions are their own layer (studio/caplayer.py): the 9:16 master is rendered caption-free (?nocap=1) and the
+# captions are drawn here, plain white, on the band the planner picked (web/data/caption_place_9x16.json).
+# PH_CAPTIONS=0 renders the caption-free version.
+from studio import caplayer
+CAPTIONS = os.environ.get("PH_CAPTIONS", "1") != "0"
+CAP_SKIP = {0, 15, 31, 32, 33, 34, 40}        # shown in the world instead: the phone screen (0), the tower screen (15, 40), the receipt (31-34)
+CAP_ENDS = {30: 134.75}                        # gone before the bridge (and the Instagram cut's join)
+CAP_REDACT = ["comcast"]                       # sung, never shown
+CAP_FIX = {7: 0.58, 8: 0.157, 16: 0.135, 18: 0.135, 19: 0.795, 27: 0.157, 45: 0.773, 46: 0.795}
+                                               # checked by eye: close-ups where the darkest band is the subject (the phone,
+                                               # her face in the salon split, the robot's chest), so the line sits at an edge
+_CAP = {}
+def captions_9x16(fr, t, W, H):
+    if not _CAP:
+        import json
+        _CAP["lines"] = json.load(open(os.path.join(HERE, "web", "data", "timed.json")))
+        _CAP["place"] = caplayer.load_place(os.path.join(HERE, "web", "data", "caption_place_9x16.json"))
+        for i, y in CAP_FIX.items(): _CAP["place"][i] = {"y": y}
+    out = fr.astype(np.float32) / 255
+    if not caplayer.draw(out, t, W, H, _CAP["lines"], _CAP["place"], skip=CAP_SKIP, ends=CAP_ENDS, redact=CAP_REDACT): return fr
+    return (np.clip(out, 0, 1) * 255 + 0.5).astype(np.uint8)
+
 
 class Reader:
     """sequential-friendly frame reader for one master (seeks only when asked for a frame out of order)."""
@@ -77,7 +99,17 @@ def render_frame(t, W=1920, H=1080, fi=None):
         bl = cv2.GaussianBlur(fr, (0, 0), 1.0)
         fr = cv2.addWeighted(fr, 1.35, bl, -0.35, 0)                    # a touch of sharpening after the upscale
     if C.STATE["clean"]: return fr
+    if W < H and CAPTIONS and t < SONG: fr = captions_9x16(fr, t, W, H)
     if not (W >= H and PILL_AT - 0.5 <= t <= PILL_AT + PILL_DUR + 0.5): return fr   # no 2D layer here: skip the float pass
     out = fr.astype(np.float32) / 255
     C.subscribe_pill(out, t, W, H, PILL_AT, PILL_DUR, line="@adita_zzz  ·  songs about tech life")
     return (np.clip(out, 0, 1) * 255 + 0.5).astype(np.uint8)
+
+
+if __name__ == "__main__":     # python3 songs/please-hold/scene.py plan  -> web/data/caption_place_9x16.json (from the caption-free 9:16 frames)
+    import json, yaml
+    d = os.path.join(HERE, "build", "v"); src = caplayer._Src(d if os.path.isdir(d) else os.path.join(HERE, "build", "master_9x16.mp4"))
+    lines = json.load(open(os.path.join(HERE, "web", "data", "timed.json"))); song = yaml.safe_load(open(os.path.join(HERE, "song.yaml")))
+    avoid = [(c["start"], c["start"] + 3.0, 0.10, float(c.get("hook_y", song.get("hook_y", 0.135))) + 0.17) for c in song.get("clips", []) if c.get("hook")]
+    res = caplayer.plan(src, lines, 1080, 1920, skip=CAP_SKIP, ends=CAP_ENDS, avoid=avoid)
+    out = os.path.join(HERE, "web", "data", "caption_place_9x16.json"); json.dump({str(k): v for k, v in res.items()}, open(out, "w"), indent=1); print("wrote", out)

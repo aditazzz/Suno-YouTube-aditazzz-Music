@@ -94,8 +94,9 @@ def concat(song_dir, fmt, step=300):
 def finals(song, fmt):
     os.makedirs(song["out_dir"], exist_ok=True); b = song["build"]
     vid = os.path.join(b, f"video_{fmt}.mp4"); T = song["title"]
-    if fmt == "16x9":
-        out = os.path.join(song["out_dir"], f"{T} - YouTube 16x9.mp4"); vb = ["-b:v", "12M", "-maxrate", "16M", "-bufsize", "24M"]
+    if fmt.startswith("16x9"):   # 1080p, or a native 1440p / 4K master (YouTube gives those its better codec)
+        rate = {"16x9": ("12M", "16M", "24M"), "16x9_1440": ("14M", "20M", "30M"), "16x9_4k": ("35M", "45M", "70M")}[fmt]
+        out = os.path.join(song["out_dir"], f"{T} - YouTube 16x9.mp4"); vb = ["-b:v", rate[0], "-maxrate", rate[1], "-bufsize", rate[2]]
     else:
         out = os.path.join(song["out_dir"], f"{T} - Instagram 9x16 full.mp4"); vb = ["-b:v", "4M", "-maxrate", "6M", "-bufsize", "10M"]
     tail = float(song.get("tail", 0))   # silent seconds after the song for the end screen

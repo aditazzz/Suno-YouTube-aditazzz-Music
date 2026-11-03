@@ -1,0 +1,90 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "",
+  "first_word_t": 6.501587301587302,
+  "e": 6.501587301587302,
+  "kind": "intro"
+ },
+ {
+  "name": "INTRO",
+  "s": 6.501587301587302,
+  "first_line": "Once upon a midnight query",
+  "first_word_t": 6.399999618530273,
+  "e": 33.34385487528345,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 33.34385487528345,
+  "first_line": "Grandma had a book of spells",
+  "first_word_t": 33.27999997138977,
+  "e": 76.37043083900227,
+  "kind": "verse"
+ },
+ {
+  "name": "CH1",
+  "s": 76.37043083900227,
+  "first_line": "Hex, hex, execute",
+  "first_word_t": 76.96615387843205,
+  "e": 92.67083900226757,
+  "kind": "chorus"
+ },
+ {
+  "name": "POST1",
+  "s": 92.67083900226757,
+  "first_line": "Abracadabra",
+  "first_word_t": 92.23999993006389,
+  "e": 106.90467120181405,
+  "kind": "post"
+ },
+ {
+  "name": "V2",
+  "s": 106.90467120181405,
+  "first_line": "Used to burn a little sage",
+  "first_word_t": 106.58666666348775,
+  "e": 151.5334240362812,
+  "kind": "verse"
+ },
+ {
+  "name": "CH2",
+  "s": 151.5334240362812,
+  "first_line": "Hex, hex, execute",
+  "first_word_t": 152.87999987602234,
+  "e": 169.7843083900227,
+  "kind": "chorus"
+ },
+ {
+  "name": "POST2",
+  "s": 169.7843083900227,
+  "first_line": "Abracadabra",
+  "first_word_t": 169.99999997019768,
+  "e": 175.86793650793652,
+  "kind": "post"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 175.86793650793652,
+  "first_line": "I asked it for a prophecy",
+  "first_word_t": 176.4800000190735,
+  "e": 214.22730158730158,
+  "kind": "bridge"
+ },
+ {
+  "name": "FINAL",
+  "s": 214.22730158730158,
+  "first_line": "Now it's conjuring me too",
+  "first_word_t": 214.1599998474121,
+  "e": 236.42557823129252,
+  "kind": "chorus"
+ },
+ {
+  "name": "OUTRO",
+  "s": 236.42557823129252,
+  "first_line": "I asked the dark to answer me",
+  "first_word_t": 237.59999990463257,
+  "e": 268.4,
+  "kind": "outro"
+ }
+]

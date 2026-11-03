@@ -1,0 +1,62 @@
+title: "The Promptress"
+audio: "Abracadabra Autocomplete (clean).wav"   # hum notched by studio.clean (850 + 900 Hz); original: Abracadabra Autocomplete.wav
+folder: "The Promptress"
+model_credit: Claude Opus 5.5
+ai_music: true
+accent: "c9a46a"
+youtube:
+  doompop: true
+  title: "The Promptress: a Halloween Song About AI - Claude Opus 5.5 Music Video"
+  intro: "🎃 Happy Halloween! I tried something new with this one, and I'm sharing it as a work in progress."
+  hook: >-
+    Abracadabra, autocomplete. 🌕 A witch types a little line and the moon finishes it, until it starts finishing her.
+    A spellbound Halloween song about AI: asking the machine for your future and finding out it was writing yours. 🧙‍♀️
+  story: >-
+    How it was made: I went out and tried to photograph and film the full moon myself. Every world in this video lives
+    inside those shots: the moon is my moon, cut out of my own photos and footage, then turned into spellbooks, doors,
+    mirrors and portals with code I made with Claude Opus 5.5, every cut timed to the song. There's a lot I want to take
+    further with this concept, but I'd rather show you where I am in the learning than wait for perfect. Follow along
+    for the next version.
+  question: "If you could ask the moon one thing, what would you prompt?"
+  pause_line: "⏸ Pause anywhere: every moon in this video comes from my own photos and footage."
+  chapters: {INTRO: "Once upon a midnight query", V1: "Grandma's book of spells", CH1: "Hex, hex, execute", POST1: "Abracadabra, autocomplete",
+             V2: "Now it reads me back", CH2: "Hex, hex, execute (again)", BRIDGE: "I asked it for a prophecy", FINAL: "Who's enchanting who",
+             OUTRO: "Terms and conditions apply"}
+  made_with: |-
+    Song: Suno (lyrics, concept and direction by aditazzz)
+    Moon photos and footage: aditazzz
+    Animation, compositing and editing: Claude Opus 5.5, every frame rendered from code
+  numbers: |-
+    3,510 lines of scene code written for this video
+    8,052 frames rendered at 1080p
+    23 scenes, every cut timed to the song
+  credit_short: "Every moon in it is one I photographed and filmed myself, turned into worlds with code I made with Claude Opus 5.5."
+  short_pinned: |-
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    Happy Halloween 🎃 Every moon in this is one I filmed myself.
+
+    If you could ask the moon one thing, what would you prompt? 👇
+    🔔 Subscribe: {SUB_URL}
+  hashtags: [HalloweenSong, witch, darkpop]
+  short_hashtags: [halloween, witch, ClaudeAI, aimusic, darkpop]
+  tags: [the promptress, halloween song, halloween 2026, witch song, abracadabra autocomplete, hex hex execute, ai witch,
+         song about ai, full moon, moon photography, i filmed the moon, witchy music, dark pop, aditazzz,
+         ai music video, made with claude, claude opus 5.5, music video made with code]
+  pinned: >-
+    Happy Halloween 🎃 I tried something new: every moon in this video is one I photographed and filmed myself, turned
+    into worlds with code I made with Claude Opus 5.5 🌕 It's a work in progress and I want to keep pushing the concept.
+    If you could ask the moon one thing, what would you prompt?
+clip_copy:
+  "moon --capture":
+    hook: "I tried to film the full moon. Then I typed moon --capture. 🌕"
+    yt_title: "moon --capture 🌕 The Promptress, a Halloween song about AI"
+  "hex hex execute":
+    hook: "Hex, hex, execute. Abracadabra, autocomplete. 🧙‍♀️"
+    yt_title: "Hex, hex, execute 🧙‍♀️ The Promptress"
+  "terms and conditions":
+    hook: "Your wish has been granted. Terms and conditions apply. 🎃"
+    yt_title: "Your wish has been granted. Terms and conditions apply 🎃"
+  "2-41 cut":
+    hook: "A witch prompts the moon, until the moon starts prompting her. 🌕"
+    yt_title: "The Promptress 🎃 a Halloween song about AI, the 2:41 cut"

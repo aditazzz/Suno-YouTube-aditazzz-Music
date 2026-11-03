@@ -14,7 +14,7 @@ youtube:
 
     What's the most embarrassing thing of yours that's probably in a training set? 👇
 
-    🔔 New song every week: {SUB_URL}
+    🔔 Subscribe: {SUB_URL}
   hook: >-
     They scraped my blog from 2009. My terrible poems. My cat's full name. I never clicked accept, and the
     model kept learning anyway. A 90s rap-rock protest anthem for everyone whose whole personality is now a vector. ✊
@@ -74,7 +74,7 @@ clip_copy:
   "the finale":
     yt_title: "I said no. It kept LEARNING. 🎨"
     hook: "\"I said no, but the model kept... LEARNING!\""
-    ig: "I said no, but the model kept... LEARNING! Then we spray-painted the whole wall 🎨 Unsubscribe from them. Follow for a new song every week."
+    ig: "I said no, but the model kept... LEARNING! Then we spray-painted the whole wall 🎨 Unsubscribe from them. Follow for more."
 
 accent: "e3242f"
 edit_hook: "When you said no but the model kept learning"

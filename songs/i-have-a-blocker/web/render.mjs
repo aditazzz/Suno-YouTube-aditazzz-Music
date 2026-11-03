@@ -11,7 +11,7 @@ await new Promise((r) => srv.listen(0, r));
 const browser = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--enable-webgl'] });
 const page = await browser.newPage({ viewport: { width: W, height: H } });
 page.on('console', (m) => { const s = m.text(); if (!s.includes('GL Driver')) console.log('page:', s); }); page.on('pageerror', (e) => console.log('PAGE ERROR', e.message));
-await page.goto(`http://localhost:${srv.address().port}/index.html?w=${W}&h=${H}${process.env.CLEAN ? '&clean=1' : ''}`);
+await page.goto(`http://localhost:${srv.address().port}/index.html?w=${W}&h=${H}${process.env.CLEAN ? '&clean=1' : ''}${process.env.Q ? '&' + process.env.Q : ''}`);
 await page.waitForFunction(() => window.ready, null, { timeout: 300000 });
 const grab = async (t) => Buffer.from((await page.evaluate((tt) => window.renderAt(tt), t)).split(',')[1], 'base64');
 if (mode === 'stills') {
@@ -19,7 +19,9 @@ if (mode === 'stills') {
   for (const ts of rest) { const t0 = Date.now(); const b = await grab(+ts); fs.writeFileSync(path.join(out, `s_${(+ts).toFixed(2)}.jpg`), b); console.log('still', ts, Date.now() - t0, 'ms'); }
 } else {
   const t0 = +rest[0], t1 = +rest[1], fps = +(rest[2] || 30);
-  const ff = spawn('ffmpeg', ['-v', 'error', '-y', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'mjpeg', '-i', '-', '-c:v', 'libx264', '-preset', 'medium', '-crf', '14', '-pix_fmt', 'yuv420p', out], { stdio: ['pipe', 'inherit', 'inherit'] });
+  const alpha = /caps=1/.test(process.env.Q || '');   // the caption layer: PNG frames into a .mov that keeps transparency
+  const ff = spawn('ffmpeg', ['-v', 'error', '-y', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', alpha ? 'png' : 'mjpeg', '-i', '-',
+    ...(alpha ? ['-c:v', 'png', '-pix_fmt', 'rgba'] : ['-c:v', 'libx264', '-preset', 'medium', '-crf', '14', '-pix_fmt', 'yuv420p']), out], { stdio: ['pipe', 'inherit', 'inherit'] });
   const n0 = Math.round(t0 * fps), n1 = Math.round(t1 * fps); const tstart = Date.now();
   for (let n = n0; n < n1; n++) { const b = await grab(n / fps); if (!ff.stdin.write(b)) await new Promise((r) => ff.stdin.once('drain', r));
     if ((n - n0) % 30 === 0) console.log(`frame ${n} (${((n - n0 + 1) / ((Date.now() - tstart) / 1000)).toFixed(2)} fps)`); }

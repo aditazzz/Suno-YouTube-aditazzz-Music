@@ -10,11 +10,12 @@ usage (from the studio folder), to re-make covers in bulk:
   python3 -m studio.brand --out "<folder>"     # default: <MUSIC_DIR>/_New Brand Covers
 
 The picture underneath is the video's own frame, framed like the original cover (song.yaml ctx_/thumb_ shift,
-shift_y, scale and dark). The layer on top is always the same:
-  1. the lockup chip, top-left: photo in a green ring, "aditazzz", "</> CLAUDE ANIMATED THIS"
-  2. the headline: Anton, black outline, first line(s) ink, last line in the accent (neon green unless the song picks
+shift_y, scale and dark). The layer on top is always the same (since Oct 31 2026):
+  1. the headline: Anton, black outline, first line(s) ink, last line in the accent (neon green unless the song picks
      red, amber, yellow or ice to suit its frame; never pink)
-  3. the description: Instrument Serif italic, one line
+  2. the credit under it: "Made with Claude Opus 5.5" (JetBrains Mono; `model` in brand_covers.yaml / song.yaml)
+  (optional) tag: a small series label above the headline.
+The old layout (photo chip "aditazzz" + "</> CLAUDE ANIMATED THIS" top-left, italic description) is LOCKUP=1.
 What the cover says comes from song.yaml (thumb_lines, thumb_sub, brand_accent); an entry in brand_covers.yaml
 overrides it (and covers videos that have no song folder).
 """
@@ -52,6 +53,11 @@ TAG_H = 96
 BOTTOM = 56              # the text block ends this far above the bottom edge
 SUB_SIZE = 88            # description: same size on every cover (readable at phone size)
 MX, MY = 64, 56            # lockup position: the same on every cover
+# Oct 31 2026: a cover is the headline + a "Made with Claude <model>" credit under it; no photo chip, no italic line.
+# brand_covers.yaml / song.yaml `model` sets the model (e.g. "Claude Fable 5.1"). LOCKUP=1 brings the old chip back.
+MODEL = "Claude Opus 5.5"
+LOCKUP = os.environ.get("LOCKUP") == "1"
+CREDIT_SIZE = 60
 
 
 def F(name, size): return ImageFont.truetype(os.path.join(FONTS, name), int(size))
@@ -227,8 +233,8 @@ def rich_text(d, xy, text, f, fc, upper, chip=False, **kw):
             x += f.getlength(t) + _gap(f)
 
 
-def headline(im, lines, sub, side, top, accent=None, tag=None):
-    """Anton lines (last one in the accent) + italic description. `backticks` mark commands, set in mono."""
+def headline(im, lines, sub, side, top, accent=None, tag=None, credit=None, ink=None, credit_col=None):
+    """Anton lines (last one in the accent) + italic description, or the mono credit line. `backticks` mark commands."""
     # one size for every cover: long hooks get another line in brand_covers.yaml, never a smaller font
     lines = [l.rstrip(" .") for l in lines]                 # no trailing periods
     colw = W * 0.64
@@ -239,21 +245,23 @@ def headline(im, lines, sub, side, top, accent=None, tag=None):
         if rich_w(l, f, fc, True, True) > colw:
             print(f"  WARNING: headline line too long, split it in brand_covers.yaml: {l!r}", flush=True)
     sub = sub.rstrip(" .") if sub else sub                 # no trailing period on the description either
-    fs = F("InstrumentSerif-Italic.ttf", SUB_SIZE) if sub else None
-    fsc = _code_font(fs, "JBMono-400.ttf", SUB_SIZE) if sub else None
+    if credit: sub = credit
+    SZ = CREDIT_SIZE if credit else SUB_SIZE
+    fs = (F("JBMono-700.ttf", SZ) if credit else F("InstrumentSerif-Italic.ttf", SZ)) if sub else None
+    fsc = _code_font(fs, "JBMono-400.ttf", SZ) if sub else None
     subs = [sub] if sub else []
     if fs and rich_w(sub, fs, fsc, False) > W - 2 * MX - 8:     # descriptions stay on one line unless wider than the cover
         wd = sub.split()
         k = min(range(1, len(wd)), key=lambda k: max(rich_w(" ".join(wd[:k]), fs, fsc, False), rich_w(" ".join(wd[k:]), fs, fsc, False)))
         subs = [" ".join(wd[:k]), " ".join(wd[k:])]
-    slh = int(SUB_SIZE * 1.12)
+    slh = int(SZ * 1.12)
     blockw = max([rich_w(l, f, fc, True, True) + sw for l in lines] + [rich_w(t, fs, fsc, False) for t in subs])
     x0 = MX + 4 if side == "left" else int(W - MX - blockw)
     # the text block sits on one fixed bottom line on every cover (lockup fixed at the top)
-    block_h = len(lines) * lh + (len(subs) * slh + 10 if subs else 0)
+    block_h = len(lines) * lh + (len(subs) * slh + 10 + (18 if credit else 0) if subs else 0)
     y = max(top + (34 + TAG_H if tag else 34), H - BOTTOM - block_h)
     last = y + (len(lines) - 1) * lh + f.getmetrics()[0] + sw
-    ys = last + 6 - (fs.getbbox("Ag")[1] if fs else 0)
+    ys = last + (24 if credit else 6) - (fs.getbbox("Ag")[1] if fs else 0)
     shd = Image.new("L", im.size, 0); ds = ImageDraw.Draw(shd)
     for i, l in enumerate(lines):
         rich_text(ds, (x0 + sw, y + i * lh + sw * 1.5), l, f, fc, True, True, fill=215, stroke_width=sw, stroke_fill=215)
@@ -263,8 +271,8 @@ def headline(im, lines, sub, side, top, accent=None, tag=None):
     im.paste((0, 0, 0), (0, 0), shd.filter(ImageFilter.GaussianBlur(sw * 1.4)))
     d = ImageDraw.Draw(im)
     for i, l in enumerate(lines):
-        rich_text(d, (x0, y + i * lh), l, f, fc, True, True, fill=(accent or GREEN) if i == len(lines) - 1 else INK, stroke_width=sw, stroke_fill=OUTLINE)
-    for j, t in enumerate(subs): rich_text(d, (x0, ys + j * slh), t, fs, fsc, False, fill=WHITE, stroke_width=4, stroke_fill=OUTLINE)
+        rich_text(d, (x0, y + i * lh), l, f, fc, True, True, fill=(accent or GREEN) if i == len(lines) - 1 else (ink or INK), stroke_width=sw, stroke_fill=OUTLINE)
+    for j, t in enumerate(subs): rich_text(d, (x0, ys + j * slh), t, fs, fsc, False, fill=credit_col or WHITE, stroke_width=4, stroke_fill=OUTLINE)
     if tag: draw_tag(im, tag.upper(), x0 + 4, y - TAG_H + 6, accent or GREEN)
 
 
@@ -284,10 +292,14 @@ def draw_tag(im, tag, x, y, accent):
     im.paste(chip, (int(x), int(y)), chip)
 
 
-def brand_cover(picture, lines, sub=None, side="left", accent=None, tag=None):
+def brand_cover(picture, lines, sub=None, side="left", accent=None, tag=None, model=None, ink=None, credit_col=None):
+    """ink: color of the headline's first line(s) (default the brand ink); credit_col: the credit line's color (default white)."""
     im = picture.convert("RGB").resize((W, H), Image.LANCZOS)
-    bottom = lockup(im)
-    if lines: headline(im, lines, sub, side, bottom, accent, tag)
+    if LOCKUP:                                           # the old layout: photo chip + italic description
+        bottom = lockup(im)
+        if lines: headline(im, lines, sub, side, bottom, accent, tag)
+        return im
+    if lines: headline(im, lines, None, side, MY, accent, tag, credit=f"Made with {model or MODEL}", ink=ink, credit_col=credit_col)
     return im
 
 
@@ -311,7 +323,8 @@ def song_cover(song, frame, slug=None, c=None):
         print("  WARNING: no thumb_lines in song.yaml (or brand_covers.yaml): the cover has no headline", flush=True)
     side = c.get("side", song.get("thumb_hook_side", "left"))
     accent = ACCENTS[c.get("accent", song.get("brand_accent", "green"))]
-    return brand_cover(pic, lines, c.get("sub", song.get("thumb_sub")), side, accent, c.get("tag", song.get("brand_tag")))
+    return brand_cover(pic, lines, c.get("sub", song.get("thumb_sub")), side, accent, c.get("tag", song.get("brand_tag")),
+                       c.get("model", song.get("model_credit")))
 
 
 # ---------------------------------------------------------------- driver
@@ -320,7 +333,7 @@ def build(slug, c, out_dir):
     sd = os.path.join(ROOT, "songs", slug)
     if os.path.isdir(sd) and "folder" not in c:
         song = load_song(sd)
-    else:                     # a video without a studio song folder: its frame lives in Original Music/<folder>
+    else:                     # a video without a studio song folder: its frame lives in the music folder, <MUSIC_DIR>/<folder>
         song = {"title": c.get("title", c["folder"]), "folder": c["folder"], "out_dir": os.path.join(MUSIC_DIR, c["folder"])}
     pic = special_picture(slug, song) if os.path.isdir(sd) else None
     if pic is None:
@@ -328,7 +341,8 @@ def build(slug, c, out_dir):
         pic = ctx_picture(Image.open(src).convert("RGB").resize((W, H), Image.LANCZOS), song, c)
     side = c.get("side", song.get("thumb_hook_side", "left"))
     im = brand_cover(pic, c.get("lines", song.get("thumb_lines")), c.get("sub", song.get("thumb_sub")), side,
-                     ACCENTS[c.get("accent", song.get("brand_accent", "green"))], c.get("tag", song.get("brand_tag")))
+                     ACCENTS[c.get("accent", song.get("brand_accent", "green"))], c.get("tag", song.get("brand_tag")),
+                     c.get("model", song.get("model_credit")))
     name = c.get("name", song.get("folder", song["title"]))
     os.makedirs(out_dir, exist_ok=True)
     p = os.path.join(out_dir, f"{name} - YouTube thumbnail (brand).jpg")

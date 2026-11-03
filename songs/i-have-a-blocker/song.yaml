@@ -93,7 +93,7 @@ ctx_scale: 0.82
 ctx_dark: 0.50
 cover_sub: "a deadpan song about the daily standup"
 cover_shift_y: 0.0
-edit_hook: "Every daily standup, in one song"
+edit_hook: ""                          # none: the edit opens on the cover frame and the particle title
 edit_hook_y: 0.14
 hook_y: 0.14
 

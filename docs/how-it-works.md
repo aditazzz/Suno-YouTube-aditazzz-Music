@@ -224,17 +224,19 @@ Every video's thumbnail is the same **brand cover** over a clean frame of that v
 artist. [`studio/thumbs.py`](../studio/thumbs.py) renders the clean frame (no lyrics) and hands it to
 [`studio/brand.py`](../studio/brand.py), which adds one fixed top layer:
 
-1. the lockup chip, top-left: my photo in a green ring, "aditazzz" and `</> CLAUDE ANIMATED THIS`
-2. the headline: two short lines in Anton with a black outline, the last line in one accent color (neon green, or
+1. the headline: two short lines in Anton with a black outline, the last line in one accent color (neon green, or
    red, amber, yellow or ice to suit the frame; never pink), always the same size
-3. one italic line in Instrument Serif saying what kind of song it is
+2. under it, the credit "Made with Claude Opus 5.5" in JetBrains Mono (`model_credit` in `song.yaml`, or `model` in
+   `brand_covers.yaml`, for a video another model made)
+
+That's all: the first covers also had a photo chip with the channel name and an italic line about the song, and next to
+the covers that do well in this niche it was clutter (`LOCKUP=1` still draws the old layout for re-making old covers).
 
 The words and framing come from `song.yaml`:
 
 ```yaml
 thumb_time: 0.5                 # the clean frame underneath
 thumb_lines: [PLEASE, HOLD]     # the headline (a long hook gets another line, never a smaller font)
-thumb_sub: "a song about sending a robot to sit on hold"
 brand_accent: amber             # the last headline line
 ctx_shift_y: 0.09               # slide/zoom the frame (ctx_shift, ctx_shift_y, ctx_scale, ctx_dark) to clear the text
 ```

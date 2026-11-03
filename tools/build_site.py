@@ -351,7 +351,13 @@ def main(out):
     if os.path.isdir(out):
         for name in os.listdir(out):
             if name in (".git", "CNAME", "googleverify.html") or name.startswith("google"): continue
-            p = os.path.join(out, name); shutil.rmtree(p) if os.path.isdir(p) else os.remove(p)
+            p = os.path.join(out, name)
+            if name == "assets" and os.path.isdir(p):            # assets/covers/ holds images hosted by hand (e.g. a
+                for sub in os.listdir(p):                         # cover for a post): everything else is rebuilt
+                    if sub == "covers": continue
+                    q = os.path.join(p, sub); shutil.rmtree(q) if os.path.isdir(q) else os.remove(q)
+                continue
+            shutil.rmtree(p) if os.path.isdir(p) else os.remove(p)
     os.makedirs(os.path.join(out, "assets"), exist_ok=True)
     for f in ("site.css", "site.js", "favicon.svg", "aditazzz.jpg"):
         shutil.copy(os.path.join(ROOT, "site", f), os.path.join(out, "assets" if f != "favicon.svg" else "", f))

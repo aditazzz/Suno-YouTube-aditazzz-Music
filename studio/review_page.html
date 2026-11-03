@@ -1,0 +1,427 @@
+<title>__TITLE__</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a screening room. A quiet header (what the batch is, the live tally, filters), then one card per item in
+   order: the image large, the card's facts beside it, the decision under them. Single dark theme on purpose: the work
+   is the brightest thing on screen, the interface stays near-black and low-contrast around it. */
+:root {
+  --bg: #0b0b0d; --panel: #121215; --panel-2: #18181c; --line: #26262c; --line-2: #33333b;
+  --ink: #e6e3dc; --muted: #9a978f; --faint: #66645f;
+  --ok: #3fbf7f; --ok-bg: rgba(63,191,127,.13); --chg: #f08a24; --chg-bg: rgba(240,138,36,.14);
+  --focus: #d9c7a0;
+  --f-ui: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --head-h: 0px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-ui); font-size: 15px; line-height: 1.5; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+button, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.wrap { max-width: 1360px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* header */
+.top { padding-block: 26px 4px; display: grid; gap: 10px; }
+.eyebrow { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
+h1 { margin: 0; font-family: var(--f-serif); font-weight: 400; font-size: clamp(32px, 4.6vw, 52px); line-height: 1.02; letter-spacing: -.005em; text-wrap: balance; }
+h1 em { color: var(--muted); }
+.covers { margin: 0; max-width: 72ch; color: var(--muted); }
+.covers strong { color: var(--ink); font-weight: 600; }
+.notes-top { display: grid; gap: 6px; margin: 6px 0 0; padding: 0; list-style: none; }
+.notes-top li { font-size: 14px; color: var(--muted); padding-left: 14px; position: relative; max-width: 90ch; }
+.notes-top li::before { content: ""; position: absolute; left: 0; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--faint); }
+.notes-top li.ok::before { background: var(--ok); }
+.notes-top li.chg::before { background: var(--chg); }
+.notes-top b { color: var(--ink); font-weight: 600; }
+
+.bar-wrap { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: rgba(11,11,13,.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); margin-top: 14px; }
+.bar-in { padding-block: 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; }
+.tally { display: flex; flex-wrap: wrap; gap: 6px 16px; font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tally b { font-weight: 500; color: var(--ink); }
+.tally .ok b { color: var(--ok); } .tally .chg b { color: var(--chg); }
+.prog { flex: 1 1 160px; min-width: 120px; height: 6px; border-radius: 3px; background: var(--panel-2); display: flex; overflow: hidden; }
+.prog i { display: block; height: 100%; transition: width .3s; }
+.prog .ok { background: var(--ok); } .prog .chg { background: var(--chg); }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border: 1px solid var(--line-2); background: transparent; border-radius: 999px; padding: 3px 11px; font-size: 13px; cursor: pointer; color: var(--muted); font-variant-numeric: tabular-nums; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.save { font-family: var(--f-mono); font-size: 11.5px; color: var(--faint); display: flex; align-items: center; gap: 7px; margin-left: auto; }
+.save::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--faint); }
+.save[data-s="live"]::before { background: var(--ok); }
+.save[data-s="saving"]::before { background: var(--focus); }
+.save[data-s="local"]::before, .save[data-s="error"]::before { background: var(--chg); }
+.notice { margin-top: 14px; border: 1px solid var(--chg); background: var(--chg-bg); border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+
+/* watch */
+details.watch { margin-top: 18px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); }
+details.watch summary { cursor: pointer; padding: 12px 16px; font-weight: 600; list-style: none; display: flex; align-items: center; gap: 10px; }
+details.watch summary::-webkit-details-marker { display: none; }
+details.watch summary::before { content: "▸"; color: var(--muted); transition: transform .2s; }
+details.watch[open] summary::before { transform: rotate(90deg); }
+details.watch summary span { font-weight: 400; color: var(--muted); font-size: 13.5px; }
+details.watch video { display: block; width: 100%; max-width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 0 0 10px 10px; }
+.carried { margin-top: 14px; }
+.carried summary { cursor: pointer; color: var(--muted); font-size: 14px; }
+.strip { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin-top: 10px; }
+.strip figure { margin: 0; display: grid; gap: 4px; }
+.strip img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 4px; border-bottom: 3px solid var(--ok); background: #000; }
+.strip figcaption { font-family: var(--f-mono); font-size: 11px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* cards */
+.list { display: grid; gap: 20px; padding-block: 20px 28px; }
+.card { display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--line-2); border-radius: 10px; overflow: hidden; scroll-margin-top: calc(var(--head-h) + env(safe-area-inset-top, 0px) + 12px); }
+.card[data-d="approve"] { border-left-color: var(--ok); }
+.card[data-d="changes"] { border-left-color: var(--chg); }
+.card.cur { border-top-color: var(--line-2); border-right-color: var(--line-2); border-bottom-color: var(--line-2); }
+.shot { position: relative; display: block; padding: 0; border: 0; background: #000; cursor: zoom-in; aspect-ratio: 16 / 9; max-width: 100%; }
+.shot img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.side { padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.row1 { display: flex; align-items: center; gap: 8px 10px; flex-wrap: wrap; }
+.id { font-family: var(--f-mono); font-size: 12.5px; color: var(--ink); letter-spacing: .03em; }
+.pos { font-family: var(--f-mono); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.status { margin-left: auto; font-size: 12px; font-weight: 600; border-radius: 999px; padding: 2px 10px; border: 1px solid var(--line-2); color: var(--muted); white-space: nowrap; }
+.card[data-d="approve"] .status { color: var(--ok); border-color: var(--ok); background: var(--ok-bg); }
+.card[data-d="changes"] .status { color: var(--chg); border-color: var(--chg); background: var(--chg-bg); }
+.title { margin: 0; font-size: 18px; font-weight: 600; line-height: 1.3; text-wrap: balance; }
+.lyric { margin: 0; font-family: var(--f-serif); font-style: italic; font-size: 21px; line-height: 1.2; color: var(--ink); }
+.facts { margin: 0; display: grid; gap: 8px; }
+.facts div { display: grid; gap: 2px; }
+.facts dt { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
+.facts dd { margin: 0; font-size: 14px; color: var(--muted); }
+.facts dd.ontext { color: var(--ink); font-family: var(--f-mono); font-size: 12.5px; }
+.facts .what dd { color: var(--ink); }
+.facts .last dd { color: var(--muted); font-style: italic; }
+.cmp dd { display: flex; align-items: center; gap: 10px; }
+.cmpbtn { padding: 0; border: 1px solid var(--line-2); border-radius: 5px; overflow: hidden; background: #000; cursor: zoom-in; flex: none; width: 128px; aspect-ratio: 16 / 9; }
+.cmpbtn img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.cmp span { font-size: 13px; color: var(--muted); }
+.decide { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 2px; }
+.dbtn { border: 1px solid var(--line-2); background: var(--panel-2); border-radius: 7px; padding: 9px 10px; font-weight: 600; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 7px; }
+.dbtn svg { width: 15px; height: 15px; flex: none; }
+.dbtn:hover { border-color: var(--muted); }
+.dbtn.ok[aria-pressed="true"] { background: var(--ok-bg); border-color: var(--ok); color: var(--ok); }
+.dbtn.chg[aria-pressed="true"] { background: var(--chg-bg); border-color: var(--chg); color: var(--chg); }
+.note { width: 100%; min-height: 76px; flex: 1 1 auto; resize: vertical; border: 1px solid var(--line); background: var(--bg); border-radius: 7px; padding: 8px 10px; font-size: 14px; line-height: 1.45; }
+.card[data-d="changes"] .note { border-color: rgba(240,138,36,.45); }
+.rowsave { font-family: var(--f-mono); font-size: 11px; color: var(--faint); min-height: 1.2em; margin-top: -4px; }
+.rowsave.err { color: var(--chg); }
+.empty { padding: 30px 0; color: var(--muted); text-align: center; }
+
+.end { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: grid; gap: 12px; margin-bottom: 44px; }
+.end h2 { margin: 0; font-family: var(--f-serif); font-weight: 400; font-size: 28px; }
+.end label { color: var(--muted); font-size: 14px; }
+#overall { min-height: 110px; }
+.donebar { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
+.done { border: 1px solid var(--ink); background: var(--ink); color: var(--bg); font-weight: 700; border-radius: 8px; padding: 10px 18px; cursor: pointer; font-size: 15px; }
+.donemsg { color: var(--muted); font-size: 14px; }
+kbd { font-family: var(--f-mono); font-size: 11px; border: 1px solid var(--line-2); border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; color: var(--muted); }
+.keys { font-family: var(--f-mono); font-size: 11.5px; color: var(--faint); }
+
+.lb { position: fixed; inset: 0; z-index: 20; background: rgba(0,0,0,.96); display: grid; grid-template-rows: minmax(0, 1fr) auto; padding: calc(env(safe-area-inset-top, 0px) + 12px) max(12px, env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 12px) max(12px, env(safe-area-inset-left, 0px)); gap: 10px; }
+.lb img { width: 100%; height: 100%; object-fit: contain; min-height: 0; }
+.lbbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.lbcap { flex: 1 1 240px; min-width: 0; font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); }
+.lbcap b { color: var(--ink); font-weight: 500; }
+.lbbtn { border: 1px solid var(--line-2); background: var(--panel); border-radius: 7px; padding: 7px 12px; cursor: pointer; font-size: 14px; }
+
+@media (max-width: 880px) { .card { grid-template-columns: minmax(0, 1fr); } .keys { display: none; } }
+@media (max-width: 560px) { .bar-wrap { position: static; } .save { margin-left: 0; } .lyric { font-size: 19px; } }
+</style>
+
+<script type="application/json" id="meta-data">__META_JSON__</script>
+<script type="application/json" id="items-data">__ITEMS_JSON__</script>
+
+<main>
+  <section class="wrap top">
+    <div class="eyebrow" id="eyebrow">Review</div>
+    <h1 id="h1">Review</h1>
+    <p class="covers" id="covers"></p>
+    <ul class="notes-top" id="topnotes"></ul>
+    <details class="watch" id="watch" hidden><summary>Watch the whole cut <span id="watchsub"></span></summary><video id="vid" controls preload="none" playsinline></video></details>
+    <details class="carried" id="carried" hidden><summary id="carriedsum"></summary><div class="strip" id="strip"></div></details>
+  </section>
+  <div class="bar-wrap" id="bar">
+    <div class="wrap bar-in">
+      <div class="tally" aria-live="polite"><span class="ok"><b id="t-ok">0</b> approved</span><span class="chg"><b id="t-chg">0</b> need changes</span><span><b id="t-open">0</b> to review</span></div>
+      <div class="prog" aria-hidden="true"><i class="ok" id="p-ok" style="width:0"></i><i class="chg" id="p-chg" style="width:0"></i></div>
+      <div class="filters" role="group" aria-label="Show">
+        <button class="chip" id="f-all" data-f="all" aria-pressed="true">All</button>
+        <button class="chip" id="f-open" data-f="open" aria-pressed="false">To review</button>
+        <button class="chip" id="f-chg" data-f="changes" aria-pressed="false">Needs changes</button>
+        <button class="chip" id="f-ok" data-f="approve" aria-pressed="false">Approved</button>
+      </div>
+      <div class="save" id="save" data-s="wait">Connecting…</div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="notice" id="notice" hidden></div>
+    <section class="list" id="list" aria-label="Items"></section>
+    <p class="empty" id="empty" hidden>Nothing matches this filter.</p>
+    <section class="end" aria-labelledby="endh">
+      <h2 id="endh">Anything else</h2>
+      <label for="overall">Notes on the whole batch, or questions for Claude.</label>
+      <textarea class="note" id="overall" placeholder="Overall notes (optional)"></textarea>
+      <div class="donebar">
+        <button class="done" id="done" type="button">I'm done with this round</button>
+        <span class="donemsg" id="donemsg"></span>
+      </div>
+      <div class="keys"><kbd>J</kbd> <kbd>K</kbd> next / previous · <kbd>A</kbd> approve · <kbd>C</kbd> needs changes · <kbd>Enter</kbd> note · <kbd>Esc</kbd> leave the note</div>
+    </section>
+  </div>
+</main>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Full size">
+  <img id="lbimg" alt="">
+  <div class="lbbar">
+    <div class="lbcap" id="lbcap"></div>
+    <button class="lbbtn" id="lbprev" type="button">Previous</button>
+    <button class="lbbtn" id="lbnext" type="button">Next</button>
+    <button class="lbbtn" id="lbclose" type="button">Close</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  const META = JSON.parse(document.getElementById('meta-data').textContent);
+  const ITEMS = JSON.parse(document.getElementById('items-data').textContent);
+  const COL = META.collection || 'round_1';
+  const $ = (id) => document.getElementById(id);
+  const esc = (x) => String(x == null ? '' : x).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const LSKEY = 'review:' + (META.key || META.title) + ':' + COL;
+  const CARRIED = META.carried || [];
+  const ICON_OK = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>';
+  const ICON_CHG = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11.5 2.5l2 2-8 8H3.5v-2z"/></svg>';
+
+  // ---- head
+  $('eyebrow').textContent = META.eyebrow || 'Review';
+  $('h1').innerHTML = esc(META.heading || META.title) + (META.round ? ' <em>· round ' + META.round + '</em>' : '');
+  $('covers').innerHTML = META.covers_html || esc(META.covers || '');
+  (META.top_notes || []).forEach((n) => { const li = document.createElement('li'); li.className = n.kind || ''; li.innerHTML = n.html || esc(n.text); $('topnotes').appendChild(li); });
+  if (META.video) { $('watch').hidden = false; $('vid').src = META.video; $('watchsub').textContent = META.video_note || ''; if (META.video_open) { $('watch').open = true; $('vid').preload = 'metadata'; } }      // (open when the video is the thing under review)
+  if (CARRIED.length) {
+    $('carried').hidden = false;
+    $('carriedsum').textContent = 'Already approved, unchanged (' + CARRIED.length + ')';
+    $('strip').innerHTML = CARRIED.map((c) => '<figure><img src="' + esc(c.img) + '" alt="' + esc(c.title) + '" loading="lazy" width="320" height="180"><figcaption>' + esc(c.label || c.id) + ' · ' + esc(c.title) + '</figcaption></figure>').join('');
+  }
+
+  // ---- state
+  const S = {}; ITEMS.forEach((it) => { S[it.id] = { decision: '', note: '' }; });
+  let overall = { note: '', done: false, at: '' };
+  let filter = 'all', cur = 0, db = null, mode = 'wait', pushed = false;
+
+  // ---- cards
+  const list = $('list');
+  ITEMS.forEach((it, i) => {
+    const a = document.createElement('article');
+    a.className = 'card'; a.id = 'c-' + it.id; a.dataset.d = '';
+    const facts = [];
+    if (it.changed) facts.push('<div class="what"><dt>What changed</dt><dd>' + esc(it.changed) + '</dd></div>');
+    if (it.last) facts.push('<div class="last"><dt>Your last note</dt><dd>' + esc(it.last) + '</dd></div>');
+    if (it.reopened) facts.push('<div class="what"><dt>Back for review</dt><dd>' + esc(it.reopened) + '</dd></div>');
+    if (it.text) facts.push('<div><dt>On screen</dt><dd class="ontext">' + esc(it.text) + '</dd></div>');
+    if (it.notes) facts.push('<div><dt>Design notes</dt><dd>' + esc(it.notes) + '</dd></div>');
+    if (it.compare) facts.push('<div class="cmp"><dt>' + esc(it.compare.head || 'Compare') + '</dt><dd><button class="cmpbtn" type="button" id="cmp-' + it.id + '" aria-label="See ' + esc(it.compare.label) + ' full size"><img src="' + esc(it.compare.img) + '" alt="' + esc(it.compare.label) + '" loading="lazy" width="320" height="180"></button><span>' + esc(it.compare.label) + '</span></dd></div>');
+    a.innerHTML =
+      '<button class="shot" type="button" aria-label="See ' + esc(it.label || it.id) + ' full size"><img src="' + esc(it.img) + '" width="1280" height="720" loading="' + (i < 2 ? 'eager' : 'lazy') + '" decoding="async" alt="' + esc(it.title) + '"></button>' +
+      '<div class="side">' +
+        '<div class="row1"><span class="id">' + esc(it.label || it.id) + '</span>' + (it.pos ? '<span class="pos">' + esc(it.pos) + '</span>' : '') + '<span class="status" id="st-' + it.id + '">To review</span></div>' +
+        '<h3 class="title">' + esc(it.title) + '</h3>' +
+        (it.lyric ? '<p class="lyric">' + esc(it.lyric) + '</p>' : '') +
+        (facts.length ? '<dl class="facts">' + facts.join('') + '</dl>' : '') +
+        '<div class="decide" role="group" aria-label="Decision for ' + esc(it.label || it.id) + '">' +
+          '<button type="button" class="dbtn ok" id="ok-' + it.id + '" aria-pressed="false">' + ICON_OK + 'Approve</button>' +
+          '<button type="button" class="dbtn chg" id="chg-' + it.id + '" aria-pressed="false">' + ICON_CHG + 'Needs changes</button>' +
+        '</div>' +
+        '<textarea class="note" id="note-' + it.id + '" rows="2" placeholder="What should change? Questions are welcome too." aria-label="Note for ' + esc(it.label || it.id) + '"></textarea>' +
+        '<div class="rowsave" id="rs-' + it.id + '"></div>' +
+      '</div>';
+    list.appendChild(a);
+    a.querySelector('.shot').addEventListener('click', () => openLB(i));
+    if (it.compare) $('cmp-' + it.id).addEventListener('click', () => openLB(i, true));
+    $('ok-' + it.id).addEventListener('click', () => decide(it.id, 'approve'));
+    $('chg-' + it.id).addEventListener('click', () => decide(it.id, 'changes'));
+    const ta = $('note-' + it.id);
+    ta.addEventListener('input', () => { S[it.id].note = ta.value; touch(it.id); debounce('n' + it.id, () => commit(it.id)); });
+    ta.addEventListener('blur', () => { if (timers['n' + it.id]) commit(it.id); });
+    ta.addEventListener('focus', () => setCur(i, false));
+    a.addEventListener('pointerdown', () => setCur(i, false));
+  });
+
+  function paint(id) {
+    const st = S[id], c = $('c-' + id);
+    c.dataset.d = st.decision;
+    $('ok-' + id).setAttribute('aria-pressed', st.decision === 'approve');
+    $('chg-' + id).setAttribute('aria-pressed', st.decision === 'changes');
+    $('st-' + id).textContent = st.decision === 'approve' ? 'Approved' : st.decision === 'changes' ? 'Needs changes' : 'To review';
+    const ta = $('note-' + id); if (document.activeElement !== ta && ta.value !== st.note) ta.value = st.note;
+  }
+  function tally() {
+    let ok = CARRIED.length, chg = 0;
+    ITEMS.forEach((it) => { if (S[it.id].decision === 'approve') ok++; else if (S[it.id].decision === 'changes') chg++; });
+    const n = ITEMS.length + CARRIED.length, open = n - ok - chg;
+    $('t-ok').textContent = ok; $('t-chg').textContent = chg; $('t-open').textContent = open;
+    $('p-ok').style.width = (100 * ok / n) + '%'; $('p-chg').style.width = (100 * chg / n) + '%';
+    let shown = 0;
+    ITEMS.forEach((it) => {
+      const d = S[it.id].decision, on = filter === 'all' || (filter === 'open' && !d) || filter === d;
+      const c = $('c-' + it.id); if (c.hidden === on) c.hidden = !on; if (on) shown++;
+    });
+    $('empty').hidden = shown > 0;
+  }
+  document.querySelectorAll('.chip').forEach((c) => c.addEventListener('click', () => {
+    filter = c.dataset.f; document.querySelectorAll('.chip').forEach((x) => x.setAttribute('aria-pressed', x === c)); tally();
+  }));
+  function decide(id, d) {
+    S[id].decision = S[id].decision === d ? '' : d;
+    touch(id); paint(id); tally(); commit(id);
+    if (S[id].decision === 'changes' && !S[id].note) $('note-' + id).focus();
+  }
+
+  // ---- saving: one write at a time per document; the newest state wins
+  const dirty = new Set(), timers = {}, inflight = new Set(), queued = new Set(), edits = {};
+  let overallDirty = false;
+  function touch(id) { dirty.add(id); edits[id] = (edits[id] || 0) + 1; }
+  function debounce(k, fn) { clearTimeout(timers[k]); timers[k] = setTimeout(() => { delete timers[k]; fn(); }, 700); }
+  function commit(id) { clearTimeout(timers['n' + id]); delete timers['n' + id]; write(id); }
+  function body(id) {
+    if (id === '_overall') return { note: overall.note, done: overall.done, at: overall.at };
+    const it = ITEMS.find((x) => x.id === id);
+    return { decision: S[id].decision, note: S[id].note, label: it.label || id, updated: new Date().toISOString() };
+  }
+  function msg(id, t, err) {
+    const el = id === '_overall' ? $('donemsg') : $('rs-' + id);
+    if (!el || (id === '_overall' && !err && overall.done)) return;
+    el.textContent = t; el.classList.toggle('err', !!err);
+  }
+  async function write(id) {
+    saveLocal();
+    if (!db) { if (mode === 'local') msg(id, 'Kept in this browser only'); return; }
+    if (inflight.has(id)) { queued.add(id); return; }
+    inflight.add(id); setMode('saving'); msg(id, 'Saving…');
+    const ed = edits[id];
+    try {
+      await db.collection(COL).doc(id).set(body(id));
+      if (id === '_overall') overallDirty = false;
+      else if (edits[id] === ed && !timers['n' + id]) dirty.delete(id);
+      msg(id, queued.has(id) ? 'Saving…' : 'Saved');
+    } catch (e) {
+      msg(id, 'Not saved: ' + (e && e.message ? e.message : 'the page could not reach its store') + '. Change it again to retry.', true);
+      setMode('error');
+    } finally {
+      inflight.delete(id);
+      if (queued.delete(id)) write(id); else if (!inflight.size && mode === 'saving') setMode('live');
+    }
+  }
+  function setMode(m) {
+    mode = m; const el = $('save'); el.dataset.s = m;
+    el.textContent = { wait: 'Connecting…', live: 'Saved', saving: 'Saving…', local: 'Not connected', error: 'Some changes did not save' }[m];
+  }
+  function saveLocal() { try { localStorage.setItem(LSKEY, JSON.stringify({ S, overall })); } catch (e) { /* storage blocked */ } }
+  function loadLocal() {
+    try {
+      const d = JSON.parse(localStorage.getItem(LSKEY) || 'null'); if (!d) return;
+      Object.keys(d.S || {}).forEach((id) => { if (S[id]) S[id] = { decision: d.S[id].decision || '', note: d.S[id].note || '' }; });
+      if (d.overall) overall = Object.assign(overall, d.overall);
+    } catch (e) { /* no draft */ }
+  }
+
+  // ---- overall
+  const ov = $('overall');
+  ov.addEventListener('input', () => { overall.note = ov.value; overallDirty = true; debounce('ov', () => write('_overall')); });
+  ov.addEventListener('blur', () => { if (timers.ov) { clearTimeout(timers.ov); delete timers.ov; write('_overall'); } });
+  $('done').addEventListener('click', () => { overall.done = true; overall.at = new Date().toISOString(); overall.note = ov.value; overallDirty = true; paintDone(); write('_overall'); });
+  function paintDone() {
+    if (document.activeElement !== ov && ov.value !== overall.note) ov.value = overall.note;
+    if (!overall.done) return;
+    const open = ITEMS.filter((it) => !S[it.id].decision).length;
+    $('done').textContent = 'Round marked done';
+    $('donemsg').textContent = 'Thanks. Tell Claude in chat; it reads your decisions from this page.' + (open ? ' ' + open + ' still to review; you can keep going.' : '');
+  }
+
+  // ---- connect
+  loadLocal(); ITEMS.forEach((it) => paint(it.id)); tally(); paintDone();
+  const loadTimer = setTimeout(() => { if (mode === 'wait') notice('Saved decisions can’t be reached yet. Anything you mark now is kept and saved once the page connects.'); }, 10000);
+  function notice(t) { $('notice').textContent = t; $('notice').hidden = !t; }
+  const use = window.claude && window.claude.use ? window.claude.use('db') : Promise.resolve(null);
+  use.then((d) => {
+    if (!d) { clearTimeout(loadTimer); setMode('local'); notice('This copy isn’t connected to Claude, so your decisions are kept in this browser only. Open the page from Claude to save them where Claude can read them.'); return; }
+    db = d;
+    db.collection(COL).onSnapshot((snap) => {
+      if (!snap.metadata.fromCache) { clearTimeout(loadTimer); notice(''); if (mode === 'wait') setMode('live'); }
+      snap.docs.forEach((doc) => {
+        const id = doc.id, v = doc.data() || {};
+        if (id === '_overall') { if (!overallDirty && !inflight.has(id)) { overall = { note: typeof v.note === 'string' ? v.note : '', done: !!v.done, at: v.at || '' }; paintDone(); } return; }
+        if (!S[id] || dirty.has(id) || inflight.has(id)) return;
+        S[id] = { decision: v.decision === 'approve' || v.decision === 'changes' ? v.decision : '', note: typeof v.note === 'string' ? v.note : '' };
+        paint(id);
+      });
+      tally();
+      if (!pushed && !snap.metadata.fromCache) {   // marks made before the page connected go up now
+        pushed = true; const have = new Set(snap.docs.map((x) => x.id));
+        ITEMS.forEach((it) => { if (dirty.has(it.id) || (!have.has(it.id) && (S[it.id].decision || S[it.id].note))) write(it.id); });
+        if (overallDirty || (!have.has('_overall') && (overall.note || overall.done))) write('_overall');
+      }
+    }, (e) => { clearTimeout(loadTimer); setMode('error'); notice('The page lost its connection to saved decisions (' + (e && e.message ? e.message : 'unavailable') + '). Reopen it from Claude.'); });
+  });
+
+  // ---- current card + keys
+  const bar = $('bar');
+  const stickyH = () => (getComputedStyle(bar).position === 'sticky' ? bar.offsetHeight : 0);
+  const setHeadH = () => document.documentElement.style.setProperty('--head-h', stickyH() + 'px');
+  setHeadH(); window.addEventListener('resize', setHeadH);
+  const vis = () => ITEMS.map((_, i) => i).filter((i) => !$('c-' + ITEMS[i].id).hidden);
+  function setCur(i, scroll) {
+    const p = $('c-' + ITEMS[cur].id); if (p) p.classList.remove('cur');
+    cur = i; const c = $('c-' + ITEMS[i].id); c.classList.add('cur'); if (scroll) c.scrollIntoView({ block: 'start' });
+  }
+  function step(d) {
+    const v = vis(); if (!v.length) return; let k = v.indexOf(cur);
+    k = k < 0 ? (d > 0 ? 0 : v.length - 1) : Math.max(0, Math.min(v.length - 1, k + d)); setCur(v[k], true);
+  }
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (ticking) return; ticking = true;
+    requestAnimationFrame(() => {
+      ticking = false; const top = stickyH() + 40;
+      for (const i of vis()) { const b = $('c-' + ITEMS[i].id).getBoundingClientRect(); if (b.bottom > top + b.height * 0.4) { if (i !== cur) setCur(i, false); break; } }
+    });
+  }, { passive: true });
+  document.addEventListener('keydown', (e) => {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    const t = e.target, typing = t && (t.tagName === 'TEXTAREA' || t.tagName === 'INPUT');
+    if (!$('lb').hidden) {
+      if (e.key === 'Escape') closeLB(); else if (e.key === 'ArrowRight' || e.key === 'j') navLB(1); else if (e.key === 'ArrowLeft' || e.key === 'k') navLB(-1);
+      return;
+    }
+    if (typing) { if (e.key === 'Escape') t.blur(); return; }
+    if (!ITEMS.length) return;
+    const id = ITEMS[cur].id;
+    if (e.key === 'j') { e.preventDefault(); step(1); }
+    else if (e.key === 'k') { e.preventDefault(); step(-1); }
+    else if (e.key === 'a') { e.preventDefault(); decide(id, 'approve'); }
+    else if (e.key === 'c') { e.preventDefault(); decide(id, 'changes'); }
+    else if (e.key === 'Enter' && !(t && (t.tagName === 'BUTTON' || t.tagName === 'SUMMARY'))) { e.preventDefault(); $('note-' + id).focus(); }
+  });
+
+  // ---- full size
+  let lbi = 0, lbc = false;
+  function openLB(i, cmp = false) { lbi = i; lbc = cmp; showLB(); $('lb').hidden = false; $('lbclose').focus(); }
+  function showLB() { const it = ITEMS[lbi]; const c = lbc && it.compare;
+    $('lbimg').src = c ? it.compare.img : it.img; $('lbimg').alt = c ? it.compare.label : it.title;
+    $('lbcap').innerHTML = '<b>' + esc(it.label || it.id) + '</b> · ' + (c ? esc(it.compare.head || 'Compare') + ': ' + esc(it.compare.label) : esc(it.pos || '') + ' · ' + esc(it.title)); }
+  function navLB(d) { lbi = Math.max(0, Math.min(ITEMS.length - 1, lbi + d)); lbc = false; showLB(); }
+  function closeLB() { $('lb').hidden = true; setCur(lbi, true); }
+  $('lbprev').addEventListener('click', () => navLB(-1));
+  $('lbnext').addEventListener('click', () => navLB(1));
+  $('lbclose').addEventListener('click', closeLB);
+  $('lb').addEventListener('click', (e) => { if (e.target === $('lb')) closeLB(); });
+  if (ITEMS.length) setCur(0, false);
+})();
+</script>

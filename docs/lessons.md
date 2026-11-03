@@ -47,6 +47,33 @@ platforms change often, so check them again before you rely on them (sources at 
 - **Captions are their own layer.** Render the picture without lyrics and the lyrics separately (a transparent layer
   that renders in minutes), then put them together at the end. A caption tweak (size, spot, colour) is a few minutes
   instead of a full 3D re-render, and a caption-free version of every video comes for free.
+- **Lines shown in the world aren't captioned.** When a lyric is already on screen (a phone, a tower screen, a
+  receipt), the caption layer skips it. And close-ups need an eye: the darkest band of a close-up is often the subject
+  itself (a face, a screen), so check every line on a contact sheet and pin those to an edge.
+- **The rules apply to every renderer.** The readability minimums and the safe frame are enforced automatically only
+  for the Python lyric renderer. A Remotion or three.js video went out with its 9:16 lyrics below the line where Shorts
+  draw the title and channel name. Contact-sheet the 9:16 master at each card's fullest moment, with the unsafe zones
+  shaded, before rendering the finals.
+- **Nothing passes through anything, checked by machine.** In the 3D films every frame runs through a collision check
+  before it's rendered: props against props, people against furniture, feet against the ground, a planted foot that
+  slides. It fails the frame with what touched what and by how many millimetres (`songs/great-idea-ted/web/qa.mjs`).
+  A second check casts rays from the lens to the character's head, hands and feet, so the gag is actually visible.
+  After a render, look for anything that appears, vanishes or snaps in one frame away from a cut.
+- **Make sure a check can fail.** After any shader edit, render one small still per mode and fail on an error or a black
+  frame: one reserved GLSL name blacked out every render for 15 minutes. A fade from `a` to `a` (zero length) divided
+  0 by 0 and turned frame 0 black.
+- **Finish the film before perfecting any part.** After three rounds of notes on five seconds of one video: build the
+  whole piece as continuous 20 to 30 second previews synced to the song (720p, one sample a frame), reuse sets,
+  characters and cameras, keep the complex animation for the strongest gags, keep a running polish list, and do one
+  prioritized polish pass once it's all assembled.
+- **What takes it from "rendered" to "made":** weight (impacts that recoil, a camera kick, exits that power down instead
+  of sinking), no stand-ins next to the hero, signs and names framed so they read, a lens finish (halation, grain in the
+  shadows), and small acting: breath, a head shake on the beat, a free arm that swings.
+- **Physical gags read when they obey the music and gravity.** Land on a beat, the reaction a quarter second later, cut
+  on the next beat. About 12 m/s² reads as weight; 16 and up reads as a cartoon. A walk driven by distance, one step
+  per beat, puts every heel strike on the beat and the feet never slide.
+- **Sound effects sit under the song:** 8 to 12 dB below it where they land, off the sung words, and always keep a version
+  without them.
 - **Keep hooks playful.** Captions, hooks and thumbnails that pick a fight get attention you don't want.
 - **Thumbnails say what the video is.** "CLAUDE ANIMATED THIS" alone told nobody anything. A short hook about the song,
   one plain line saying what kind of song it is, and a small badge works better. It also needs a bright subject you
@@ -69,6 +96,7 @@ platforms change often, so check them again before you rely on them (sources at 
   your own distributed song can trigger that claim. Shorts here are cut at 58 seconds at most.
 - **Set the Related video.** In YouTube Studio, link each Short to its full video. It's the main path from a Short to
   the long video, and the API can't set it, so it's done by hand.
+- **Shorts stay out of playlists.** Playlists are for the full videos.
 - **Shorts don't hurt long-form.** YouTube runs separate recommendation systems for them.
 - **Vertical and 3 minutes or less is a Short automatically.** `#shorts` isn't needed.
 - **Instagram only recommends Reels of 3 minutes or less to non-followers**, which is why every song gets an
@@ -97,6 +125,12 @@ platforms change often, so check them again before you rely on them (sources at 
   pictures in the video (the photographic plates in Allow) do.
 - **After publishing**: pin the comment, add the video to the series playlist, and point the end screen at the next
   video in the series.
+- **The first comment goes up with the upload.** The uploader posts it on every full video and Short as soon as the
+  video is public or unlisted, so it's never forgotten; pinning is still by hand (apps can't pin).
+- **Check the visibility after uploading by hand.** A video meant to be unlisted went out public for a few minutes because
+  the click on "Unlisted" didn't take. Reopen the details page and read it back.
+- **Put every posted video in the repo and on the site as part of the release,** not later. Two videos once went a week
+  without it.
 
 ## Rendering
 
@@ -122,6 +156,16 @@ platforms change often, so check them again before you rely on them (sources at 
   videos.
 - **Render where it's fastest.** The same three.js frames take about 3 s each on a 2-core cloud machine with software
   WebGL; a laptop's GPU is many times faster. Long renders belong on the fastest machine available.
+  On an M2 laptop's GPU (Chrome, ANGLE on Metal), a 6,390-frame vertical rendered in 90 seconds: about 140 times the
+  cloud's speed.
+- **Turn off what the shot can't see.** Removing the lights of every shop outside the frame made frames about 3x cheaper.
+  But never switch lights on and off per shot: every change in the light count recompiles every material, and that alone
+  ran the GPU out of memory.
+- **Black frames can look like progress.** When WebGL loses its context, the frames after it come out black and fast.
+  The renderers stop on a lost context or a near-empty frame and resume where they stopped.
+- **Motion blur by need, not a fixed count.** Four sub-frames show a fast move as hard copies. Measure each frame's
+  motion on screen and give it as many samples as it needs, or render at 60 fps and blend pairs (`tmix`) for a
+  180-degree shutter.
 - **Compare videos by stream, not md5.** Metadata can change on the way (some tools add a Content Credentials
   manifest, for example) while the picture and sound are identical. Check frame counts and `ffmpeg -f streamhash`.
 - **Overlay on standard range.** A browser-rendered master (Remotion writes full-range `yuvj420p`) made the covers
@@ -144,10 +188,18 @@ platforms change often, so check them again before you rely on them (sources at 
   make long steps resumable.
 - **Ask for concepts before code.** "Propose three visual concepts for this song" gets more original videos than
   "make a video for this song".
+- **Approvals go on a review page, not in chat.** [`studio/review.py`](../studio/review.py) puts one card per frame,
+  thumbnail or design on a page, each with Approve / Needs changes and a note that saves itself, and Claude reads the
+  answers back as data. Each round is a fresh set on the same page with only what changed, plus anything a change put
+  back up. Nothing goes to a final render until every item is approved.
+- **Critique before showing.** Claude reviews its own frames as a professional designer would before anything goes on
+  the review page. For a big film: several independent reviews plus a director's pass, every finding kept or cut with a
+  reason, then fixes in parallel with one agent per file.
 
 ## Cadence and what to measure
 
-- One new song video a week, plus three to five vertical clips a week from the current and previous songs. Buffer's
+- Long videos when they're ready, rather than on a fixed day, plus three to five vertical clips a week from the current
+  and previous songs. Buffer's
   study of 2.1M posts found 3 to 5 posts a week grows followers about twice as fast as 1 to 2.
 - Don't upload the same video twice. Post each clip once per platform; the same clip on YouTube and Instagram is fine.
 - **YouTube long-form:** impressions click-through rate, average view duration, retention at 30 seconds, end-screen

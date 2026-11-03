@@ -1,7 +1,7 @@
 # One entry per YouTube video. Anything left out falls back to the song's song.yaml
 # (thumb_lines, thumb_sub, thumb_hook_side, ctx_/thumb_ shift, scale, dark).
-# lines: headline, last line is drawn in neon green (accent: red / amber / yellow / ice to suit the frame; no pink).  sub: the italic description.
-# side: which side the headline sits on (the lockup is always top-left).
+# lines: headline, last line is drawn in neon green (accent: red / amber / yellow / ice to suit the frame; no pink).  sub: the italic description (old layout only).
+# side: which side the headline sits on.  model: the model in the "Made with Claude ..." credit (default Opus 5.5).
 # `backticks` in lines/sub: commands and code, set in mono and kept in their own case.
 # tag: small series/version label above the headline.  lift: brighten a very dark frame (1.3).
 # shift / shift_y / scale / dark: framing of the video frame (same meaning as ctx_* in song.yaml).

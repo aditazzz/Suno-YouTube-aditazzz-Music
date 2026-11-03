@@ -219,8 +219,13 @@ def run_plan(plan_path, dry, yes):
             elif pl_ok:
                 try: yt.playlistItems().insert(part="snippet", body={"snippet": {"playlistId": pid, "resourceId": {"kind": "youtube#video", "videoId": vid}}}).execute(); print("    added to playlist")
                 except Exception as e: print("    not added to playlist:", str(e)[:120])
-    print("\nAll set. Still done by hand in YouTube Studio: pin the comment (or run --post-comments once it's public),"
-          " each Short's Related video, end screens, Test & Compare thumbnails.")
+    if CFG.get("first_comment_on_upload", True):   # every upload gets its first comment straight away (studio.yaml can turn it off)
+        print("\nFirst comments:"); seen = set()
+        for song, kind, meta, pu, pl in todo:
+            if song["slug"] in seen: continue
+            seen.add(song["slug"]); post_first_comments(yt, song)
+    print("\nAll set. Still done by hand in YouTube Studio: pin each new comment above, each Short's Related video,"
+          " end screens, Test & Compare thumbnails.")
 
 def songs_from(args):
     if args.song_dir: return [load_song(args.song_dir)]
@@ -261,33 +266,41 @@ def cmd_update(args):
             if args.dry_run: print(f"  [dry-run] would update {f}"); continue
             yt.videos().update(part="snippet", body={"id": v["id"], "snippet": sn}).execute(); print(f"  updated {f}")
 
+def post_first_comments(yt, song, dry_run=False):
+    """Post the first comment (song.yaml copy: the pinned comment) on each of the song's public or unlisted uploads, full
+    video and Shorts, unless you already commented there. Returns [(name, video_id)] of the new comments: pin each one in
+    YouTube Studio (apps can't pin). Runs on its own after every upload and every --publish-now, so it is never forgotten."""
+    rec = load_rec(song); pkg = load_pkg(song); posted = []
+    metas = {pkg["long"]["file"]: pkg["long"]}
+    metas.update({c["file"]: c for c in pkg.get("shorts", []) + pkg.get("reels", [])})
+    ids = {v["id"]: f for f, v in rec.items() if v.get("id") and f in metas}
+    if not ids: return posted
+    info, idl = {}, list(ids)
+    for i in range(0, len(idl), 50):
+        for it in yt.videos().list(part="status,snippet", id=",".join(idl[i:i + 50])).execute().get("items", []): info[it["id"]] = it
+    for vid, f in ids.items():
+        v = rec[f]; meta = metas[f]; it = info.get(vid)
+        name = meta.get("title") or meta.get("yt_title") or f
+        if not meta.get("pinned_comment"): continue
+        if v.get("comment_id"): print(f"  comment already posted: {name}"); continue
+        if not it or it["status"].get("privacyStatus") not in ("public", "unlisted"): print(f"  not public yet, skipped: {name}"); continue
+        owner = it["snippet"]["channelId"]
+        try:
+            existing = yt.commentThreads().list(part="snippet", videoId=vid, maxResults=100, order="time").execute().get("items", [])
+        except Exception: existing = []
+        if any(c["snippet"]["topLevelComment"]["snippet"].get("authorChannelId", {}).get("value") == owner for c in existing):
+            v["comment_id"] = "yours"; save_rec(song, rec); print(f"  you already commented, skipped: {name}"); continue
+        text = fill_full_url(meta["pinned_comment"], song, rec, pkg)
+        if dry_run: print(f"  [dry-run] would comment on {name}:\n{text}\n"); continue
+        r = yt.commentThreads().insert(part="snippet", body={"snippet": {"videoId": vid, "topLevelComment": {"snippet": {"textOriginal": text}}}}).execute()
+        v["comment_id"] = r["id"]; v["comment_pinned"] = False; save_rec(song, rec); posted.append((name, vid))
+        print(f"  comment posted: {name}\n    pin it: https://studio.youtube.com/video/{vid}/comments  (or ⋮ on the comment at https://youtu.be/{vid} → Pin)")
+    return posted
+
 def cmd_comments(args):
-    """Post each public upload's pinned comment (full video + Shorts), unless you already commented on it. Then tap Pin."""
+    """Post each public/unlisted upload's first comment (full video + Shorts), unless you already commented on it. Then pin it."""
     yt = service()
-    for song in songs_from(args):
-        rec = load_rec(song); pkg = load_pkg(song)
-        metas = {pkg["long"]["file"]: pkg["long"]}
-        metas.update({c["file"]: c for c in pkg.get("shorts", []) + pkg.get("reels", [])})
-        ids = {v["id"]: f for f, v in rec.items() if v.get("id") and f in metas}
-        if not ids: continue
-        info = {it["id"]: it for it in yt.videos().list(part="status,snippet", id=",".join(ids)).execute().get("items", [])}
-        for vid, f in ids.items():
-            v = rec[f]; meta = metas[f]; it = info.get(vid)
-            name = meta.get("title") or meta.get("yt_title") or f
-            if not meta.get("pinned_comment"): continue
-            if v.get("comment_id"): print(f"  comment already posted: {name}"); continue
-            if not it or it["status"].get("privacyStatus") not in ("public", "unlisted"): print(f"  not public yet, skipped: {name}"); continue
-            owner = it["snippet"]["channelId"]
-            try:
-                existing = yt.commentThreads().list(part="snippet", videoId=vid, maxResults=100, order="time").execute().get("items", [])
-            except Exception: existing = []
-            if any(c["snippet"]["topLevelComment"]["snippet"].get("authorChannelId", {}).get("value") == owner for c in existing):
-                v["comment_id"] = "yours"; save_rec(song, rec); print(f"  you already commented, skipped: {name}"); continue
-            text = fill_full_url(meta["pinned_comment"], song, rec, pkg)
-            if args.dry_run: print(f"  [dry-run] would comment on {name}:\n{text}\n"); continue
-            r = yt.commentThreads().insert(part="snippet", body={"snippet": {"videoId": vid, "topLevelComment": {"snippet": {"textOriginal": text}}}}).execute()
-            v["comment_id"] = r["id"]; save_rec(song, rec)
-            print(f"  comment posted: {name}  → open https://youtu.be/{vid} , tap ⋮ on the comment → Pin")
+    for song in songs_from(args): post_first_comments(yt, song, args.dry_run)
 
 def cmd_publish_now(args):
     """Make a song's scheduled (or private) uploads public right now. Shows the list and asks you to type 'publish'."""
@@ -322,6 +335,7 @@ def cmd_publish_now(args):
                         rec[f]["playlist"] = True; print("    added to playlist")
                     except Exception as e: print("    not added to playlist:", str(e)[:120])
         save_rec(song, rec)
+        post_first_comments(yt, song)
 
 def cmd_schedule(args):
     """Schedule a song's already-uploaded (unlisted or private) Shorts: the first at --schedule, then one every
@@ -575,7 +589,7 @@ def cmd_go_live(args):
     print("1/3  Updating titles, descriptions and tags to the final copy…"); cmd_update(args)
     print("\n2/3  Publishing…"); cmd_publish_now(args)
     print("\n3/3  Pinned comments…"); cmd_comments(args)
-    print("\nDone. Last step is yours: on each video, tap ⋮ on the new comment → Pin (YouTube doesn't let apps pin).")
+    print("\nDone. Pin each new comment in YouTube Studio (YouTube doesn't let apps pin).")
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)

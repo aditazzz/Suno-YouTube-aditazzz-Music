@@ -5,19 +5,19 @@ import { FONT, rng, dotTex } from './lib.js';
 
 const VS = `
 attribute vec3 aStart; attribute float aSeed; attribute float aWord;
-uniform float uTime; uniform float uEnd; uniform float uWordT[24]; uniform float uSize; uniform float uScale; uniform float uGather;
+uniform float uTime; uniform float uEnd; uniform float uWordT[24]; uniform float uSize; uniform float uScale; uniform float uGather; uniform float uSpread; uniform float uDrift; uniform float uBlow;
 varying float vA; varying float vS;
 void main() {
   float tw = uWordT[int(aWord)];
   float p = clamp((uTime - (tw - uGather)) / uGather, 0.0, 1.0); p = p * p * (3.0 - 2.0 * p);
-  vec3 pos = mix(aStart, position, p);
+  vec3 pos = mix(position + (aStart - position) * uSpread, position, p);
   pos += 0.012 * vec3(sin(uTime * 3.1 + aSeed * 40.0), cos(uTime * 2.6 + aSeed * 31.0), 0.0) * p;
-  float d = clamp((uTime - uEnd) / 0.9, 0.0, 1.0);
-  pos += vec3((aSeed - 0.5) * 2.4, 0.9 + aSeed * 1.2, (fract(aSeed * 7.13) - 0.5) * 1.5) * d * d;
+  float d = clamp((uTime - uEnd) / (0.9 * uBlow), 0.0, 1.0);
+  pos += vec3((aSeed - 0.5) * 2.4 * uSpread, (0.9 + aSeed * 1.2) * uDrift * uSpread, (fract(aSeed * 7.13) - 0.5) * 1.5 * uSpread) * d * d;
   vA = p * (1.0 - d); vS = aSeed;
   vec4 mv = modelViewMatrix * vec4(pos, 1.0);
   gl_Position = projectionMatrix * mv;
-  gl_PointSize = uSize * uScale / -mv.z * (1.0 + 2.2 * (1.0 - p) + 1.5 * d);
+  gl_PointSize = uSize * uScale / -mv.z * (1.0 + 2.2 * uSpread * (1.0 - p) + 1.5 * uSpread * d);
 }`;
 const FS = `
 uniform vec3 uColor; uniform sampler2D uDot; uniform float uOpacity;
@@ -30,7 +30,7 @@ void main() {
 
 /** text: the line; words: array of words (same order); wordT: times; end: when it blows away.
  *  h: cap height in world units. Returns a THREE.Points to place in the scene (centred on its origin). */
-export function particleLine(text, words, wordT, end, { h = 0.5, color = 0x6dffaa, font = FONT.disp, size = 1.0, density = 2, maxW = null, seed = 1 } = {}) {
+export function particleLine(text, words, wordT, end, { h = 0.5, color = 0x6dffaa, font = FONT.disp, size = 1.0, density = 2, maxW = null, seed = 1, shadow = false } = {}) {
   const px = 140; const c = document.createElement('canvas'); const g = c.getContext('2d');
   g.font = `${px}px ${font}`;
   // wrap into rows if a max width (in world units) is given
@@ -70,9 +70,15 @@ export function particleLine(text, words, wordT, end, { h = 0.5, color = 0x6dffa
   const mat = new THREE.ShaderMaterial({
     vertexShader: VS, fragmentShader: FS, transparent: true, depthWrite: false, depthTest: false, blending: THREE.AdditiveBlending,
     uniforms: { uTime: { value: 0 }, uEnd: { value: end }, uWordT: { value: wt }, uSize: { value: 0.0105 * size * density / 2 }, uScale: { value: 600 },
-      uGather: { value: 0.32 }, uColor: { value: new THREE.Color(color) }, uDot: { value: dotTex() }, uOpacity: { value: 1.0 } },
+      uGather: { value: 0.32 }, uSpread: { value: 1.0 }, uDrift: { value: 1.0 }, uBlow: { value: 1.0 }, uColor: { value: new THREE.Color(color) }, uDot: { value: dotTex() }, uOpacity: { value: 1.0 } },
   });
   const pts = new THREE.Points(geo, mat); pts.frustumCulled = false; pts.renderOrder = 50;
-  pts.userData = { n: pos.length / 3, width: (W - 40) * scale };
+  if (shadow) {   // a soft dark halo under the dots, so white text reads over city lights without a box over the picture
+    const sm = mat.clone(); sm.blending = THREE.NormalBlending; sm.uniforms = THREE.UniformsUtils.clone(mat.uniforms);
+    sm.uniforms.uColor.value = new THREE.Color(0x000000); sm.uniforms.uSize.value = mat.uniforms.uSize.value * 2.6; sm.uniforms.uOpacity.value = 0.42;
+    sm.uniforms.uDot.value = mat.uniforms.uDot.value;
+    const sh = new THREE.Points(geo, sm); sh.frustumCulled = false; sh.renderOrder = 49; pts.add(sh); pts.userData.shadow = sh;
+  }
+  pts.userData = { n: pos.length / 3, width: (W - 40) * scale, rows: rows.length, rowH: lh * scale };
   return pts;
 }

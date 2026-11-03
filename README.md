@@ -7,13 +7,13 @@
 I'm **aditazzz**, a data/AI engineer who writes songs. I write the lyrics and concepts, make the tracks with
 [Suno](https://suno.com), and direct a music video for each one on my YouTube channel
 [**@adita_zzz**](https://www.youtube.com/@adita_zzz?sub_confirmation=1). Claude builds the videos in code. Not in a
-video editor, and not with an AI video generator: for each song, Claude writes a program (Python, and for three of them JavaScript with Three.js) that draws every frame,
+video editor, and not with an AI video generator: for each song, Claude writes a program (Python, and for four of them JavaScript with Three.js) that draws every frame,
 synced to the vocals word by word. Most of the videos in this repo were made by Claude Opus 5.5 and a few by
 Claude Fable 5.1; each song page says which. The songs are
 on [Spotify](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv), and all of them, with lyrics, are on
 [aditazzz.github.io](https://aditazzz.github.io).
 
-This repo is that code. It has **32 music videos**, **57,124 lines of scene code** and the pipeline
+This repo is that code. It has **34 music videos**, **63,017 lines of scene code** and the pipeline
 that turns a finished song into a full music video, Shorts, thumbnails and a YouTube upload. Every song folder links to
 its video, so you can watch one and then read how it was drawn.
 
@@ -21,12 +21,12 @@ its video, so you can watch one and then read how it was drawn.
 
 ```mermaid
 flowchart LR
-    A["Song<br>(my lyrics, made in Suno)"] --> A2["tools/enhance_audio.py<br>notch out the AI hum"]
+    A["Song<br>(my lyrics, made in Suno)"] --> A2["studio.clean<br>notch out the AI hum"]
     A2 --> B["studio.sync<br>vocals → word timings,<br>beats, sections"]
     B --> C["scene.py<br>Claude writes the video<br>as a program"]
     C --> D["studio.render<br>every frame, 30 fps<br>16:9 + 9:16"]
     D --> E["studio.cuts<br>Shorts and Reels,<br>cut on downbeats"]
-    D --> F["studio.thumbs + studio.brand<br>the brand cover: photo chip,<br>headline, italic line"]
+    D --> F["studio.thumbs + studio.brand<br>the brand cover: headline<br>and the model credit"]
     E --> G["studio.package<br>titles, descriptions,<br>captions"]
     F --> G
     G --> H["tools/youtube_upload.py<br>YouTube"]
@@ -35,11 +35,11 @@ flowchart LR
 
 1. **The song.** I write the lyrics and the concept and make the track in Suno. The audio isn't in this repo; the
    lyrics and the timing data derived from it are.
-2. **Clean the audio** ([`tools/enhance_audio.py`](tools/enhance_audio.py)). AI music generators often leave a
+2. **Clean the audio** ([`studio/clean.py`](studio/clean.py), [`tools/enhance_audio.py`](tools/enhance_audio.py)). AI music generators often leave a
    steady hum or whine under the whole track (a low buzz, a whine around 850 to 900 Hz). The script finds the tones
    that hold one level all song and aren't on the song's tuning, cuts each with a very narrow notch, and writes a
-   "(clean)" copy plus an A/B clip to compare. Nothing else changes: no loudness, EQ or dynamics. Newer songs are
-   synced and rendered from the clean file.
+   "(clean)" copy plus an A/B clip to compare. Nothing else changes: no loudness, EQ or dynamics. `studio.sync` runs
+   this step first, so every song is synced, rendered and cut from the clean file.
 3. **Sync** ([`studio/sync.py`](studio/sync.py)). The vocals are separated from the mix (Spleeter), transcribed by a
    speech model (NVIDIA Parakeet, run locally through sherpa-onnx) and aligned to the written lyrics with dynamic
    programming, so every sung word gets a timestamp. Beats, downbeats and song sections (verse, chorus, bridge) come
@@ -49,16 +49,18 @@ flowchart LR
    a zoom out to the edge of the universe, cut-paper shadow puppets, a house seen only through its security cameras.
 5. **Render** ([`studio/render.py`](studio/render.py)). Every frame is drawn for both 16:9 (YouTube) and 9:16
    (Shorts and Reels) in parallel, resumable chunks and encoded with ffmpeg; the YouTube master can be drawn natively
-   at 1440p or 4K.
+   at 1440p or 4K. Captions are their own layer ([`studio/caplayer.py`](studio/caplayer.py)): the picture renders
+   without them, and the captions go on the dark, quiet part of each frame afterwards, so a caption change takes minutes
+   and every video has a caption-free version.
 6. **Cuts, thumbnails, copy** ([`studio/cuts.py`](studio/cuts.py), [`studio/thumbs.py`](studio/thumbs.py),
    [`studio/package.py`](studio/package.py)). Shorts are cut on downbeats, kept under 60 seconds and open on a real
    picture (never a black frame) with the hook already on screen. Every thumbnail is the same brand cover
-   ([`studio/brand.py`](studio/brand.py)): my photo chip and `</> CLAUDE ANIMATED THIS` in the top-left, a two-line
-   headline in Anton (the last line in one accent color) and one italic line saying what the song is about, over a
-   clean frame of the video, so a new video looks like the rest of the channel without any hand work. The words on it
+   ([`studio/brand.py`](studio/brand.py)): a two-line headline in Anton (the last line in one accent color) with
+   "Made with Claude Opus 5.5" (or whichever model made it) under it, over a clean frame of the video, so a new video
+   looks like the rest of the channel without any hand work. The words on it
    and every title, description, tag and caption come out of the song's `song.yaml`.
 7. **Upload** ([`tools/youtube_upload.py`](tools/youtube_upload.py)). Full videos, Shorts, thumbnails, playlists
-   and the comment I pin, through the YouTube API and my own sign-in.
+   and the first comment on every upload (I pin it), through the YouTube API and my own sign-in.
 8. **The website** ([`tools/release.py`](tools/release.py), [`tools/build_site.py`](tools/build_site.py)). Once a
    video is up and its folder is in `songs/`, one command adds it to [aditazzz.github.io](https://aditazzz.github.io):
    its own page (the video, the story, the lyrics and a panel of its code), the home page, the sitemap, the share card
@@ -90,8 +92,9 @@ def render_frame(t, W=1920, H=1080, fi=0):
 
 I write the songs: every lyric and every concept. Then I decide what the video should be ("a standup, as a shadow
 puppet play", or the same song remade five completely different ways), and Claude writes the code that draws it. It
-proposes ideas, I pick one, and we go back and forth over stills until it looks right. I watch everything before it
-goes out.
+proposes ideas, I pick one, and we go back and forth over stills until it looks right. Anything that needs my approval
+(frames, thumbnails, covers) goes on a review page ([`studio/review.py`](studio/review.py)) where I approve each one or
+leave a note, and Claude reads my answers back from the page. I watch everything before it goes out.
 
 Along the way my notes turned into rules the pipeline follows on its own: when the text was too small to read on a
 phone, the engine got a minimum text size; when a Short opened on a black frame, "frame 0 is a real picture" became a
@@ -292,7 +295,7 @@ AI agents in a sealed test sandbox found each other through a shared package cac
 <a href="https://youtu.be/UlPvIyV_Z58"><img src="songs/i-have-a-blocker/thumbnail.jpg" alt="I have a blocker. (Take It Offline)"></a><br>
 <b><a href="https://youtu.be/UlPvIyV_Z58">I have a blocker. (Take It Offline)</a></b><br>
 <sub>The daily standup as fifteen floating rooms over the city. The new guy says "I have a blocker" out loud, and we follow it down into Offline. The first Three.js film.</sub><br>
-<sub>▶ <a href="https://youtu.be/UlPvIyV_Z58">watch</a> · <a href="songs/i-have-a-blocker">code</a> (1,094 lines)</sub>
+<sub>▶ <a href="https://youtu.be/UlPvIyV_Z58">watch</a> · <a href="songs/i-have-a-blocker">code</a> (1,221 lines)</sub>
 </td>
 </tr>
 <tr>
@@ -306,8 +309,23 @@ AI agents in a sealed test sandbox found each other through a shared package cac
 <a href="https://youtu.be/RFosHOuu5JM"><img src="songs/please-hold/thumbnail.jpg" alt="Please Hold (I'd Rather Chew Glass Than Call)"></a><br>
 <b><a href="https://youtu.be/RFosHOuu5JM">Please Hold (I'd Rather Chew Glass Than Call)</a></b><br>
 <sub>A millennial sends a robot to sit through a 47-minute hold over a $4 charge, the week Grok learned to make your calls for you. Clay figures, a HOLD tower, and captions that fall over waiting. The third Three.js film.</sub><br>
-<sub>▶ <a href="https://youtu.be/RFosHOuu5JM">watch</a> · <a href="songs/please-hold">code</a> (2,930 lines)</sub>
+<sub>▶ <a href="https://youtu.be/RFosHOuu5JM">watch</a> · <a href="songs/please-hold">code</a> (2,967 lines)</sub>
 </td>
+<td width="33%" valign="top">
+<a href="https://youtu.be/TMT3tTQcfMo"><img src="songs/the-promptress/thumbnail.jpg" alt="The Promptress"></a><br>
+<b><a href="https://youtu.be/TMT3tTQcfMo">The Promptress</a></b><br>
+<sub>A witch prompts the moon until the moon starts prompting her. Every moon in it is one I photographed and filmed myself, turned into worlds in code.</sub><br>
+<sub>▶ <a href="https://youtu.be/TMT3tTQcfMo">watch</a> · <a href="songs/the-promptress">code</a> (3,542 lines)</sub>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<a href="https://youtu.be/i9R1D2cdrT4"><img src="songs/great-idea-ted/thumbnail.jpg" alt="Great Idea, Ted"></a><br>
+<b><a href="https://youtu.be/i9R1D2cdrT4">Great Idea, Ted</a></b><br>
+<sub>I said it first; Ted said it eight minutes later. The I have a blocker. cast, twelve rooms over a city at blue hour, every joke on a billboard. The fourth Three.js film.</sub><br>
+<sub>▶ <a href="https://youtu.be/i9R1D2cdrT4">watch</a> · <a href="songs/great-idea-ted">code</a> (2,187 lines)</sub>
+</td>
+<td width="33%"></td>
 <td width="33%"></td>
 </tr>
 </table>
@@ -365,11 +383,11 @@ Everything else is on the channel: [youtube.com/@adita_zzz](https://www.youtube.
 
 ## By the numbers
 
-- **32** music videos, each its own program: **57,124** lines of scene code in 194 files
-- **2,879** lines of shared engine in `studio/` (plus **538** in `studio-early/`, the one before it), and **2,013** lines of tools for audio cleanup, covers, previews, uploads and the website
-- **402,368** frames rendered for the 16:9 and 9:16 versions (about 3.7 hours of video at 30 fps)
-- **2,134** lyric lines and **11,214** words synced to the vocals
-- **136** Shorts and Reels cut from them
+- **34** music videos, each its own program: **63,017** lines of scene code in 225 files
+- **3,530** lines of shared engine in `studio/` (plus **538** in `studio-early/`, the one before it), and **2,027** lines of tools for audio cleanup, covers, previews, uploads and the website
+- **418,427** frames rendered for the 16:9 and 9:16 versions (about 3.9 hours of video at 30 fps)
+- **2,300** lyric lines and **11,932** words synced to the vocals
+- **140** Shorts and Reels cut from them
 - The biggest single video: [AI Slop? You're Absolutely Right (The City)](songs/ai-slop-city), 5,432 lines in 15 files
 
 ## Run it yourself

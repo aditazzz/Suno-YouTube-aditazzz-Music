@@ -1,6 +1,7 @@
 """Step 1 — sync: audio + lyrics -> word timings, beats, downbeats, sections.
 
 usage: python -m studio.sync songs/<slug>
+Runs studio.clean first (step 0), so the AI-music hum is out of the audio before anything is timed to it.
 needs songs/<slug>/song.yaml (audio:) and songs/<slug>/lyrics.txt
 lyrics.txt: section headers on their own line starting with '#', e.g. #V1 #PRE #CH1 #BRIDGE #FINAL #OUTRO
 Writes songs/<slug>/build/{mono16.wav,vocals16.wav,words.json,timed.json,beats.json,sections.json}
@@ -147,6 +148,8 @@ def kind(name):
     return "other"
 
 def main(song_dir):
+    from .clean import clean
+    clean(song_dir)   # step 0: the AI-music hum out first; song.yaml then points at the clean file
     song = load_song(song_dir); b = os.path.join(song_dir, "build"); os.makedirs(b, exist_ok=True)
     print("separating vocals…"); voc = separate(song, b)
     print("transcribing…"); words = transcribe(voc, b)

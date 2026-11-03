@@ -1,0 +1,435 @@
+[
+ {
+  "i": 0,
+  "y": 0.199,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.334,
+  "lowC": 1.521,
+  "text": "9:15 and the camera's off"
+ },
+ {
+  "i": 1,
+  "y": 0.199,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.325,
+  "lowC": 1.563,
+  "text": "15 squares and somebody's dog"
+ },
+ {
+  "i": 2,
+  "y": 0.199,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.322,
+  "lowC": 1.955,
+  "text": "Yesterday ticket, today ticket"
+ },
+ {
+  "i": 3,
+  "y": 0.199,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.304,
+  "lowC": 1.871,
+  "text": "No blockers, next, I'm out, I did it"
+ },
+ {
+  "i": 4,
+  "y": 0.223,
+  "h": 0.186,
+  "color": "pink",
+  "cost": 0.953,
+  "lowC": 2.317,
+  "text": "Second guy got the same three lines"
+ },
+ {
+  "i": 5,
+  "y": 0.223,
+  "h": 0.186,
+  "color": "pink",
+  "cost": 1.02,
+  "lowC": 2.283,
+  "text": "Third guy's reading from the second guy's"
+ },
+ {
+  "i": 6,
+  "y": 0.223,
+  "h": 0.186,
+  "color": "pink",
+  "cost": 1.113,
+  "lowC": 2.302,
+  "text": "Fourth one's muted, been muted a year"
+ },
+ {
+  "i": 7,
+  "y": 0.223,
+  "h": 0.186,
+  "color": "pink",
+  "cost": 1.043,
+  "lowC": 2.163,
+  "text": "We assume he's alive 'cause his light is clear"
+ },
+ {
+  "i": 8,
+  "y": 0.174,
+  "h": 0.089,
+  "color": "pink",
+  "cost": 0.319,
+  "lowC": 1.369,
+  "text": "I have no blockers"
+ },
+ {
+  "i": 9,
+  "y": 0.814,
+  "h": 0.089,
+  "color": "pink",
+  "cost": 0.148,
+  "lowC": 0.148,
+  "text": "I have no blockers"
+ },
+ {
+  "i": 10,
+  "y": 0.789,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.124,
+  "lowC": 0.124,
+  "text": "Yesterday the ticket"
+ },
+ {
+  "i": 11,
+  "y": 0.814,
+  "h": 0.089,
+  "color": "pink",
+  "cost": 0.111,
+  "lowC": 0.111,
+  "text": "Today the ticket"
+ },
+ {
+  "i": 12,
+  "y": 0.789,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.107,
+  "lowC": 0.107,
+  "text": "Take it offline, take it offline"
+ },
+ {
+  "i": 13,
+  "y": 0.789,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.1,
+  "lowC": 0.1,
+  "text": "Take it offline, that's the line"
+ },
+ {
+  "i": 14,
+  "y": 0.199,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.363,
+  "lowC": 1.987,
+  "text": "Take it offline, take it offline"
+ },
+ {
+  "i": 15,
+  "y": 0.223,
+  "h": 0.186,
+  "color": "pink",
+  "cost": 0.349,
+  "lowC": 2.663,
+  "text": "Nothing gets solved, but we're doing fine"
+ },
+ {
+  "i": 16,
+  "y": 0.223,
+  "h": 0.186,
+  "color": "pink",
+  "cost": 0.785,
+  "lowC": 2.316,
+  "text": "Somebody says they picked up my thing"
+ },
+ {
+  "i": 17,
+  "y": 0.223,
+  "h": 0.186,
+  "color": "pink",
+  "cost": 0.601,
+  "lowC": 2.247,
+  "text": "Same thing they said last Tuesday morning"
+ },
+ {
+  "i": 18,
+  "y": 0.199,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.509,
+  "lowC": 1.979,
+  "text": "Product's asking for an ETA"
+ },
+ {
+  "i": 19,
+  "y": 0.223,
+  "h": 0.186,
+  "color": "pink",
+  "cost": 0.477,
+  "lowC": 2.263,
+  "text": "On a scope that changed three times today"
+ },
+ {
+  "i": 20,
+  "y": 0.199,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.44,
+  "lowC": 1.955,
+  "text": "22 minutes, 15 heads"
+ },
+ {
+  "i": 21,
+  "y": 0.199,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.41,
+  "lowC": 1.353,
+  "text": "That's five and a half hours dead"
+ },
+ {
+  "i": 22,
+  "y": 0.199,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.436,
+  "lowC": 1.521,
+  "text": "Nothing decided, nothing resolved"
+ },
+ {
+  "i": 23,
+  "y": 0.223,
+  "h": 0.186,
+  "color": "pink",
+  "cost": 0.521,
+  "lowC": 2.205,
+  "text": "But the ritual's clean, so the ritual holds"
+ },
+ {
+  "i": 24,
+  "y": 0.174,
+  "h": 0.089,
+  "color": "pink",
+  "cost": 0.488,
+  "lowC": 1.326,
+  "text": "I have no blockers"
+ },
+ {
+  "i": 25,
+  "y": 0.814,
+  "h": 0.089,
+  "color": "pink",
+  "cost": 0.155,
+  "lowC": 0.155,
+  "text": "I have no blockers"
+ },
+ {
+  "i": 26,
+  "y": 0.789,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.117,
+  "lowC": 0.117,
+  "text": "Yesterday the ticket"
+ },
+ {
+  "i": 27,
+  "y": 0.814,
+  "h": 0.089,
+  "color": "pink",
+  "cost": 0.101,
+  "lowC": 0.101,
+  "text": "Today the ticket"
+ },
+ {
+  "i": 28,
+  "y": 0.789,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.491,
+  "lowC": 0.491,
+  "text": "And then somebody said it"
+ },
+ {
+  "i": 29,
+  "y": 0.815,
+  "h": 0.09,
+  "color": "pink",
+  "cost": 0.116,
+  "lowC": 0.116,
+  "text": "Out loud"
+ },
+ {
+  "i": 30,
+  "y": 0.778,
+  "h": 0.156,
+  "color": "pink",
+  "cost": 0.191,
+  "lowC": 0.191,
+  "text": "On the call"
+ },
+ {
+  "i": 31,
+  "y": 0.814,
+  "h": 0.089,
+  "color": "green",
+  "cost": 0.139,
+  "lowC": 0.139,
+  "text": "I have a blocker"
+ },
+ {
+  "i": 32,
+  "y": 0.739,
+  "h": 0.137,
+  "color": "green",
+  "cost": 0.131,
+  "lowC": 0.131,
+  "text": "Take it offline, take it offline"
+ },
+ {
+  "i": 33,
+  "y": 0.739,
+  "h": 0.137,
+  "color": "green",
+  "cost": 0.389,
+  "lowC": 0.389,
+  "text": "Take it offline, that's the line"
+ },
+ {
+  "i": 34,
+  "y": 0.2,
+  "h": 0.137,
+  "color": "green",
+  "cost": 0.65,
+  "lowC": 0.65,
+  "text": "Take it offline, take it offline",
+  "override": "sky: the black band is full of lit windows here"
+ },
+ {
+  "i": 35,
+  "y": 0.766,
+  "h": 0.172,
+  "color": "green",
+  "cost": 1.674,
+  "lowC": 1.674,
+  "text": "Nothing gets solved, but we're doing fine"
+ },
+ {
+  "i": 36,
+  "y": 0.793,
+  "h": 0.127,
+  "color": "pink",
+  "cost": 0.907,
+  "lowC": 0.907,
+  "text": "Nobody took it offline"
+ },
+ {
+  "i": 37,
+  "y": 0.729,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.527,
+  "lowC": 0.527,
+  "text": "Nobody ever takes it offline"
+ },
+ {
+  "i": 38,
+  "y": 0.759,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.516,
+  "lowC": 0.516,
+  "text": "Offline is a place we invented"
+ },
+ {
+  "i": 39,
+  "y": 0.789,
+  "h": 0.137,
+  "color": "green",
+  "cost": 0.453,
+  "lowC": 0.453,
+  "text": "To put the things we won't attend to"
+ },
+ {
+  "i": 40,
+  "y": 0.789,
+  "h": 0.137,
+  "color": "green",
+  "cost": 0.493,
+  "lowC": 0.493,
+  "text": "He'll say it again tomorrow at nine"
+ },
+ {
+  "i": 41,
+  "y": 0.763,
+  "h": 0.186,
+  "color": "pink",
+  "cost": 0.585,
+  "lowC": 0.585,
+  "text": "Same square, same light, same line"
+ },
+ {
+  "i": 42,
+  "y": 0.243,
+  "h": 0.186,
+  "color": "pink",
+  "cost": 0.585,
+  "lowC": 0.713,
+  "text": "And we'll say the words like we always do"
+ },
+ {
+  "i": 43,
+  "y": 0.199,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.46,
+  "lowC": 0.621,
+  "text": "Yesterday, today, and nothing new"
+ },
+ {
+  "i": 44,
+  "y": 0.789,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.14,
+  "lowC": 0.14,
+  "text": "Take it offline, take it offline"
+ },
+ {
+  "i": 45,
+  "y": 0.789,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.106,
+  "lowC": 0.106,
+  "text": "Take it offline, that's the line"
+ },
+ {
+  "i": 46,
+  "y": 0.789,
+  "h": 0.137,
+  "color": "pink",
+  "cost": 0.11,
+  "lowC": 0.11,
+  "text": "Take it offline, take it offline"
+ },
+ {
+  "i": 47,
+  "y": 0.763,
+  "h": 0.186,
+  "color": "pink",
+  "cost": 0.228,
+  "lowC": 0.228,
+  "text": "Nothing gets solved, but we're doing fine"
+ }
+]

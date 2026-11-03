@@ -89,6 +89,9 @@ def build(song_dir):
             numbers = (f"BY THE NUMBERS\n{scene_lines:,} lines of scene code written for this song\n{frames:,} frames rendered (16:9 + 9:16)\n"
                        f"{len(lines)} lyric lines and {words} words synced to the vocal\n{len(secs)} sections, every cut timed to the song\n\n")
         except Exception: pass
+    # a film that isn't plain scene code (e.g. built from real footage) states its own credits and numbers
+    if yt.get("made_with"): made_with = "MADE WITH\n" + yt["made_with"].strip() + "\n\n"
+    if yt.get("numbers"): numbers = "BY THE NUMBERS\n" + yt["numbers"].strip() + "\n\n"
     credit_line = (yt['credit'].strip() + " ") if yt.get('credit') else (yt['story'].strip() + " ") if yt.get('story') else f"Every frame was written as code by {model}, all synced to the vocals: {yt.get('visuals', '').strip()}. "
     links = song.get("links", {}) or {}
     intro = fill_links(yt.get("intro", "").strip(), links)
@@ -182,7 +185,7 @@ def write_md(song, pkg):
             "- [ ] Shorts: post and pin each Short's first comment (below), and leave Shorts out of every playlist.",
             "- [ ] Instagram: post the under-3-min version as the full Reel (only ≤3:00 is recommended to non-followers).",
             "- [ ] Instagram: try 1–2 clips as Trial Reels first; invite relevant accounts as collaborators; set the cover image.",
-            "- [ ] Space releases out: 3–5 vertical clips a week, one long video every 1–2 weeks (see PLAYBOOK.md)."]
+            "- [ ] Space releases out: 3–5 vertical clips a week, one long video every 1–2 weeks (see docs/lessons.md)."]
     p = os.path.join(song["out_dir"], f"{pkg['title']} - copy.md"); os.makedirs(song["out_dir"], exist_ok=True)
     open(p, "w").write("\n".join(out) + "\n"); print("wrote", p)
 

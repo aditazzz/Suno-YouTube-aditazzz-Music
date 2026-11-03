@@ -16,6 +16,7 @@ import { bitmap } from './font5.js';
 
 const q = new URLSearchParams(location.search);
 const W = +q.get('w') || 1600, H = +q.get('h') || 900; const VERT = H > W; const CLEAN = q.get('clean') === '1';
+const NOCAP = q.get('nocap') === '1';   // the caption-free master: the hook, title, PASS. and end card stay, the lyric captions don't (they're their own layer: studio/caplayer.py)
 const FOV = VERT ? 60 : 36;
 const T = {}; let LN = [], BEATS = [], DOWN = [];
 
@@ -291,7 +292,7 @@ function hudText(txt, x, y, px, opt = {}) { hud.save(); hud.font = `${px}px ${op
   hud.fillStyle = opt.color || '#ffffff'; hud.fillText(txt, x, y); hud.restore(); }
 function drawHud(t) {
   hud.clearRect(0, 0, W, H); let any = false;
-  const ca = caps.draw(t, SCENE_BRIGHT); if (ca > 0) { any = true; finish.uniforms.uScrim.value = ca * (0.1 + 0.32 * SCENE_BRIGHT); }
+  const ca = NOCAP ? 0 : caps.draw(t, SCENE_BRIGHT); if (ca > 0) { any = true; finish.uniforms.uScrim.value = ca * (0.1 + 0.32 * SCENE_BRIGHT); }
   // the hook: frame 0
   const a0 = 1 - sstep(4.9, 5.5, t);
   if (a0 > 0.01) { any = true; const lines = VERT ? ['millennials would', 'rather chew glass', 'than call'] : ['millennials would rather', 'chew glass than call']; const px = (VERT ? 74 : 62) * S;
@@ -931,7 +932,7 @@ let curShot = null;
 function findShot(t) { for (const s of SHOTS) if (t >= s.a && t < s.b) return s; return null; }
 function updateLyrics(t, views) {
   const tanH = Math.tan(THREE.MathUtils.degToRad(FOV) / 2); ovCam.fov = FOV; ovCam.aspect = W / H; ovCam.updateProjectionMatrix(); let any = 0; if (!lyrics.length) { finish.uniforms.uScrim.value = 0; return; }
-  for (const L of lyrics) { const on = !CLEAN && t >= L.userData.s && t < L.userData.e; L.visible = on; if (!on) continue; any = Math.max(any, sstep(L.userData.s, L.userData.s + 0.5, t) * (1 - sstep(L.userData.e - 0.6, L.userData.e, t)));
+  for (const L of lyrics) { const on = !CLEAN && !NOCAP && t >= L.userData.s && t < L.userData.e; L.visible = on; if (!on) continue; any = Math.max(any, sstep(L.userData.s, L.userData.s + 0.5, t) * (1 - sstep(L.userData.e - 0.6, L.userData.e, t)));
     L.material.uniforms.uTime.value = t; const dz = 5.2; L.position.set(0, VERT ? (SPLIT ? -dz * tanH * 0.02 : -dz * tanH * 0.5) : -dz * tanH * 0.74, -dz); L.material.uniforms.uScale.value = H / (2 * tanH); }
   finish.uniforms.uScrim.value = any * (0.18 + 0.4 * SCENE_BRIGHT);
 }

@@ -20,7 +20,7 @@ The news behind it: on Oct 25, 2026, Elon Musk announced that Grok Bot can now c
 
 | File | Lines | What it is |
 |---|---:|---|
-| [`web/js/film.js`](web/js/film.js) | 982 | The film. `renderAt(t)` draws the frame at time `t`, deterministically: the moods (night, days passing, dusk, neon), the shot list cut to the vocal, split screens (left/right in 16:9, top/bottom in 9:16), the glow-up, and the crisp 2D layer (the hook, the title, PASS., the end card). |
+| [`web/js/film.js`](web/js/film.js) | 983 | The film. `renderAt(t)` draws the frame at time `t`, deterministically: the moods (night, days passing, dusk, neon), the shot list cut to the vocal, split screens (left/right in 16:9, top/bottom in 9:16), the glow-up, and the crisp 2D layer (the hook, the title, PASS., the end card). |
 | [`web/js/captions.js`](web/js/captions.js) | 184 | The captions: small, crisp and drawn after the bloom. Words pop in as they're sung, waiting lines slump, finished lines topple like dominoes; typed lines for the hold system, a dot-matrix LED panel for the robot. |
 | [`web/js/world.js`](web/js/world.js) | 419 | The city: a sky that runs from night to noon to neon, a toy-clean city in one instanced draw (procedural windows, neon edges), the plaza and its dance-floor tiles, the bench and lamp, and the HOLD tower: 900 real windows with rooms behind them, robots on hold in any of them, an LED dot-matrix band, and a facade that becomes one giant screen. |
 | [`web/js/robot.js`](web/js/robot.js) | 180 | The hold-robot: the Ragnarök robots' family (white enamel, black glass face, gold seam), its corded receiver and coiled cord, the eye-strip screen and every mode it shows, thrusters, the receipt slot. |
@@ -29,9 +29,9 @@ The news behind it: on Oct 25, 2026, Elon Musk announced that Grok Bot can now c
 | [`web/js/props.js`](web/js/props.js) | 476 | Props: the phone and its screens, the bill, the keypad, the cubicle, takeout, the egg roll, the salon and its hood dryer, onion rings, the receipt and the stamp, the history pedestals, cobwebs, a pigeon, sax notes, invented tabloids. |
 | [`web/js/lib.js`](web/js/lib.js) | 132 | Shared helpers: easing and keyframes, seeded randomness, clay and gloss materials with a soft rim, canvas textures, fonts. |
 | [`web/js/font5.js`](web/js/font5.js) | 42 | A 5x7 dot-matrix font for the LED band, the windows that spell HOLD, the robot's eye strip and its captions. |
-| [`web/render.mjs`](web/render.mjs) | 36 | The renderer: serves the film to headless Chromium (WebGL on the CPU through SwiftShader) and saves every frame as a JPEG master. Resumable. |
+| [`web/render.mjs`](web/render.mjs) | 40 | The renderer: serves the film to headless Chromium and saves every frame as a JPEG master, on the CPU (SwiftShader) or, with `GPU=1`, the machine's own GPU, many times faster. Resumable. |
 | [`web/index.html`](web/index.html) | 3 | The page the renderer opens. |
-| [`scene.py`](scene.py) | 83 | The bridge to the Python pipeline: reads the rendered 3D masters, upscales them and adds the subscribe pill, so `studio.render`, `studio.cuts` and `studio.thumbs` work unchanged. |
+| [`scene.py`](scene.py) | 115 | The bridge to the Python pipeline: reads the rendered 3D masters, upscales them and adds the subscribe pill, so `studio.render`, `studio.cuts` and `studio.thumbs` work unchanged. In 9:16 the master is rendered caption-free (`?nocap=1`) and the captions are drawn here as their own layer ([`studio/caplayer.py`](../../studio/caplayer.py)), plain white, on the band the planner picked. |
 | [`make_thumbs.py`](make_thumbs.py) | 22 | The thumbnail: the brand cover from [`studio/brand.py`](../../studio/brand.py) (the same photo chip, Anton headline and italic line as every video) over 3D plates rendered for it (`?look=thumb`). The words and framing are in `song.yaml`. |
 | [`assemble.sh`](assemble.sh) | 19 | Assembles the silent 3D masters (16:9 and 9:16) from the rendered frames, and stops if a single frame is missing. |
 

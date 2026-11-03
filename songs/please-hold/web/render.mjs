@@ -8,11 +8,15 @@ const types = { '.js': 'text/javascript', '.html': 'text/html', '.json': 'applic
 const srv = http.createServer((req, res) => { const p = path.join(root, decodeURIComponent(req.url.split('?')[0]));
   fs.readFile(p, (e, d) => { if (e) { res.writeHead(404); res.end(); return; } res.writeHead(200, { 'Content-Type': types[path.extname(p)] || 'application/octet-stream' }); res.end(d); }); });
 await new Promise((r) => srv.listen(0, r));
-const browser = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--enable-webgl'] });
+// GPU=1: the machine's own GPU (on a Mac: Metal), many times faster than SwiftShader on the CPU. CHANNEL=chrome uses the installed Chrome.
+const GPU = !!process.env.GPU;
+const browser = await chromium.launch({ channel: process.env.CHANNEL || undefined,
+  args: GPU ? ['--ignore-gpu-blocklist', '--enable-webgl', '--enable-gpu-rasterization'] : ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--enable-webgl'] });
 const page = await browser.newPage({ viewport: { width: W, height: H } });
 page.on('console', (m) => { const s = m.text(); if (!s.includes('GL Driver')) console.log('page:', s); }); page.on('pageerror', (e) => console.log('PAGE ERROR', e.message));
 await page.goto(`http://localhost:${srv.address().port}/index.html?w=${W}&h=${H}${process.env.CLEAN ? '&clean=1' : ''}${process.env.QS ? '&' + process.env.QS : ''}`);
 await page.waitForFunction(() => window.ready, null, { timeout: 300000 });
+console.log('renderer:', await page.evaluate(() => { const c = document.createElement('canvas').getContext('webgl'); const d = c && c.getExtension('WEBGL_debug_renderer_info'); return c ? (d ? c.getParameter(d.UNMASKED_RENDERER_WEBGL) : 'webgl') : 'no webgl'; }));
 const grab = async (t) => Buffer.from((await page.evaluate((tt) => window.renderAt(tt), t)).split(',')[1], 'base64');
 if (mode === 'frames') {   // node render.mjs frames W H out_dir t0 t1 [fps] -> out_dir/f_%05d.jpg (frame n = t*fps); skips frames already on disk
   const t0 = +rest[0], t1 = +rest[1], fps = +(rest[2] || 30); fs.mkdirSync(out, { recursive: true });

@@ -22,6 +22,7 @@ FPS = 30
 
 # Pipeline-controlled switches (set by render/cuts/thumbs, read by scenes)
 STATE = {"clean": False, "lyric_filter": None,
+         "nolyr": os.environ.get("STUDIO_NOLYR") == "1",   # caption-free cut: no lyrics, no subscribe pill, no end card (story text stays)
          "platform": os.environ.get("STUDIO_PLATFORM", "")}   # "youtube": 9:16 end card asks to subscribe instead of the Instagram follow
 
 # Readability rules (thin/small text is hard to read on a phone):
@@ -333,7 +334,7 @@ def _layout(L, fs, maxw, skip):
 def overlay_lyrics(img, t, W, H, timing, active=ICE2, glow=ICE, hide_sections=(), skip=None, band=True):
     """Karaoke lower-third. Vertical layout stays inside the Reels safe frame.
     Back-to-back lines swap with a quick crossfade at the next line's first word, so two lines never stack."""
-    if STATE["clean"]: return
+    if STATE["clean"] or STATE["nolyr"]: return
     vert = H > W; ts = min(W, H) / 1080
     if band: img *= (1 - 0.55 * post(W, H).bot)
     # readability floor: lyrics are never smaller than ~64 px (16:9) / ~58 px (9:16) at 1080
@@ -430,7 +431,7 @@ def TH(k, d): return THEME.get(k, d)
 
 def subscribe_pill(img, t, W, H, t0, dur=5.0, line=None):
     """Mid-video ask for the 16:9 YouTube master only (the 9:16 master feeds Shorts/Reels, which loop)."""
-    if STATE["clean"] or H > W: return
+    if STATE["clean"] or STATE["nolyr"] or H > W: return
     a = sstep(t0, t0 + 0.35, t) * (1 - sstep(t0 + dur - 0.4, t0 + dur, t))
     if a <= 0.01: return
     ts = H / 1080; cfg = _cfg(); handle = cfg.get("channel_handle", "@adita_zzz")
@@ -455,7 +456,7 @@ def subscribe_pill(img, t, W, H, t0, dur=5.0, line=None):
 def end_screen(img, t, W, H, t0, dur, headline, sub_line=None, accent=None, title=None):
     """Last-seconds card. 16:9: left column text, right ~45% left clear for YouTube's end-screen
     elements (next-video tile + Subscribe button). 9:16: centered follow card for Instagram."""
-    if STATE["clean"]: return
+    if STATE["clean"] or STATE["nolyr"]: return
     e = sstep(t0, t0 + 0.8, t)
     if e <= 0: return
     vert = H > W; ts = min(W, H) / 1080; cfg = _cfg(); accent = accent if accent is not None else TH('red', SUB_RED)

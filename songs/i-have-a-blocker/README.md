@@ -16,14 +16,15 @@ A 3D film. The daily standup is fifteen floating rooms over the city at 9:15, on
 
 | File | Lines | What it is |
 |---|---:|---|
-| [`web/js/main.js`](web/js/main.js) | 318 | The film. `renderAt(t)` draws the frame at time `t`, deterministically: the camera, the city's dawn, the sixteen rooms (who's talking, whose light is on, which letter they hold), the BLOCKER's fall and the five knocks, the flying tickets, the particle lyrics and the meeting HUD. |
+| [`web/js/main.js`](web/js/main.js) | 422 | The film. `renderAt(t)` draws the frame at time `t`, deterministically: the camera, the city's dawn, the sixteen rooms (who's talking, whose light is on, which letter they hold), the BLOCKER's fall and the five knocks, the flying tickets, the particle lyrics and the meeting HUD. |
 | [`web/js/rooms.js`](web/js/rooms.js) | 172 | The standup: fifteen diorama rooms floating in a grid over the city, plus the new guy's sixteenth. Each is an open-fronted box with painted walls, a desk, a laptop and a mannequin. |
 | [`web/js/mannequin.js`](web/js/mannequin.js) | 172 | Smooth clay mannequins in hoodies and beanies, and Somebody's Dog. Arms are posed with two-bone IK: give each hand a target. |
 | [`web/js/city.js`](web/js/city.js) | 90 | The city at 9:15: blue hour, towers full of lit windows, rows of street lights, one wide roof where the standup floats. All painted (unlit) geometry, so the CPU renderer stays fast and the bloom does the glow. |
 | [`web/js/canyon.js`](web/js/canyon.js) | 83 | Offline: a shaft under the street through layers of rock (deeper is older, the years glow on the layers, old tickets stuck in them), opening onto a dark floor where every blocker ever taken offline sits in rows. In the middle: the dinosaur, and the asteroid somebody took offline 66 million years ago. |
-| [`web/js/ptext.js`](web/js/ptext.js) | 78 | Lyric lines made of green particles: each word gathers out of a drifting cloud as it's sung, holds with a faint shimmer, then blows away. Built from the text's own pixels, so it stays readable at any size. |
+| [`web/js/ptext.js`](web/js/ptext.js) | 84 | Lyric lines made of green particles: each word gathers out of a drifting cloud as it's sung, holds with a faint shimmer, then blows away. Built from the text's own pixels, so it stays readable at any size. |
 | [`web/js/lib.js`](web/js/lib.js) | 91 | Shared helpers: easing, seeded randomness, cheap good-looking materials, canvas textures, the fonts. |
-| [`web/render.mjs`](web/render.mjs) | 28 | The renderer: serves the film to headless Chromium (WebGL on the CPU through SwiftShader) and renders stills, or a range of frames straight to a silent video. |
+| [`web/render.mjs`](web/render.mjs) | 30 | The renderer: serves the film to headless Chromium (WebGL on the CPU through SwiftShader) and renders stills, or a range of frames straight to a silent video. With `Q=nolyr=1` it renders the picture without the lyrics, and with `Q=caps=1` only the lyrics, on transparent, so a caption change never needs a 3D re-render. |
+| [`web/plan.mjs`](web/plan.mjs) | 15 | The 9:16 caption planner: looks at the caption-free frames while each line is sung and picks the dark, quiet band to put it on, never over the rooms the story is about (saved to `web/data/caption_place_9x16.json`). |
 | [`web/index.html`](web/index.html) | 3 | The page the renderer opens. |
 | [`scene.py`](scene.py) | 59 | The bridge to the Python pipeline: reads the rendered 3D masters, upscales them and adds the channel's 2D layer (the mid-video subscribe pill and the end card), so `studio.render`, `studio.cuts` (Shorts and Reels) and `studio.thumbs` work unchanged. |
 

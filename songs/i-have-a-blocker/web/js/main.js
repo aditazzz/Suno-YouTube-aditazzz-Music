@@ -8,13 +8,17 @@ import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { loadFonts, clamp, lerp, sstep, easeIO, easeOut, easeIn, rng, clay, canvasTex, FONT, dotTex, blobShadow, win } from './lib.js';
 import { buildCity, ROOF_Y, ROOF } from './city.js';
 import { Room, RW, RH, GAP, slotPos } from './rooms.js';
+let FOCUS = -1;   // 9:16: the room the camera is visiting (its neighbours dim a little so the caption can sit over them)
 import { particleLine } from './ptext.js';
 import { buildCanyon, CY0, CY1, SHAFT_Z, FLOOR_Z } from './canyon.js';
 
 const q = new URLSearchParams(location.search);
 const W = +q.get('w') || 1600, H = +q.get('h') || 900; const VERT = H > W; const CLEAN = q.get('clean') === '1';
+// nolyr=1: the picture without the 2D lyric text (it's laid on top afterwards, so caption changes never need a 3D re-render)
+// caps=1: only the 2D lyric text, on transparent, for that overlay
+const NOLYR = q.get('nolyr') === '1', CAPS = q.get('caps') === '1';
 const T = {};
-let LN = [], BEATS = [], DOWN = [];
+let LN = [], BEATS = [], DOWN = []; let PLACE = null; let HIDE_LYR = false;   // PLACE: per-line caption spot + colour for 9:16 (data/caption_place_9x16.json)
 
 // ---------------------------------------------------------------- renderer
 const renderer = new THREE.WebGLRenderer({ antialias: false, preserveDrawingBuffer: true, powerPreference: 'high-performance' });
@@ -108,12 +112,21 @@ function initTiming(timed, beats) {
   T.fall = T.knocks[4] + 0.05; T.bridge = ls(36); T.tomorrow = ls(40); T.sameLight = ls(41); T.final = ls(44); T.leave = 165.4; T.summary = 169.6; T.end = 174.5;
   LN.forEach((L, i) => {
     const end = Math.min(L.e + 0.9, i + 1 < LN.length ? LN[i + 1].s - 0.15 : 1e9);
-    const col = i === 31 ? 0xff5aa0 : 0x6dffaa;
+    const pl = VERT && PLACE ? PLACE[i] : null;
+    const col = VERT ? 0xffffff : (i === 31 ? 0xff5aa0 : 0x6dffaa);   // 9:16: white captions (chosen on review, Oct 28)
     const visW = 2 * 5.2 * Math.tan(THREE.MathUtils.degToRad(FOV) / 2) * (W / H);
-    const p = particleLine(L.text, L.words, L.wt, end, { h: VERT ? 0.24 : 0.33, color: col, maxW: visW * (VERT ? 0.62 : 0.8), seed: i + 1, density: 2, size: 1.1 });
-    p.material.uniforms.uOpacity.value = 0.62;
-    p.visible = false; p.userData.s = L.s - 0.6; p.userData.e = end + 1.0; lyrics.push(p); cam.add(p);
+    const p = particleLine(L.text, L.words, L.wt, end, { h: VERT ? 0.19 : 0.33, color: col, maxW: visW * (VERT ? 0.66 : 0.8), seed: i + 1, density: 2, size: 1.1, shadow: VERT });
+    p.material.uniforms.uOpacity.value = VERT ? 0.5 : 0.62;   // white blooms more than green
+    if (VERT) { const u = p.material.uniforms; u.uSpread.value = 0.3; u.uBlow.value = 0.55; u.uDrift.value = pl && pl.y > 0.5 ? -1 : 1; }   // small cloud, quick fade, drifting away from the picture
+    p.visible = false; p.userData.s = L.s - (VERT ? 0.35 : 0.6); p.userData.e = end + (VERT ? 0.55 : 1.0); p.userData.i = i; lyrics.push(p); cam.add(p);
   });
+  if (VERT) {   // 9:16 opening title in the same particle lettering (no channel name), up in the dark sky
+    const mk = (text, t0, h, fy, seed) => { const words = text.split(' '); const wt = words.map((_, k) => t0 + 0.28 * k);
+      const p = particleLine(text, words, wt, 9.2, { h, color: 0xffffff, seed, density: 2, size: 1.1, shadow: true });
+      p.material.uniforms.uOpacity.value = 0.5; const u = p.material.uniforms; u.uSpread.value = 0.3; u.uBlow.value = 0.55; u.uDrift.value = 1;
+      p.visible = false; p.userData.s = t0 - 0.4; p.userData.e = 9.9; p.userData.fy = fy; lyrics.push(p); cam.add(p); };
+    mk('I have a blocker.', 0.9, 0.23, 0.27, 101); mk('(Take It Offline)', 1.9, 0.16, 0.335, 102);
+  }
 }
 
 // ---------------------------------------------------------------- the standup's state
@@ -181,10 +194,11 @@ const WIDE = VERT ? 1.45 : 1.0;
 function shake(t) { let s = 0; const hits = [T.blocker, ...T.knocks]; for (const h of hits) if (t >= h && t < h + 1.0) s += Math.exp(-(t - h) / 0.18) * (h === T.blocker ? 1.6 : 0.8); return s; }
 function visit(i, a, b, t, side = 1) {
   const rp = roomWorld(i, t), k = easeIO((t - a) / (b - a)); const back = VERT ? 6.6 : 5.0;
+  if (VERT) { FOCUS = i; return [rp.clone().add(V3(lerp(-1.4, 1.2, k) * side, 1.0, lerp(back + 0.8, back, k))), rp.clone().add(V3(0, 1.05, -1.2)), FOV]; }   // room in the lower half, caption room above
   return [rp.clone().add(V3(lerp(-1.4, 1.2, k) * side, 0.3, lerp(back + 0.8, back, k))), rp.clone().add(V3(0, -0.15, -1.2)), FOV];
 }
 function camAt(t) {
-  const gc = GC();
+  FOCUS = -1; const gc = GC();
   if (t < 11.28) { const k = easeIO(t / 11.28);
     return [V3(lerp(-70, -3, k), lerp(110, GRID_Y + 2.5, k), lerp(190, GRID_Z + 30 * WIDE, k)), V3(0, lerp(18, GRID_Y, k), lerp(-80, GRID_Z, k)), FOV]; }
   if (t < 29.28) {
@@ -208,7 +222,7 @@ function camAt(t) {
   if (t < T.ihave) {
     const sp = roomWorld(15, t);
     const wide = gc.clone().add(V3(4, 1, 18 * WIDE)); const near = sp.clone().add(V3(0.6, 0.3, (VERT ? 7.5 : 5.6)));
-    const p = wide.lerp(near, easeIO(sstep(T.samJoin + 2.5, T.ihave, t)));
+    const p = wide.lerp(near, easeIO(sstep(T.samJoin + 2.5, T.ihave, t))); if (VERT && t > T.samJoin + 3.5) FOCUS = 15;
     let fov = FOV; if (t > ls(30)) { const d = easeIO((t - ls(30)) / (T.ihave - ls(30))); p.z += d * 4; fov = FOV / (1 + d * 0.65); }
     return [p, gc.clone().lerp(sp, sstep(T.samJoin + 2, T.ihave - 1, t)), fov];
   }
@@ -244,7 +258,7 @@ function camAt(t) {
 function drawHud(t) {
   const g = hudCtx; g.clearRect(0, 0, W, H); let any = false; const s = Math.min(W, H) / 1080;
   const a1 = sstep(0.8, 1.8, t) * (1 - sstep(9.0, 10.2, t));
-  if (a1 > 0.01) { any = true; g.globalAlpha = a1; const x = VERT ? W / 2 : 70 * s, y = VERT ? H * 0.2 : H - 170 * s; g.textAlign = VERT ? 'center' : 'left';
+  if (a1 > 0.01 && !VERT) { any = true; g.globalAlpha = a1; const x = VERT ? W / 2 : 70 * s, y = VERT ? H * 0.2 : H - 170 * s; g.textAlign = VERT ? 'center' : 'left';
     g.fillStyle = '#ff5aa0'; g.font = `${34 * s}px ${FONT.mono}`; g.fillText('aditazzz', x, y);
     g.fillStyle = '#f3efe6'; g.font = `${62 * s}px ${FONT.disp}`; g.fillText('I have a blocker.', x, y + 66 * s);
     g.fillStyle = 'rgba(243,239,230,0.75)'; g.font = `${40 * s}px ${FONT.disp}`; g.fillText('(Take It Offline)', x, y + 116 * s); }
@@ -254,12 +268,44 @@ function drawHud(t) {
     const rows = [['MEETING SUMMARY', `${30 * s}px ${FONT.monoB}`, '#6dffaa'], ['Daily Standup · 22 min', `${78 * s}px ${FONT.disp}`, '#f3efe6'],
       ['Blockers: 1  (taken offline)', `${50 * s}px ${FONT.disp}`, '#ff5aa0'], ['Next: tomorrow, 9:15 AM', `${36 * s}px ${FONT.ui}`, 'rgba(243,239,230,0.65)']];
     rows.forEach(([txt, f, c], k) => { g.globalAlpha = a2 * sstep(T.summary + 0.15 * k, T.summary + 0.15 * k + 0.5, t); g.font = f; g.fillStyle = c; g.fillText(txt, cx, y); y += (k === 0 ? 92 : 86) * s; }); }
+  if (VERT && !HIDE_LYR && !NOLYR && drawLyrics2D(g, t)) any = true;
   g.globalAlpha = 1; hud.visible = any; if (any) hudTex.needsUpdate = true;
+}
+
+// 9:16 lyrics: plain white text with a soft dark shadow (no particles: the city's lights are busy enough). Each word fades
+// in as it's sung; the line fades out after its last word. Spot per line from data/caption_place_9x16.json (the planner).
+function drawLyrics2D(g, t) {
+  let drew = false; const fs = Math.round(H * 0.042), lh = fs * 1.16, maxW = W * 0.66;
+  g.font = `${fs}px ${FONT.disp}`; g.textAlign = 'left'; g.textBaseline = 'middle';
+  for (let i = 0; i < LN.length; i++) {
+    const L = LN[i]; const end = Math.min(L.e + 0.9, i + 1 < LN.length ? LN[i + 1].s - 0.15 : 1e9);
+    if (t < L.s - 0.2 || t > end + 0.45) continue;
+    const out = 1 - sstep(end, end + 0.4, t); if (out <= 0.01) continue;
+    const sp = g.measureText(' ').width, ww = L.words.map((w) => g.measureText(w).width);
+    const rows = [[]]; let x = 0;
+    L.words.forEach((w, k) => { if (rows[rows.length - 1].length && x + ww[k] > maxW) { rows.push([]); x = 0; } rows[rows.length - 1].push(k); x += ww[k] + sp; });
+    const fy = PLACE && PLACE[i] ? PLACE[i].y : 0.78; const y0 = fy * H - (rows.length - 1) * lh / 2;
+    rows.forEach((r, ri) => {
+      const rw = r.reduce((a, k) => a + ww[k], 0) + sp * (r.length - 1); let xx = (W - rw) / 2;
+      for (const k of r) {
+        const a = sstep(L.wt[k] - 0.12, L.wt[k] + 0.08, t) * out;
+        if (a > 0.01) { g.globalAlpha = a;
+          g.shadowColor = 'rgba(0,0,0,0.9)'; g.shadowBlur = fs * 0.45; g.shadowOffsetY = fs * 0.04;
+          g.fillStyle = '#f4f4f2'; g.fillText(L.words[k], xx, y0 + ri * lh); g.fillText(L.words[k], xx, y0 + ri * lh);   // twice: a denser shadow
+          g.shadowColor = 'transparent'; drew = true; }
+        xx += ww[k] + sp;
+      }
+    });
+  }
+  g.globalAlpha = 1; return drew;
 }
 
 // ---------------------------------------------------------------- per frame
 const _m4 = new THREE.Matrix4(), _q = new THREE.Quaternion(), _e = new THREE.Euler();
+let capC = null;
 window.renderAt = (t) => {
+  if (CAPS) { if (!capC) { capC = document.createElement('canvas'); capC.width = W; capC.height = H; }
+    const g = capC.getContext('2d'); g.clearRect(0, 0, W, H); drawLyrics2D(g, t); return capC.toDataURL('image/png'); }
   const dawn = t < T.tomorrow ? 0.35 : lerp(0.35, 1.0, sstep(T.tomorrow, T.final, t));
   city.userData.sky.material.uniforms.uDawn.value = dawn;
   const [p, tg, fov] = camAt(t); const sh = shake(t);
@@ -272,7 +318,7 @@ window.renderAt = (t) => {
     r.root.visible = (i < 15 || t >= T.samJoin) && !(t >= T.bridge + 4 && t < T.tomorrow - 1);
     const [tk, tc] = talk(i, t);
     const pw = i === 15 ? (t >= T.knocks[4] && t < T.tomorrow ? 1 - sstep(T.knocks[4], T.knocks[4] + 0.5, t) : 1) * (t >= T.leave ? 1 - sstep(T.leave, T.leave + 0.2, t) : 1) : powerOn(i, t);
-    const dark = Math.max(i === 15 ? 0 : dark0 * 0.94, 1 - pw);
+    const dark = Math.max(i === 15 ? 0 : dark0 * 0.94, 1 - pw, VERT && FOCUS >= 0 && i !== FOCUS ? 0.88 : 0);
     r.update({ t, talk: tk * pw, talkCol: tc, card: letterOn(i, t), fine: fineOn(t), dark, blink: i === 4 && t >= ls(7) && t < le(7) ? 1 : undefined });
   }
   const b = blockState(t); block.visible = !!b; block.userData.shadow.visible = !!b && t < T.fall + 0.2;
@@ -298,8 +344,9 @@ window.renderAt = (t) => {
   if (clock.visible) { clock.position.copy(GC()).add(V3(0, 6.6, 0.6)); clock.material.opacity = ck; clock.scale.setScalar(0.85 + 0.15 * ck); }
   crack.material.opacity = t >= T.fall + 1.2 && t < T.tomorrow ? 0.95 : 0;
   const tanH = Math.tan(THREE.MathUtils.degToRad(cam.fov) / 2);
-  for (const L of lyrics) { const on = !CLEAN && t >= L.userData.s && t < L.userData.e; L.visible = on;
-    if (on) { L.material.uniforms.uTime.value = t; const dz = 5.2; L.position.set(0, VERT ? -dz * tanH * 0.20 : -dz * tanH * 0.62, -dz); L.material.uniforms.uScale.value = H / (2 * tanH); } }
+  for (const L of lyrics) { const on = !CLEAN && !HIDE_LYR && t >= L.userData.s && t < L.userData.e && !(VERT && !L.userData.fy); L.visible = on;
+    if (on) { L.material.uniforms.uTime.value = t; if (L.userData.shadow) { const su = L.userData.shadow.material.uniforms, mu = L.material.uniforms; su.uTime.value = t; su.uScale.value = H / (2 * Math.tan(THREE.MathUtils.degToRad(cam.fov) / 2)); su.uSpread.value = mu.uSpread.value; su.uBlow.value = mu.uBlow.value; su.uDrift.value = mu.uDrift.value; } const dz = 5.2; const pl = L.userData.fy ? { y: L.userData.fy } : (VERT && PLACE ? PLACE[L.userData.i] : null);
+      L.position.set(0, pl ? dz * tanH * (1 - 2 * pl.y) : (VERT ? -dz * tanH * 0.20 : -dz * tanH * 0.62), -dz); L.material.uniforms.uScale.value = H / (2 * tanH); } }
   dust.rotation.y = t * 0.01;
   const fl = (t >= T.blocker && t < T.blocker + 0.3 ? Math.exp(-(t - T.blocker) / 0.06) * 0.5 : 0) + (kb < 0.3 && t >= T.knocks[0] && t < T.fall + 0.1 ? Math.exp(-kb / 0.05) * 0.18 : 0);
   finish.uniforms.uFlash.value = fl; finish.uniforms.uFlashCol.value.set(t < T.knocks[0] ? 0xffc2dc : 0xd8ffe8);
@@ -310,8 +357,65 @@ window.renderAt = (t) => {
   return renderer.domElement.toDataURL('image/jpeg', 0.93);
 };
 
+// ---------------------------------------------------------------- caption planner (9:16)
+// For each lyric line: render the clean picture at a few moments while it's on screen, and score every horizontal band
+// inside the safe zone (13%..70% of the height) by brightness + detail. The caption goes in the darkest, emptiest band
+// (worst moment counts), so it never sits on the squares or the action; colour = whichever of green / pink the
+// picture around it has less of.
+window.capPlan = async () => {
+  const cw = 90, ch = 160, cv = document.createElement('canvas'); cv.width = cw; cv.height = ch; const g = cv.getContext('2d', { willReadFrequently: true });
+  HIDE_LYR = true; const out = []; let prev = 0.3;
+  for (let i = 0; i < LN.length; i++) {
+    const L = lyrics[i], s = LN[i].s, e = Math.max(LN[i].e, s + 0.4); const ts = [s - 0.2, (s + e) / 2, e + 0.3];
+    const bandH = new Array(ch).fill(0); let rowsCost = null, green = 0, pink = 0;
+    for (const t of ts) {
+      window.renderAt(t); g.drawImage(renderer.domElement, 0, 0, cw, ch); const d = g.getImageData(0, 0, cw, ch).data;
+      const lum = new Float32Array(cw * ch);
+      for (let k = 0; k < cw * ch; k++) { const r = d[k * 4], gg = d[k * 4 + 1], b = d[k * 4 + 2]; lum[k] = (0.2126 * r + 0.7152 * gg + 0.0722 * b) / 255;
+        if (gg > r + 35 && gg > b) green++; if (r > gg + 50 && b > gg + 10) pink++; }
+      const row = new Float32Array(ch);
+      for (let y = 0; y < ch; y++) { let m = 0, ed = 0; for (let x = 0; x < cw; x++) { const v = lum[y * cw + x]; m += v; if (x) ed += Math.abs(v - lum[y * cw + x - 1]); if (y) ed += Math.abs(v - lum[(y - 1) * cw + x]); }
+        row[y] = m / cw + 1.6 * ed / cw; }
+      // the plot: every visible room's square (the speaking / visited one counts triple) and the BLOCKER cube
+      const pen = new Float32Array(ch); const proj = (v) => { const q = v.clone().project(cam); return [(q.x + 1) / 2, (1 - q.y) / 2, q.z]; };
+      const addBox = (pts, w) => { const P = pts.map(proj).filter((q) => q[2] < 1); if (!P.length) return;
+        const x0 = Math.max(0.19, Math.min(...P.map((q) => q[0]))), x1 = Math.min(0.81, Math.max(...P.map((q) => q[0])));   // the caption is ~62% wide, centred
+        if (x1 <= x0) return; const y0 = Math.max(0, Math.min(...P.map((q) => q[1]))), y1 = Math.min(1, Math.max(...P.map((q) => q[1])));
+        for (let y = Math.floor(y0 * ch); y < Math.ceil(y1 * ch); y++) if (y >= 0 && y < ch) pen[y] = Math.max(pen[y], w * Math.min(1, (x1 - x0) / 0.08)); };
+      rooms.forEach((r, ri) => { if (!r.root.visible) return; const c = new THREE.Vector3(); r.root.getWorldPosition(c);
+        const pts = []; for (const dx of [-RW / 2, RW / 2]) for (const dy of [-RH / 2, RH / 2]) for (const dz of [0, -2.3]) pts.push(c.clone().add(V3(dx, dy, dz)));
+        const lit = r.dark && r.dark.material.opacity > 0.4 ? 0.35 : 1;
+        const main = ri === FOCUS || talk(ri, t)[0] > 0.2 || (ri === 15 && t > T.samJoin && t < T.knocks[0]);
+        addBox(pts, (main ? 3.0 : 0.9) * lit); });
+      if (block.visible) { const pts = []; for (const dx of [-2.1, 2.1]) for (const dy of [-2.1, 2.1]) for (const dz of [-2.1, 2.1]) pts.push(block.position.clone().add(V3(dx, dy, dz))); addBox(pts, 4.0); }
+      if (clock.visible) { const pts = []; for (const dx of [-4.5, 4.5]) for (const dy of [-1.2, 1.2]) pts.push(clock.position.clone().add(V3(dx, dy, 0))); addBox(pts, 3.0); }
+      for (let y = 0; y < ch; y++) row[y] += pen[y];
+      rowsCost = rowsCost ? rowsCost.map((v, y) => Math.max(v, row[y])) : row;
+    }
+    const tanH = Math.tan(THREE.MathUtils.degToRad(cam.fov) / 2);
+    const hFrac = Math.min(0.3, (L.userData.rows * L.userData.rowH + 0.25) / (2 * 5.2 * tanH));   // caption height as a fraction of the frame
+    // first choice: the black band under the picture (marked on review, Oct 28), down to 86% of the height: above
+    // Instagram's caption overlay and, ~62% wide and centred, clear of the buttons on the right; else 13%..86%
+    const band = (lo, hi) => { let best = null;
+    for (let fy = lo; fy <= hi + 1e-6; fy += 0.01) {
+      const a = Math.floor((fy - hFrac / 2 - 0.02) * ch), b = Math.ceil((fy + hFrac / 2 + 0.02) * ch); let c = 0;
+      for (let y = Math.max(0, a); y < Math.min(ch, b); y++) c += rowsCost[y]; c /= Math.max(1, b - a);
+      c += 0.06 * Math.abs(fy - prev);                      // don't hop around for nothing
+      if (!best || c < best.c) best = { fy, c };
+    } return best; };
+    let best = band(Math.min(0.55 + hFrac / 2, 0.86 - hFrac / 2), 0.86 - hFrac / 2);
+    const lowC = best ? best.c : 9;
+
+    { const b2 = band(0.13 + hFrac / 2, 0.86 - hFrac / 2); if (!best || b2.c < best.c - (best.c > 0.6 ? 0.0 : 0.25)) best = b2; }   // the black band wins when it's really dark
+    prev = best.fy;
+    out.push({ i, y: +best.fy.toFixed(3), h: +hFrac.toFixed(3), color: green > pink * 1.3 ? 'pink' : 'green', cost: +best.c.toFixed(3), lowC: +lowC.toFixed(3), text: LN[i].text });
+  }
+  HIDE_LYR = false; return out;
+};
+
 (async () => {
   await loadFonts();
+  if (VERT) { try { PLACE = await fetch('/data/caption_place_9x16.json').then((r) => (r.ok ? r.json() : null)); } catch (e) { PLACE = null; } if (PLACE && !Array.isArray(PLACE)) PLACE = null; }
   const [timed, beats] = await Promise.all([fetch('/data/timed.json').then((r) => r.json()), fetch('/data/beats.json').then((r) => r.json())]);
   build(); initTiming(timed, beats);
   window.DUR = T.dur; window.T = T; window.__dbg = { scene, cam, composer, renderer, canyon }; window.ready = true;
