@@ -13,7 +13,7 @@ Claude Fable 5.1; each song page says which. The songs are
 on [Spotify](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv), and all of them, with lyrics, are on
 [aditazzz.github.io](https://aditazzz.github.io).
 
-This repo is that code. It has **34 music videos**, **63,017 lines of scene code** and the pipeline
+This repo is that code. It has **35 music videos**, **64,650 lines of scene code** and the pipeline
 that turns a finished song into a full music video, Shorts, thumbnails and a YouTube upload. Every song folder links to
 its video, so you can watch one and then read how it was drawn.
 
@@ -332,10 +332,10 @@ AI agents in a sealed test sandbox found each other through a shared package cac
 
 ### Earlier videos
 
-The channel's first week, before `studio/` existed: five videos, each its own standalone program, recovered from the chats
-that made them. LGTM and Next Token were made with Claude Opus 5.5; Merge Conflict, Graceful Shutdown and AI Sycophant with
-Claude Fable 5.1 (the last two songs were later remade with Opus, above). The small engine the three Fable videos shared is in
-[`studio-early/`](studio-early).
+Before `studio/` existed: six videos, each its own standalone program, recovered from the chats that made them. LGTM and
+Next Token were made with Claude Opus 5.5; Merge Conflict, Graceful Shutdown, AI Sycophant and Get Off War Thunder with
+Claude Fable 5.1 (Graceful Shutdown and AI Sycophant were later remade with Opus, above). The small engine three of the Fable
+videos shared is in [`studio-early/`](studio-early); Get Off War Thunder draws everything with Pillow on its own.
 
 <table>
 <tr>
@@ -371,23 +371,24 @@ Claude Fable 5.1 (the last two songs were later remade with Opus, above). The sm
 <sub>A schematic world being shut down gently: a save dialog, a countdown, kill -15, never -9.</sub><br>
 <sub>▶ <a href="https://youtu.be/ZYoCc55onzw">watch</a> · <a href="songs/graceful-shutdown-fable">code</a> (858 lines) · Claude Fable 5.1</sub>
 </td>
-<td width="33%"></td>
+<td width="33%" valign="top">
+<a href="https://youtu.be/YMrcah4HFtQ"><img src="songs/get-off-war-thunder/thumbnail.jpg" alt="Get Off War Thunder"></a><br>
+<b><a href="https://youtu.be/YMrcah4HFtQ">Get Off War Thunder</a></b><br>
+<sub>My six-year-old's pop-punk song about his big brother's War Thunder habit, played as a game: Little Brother Simulator.</sub><br>
+<sub>▶ <a href="https://youtu.be/YMrcah4HFtQ">watch</a> · <a href="songs/get-off-war-thunder">code</a> (1,633 lines) · Claude Fable 5.1</sub>
+</td>
 </tr>
 </table>
-
-### Also on the channel (code not in this repo)
-
-- [Get Off War Thunder](https://youtu.be/YMrcah4HFtQ), made with Claude Fable 5.1
 
 Everything else is on the channel: [youtube.com/@adita_zzz](https://www.youtube.com/@adita_zzz/videos).
 
 ## By the numbers
 
-- **34** music videos, each its own program: **63,017** lines of scene code in 225 files
+- **35** music videos, each its own program: **64,650** lines of scene code in 231 files
 - **3,530** lines of shared engine in `studio/` (plus **538** in `studio-early/`, the one before it), and **2,027** lines of tools for audio cleanup, covers, previews, uploads and the website
-- **418,427** frames rendered for the 16:9 and 9:16 versions (about 3.9 hours of video at 30 fps)
-- **2,300** lyric lines and **11,932** words synced to the vocals
-- **140** Shorts and Reels cut from them
+- **425,373** frames rendered for the 16:9 and 9:16 versions (about 3.9 hours of video at 30 fps)
+- **2,342** lyric lines and **12,213** words synced to the vocals
+- **143** Shorts and Reels cut from them
 - The biggest single video: [AI Slop? You're Absolutely Right (The City)](songs/ai-slop-city), 5,432 lines in 15 files
 
 ## Run it yourself
