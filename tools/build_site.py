@@ -23,6 +23,7 @@ INSTAGRAM = "https://www.instagram.com/aditazzz.music/"
 LINKTREE = "https://linktr.ee/aditazzz"
 LINKEDIN = "https://www.linkedin.com/in/aditazeqollari"
 REDDIT = "https://www.reddit.com/r/aidoompop/"   # the AI Doompop subreddit
+X = "https://x.com/adita_zzz"
 # Google Search Console ownership token (URL-prefix property for SITE). It is public by design: Google reads it from the
 # live home page. Keep it here so a rebuild never drops it.
 GSC_VERIFY = "KsjTLDJ1Qvirn6xuLeXUbLTs20i_d3ELdcQKPKiwSVM"
@@ -30,7 +31,7 @@ ABOUT = ("aditazzz makes AI-assisted music about technology, artificial intellig
          "experience. Every music video is animated entirely in code with Claude.")
 ARTIST = {"@type": "MusicGroup", "@id": SITE + "/#artist", "name": "aditazzz", "url": SITE + "/", "image": SITE + "/assets/aditazzz.jpg",
           "description": ABOUT, "genre": ["AI Doompop", "Darkwave", "Synthpop"],
-          "sameAs": [YT, SPOTIFY, INSTAGRAM, LINKTREE, LINKEDIN, REDDIT, "https://github.com/aditazzz"]}
+          "sameAs": [YT, SPOTIFY, INSTAGRAM, X, LINKTREE, LINKEDIN, REDDIT, "https://github.com/aditazzz"]}
 # The social card, the picture a shared link to the site shows: 1200x630 (1.91:1), drawn on every build from the 16 newest
 # thumbnails with the site's name and the video count in a panel in the middle, so a square crop keeps the panel too. It's
 # also the first image in the JSON-LD and the image_src, so link previews that skip og:image don't fall back to the photo.
@@ -211,7 +212,7 @@ def icon(name):
 
 
 def socials():
-    links = [("Instagram", INSTAGRAM, "instagram"), ("r/aidoompop on Reddit", REDDIT, "reddit"),
+    links = [("Instagram", INSTAGRAM, "instagram"), ("X (@adita_zzz)", X, "x"), ("r/aidoompop on Reddit", REDDIT, "reddit"),
              ("LinkedIn", LINKEDIN, "linkedin"), ("GitHub", REPO, "github"), ("All links", LINKTREE, "linktree")]
     return '<p class="socials">' + "".join(f'<a href="{u}" aria-label="{n}" title="{n}">{icon(i)}</a>' for n, u, i in links) + "</p>"
 
@@ -282,7 +283,7 @@ def page(*, path, title, desc, image, image_alt, body, ld, og_type="website", ex
 {body}
 </main>
 <footer class="foot"><div class="wrap">
-  <p class="links"><a href="{SUB}">YouTube</a><a href="{SPOTIFY}">Spotify</a><a href="{INSTAGRAM}">Instagram</a><a href="{REDDIT}">r/aidoompop</a><a href="{REPO}">GitHub</a><a href="{LINKEDIN}">LinkedIn</a><a href="{LINKTREE}">All links</a></p>
+  <p class="links"><a href="{SUB}">YouTube</a><a href="{SPOTIFY}">Spotify</a><a href="{INSTAGRAM}">Instagram</a><a href="{X}">X</a><a href="{REDDIT}">r/aidoompop</a><a href="{REPO}">GitHub</a><a href="{LINKEDIN}">LinkedIn</a><a href="{LINKTREE}">All links</a></p>
   <p class="fine">Songs, lyrics and concepts by aditazzz. Videos written in code by Claude. The code is MIT-licensed; the songs, lyrics and artwork are all rights reserved.</p>
 </div></footer>
 <script src="/assets/site.js?v={ASSET_V}" defer></script>
