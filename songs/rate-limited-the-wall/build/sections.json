@@ -1,0 +1,114 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "",
+  "first_word_t": 1.4164172335600906,
+  "e": 1.4164172335600906,
+  "kind": "intro"
+ },
+ {
+  "name": "INTRO",
+  "s": 1.4164172335600906,
+  "first_line": "Mm-mm-mm",
+  "first_word_t": 3.1,
+  "e": 3.7384126984126986,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 3.7384126984126986,
+  "first_line": "2 a.m., the build was green",
+  "first_word_t": 3.4,
+  "e": 20.06204081632653,
+  "kind": "verse"
+ },
+ {
+  "name": "CH1",
+  "s": 20.06204081632653,
+  "first_line": "Rate, rate, rate limited",
+  "first_word_t": 20.4853333791097,
+  "e": 38.568344671201814,
+  "kind": "chorus"
+ },
+ {
+  "name": "POST1",
+  "s": 38.568344671201814,
+  "first_line": "Retry, retry, retry after",
+  "first_word_t": 39.325714111328125,
+  "e": 43.1891156462585,
+  "kind": "post"
+ },
+ {
+  "name": "V2",
+  "s": 43.1891156462585,
+  "first_line": "Tried a new tab",
+  "first_word_t": 44.239999870459236,
+  "e": 75.65061224489796,
+  "kind": "verse"
+ },
+ {
+  "name": "CH2",
+  "s": 75.65061224489796,
+  "first_line": "Rate, rate, rate limited",
+  "first_word_t": 75.348571232387,
+  "e": 94.15691609977324,
+  "kind": "chorus"
+ },
+ {
+  "name": "POST",
+  "s": 94.15691609977324,
+  "first_line": "Three fifty-nine",
+  "first_word_t": 95.80799980163575,
+  "e": 103.39845804988663,
+  "kind": "post"
+ },
+ {
+  "name": "V3",
+  "s": 103.39845804988663,
+  "first_line": "Checked your status page like I'm checking your stories",
+  "first_word_t": 103.75999999046326,
+  "e": 121.9047619047619,
+  "kind": "verse"
+ },
+ {
+  "name": "CH3",
+  "s": 121.9047619047619,
+  "first_line": "Rate, rate, rate limited",
+  "first_word_t": 123.02222220102946,
+  "e": 142.68662131519275,
+  "kind": "chorus"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 142.68662131519275,
+  "first_line": "Okay",
+  "first_word_t": 142.39999985694885,
+  "e": 168.15891156462584,
+  "kind": "bridge"
+ },
+ {
+  "name": "BRIDGE2",
+  "s": 168.15891156462584,
+  "first_line": "I don't get tired",
+  "first_word_t": 168.88000011444092,
+  "e": 177.0985941043084,
+  "kind": "bridge"
+ },
+ {
+  "name": "FINAL",
+  "s": 177.0985941043084,
+  "first_line": "Rate, rate, rate limited",
+  "first_word_t": 178.87999973978316,
+  "e": 202.75664399092972,
+  "kind": "chorus"
+ },
+ {
+  "name": "OUTRO",
+  "s": 202.75664399092972,
+  "first_line": "Limit reset",
+  "first_word_t": 203.23999989032745,
+  "e": 211.92,
+  "kind": "outro"
+ }
+]
