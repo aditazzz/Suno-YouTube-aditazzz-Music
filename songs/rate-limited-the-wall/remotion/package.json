@@ -1,0 +1,26 @@
+{
+  "name": "rate-limited-the-wall",
+  "private": true,
+  "description": "Rate Limited (The Wall) by aditazzz: the music video, a Remotion film drawn on canvas frame by frame",
+  "type": "module",
+  "scripts": {
+    "prep": "node prep.mjs",
+    "studio": "node prep.mjs && remotion studio src/index.ts",
+    "stills": "node prep.mjs && node render.mjs stills",
+    "master": "node prep.mjs && node render.mjs master",
+    "typecheck": "tsc --noEmit"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@remotion/bundler": "4.0.541",
+    "@remotion/cli": "4.0.541",
+    "@remotion/renderer": "4.0.541",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "remotion": "4.0.541"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.12",
+    "typescript": "5.9.3"
+  }
+}

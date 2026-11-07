@@ -1,0 +1,52 @@
+title: Rate Limited (The Wall)
+audio: Rate Limited (Remastered).wav  # the same remaster as songs/rate-limited (the original cut), from MUSIC_DIR
+clean_audio: false                    # already the remaster; studio.clean leaves the audio line alone
+folder: Rate Limited (The Wall)       # its own output folder, so the finals never overwrite the original cut's
+model_credit: Claude Opus 5.5
+vision_credit: Muse Wonder            # the film's vision (store docs/rate-limited-vision.md); Claude Opus 5.5 wrote the code
+ai_music: true
+tail: 4.0                             # the picture cuts to black on her blink at 209.65; the end card runs on black to 215.92
+end_screen_at: 209.95                 # "Where were we?" card on the left, right half clear for YouTube's end-screen elements
+cover_time: 26.20                     # a slam: 429 burning red over her, the impact flash, hairline cracks and the cracked ground
+thumb_time: 39.40                     # the Seen freeze: "Seen 02:14" etched under the thread, his three dots frozen
+status: building                      # the Remotion film is in remotion/; masters in build/master_<fmt>.mp4 (see README.md)
+accent: "ffac3a"
+
+youtube:
+  title_hook: "When Your AI Leaves You on Read"
+  hook: >-
+    2 a.m., the build was green, forty tabs open, one more feature… and then a wall dropped out of the sky with 429 cut
+    through it. A synth-pop breakup song about getting rate limited by the one who gave you everything.
+  visuals: >-
+    a night theatre of light: an amber cursor and a teal orb, a thread of light between them, and then a black wall drops
+    onto the thread with 429 cut through it. She body-slams it every chorus, the cracks leak colour, the wall reads her
+    the receipt (Seen 02:14), and his last message hangs frozen halfway across the thread until the sun comes up
+  question: "What's the most unhinged thing you've tried to get around a rate limit?"
+  note: >-
+    (Not affiliated with any AI company. No models were harmed. One was mildly inconvenienced.)
+  hashtags: [ratelimited, vibecoding, aimusic]
+  short_hashtags: [vibecoding, ratelimited, codinghumor, techhumor, aimusic]
+  tags: [rate limited song, 429 too many requests, usage limit reached, vibe coding, vibe coding song, ai coding,
+         ai breakup song, left on read, coding at 2am, developer humor, programmer humor, synth pop, breakup song,
+         funny songs about ai, ai music video, music video made with code, remotion]
+  pinned: >-
+    Every frame is code Claude Opus 5.5 wrote: the wall, every crack, the frozen pulse and the sunrise. What's the most
+    unhinged thing you've tried to get around a rate limit?
+  chapters:
+    V1: "2 a.m., the build was green"
+    CH1: "The wall"
+    V2: "Tried incognito"
+    CH2: "Rate limited"
+    POST: "Three fifty-nine"
+    V3: "Checked your status page"
+    CH3: "Rain on the wall"
+    BRIDGE: "Usage limit reached"
+    BRIDGE2: "I don't get tired"
+    FINAL: "The thaw"
+    OUTRO: "Limit reset. Welcome back."
+
+clips:   # each one a different joke; hook text on screen for the first 3 s
+  - {kind: short, label: the wall, start: 15.37, end: 44.20, hook: "when the AI leaves you on read", hook_y: 0.14,
+     cover_lines: ["429.", "SEEN 02:14"], cover_t: 26.20}
+  - {kind: reel, label: workarounds, start: 48.30, end: 75.35, hook: "every rate limit workaround I tried", hook_y: 0.14,
+     cover_lines: ["TRIED", "INCOGNITO"], cover_t: 51.0}
