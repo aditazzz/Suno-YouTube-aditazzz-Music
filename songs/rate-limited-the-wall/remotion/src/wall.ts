@@ -13,21 +13,21 @@ function crackGeo(L: Layout, c: Crack): Branch[] {
   const R = rng(c.seed * 7919 + 13);
   const o = origin(L, c);
   const out: Branch[] = [];
-  // stone fractures: long straight runs with sharp kinks, few forks
+  // stone fractures: long rigid runs, sharp kinks, occasional forks
   const grow = (x: number, y: number, a: number, len: number, w: number, depth: number) => {
     const pts: P[] = [{x, y}], cum = [0];
     let head = a, s = 0;
     while (s < len) {
-      const step = 14 + R() * 24;
-      if (R() < 0.22) head += (R() < 0.5 ? -1 : 1) * (0.35 + R() * 0.5);
-      head = a + (head - a) * 0.75;
-      const dir = head + (R() - 0.5) * 0.3;
+      const step = 18 + R() * 32;
+      if (R() < 0.34) head += (R() < 0.5 ? -1 : 1) * (0.55 + R() * 0.85);
+      head = a + (head - a) * 0.68;
+      const dir = head + (R() - 0.5) * 0.22;
       x += Math.cos(dir) * step;
       y += Math.sin(dir) * step;
       s += step;
       pts.push({x, y});
       cum.push(s);
-      if (depth < 1 && s > len * 0.25 && R() < 0.1) grow(x, y, dir + (R() < 0.5 ? -1 : 1) * (0.5 + R() * 0.5), len * (0.2 + R() * 0.25), w * 0.55, depth + 1);
+      if (depth < 1 && s > len * 0.22 && R() < 0.14) grow(x, y, dir + (R() < 0.5 ? -1 : 1) * (0.6 + R() * 0.65), len * (0.22 + R() * 0.28), w * 0.52, depth + 1);
     }
     out.push({pts, len: cum, w});
   };
@@ -37,7 +37,7 @@ function crackGeo(L: Layout, c: Crack): Branch[] {
   const side = c.side && !L.vertical;
   for (let i = 0; i < n; i++) {
     const a = hair ? (side ? -0.9 + 1.8 * R() : TAU * R()) : (TAU * (i + R() * 0.6)) / n;
-    grow(o.x, o.y, a, c.power * (hair ? 90 + R() * 130 : 80 + R() * 150) * (L.vertical ? 0.8 : 1), (hair ? 1.15 : 1.7) * c.power, 0);
+    grow(o.x, o.y, a, c.power * (hair ? 110 + R() * 150 : 95 + R() * 175) * (L.vertical ? 0.8 : 1), (hair ? 1.35 : 2.1) * c.power, 0);
   }
   CRACK_GEO.set(key, out);
   return out;
@@ -109,11 +109,12 @@ export function wall(g: G) {
   c.fillStyle = rgba(PAL.stone);
   c.fillRect(Math.max(v.x0, x0 - side), Math.max(v.y0 - dy, top), Math.min(v.x1, x1) - Math.max(v.x0, x0 - side), base + sideDrop - Math.max(v.y0 - dy, top));
   if (pat) {
-    c.globalAlpha = 0.9;
+    c.globalAlpha = 0.92;
     c.fillStyle = pat;
     c.fillRect(Math.max(v.x0, x0 - side), Math.max(v.y0 - dy, top), Math.min(v.x1, x1) - Math.max(v.x0, x0 - side), base + sideDrop - Math.max(v.y0 - dy, top));
     c.globalAlpha = 1;
   }
+  stoneCourses(c, L, top, v);
   // a cold sheen from the moon high on the face, warmth from her low on it
   const sh = c.createLinearGradient(0, top, 0, base);
   sh.addColorStop(0, 'rgba(70,80,120,0.10)');
@@ -130,13 +131,22 @@ export function wall(g: G) {
     c.lineTo(x0 - side, base + sideDrop);
     c.closePath();
     const sg = c.createLinearGradient(x0 - side, 0, x0, 0);
-    sg.addColorStop(0, rgba([46, 34, 30], 0.95));
-    sg.addColorStop(1, rgba([20, 18, 22], 0.95));
+    sg.addColorStop(0, rgba([62, 46, 42], 0.98));
+    sg.addColorStop(0.45, rgba([32, 28, 34], 0.96));
+    sg.addColorStop(1, rgba([12, 10, 14], 0.97));
     c.fillStyle = sg;
     c.fill();
+    c.strokeStyle = 'rgba(0,0,0,0.35)';
+    c.lineWidth = 1;
+    for (let y = top + 20; y < base; y += 42) {
+      c.beginPath();
+      c.moveTo(x0 - side, y + sideDrop * ((base - y) / (base - top)));
+      c.lineTo(x0, y);
+      c.stroke();
+    }
     const warm = c.createLinearGradient(0, base - 260, 0, base);
     warm.addColorStop(0, rgba(PAL.amber, 0));
-    warm.addColorStop(1, rgba(PAL.amber, 0.1));
+    warm.addColorStop(1, rgba(PAL.amber, 0.14));
     c.fillStyle = warm;
     c.fill();
   }
@@ -153,9 +163,15 @@ export function wall(g: G) {
   etchings(g);
   kaleidoscope(g);
   c.restore();
+  const mass = c.createLinearGradient(0, top + 40, 0, base);
+  mass.addColorStop(0, 'rgba(0,0,0,0)');
+  mass.addColorStop(0.75, 'rgba(0,0,0,0.18)');
+  mass.addColorStop(1, 'rgba(0,0,0,0.62)');
+  c.fillStyle = mass;
+  c.fillRect(x0 - side * 0.2, top, x1 - x0 + side * 0.5, base - top + sideDrop);
   // edges: a hard moonlit rim on the top and the near edge
-  c.strokeStyle = rgba([150, 160, 200], 0.22);
-  c.lineWidth = 1.6;
+  c.strokeStyle = rgba([150, 160, 200], 0.28);
+  c.lineWidth = 2.2;
   c.beginPath();
   if (!L.vertical) {
     c.moveTo(x0 - side, base + sideDrop);
@@ -192,6 +208,65 @@ export function wall(g: G) {
     c.fillRect(x0 - side, base + 1, x1 - x0 + side, 45);
   }
 }
+function stoneCourses(c: Ctx, L: Layout, top: number, v: ReturnType<typeof view>) {
+  const {x0, x1, base} = L.wall;
+  const bx0 = Math.max(v.x0, x0);
+  const bx1 = Math.min(v.x1, x1);
+  const courseH = 40;
+  c.save();
+  c.strokeStyle = 'rgba(0,0,0,0.5)';
+  c.lineWidth = 1.4;
+  for (let y = top + courseH * 0.55; y < base - 4; y += courseH) {
+    c.beginPath();
+    c.moveTo(bx0, y);
+    c.lineTo(bx1, y);
+    c.stroke();
+    const off = (Math.floor(y / courseH) % 2) * 58;
+    for (let x = bx0 + off; x < bx1; x += 116) {
+      c.beginPath();
+      c.moveTo(x, y - courseH * 0.5);
+      c.lineTo(x, y + courseH * 0.46);
+      c.stroke();
+    }
+  }
+  c.restore();
+}
+
+function fissureStroke(
+  g: G,
+  path: (ctx: Ctx) => void,
+  w: number,
+  heat: number,
+  lk: number,
+  col: RGB,
+) {
+  const {c} = g;
+  const voidW = w * 2.6 + 2.2;
+  c.save();
+  c.lineCap = 'butt';
+  c.lineJoin = 'miter';
+  c.strokeStyle = 'rgba(0,0,0,0.96)';
+  c.lineWidth = voidW;
+  path(c);
+  c.stroke();
+  c.translate(1.1, 1.35);
+  c.strokeStyle = 'rgba(0,0,0,0.72)';
+  c.lineWidth = voidW * 0.72;
+  path(c);
+  c.stroke();
+  c.restore();
+  c.save();
+  c.translate(-0.85, -0.55);
+  c.strokeStyle = 'rgba(175,168,192,0.24)';
+  c.lineWidth = Math.max(0.5, w * 0.38);
+  c.lineCap = 'round';
+  path(c);
+  c.stroke();
+  c.restore();
+  if (heat > 0.02) glowStroke(g, path, mix(PAL.redHot, PAL.red, 1 - heat), w * 0.55, heat, 5, 1);
+  if (lk > 0.02) glowStroke(g, path, mix(col, [255, 255, 255], 0.45), Math.max(0.65, w * 0.38), clamp(lk * 0.65, 0, 1), 9, clamp(lk * 0.48, 0, 1));
+}
+
 function wallPath(c: Ctx, L: Layout, top: number) {
   const {x0, x1, base, side, sideDrop} = L.wall;
   c.beginPath();
@@ -292,7 +367,7 @@ function window429(g: G) {
 
 // ------------------------------------------------------------------------------------------------ cracks: fresh ones burn red, then they leak colour
 function cracks(g: G) {
-  const {c, L, t} = g;
+  const {L, t} = g;
   const leak = leakLevel(t);
   const ech = echoes(t);
   const candle = t > T.ch3 - 0.5 && t < T.bridge ? 1 : 0;
@@ -330,21 +405,7 @@ function cracks(g: G) {
           ctx.lineTo(br.pts[i].x, br.pts[i].y);
         }
       };
-      c.save();
-      c.lineCap = 'round';
-      c.lineJoin = 'miter';
-      c.strokeStyle = 'rgba(0,0,0,0.9)';
-      c.lineWidth = br.w + 0.6;
-      path(c);
-      c.stroke();
-      c.translate(0.8, 1.0);
-      c.strokeStyle = rgba([160, 160, 185], 0.16);
-      c.lineWidth = 0.7;
-      path(c);
-      c.stroke();
-      c.restore();
-      if (heat > 0.02) glowStroke(g, path, mix(PAL.redHot, PAL.red, 1 - heat), br.w * 0.5, heat, 5, 1);
-      if (lk > 0.02 && age > 0.25) glowStroke(g, path, mix(col, [255, 255, 255], 0.45), Math.max(0.6, br.w * 0.35), clamp(lk * 0.6, 0, 1), 8, clamp(lk * 0.45, 0, 1));
+      fissureStroke(g, path, br.w, heat, age > 0.25 ? lk : 0, col);
     }
     if (age < 0.4) glow(g, geo[0].pts[0].x, geo[0].pts[0].y, 90 * cr.power, PAL.redHot, 0.9 * (1 - age / 0.4));
   }
@@ -353,7 +414,7 @@ function cracks(g: G) {
 // ------------------------------------------------------------------------------------------------ the landing cracks the ground toward her
 const GROUND = new Map<string, Branch[]>();
 function groundCracks(g: G, dropK: number) {
-  const {c, L, t} = g;
+  const {L, t} = g;
   if (dropK < 0 || t < T.drop) return;
   let geo = GROUND.get(L.fmt);
   if (!geo) {
@@ -395,14 +456,7 @@ function groundCracks(g: G, dropK: number) {
         ctx.lineTo(br.pts[i].x, br.pts[i].y);
       }
     };
-    c.save();
-    c.strokeStyle = rgba([0, 0, 0], 0.85 * fade);
-    c.lineWidth = br.w;
-    c.lineJoin = 'miter';
-    path(c);
-    c.stroke();
-    c.restore();
-    if (heat > 0.02) glowStroke(g, path, mix(PAL.redHot, PAL.red, 1 - heat), br.w * 0.5, heat, 5, 1);
+    fissureStroke(g, path, br.w * 1.1, heat * fade, 0, PAL.redHot);
   }
 }
 

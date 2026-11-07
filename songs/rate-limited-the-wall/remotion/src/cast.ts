@@ -37,18 +37,38 @@ export function cursor(g: G, x: number, y: number, w: number, h: number, sx: num
       ctx.lineWidth = 2.5;
       ctx.stroke();
     } else {
-      const gr = ctx.createLinearGradient(0, -h, 0, 0);
       const k = 0.18 + 0.82 * on;
+      const topW = w * 0.92;
+      const body = () => {
+        ctx.beginPath();
+        ctx.moveTo(-topW / 2, -h);
+        ctx.lineTo(topW / 2, -h);
+        ctx.lineTo(w / 2, 0);
+        ctx.lineTo(-w / 2, 0);
+        ctx.closePath();
+      };
+      const gr = ctx.createLinearGradient(0, -h, 0, 0);
       gr.addColorStop(0, rgba(mix(col, [255, 236, 190], 0.3 * on), a * k));
       gr.addColorStop(0.55, rgba(col, a * k));
       gr.addColorStop(1, rgba(mix(col, PAL.amberDeep, 0.45), a * k));
       ctx.fillStyle = gr;
-      roundRect(ctx, -w / 2, -h, w, h, 2);
+      body();
       ctx.fill();
+      const blinkH = Math.max(5, h * 0.11);
+      const blinkY = -h * 0.68;
+      const blinkA = a * (on > 0.45 ? 0.92 + 0.08 * on : 0.18 + 0.2 * on);
+      ctx.fillStyle = rgba([255, 248, 228], blinkA);
+      roundRect(ctx, -w / 2 + 4, blinkY, w - 8, blinkH, 1);
+      ctx.fill();
+      ctx.fillStyle = rgba(mix(col, PAL.amberDeep, 0.55), a * k * 0.95);
+      const foot = Math.max(3, w * 0.22);
+      ctx.fillRect(-w / 2, -foot, foot, foot);
+      ctx.fillRect(w / 2 - foot, -foot, foot, foot);
       if (o.ghost) {
         ctx.setLineDash([5, 4]);
         ctx.strokeStyle = rgba(col, a * 0.8);
         ctx.lineWidth = 1.5;
+        body();
         ctx.stroke();
         ctx.setLineDash([]);
         ctx.fillStyle = rgba([255, 255, 255], 0.1 * a);
@@ -56,6 +76,7 @@ export function cursor(g: G, x: number, y: number, w: number, h: number, sx: num
       } else if (on < 0.5) {
         ctx.strokeStyle = rgba(col, a * 0.75);
         ctx.lineWidth = 1.6;
+        body();
         ctx.stroke();
       }
       // a lit-LCD sheen: brighter top edge, faint scanlines
@@ -96,12 +117,26 @@ export function cursor(g: G, x: number, y: number, w: number, h: number, sx: num
       ctx.stroke();
       ctx.restore();
     }
+    if (!light && !inv0) {
+      c.save();
+      c.translate(x, y - (lying * w) / 2);
+      c.rotate(rot - (lying * Math.PI) / 2);
+      c.scale(sx, sy);
+      const sh = c.createRadialGradient(0, 2, 0, 0, 2, w * 1.6);
+      sh.addColorStop(0, rgba([0, 0, 0], a * 0.55));
+      sh.addColorStop(1, rgba([0, 0, 0], 0));
+      c.fillStyle = sh;
+      c.beginPath();
+      c.ellipse(0, 4, w * 0.72, 5, 0, 0, Math.PI * 2);
+      c.fill();
+      c.restore();
+    }
     ctx.restore();
   };
   draw(c, false);
   draw(l, true);
   const cy = y - (h * sy) / 2;
-  glow(g, x, cy, h * 2.6, col, a * (0.14 + 0.32 * on) * gl * (o.invert ? 0.35 : 1));
+  glow(g, x, cy, h * 2.85, col, a * (0.17 + 0.34 * on) * gl * (o.invert ? 0.35 : 1));
   glow(g, x, cy, h * 0.9, mix(col, [255, 240, 200], 0.4), a * 0.22 * on * gl);
 }
 

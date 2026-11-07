@@ -84,25 +84,35 @@ export const font = (name: string, px: number) => `${px}px ${FONT[name] ?? FONT.
 
 // textures, made once per size
 export function stoneTex() {
-  return once('stone', 512, 512, (ctx, w, h) => {
+  return once('stoneV2', 512, 512, (ctx, w, h) => {
     const img = ctx.createImageData(w, h);
-    // a monolith: sediment strata warped by slow noise, pitting, fine grain; blended to tile seamlessly
+    const brickW = 58, brickH = 34;
     const f = (x: number, y: number) => {
-      const n = fbm(x / 90, y / 90, 5);
-      const strata = Math.sin((y / h) * TAU * 6 + n * 5.5) * 0.5 + 0.5;
-      const pit = Math.max(0, fbm(x / 7 + 40, y / 7, 2) - 0.62) * 3;
-      return n * 0.7 + strata * 0.1 + fbm(x / 14, y / 14, 2) * 0.26 - pit * 0.35;
+      const n = fbm(x / 72, y / 72, 5);
+      const strata = Math.sin((y / h) * TAU * 7 + n * 6) * 0.5 + 0.5;
+      const pit = Math.max(0, fbm(x / 6 + 40, y / 6, 3) - 0.58) * 3.2;
+      const chip = Math.max(0, fbm(x / 22 + 9, y / 22, 2) - 0.72) * 2.2;
+      return n * 0.65 + strata * 0.14 + fbm(x / 12, y / 12, 2) * 0.28 - pit * 0.38 - chip * 0.22;
     };
     for (let y = 0; y < h; y++)
       for (let x = 0; x < w; x++) {
         const u = x / w, q = y / h;
         const n = f(x, y) * (1 - u) * (1 - q) + f(x - w, y) * u * (1 - q) + f(x, y - h) * (1 - u) * q + f(x - w, y - h) * u * q;
         const grain = hash(x * 7.13 + y * 913.7);
-        const v = 9 + n * 30 + grain * 7;
+        const row = Math.floor(y / brickH);
+        const off = (row % 2) * (brickW / 2);
+        const lx = ((x + off) % brickW + brickW) % brickW;
+        const ly = y % brickH;
+        const mortar = lx < 2 || ly < 2 ? 0.72 : 1;
+        let v = (14 + n * 44 + grain * 9) * mortar;
+        if (mortar > 0.9) {
+          const edge = Math.min(lx, brickW - lx, ly, brickH - ly);
+          v -= Math.max(0, 5 - edge) * 0.9;
+        }
         const i = (y * w + x) * 4;
-        img.data[i] = v * 0.98;
-        img.data[i + 1] = v;
-        img.data[i + 2] = v * 1.14 + 2;
+        img.data[i] = v * 0.96;
+        img.data[i + 1] = v * 0.98;
+        img.data[i + 2] = v * 1.08 + 3;
         img.data[i + 3] = 255;
       }
     ctx.putImageData(img, 0, 0);
