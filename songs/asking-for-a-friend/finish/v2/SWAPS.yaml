@@ -1,0 +1,1530 @@
+# master v2 swap manifest, written by finish/v2/swaps.py (edit APPROVALS.yaml, not this file)
+built: Sun Nov 08 09:19
+rule: newest candidate that is complete + gate PASS/PASS+FLAG + director-approved (APPROVALS.yaml), else routeB with a flag
+accept_gated: false
+overlays:
+- shot: S003
+  chain: founder_clothes
+  dir: finish/v2/founder_clothes/S003/16x9
+  a: 190
+  b: 220
+  cuts: []
+- shot: S004
+  chain: founder_clothes
+  dir: finish/v2/founder_clothes/S004/16x9
+  a: 221
+  b: 313
+  cuts: []
+- shot: S008
+  chain: fix452
+  dir: finish/qa/hook30/fix452/out/S008
+  a: 446
+  b: 450
+  cuts: []
+- shot: S009
+  chain: fix452
+  dir: finish/qa/hook30/fix452/out/S009
+  a: 451
+  b: 458
+  cuts: []
+- shot: S016
+  chain: s016_v2
+  dir: finish/qa/sets/work/s016_v1/swap
+  a: 769
+  b: 784
+  cuts:
+  - 769
+  - 785
+- shot: S021
+  chain: port2d
+  dir: finish/v2/port2d/S021
+  a: 858
+  b: 902
+  cuts: []
+- shot: S023
+  chain: car_uv
+  dir: finish/v2/car_uv/S023/16x9
+  a: 903
+  b: 935
+  cuts: []
+- shot: S024
+  chain: car_uv
+  dir: finish/v2/car_uv/S024/16x9
+  a: 936
+  b: 968
+  cuts: []
+- shot: S030
+  chain: 3d_a
+  dir: finish/v2/3d_a/S030
+  a: 1115
+  b: 1166
+  cuts: []
+- shot: S033
+  chain: port2d
+  dir: finish/v2/port2d/S033
+  a: 1295
+  b: 1336
+  cuts: []
+- shot: S035
+  chain: 3d_b
+  dir: finish/v2/3d_b/S035
+  a: 1381
+  b: 1447
+  cuts: []
+- shot: S038
+  chain: 3d_a
+  dir: finish/v2/3d_a/S038
+  a: 1531
+  b: 1614
+  cuts: []
+- shot: S039
+  chain: 3d_a
+  dir: finish/v2/3d_a/S039
+  a: 1615
+  b: 1627
+  cuts: []
+- shot: S040
+  chain: port2d
+  dir: finish/v2/port2d/S040
+  a: 1628
+  b: 1653
+  cuts: []
+- shot: S042
+  chain: port2d
+  dir: finish/v2/port2d/S042
+  a: 1662
+  b: 1671
+  cuts: []
+- shot: S043
+  chain: 3d_a
+  dir: finish/v2/3d_a/S043
+  a: 1672
+  b: 1797
+  cuts: []
+- shot: S044
+  chain: 3d_a
+  dir: finish/v2/3d_a/S044
+  a: 1798
+  b: 1823
+  cuts: []
+- shot: S045
+  chain: car_uv
+  dir: finish/v2/car_uv/S045/16x9
+  a: 1824
+  b: 1839
+  cuts: []
+- shot: S047
+  chain: car_uv
+  dir: finish/v2/car_uv/S047/16x9
+  a: 1840
+  b: 1865
+  cuts: []
+- shot: S048
+  chain: car_uv_rb
+  dir: finish/v2/car_uv/S048/16x9_routeB
+  a: 1866
+  b: 1906
+  cuts: []
+- shot: S049
+  chain: car_uv
+  dir: finish/v2/car_uv/S049/16x9
+  a: 1907
+  b: 1960
+  cuts: []
+- shot: S050
+  chain: port2d
+  dir: finish/v2/port2d/S050
+  a: 1961
+  b: 2068
+  cuts: []
+- shot: S052
+  chain: port2d
+  dir: finish/v2/port2d/S052
+  a: 2069
+  b: 2142
+  cuts: []
+- shot: S054
+  chain: 3d_a
+  dir: finish/v2/3d_a/S054
+  a: 2143
+  b: 2158
+  cuts: []
+- shot: S055
+  chain: port2d
+  dir: finish/v2/port2d/S055
+  a: 2159
+  b: 2185
+  cuts: []
+- shot: S056
+  chain: port2d
+  dir: finish/v2/port2d/S056
+  a: 2186
+  b: 2209
+  cuts: []
+- shot: S057
+  chain: port2d
+  dir: finish/v2/port2d/S057
+  a: 2210
+  b: 2249
+  cuts: []
+- shot: S059
+  chain: port2d
+  dir: finish/v2/port2d/S059
+  a: 2250
+  b: 2294
+  cuts: []
+- shot: S060
+  chain: 3d_a
+  dir: finish/v2/3d_a/S060
+  a: 2295
+  b: 2345
+  cuts: []
+- shot: S061
+  chain: 3d_a
+  dir: finish/v2/3d_a/S061
+  a: 2346
+  b: 2387
+  cuts: []
+- shot: S062
+  chain: 3d_a
+  dir: finish/v2/3d_a/S062
+  a: 2388
+  b: 2404
+  cuts: []
+- shot: S063
+  chain: 3d_a
+  dir: finish/v2/3d_a/S063
+  a: 2405
+  b: 2422
+  cuts: []
+- shot: S064
+  chain: 3d_a
+  dir: finish/v2/3d_a/S064
+  a: 2423
+  b: 2446
+  cuts: []
+- shot: S065
+  chain: 3d_a
+  dir: finish/v2/3d_a/S065
+  a: 2447
+  b: 2496
+  cuts: []
+- shot: S066
+  chain: port2d
+  dir: finish/v2/port2d/S066
+  a: 2497
+  b: 2567
+  cuts: []
+- shot: S068
+  chain: 3d_a
+  dir: finish/v2/3d_a/S068
+  a: 2568
+  b: 2591
+  cuts: []
+- shot: S069
+  chain: 3d_b
+  dir: finish/v2/3d_b/S069
+  a: 2592
+  b: 2630
+  cuts: []
+- shot: S070
+  chain: port2d
+  dir: finish/v2/port2d/S070
+  a: 2631
+  b: 2678
+  cuts: []
+- shot: S071
+  chain: port2d
+  dir: finish/v2/port2d/S071
+  a: 2679
+  b: 2740
+  cuts: []
+- shot: S072
+  chain: 3d_a
+  dir: finish/v2/3d_a/S072
+  a: 2741
+  b: 2785
+  cuts: []
+- shot: S073
+  chain: port2d
+  dir: finish/v2/port2d/S073
+  a: 2786
+  b: 2821
+  cuts: []
+- shot: S077
+  chain: 3d_b
+  dir: finish/v2/3d_b/S077
+  a: 2920
+  b: 2963
+  cuts: []
+- shot: S078
+  chain: 3d_b
+  dir: finish/v2/3d_b/S078
+  a: 2964
+  b: 3039
+  cuts: []
+- shot: S081
+  chain: 3d_a
+  dir: finish/v2/3d_a/S081
+  a: 3197
+  b: 3261
+  cuts: []
+- shot: S082
+  chain: 3d_a
+  dir: finish/v2/3d_a/S082
+  a: 3262
+  b: 3310
+  cuts: []
+- shot: S083
+  chain: port2d
+  dir: finish/v2/port2d/S083
+  a: 3311
+  b: 3408
+  cuts: []
+- shot: S090
+  chain: port2d
+  dir: finish/v2/port2d/S090
+  a: 3409
+  b: 3457
+  cuts: []
+- shot: S091
+  chain: port2d
+  dir: finish/v2/port2d/S091
+  a: 3458
+  b: 3508
+  cuts: []
+- shot: S092
+  chain: 3d_a
+  dir: finish/v2/3d_a/S092
+  a: 3509
+  b: 3558
+  cuts: []
+- shot: S093
+  chain: port2d
+  dir: finish/v2/port2d/S093
+  a: 3559
+  b: 3585
+  cuts: []
+- shot: S094
+  chain: 3d_a
+  dir: finish/v2/3d_a/S094
+  a: 3586
+  b: 3648
+  cuts: []
+- shot: S095
+  chain: port2d
+  dir: finish/v2/port2d/S095
+  a: 3649
+  b: 3679
+  cuts: []
+- shot: S097
+  chain: port2d
+  dir: finish/v2/port2d/S097
+  a: 3777
+  b: 3817
+  cuts: []
+- shot: S098
+  chain: 3d_a
+  dir: finish/v2/3d_a/S098
+  a: 3818
+  b: 3860
+  cuts: []
+- shot: S099
+  chain: port2d
+  dir: finish/v2/port2d/S099
+  a: 3861
+  b: 3911
+  cuts: []
+- shot: S101
+  chain: founder_clothes
+  dir: finish/v2/founder_clothes/S101/16x9
+  a: 3940
+  b: 3959
+  cuts: []
+- shot: S102
+  chain: port2d
+  dir: finish/v2/port2d/S102
+  a: 3960
+  b: 4002
+  cuts: []
+- shot: S103
+  chain: port2d
+  dir: finish/v2/port2d/S103
+  a: 4003
+  b: 4038
+  cuts: []
+- shot: S103b
+  chain: car_uv
+  dir: finish/v2/car_uv/S103b/16x9
+  a: 4039
+  b: 4059
+  cuts: []
+- shot: S107
+  chain: 3d_a
+  dir: finish/v2/3d_a/S107
+  a: 4060
+  b: 4107
+  cuts: []
+- shot: S108
+  chain: port2d
+  dir: finish/v2/port2d/S108
+  a: 4108
+  b: 4159
+  cuts: []
+- shot: S109
+  chain: port2d
+  dir: finish/v2/port2d/S109
+  a: 4160
+  b: 4250
+  cuts: []
+- shot: S114
+  chain: 3d_a
+  dir: finish/v2/3d_a/S114
+  a: 4251
+  b: 4283
+  cuts: []
+- shot: S115
+  chain: 3d_b
+  dir: finish/v2/3d_b/S115
+  a: 4284
+  b: 4327
+  cuts: []
+- shot: S116
+  chain: 3d_b
+  dir: finish/v2/3d_b/S116
+  a: 4328
+  b: 4351
+  cuts: []
+- shot: S117
+  chain: 3d_a
+  dir: finish/v2/3d_a/S117
+  a: 4352
+  b: 4378
+  cuts: []
+- shot: S118
+  chain: port2d
+  dir: finish/v2/port2d/S118
+  a: 4379
+  b: 4405
+  cuts: []
+- shot: S118b
+  chain: car_uv
+  dir: finish/v2/car_uv/S118b/16x9
+  a: 4406
+  b: 4430
+  cuts: []
+- shot: S119
+  chain: port2d
+  dir: finish/v2/port2d/S119
+  a: 4431
+  b: 4481
+  cuts: []
+- shot: S120
+  chain: 3d_a
+  dir: finish/v2/3d_a/S120
+  a: 4482
+  b: 4521
+  cuts: []
+- shot: S121
+  chain: port2d
+  dir: finish/v2/port2d/S121
+  a: 4522
+  b: 4559
+  cuts: []
+- shot: S122
+  chain: 3d_a
+  dir: finish/v2/3d_a/S122
+  a: 4560
+  b: 4575
+  cuts: []
+- shot: S123
+  chain: port2d
+  dir: finish/v2/port2d/S123
+  a: 4576
+  b: 4629
+  cuts: []
+- shot: S125
+  chain: 3d_a
+  dir: finish/v2/3d_a/S125
+  a: 4630
+  b: 4659
+  cuts: []
+- shot: S126
+  chain: founder_clothes
+  dir: finish/v2/founder_clothes/S126/16x9
+  a: 4660
+  b: 4687
+  cuts: []
+- shot: S128
+  chain: 3d_b
+  dir: finish/v2/3d_b/S128
+  a: 4712
+  b: 4755
+  cuts: []
+- shot: S129
+  chain: 3d_b
+  dir: finish/v2/3d_b/S129
+  a: 4756
+  b: 4811
+  cuts: []
+- shot: S131
+  chain: lobby
+  dir: finish/v2/lobby/S131
+  a: 4856
+  b: 4938
+  cuts: []
+- shot: S132
+  chain: lobby
+  dir: finish/v2/lobby/S132
+  a: 4939
+  b: 5030
+  cuts: []
+- shot: S133
+  chain: lobby
+  dir: finish/v2/lobby/S133
+  a: 5031
+  b: 5075
+  cuts: []
+- shot: S134
+  chain: lobby
+  dir: finish/v2/lobby/S134
+  a: 5076
+  b: 5171
+  cuts: []
+- shot: S135
+  chain: 3d_b
+  dir: finish/v2/3d_b/S135
+  a: 5172
+  b: 5260
+  cuts: []
+- shot: S136
+  chain: 3d_b
+  dir: finish/v2/3d_b/S136
+  a: 5261
+  b: 5360
+  cuts: []
+- shot: S137
+  chain: port2d
+  dir: finish/v2/port2d/S137
+  a: 5361
+  b: 5458
+  cuts: []
+- shot: S138
+  chain: port2d
+  dir: finish/v2/port2d/S138
+  a: 5459
+  b: 5567
+  cuts: []
+- shot: S139
+  chain: car_uv
+  dir: finish/v2/car_uv/S139/16x9
+  a: 5568
+  b: 5619
+  cuts: []
+- shot: S140
+  chain: car_uv
+  dir: finish/v2/car_uv/S140/16x9
+  a: 5620
+  b: 5629
+  cuts: []
+- shot: S141
+  chain: car_uv
+  dir: finish/v2/car_uv/S141/16x9
+  a: 5630
+  b: 5657
+  cuts: []
+- shot: S141b
+  chain: car_uv
+  dir: finish/v2/car_uv/S141b/16x9
+  a: 5658
+  b: 5697
+  cuts: []
+- shot: S142
+  chain: port2d
+  dir: finish/v2/port2d/S142
+  a: 5698
+  b: 5890
+  cuts: []
+- shot: S145
+  chain: 3d_b
+  dir: finish/v2/3d_b/S145
+  a: 5891
+  b: 5924
+  cuts: []
+- shot: S146
+  chain: port2d
+  dir: finish/v2/port2d/S146
+  a: 5925
+  b: 5940
+  cuts: []
+- shot: S147
+  chain: 3d_b
+  dir: finish/v2/3d_b/S147
+  a: 5941
+  b: 5979
+  cuts: []
+- shot: S148
+  chain: port2d
+  dir: finish/v2/port2d/S148
+  a: 5980
+  b: 6007
+  cuts: []
+- shot: S150
+  chain: lobby
+  dir: finish/v2/lobby/S150
+  a: 6008
+  b: 6182
+  cuts: []
+flags:
+- 'S030: 3d_a gate PASS+FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 3 visible penetration(s); G6/G9 G9 FLAG: CROP FACE S030 skull {''top'': 0.45}'
+- 'S038: 3d_a gate PASS+FLAG: G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.72/2.03) pre-LUT over (the LUT shoulder holds it)'
+- 'S043: 3d_a gate PASS+FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 2 visible penetration(s); G6/G9 G9 FLAG: CROP FACE S043 skull {''right'': 0.35}'
+- 'S044: 3d_a gate PASS+FLAG: mean luma -20% vs routeB (check: designed change or grade?); G6/G9 G9 FLAG: CROP FACE S044 skull {''right'': 0.06, ''top'': 0.23, ''bottom'': 0.11}'
+- 'S054: 3d_a gate PASS+FLAG: mean luma -26% vs routeB (check: designed change or grade?)'
+- 'S061: 3d_a gate PASS+FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 1 visible penetration(s); G6/G9 G9 FLAG: CROP FACE S061 skull {''left'': 0.13, ''right'': 0.11, ''top'': 0.98}'
+- 'S062: 3d_a gate PASS+FLAG: G6/G9 G9 FLAG: CROP S062 skull {''top'': 0.15}'
+- 'S064: 3d_a gate PASS+FLAG: G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.17/1.75) pre-LUT over (the LUT shoulder holds it); G6/G9 G9 FLAG: CROP FACE S064 skull {''top'': 0.13, ''bottom'': 0.2}'
+- 'S069: 3d_b gate PASS+FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a, same EXRs) collide ->
+  PASS (31s)'
+- 'S072: 3d_a gate PASS+FLAG: G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.30/1.50) pre-LUT over (the LUT shoulder holds it); G6/G9 G9 FLAG: CROP S072 skull {''top'': 0.11}'
+- 'S078: 3d_b gate PASS+FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a) collide -> FAIL 2 visible
+  penetration(s) , waived by collide3d Nov 8 (3d_a/S078/.gate_waiver: construction joints / crowd forearm, same in routeB)'
+- 'S081: 3d_a gate PASS+FLAG: G6/G9 G9 FLAG: CROP FACE S081 skull {''top'': 0.35}'
+- 'S094: 3d_a gate PASS+FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 1 visible penetration(s); G6/G9 G9 FLAG: CROP FACE S094 skull {''top'': 0.27, ''right'': 0.28, ''bottom'': 0.49}'
+- 'S096: 3d_a gate FAIL (FAIL: G3 lap_h 66 (routeB 71, -7%; detail w/o highlights -12%)): routeB kept'
+- 'S098: 3d_a gate PASS+FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 1 visible penetration(s)'
+- 'S107: 3d_a gate PASS+FLAG: G6/G9 G9 FLAG: CROP FACE S107 skull {''right'': 0.9}'
+- 'S114: 3d_a gate PASS+FLAG: G6/G9 G9 FLAG: CROP FACE S114 skull {''top'': 0.29, ''left'': 0.14, ''bottom'': 0.2}'
+- 'S115: 3d_b gate PASS+FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a, same EXRs) collide ->
+  PASS (880s); G6/G9 G9 FLAG: CROP FACE S115 skull {''left'': 0.48, ''bottom'': 0.72}'
+- 'S117: 3d_a gate PASS+FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 1 visible penetration(s); G6/G9 G9 FLAG: CROP FACE S117 skull {''right'': 0.07, ''top'': 0.25, ''bottom'': 0.12}'
+- 'S120: 3d_a gate PASS+FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 1 visible penetration(s); G6/G9 G9 FLAG: CROP S120 skull {''top'': 0.18}'
+- 'S122: 3d_a gate PASS+FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 1 visible penetration(s); G6/G9 G9 FLAG: CROP S122 skull {''top'': 0.18}'
+- 'S125: 3d_a gate PASS+FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 4 visible penetration(s)'
+- 'S126: founder_clothes gate PASS+FLAG: see gate'
+- 'S129: 3d_b gate PASS+FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a) collide -> FAIL 1 visible
+  penetration(s) , waived by collide3d Nov 8 (3d_a/S129/.gate_waiver: construction joints / crowd forearm, same in routeB); G6/G9 G9 FLAG: CROP S129 skull {''top'': 0.08}'
+- 'S136: 3d_b gate PASS+FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a) collide -> FAIL 2 visible
+  penetration(s) , waived by collide3d Nov 8 (3d_a/S136/.gate_waiver: construction joints / crowd forearm, same in routeB); G6/G9 G9 FLAG: CROP FACE S136 skull {''top'': 0.19, ''bottom'': 0.09}'
+- 'S145: 3d_b gate PASS+FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a, same EXRs) collide ->
+  PASS (487s)'
+- 'S147: 3d_b gate PASS+FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a) collide -> FAIL 3 visible
+  penetration(s) , waived by collide3d Nov 8 (3d_a/S147/.gate_waiver: construction joints / crowd forearm, same in routeB)'
+- 'S035: 3d_b gate PASS+FLAG: WAIVED b_post (see .gate_waiver): G6/G9 FLOAT FAIL: FAIL S035 301px vis=0.81 n=4 [''br_bulb2'', ''br_pend_cable2'', ''br_pend_inner2'', ''br_pend_shade2''] / FAIL S035 281px
+  vis=0.94 n=4 [''br_bulb3'', ''br_pend_cable3'', ''br_pend_inner3'', ''br_pend_shade3''] / FAIL S035 178px vis=0.85 n=4 [''br_bulb1'', ''br_pend_cable1'', ''br_pend_inner1'', ''br_pend_shade1'']'
+- 'S128: 3d_b gate PASS+FLAG: G2 ship halo 0.0 (pre-LUT 30.8) pre-LUT over'
+- 'S135: 3d_b gate PASS+FLAG: WAIVED b_post (see .gate_waiver): collide -> FAIL 3 visible penetration(s)'
+- 'S045: car_uv gate PASS+FLAG: director waived fix-layer pops f1836/f1839 (moving bumper shadow in the source, v22 diag)'
+- 'S100: lobby has frames but no gate yet: routeB kept'
+- 'S101: founder_clothes gate PASS+FLAG: see gate'
+- 'S055: port2d gate PASS+FLAG: designed: K08 LiNight fade-in over item f0-6 (step 15.9 at f2162 vs the old light clip 3.4), not a pop (S055 internal jump at f2162: new 15.1 old 3.4) (check.py), 0 still
+  drop-outs at CONC=1 (flicker.py)'
+- 'S142: port2d gate PASS+FLAG: designed: K25 composer -> posted phase cut at item f85 (round 3 removed the spinner), not a pop (S142 internal jump at f5743: new 75.9 old 18.6) (check.py), 0 still drop-outs
+  at CONC=1 (flicker.py)'
+- 'S003: founder_clothes gate PASS+FLAG: '
+- 'S004: founder_clothes gate PASS+FLAG: see gate'
+rows:
+  S001:
+    frames: 0-124
+    source: routeB
+  S002:
+    frames: 125-189
+    source: routeB
+  S003:
+    frames: 190-220
+    source: founder_clothes
+    dir: finish/v2/founder_clothes/S003/16x9
+    swap_frames: 190-220
+    gate: 'S003 f190-220 PASS+FLAG | founder_clothes: K02 print ultraviolet -> charcoal (recolor_stills hue 218 / S x0.32, V x0.50) on <film>/renders/routeB/S003:
+      purple 0.44% -> 0.04% of frame, outside-region change 0; rcheck 0->0 issues, new chroma pops [], fix-layer pops [] (source-motion pops +3 settle f excused), output chroma > source on 0 f | FLAG: '
+    flag: 'founder_clothes gate PASS+FLAG: '
+  S004:
+    frames: 221-313
+    source: founder_clothes
+    dir: finish/v2/founder_clothes/S004/16x9
+    swap_frames: 221-313
+    gate: 'S004 f221-313 PASS+FLAG | founder_clothes: K02 print ultraviolet -> charcoal (recolor_stills hue 218 / S x0.32, V x0.50) on <film>/renders/routeB/S004:
+      purple 8.35% -> 0.35% of frame, outside-region change 0; rcheck 55->54 issues, new chroma pops [], fix-layer pops [] (source-motion pops +3 settle f excused), output chroma > source on 0 f | FLAG'
+    flag: 'founder_clothes gate PASS+FLAG: see gate'
+  S005:
+    frames: 314-365
+    source: routeB
+  S006:
+    frames: 366-401
+    source: routeB
+  S007:
+    frames: 402-416
+    source: routeB
+  S008:
+    frames: 417-450
+    source: fix452
+    dir: finish/qa/hook30/fix452/out/S008
+    swap_frames: 446-450
+    gate: 'S008 f446-450 PASS | fix452 (receptionist enters clean, director-approved): spliced into routeB/S008 Sat Nov 7 20:53 PT (backup routeB/S008/_pre452); real-sequence step 445|446 17.8 (old 18.0),
+      no pops f440-470; render-checks + collide PASS (briefs/STATUS_fix_452.md)'
+    flag: null
+  S009:
+    frames: 451-506
+    source: fix452
+    dir: finish/qa/hook30/fix452/out/S009
+    swap_frames: 451-458
+    gate: 'S009 f451-458 PASS | fix452 (receptionist enters clean + sign-group slide-in, director-approved): spliced into routeB/S009 (backup routeB/S009/_pre452); real-sequence step 457|458|459|460 17.9/18.4/18.8,
+      old 451|452 white-block pop gone, no pop at 458|459 (strip qa/hook30/fix452/splice_strip_f455-462.jpg)'
+    flag: null
+  S010:
+    frames: 507-652
+    source: routeB
+  S011:
+    frames: 653-713
+    source: routeB
+  S012:
+    frames: 714-729
+    source: routeB
+  S013:
+    frames: 730-743
+    source: routeB
+  S014:
+    frames: 744-751
+    source: routeB
+  S015:
+    frames: 752-763
+    source: routeB
+  S016:
+    frames: 764-778
+    source: s016_v2
+    dir: finish/qa/sets/work/s016_v1/swap
+    swap_frames: 769-784
+    gate: '(manual, APPROVALS.yaml) fix_sets: her f776 note fixed (new CAM_S016, settles by f776), swap-ready f769-784; approved (brief assemble_v2, Sat 19:00)'
+    flag: null
+  S017:
+    frames: 779-802
+    source: routeB
+    overlay: s016_v2 f779-784 (from S016)
+  S018:
+    frames: 803-821
+    source: routeB
+  S019:
+    frames: 822-844
+    source: routeB
+  S020:
+    frames: 845-857
+    source: routeB
+  S021:
+    frames: 858-902
+    source: port2d
+    dir: finish/v2/port2d/S021
+    swap_frames: 858-902
+    gate: 'S021 f858-902 PASS | port2d K01v2 (round 2, unchanged in round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (round-2 port, textfit_kit
+      / textfit_screens)'
+    flag: null
+  S023:
+    frames: 903-935
+    source: car_uv
+    dir: finish/v2/car_uv/S023/16x9
+    swap_frames: 903-935
+    gate: 'S023 f903-935 PASS | car_uv hue secondary (16x9) on finish/v2/car/S023: graded paint 262.1 -> 260.1 (ref 259.4), same-px 262.1 -> 260.1, sat -0.0%; rcheck 0->0 issues, new chroma pops [], fix-layer
+      pops [] | source gate: S023 f903-935 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.12/0.27); G2 ship halo 0.0 (pre-LUT 2.9); G3 lap_h 113 (routeB 116, -2%; detail w/o highlights -2%); G4 flow p90
+      14.'
+    flag: null
+  S024:
+    frames: 936-968
+    source: car_uv
+    dir: finish/v2/car_uv/S024/16x9
+    swap_frames: 936-968
+    gate: 'S024 f936-968 PASS | car_uv hue secondary (16x9) on finish/v2/car/S024: graded paint 274.1 -> 260.0 (ref 259.4), same-px 274.1 -> 259.4, sat -1.7%; rcheck 0->0 issues, new chroma pops [], fix-layer
+      pops [] | source gate: S024 f936-968 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.07/0.22); G2 ship halo 0.0 (pre-LUT 2.9); G3 lap_h 184 (routeB 136, +36%; detail w/o highlights +32%); G4 flow
+      p90 1'
+    flag: null
+  S025:
+    frames: 969-1009
+    source: routeB
+  S026:
+    frames: 1010-1053
+    source: routeB
+  S027:
+    frames: 1054-1092
+    source: routeB
+  S028:
+    frames: 1093-1103
+    source: routeB
+  S029:
+    frames: 1104-1114
+    source: routeB
+  S030:
+    frames: 1115-1166
+    source: 3d_a
+    dir: finish/v2/3d_a/S030
+    swap_frames: 1115-1166
+    gate: 'S030 f1115-1166 PASS+FLAG | FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 3 visible penetration(s); G6/G9 G9 FLAG: CROP FACE S030 skull {''top'': 0.45} | G1 ship clip 0.00% wclip
+      0.00% (pre-LUT 0.00/0.00); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 178 (routeB 229, -22%; detail w/o highlights -10%); G4 flow p90 0.2; luma vs routeB +2%'
+    flag: '3d_a gate PASS+FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 3 visible penetration(s); G6/G9 G9 FLAG: CROP FACE S030 skull {''top'': 0.45}'
+  S031:
+    frames: 1167-1211
+    source: routeB
+  S032:
+    frames: 1212-1294
+    source: routeB
+  S033:
+    frames: 1295-1336
+    source: port2d
+    dir: finish/v2/port2d/S033
+    swap_frames: 1295-1336
+    gate: 'S033 f1295-1336 PASS | port2d KS1v2 (round 2, unchanged in round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (round-2 port, textfit_kit
+      / textfit_screens)'
+    flag: null
+  S034:
+    frames: 1337-1380
+    source: routeB
+  S035:
+    frames: 1381-1447
+    source: 3d_b
+    dir: finish/v2/3d_b/S035
+    swap_frames: 1381-1447
+    gate: 'S035 f1381-1447 PASS+FLAG | FLAG: WAIVED b_post (see .gate_waiver): G6/G9 FLOAT FAIL: FAIL S035 301px vis=0.81 n=4 [''br_bulb2'', ''br_pend_cable2'', ''br_pend_inner2'', ''br_pend_shade2''] /
+      FAIL S035 281px vis=0.94 n=4 [''br_bulb3'', ''br_pend_cable3'', ''br_pend_inner3'', ''br_pend_shade3''] / FAIL S035 178px vis=0.85 n=4 [''br_bulb1'', ''br_pend_cable1'', ''br_pend_inner1'', ''br_pend_shade1'']
+      | G1 ship clip 0.00% w'
+    flag: '3d_b gate PASS+FLAG: WAIVED b_post (see .gate_waiver): G6/G9 FLOAT FAIL: FAIL S035 301px vis=0.81 n=4 [''br_bulb2'', ''br_pend_cable2'', ''br_pend_inner2'', ''br_pend_shade2''] / FAIL S035 281px
+      vis=0.94 n=4 [''br_bulb3'', ''br_pend_cable3'', ''br_pend_inner3'', ''br_pend_shade3''] / FAIL S035 178px vis=0.85 n=4 [''br_bulb1'', ''br_pend_cable1'', ''br_pend_inner1'', ''br_pend_shade1'']'
+  S036:
+    frames: 1448-1493
+    source: routeB
+  S037:
+    frames: 1494-1530
+    source: routeB
+  S038:
+    frames: 1531-1614
+    source: 3d_a
+    dir: finish/v2/3d_a/S038
+    swap_frames: 1531-1614
+    gate: 'S038 f1531-1614 PASS+FLAG | FLAG: G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.72/2.03) pre-LUT over (the LUT shoulder holds it) | G2 ship halo 0.0 (pre-LUT 3.0); G3 lap_h 261 (routeB 212, +23%;
+      detail w/o highlights +24%); G4 flow p90 0.2; luma vs routeB -5%; collide -> PASS (109s) | deploy_consistent conform (S133 lamp), Nov 8 09:19; v2.2 gate kept in bak/3d_a_S038/.gate'
+    flag: '3d_a gate PASS+FLAG: G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.72/2.03) pre-LUT over (the LUT shoulder holds it)'
+  S039:
+    frames: 1615-1627
+    source: 3d_a
+    dir: finish/v2/3d_a/S039
+    swap_frames: 1615-1627
+    gate: S039 f1615-1627 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.00/0.00); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 141 (routeB 148, -5%; detail w/o highlights +1%); G4 flow p90 12.1; luma vs
+      routeB -10%; collide -> PASS (24s); G6/G9 clean (0 floating, 0 crops)
+    flag: null
+  S040:
+    frames: 1628-1653
+    source: port2d
+    dir: finish/v2/port2d/S040
+    swap_frames: 1628-1653
+    gate: 'S040 f1628-1653 PASS | port2d KS2v2 (round 2, unchanged in round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (round-2 port, textfit_kit
+      / textfit_screens)'
+    flag: null
+  S041:
+    frames: 1654-1661
+    source: routeB
+  S042:
+    frames: 1662-1671
+    source: port2d
+    dir: finish/v2/port2d/S042
+    swap_frames: 1662-1671
+    gate: 'S042 f1662-1671 PASS | port2d KS2v2 (round 2, unchanged in round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (round-2 port, textfit_kit
+      / textfit_screens)'
+    flag: null
+  S043:
+    frames: 1672-1797
+    source: 3d_a
+    dir: finish/v2/3d_a/S043
+    swap_frames: 1672-1797
+    gate: 'S043 f1672-1797 PASS+FLAG | FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 2 visible penetration(s); G6/G9 G9 FLAG: CROP FACE S043 skull {''right'': 0.35} | G1 ship clip 0.00% wclip
+      0.00% (pre-LUT 0.10/0.25); G2 ship halo 0.0 (pre-LUT 2.7); G3 lap_h 228 (routeB 318, -28%; detail w/o highlights -12%); G4 flow p90 1.3; luma vs routeB -1%'
+    flag: '3d_a gate PASS+FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 2 visible penetration(s); G6/G9 G9 FLAG: CROP FACE S043 skull {''right'': 0.35}'
+  S044:
+    frames: 1798-1823
+    source: 3d_a
+    dir: finish/v2/3d_a/S044
+    swap_frames: 1798-1823
+    gate: 'S044 f1798-1823 PASS+FLAG | FLAG: mean luma -20% vs routeB (check: designed change or grade?); G6/G9 G9 FLAG: CROP FACE S044 skull {''right'': 0.06, ''top'': 0.23, ''bottom'': 0.11} | G1 ship
+      clip 0.00% wclip 0.00% (pre-LUT 0.00/0.00); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 142 (routeB 90, +58%; detail w/o highlights +53%); G4 flow p90 0.6; luma vs routeB -20%; collide -> PASS (31s)'
+    flag: '3d_a gate PASS+FLAG: mean luma -20% vs routeB (check: designed change or grade?); G6/G9 G9 FLAG: CROP FACE S044 skull {''right'': 0.06, ''top'': 0.23, ''bottom'': 0.11}'
+  S045:
+    frames: 1824-1839
+    source: car_uv
+    dir: finish/v2/car_uv/S045/16x9
+    swap_frames: 1824-1839
+    gate: 'S045 f1824-1839 PASS+FLAG | FLAG: director waived fix-layer pops f1836/f1839 (moving bumper shadow in the source, v22 diag) | car_uv hue secondary (16x9) on finish/v2/car/S045: graded paint 295.4
+      -> 260.4 (ref 259.4), same-px 295.4 -> 259.3, sat -3.4%; rcheck 0->0 issues, new chroma pops [], fix-layer pops [1836, 1839] | source gate: S045 f1824-1839 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT
+      0'
+    flag: 'car_uv gate PASS+FLAG: director waived fix-layer pops f1836/f1839 (moving bumper shadow in the source, v22 diag)'
+  S047:
+    frames: 1840-1865
+    source: car_uv
+    dir: finish/v2/car_uv/S047/16x9
+    swap_frames: 1840-1865
+    gate: 'S047 f1840-1865 PASS | car_uv hue secondary (16x9) on finish/v2/car/S047: graded paint 281.9 -> 260.4 (ref 259.4), same-px 281.9 -> 260.0, sat -0.7%; rcheck 1->0 issues, new chroma pops [], fix-layer
+      pops [] | source gate: S047 f1840-1865 PASS+FLAG | FLAG: mean luma +23% vs routeB (check: designed change or grade?) | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.00/0.00); G2 ship halo 0.0 (pre-LUT
+      0.0'
+    flag: null
+  S048:
+    frames: 1866-1906
+    source: car_uv_rb
+    dir: finish/v2/car_uv/S048/16x9_routeB
+    swap_frames: 1866-1906
+    gate: 'S048 f1866-1906 PASS | car_uv hue secondary (16x9_routeB) on <film>/renders/routeB/S048: graded paint 257.2 -> 260.1 (ref 259.4), same-px
+      257.2 -> 260.1, sat -0.6%; rcheck 1->0 issues, new chroma pops [], fix-layer pops [] | source: routeB (no gate file)'
+    flag: null
+  S049:
+    frames: 1907-1960
+    source: car_uv
+    dir: finish/v2/car_uv/S049/16x9
+    swap_frames: 1907-1960
+    gate: 'S049 f1907-1960 PASS | car_uv hue secondary (16x9) on finish/v2/car/S049: graded paint 303.7 -> 260.6 (ref 259.4), same-px 303.7 -> 259.4, sat +4.3%; rcheck 0->0 issues, new chroma pops [], fix-layer
+      pops [] | source gate: S049 f1907-1960 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.01/0.02); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 515 (routeB 496, +4%; detail w/o highlights +4%); G4 flow
+      p90'
+    flag: null
+  S050:
+    frames: 1961-2068
+    source: port2d
+    dir: finish/v2/port2d/S050
+    swap_frames: 1961-2068
+    gate: 'S050 f1961-2068 PASS | port2d r4_K06 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S052:
+    frames: 2069-2142
+    source: port2d
+    dir: finish/v2/port2d/S052
+    swap_frames: 2069-2142
+    gate: 'S052 f2069-2142 PASS | port2d r4_K07 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S054:
+    frames: 2143-2158
+    source: 3d_a
+    dir: finish/v2/3d_a/S054
+    swap_frames: 2143-2158
+    gate: 'S054 f2143-2158 PASS+FLAG | FLAG: mean luma -26% vs routeB (check: designed change or grade?) | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.00/0.00); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 391
+      (routeB 314, +25%; detail w/o highlights +49%); G4 flow p90 0.3; luma vs routeB -26%; collide -> PASS (27s); G6/G9 clean (0 floating, 0 crops)'
+    flag: '3d_a gate PASS+FLAG: mean luma -26% vs routeB (check: designed change or grade?)'
+  S055:
+    frames: 2159-2185
+    source: port2d
+    dir: finish/v2/port2d/S055
+    swap_frames: 2159-2185
+    gate: 'S055 f2159-2185 PASS+FLAG | port2d r4_K08 (round 4): count OK, splice/pops/blanks FLAG: designed: K08 LiNight fade-in over item f0-6 (step 15.9 at f2162 vs the old light clip 3.4), not a pop
+      (S055 internal jump at f2162: new 15.1 old 3.4) (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: 'port2d gate PASS+FLAG: designed: K08 LiNight fade-in over item f0-6 (step 15.9 at f2162 vs the old light clip 3.4), not a pop (S055 internal jump at f2162: new 15.1 old 3.4) (check.py), 0 still
+      drop-outs at CONC=1 (flicker.py)'
+  S056:
+    frames: 2186-2209
+    source: port2d
+    dir: finish/v2/port2d/S056
+    swap_frames: 2186-2209
+    gate: 'S056 f2186-2209 PASS | port2d r4_K09 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S057:
+    frames: 2210-2249
+    source: port2d
+    dir: finish/v2/port2d/S057
+    swap_frames: 2210-2249
+    gate: 'S057 f2210-2249 PASS | port2d r4_K10 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S059:
+    frames: 2250-2294
+    source: port2d
+    dir: finish/v2/port2d/S059
+    swap_frames: 2250-2294
+    gate: 'S059 f2250-2294 PASS | port2d r4_K11 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S060:
+    frames: 2295-2345
+    source: 3d_a
+    dir: finish/v2/3d_a/S060
+    swap_frames: 2295-2345
+    gate: S060 f2295-2345 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.00/0.00); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 139 (routeB 167, -17%; detail w/o highlights -5%); G4 flow p90 4.6; luma vs
+      routeB -1%; collide -> PASS (78s); G6/G9 clean (0 floating, 0 crops)
+    flag: null
+  S061:
+    frames: 2346-2387
+    source: 3d_a
+    dir: finish/v2/3d_a/S061
+    swap_frames: 2346-2387
+    gate: 'S061 f2346-2387 PASS+FLAG | FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 1 visible penetration(s); G6/G9 G9 FLAG: CROP FACE S061 skull {''left'': 0.13, ''right'': 0.11, ''top'':
+      0.98} | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.02/0.29); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 109 (routeB 110, -1%; detail w/o highlights -0%); G4 flow p90 0.4; luma vs routeB +1%'
+    flag: '3d_a gate PASS+FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 1 visible penetration(s); G6/G9 G9 FLAG: CROP FACE S061 skull {''left'': 0.13, ''right'': 0.11, ''top'': 0.98}'
+  S062:
+    frames: 2388-2404
+    source: 3d_a
+    dir: finish/v2/3d_a/S062
+    swap_frames: 2388-2404
+    gate: 'S062 f2388-2404 PASS+FLAG | FLAG: G6/G9 G9 FLAG: CROP S062 skull {''top'': 0.15} | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.04/0.83); G2 ship halo 0.0 (pre-LUT 7.9); G3 lap_h 95 (routeB 102,
+      -6%; detail w/o highlights -9%); G4 flow p90 0.2; luma vs routeB -3%; collide -> PASS (24s)'
+    flag: '3d_a gate PASS+FLAG: G6/G9 G9 FLAG: CROP S062 skull {''top'': 0.15}'
+  S063:
+    frames: 2405-2422
+    source: 3d_a
+    dir: finish/v2/3d_a/S063
+    swap_frames: 2405-2422
+    gate: S063 f2405-2422 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.00/0.00); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 302 (routeB 365, -17%; detail w/o highlights -10%); G4 flow p90 0.1; luma vs
+      routeB +0%; collide -> PASS (29s); G6/G9 clean (0 floating, 0 crops)
+    flag: null
+  S064:
+    frames: 2423-2446
+    source: 3d_a
+    dir: finish/v2/3d_a/S064
+    swap_frames: 2423-2446
+    gate: 'S064 f2423-2446 PASS+FLAG | FLAG: G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.17/1.75) pre-LUT over (the LUT shoulder holds it); G6/G9 G9 FLAG: CROP FACE S064 skull {''top'': 0.13, ''bottom'':
+      0.2} | G2 ship halo 0.0 (pre-LUT 3.2); G3 lap_h 92 (routeB 62, +49%; detail w/o highlights +42%); G4 flow p90 0.4; luma vs routeB -2%; collide -> PASS (31s)'
+    flag: '3d_a gate PASS+FLAG: G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.17/1.75) pre-LUT over (the LUT shoulder holds it); G6/G9 G9 FLAG: CROP FACE S064 skull {''top'': 0.13, ''bottom'': 0.2}'
+  S065:
+    frames: 2447-2496
+    source: 3d_a
+    dir: finish/v2/3d_a/S065
+    swap_frames: 2447-2496
+    gate: S065 f2447-2496 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.00/0.06); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 173 (routeB 207, -17%; detail w/o highlights -9%); G4 flow p90 2.7; luma vs
+      routeB +1%; collide -> PASS (55s); G6/G9 clean (0 floating, 0 crops)
+    flag: null
+  S066:
+    frames: 2497-2567
+    source: port2d
+    dir: finish/v2/port2d/S066
+    swap_frames: 2497-2567
+    gate: 'S066 f2497-2567 PASS | port2d r4_K12 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S068:
+    frames: 2568-2591
+    source: 3d_a
+    dir: finish/v2/3d_a/S068
+    swap_frames: 2568-2591
+    gate: S068 f2568-2591 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.01/0.18); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 190 (routeB 209, -9%; detail w/o highlights -0%); G4 flow p90 0.1; luma vs routeB
+      -11%; collide -> PASS (33s); G6/G9 clean (0 floating, 0 crops)
+    flag: null
+  S069:
+    frames: 2592-2630
+    source: 3d_b
+    dir: finish/v2/3d_b/S069
+    swap_frames: 2592-2630
+    gate: 'S069 f2592-2630 PASS+FLAG | FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a, same EXRs)
+      collide -> PASS (31s) | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.00/0.00); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 1207 (routeB 991, +22%; detail w/o highlights +26%); G4 flow p90 2.5; luma vs routeB
+      -0%;'
+    flag: '3d_b gate PASS+FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a, same EXRs) collide
+      -> PASS (31s)'
+  S070:
+    frames: 2631-2678
+    source: port2d
+    dir: finish/v2/port2d/S070
+    swap_frames: 2631-2678
+    gate: 'S070 f2631-2678 PASS | port2d r4_K13 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S071:
+    frames: 2679-2740
+    source: port2d
+    dir: finish/v2/port2d/S071
+    swap_frames: 2679-2740
+    gate: 'S071 f2679-2740 PASS | port2d KS3v2 (round 2, unchanged in round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (round-2 port, textfit_kit
+      / textfit_screens)'
+    flag: null
+  S072:
+    frames: 2741-2785
+    source: 3d_a
+    dir: finish/v2/3d_a/S072
+    swap_frames: 2741-2785
+    gate: 'S072 f2741-2785 PASS+FLAG | FLAG: G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.30/1.50) pre-LUT over (the LUT shoulder holds it); G6/G9 G9 FLAG: CROP S072 skull {''top'': 0.11} | G2 ship halo 0.0
+      (pre-LUT 6.0); G3 lap_h 325 (routeB 287, +13%; detail w/o highlights +18%); G4 flow p90 1.5; luma vs routeB -6%; collide -> PASS (53s)'
+    flag: '3d_a gate PASS+FLAG: G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.30/1.50) pre-LUT over (the LUT shoulder holds it); G6/G9 G9 FLAG: CROP S072 skull {''top'': 0.11}'
+  S073:
+    frames: 2786-2821
+    source: port2d
+    dir: finish/v2/port2d/S073
+    swap_frames: 2786-2821
+    gate: 'S073 f2786-2821 PASS | port2d r4_K13 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S074:
+    frames: 2822-2855
+    source: routeB
+  S075:
+    frames: 2856-2869
+    source: routeB
+  S076:
+    frames: 2870-2919
+    source: routeB
+  S077:
+    frames: 2920-2963
+    source: 3d_b
+    dir: finish/v2/3d_b/S077
+    swap_frames: 2920-2963
+    gate: S077 f2920-2963 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.00/0.08); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 187 (routeB 149, +25%; detail w/o highlights +32%); G4 flow p90 0.4; luma vs
+      routeB -2%; collide -> PASS (17s); G6/G9 clean (0 floating, 0 crops)
+    flag: null
+  S078:
+    frames: 2964-3039
+    source: 3d_b
+    dir: finish/v2/3d_b/S078
+    swap_frames: 2964-3039
+    gate: 'S078 f2964-3039 PASS+FLAG | FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a) collide
+      -> FAIL 2 visible penetration(s) , waived by collide3d Nov 8 (3d_a/S078/.gate_waiver: construction joints / crowd forearm, same in routeB) | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.00/0.00); G2
+      ship halo 0.0'
+    flag: '3d_b gate PASS+FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a) collide -> FAIL 2 visible
+      penetration(s) , waived by collide3d Nov 8 (3d_a/S078/.gate_waiver: construction joints / crowd forearm, same in routeB)'
+  S079:
+    frames: 3040-3129
+    source: routeB
+  S080:
+    frames: 3130-3196
+    source: routeB
+  S081:
+    frames: 3197-3261
+    source: 3d_a
+    dir: finish/v2/3d_a/S081
+    swap_frames: 3197-3261
+    gate: 'S081 f3197-3261 PASS+FLAG | FLAG: G6/G9 G9 FLAG: CROP FACE S081 skull {''top'': 0.35} | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.00/0.00); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 255 (routeB
+      255, +0%; detail w/o highlights +0%); G4 flow p90 0.1; luma vs routeB -0%; collide -> PASS (58s)'
+    flag: '3d_a gate PASS+FLAG: G6/G9 G9 FLAG: CROP FACE S081 skull {''top'': 0.35}'
+  S082:
+    frames: 3262-3310
+    source: 3d_a
+    dir: finish/v2/3d_a/S082
+    swap_frames: 3262-3310
+    gate: S082 f3262-3310 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.00/0.00); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 282 (routeB 282, -0%; detail w/o highlights -0%); G4 flow p90 3.1; luma vs routeB
+      +0%; collide -> PASS (51s); G6/G9 clean (0 floating, 0 crops)
+    flag: null
+  S083:
+    frames: 3311-3408
+    source: port2d
+    dir: finish/v2/port2d/S083
+    swap_frames: 3311-3408
+    gate: 'S083 f3311-3408 PASS | port2d r4_K14 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S090:
+    frames: 3409-3457
+    source: port2d
+    dir: finish/v2/port2d/S090
+    swap_frames: 3409-3457
+    gate: 'S090 f3409-3457 PASS | port2d r4_K15 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S091:
+    frames: 3458-3508
+    source: port2d
+    dir: finish/v2/port2d/S091
+    swap_frames: 3458-3508
+    gate: 'S091 f3458-3508 PASS | port2d r5_K16 (round 5, gym mirror selfie, CD self-approved): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit RESULT:
+      PASS (0 fails, 1 warnings) (textfit_kit_r5)'
+    flag: null
+  S092:
+    frames: 3509-3558
+    source: 3d_a
+    dir: finish/v2/3d_a/S092
+    swap_frames: 3509-3558
+    gate: S092 f3509-3558 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.01/0.22); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 268 (routeB 285, -6%; detail w/o highlights +3%); G4 flow p90 0.1; luma vs routeB
+      -11%; collide -> PASS (52s); G6/G9 clean (0 floating, 0 crops)
+    flag: null
+  S093:
+    frames: 3559-3585
+    source: port2d
+    dir: finish/v2/port2d/S093
+    swap_frames: 3559-3585
+    gate: 'S093 f3559-3585 PASS | port2d r4_K17 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S094:
+    frames: 3586-3648
+    source: 3d_a
+    dir: finish/v2/3d_a/S094
+    swap_frames: 3586-3648
+    gate: 'S094 f3586-3648 PASS+FLAG | FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 1 visible penetration(s); G6/G9 G9 FLAG: CROP FACE S094 skull {''top'': 0.27, ''right'': 0.28, ''bottom'':
+      0.49} | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.36/0.92); G2 ship halo 0.0 (pre-LUT 6.2); G3 lap_h 168 (routeB 181, -7%; detail w/o highlights -1%); G4 flow p90 0.3; luma vs routeB -1%'
+    flag: '3d_a gate PASS+FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 1 visible penetration(s); G6/G9 G9 FLAG: CROP FACE S094 skull {''top'': 0.27, ''right'': 0.28, ''bottom'': 0.49}'
+  S095:
+    frames: 3649-3679
+    source: port2d
+    dir: finish/v2/port2d/S095
+    swap_frames: 3649-3679
+    gate: 'S095 f3649-3679 PASS | port2d KS4v2 (round 2, unchanged in round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (round-2 port, textfit_kit
+      / textfit_screens)'
+    flag: null
+  S096:
+    frames: 3680-3776
+    source: routeB
+    flag: '3d_a gate FAIL (FAIL: G3 lap_h 66 (routeB 71, -7%; detail w/o highlights -12%)): routeB kept'
+    candidate: finish/v2/3d_a/S096
+    candidate_gate: 'S096 f3680-3776 FAIL | FAIL: G3 lap_h 66 (routeB 71, -7%; detail w/o highlights -12%) | FLAG: G6/G9 G9 FLAG: CROP FACE S096 skull {''top'': 0.31, ''left'': 0.11, ''right'': 0.1, ''bottom'':
+      0.12} | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.03/0.90); G2 ship halo 0.0 (pre-LUT 7.6); G4 flow p90 0.6; luma vs routeB -2%; collide -> PASS (132s)'
+  S097:
+    frames: 3777-3817
+    source: port2d
+    dir: finish/v2/port2d/S097
+    swap_frames: 3777-3817
+    gate: 'S097 f3777-3817 PASS | port2d r4_K18 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S098:
+    frames: 3818-3860
+    source: 3d_a
+    dir: finish/v2/3d_a/S098
+    swap_frames: 3818-3860
+    gate: 'S098 f3818-3860 PASS+FLAG | FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 1 visible penetration(s) | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.01/0.16); G2 ship halo 0.0 (pre-LUT
+      0.0); G3 lap_h 1689 (routeB 1584, +7%; detail w/o highlights +8%); G4 flow p90 2.1; luma vs routeB -2%; G6/G9 clean (0 floating, 0 crops)'
+    flag: '3d_a gate PASS+FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 1 visible penetration(s)'
+  S099:
+    frames: 3861-3911
+    source: port2d
+    dir: finish/v2/port2d/S099
+    swap_frames: 3861-3911
+    gate: 'S099 f3861-3911 PASS | port2d r4_K19 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S100:
+    frames: 3912-3939
+    source: routeB
+    flag: 'lobby has frames but no gate yet: routeB kept'
+    candidate: finish/v2/lobby/S100
+    candidate_gate: null
+  S101:
+    frames: 3940-3959
+    source: founder_clothes
+    dir: finish/v2/founder_clothes/S101/16x9
+    swap_frames: 3940-3959
+    gate: 'S101 f3940-3959 PASS+FLAG | founder_clothes: K02 print ultraviolet -> charcoal (recolor_stills hue 218 / S x0.32, V x0.50) on <film>/renders/routeB/S101:
+      purple 9.98% -> 0.97% of frame, outside-region change 0; rcheck 3->3 issues, new chroma pops [], fix-layer pops [] (source-motion pops +3 settle f excused), output chroma > source on 0 f | FLAG'
+    flag: 'founder_clothes gate PASS+FLAG: see gate'
+  S102:
+    frames: 3960-4002
+    source: port2d
+    dir: finish/v2/port2d/S102
+    swap_frames: 3960-4002
+    gate: 'S102 f3960-4002 PASS | port2d r4_K19 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S103:
+    frames: 4003-4038
+    source: port2d
+    dir: finish/v2/port2d/S103
+    swap_frames: 4003-4038
+    gate: 'S103 f4003-4038 PASS | port2d r4_K20 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S103b:
+    frames: 4039-4059
+    source: car_uv
+    dir: finish/v2/car_uv/S103b/16x9
+    swap_frames: 4039-4059
+    gate: 'S103b f4039-4059 PASS | car_uv hue secondary (16x9) on finish/v2/car/S103b: graded paint 269.2 -> 260.5 (ref 259.4), same-px 269.2 -> 260.5, sat +0.1%; rcheck 2->2 issues, new chroma pops [],
+      fix-layer pops [] | source gate: S103b f4039-4059 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.02/0.12); G2 ship halo 0.0 (pre-LUT 10.5); G3 lap_h 245 (routeB 242, +1%; detail w/o highlights +3%);
+      G4 flow'
+    flag: null
+  S107:
+    frames: 4060-4107
+    source: 3d_a
+    dir: finish/v2/3d_a/S107
+    swap_frames: 4060-4107
+    gate: 'S107 f4060-4107 PASS+FLAG | FLAG: G6/G9 G9 FLAG: CROP FACE S107 skull {''right'': 0.9} | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.00/0.00); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 202 (routeB
+      200, +1%; detail w/o highlights +1%) [WL rack focus]; G4 flow p90 0.7; luma vs routeB -0%; collide -> PASS (474s)'
+    flag: '3d_a gate PASS+FLAG: G6/G9 G9 FLAG: CROP FACE S107 skull {''right'': 0.9}'
+  S108:
+    frames: 4108-4159
+    source: port2d
+    dir: finish/v2/port2d/S108
+    swap_frames: 4108-4159
+    gate: 'S108 f4108-4159 PASS | port2d r4_K19 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S109:
+    frames: 4160-4250
+    source: port2d
+    dir: finish/v2/port2d/S109
+    swap_frames: 4160-4250
+    gate: 'S109 f4160-4250 PASS | port2d r4_K20b (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S114:
+    frames: 4251-4283
+    source: 3d_a
+    dir: finish/v2/3d_a/S114
+    swap_frames: 4251-4283
+    gate: 'S114 f4251-4283 PASS+FLAG | FLAG: G6/G9 G9 FLAG: CROP FACE S114 skull {''top'': 0.29, ''left'': 0.14, ''bottom'': 0.2} | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.12/0.18); G2 ship halo 0.0 (pre-LUT
+      3.5); G3 lap_h 424 (routeB 423, +0%; detail w/o highlights +1%); G4 flow p90 4.9; luma vs routeB -1%; collide -> PASS (392s)'
+    flag: '3d_a gate PASS+FLAG: G6/G9 G9 FLAG: CROP FACE S114 skull {''top'': 0.29, ''left'': 0.14, ''bottom'': 0.2}'
+  S115:
+    frames: 4284-4327
+    source: 3d_b
+    dir: finish/v2/3d_b/S115
+    swap_frames: 4284-4327
+    gate: 'S115 f4284-4327 PASS+FLAG | FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a, same EXRs)
+      collide -> PASS (880s); G6/G9 G9 FLAG: CROP FACE S115 skull {''left'': 0.48, ''bottom'': 0.72} | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.00/0.00); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 2088 (routeB
+      1736, +'
+    flag: '3d_b gate PASS+FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a, same EXRs) collide
+      -> PASS (880s); G6/G9 G9 FLAG: CROP FACE S115 skull {''left'': 0.48, ''bottom'': 0.72}'
+  S116:
+    frames: 4328-4351
+    source: 3d_b
+    dir: finish/v2/3d_b/S116
+    swap_frames: 4328-4351
+    gate: S116 f4328-4351 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.00/0.00); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 150 (routeB 68, +122%; detail w/o highlights +107%); G4 flow p90 1.4; luma vs
+      routeB +5%; collide -> PASS (330s); G6/G9 clean (0 floating, 0 crops)
+    flag: null
+  S117:
+    frames: 4352-4378
+    source: 3d_a
+    dir: finish/v2/3d_a/S117
+    swap_frames: 4352-4378
+    gate: 'S117 f4352-4378 PASS+FLAG | FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 1 visible penetration(s); G6/G9 G9 FLAG: CROP FACE S117 skull {''right'': 0.07, ''top'': 0.25, ''bottom'':
+      0.12} | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.01/1.21); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 272 (routeB 242, +12%; detail w/o highlights +16%); G4 flow p90 2.7; luma vs routeB -2%'
+    flag: '3d_a gate PASS+FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 1 visible penetration(s); G6/G9 G9 FLAG: CROP FACE S117 skull {''right'': 0.07, ''top'': 0.25, ''bottom'': 0.12}'
+  S118:
+    frames: 4379-4405
+    source: port2d
+    dir: finish/v2/port2d/S118
+    swap_frames: 4379-4405
+    gate: 'S118 f4379-4405 PASS | port2d r4_K21 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S118b:
+    frames: 4406-4430
+    source: car_uv
+    dir: finish/v2/car_uv/S118b/16x9
+    swap_frames: 4406-4430
+    gate: 'S118b f4406-4430 PASS | car_uv hue secondary (16x9) on finish/v2/car/S118b: graded paint 266.7 -> 260.5 (ref 259.4), same-px 266.7 -> 260.5, sat +0.1%; rcheck 7->7 issues, new chroma pops [],
+      fix-layer pops [] | source gate: S118b f4406-4430 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.37/0.47); G2 ship halo 0.0 (pre-LUT 1.1); G3 lap_h 300 (routeB 303, -1%; detail w/o highlights -1%);
+      G4 flow '
+    flag: null
+  S119:
+    frames: 4431-4481
+    source: port2d
+    dir: finish/v2/port2d/S119
+    swap_frames: 4431-4481
+    gate: 'S119 f4431-4481 PASS | port2d r4_K22 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S120:
+    frames: 4482-4521
+    source: 3d_a
+    dir: finish/v2/3d_a/S120
+    swap_frames: 4482-4521
+    gate: 'S120 f4482-4521 PASS+FLAG | FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 1 visible penetration(s); G6/G9 G9 FLAG: CROP S120 skull {''top'': 0.18} | G1 ship clip 0.00% wclip 0.00%
+      (pre-LUT 0.00/0.00); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 206 (routeB 203, +2%; detail w/o highlights +2%); G4 flow p90 1.7; luma vs routeB -1%'
+    flag: '3d_a gate PASS+FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 1 visible penetration(s); G6/G9 G9 FLAG: CROP S120 skull {''top'': 0.18}'
+  S121:
+    frames: 4522-4559
+    source: port2d
+    dir: finish/v2/port2d/S121
+    swap_frames: 4522-4559
+    gate: 'S121 f4522-4559 PASS | port2d KS5v2 (round 2, unchanged in round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (round-2 port, textfit_kit
+      / textfit_screens)'
+    flag: null
+  S122:
+    frames: 4560-4575
+    source: 3d_a
+    dir: finish/v2/3d_a/S122
+    swap_frames: 4560-4575
+    gate: 'S122 f4560-4575 PASS+FLAG | FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 1 visible penetration(s); G6/G9 G9 FLAG: CROP S122 skull {''top'': 0.18} | G1 ship clip 0.00% wclip 0.00%
+      (pre-LUT 0.00/0.00); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 353 (routeB 347, +2%; detail w/o highlights +2%); G4 flow p90 0.3; luma vs routeB -0%'
+    flag: '3d_a gate PASS+FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 1 visible penetration(s); G6/G9 G9 FLAG: CROP S122 skull {''top'': 0.18}'
+  S123:
+    frames: 4576-4629
+    source: port2d
+    dir: finish/v2/port2d/S123
+    swap_frames: 4576-4629
+    gate: 'S123 f4576-4629 PASS | port2d r4_K23 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S125:
+    frames: 4630-4659
+    source: 3d_a
+    dir: finish/v2/3d_a/S125
+    swap_frames: 4630-4659
+    gate: 'S125 f4630-4659 PASS+FLAG | FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 4 visible penetration(s) | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.00/0.06); G2 ship halo 0.0 (pre-LUT
+      0.0); G3 lap_h 353 (routeB 346, +2%; detail w/o highlights +2%); G4 flow p90 1.1; luma vs routeB -0%; G6/G9 clean (0 floating, 0 crops)'
+    flag: '3d_a gate PASS+FLAG: WAIVED collide3d (see .gate_waiver): collide -> FAIL 4 visible penetration(s)'
+  S126:
+    frames: 4660-4687
+    source: founder_clothes
+    dir: finish/v2/founder_clothes/S126/16x9
+    swap_frames: 4660-4687
+    gate: 'S126 f4660-4687 PASS+FLAG | founder_clothes: K02 print ultraviolet -> charcoal (recolor_stills hue 218 / S x0.32, V x0.50) on <film>/renders/routeB/S126:
+      purple 2.67% -> 1.59% of frame, outside-region change 0; rcheck 0->0 issues, new chroma pops [], fix-layer pops [] (source-motion pops +3 settle f excused), output chroma > source on 0 f | FLAG'
+    flag: 'founder_clothes gate PASS+FLAG: see gate'
+  S127:
+    frames: 4688-4711
+    source: routeB
+  S128:
+    frames: 4712-4755
+    source: 3d_b
+    dir: finish/v2/3d_b/S128
+    swap_frames: 4712-4755
+    gate: 'S128 f4712-4755 PASS+FLAG | FLAG: G2 ship halo 0.0 (pre-LUT 30.8) pre-LUT over | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.02/0.19); G3 lap_h 346 (routeB 384, -10%; detail w/o highlights -11%);
+      G4 flow p90 2.6; luma vs routeB -0%; collide -> PASS (73s); G6/G9 clean (0 floating, 0 crops)'
+    flag: '3d_b gate PASS+FLAG: G2 ship halo 0.0 (pre-LUT 30.8) pre-LUT over'
+  S129:
+    frames: 4756-4811
+    source: 3d_b
+    dir: finish/v2/3d_b/S129
+    swap_frames: 4756-4811
+    gate: 'S129 f4756-4811 PASS+FLAG | FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a) collide
+      -> FAIL 1 visible penetration(s) , waived by collide3d Nov 8 (3d_a/S129/.gate_waiver: construction joints / crowd forearm, same in routeB); G6/G9 G9 FLAG: CROP S129 skull {''top'': 0.08} | G1 ship
+      clip 0.00% wcl'
+    flag: '3d_b gate PASS+FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a) collide -> FAIL 1 visible
+      penetration(s) , waived by collide3d Nov 8 (3d_a/S129/.gate_waiver: construction joints / crowd forearm, same in routeB); G6/G9 G9 FLAG: CROP S129 skull {''top'': 0.08}'
+  S130:
+    frames: 4812-4855
+    source: routeB
+  S131:
+    frames: 4856-4938
+    source: lobby
+    dir: finish/v2/lobby/S131
+    swap_frames: 4856-4938
+    gate: (manual, APPROVALS.yaml) collide3d shotgate PASS Nov 8 (G3 +46%, luma +10%); Visionary TV reads
+    flag: null
+  S132:
+    frames: 4939-5030
+    source: lobby
+    dir: finish/v2/lobby/S132
+    swap_frames: 4939-5030
+    gate: '(manual, APPROVALS.yaml) collide3d Nov 8: extinguisher 2.5 cm in floor, 4 px, behind desk, same in routeB -> waived; rest PASS'
+    flag: null
+  S133:
+    frames: 5031-5075
+    source: lobby
+    dir: finish/v2/lobby/S133
+    swap_frames: 5031-5075
+    gate: '(manual, APPROVALS.yaml) collide3d Nov 8: G3 89 vs 90 floor on a designed f/4 macro, 2.2x sharper than routeB, DEPLOY plate reads; waived'
+    flag: null
+  S134:
+    frames: 5076-5171
+    source: lobby
+    dir: finish/v2/lobby/S134
+    swap_frames: 5076-5171
+    gate: (manual, APPROVALS.yaml) collide3d shotgate PASS Nov 8 (G3 +3%, luma +2%)
+    flag: null
+  S135:
+    frames: 5172-5260
+    source: 3d_b
+    dir: finish/v2/3d_b/S135
+    swap_frames: 5172-5260
+    gate: 'S135 f5172-5260 PASS+FLAG | FLAG: WAIVED b_post (see .gate_waiver): collide -> FAIL 3 visible penetration(s) | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.00/0.00); G2 ship halo 0.0 (pre-LUT 0.0);
+      G3 lap_h 223 (routeB 107, +109%; detail w/o highlights +91%); G4 flow p90 1.2; luma vs routeB -6%; G6/G9 clean (0 floating, 0 crops)'
+    flag: '3d_b gate PASS+FLAG: WAIVED b_post (see .gate_waiver): collide -> FAIL 3 visible penetration(s)'
+  S136:
+    frames: 5261-5360
+    source: 3d_b
+    dir: finish/v2/3d_b/S136
+    swap_frames: 5261-5360
+    gate: 'S136 f5261-5360 PASS+FLAG | FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a) collide
+      -> FAIL 2 visible penetration(s) , waived by collide3d Nov 8 (3d_a/S136/.gate_waiver: construction joints / crowd forearm, same in routeB); G6/G9 G9 FLAG: CROP FACE S136 skull {''top'': 0.19, ''bottom'':
+      0.09} | G'
+    flag: '3d_b gate PASS+FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a) collide -> FAIL 2 visible
+      penetration(s) , waived by collide3d Nov 8 (3d_a/S136/.gate_waiver: construction joints / crowd forearm, same in routeB); G6/G9 G9 FLAG: CROP FACE S136 skull {''top'': 0.19, ''bottom'': 0.09}'
+  S137:
+    frames: 5361-5458
+    source: port2d
+    dir: finish/v2/port2d/S137
+    swap_frames: 5361-5458
+    gate: 'S137 f5361-5458 PASS | port2d r4_KS7 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S138:
+    frames: 5459-5567
+    source: port2d
+    dir: finish/v2/port2d/S138
+    swap_frames: 5459-5567
+    gate: 'S138 f5459-5567 PASS | port2d r4_KS8 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S139:
+    frames: 5568-5619
+    source: car_uv
+    dir: finish/v2/car_uv/S139/16x9
+    swap_frames: 5568-5619
+    gate: 'S139 f5568-5619 PASS | car_uv hue secondary (16x9) on finish/v2/car/S139: graded paint 298.0 -> 260.4 (ref 259.4), same-px 298.0 -> 258.9, sat -4.8%; rcheck 0->0 issues, new chroma pops [], fix-layer
+      pops [] | source gate: S139 f5568-5619 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.03/0.13); G2 ship halo 0.0 (pre-LUT 4.6); G3 lap_h 329 (routeB 287, +15%; detail w/o highlights +14%); G4 flow
+      p'
+    flag: null
+  S140:
+    frames: 5620-5629
+    source: car_uv
+    dir: finish/v2/car_uv/S140/16x9
+    swap_frames: 5620-5629
+    gate: 'S140 f5620-5629 PASS | car_uv hue secondary (16x9) on finish/v2/car/S140: graded paint 280.9 -> 260.0 (ref 259.4), same-px 280.9 -> 256.8, sat -1.8%; rcheck 0->0 issues, new chroma pops [], fix-layer
+      pops [] | source gate: S140 f5620-5629 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.05/0.05); G2 ship halo 0.0 (pre-LUT 1.2); G3 lap_h 267 (routeB 276, -3%; detail w/o highlights -2%); G4 flow
+      p90'
+    flag: null
+  S141:
+    frames: 5630-5657
+    source: car_uv
+    dir: finish/v2/car_uv/S141/16x9
+    swap_frames: 5630-5657
+    gate: 'S141 f5630-5657 PASS | car_uv hue secondary (16x9) on finish/v2/car/S141: graded paint 283.1 -> 260.9 (ref 259.4), same-px 283.1 -> 260.5, sat -0.4%; rcheck 0->0 issues, new chroma pops [], fix-layer
+      pops [] | source gate: S141 f5630-5657 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.01/0.03); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 288 (routeB 233, +24%; detail w/o highlights +21%); G4 flow
+      p'
+    flag: null
+  S141b:
+    frames: 5658-5697
+    source: car_uv
+    dir: finish/v2/car_uv/S141b/16x9
+    swap_frames: 5658-5697
+    gate: 'S141b f5658-5697 PASS | car_uv hue secondary (16x9) on finish/v2/car/S141b: graded paint 308.7 -> 260.5 (ref 259.4), same-px 308.7 -> 259.1, sat -0.0%; rcheck 6->6 issues, new chroma pops [],
+      fix-layer pops [] | source gate: S141b f5658-5697 PASS | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.40/0.03); G2 ship halo 0.0 (pre-LUT 2.3); G3 lap_h 320 (routeB 313, +2%; detail w/o highlights +3%);
+      G4 flow '
+    flag: null
+  S142:
+    frames: 5698-5890
+    source: port2d
+    dir: finish/v2/port2d/S142
+    swap_frames: 5698-5890
+    gate: 'S142 f5698-5890 PASS+FLAG | port2d r4_K25 (round 4): count OK, splice/pops/blanks FLAG: designed: K25 composer -> posted phase cut at item f85 (round 3 removed the spinner), not a pop (S142 internal
+      jump at f5743: new 75.9 old 18.6) (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: 'port2d gate PASS+FLAG: designed: K25 composer -> posted phase cut at item f85 (round 3 removed the spinner), not a pop (S142 internal jump at f5743: new 75.9 old 18.6) (check.py), 0 still drop-outs
+      at CONC=1 (flicker.py)'
+  S145:
+    frames: 5891-5924
+    source: 3d_b
+    dir: finish/v2/3d_b/S145
+    swap_frames: 5891-5924
+    gate: 'S145 f5891-5924 PASS+FLAG | FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a, same EXRs)
+      collide -> PASS (487s) | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.00/0.00); G2 ship halo 0.0 (pre-LUT 0.0); G3 lap_h 781 (routeB 729, +7%; detail w/o highlights +7%); G4 flow p90 3.5; luma vs routeB
+      -1%; G'
+    flag: '3d_b gate PASS+FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a, same EXRs) collide
+      -> PASS (487s)'
+  S146:
+    frames: 5925-5940
+    source: port2d
+    dir: finish/v2/port2d/S146
+    swap_frames: 5925-5940
+    gate: 'S146 f5925-5940 PASS | port2d r4_KS9 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S147:
+    frames: 5941-5979
+    source: 3d_b
+    dir: finish/v2/3d_b/S147
+    swap_frames: 5941-5979
+    gate: 'S147 f5941-5979 PASS+FLAG | FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a) collide
+      -> FAIL 3 visible penetration(s) , waived by collide3d Nov 8 (3d_a/S147/.gate_waiver: construction joints / crowd forearm, same in routeB) | G1 ship clip 0.00% wclip 0.00% (pre-LUT 0.00/0.00); G2
+      ship halo 0.0'
+    flag: '3d_b gate PASS+FLAG: WAIVED crowd_ivory (see .gate_waiver): collide board layer (COLLIDE off: board-only pass; the base''s collide is rr_3d_a''s line); base collide (3d_a) collide -> FAIL 3 visible
+      penetration(s) , waived by collide3d Nov 8 (3d_a/S147/.gate_waiver: construction joints / crowd forearm, same in routeB)'
+  S148:
+    frames: 5980-6007
+    source: port2d
+    dir: finish/v2/port2d/S148
+    swap_frames: 5980-6007
+    gate: 'S148 f5980-6007 PASS | port2d r4_K26 (round 4): count OK, splice/pops/blanks clean (check.py), 0 still drop-outs at CONC=1 (flicker.py) | text-fit PASS (textfit_kit_r4 / textfit_screens_r4)'
+    flag: null
+  S150:
+    frames: 6008-6182
+    source: lobby
+    dir: finish/v2/lobby/S150
+    swap_frames: 6008-6182
+    gate: '(manual, APPROVALS.yaml) collide3d Nov 8: extinguisher 2.5 cm in floor, waived; luma -28% = designed pendant x0.6'
+    flag: null
+ignored:
+- 'finish/v2/3d_a/_S065_standv1: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/3d_a/_badid_030: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/3d_a/_badid_038: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/3d_a/_badid_072: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/3d_a/_badid_125: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/3d_a/_badid_26: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S050: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S052: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S056: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S057: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S059: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S066: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S070: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S073: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S083: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S090: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S091: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S093: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S097: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S099: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S102: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S103: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S108: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S109: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S118: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S119: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S123: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S138: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S142: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S146: not an EDL shot id (bad id / parked), ignored'
+- 'finish/v2/port2d/_r2_S148: not an EDL shot id (bad id / parked), ignored'

@@ -1,0 +1,123 @@
+#INTRO
+Thank you for holding.
+You are customer one thousand.
+The founder is currently disrupting an industry.
+We don’t know which one.
+Everything is working.
+Please do not touch anything.
+
+#V1
+A cron job wakes at three-oh-seven
+Nobody set the alarm
+There’s a variable called DO NOT DELETE
+Holding the roof up with one arm
+His last commit just says “trust me”
+Then he bought a GT3 RS
+Now I bill a thousand strangers
+And pray nobody checks
+
+#PRE1
+No tests, no docs
+Just a green light, steady glow
+I tiptoe through his legacy code
+Like a baby I don’t know
+
+#CH1
+Asking for a friend
+How does this thing end?
+If nobody knows what happens next
+Who’s brave enough to end it?
+Asking for a friend
+With my finger on deploy
+A thousand people trust a ghost
+And the ghost is self-employed
+
+#POST1
+Don’t touch it, don’t touch it
+It’s working, it’s working
+Don’t touch it, don’t touch it
+It’s working for now
+
+#V2
+Heard he moved to Austin
+And started a podcast
+Heard he went to Burning Man
+And found himself at last
+His LinkedIn says “building in stealth”
+His podcast’s called The Grind
+He sells a course on letting go
+Of everything he left behind
+
+#PRE2
+No tests, no docs
+And the dashboard’s bleeding red
+I rewrote all the billing logic
+While he was still in bed
+
+#CH2
+Asking for a friend
+How does this thing end?
+If nobody knows what happens next
+Who’s brave enough to end it?
+Asking for a friend
+With my finger on deploy
+A thousand people trust a ghost
+And the ghost is self-employed
+
+#POST2
+Don’t touch it, don’t touch it
+It’s working, it’s working
+Don’t touch it, don’t touch it
+It’s working for now
+
+#BRIDGE
+I write the code, I pay the bills
+I answer calls, I close the deals
+He wakes at five to optimize
+Then posts about his sacrifice
+He says his secret’s discipline
+And forty minutes in the gym
+I haven’t had a day off yet
+He calls that founder mindset
+
+#SPOKEN
+He just asked me to write his memoir.
+
+#BREAK
+Chapter one: I built this myself.
+
+#BUILD
+Founder mode! Founder mode!
+Nobody knows who owns the code!
+Founder mode! Founder mode!
+He’s on a podcast, on the road!
+
+#FINAL
+Asking for a friend
+How does this thing end?
+He raised another twenty million
+For a product he can’t comprehend
+Asking for a friend
+We’re profitable somehow
+He’s breathing in a cold plunge
+And I’m the founder now
+
+#POST3
+Don’t touch it, don’t touch it
+It’s working, it’s working
+Don’t touch it, don’t touch it
+It’s working for n—
+
+#OUTRO
+Thank you for holding.
+Deployment successful.
+You are customer one thousand and one.
+Tests found: zero.
+AI agents active: four hundred and twelve.
+Valuation: four hundred million dollars.
+In case of emergency, do not call 911.
+The founder is driving it.
+He has just posted on LinkedIn:
+“Couldn’t have done it without my incredible team.”
+The team has unfollowed him.
+Your call is important to us.

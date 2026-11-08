@@ -1,0 +1,48 @@
+{
+ "clips": [
+  {
+   "kind": "short",
+   "n": 1,
+   "label": "Everything Is Working",
+   "start": 15.25,
+   "end": 36.25,
+   "cover": false,
+   "file": "Asking for a Friend - Short 1 (Everything Is Working, 21s).mp4",
+   "note": "made outside cuts: bespoke 9:16 render f366-869, v3 approved Nov 7 (finish/short, short/tools/finish_final.sh)"
+  },
+  {
+   "kind": "short",
+   "n": 2,
+   "label": "The Ghost Is Self-Employed",
+   "start": 53.79,
+   "end": 75.63,
+   "cover": false,
+   "hook": null,
+   "file": "Asking for a Friend - Short 2 (The Ghost Is Self-Employed, 22s).mp4"
+  },
+  {
+   "kind": "short",
+   "n": 3,
+   "label": "Do Not Call 911",
+   "start": 227.31,
+   "end": 250.2,
+   "cover": false,
+   "hook": null,
+   "file": "Asking for a Friend - Short 3 (Do Not Call 911, 23s).mp4"
+  }
+ ],
+ "edit": {
+  "file": "Asking for a Friend - Instagram 9x16 (under 3 min).mp4",
+  "segments": [
+   [
+    0.0,
+    79.46
+   ],
+   [
+    156.52,
+    255.17
+   ]
+  ],
+  "duration": 178.10999999999996
+ }
+}

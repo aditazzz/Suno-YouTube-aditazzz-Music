@@ -1,0 +1,130 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "Thank you for holding.",
+  "first_word_t": 1.7,
+  "e": 26.98,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 26.98,
+  "first_line": "A cron job wakes at three-oh-seven",
+  "first_word_t": 27.28,
+  "e": 43.620000000000005,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE1",
+  "s": 43.620000000000005,
+  "first_line": "No tests, no docs",
+  "first_word_t": 43.92,
+  "e": 53.64,
+  "kind": "pre"
+ },
+ {
+  "name": "CH1",
+  "s": 53.64,
+  "first_line": "Asking for a friend",
+  "first_word_t": 53.94,
+  "e": 69.36,
+  "kind": "chorus"
+ },
+ {
+  "name": "POST1",
+  "s": 69.36,
+  "first_line": "Don\u2019t touch it, don\u2019t touch it",
+  "first_word_t": 69.66,
+  "e": 81.4,
+  "kind": "post"
+ },
+ {
+  "name": "V2",
+  "s": 81.4,
+  "first_line": "Heard he moved to Austin",
+  "first_word_t": 81.7,
+  "e": 97.44,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE2",
+  "s": 97.44,
+  "first_line": "No tests, no docs",
+  "first_word_t": 97.74,
+  "e": 107.68,
+  "kind": "pre"
+ },
+ {
+  "name": "CH2",
+  "s": 107.68,
+  "first_line": "Asking for a friend",
+  "first_word_t": 107.98,
+  "e": 123.14,
+  "kind": "chorus"
+ },
+ {
+  "name": "POST2",
+  "s": 123.14,
+  "first_line": "Don\u2019t touch it, don\u2019t touch it",
+  "first_word_t": 123.44,
+  "e": 132.92,
+  "kind": "post"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 132.92,
+  "first_line": "I write the code, I pay the bills",
+  "first_word_t": 133.22,
+  "e": 151.73999999999998,
+  "kind": "bridge"
+ },
+ {
+  "name": "SPOKEN",
+  "s": 151.73999999999998,
+  "first_line": "He just asked me to write his memoir.",
+  "first_word_t": 152.04,
+  "e": 156.79999999999998,
+  "kind": "other"
+ },
+ {
+  "name": "BREAK",
+  "s": 156.79999999999998,
+  "first_line": "Chapter one: I built this myself.",
+  "first_word_t": 157.1,
+  "e": 160.57999999999998,
+  "kind": "other"
+ },
+ {
+  "name": "BUILD",
+  "s": 160.57999999999998,
+  "first_line": "Founder mode! Founder mode!",
+  "first_word_t": 160.88,
+  "e": 178.22,
+  "kind": "build"
+ },
+ {
+  "name": "FINAL",
+  "s": 178.22,
+  "first_line": "Asking for a friend",
+  "first_word_t": 178.52,
+  "e": 194.01999999999998,
+  "kind": "chorus"
+ },
+ {
+  "name": "POST3",
+  "s": 194.01999999999998,
+  "first_line": "Don\u2019t touch it, don\u2019t touch it",
+  "first_word_t": 194.32,
+  "e": 205.5,
+  "kind": "post"
+ },
+ {
+  "name": "OUTRO",
+  "s": 205.5,
+  "first_line": "Thank you for holding.",
+  "first_word_t": 205.8,
+  "e": 257.6,
+  "kind": "outro"
+ }
+]

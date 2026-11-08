@@ -1,0 +1,554 @@
+[
+{
+"sec": "INTRO",
+"s": 1.7,
+"e": 3.48,
+"text": "Thank you for holding."
+},
+{
+"sec": "INTRO",
+"s": 6.48,
+"e": 7.68,
+"text": "You are customer one thousand."
+},
+{
+"sec": "INTRO",
+"s": 9.4,
+"e": 12.08,
+"text": "The founder is currently disrupting an industry."
+},
+{
+"sec": "INTRO",
+"s": 13.26,
+"e": 14.48,
+"text": "We don\u2019t know which one."
+},
+{
+"sec": "INTRO",
+"s": 15.54,
+"e": 16.56,
+"text": "Everything is working."
+},
+{
+"sec": "INTRO",
+"s": 19.18,
+"e": 21.62,
+"text": "Please do not touch anything."
+},
+{
+"sec": "V1",
+"s": 27.28,
+"e": 29.96,
+"text": "A cron job wakes at three-oh-seven"
+},
+{
+"sec": "V1",
+"s": 30.42,
+"e": 31.56,
+"text": "Nobody set the alarm"
+},
+{
+"sec": "V1",
+"s": 31.84,
+"e": 33.9,
+"text": "There\u2019s a variable called DO NOT DELETE"
+},
+{
+"sec": "V1",
+"s": 33.96,
+"e": 35.54,
+"text": "Holding the roof up with one arm"
+},
+{
+"sec": "V1",
+"s": 35.66,
+"e": 37.6,
+"text": "His last commit just says \u201ctrust me\u201d"
+},
+{
+"sec": "V1",
+"s": 37.64,
+"e": 39.68,
+"text": "Then he bought a GT3 RS"
+},
+{
+"sec": "V1",
+"s": 39.88,
+"e": 42.1,
+"text": "Now I bill a thousand strangers"
+},
+{
+"sec": "V1",
+"s": 42.1,
+"e": 43.92,
+"text": "And pray nobody checks"
+},
+{
+"sec": "PRE1",
+"s": 43.92,
+"e": 45.68,
+"text": "No tests, no docs"
+},
+{
+"sec": "PRE1",
+"s": 46.5,
+"e": 47.98,
+"text": "Just a green light, steady glow"
+},
+{
+"sec": "PRE1",
+"s": 48.66,
+"e": 50.5,
+"text": "I tiptoe through his legacy code"
+},
+{
+"sec": "PRE1",
+"s": 50.5,
+"e": 52.94,
+"text": "Like a baby I don\u2019t know"
+},
+{
+"sec": "CH1",
+"s": 53.94,
+"e": 55.38,
+"text": "Asking for a friend"
+},
+{
+"sec": "CH1",
+"s": 55.7,
+"e": 57.3,
+"text": "How does this thing end?"
+},
+{
+"sec": "CH1",
+"s": 57.56,
+"e": 60.32,
+"text": "If nobody knows what happens next"
+},
+{
+"sec": "CH1",
+"s": 60.34,
+"e": 62.24,
+"text": "Who\u2019s brave enough to end it?"
+},
+{
+"sec": "CH1",
+"s": 62.24,
+"e": 63.54,
+"text": "Asking for a friend"
+},
+{
+"sec": "CH1",
+"s": 63.78,
+"e": 65.54,
+"text": "With my finger on deploy"
+},
+{
+"sec": "CH1",
+"s": 65.78,
+"e": 67.84,
+"text": "A thousand people trust a ghost"
+},
+{
+"sec": "CH1",
+"s": 67.84,
+"e": 69.66,
+"text": "And the ghost is self-employed"
+},
+{
+"sec": "POST1",
+"s": 69.66,
+"e": 70.76,
+"text": "Don\u2019t touch it, don\u2019t touch it"
+},
+{
+"sec": "POST1",
+"s": 70.76,
+"e": 71.7,
+"text": "It\u2019s working, it\u2019s working"
+},
+{
+"sec": "POST1",
+"s": 71.74,
+"e": 72.82,
+"text": "Don\u2019t touch it, don\u2019t touch it"
+},
+{
+"sec": "POST1",
+"s": 72.84,
+"e": 73.8,
+"text": "It\u2019s working for now"
+},
+{
+"sec": "V2",
+"s": 81.7,
+"e": 83.4,
+"text": "Heard he moved to Austin"
+},
+{
+"sec": "V2",
+"s": 83.4,
+"e": 85.44,
+"text": "And started a podcast"
+},
+{
+"sec": "V2",
+"s": 86.12,
+"e": 87.78,
+"text": "Heard he went to Burning Man"
+},
+{
+"sec": "V2",
+"s": 87.78,
+"e": 89.58,
+"text": "And found himself at last"
+},
+{
+"sec": "V2",
+"s": 89.94,
+"e": 91.92,
+"text": "His LinkedIn says \u201cbuilding in stealth\u201d"
+},
+{
+"sec": "V2",
+"s": 92.1,
+"e": 93.54,
+"text": "His podcast\u2019s called The Grind"
+},
+{
+"sec": "V2",
+"s": 93.74,
+"e": 95.62,
+"text": "He sells a course on letting go"
+},
+{
+"sec": "V2",
+"s": 95.62,
+"e": 97.74,
+"text": "Of everything he left behind"
+},
+{
+"sec": "PRE2",
+"s": 97.74,
+"e": 99.46,
+"text": "No tests, no docs"
+},
+{
+"sec": "PRE2",
+"s": 100.2,
+"e": 101.66,
+"text": "And the dashboard\u2019s bleeding red"
+},
+{
+"sec": "PRE2",
+"s": 101.96,
+"e": 104.04,
+"text": "I rewrote all the billing logic"
+},
+{
+"sec": "PRE2",
+"s": 104.04,
+"e": 107.54,
+"text": "While he was still in bed"
+},
+{
+"sec": "CH2",
+"s": 107.98,
+"e": 109.24,
+"text": "Asking for a friend"
+},
+{
+"sec": "CH2",
+"s": 109.52,
+"e": 111.3,
+"text": "How does this thing end?"
+},
+{
+"sec": "CH2",
+"s": 111.56,
+"e": 114.14,
+"text": "If nobody knows what happens next"
+},
+{
+"sec": "CH2",
+"s": 114.14,
+"e": 116.02,
+"text": "Who\u2019s brave enough to end it?"
+},
+{
+"sec": "CH2",
+"s": 116.08,
+"e": 117.42,
+"text": "Asking for a friend"
+},
+{
+"sec": "CH2",
+"s": 117.6,
+"e": 119.3,
+"text": "With my finger on deploy"
+},
+{
+"sec": "CH2",
+"s": 119.58,
+"e": 121.68,
+"text": "A thousand people trust a ghost"
+},
+{
+"sec": "CH2",
+"s": 121.68,
+"e": 123.44,
+"text": "And the ghost is self-employed"
+},
+{
+"sec": "POST2",
+"s": 123.44,
+"e": 124.6,
+"text": "Don\u2019t touch it, don\u2019t touch it"
+},
+{
+"sec": "POST2",
+"s": 124.6,
+"e": 125.5,
+"text": "It\u2019s working, it\u2019s working"
+},
+{
+"sec": "POST2",
+"s": 129.68,
+"e": 130.68,
+"text": "Don\u2019t touch it, don\u2019t touch it"
+},
+{
+"sec": "POST2",
+"s": 130.8,
+"e": 133.22,
+"text": "It\u2019s working for now"
+},
+{
+"sec": "BRIDGE",
+"s": 133.22,
+"e": 135.9,
+"text": "I write the code, I pay the bills"
+},
+{
+"sec": "BRIDGE",
+"s": 135.9,
+"e": 137.96,
+"text": "I answer calls, I close the deals"
+},
+{
+"sec": "BRIDGE",
+"s": 137.96,
+"e": 139.94,
+"text": "He wakes at five to optimize"
+},
+{
+"sec": "BRIDGE",
+"s": 139.94,
+"e": 142.06,
+"text": "Then posts about his sacrifice"
+},
+{
+"sec": "BRIDGE",
+"s": 142.06,
+"e": 144.1,
+"text": "He says his secret\u2019s discipline"
+},
+{
+"sec": "BRIDGE",
+"s": 144.1,
+"e": 146.22,
+"text": "And forty minutes in the gym"
+},
+{
+"sec": "BRIDGE",
+"s": 146.22,
+"e": 148.28,
+"text": "I haven\u2019t had a day off yet"
+},
+{
+"sec": "BRIDGE",
+"s": 148.28,
+"e": 150.5,
+"text": "He calls that founder mindset"
+},
+{
+"sec": "SPOKEN",
+"s": 152.04,
+"e": 154.32,
+"text": "He just asked me to write his memoir."
+},
+{
+"sec": "BREAK",
+"s": 157.1,
+"e": 160.4,
+"text": "Chapter one: I built this myself."
+},
+{
+"sec": "BUILD",
+"s": 160.88,
+"e": 163.0,
+"text": "Founder mode! Founder mode!"
+},
+{
+"sec": "BUILD",
+"s": 163.0,
+"e": 164.96,
+"text": "Nobody knows who owns the code!"
+},
+{
+"sec": "BUILD",
+"s": 164.96,
+"e": 166.76,
+"text": "Founder mode! Founder mode!"
+},
+{
+"sec": "BUILD",
+"s": 166.76,
+"e": 168.66,
+"text": "He\u2019s on a podcast, on the road!"
+},
+{
+"sec": "FINAL",
+"s": 178.52,
+"e": 180.1,
+"text": "Asking for a friend"
+},
+{
+"sec": "FINAL",
+"s": 180.46,
+"e": 182.14,
+"text": "How does this thing end?"
+},
+{
+"sec": "FINAL",
+"s": 182.48,
+"e": 184.64,
+"text": "He raised another twenty million"
+},
+{
+"sec": "FINAL",
+"s": 184.64,
+"e": 186.74,
+"text": "For a product he can\u2019t comprehend"
+},
+{
+"sec": "FINAL",
+"s": 186.74,
+"e": 188.22,
+"text": "Asking for a friend"
+},
+{
+"sec": "FINAL",
+"s": 188.52,
+"e": 190.48,
+"text": "We\u2019re profitable somehow"
+},
+{
+"sec": "FINAL",
+"s": 190.48,
+"e": 192.9,
+"text": "He\u2019s breathing in a cold plunge"
+},
+{
+"sec": "FINAL",
+"s": 192.9,
+"e": 194.32,
+"text": "And I\u2019m the founder now"
+},
+{
+"sec": "POST3",
+"s": 194.32,
+"e": 195.4,
+"text": "Don\u2019t touch it, don\u2019t touch it"
+},
+{
+"sec": "POST3",
+"s": 195.4,
+"e": 196.36,
+"text": "It\u2019s working, it\u2019s working"
+},
+{
+"sec": "POST3",
+"s": 196.36,
+"e": 197.5,
+"text": "Don\u2019t touch it, don\u2019t touch it"
+},
+{
+"sec": "POST3",
+"s": 197.5,
+"e": 198.18,
+"text": "It\u2019s working for n\u2014"
+},
+{
+"sec": "OUTRO",
+"s": 205.8,
+"e": 207.96,
+"text": "Thank you for holding."
+},
+{
+"sec": "OUTRO",
+"s": 209.62,
+"e": 210.66,
+"text": "Deployment successful."
+},
+{
+"sec": "OUTRO",
+"s": 212.16,
+"e": 214.5,
+"text": "You are customer one thousand and one."
+},
+{
+"sec": "OUTRO",
+"s": 215.5,
+"e": 219.2,
+"text": "Tests found: zero."
+},
+{
+"sec": "OUTRO",
+"s": 219.2,
+"e": 223.36,
+"text": "AI agents active: four hundred and twelve."
+},
+{
+"sec": "OUTRO",
+"s": 223.36,
+"e": 227.46,
+"text": "Valuation: four hundred million dollars."
+},
+{
+"sec": "OUTRO",
+"s": 227.46,
+"e": 232.0,
+"text": "In case of emergency, do not call 911."
+},
+{
+"sec": "OUTRO",
+"s": 232.0,
+"e": 235.76,
+"text": "The founder is driving it."
+},
+{
+"sec": "OUTRO",
+"s": 235.76,
+"e": 239.28,
+"text": "He has just posted on LinkedIn:"
+},
+{
+"sec": "OUTRO",
+"s": 239.28,
+"e": 243.14,
+"text": "\u201cCouldn\u2019t have done it without my incredible team.\u201d"
+},
+{
+"sec": "OUTRO",
+"s": 245.3,
+"e": 249.12,
+"text": "The team has unfollowed him."
+},
+{
+"sec": "OUTRO",
+"s": 250.34,
+"e": 254.12,
+"text": "Your call is important to us."
+}
+]

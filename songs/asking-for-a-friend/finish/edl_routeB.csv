@@ -1,0 +1,155 @@
+shot,v1_frames,new_frames,n,world,set,action,fix,owner,v1_errors
+S001,0-124,0-124,125,3D,lobby,RE-LOOK,"WHITE-ON-WHITE: approved lobby look (dark ceiling, real sources, LOCK12 S1 materials). f0 is a lit, readable lobby (first frame never black)",finish_3,"WHITE-ON-WHITE lobby: ivory robot against ivory wall (0:00-0:14) [f0-124, 0.0s]"
+S002,125-175,125-189,65,3D,lobby,REPLACE,"FROZEN title card on black -> in-world NOW SERVING board insert (design/screens/board), 999 flips to 1000 on ""thousand"" f177 (flap anim, 6 f), holds to f189",finish_3,"FROZEN 5.2-7.0 s: near-static (measured diff < 0.12 for 125-167) [f125-168, 5.2s] | WHITE-ON-WHITE lobby: ivory robot against ivory wall (0:00-0:14) [f125-175, "
+S003,176-220,190-220,31,3D,lobby,RE-LOOK + TRIM,starts f190 (S002 got 14 f); check the internal cut (v1 note),finish_3,"WHITE-ON-WHITE lobby: ivory robot against ivory wall (0:00-0:14) [f176-220, 7.3s] | internal cut inside one camera marker (check: card swap, fade or false detec"
+S004,221-313,221-313,93,3D,lobby,RE-LOOK,"THE VISIONARY portrait texture = founder still F30 (escalation 1 of 5: small, framed)",finish_3,"WHITE-ON-WHITE lobby: ivory robot against ivory wall (0:00-0:14) [f221-313, 9.2s] | THE VISIONARY portrait recurs (~6x; must visibly escalate)"
+S005,314-366,314-365,52,3D,lobby,RE-LOOK + ACT,"FROZEN f336-365: receptionist shrugs on ""which one"" (~f330), eyes slide to the board at ~f350, settles into the exact f366 pose of the finished frames",finish_3,"FROZEN 14.0-15.2 s (motion 337-366) [f336-365, 14.0s] | WHITE-ON-WHITE lobby: ivory robot against ivory wall (0:00-0:14) [f314-336, 13.1s]"
+S006,367-401,366-401,36,FINISHED,lobby,KEEP AS IS,"finished f366-857, untouched",-,
+S007,402-416,402-416,15,FINISHED,lobby,KEEP AS IS,"finished f366-857, untouched",-,
+S008,417-450,417-450,34,FINISHED,lobby,KEEP AS IS,"finished f366-857, untouched",-,
+S009,451-506,451-506,56,FINISHED,lobby,KEEP AS IS,"finished f366-857, untouched",-,"WHITE-ON-WHITE lobby (0:20-0:26) [f480-506, 20.0s]"
+S010,507-652,507-652,146,FINISHED,lobby,KEEP AS IS,"finished f366-857, untouched",-,"WHITE-ON-WHITE lobby (0:20-0:26) [f507-624, 21.1s]"
+S011,653-713,653-713,61,FINISHED,server room,KEEP AS IS,"finished f366-857, untouched",-,
+S012,714-729,714-729,16,FINISHED,server room,KEEP AS IS,"finished f366-857, untouched",-,
+S013,730-743,730-743,14,FINISHED,server room,KEEP AS IS,"finished f366-857, untouched",-,
+S014,744-751,744-751,8,FINISHED,server room,KEEP AS IS,"finished f366-857, untouched",-,
+S015,752-763,752-763,12,FINISHED,server room,KEEP AS IS,"finished f366-857, untouched",-,
+S016,764-778,764-778,15,FINISHED,codebase / undercroft,KEEP AS IS,"finished f366-857, untouched",-,"TRON GRID floor: glow that isn't a light (0:32-0:34) [f768-778, 32.0s]"
+S017,779-802,779-802,24,FINISHED,codebase / undercroft,KEEP AS IS,"finished f366-857, untouched",-,"TRON GRID floor: glow that isn't a light (0:32-0:34) [f779-802, 32.5s]"
+S018,803-821,803-821,19,FINISHED,codebase / undercroft,KEEP AS IS,"finished f366-857, untouched",-,"TRON GRID floor: glow that isn't a light (0:32-0:34) [f803-816, 33.5s]"
+S019,822-844,822-844,23,FINISHED,codebase / undercroft,KEEP AS IS,"finished f366-857, untouched",-,
+S020,845-856,845-857,13,FINISHED,codebase / undercroft,KEEP AS IS,"finished f366-857, untouched",-,
+S021,857-891,858-902,45,2D,codebase screen,REPLACE + MERGE,"CROPPED commit card -> K01: in-world screen, fully in frame; ""trust me"" typed to land on f896; author avatar F01. f857 stays the finished frame. Absorbs S022",finish_4,"CROPPED UI card (commit message, 0:36) [f864-889, 36.0s]"
+S022,892-902,,0,-,-,MERGED into S021,founder 3D lean removed (route B: founder only as content),finish_4,
+S023,903-935,903-935,33,3D,GT3 RS (road),CAR_3D RE-RENDER,"aff_02_verse1_v3 CAM_v1h1_door: approved GT3 look, YELLOW calipers, no badges; lands right after ""then he bought a GT3 RS"" (f901). No founder in 3D: cabin empty/tinted",finish_car,
+S024,936-968,936-968,33,3D,GT3 RS (road),CAR_3D RE-RENDER,"aff_02_verse1_v3 CAM_v1h4_hero: hero 3/4, YELLOW calipers, no badges",finish_car,
+S025,969-1009,969-1009,41,3D,billing,RE-LOOK,approved look,"finish_6 (ops floor + billing, later)",
+S026,1010-1053,1010-1053,44,3D,billing,RE-LOOK,approved look,"finish_6 (ops floor + billing, later)",
+S027,1054-1092,1054-1092,39,3D,server room (archive drawers),RE-LOOK,approved look,finish_3,
+S028,1093-1103,1093-1103,11,3D,server room (archive drawers),RE-LOOK,approved look,finish_3,
+S029,1104-1114,1104-1114,11,3D,server room (archive drawers),RE-LOOK,approved look,finish_3,
+S030,1115-1166,1115-1166,52,3D,server room,RE-LOOK,approved look,finish_3,
+S031,1167-1211,1167-1211,45,3D,server room,RE-LOOK,approved look,finish_3,
+S032,1212-1294,1212-1294,83,3D,server room,RE-LOOK,approved look,finish_3,
+S033,1295-1336,1295-1336,42,2D,boardroom screen,REDESIGN,"K-S1 chat UI as an in-world screen (bezel + glass), fully in frame, Claude voice line",finish_4,
+S034,1337-1380,1337-1380,44,3D,boardroom,RE-LOOK,approved look,finish_2 (boardroom look) -> boardroom render ticket,
+S035,1381-1447,1381-1447,67,3D,boardroom,RE-LOOK + TILES,CAPSULE EXECS -> chairs empty; main screen = K04 call grid (camera-off tiles). Screen texture = finish_4 image sequence,finish_2 (boardroom look) -> boardroom render ticket,"CAPSULE EXECS in boardroom (~0:58-1:00) [f1392-1440, 58.0s]"
+S036,1448-1493,1448-1493,46,3D,boardroom,RE-LOOK + TILES,"on ""who's brave enough to end it?"" (f1448) tiles leave one by one (""left the meeting""); last tile = Claude, camera on",finish_2 (boardroom look) -> boardroom render ticket,
+S037,1494-1530,1494-1530,37,3D,boardroom,RE-LOOK,approved look,finish_2 (boardroom look) -> boardroom render ticket,
+S038,1531-1614,1531-1614,84,3D,boardroom,RE-LOOK,approved look,finish_2 (boardroom look) -> boardroom render ticket,
+S039,1615-1627,1615-1627,13,3D,ops floor,RE-LOOK,approved look,"finish_6 (ops floor + billing, later)",
+S040,1628-1653,1628-1653,26,2D,boardroom paper,REDESIGN,"K-S2 paper insert: real paper texture, company voice, fully in frame",finish_4,
+S041,1654-1661,1654-1661,8,3D,boardroom,RE-LOOK,approved look,finish_2 (boardroom look) -> boardroom render ticket,
+S042,1662-1671,1662-1671,10,2D,boardroom paper,REDESIGN,"K-S2 DENIED stamp hits on the beat (2 f squash, ink spread), fully in frame",finish_4,
+S043,1672-1797,1672-1797,126,3D,412-agent hall,RE-LOOK,"hall escalation 1: first reveal, half the rows lit","finish_5 (hall, later)","FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f1680-1797, 70.0s]"
+S044,1798-1823,1798-1823,26,3D,412-agent hall,RE-LOOK,,"finish_5 (hall, later)","FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f1798-1823, 74.9s]"
+S045,1824-1836,1824-1839,16,3D,"GT3 RS (road, golden hour)",CAR_3D RE-RENDER + RE-SET,"aff_04_verse2 CAM_t_front34 blend 1825-1840; one continuous take with S047 (renders 1824-1865 as one range, absorbs the 3 black frames of S046); car moved OFF the flat showroom/stone-box set onto a lit road",finish_car,"FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f1824-1836, 76.0s]"
+S046,1837-1839,,0,-,-,MERGED into S045,3 black frames gone: S045/S047 render straight through f1837-1839,finish_car,"FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f1837-1839, 76.5s] | BLACK frames 1837-1839 | internal cut in"
+S047,1840-1865,1840-1865,26,3D,"GT3 RS (road, golden hour)",CAR_3D RE-RENDER + RE-SET,CAM_t_front34 continued from S045 (same take; the false internal cut goes away); verify no cut/jump at f1837-1840,finish_car,"FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f1840-1865, 76.7s] | internal cut inside one camera marker (c"
+S048,1866-1906,1866-1906,41,3D,"GT3 RS (road, golden hour)",CAR_3D RE-RENDER + RE-SET,"aff_04_verse2 CAM_t_side blend 1867-1907: side tracking pass, same road set as S045",finish_car,"FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f1866-1906, 77.8s]"
+S049,1907-1960,1907-1960,54,3D,"GT3 RS (Austin house arrival, golden hour)",CAR_3D (replaces 2D K05),"austin_drive round_1 approved Sat Nov 7: the Nov 3 CAM_t_aerial arrival back in 3D, re-keyed so the car is whole in 16:9 and the centred 9:16 crop (fix_r2.py); new Hill Country house (build_austin.py). blend car_austin_S049(.blend/_916) 1908-1961 = master+1. Replaces the 2D map card K05 (instrumental; the map's line can go on K06's first story frame). 16:9 routeB/S049, 9:16 routeB_916/S049",austin_final,"FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f1907-1960, 79.5s]"
+S050,1961-2001,1961-2068,108,2D,founder content,REPLACE,K06 Austin + podcast launch (F05 -> F06); absorbs S051,finish_4,"FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f1961-2001, 81.7s]"
+S051,2002-2066,,0,-,-,MERGED into S050,,finish_4,"FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f2002-2066, 83.4s]"
+S052,2067-2106,2069-2142,74,2D,founder content,REPLACE,"K07 Burning Man selfie post ""found myself"" (F07); absorbs S053",finish_4,"FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f2067-2106, 86.1s]"
+S053,2107-2142,,0,-,-,MERGED into S052,,finish_4,"FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f2107-2142, 87.8s]"
+S054,2143-2158,2143-2158,16,3D,ops floor,RE-LOOK,Claude hears it: reaction,"finish_6 (ops floor + billing, later)","FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f2143-2158, 89.3s]"
+S055,2159-2183,2159-2185,27,2D,founder content,REPLACE,"K08 profile page ""Building in stealth"" (F01/F08); no real network logo",finish_4,"FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f2159-2183, 90.0s]"
+S056,2184-2209,2186-2209,24,2D,founder content,REPLACE,"K09 BILLBOARD ""BUILDING IN STEALTH."" lands on ""building"" f2186 (F08, 6 m tall)",finish_4,"FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f2184-2209, 91.0s]"
+S057,2210-2230,2210-2249,40,2D,founder content,REPLACE,K10 THE GRIND podcast player (F09); absorbs S058,finish_4,"FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f2210-2230, 92.1s]"
+S058,2231-2249,,0,-,-,MERGED into S057,,finish_4,"FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f2231-2249, 93.0s]"
+S059,2250-2294,2250-2294,45,2D,founder content,REPLACE,K11 course sales page LETTING GO (F10),finish_4,"FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f2250-2294, 93.8s]"
+S060,2295-2345,2295-2345,51,3D,ops floor / billing,RE-LOOK,approved look,"finish_6 (ops floor + billing, later)","FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f2295-2345, 95.6s]"
+S061,2346-2387,2346-2387,42,3D,ops floor / billing,RE-LOOK,approved look,"finish_6 (ops floor + billing, later)","FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f2346-2387, 97.8s]"
+S062,2388-2404,2388-2404,17,3D,ops floor / billing,RE-LOOK,approved look,"finish_6 (ops floor + billing, later)","FLAT founder office/home sets, faceted founder (1:10-1:40); Austin house a stone box with cyc sky [f2388-2400, 99.5s]"
+S063,2405-2422,2405-2422,18,3D,ops floor / billing,RE-LOOK,approved look,"finish_6 (ops floor + billing, later)",
+S064,2423-2446,2423-2446,24,3D,ops floor / billing,RE-LOOK,approved look,"finish_6 (ops floor + billing, later)",
+S065,2447-2496,2447-2496,50,3D,ops floor / billing,RE-LOOK,approved look,"finish_6 (ops floor + billing, later)",
+S066,2497-2524,2497-2567,71,2D,founder content,REPLACE,"K12 sleep app score 98 -> his ""morning"" photo on ""bed"" (F11); absorbs S067",finish_4,
+S067,2525-2567,,0,-,-,MERGED into S066,,finish_4,
+S068,2568-2591,2568-2591,24,3D,ops floor,RE-LOOK,approved look,"finish_6 (ops floor + billing, later)",
+S069,2592-2630,2592-2630,39,3D,412-agent hall,RE-LOOK + NEW CAMERA,"REUSED high angle -> low camera down an aisle, agents typing (escalation 2a)","finish_5 (hall, later)",412-agent hall reused from a similar high angle (stops escalating)
+S070,2631-2678,2631-2678,48,2D,founder content,REPLACE,"K13 livestream ""THE GRIND tour"" beat 1 (F12)",finish_4,
+S071,2679-2740,2679-2740,62,2D,pipeline screen,REDESIGN,"CROPPED pipeline -> K-S3 in-world screen, every stage label fully in frame",finish_4,"CROPPED UI card (pipeline, 1:52) [f2688-2690, 112.0s]"
+S072,2741-2785,2741-2785,45,3D,ops floor (Claude's button desk),RE-LOOK,"relook: ops_look_chorus2b.blend (aff_12 + approved ops/server look), cam CAM_c2b_4; c2b_relook",c2b_relook (finish/c2b_relook/driver.py),
+S073,2786-2821,2786-2821,36,2D,founder content,REPLACE,"K13 livestream beat 2: chat floods, THE GRIND banner (F13)",finish_4,
+S074,2822-2855,2822-2855,34,3D,C2_KEY keyboard set,RE-LOOK,"relook: ops_look_chorus2b.blend (aff_12 + approved ops/server look), cam CAM_c2b_6; c2b_relook",c2b_relook (finish/c2b_relook/driver.py),
+S075,2856-2869,2856-2869,14,3D,C2_KEY keyboard set,RE-LOOK,"relook: ops_look_chorus2b.blend (aff_12 + approved ops/server look), cam CAM_c2b_6; c2b_relook",c2b_relook (finish/c2b_relook/driver.py),"internal cut inside one camera marker (check: card swap, fade or false detect)"
+S076,2870-2919,2870-2919,50,3D,C2_WALL gag set (check),RE-LOOK,"relook: ops_look_chorus2b.blend (aff_12 + approved ops/server look), cam CAM_c2b_7; c2b_relook",c2b_relook (finish/c2b_relook/driver.py),
+S077,2920-2963,2920-2963,44,3D,C2_BADGE gag set (check),RE-LOOK,"relook: ops_look_chorus2b.blend (aff_12 + approved ops/server look), cam CAM_c2b_8; c2b_relook",c2b_relook (finish/c2b_relook/driver.py),
+S078,2964-3039,2964-3039,76,3D,412-agent hall,RE-LOOK,"escalation 2: every row lit, green status lights","finish_5 (hall, later)",412-agent hall reused from a similar high angle (stops escalating)
+S079,3040-3129,3040-3129,90,3D,server room,RE-LOOK,"relook: ops_look_chorus2b.blend (aff_12 + approved ops/server look), cam CAM_c2b_10; c2b_relook",c2b_relook (finish/c2b_relook/driver.py),"FLAT/faceted founder (2:10-2:30) [f3120-3129, 130.0s]"
+S080,3130-3196,3130-3196,67,3D,server room,RE-LOOK,"relook: ops_look_chorus2b.blend (aff_12 + approved ops/server look), cam CAM_c2b_11; c2b_relook",c2b_relook (finish/c2b_relook/driver.py),"FLAT/faceted founder (2:10-2:30) [f3130-3196, 130.4s]"
+S081,3197-3261,3197-3261,65,3D,ops floor (Claude's desk),RE-LOOK,approved look,"finish_6 (ops floor + billing, later)","FLAT/faceted founder (2:10-2:30) [f3197-3261, 133.2s]"
+S082,3262-3310,3262-3310,49,3D,ops floor (Claude's desk),RE-LOOK,approved look,"finish_6 (ops floor + billing, later)","FLAT/faceted founder (2:10-2:30) [f3262-3310, 135.9s]"
+S083,3311-3319,3311-3408,98,2D,founder content,REPLACE,"K14 ""5AM routine"" carousel (5:00 alarm, F14, flat-lay, F15 quote), swipes on beats. Kills FROZEN f3331-3357. Absorbs S084-S089",finish_4,"FLAT/faceted founder (2:10-2:30) [f3311-3319, 138.0s]"
+S084,3320-3358,,0,-,-,MERGED into S083,,finish_4,"FROZEN 138.8-139.9 s (bridge, flat-lay) [f3331-3357, 138.8s] | FLAT/faceted founder (2:10-2:30) [f3320-3358, 138.3s]"
+S085,3359-3367,,0,-,-,MERGED into S083,,finish_4,"FLAT/faceted founder (2:10-2:30) [f3359-3367, 140.0s]"
+S086,3368-3381,,0,-,-,MERGED into S083,,finish_4,"FLAT/faceted founder (2:10-2:30) [f3368-3381, 140.3s] | internal cut inside one camera marker (check: card swap, fade or false detect)"
+S087,3382-3394,,0,-,-,MERGED into S083,,finish_4,"FLAT/faceted founder (2:10-2:30) [f3382-3394, 140.9s] | internal cut inside one camera marker (check: card swap, fade or false detect)"
+S088,3395-3397,,0,-,-,MERGED into S083,,finish_4,"FLAT/faceted founder (2:10-2:30) [f3395-3397, 141.5s] | internal cut inside one camera marker (check: card swap, fade or false detect)"
+S089,3398-3408,,0,-,-,MERGED into S083,THE VISIONARY escalation 2 lives in K14,finish_4,"FLAT/faceted founder (2:10-2:30) [f3398-3408, 141.6s] | THE VISIONARY portrait recurs (~6x; must visibly escalate)"
+S090,3409-3457,3409-3457,49,2D,founder content,REPLACE,"K15 podcast clip ""MY SECRET? DISCIPLINE."" (F16)",finish_4,"FLAT/faceted founder (2:10-2:30) [f3409-3457, 142.0s]"
+S091,3458-3508,3458-3508,51,2D,founder content,REPLACE,"K16 gym post ""40 MIN. NO DAYS OFF."" (F17)",finish_4,"FLAT/faceted founder (2:10-2:30) [f3458-3508, 144.1s]"
+S092,3509-3558,3509-3558,50,3D,ops floor (Claude's desk),RE-LOOK,approved look,"finish_6 (ops floor + billing, later)","FLAT/faceted founder (2:10-2:30) [f3509-3558, 146.2s]"
+S093,3559-3585,3559-3585,27,2D,founder content,REPLACE,"FROZEN -> K17 FOUNDER MINDSET card alive: slow push, likes ticking (F15, escalation 3)",finish_4,"FROZEN 148.3-149.4 s [f3559-3585, 148.3s] | FLAT/faceted founder (2:10-2:30) [f3559-3585, 148.3s] | THE VISIONARY portrait recurs (~6x; must visibly escalate)"
+S094,3586-3648,3586-3648,63,3D,ops floor (Claude's desk),RE-LOOK,approved look,"finish_6 (ops floor + billing, later)","FLAT/faceted founder (2:10-2:30) [f3586-3600, 149.4s]"
+S095,3649-3679,3649-3679,31,2D,ops floor screen,REDESIGN,"K-S4 memoir chat as an in-world screen: ""can u write my memoir?"" in his voice (lowercase)",finish_4,
+S096,3680-3776,3680-3776,97,3D,ops floor,RE-LOOK,approved look,"finish_6 (ops floor + billing, later)",
+S097,3777-3817,3777-3817,41,2D,founder content,REPLACE,K18 book I BUILT THIS MYSELF lands in the silence (F18),finish_4,
+S098,3818-3860,3818-3860,43,3D,412-agent hall,RE-LOOK,,"finish_5 (hall, later)",412-agent hall reused from a similar high angle (stops escalating)
+S099,3861-3911,3861-3911,51,2D,founder content,REPLACE,"K19 keynote livestream, giant FOUNDER MODE slide (F19, escalation 4)",finish_4,
+S100,3912-3939,3912-3939,28,3D,lobby,RE-LOOK + REFRAME,near-blank white -> dark lobby; IP scroll fully in frame,finish_3,near-blank white frame (blank wall)
+S101,3940-3959,3940-3959,20,3D,lobby,RE-LOOK,,finish_3,
+S102,3960-4002,3960-4002,43,2D,founder content,REPLACE,K19 beat 2: he points at the slide (F20),finish_4,
+S103,4003-4014,4003-4038,36,2D,founder content,REPLACE,"K20 podcast tiles on the road: 4 tiles x ~14 f (F06, F21, F22, F23); absorbs S104-S106",finish_4,
+S103b,4003-4014,4039-4059,21,3D,"GT3 RS night highway (env2 road, post1 copy)",CAR_3D NEW (more_car road),"""ON THE ROAD"": GT3 RS at speed, tracking front 3/4, ON AIR ring light + UV cabin; swaps K20 tile 4 (her OK Sat 07:32)",more_car_build,
+S104,4015-4026,,0,-,-,MERGED into S103,,finish_4,
+S105,4027-4038,,0,-,-,MERGED into S103,,finish_4,
+S106,4039-4059,,0,-,-,MERGED into S103,,finish_4,
+S107,4060-4107,4060-4107,48,3D,412-agent hall,RE-LOOK + NEW CAMERA,REUSED high angle -> eye-level rack focus along one row,"finish_5 (hall, later)",412-agent hall reused from a similar high angle (stops escalating)
+S108,4108-4159,4108-4159,52,2D,founder content,REPLACE,"K19 beat 3: ultraviolet spot, arms wide (F12)",finish_4,
+S109,4160-4202,4160-4250,91,2D,founder content,CUT hall -> K20,REUSED hall cut; K20b tile grid 1 -> 4 -> 16 on the beats; absorbs S110-S113,finish_4,412-agent hall reused from a similar high angle (stops escalating)
+S110,4203-4214,,0,-,-,MERGED into S109,,finish_4,
+S111,4215-4226,,0,-,-,MERGED into S109,,finish_4,
+S112,4227-4238,,0,-,-,MERGED into S109,,finish_4,
+S113,4239-4250,,0,-,-,MERGED into S109,,finish_4,
+S114,4251-4283,4251-4283,33,3D,412-agent hall,RE-LOOK,approved look,"finish_5 (hall, later)",412-agent hall reused from a similar high angle (stops escalating)
+S115,4284-4327,4284-4327,44,3D,412-agent hall,RE-LOOK,"escalation 3: the drop, all 412 lit, widest frame of the film","finish_5 (hall, later)","FLAT white boardroom/corridor (3:00-3:20) [f4320-4327, 180.0s] | CROPPED UI cards (LinkedIn/funding 3:00, 3:06; nearest shots, times approximate) [f4320-4327, 1"
+S116,4328-4351,4328-4351,24,3D,412-agent hall,RE-LOOK,,"finish_5 (hall, later)","FLAT white boardroom/corridor (3:00-3:20) [f4328-4351, 180.3s] | CROPPED UI cards (LinkedIn/funding 3:00, 3:06; nearest shots, times approximate) [f4328-4351, 1"
+S117,4352-4378,4352-4378,27,3D,ops floor,RE-LOOK,approved look,"finish_6 (ops floor + billing, later)","FLAT white boardroom/corridor (3:00-3:20) [f4352-4378, 181.3s] | CROPPED UI cards (LinkedIn/funding 3:00, 3:06; nearest shots, times approximate) [f4352-4378, 1"
+S118,4379-4430,4379-4405,27,2D,founder content,REPLACE,"CROPPED funding card -> K21 ""$20,000,000 RAISED"" post, bell (F24), fully in frame",finish_4,"FLAT white boardroom/corridor (3:00-3:20) [f4379-4430, 182.5s] | CROPPED UI cards (LinkedIn/funding 3:00, 3:06; nearest shots, times approximate) [f4379-4430, 1"
+S118b,4379-4430,4406-4430,25,3D,GT3 RS garage (two cars),CAR_3D NEW (more_car garage),"""TWENTY MILLION"": door rolls up 4409-4418 on two GT3 RSs nose-out, D WHEEL front plates; K21 keeps 4379-4405 (her OK Sat 07:32)",more_car_build,
+S119,4431-4481,4431-4481,51,2D,founder content,REPLACE,"K22 whiteboard pitch photo ""for a product he can't comprehend"" (F25)",finish_4,"FLAT white boardroom/corridor (3:00-3:20) [f4431-4481, 184.6s] | CROPPED UI cards (LinkedIn/funding 3:00, 3:06; nearest shots, times approximate) [f4431-4470, 1"
+S120,4482-4521,4482-4521,40,3D,412-agent hall,RE-LOOK,approved look,"finish_5 (hall, later)","FLAT white boardroom/corridor (3:00-3:20) [f4482-4521, 186.8s]"
+S121,4522-4559,4522-4559,38,2D,hall screen,REDESIGN,"K-S5 NET PROFIT dashboard in-world, -$12,004 -> profitable on ""somehow""",finish_4,"FLAT white boardroom/corridor (3:00-3:20) [f4522-4559, 188.4s]"
+S122,4560-4575,4560-4575,16,3D,412-agent hall,RE-LOOK,approved look,"finish_5 (hall, later)","FLAT white boardroom/corridor (3:00-3:20) [f4560-4575, 190.0s]"
+S123,4576-4604,4576-4629,54,2D,founder content,REPLACE,"K23 cold plunge reel, breathing (F26); absorbs S124",finish_4,"FLAT white boardroom/corridor (3:00-3:20) [f4576-4604, 190.7s]"
+S124,4605-4629,,0,-,-,MERGED into S123,,finish_4,"FLAT white boardroom/corridor (3:00-3:20) [f4605-4629, 191.9s]"
+S125,4630-4659,4630-4659,30,3D,boardroom,RE-LOOK,approved look,finish_2 (boardroom look) -> boardroom render ticket,"FLAT white boardroom/corridor (3:00-3:20) [f4630-4659, 192.9s]"
+S126,4660-4687,4660-4687,28,3D,boardroom,RE-LOOK,approved look,finish_2 (boardroom look) -> boardroom render ticket,"FLAT white boardroom/corridor (3:00-3:20) [f4660-4687, 194.2s]"
+S127,4688-4711,4688-4711,24,3D,boardroom,RE-LOOK,approved look,finish_2 (boardroom look) -> boardroom render ticket,"FLAT white boardroom/corridor (3:00-3:20) [f4688-4711, 195.3s]"
+S128,4712-4755,4712-4755,44,3D,boardroom,RE-LOOK,"portrait on the wall = F30 (THE VISIONARY), Claude in the chair under it",finish_2 (boardroom look) -> boardroom render ticket,"FLAT white boardroom/corridor (3:00-3:20) [f4712-4755, 196.3s] | THE VISIONARY portrait recurs (~6x; must visibly escalate)"
+S129,4756-4811,4756-4811,56,3D,412-agent hall,RE-LOOK + NEW CAMERA,REUSED high angle -> floor-level push,"finish_5 (hall, later)","FLAT white boardroom/corridor (3:00-3:20) [f4756-4800, 198.2s] | 412-agent hall reused from a similar high angle (stops escalating)"
+S130,4812-4858,4812-4855,44,2D,hall screen,REDESIGN + TRIM,"K-S6 ALL SYSTEMS GREEN in-world; hard cut to black on ""it"" f4856",finish_4,
+S131,4859-4938,4856-4938,83,3D,lobby,REPLACE,"BLACK 3.3 s -> 24 f designed black (f4856-4879) then f4880-4938 the receptionist LED smile in the dark, the EXIT sign, 3 ceiling banks clunk on ~16 f apart, full on ""Thank you"" f4941",finish_3,"BLACK 202.46-205.79 s, 3.3 s, undesigned [f4859-4938, 202.5s]"
+S132,4939-5030,4939-5030,92,3D,lobby,RE-LOOK,,finish_3,
+S133,5031-5075,5031-5075,45,3D,lobby,RE-LOOK + REFRAME,"near-blank white -> dark lobby, the lamp is the subject and the light",finish_3,near-blank white frame (blank wall)
+S134,5076-5171,5076-5171,96,3D,lobby,RE-LOOK,,finish_3,
+S135,5172-5260,5172-5260,89,3D,lobby,RE-LOOK + REFRAME,"near-blank white -> dark lobby, printer + its output read",finish_3,near-blank white frame (blank wall)
+S136,5261-5360,5261-5360,100,3D,412-agent hall,RE-LOOK,"escalation 4 (payoff): ""412 agents active"", keep the high wide, it IS the count","finish_5 (hall, later)",412-agent hall reused from a similar high angle (stops escalating)
+S137,5361-5458,5361-5458,98,2D,hall board,REDESIGN,"K-S7 $400,000,000 valuation board in-world",finish_4,
+S138,5459-5567,5459-5567,109,2D,Claude phone,REDESIGN,"K-S8 911 keypad, Claude's orange finger hovers and does NOT press (callback to the CALL 911 sign)",finish_4,
+S139,5568-5619,5568-5619,52,3D,GT3 RS + Austin house exterior,CAR_3D RE-RENDER,"aff_11_outro_drive CAM_od_rear blend 1830-1881; one continuous take S139-S141 (blend 1830-1919); ""The founder is driving it"" 5600-5641 over the real car | Sat Nov 7 austin_final: re-dressed with the approved Austin house (same building as S049), Texas plate; blend car_outro_austin.blend; old villa frames in routeB/_oldplate/",austin_final,
+S140,5620-5629,5620-5629,10,3D,GT3 RS + Austin house exterior,CAR_3D RE-RENDER + EXPOSURE FIX,"blend 1882-1891: near-black fixed (find what goes dark: light keyframe, object occluding camera, or world strength; fix in the render copy); no cut | Sat Nov 7 austin_final: re-dressed with the approved Austin house (same building as S049), Texas plate; blend car_outro_austin.blend; old villa frames in routeB/_oldplate/",austin_final,"near-black shot (frames 5620-5629) | internal cut inside one camera marker (check: card swap, fade or false detect)"
+S141,5630-5657,5630-5657,28,3D,GT3 RS + Austin house exterior,CAR_3D RE-RENDER,"blend 1892-1919: same take, internal cut removed; car exits frame / past the house by f5657 | Sat Nov 7 austin_final: re-dressed with the approved Austin house (same building as S049), Texas plate; blend car_outro_austin.blend; old villa frames in routeB/_oldplate/",austin_final,"internal cut inside one camera marker (check: card swap, fade or false detect)"
+S141b,5658-5742,5658-5697,40,3D,GT3 RS + Austin house exterior,CAR_3D NEW (more_car posted),"""POSTED ON LINKEDIN"": pulled over, hazards, phone UV, push to the D WHEEL plate on ""posted""; first 40 f of K25 typing (her OK Sat 07:32)",more_car_build,
+S142,5658-5742,5698-5890,193,2D,founder content,REPLACE,"K25 the post: typing (F28) f5658-5742, posted f5743 (photo F27), reactions stuck at 0 f5800-5890. Absorbs S143-S144",finish_4,
+S143,5743-5799,,0,-,-,MERGED into S142,,finish_4,
+S144,5800-5890,,0,-,-,MERGED into S142,,finish_4,
+S145,5891-5924,5891-5924,34,3D,412-agent hall,RE-LOOK,the team looks up,"finish_5 (hall, later)",412-agent hall reused from a similar high angle (stops escalating)
+S146,5925-5940,5925-5940,16,2D,agent screen,REDESIGN,"K-S9 Unfollow UI in-world, click on ""unfollowed"" (~f5930)",finish_4,
+S147,5941-5979,5941-5979,39,3D,412-agent hall,RE-LOOK,,"finish_5 (hall, later)",412-agent hall reused from a similar high angle (stops escalating)
+S148,5980-5994,5980-6007,28,2D,founder content,REPLACE,"K26 followers 12,551 -> 0 roll, avatar F01 swaps to F29 (swoop fallen) on the last 8 f; absorbs S149",finish_4,
+S149,5995-6007,,0,-,-,MERGED into S148,,finish_4,
+S150,6008-6157,6008-6182,175,3D,lobby,RE-LOOK + EXTEND,NOW SERVING 1001; extends over the end black; last 24 f the banks go off leaving only the board lit (never full black),finish_3,
+S151,6158-6182,,0,-,-,CUT,end black removed (S150 extends),finish_3,"BLACK 256.6-257.6 s, 1 s at the very end [f6158-6182, 256.6s]"

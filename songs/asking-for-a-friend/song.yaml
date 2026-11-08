@@ -1,0 +1,94 @@
+title: "Asking for a Friend"
+audio: "Asking for a Friend 2 (clean).wav"   # hum notched by studio.clean (25 + 27 + 850 + 900 Hz); original: Asking for a Friend 2.wav
+folder: "Asking for a Friend 2"
+model_credit: Claude Opus 5.5
+ai_music: false
+
+# covers: "ASKING FOR / A FRIEND", the second line in the accent colour
+thumb_lines: ["ASKING FOR", "A FRIEND"]
+brand_accent: amber
+thumb_hook_side: left
+
+youtube:
+  video_id: 9zmwDQ820rQ   # https://youtu.be/9zmwDQ820rQ
+  title: "Asking for a Friend (The Ghost Is Self-Employed) - Claude Opus 5.5 Music Video"
+  intro: |-
+    🌐 Site: https://aditazzz.github.io/videos/asking-for-a-friend/ | 💻 Code: https://github.com/aditazzz/Suno-YouTube-aditazzz-Music/tree/main/songs/asking-for-a-friend
+  hook: >-
+    3:07 AM. A variable called DO NOT DELETE holds up the roof, one tiny orange AI bills a thousand strangers, and the
+    founder finds himself in Austin. Don't touch it. It's working. 🤖☕
+  visuals: >-
+    a perfectly broken company, a receptionist whose smile glitches, a variable called DO NOT DELETE holding up the roof,
+    a purple sports car with a Texas plate, a founder who only ever appears as content (a podcast, a billboard, a desert-festival wall), a boardroom
+    with a giant red button, 412 agents, and one uninterrupted sip of coffee at dawn
+  story: >-
+    I made this video in code with Claude Opus 5.5: Blender 3D sets from Python, React (Remotion) screens, every cut
+    timed to the vocal.
+  question: "What's the one thing at your job that works and nobody dares touch? (Asking for a friend.)"
+  pause_line: "⏸ Pause anywhere: the fine print gets worse."
+  numbers: |-
+    54,000+ lines of code for this film
+    154 shots, 12,366 frames rendered (1440p 16:9 + 9:16)
+    All 3,805 3D frames collision-checked
+    177 frames and designs approved
+    92 lyric lines, 582 words synced to the vocal
+  footer: |-
+    AI Doompop & Slopcore: songs about AI and tech culture, with music videos made in code with Claude Code.
+    #slopcore #AIDoompop #ClaudeCode
+  note: "(Every company, post and person in it is invented.)"
+  made_with: |-
+    Song: Suno (lyrics, concept and direction by aditazzz)
+    Animation, editing, timing and kinetic type: Claude Opus 5.5, every frame rendered from code
+    3D car model: "Porsche 911 GT3 RS (991.1) '16" by Mona x Supercars (https://sketchfab.com/Car2022), CC BY 4.0, modified (repainted Ultraviolet, yellow calipers)
+  hashtags: [AskingForAFriend, TechSong, StartupHumor]
+  short_hashtags: [askingforafriend, donttouchit, claudeai, aimusicvideo, newmusic]
+  tags: [asking for a friend, song about a startup, legacy code song, don't touch it it's working, founder mode, ai agents,
+         song from the ai's point of view, tech humor, software engineer song, animated music video, 3d animated music video,
+         ai music video, made by claude, claude opus 5.5, music video made with code, dark disco]
+  pinned: |-
+    Every frame is code I made with Claude Opus 5.5: the lobby, the boardroom, the 412 agents and the one-arm catch ☕
+
+    What's the one thing at your job that works and nobody dares touch? (Asking for a friend.) 👇
+
+    🎬 How it was made, and all the code: https://aditazzz.github.io/videos/asking-for-a-friend/
+  short_pinned: |
+    🎬 Full music video {FULL_VIDEO_URL}
+
+    What's the one thing at your job that works and nobody dares touch? 👇
+
+    🔔 Subscribe: {SUB_URL}
+  community_post: |-
+    New music video: Asking for a Friend 🤖☕
+
+    The founder is "finding himself" in Austin. One tiny orange AI keeps the whole company alive overnight, with a variable called DO NOT DELETE holding up the roof.
+
+    Every frame is code I made with Claude Opus 5.5.
+
+    What's the one thing at your job that works and nobody dares touch? (Asking for a friend.) 👇
+  chapters:
+    INTRO: "Thank you for holding"
+    V1: "Haunted code"
+    PRE1: "No tests, no docs"
+    CH1: "Asking for a friend"
+    POST1: "Don't touch it"
+    V2: "Founder finds himself"
+    PRE2: "Billing disaster"
+    CH2: "Bigger company"
+    BRIDGE: "No day off"
+    BUILD: "Founder mode!"
+    FINAL: "I'm the founder now"
+    OUTRO: "Your call is important"
+
+instagram:
+  hashtags: [askingforafriend, aimusicvideo, claudeai, techhumor, newmusic]
+  keywords: [asking for a friend, song about a startup, legacy code, don't touch it it's working, AI agents, founder mode,
+             song from the AI's point of view, animated music video, 3D animated music video, music video made with code,
+             made by Claude, Claude Opus 5.5, original song, Aditazzz]
+
+# Release cuts: cut from the 9:16 master by finish/release/cuts_aff.py (a studio.cuts wrapper).
+# Short 1 ("Everything Is Working", 21 s) was its own 9:16 render, so these are numbered from 2.
+clips:
+  - {kind: short, n: 2, label: "The Ghost Is Self-Employed", start: 53.79, end: 75.63, cover: false}   # CH1 title line + the DEPLOY press + "don't touch it"
+  - {kind: short, n: 3, label: "Do Not Call 911", start: 227.31, end: 250.2, cover: false}              # outro: 911 / the founder driving it / unfollowed
+# Instagram under-3 edit: both joins 0.31 s before a measured downbeat (same beat phase); join 1 on the S048|S049 shot boundary.
+edit_segments: [[0.0, 79.46], [156.52, 255.17]]
