@@ -36,3 +36,7 @@ assets/brand/*
 songs/*/web/fonts/
 songs/*/web/tex/
 songs/*/web/node_modules/
+
+# the Remotion films' npm installs and prepared data (fonts, timings, spectrum, a link to the song) stay local: remotion/prep.mjs rebuilds them
+songs/*/remotion/node_modules/
+songs/*/remotion/public/
