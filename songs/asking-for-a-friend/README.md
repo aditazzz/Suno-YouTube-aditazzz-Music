@@ -41,6 +41,8 @@ the looks of every set, the car, the founder, the 2D screens, the render and gra
 Everything 3D renders in Eevee (Blender 5.2) as linear 16-bit EXR, and the grade is its own step, so a note about
 exposure is a re-grade, not a re-render. One LUT then gives every frame, 3D or 2D, the same look.
 
+<!-- excerpt: finish/lobby_look.py lobby_common -->
+
 | File | Lines | What it is |
 |---|---:|---|
 | [`finish/edl_routeB.csv`](finish/edl_routeB.csv) | 155 | The edit decision list: every shot's frames, whether it's 3D or 2D, its set and what was done to it. Everything below reads it. |
