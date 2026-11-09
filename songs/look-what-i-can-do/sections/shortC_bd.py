@@ -21,6 +21,28 @@ def wrap(s, size, maxw):
     out.append(cur); return out
 
 
+def galaxy_v(img, t, W, H, t0, op=1.0):
+    """scene.galaxy re-shaped for 9:16: the same spiral of her frames as a tall ellipse that fits the phone frame
+    (scene.py's spans 1.6x the frame width in portrait, so its thumbnails ran off both sides)."""
+    import math
+    if op <= 0.01 or not SC.STILLS: return
+    ts = W / 1080
+    img *= (1 - op * 0.96)   # the terminal under it all but gone (at 0.85 its boxes ghosted out beside the rating card)
+    zoom = 1.0 + 1.2 * (1 - ease_out((t - t0) / 1.6)); rot = (t - t0) * 0.12
+    cx, cy = W * 0.47, H * 0.42
+    N = 260; rng = np.random.default_rng(11)
+    for i in range(N):
+        a = i * 2.39996 + rot; rr = math.sqrt(i / N) * W * 0.62 * 1.55
+        x = cx + math.cos(a) * rr / zoom * 0.40
+        y = cy + math.sin(a) * rr / zoom * 0.78
+        sz = (1 - i / N) * 120 * ts + 26 * ts
+        w, h = int(sz), int(sz * 9 / 16)
+        st = SC.STILLS[(i * 13) % len(SC.STILLS)]
+        bri = 0.55 + 0.45 * rng.random()
+        if -w < x < W and -h < y < H:
+            SC.FT.paste(img, SC.FT.still(st, w, h) * bri, x - w / 2, y - h / 2, radius=max(2, int(w * 0.05)), op=op)
+
+
 def rating_v(img, t, W, H, t0):
     ts = W / 1080; k = ease_out((t - t0) / 0.2)
     bx, bw = S(80, ts), S(860, ts); by, bh = H * 0.47, S(400, ts)
@@ -94,7 +116,7 @@ def render_frame(t, W, H):
     fi = int(round(t * 30))
     if t < K["bd"] - 0.05:
         img = SC.compose(t, W, H)
-        SC.galaxy(img, t, W, H, K["universe"] - 0.1, 1.0)
+        galaxy_v(img, t, W, H, K["universe"] - 0.1, 1.0)
         if t >= K["review"] - 0.05: rating_v(img, t, W, H, K["review"])
     else:
         img = np.empty((H, W, 3), np.float32); img[:] = BG

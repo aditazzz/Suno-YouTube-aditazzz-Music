@@ -36,3 +36,27 @@ v3 architecture is in v3_BRIEF.md and README.md). Adita approved making three Sh
 
 Report back: the file paths, frame count/duration, what you changed for 9:16 (files), anything you're unsure of, and the
 cover frame.
+
+## Shorts D-G (the rest of the song) — stills round, Nov 8
+Adita asked for "as many look what i can do shorts as you can". Four more, cut on lyric boundaries (build/timed.json);
+same rules, output specs and shared end card (sections/short_a.py `end_card`) as A-C. Framing stills only so far
+(build/shorts/stills/D_*..G_*, listed in index.json); no video renders until she approves them.
+
+| Short | Song time (s) | Frames @30 | Length incl. end card | What's in it | Code (9:16 only; the film is untouched) |
+|---|---|---|---|---|---|
+| D "Hey Claude?" | 0.00 to 35.77 | 0-1072 | 37.3 s | The opening exchange (famous / strategy / close enough), the 25-plus projects count, verse 1 ending "I learned a whole new job today!" | `sections/short_d.py` (scene.py pieces) |
+| E "Ship it!" | 57.10 to 80.00 | 1713-2399 | 24.4 s | Click! Click! Ship it! in the LGTM cathedral, then her titles in the comment section, ending on "TED Talk fee!" | `sections/short_e_lgtm.py` (1713-1962), `sections/short_e_comments.py` (1963-2399) |
+| F "I have a subscription" | 80.00 to 100.00 | 2400-2999 | 21.5 s | In the Walls (qualifications / subscription / to what / Everything.) into the swarm chorus, ending "title: AI GURU" | `sections/short_f.py` |
+| G "Next slide" | 122.93 to 151.77 | 3688-4552 | 30.3 s | The keynote (greatest transformation, Next slide x3, "No, I think I nailed it.") into the seeress chorus, ending on the five-star review card | `web/shortG_keynote.html` + `web/js/shortG/{keynote,stage}.js` (3688-4095), `web/shortG_hall.html` + `web/js/shortG/s8v/` (4096-4552) |
+
+Boundaries: D ends at the end of "today!" (35.77), 1.4 s into A (A opens mid-line, so ending D at 34.41 would cut its
+punchline mid-word). G ends at the end of "review!" (151.74), 0.7 s into C, for the same reason; its 9:16 hall copy
+drops the film's fade-out so it ends on the card. E starts on the first "Click!" (57.10); F ends on "AI guru!" (100.00).
+G starts at "Ladies and gentlemen" (122.94): 121-122.9 is B's last line.
+
+How the 9:16 versions work: 2D sections load PRIVATE copies of the film's modules (`sections/shorts_dg.py: private()`,
+a separate module object per Short) and patch only their layout for 9:16; the 3D sections are copied into
+`web/js/shortG/` with Shorts-only pages. No published file changed (16:9 frames of s2/s3/s4/s5 rendered after loading the
+patched copies match build/v3 at 34-37 dB, i.e. codec noise). Render: 2D `run.py short_d range 0 1072 out.mp4 1080 1920`
+(E: short_e_lgtm 1713-1962 + short_e_comments 1963-2399; F: short_f 2400-2999); 3D `PAGE=shortG_keynote.html node
+render.mjs range 1080 1920 out.mp4 122.9333 136.5333` and `PAGE=shortG_hall.html ... 136.5333 151.7667`.

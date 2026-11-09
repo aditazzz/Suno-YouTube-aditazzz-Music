@@ -103,7 +103,7 @@ function build() {
   her.setHair('waves', 'blonde'); her.setShades(true);
 }
 function resetFrame(t) {
-  VF = 1;
+  VF = 1; cam.clearViewOffset();
   her.root.visible = false; bot.root.visible = false; for (const r of crowd) r.root.visible = false; phone.root.visible = false; receipt.mesh.visible = false;
   her.headG.visible = true; herArms(true); thumb.visible = false; pHand.visible = false; her.setFace(0, 0); her.setShades(true);
   bot.root.scale.setScalar(0.9); bot.cord.mesh.visible = true; bot.handset.visible = true; bot.thrust(0);
@@ -378,12 +378,17 @@ shot(160.15, HOOK_T(0), async (t, u) => {   // the robots run the show: the hero
   if (VERT) { VF = 1.3; return { cam: [p, c.clone().add(V3(lerp(0.62, 0.7, u), lerp(1.1, 1.35, u), -2)), 46] }; }
   return { cam: [p, c.clone().add(V3(lerp(0.75, 0.9, u), lerp(1.0, 1.25, u), -2)), 46] };
 }, 'drop: the robots run the show');
+// 9:16 framing of the whole tower face (Nov 8 stills round): the four rows LOOK / WHAT / I CAN / DO! filled the phone
+// frame edge to edge, so the K and N sat under the button column and DO! in the caption zone. TOWER_V shrinks the face
+// (k = 1 - share of the way) and lifts it up-left with a view offset, landing the letters in x 5-87 %, y 8-77 %.
+const TOWER_V = { s: 0.84, dx: 0.025, dy: 0.075 };
+function towerV(w = 1) { return VERT && w > 0 ? [lerp(1, TOWER_V.s, w), TOWER_V.dx * w, TOWER_V.dy * w] : null; }
 function HOOK_T(i) { return [161.74, 163.66, 167.95, 170.67][i]; }
 shot(HOOK_T(0), HOOK_T(1), async (t, u) => {  // hook 1: the windows spell it, word by word
   const on = sstep(HOOK[0][0] - 0.1, HOOK[0][0] + 0.15, t); neon(t); hookLed(t); await drawFeed(t, { soft: on }); placeCrowd(t); towerLetters(t);
   Wd.tower.body.material.uniforms.uScreenDim.value = lerp(1, 0.22, on);
   const k = easeIO(u); const p = V3(lerp(7.5, 5.0, k), lerp(22, 25, k), lerp(44, 38, k));
-  return { cam: [p, V3(lerp(1.0, 0.6, k), 36.0, -33), 48 - 1.5 * downPulse(t)] };
+  return { cam: [p, V3(lerp(1.0, 0.6, k), 36.0, -33), 48 - 1.5 * downPulse(t)], vshift: towerV(1) };
 }, 'hook 1: LOOK WHAT I CAN DO');
 shot(HOOK_T(1), HOOK_T(2), async (t, u) => {  // hook 2: up close along the letters (a robot in every lettered window, her videos between), then the pull-back
   const pull = sstep(HOOK[1][2] - 0.25, HOOK[1][4] + 0.35, t);
@@ -394,21 +399,21 @@ shot(HOOK_T(1), HOOK_T(2), async (t, u) => {  // hook 2: up close along the lett
   const nearL = P([[HOOK_T(1), [-1.5, yLook, -33]], [HOOK[1][1] - 0.1, [1.8, yLook - 0.4, -33]], [HOOK[1][1] + 0.35, [0.0, yWhat, -33]], [HOOK[1][2] - 0.2, [3.0, yWhat, -33]]], t);
   const far = [lerp(3.5, -5.5, pull), lerp(32, 24, pull), lerp(-6, 40, pull)], farL = [0.4, 36.0, -33];
   const e = easeIO(pull); const p = A3(near).lerp(A3(far), e), l = A3(nearL).lerp(A3(farL), e);
-  return { cam: [p, l, lerp(40, 49, e)] };
+  return { cam: [p, l, lerp(40, 49, e)], vshift: towerV(e) };
 }, 'hook 2: along the letters');
 shot(HOOK_T(2), HOOK_T(3), async (t, u) => {  // hook 3: crane up from the robots on the dance floor to the whole tower; the letters turn pink word by word
   neon(t); hookLed(t); await drawFeed(t, { soft: 1 }); placeCrowd(t); towerLetters(t); VF = 1.12;
   Wd.tower.body.material.uniforms.uScreenDim.value = 0.22;
   const k = easeIO(clamp((t - HOOK_T(2) - 0.25) / 1.9));
   const p = A3(P([[0, [-3.4, 1.0, 2.6]], [1, [-6.5, 21, 38]]], k, (x) => x)), l = A3(P([[0, [0.4, 1.5, -6]], [1, [0.6, 36.0, -33]]], k, (x) => x));
-  return { cam: [p, l, lerp(50, 49, k)] };
+  return { cam: [p, l, lerp(50, 49, k)], vshift: towerV(k) };
 }, 'hook 3: crane up');
 shot(HOOK_T(3), T1, async (t, u) => {          // hook 4: dark, then the words slam in one by one; ends on the whole phrase
   neon(t); hookLed(t); await drawFeed(t, { soft: 1 }); placeCrowd(t); towerLetters(t);
   Wd.tower.body.material.uniforms.uScreenDim.value = 0.21;
   const bump = Math.max(...HOOK[3].map((x) => (t >= x ? Math.exp(-(t - x) / 0.09) : 0)));
   const k = easeOut(u); const p = V3(lerp(1.0, 0.4, k), lerp(26, 27, k), lerp(42, 37, k));
-  return { cam: [p, V3(0.3, 36.0, -33), 49 - 1.6 * bump] };
+  return { cam: [p, V3(0.3, 36.0, -33), 49 - 1.6 * bump], vshift: towerV(1) };
 }, 'hook 4: slam');
 
 // S10 --------------------------------------------------------------------------------------------------------------
@@ -484,7 +489,8 @@ shot(174.98, 176.70, (t, u) => {               // the chest slot prints the rece
   const dist = lerp(0.19, 0.14, sstep(HL0 - 0.1, HL1 + 0.3, t)) * (VERT ? 1.6 : 1); const pB = a.clone().addScaledVector(nrm, dist), lB = a.clone();
   const p = pA.clone().lerp(pB, k), l = lA.clone().lerp(lB, k);
   if (VERT) VF = 2.0; cam.up.copy(tan.clone().negate()); cam.position.copy(p); cam.lookAt(l); cam.fov = vfov(30); cam.aspect = W / H; cam.updateProjectionMatrix();
-  return { camSet: true, balloons: [limitBalloon(t)] };
+  // 9:16: the receipt a size larger and lifted, so her post reads bigger and the slip's foot clears the caption zone
+  return { camSet: true, balloons: [limitBalloon(t)], vshift: VERT ? [lerp(1, 1.15, k), 0.025 * k, 0.10 * k] : null };
 }, 'the receipt');
 shot(176.70, 180.45, async (t, u) => {          // "Hey ChatGPT?": through her eyes, her real screen recording lights up
   dusk(t, 'USAGE LIMIT REACHED', 0xff3b30);
@@ -499,7 +505,8 @@ shot(176.70, 180.45, async (t, u) => {          // "Hey ChatGPT?": through her e
 }, 'hey chatgpt (pov)');
 const TEND = VERT ? 186.4333 : T2 + 0.2;
 shot(180.45, TEND, async (t, u) => {         // she's on her phone; next to her, the robot's battery dies. Fade to black.
-  dusk(t, VERT && t > 181.6 ? ((t % 1.2) < 0.8 ? 'USAGE 100%' : '') : '', 0xff3b30);
+  // 9:16: the sign lights once the pull-back is wide enough to hold it whole (from 181.6 it ran off both sides)
+  dusk(t, VERT && t > 183.8 ? ((t % 1.2) < 0.8 ? 'USAGE 100%' : '') : '', 0xff3b30);
   her.root.visible = true; her.setFace(1, 0); herWithPhone(t, herBowed(t, { headPitch: 0.42, lean: 0.18, headYaw: -0.05 }), { d: 0.34 });
   await phoneScreen(180.62, 0.8); glow.position.copy(phone.root.position).add(V3(0, 0.06, 0.02)); glow.intensity = 0.1; glow.distance = 0.45;
   const dead = t >= 181.0; bot.root.visible = true; bot.pose(botSit(t, { headYaw: -0.25, headPitch: 0.3 + 0.12 * sstep(181.0, 181.35, t), headRoll: 0.12, lean: 0.16 + 0.04 * sstep(181.0, 181.35, t) }));
@@ -508,7 +515,8 @@ shot(180.45, TEND, async (t, u) => {         // she's on her phone; next to her,
     hudPass.uniforms.uFade.value = easeIn(clamp((t - 185.95) / 0.45));
     const k = easeIO(clamp((t - 181.3) / 4.9)); VF = 1.45;
     const p = V3(lerp(0.06, 0.6, k), lerp(1.0, 1.25, k), lerp(3.6, 9.5, k)), l = V3(lerp(0.03, 0.1, k), lerp(0.95, 6.5, k), lerp(0, -20, k));
-    look(p, l, lerp(30, 34, k)); return {};
+    look(p, l, lerp(30, 34, k));
+    return { vshift: k > 0 ? [lerp(1, 0.86, k), 0.07 * Math.sqrt(k), 0] : null };   // the pull-back: USAGE 100% fits left of the button column
   }
   hudPass.uniforms.uFade.value = easeIn(clamp((t - 180.98) / 0.56));
   const p = V3(lerp(0.08, 0.04, u), lerp(1.08, 1.06, u), lerp(2.5, 2.38, u)); look(p, V3(0.03, 0.9, 0), 30);
@@ -523,7 +531,8 @@ window.renderTime = async (t) => {
   resetFrame(t);
   const s = findShot(t); let v = {};
   if (!s) { applyMood(MOOD.night); look(V3(0, 1, 5), V3(0, 1, 0), 30); hudPass.uniforms.uFade.value = 1; }
-  else { const u = clamp((t - s.a) / (s.b - s.a)); v = (await s.fn(t, u)) || {}; if (v.cam) look(...v.cam); }
+  else { const u = clamp((t - s.a) / (s.b - s.a)); v = (await s.fn(t, u)) || {}; if (v.cam) look(...v.cam);
+    if (v.vshift) { const [k, dx, dy] = v.vshift; cam.fov = 2 * Math.atan(Math.tan(cam.fov * Math.PI / 360) / k) * 180 / Math.PI; cam.setViewOffset(W, H, dx * W, dy * H, W, H); cam.updateProjectionMatrix(); } }
   if (her.root.visible) her.hairTick(t, { gk: 0.35 });
   const DBG = q.get('cam'); if (DBG) { const c = DBG.split(',').map(Number); look(V3(c[0], c[1], c[2]), V3(c[3], c[4], c[5]), c[6] || 30); v.balloons = []; }   // debug: a check camera
   if (PROF) { const X = q.get('x') || ''; bloom.enabled = !X.includes('b'); Wd.city.visible = !X.includes('c'); Wd.sky.visible = !X.includes('s'); finish.enabled = !X.includes('f'); for (const r of crowd) if (X.includes('r')) r.root.visible = false; if (X.includes('t')) Wd.tower.root.visible = false; }
