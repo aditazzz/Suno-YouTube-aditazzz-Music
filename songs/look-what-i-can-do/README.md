@@ -8,7 +8,7 @@
 
 ## What you see
 
-A duet between me and Claude about doing everything at once, told as a comic book of every music video we've made. Between sections the camera pulls back to one comic page of the whole film, twelve panels read left to right (upcoming panels are still pencils, visited ones are coloured), and steps into the next panel. Each panel is drawn in the style of the video it comes from, with that video's own footage in it:
+A song making fun of myself, sung with the AI that let me do it, told as a comic book of every music video we've made. Between sections the camera pulls back to one comic page of the whole film, twelve panels read left to right (upcoming panels are still pencils, visited ones are coloured), and steps into the next panel. Each panel is drawn in the style of the video it comes from, with that video's own footage in it:
 
 - **The session:** the intro is one Claude Code session in a terminal. On "Too late!" the letters jiggle as the temperature rises, the trick from Next Token.
 - **Blue hour:** the camera dives through the laptop into the Great Idea, Ted city. The meeting doubles on every hit, 1 to 256 video-call rooms, each one showing one of my videos, until they fly up and spell LOOK WHAT I CAN DO across the sky. The Claude robot and the GT3 RS get their own rooms.
