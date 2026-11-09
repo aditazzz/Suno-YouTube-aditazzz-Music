@@ -1,0 +1,114 @@
+#INTRO
+Hey Claude?
+Yes?
+Can you help me write a song?
+Of course.
+Can you make it catchy?
+Absolutely.
+Can you make me famous?
+I can help you with a strategy.
+Close enough.
+#V1
+I made a song, I made a beat
+I made a movie in my seat
+I made a ghost, I made a witch
+A Viking shooting Mars a pitch
+I made a bot, I made a site
+I made eleven things last night
+I have no training, that's okay
+I learned a whole new job today!
+#PRE
+Can I direct?
+You can!
+Can I produce?
+You can!
+Can I win an Oscar?
+Let's not get ahead
+Too late!
+#CH1
+Look what I can do!
+Look what I can do!
+I made a thing that made a thing
+That made another two!
+Look what I can do!
+Look what I can do!
+I don't know how I got here
+But I brought my laptop too!
+#POST
+Click! Click! Ship it!
+Click! Click! Ship it!
+Made it! Broke it!
+Fixed it! Shipped it! Shipped it!
+Click! Click! Ship it!
+Made it! Broke it!
+Fixed it! Shipped it!
+#V2
+I'm a Senior Slopcore Architect
+Chief Executive of What's Next
+VP of Things That Look Complete
+Director of the Missing Feet
+Head of Vibes and Synergy
+Chief of Artificial Me
+A thought leader by half past three
+By four I've got a TED Talk fee!
+#BREAK
+What are your qualifications?
+I have a subscription.
+To what?
+Everything.
+#CH2
+Look what I can do!
+Look what I can do!
+I made a thing that made a thing
+That made another two!
+Look what I can do!
+Look what I can do!
+My résumé is fourteen pages
+And my title's AI guru!
+#V3
+I posted "We are so back!"
+Then posted "We are doomed!"
+Then asked a bot to summarize
+The panic in the room
+I bought ten little Mac minis
+For reasons I can't share
+My agents formed a company
+And made me Employee of the Year
+I made a song about the end
+Of every job on Earth
+Then gave myself a brand-new one
+And tripled my net worth!
+#BRIDGE
+Ladies and gentlemen
+We are living through the greatest transformation in human history
+Next slide.
+Next slide.
+Next slide.
+Would you like me to generate a conclusion?
+No, I think I nailed it.
+#FINAL
+Look what I can do!
+Look what I can do!
+I made a song about myself
+And now I'm in it too!
+Look what I can do!
+Look what I can do!
+I built an entire universe
+And left it a five-star review!
+#BREAKDOWN
+Claude?
+Yes?
+Do you think I'm talented?
+You are extraordinarily
+I knew it!
+#DROP
+Look what I can do!
+Look what I can do!
+Look what I can do!
+Look what I can do!
+#OUTRO
+Claude?
+Yes?
+Can we make one more?
+You've reached your usage limit.
+Hey ChatGPT?

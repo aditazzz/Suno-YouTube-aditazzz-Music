@@ -1,0 +1,19 @@
+title: "Look What I Can Do"
+audio: "Look What I Can Do (clean).wav"   # hum notched by studio.clean (26 + 29 + 850 + 900 Hz); original: Look What I Can Do.wav
+folder: "Look What I Can Do"
+model_credit: Claude Opus 5.5
+ai_music: true
+tail: 12.0                            # the song ends at 186.4; YouTube's end-screen elements get the last ~17 s (card from 181.6)
+end_screen_at: 181.6
+status: building                      # A · One Session: the whole song is one Claude Code session; her videos are what it renders
+aliases:
+  claude: [claude, cloud, clod, claud, clawed]
+  chatgpt: [chatgpt, chat, gpt]
+  slopcore: [slopcore, slop, core]
+  minis: [minis, mini, minnies]
+  feet: [feet, feed]
+  fee: [fee, feed]
+  résumé: [resume, resumes]
+  oscar: [oscar, oscars]
+  extraordinarily: [extraordinary, extraordinarily]
+  guru: [guru, gurus]

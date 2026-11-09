@@ -1,0 +1,1948 @@
+[
+{
+"sec": "INTRO",
+"text": "Hey Claude?",
+"words": [
+"Hey",
+"Claude?"
+],
+"wt": [
+0.62,
+1.02
+],
+"s": 0.62,
+"e": 1.35
+},
+{
+"sec": "INTRO",
+"text": "Yes?",
+"words": [
+"Yes?"
+],
+"wt": [
+1.35
+],
+"s": 1.35,
+"e": 1.68
+},
+{
+"sec": "INTRO",
+"text": "Can you help me write a song?",
+"words": [
+"Can",
+"you",
+"help",
+"me",
+"write",
+"a",
+"song?"
+],
+"wt": [
+1.68,
+2.2,
+2.78,
+2.92,
+3.08,
+3.22,
+3.36
+],
+"s": 1.68,
+"e": 3.98
+},
+{
+"sec": "INTRO",
+"text": "Of course.",
+"words": [
+"Of",
+"course."
+],
+"wt": [
+3.98,
+4.02
+],
+"s": 3.98,
+"e": 4.72
+},
+{
+"sec": "INTRO",
+"text": "Can you make it catchy?",
+"words": [
+"Can",
+"you",
+"make",
+"it",
+"catchy?"
+],
+"wt": [
+4.72,
+4.76,
+4.88,
+5.04,
+5.18
+],
+"s": 4.72,
+"e": 6.04
+},
+{
+"sec": "INTRO",
+"text": "Absolutely.",
+"words": [
+"Absolutely."
+],
+"wt": [
+6.04
+],
+"s": 6.04,
+"e": 6.9
+},
+{
+"sec": "INTRO",
+"text": "Can you make me famous?",
+"words": [
+"Can",
+"you",
+"make",
+"me",
+"famous?"
+],
+"wt": [
+6.9,
+6.94,
+7.06,
+7.2,
+7.36
+],
+"s": 6.9,
+"e": 8.96
+},
+{
+"sec": "INTRO",
+"text": "I can help you with a strategy.",
+"words": [
+"I",
+"can",
+"help",
+"you",
+"with",
+"a",
+"strategy."
+],
+"wt": [
+9.42,
+9.68,
+9.8,
+10.0,
+10.16,
+10.28,
+10.4
+],
+"s": 9.42,
+"e": 11.62
+},
+{
+"sec": "INTRO",
+"text": "Close enough.",
+"words": [
+"Close",
+"enough."
+],
+"wt": [
+11.62,
+11.98
+],
+"s": 11.62,
+"e": 13.58
+},
+{
+"sec": "V1",
+"text": "I made a song, I made a beat",
+"words": [
+"I",
+"made",
+"a",
+"song,",
+"I",
+"made",
+"a",
+"beat"
+],
+"wt": [
+20.94,
+21.42,
+21.74,
+21.9,
+22.34,
+22.36,
+22.68,
+22.84
+],
+"s": 20.94,
+"e": 23.3
+},
+{
+"sec": "V1",
+"text": "I made a movie in my seat",
+"words": [
+"I",
+"made",
+"a",
+"movie",
+"in",
+"my",
+"seat"
+],
+"wt": [
+23.3,
+23.3,
+23.58,
+23.76,
+24.04,
+24.5,
+24.62
+],
+"s": 23.3,
+"e": 25.12
+},
+{
+"sec": "V1",
+"text": "I made a ghost, I made a witch",
+"words": [
+"I",
+"made",
+"a",
+"ghost,",
+"I",
+"made",
+"a",
+"witch"
+],
+"wt": [
+25.12,
+25.14,
+25.42,
+25.6,
+26.04,
+26.06,
+26.34,
+26.56
+],
+"s": 25.12,
+"e": 26.98
+},
+{
+"sec": "V1",
+"text": "A Viking shooting Mars a pitch",
+"words": [
+"A",
+"Viking",
+"shooting",
+"Mars",
+"a",
+"pitch"
+],
+"wt": [
+26.98,
+27.11,
+27.24,
+27.72,
+28.24,
+28.34
+],
+"s": 26.98,
+"e": 28.78
+},
+{
+"sec": "V1",
+"text": "I made a bot, I made a site",
+"words": [
+"I",
+"made",
+"a",
+"bot,",
+"I",
+"made",
+"a",
+"site"
+],
+"wt": [
+28.78,
+28.8,
+29.1,
+29.28,
+29.7,
+29.7,
+29.98,
+30.3
+],
+"s": 28.78,
+"e": 30.62
+},
+{
+"sec": "V1",
+"text": "I made eleven things last night",
+"words": [
+"I",
+"made",
+"eleven",
+"things",
+"last",
+"night"
+],
+"wt": [
+30.62,
+30.62,
+30.92,
+31.26,
+31.68,
+31.94
+],
+"s": 30.62,
+"e": 32.26
+},
+{
+"sec": "V1",
+"text": "I have no training, that's okay",
+"words": [
+"I",
+"have",
+"no",
+"training,",
+"that's",
+"okay"
+],
+"wt": [
+32.26,
+32.46,
+32.68,
+32.86,
+33.28,
+33.72
+],
+"s": 32.26,
+"e": 34.04
+},
+{
+"sec": "V1",
+"text": "I learned a whole new job today!",
+"words": [
+"I",
+"learned",
+"a",
+"whole",
+"new",
+"job",
+"today!"
+],
+"wt": [
+34.04,
+34.3,
+34.56,
+34.76,
+34.96,
+35.18,
+35.46
+],
+"s": 34.04,
+"e": 35.769999999999996
+},
+{
+"sec": "PRE",
+"text": "Can I direct?",
+"words": [
+"Can",
+"I",
+"direct?"
+],
+"wt": [
+35.769999999999996,
+36.08,
+36.24
+],
+"s": 35.769999999999996,
+"e": 36.62
+},
+{
+"sec": "PRE",
+"text": "You can!",
+"words": [
+"You",
+"can!"
+],
+"wt": [
+36.62,
+37.0
+],
+"s": 36.62,
+"e": 37.5
+},
+{
+"sec": "PRE",
+"text": "Can I produce?",
+"words": [
+"Can",
+"I",
+"produce?"
+],
+"wt": [
+37.5,
+37.86,
+38.0
+],
+"s": 37.5,
+"e": 38.4
+},
+{
+"sec": "PRE",
+"text": "You can!",
+"words": [
+"You",
+"can!"
+],
+"wt": [
+38.4,
+38.82
+],
+"s": 38.4,
+"e": 39.32
+},
+{
+"sec": "PRE",
+"text": "Can I win an Oscar?",
+"words": [
+"Can",
+"I",
+"win",
+"an",
+"Oscar?"
+],
+"wt": [
+39.32,
+39.5,
+39.62,
+39.78,
+39.92
+],
+"s": 39.32,
+"e": 40.58
+},
+{
+"sec": "PRE",
+"text": "Let's not get ahead",
+"words": [
+"Let's",
+"not",
+"get",
+"ahead"
+],
+"wt": [
+40.58,
+40.72,
+40.88,
+41.04
+],
+"s": 40.58,
+"e": 41.66
+},
+{
+"sec": "PRE",
+"text": "Too late!",
+"words": [
+"Too",
+"late!"
+],
+"wt": [
+41.66,
+41.9
+],
+"s": 41.66,
+"e": 42.94
+},
+{
+"sec": "CH1",
+"text": "Look what I can do!",
+"words": [
+"Look",
+"what",
+"I",
+"can",
+"do!"
+],
+"wt": [
+42.94,
+43.2,
+43.5,
+43.72,
+43.88
+],
+"s": 42.94,
+"e": 44.64
+},
+{
+"sec": "CH1",
+"text": "Look what I can do!",
+"words": [
+"Look",
+"what",
+"I",
+"can",
+"do!"
+],
+"wt": [
+44.64,
+45.02,
+45.32,
+45.56,
+45.72
+],
+"s": 44.64,
+"e": 46.5
+},
+{
+"sec": "CH1",
+"text": "I made a thing that made a thing",
+"words": [
+"I",
+"made",
+"a",
+"thing",
+"that",
+"made",
+"a",
+"thing"
+],
+"wt": [
+46.5,
+46.62,
+46.92,
+47.12,
+47.32,
+47.56,
+47.86,
+48.04
+],
+"s": 46.5,
+"e": 48.24
+},
+{
+"sec": "CH1",
+"text": "That made another two!",
+"words": [
+"That",
+"made",
+"another",
+"two!"
+],
+"wt": [
+48.24,
+48.46,
+48.76,
+49.22
+],
+"s": 48.24,
+"e": 50.0
+},
+{
+"sec": "CH1",
+"text": "Look what I can do!",
+"words": [
+"Look",
+"what",
+"I",
+"can",
+"do!"
+],
+"wt": [
+50.0,
+50.52,
+50.8,
+51.04,
+51.2
+],
+"s": 50.0,
+"e": 51.7
+},
+{
+"sec": "CH1",
+"text": "Look what I can do!",
+"words": [
+"Look",
+"what",
+"I",
+"can",
+"do!"
+],
+"wt": [
+51.7,
+52.34,
+52.64,
+52.86,
+53.06
+],
+"s": 51.7,
+"e": 53.5
+},
+{
+"sec": "CH1",
+"text": "I don't know how I got here",
+"words": [
+"I",
+"don't",
+"know",
+"how",
+"I",
+"got",
+"here"
+],
+"wt": [
+53.5,
+54.0,
+54.26,
+54.44,
+54.68,
+54.92,
+55.1
+],
+"s": 53.5,
+"e": 55.36
+},
+{
+"sec": "CH1",
+"text": "But I brought my laptop too!",
+"words": [
+"But",
+"I",
+"brought",
+"my",
+"laptop",
+"too!"
+],
+"wt": [
+55.36,
+55.62,
+55.82,
+56.0,
+56.26,
+56.52
+],
+"s": 55.36,
+"e": 57.1
+},
+{
+"sec": "POST",
+"text": "Click! Click! Ship it!",
+"words": [
+"Click!",
+"Click!",
+"Ship",
+"it!"
+],
+"wt": [
+57.1,
+57.68,
+58.12,
+58.24
+],
+"s": 57.1,
+"e": 58.52
+},
+{
+"sec": "POST",
+"text": "Click! Click! Ship it!",
+"words": [
+"Click!",
+"Click!",
+"Ship",
+"it!"
+],
+"wt": [
+58.52,
+59.18,
+59.48,
+59.64
+],
+"s": 58.52,
+"e": 59.92
+},
+{
+"sec": "POST",
+"text": "Made it! Broke it!",
+"words": [
+"Made",
+"it!",
+"Broke",
+"it!"
+],
+"wt": [
+59.92,
+60.14,
+60.4,
+60.56
+],
+"s": 59.92,
+"e": 60.84
+},
+{
+"sec": "POST",
+"text": "Fixed it! Shipped it! Shipped it!",
+"words": [
+"Fixed",
+"it!",
+"Shipped",
+"it!",
+"Shipped",
+"it!"
+],
+"wt": [
+60.84,
+61.06,
+61.3,
+61.46,
+61.8,
+61.9
+],
+"s": 60.84,
+"e": 62.24
+},
+{
+"sec": "POST",
+"text": "Click! Click! Ship it!",
+"words": [
+"Click!",
+"Click!",
+"Ship",
+"it!"
+],
+"wt": [
+62.24,
+62.78,
+63.02,
+63.3
+],
+"s": 62.24,
+"e": 63.58
+},
+{
+"sec": "POST",
+"text": "Made it! Broke it!",
+"words": [
+"Made",
+"it!",
+"Broke",
+"it!"
+],
+"wt": [
+63.58,
+63.84,
+64.16,
+64.26
+],
+"s": 63.58,
+"e": 64.56
+},
+{
+"sec": "POST",
+"text": "Fixed it! Shipped it!",
+"words": [
+"Fixed",
+"it!",
+"Shipped",
+"it!"
+],
+"wt": [
+64.56,
+64.74,
+64.98,
+65.12
+],
+"s": 64.56,
+"e": 65.44
+},
+{
+"sec": "V2",
+"text": "I'm a Senior Slopcore Architect",
+"words": [
+"I'm",
+"a",
+"Senior",
+"Slopcore",
+"Architect"
+],
+"wt": [
+65.44,
+65.72,
+65.86,
+66.56,
+66.74
+],
+"s": 65.44,
+"e": 67.6
+},
+{
+"sec": "V2",
+"text": "Chief Executive of What's Next",
+"words": [
+"Chief",
+"Executive",
+"of",
+"What's",
+"Next"
+],
+"wt": [
+67.6,
+67.72,
+68.34,
+68.62,
+68.96
+],
+"s": 67.6,
+"e": 69.2
+},
+{
+"sec": "V2",
+"text": "VP of Things That Look Complete",
+"words": [
+"VP",
+"of",
+"Things",
+"That",
+"Look",
+"Complete"
+],
+"wt": [
+69.2,
+69.5,
+69.96,
+70.2,
+70.42,
+70.62
+],
+"s": 69.2,
+"e": 71.1
+},
+{
+"sec": "V2",
+"text": "Director of the Missing Feet",
+"words": [
+"Director",
+"of",
+"the",
+"Missing",
+"Feet"
+],
+"wt": [
+71.1,
+71.54,
+72.02,
+72.22,
+72.62
+],
+"s": 71.1,
+"e": 73.08
+},
+{
+"sec": "V2",
+"text": "Head of Vibes and Synergy",
+"words": [
+"Head",
+"of",
+"Vibes",
+"and",
+"Synergy"
+],
+"wt": [
+73.08,
+73.34,
+73.52,
+73.92,
+74.08
+],
+"s": 73.08,
+"e": 74.56
+},
+{
+"sec": "V2",
+"text": "Chief of Artificial Me",
+"words": [
+"Chief",
+"of",
+"Artificial",
+"Me"
+],
+"wt": [
+74.56,
+75.22,
+75.44,
+76.02
+],
+"s": 74.56,
+"e": 76.5
+},
+{
+"sec": "V2",
+"text": "A thought leader by half past three",
+"words": [
+"A",
+"thought",
+"leader",
+"by",
+"half",
+"past",
+"three"
+],
+"wt": [
+76.5,
+76.76,
+77.02,
+77.32,
+77.7,
+77.94,
+78.12
+],
+"s": 76.5,
+"e": 78.4
+},
+{
+"sec": "V2",
+"text": "By four I've got a TED Talk fee!",
+"words": [
+"By",
+"four",
+"I've",
+"got",
+"a",
+"TED",
+"Talk",
+"fee!"
+],
+"wt": [
+78.4,
+78.56,
+78.88,
+79.14,
+79.38,
+79.56,
+79.72,
+79.96
+],
+"s": 78.4,
+"e": 80.0
+},
+{
+"sec": "BREAK",
+"text": "What are your qualifications?",
+"words": [
+"What",
+"are",
+"your",
+"qualifications?"
+],
+"wt": [
+80.0,
+80.62,
+80.74,
+80.88
+],
+"s": 80.0,
+"e": 82.1
+},
+{
+"sec": "BREAK",
+"text": "I have a subscription.",
+"words": [
+"I",
+"have",
+"a",
+"subscription."
+],
+"wt": [
+82.1,
+82.1,
+82.26,
+82.4
+],
+"s": 82.1,
+"e": 83.2
+},
+{
+"sec": "BREAK",
+"text": "To what?",
+"words": [
+"To",
+"what?"
+],
+"wt": [
+83.2,
+83.2
+],
+"s": 83.2,
+"e": 83.64
+},
+{
+"sec": "BREAK",
+"text": "Everything.",
+"words": [
+"Everything."
+],
+"wt": [
+83.64
+],
+"s": 83.64,
+"e": 84.34
+},
+{
+"sec": "CH2",
+"text": "Look what I can do!",
+"words": [
+"Look",
+"what",
+"I",
+"can",
+"do!"
+],
+"wt": [
+84.34,
+84.34,
+85.5,
+85.74,
+85.92
+],
+"s": 84.34,
+"e": 86.42
+},
+{
+"sec": "CH2",
+"text": "Look what I can do!",
+"words": [
+"Look",
+"what",
+"I",
+"can",
+"do!"
+],
+"wt": [
+86.42,
+87.02,
+87.32,
+87.56,
+87.78
+],
+"s": 86.42,
+"e": 88.56
+},
+{
+"sec": "CH2",
+"text": "I made a thing that made a thing",
+"words": [
+"I",
+"made",
+"a",
+"thing",
+"that",
+"made",
+"a",
+"thing"
+],
+"wt": [
+88.56,
+88.62,
+88.94,
+89.12,
+89.32,
+89.56,
+89.86,
+90.02
+],
+"s": 88.56,
+"e": 90.24
+},
+{
+"sec": "CH2",
+"text": "That made another two!",
+"words": [
+"That",
+"made",
+"another",
+"two!"
+],
+"wt": [
+90.24,
+90.46,
+90.76,
+91.22
+],
+"s": 90.24,
+"e": 91.86
+},
+{
+"sec": "CH2",
+"text": "Look what I can do!",
+"words": [
+"Look",
+"what",
+"I",
+"can",
+"do!"
+],
+"wt": [
+91.86,
+92.52,
+92.82,
+93.04,
+93.22
+],
+"s": 91.86,
+"e": 93.72
+},
+{
+"sec": "CH2",
+"text": "Look what I can do!",
+"words": [
+"Look",
+"what",
+"I",
+"can",
+"do!"
+],
+"wt": [
+93.72,
+94.36,
+94.64,
+94.84,
+95.04
+],
+"s": 93.72,
+"e": 95.28
+},
+{
+"sec": "CH2",
+"text": "My r\u00e9sum\u00e9 is fourteen pages",
+"words": [
+"My",
+"r\u00e9sum\u00e9",
+"is",
+"fourteen",
+"pages"
+],
+"wt": [
+95.28,
+95.5,
+95.88,
+96.34,
+96.8
+],
+"s": 95.28,
+"e": 97.26
+},
+{
+"sec": "CH2",
+"text": "And my title's AI guru!",
+"words": [
+"And",
+"my",
+"title's",
+"AI",
+"guru!"
+],
+"wt": [
+97.26,
+97.56,
+97.78,
+98.42,
+98.56
+],
+"s": 97.26,
+"e": 100.0
+},
+{
+"sec": "V3",
+"text": "I posted \"We are so back!\"",
+"words": [
+"I",
+"posted",
+"\"We",
+"are",
+"so",
+"back!\""
+],
+"wt": [
+100.0,
+100.44,
+100.44,
+100.72,
+100.98,
+101.36
+],
+"s": 100.0,
+"e": 101.62
+},
+{
+"sec": "V3",
+"text": "Then posted \"We are doomed!\"",
+"words": [
+"Then",
+"posted",
+"\"We",
+"are",
+"doomed!\""
+],
+"wt": [
+101.62,
+101.84,
+102.18,
+102.58,
+103.06
+],
+"s": 101.62,
+"e": 103.46
+},
+{
+"sec": "V3",
+"text": "Then asked a bot to summarize",
+"words": [
+"Then",
+"asked",
+"a",
+"bot",
+"to",
+"summarize"
+],
+"wt": [
+103.46,
+103.7,
+103.94,
+104.12,
+104.34,
+104.54
+],
+"s": 103.46,
+"e": 105.02
+},
+{
+"sec": "V3",
+"text": "The panic in the room",
+"words": [
+"The",
+"panic",
+"in",
+"the",
+"room"
+],
+"wt": [
+105.02,
+105.44,
+105.9,
+106.36,
+106.78
+],
+"s": 105.02,
+"e": 107.14
+},
+{
+"sec": "V3",
+"text": "I bought ten little Mac minis",
+"words": [
+"I",
+"bought",
+"ten",
+"little",
+"Mac",
+"minis"
+],
+"wt": [
+107.14,
+107.34,
+107.56,
+107.9,
+108.4,
+108.68
+],
+"s": 107.14,
+"e": 109.14
+},
+{
+"sec": "V3",
+"text": "For reasons I can't share",
+"words": [
+"For",
+"reasons",
+"I",
+"can't",
+"share"
+],
+"wt": [
+109.14,
+109.6,
+110.0,
+110.26,
+110.5
+],
+"s": 109.14,
+"e": 110.7
+},
+{
+"sec": "V3",
+"text": "My agents formed a company",
+"words": [
+"My",
+"agents",
+"formed",
+"a",
+"company"
+],
+"wt": [
+110.7,
+110.98,
+111.34,
+111.64,
+111.84
+],
+"s": 110.7,
+"e": 112.34
+},
+{
+"sec": "V3",
+"text": "And made me Employee of the Year",
+"words": [
+"And",
+"made",
+"me",
+"Employee",
+"of",
+"the",
+"Year"
+],
+"wt": [
+112.34,
+112.76,
+112.98,
+113.14,
+113.5,
+113.92,
+114.1
+],
+"s": 112.34,
+"e": 114.36
+},
+{
+"sec": "V3",
+"text": "I made a song about the end",
+"words": [
+"I",
+"made",
+"a",
+"song",
+"about",
+"the",
+"end"
+],
+"wt": [
+114.36,
+114.56,
+114.86,
+115.02,
+115.28,
+115.7,
+115.98
+],
+"s": 114.36,
+"e": 116.2
+},
+{
+"sec": "V3",
+"text": "Of every job on Earth",
+"words": [
+"Of",
+"every",
+"job",
+"on",
+"Earth"
+],
+"wt": [
+116.2,
+116.46,
+116.82,
+117.24,
+117.78
+],
+"s": 116.2,
+"e": 117.99000000000001
+},
+{
+"sec": "V3",
+"text": "Then gave myself a brand-new one",
+"words": [
+"Then",
+"gave",
+"myself",
+"a",
+"brand-new",
+"one"
+],
+"wt": [
+117.99000000000001,
+118.2,
+118.42,
+118.82,
+119.1,
+119.58
+],
+"s": 117.99000000000001,
+"e": 119.86
+},
+{
+"sec": "V3",
+"text": "And tripled my net worth!",
+"words": [
+"And",
+"tripled",
+"my",
+"net",
+"worth!"
+],
+"wt": [
+119.86,
+120.0,
+120.36,
+120.84,
+121.24
+],
+"s": 119.86,
+"e": 122.83999999999999
+},
+{
+"sec": "BRIDGE",
+"text": "Ladies and gentlemen",
+"words": [
+"Ladies",
+"and",
+"gentlemen"
+],
+"wt": [
+122.94,
+123.32,
+123.6
+],
+"s": 122.94,
+"e": 124.5
+},
+{
+"sec": "BRIDGE",
+"text": "We are living through the greatest transformation in human history",
+"words": [
+"We",
+"are",
+"living",
+"through",
+"the",
+"greatest",
+"transformation",
+"in",
+"human",
+"history"
+],
+"wt": [
+124.5,
+124.74,
+124.88,
+125.14,
+125.42,
+125.58,
+125.96,
+126.64,
+127.18,
+127.48
+],
+"s": 124.5,
+"e": 128.78
+},
+{
+"sec": "BRIDGE",
+"text": "Next slide.",
+"words": [
+"Next",
+"slide."
+],
+"wt": [
+128.78,
+128.96
+],
+"s": 128.78,
+"e": 130.48
+},
+{
+"sec": "BRIDGE",
+"text": "Next slide.",
+"words": [
+"Next",
+"slide."
+],
+"wt": [
+130.48,
+130.76
+],
+"s": 130.48,
+"e": 131.44
+},
+{
+"sec": "BRIDGE",
+"text": "Next slide.",
+"words": [
+"Next",
+"slide."
+],
+"wt": [
+131.44,
+132.5
+],
+"s": 131.44,
+"e": 133.0
+},
+{
+"sec": "BRIDGE",
+"text": "Would you like me to generate a conclusion?",
+"words": [
+"Would",
+"you",
+"like",
+"me",
+"to",
+"generate",
+"a",
+"conclusion?"
+],
+"wt": [
+133.0,
+133.12,
+133.26,
+133.44,
+133.62,
+133.74,
+134.1,
+134.3
+],
+"s": 133.0,
+"e": 135.24
+},
+{
+"sec": "BRIDGE",
+"text": "No, I think I nailed it.",
+"words": [
+"No,",
+"I",
+"think",
+"I",
+"nailed",
+"it."
+],
+"wt": [
+135.24,
+135.48,
+135.64,
+135.76,
+135.96,
+136.22
+],
+"s": 135.24,
+"e": 136.54
+},
+{
+"sec": "FINAL",
+"text": "Look what I can do!",
+"words": [
+"Look",
+"what",
+"I",
+"can",
+"do!"
+],
+"wt": [
+136.54,
+137.02,
+137.36,
+137.56,
+137.76
+],
+"s": 136.54,
+"e": 138.5
+},
+{
+"sec": "FINAL",
+"text": "Look what I can do!",
+"words": [
+"Look",
+"what",
+"I",
+"can",
+"do!"
+],
+"wt": [
+138.5,
+138.9,
+139.18,
+139.38,
+139.56
+],
+"s": 138.5,
+"e": 140.0
+},
+{
+"sec": "FINAL",
+"text": "I made a song about myself",
+"words": [
+"I",
+"made",
+"a",
+"song",
+"about",
+"myself"
+],
+"wt": [
+140.0,
+140.44,
+140.74,
+140.92,
+141.18,
+141.58
+],
+"s": 140.0,
+"e": 142.04
+},
+{
+"sec": "FINAL",
+"text": "And now I'm in it too!",
+"words": [
+"And",
+"now",
+"I'm",
+"in",
+"it",
+"too!"
+],
+"wt": [
+142.04,
+142.3,
+142.58,
+142.92,
+143.04,
+143.22
+],
+"s": 142.04,
+"e": 143.7
+},
+{
+"sec": "FINAL",
+"text": "Look what I can do!",
+"words": [
+"Look",
+"what",
+"I",
+"can",
+"do!"
+],
+"wt": [
+143.7,
+144.32,
+144.66,
+144.88,
+145.04
+],
+"s": 143.7,
+"e": 145.54
+},
+{
+"sec": "FINAL",
+"text": "Look what I can do!",
+"words": [
+"Look",
+"what",
+"I",
+"can",
+"do!"
+],
+"wt": [
+145.54,
+146.16,
+146.46,
+146.66,
+146.84
+],
+"s": 145.54,
+"e": 147.12
+},
+{
+"sec": "FINAL",
+"text": "I built an entire universe",
+"words": [
+"I",
+"built",
+"an",
+"entire",
+"universe"
+],
+"wt": [
+147.12,
+147.3,
+147.54,
+147.86,
+148.54
+],
+"s": 147.12,
+"e": 149.24
+},
+{
+"sec": "FINAL",
+"text": "And left it a five-star review!",
+"words": [
+"And",
+"left",
+"it",
+"a",
+"five-star",
+"review!"
+],
+"wt": [
+149.24,
+149.58,
+149.84,
+150.1,
+150.51999999999998,
+150.94
+],
+"s": 149.24,
+"e": 151.74
+},
+{
+"sec": "BREAKDOWN",
+"text": "Claude?",
+"words": [
+"Claude?"
+],
+"wt": [
+151.74
+],
+"s": 151.74,
+"e": 153.1
+},
+{
+"sec": "BREAKDOWN",
+"text": "Yes?",
+"words": [
+"Yes?"
+],
+"wt": [
+153.1
+],
+"s": 153.1,
+"e": 153.7
+},
+{
+"sec": "BREAKDOWN",
+"text": "Do you think I'm talented?",
+"words": [
+"Do",
+"you",
+"think",
+"I'm",
+"talented?"
+],
+"wt": [
+153.7,
+153.82,
+153.92,
+154.04,
+154.26
+],
+"s": 153.7,
+"e": 154.76
+},
+{
+"sec": "BREAKDOWN",
+"text": "You are extraordinarily",
+"words": [
+"You",
+"are",
+"extraordinarily"
+],
+"wt": [
+154.76,
+155.44,
+156.58
+],
+"s": 154.76,
+"e": 157.15
+},
+{
+"sec": "BREAKDOWN",
+"text": "I knew it!",
+"words": [
+"I",
+"knew",
+"it!"
+],
+"wt": [
+157.15,
+157.35,
+157.6
+],
+"s": 157.15,
+"e": 159.2
+},
+{
+"sec": "DROP",
+"text": "Look what I can do!",
+"words": [
+"Look",
+"what",
+"I",
+"can",
+"do!"
+],
+"wt": [
+161.74,
+162.5,
+162.84,
+163.04,
+163.24
+],
+"s": 161.74,
+"e": 163.66
+},
+{
+"sec": "DROP",
+"text": "Look what I can do!",
+"words": [
+"Look",
+"what",
+"I",
+"can",
+"do!"
+],
+"wt": [
+163.66,
+164.48,
+166.42,
+166.68,
+166.88
+],
+"s": 163.66,
+"e": 167.95333333333332
+},
+{
+"sec": "DROP",
+"text": "Look what I can do!",
+"words": [
+"Look",
+"what",
+"I",
+"can",
+"do!"
+],
+"wt": [
+167.95333333333332,
+169.02666666666667,
+170.1,
+170.26,
+170.46
+],
+"s": 167.95333333333332,
+"e": 170.67333333333335
+},
+{
+"sec": "DROP",
+"text": "Look what I can do!",
+"words": [
+"Look",
+"what",
+"I",
+"can",
+"do!"
+],
+"wt": [
+170.67333333333335,
+170.88666666666668,
+171.10000000000002,
+171.31333333333333,
+171.52666666666667
+],
+"s": 170.67333333333335,
+"e": 171.74
+},
+{
+"sec": "OUTRO",
+"text": "Claude?",
+"words": [
+"Claude?"
+],
+"wt": [
+171.74
+],
+"s": 171.74,
+"e": 172.24
+},
+{
+"sec": "OUTRO",
+"text": "Yes?",
+"words": [
+"Yes?"
+],
+"wt": [
+172.24
+],
+"s": 172.24,
+"e": 173.04
+},
+{
+"sec": "OUTRO",
+"text": "Can we make one more?",
+"words": [
+"Can",
+"we",
+"make",
+"one",
+"more?"
+],
+"wt": [
+173.04,
+173.14,
+173.28,
+173.5,
+173.72
+],
+"s": 173.04,
+"e": 174.3
+},
+{
+"sec": "OUTRO",
+"text": "You've reached your usage limit.",
+"words": [
+"You've",
+"reached",
+"your",
+"usage",
+"limit."
+],
+"wt": [
+174.3,
+174.56,
+174.72,
+174.96,
+175.3
+],
+"s": 174.3,
+"e": 176.78
+},
+{
+"sec": "OUTRO",
+"text": "Hey ChatGPT?",
+"words": [
+"Hey",
+"ChatGPT?"
+],
+"wt": [
+176.78,
+176.84
+],
+"s": 176.78,
+"e": 179.34
+}
+]

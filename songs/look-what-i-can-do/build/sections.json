@@ -1,0 +1,114 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.32,
+  "first_line": "Hey Claude?",
+  "first_word_t": 0.62,
+  "e": 19.760181405895693,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 19.760181405895693,
+  "first_line": "I made a song, I made a beat",
+  "first_word_t": 20.94,
+  "e": 34.411972789115644,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE",
+  "s": 34.411972789115644,
+  "first_line": "Can I direct?",
+  "first_word_t": 35.769999999999996,
+  "e": 41.65659863945578,
+  "kind": "pre"
+ },
+ {
+  "name": "CH1",
+  "s": 41.65659863945578,
+  "first_line": "Look what I can do!",
+  "first_word_t": 42.94,
+  "e": 56.37804988662131,
+  "kind": "chorus"
+ },
+ {
+  "name": "POST",
+  "s": 56.37804988662131,
+  "first_line": "Click! Click! Ship it!",
+  "first_word_t": 57.1,
+  "e": 65.52671201814059,
+  "kind": "post"
+ },
+ {
+  "name": "V2",
+  "s": 65.52671201814059,
+  "first_line": "I'm a Senior Slopcore Architect",
+  "first_word_t": 65.44,
+  "e": 80.03918367346938,
+  "kind": "verse"
+ },
+ {
+  "name": "BREAK",
+  "s": 80.03918367346938,
+  "first_line": "What are your qualifications?",
+  "first_word_t": 80.0,
+  "e": 83.63827664399093,
+  "kind": "other"
+ },
+ {
+  "name": "CH2",
+  "s": 83.63827664399093,
+  "first_line": "Look what I can do!",
+  "first_word_t": 84.34,
+  "e": 100.14766439909297,
+  "kind": "chorus"
+ },
+ {
+  "name": "V3",
+  "s": 100.14766439909297,
+  "first_line": "I posted \"We are so back!\"",
+  "first_word_t": 100.0,
+  "e": 121.97442176870749,
+  "kind": "verse"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 121.97442176870749,
+  "first_line": "Ladies and gentlemen",
+  "first_word_t": 122.94,
+  "e": 136.53333333333333,
+  "kind": "bridge"
+ },
+ {
+  "name": "FINAL",
+  "s": 136.53333333333333,
+  "first_line": "Look what I can do!",
+  "first_word_t": 136.54,
+  "e": 151.04580498866213,
+  "kind": "chorus"
+ },
+ {
+  "name": "BREAKDOWN",
+  "s": 151.04580498866213,
+  "first_line": "Claude?",
+  "first_word_t": 151.74,
+  "e": 161.9591836734694,
+  "kind": "other"
+ },
+ {
+  "name": "DROP",
+  "s": 161.9591836734694,
+  "first_line": "Look what I can do!",
+  "first_word_t": 161.74,
+  "e": 171.03818594104308,
+  "kind": "other"
+ },
+ {
+  "name": "OUTRO",
+  "s": 171.03818594104308,
+  "first_line": "Claude?",
+  "first_word_t": 171.74,
+  "e": 186.4,
+  "kind": "outro"
+ }
+]

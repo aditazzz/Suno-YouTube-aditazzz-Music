@@ -181,3 +181,5 @@ youre-so-thirsty:
   lines: [IT NEVER, SLEEPS]
   sub: "a Halloween song about the data center next door"
 please-hold: {}      # everything is in songs/please-hold/song.yaml (thumb_lines, thumb_sub, brand_accent: amber, ctx_shift_y)
+look-what-i-can-do:
+  lines: []          # v3: the hook spelled by 256 of her videos is the headline, traced in neon; songs/look-what-i-can-do/make_thumb_v3.py (option A) adds the credit under it

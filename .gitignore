@@ -36,3 +36,8 @@ assets/brand/*
 songs/*/web/fonts/
 songs/*/web/tex/
 songs/*/web/node_modules/
+
+# Look What I Can Do: frames cut from her own videos and the sections' fonts stay local (prep_hd.sh rebuilds web/media)
+songs/look-what-i-can-do/web/media/
+songs/look-what-i-can-do/sections/*_fonts/
+songs/look-what-i-can-do/web/js/s8/fonts/
