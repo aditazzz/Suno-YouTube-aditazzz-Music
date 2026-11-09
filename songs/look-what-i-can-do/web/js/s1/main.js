@@ -25,6 +25,8 @@ const V = (x, y, z) => new THREE.Vector3(x, y, z);
 
 const q = new URLSearchParams(location.search);
 const W = +q.get('w') || 1920, H = +q.get('h') || 1080;
+// 9:16 (Short A, Nov 8): H > W restacks the letters, reframes the rig and moves the pills; 16:9 is unchanged
+const VERT = H > W;
 export const T0 = 1288 / 30, T1 = 1713 / 30;   // this section's frames: T0 <= t < T1
 
 // ---------------------------------------------------------------- renderer + the Great Idea, Ted look
@@ -110,10 +112,10 @@ const FONT9 = {
   N: ['X...X', 'XX..X', 'X.X.X', 'X.X.X', 'X..XX', 'X...X', 'X...X', 'X...X', 'X...X'],
   D: ['XXX..', 'X..X.', 'X...X', 'X...X', 'X...X', 'X...X', 'X...X', 'X..X.', 'XXX..'],
 };
-const LINES = [['LOOK', 'WHAT'], ['I', 'CAN', 'DO']];
+const LINES = VERT ? [['LOOK'], ['WHAT'], ['I', 'CAN'], ['DO']] : [['LOOK', 'WHAT'], ['I', 'CAN', 'DO']];   // 9:16: four lines of 23, 23, 23, 11 columns
 function letterPixels() {   // -> [{x, y (world), word 0..4, iStem (her pixel)}]
   const px = []; let wordN = 0; const lineCols = LINES.map((ws) => ws.reduce((a, w) => a + [...w].reduce((b, ch) => b + FONT9[ch][0].length, 0) + (w.length - 1), 0) + 3 * (ws.length - 1));
-  const rowsTot = 9 + 2 + 9;
+  const rowsTot = LINES.length * 11 - 2;
   LINES.forEach((ws, li) => { let col = -lineCols[li] / 2;
     ws.forEach((w, wi) => { [...w].forEach((ch, ci) => { const G = FONT9[ch], gw = G[0].length;
       G.forEach((row, r) => [...row].forEach((c, cc) => { if (c !== 'X') return;
@@ -122,7 +124,7 @@ function letterPixels() {   // -> [{x, y (world), word 0..4, iStem (her pixel)}]
       col += gw + (ci < w.length - 1 ? 1 : 0); }); col += 3; wordN++; }); });
   return px;
 }
-const LET_C = V(BASE.x - 2.5 * PX, 116, BASE.z);   // the letters' centre: over the grid's centre column, up in the sky above every tower (a sky title, as in Great Idea, Ted)
+const LET_C = V(BASE.x - 2.5 * PX, VERT ? 128 : 116, BASE.z);   // the letters' centre: over the grid's centre column, up in the sky above every tower (a sky title, as in Great Idea, Ted)
 const R = [];   // logical rooms: { i, cast, video, slot, letter, fly: {t0, d, arc} }
 let ROOMS3D = [], IMP = null, HERO = null;
 
@@ -147,7 +149,7 @@ function planRooms() {
   const px = letterPixels(); if (px.length !== N) console.log('LETTER COUNT', px.length);
   const free = new Set(R.map((r) => r.i)); free.delete(0);
   const gridC = slotWorld(0).clone(); { let s = V(0, 0, 0); R.forEach((r) => s.add(r.slot)); gridC.copy(s.divideScalar(N)); }
-  const toGridSpace = (p) => V(gridC.x + p.gx * 0.33 * PX, gridC.y + p.gy * 0.8 * PY, 0);   // the letters squeezed onto the grid, for matching only
+  const toGridSpace = VERT ? (p) => V(gridC.x + p.gx * 0.62 * PX, gridC.y + p.gy * 0.4 * PY, 0) : (p) => V(gridC.x + p.gx * 0.33 * PX, gridC.y + p.gy * 0.8 * PY, 0);   // the letters squeezed onto the grid, for matching only
   for (let w = 0; w < 5; w++) {
     const mine = px.filter((p) => p.word === w); const c = mine.reduce((a, p) => a.add(toGridSpace(p)), V(0, 0, 0)).divideScalar(mine.length);
     const need = mine.filter((p) => !p.her).length;
@@ -256,23 +258,27 @@ async function build() {
   await L.loadFonts(); await L.loadTiming(); times();
   CITY = buildCity(); scene.add(CITY); CITY.userData.setDay(0);
   planRooms();
-  TERM = await MED.image('/media/term_4293.jpg'); GIT = B.gitScreen();
-  over.uniforms.tOver.value = TERM.clone(); over.uniforms.tOver.value.colorSpace = THREE.NoColorSpace; over.uniforms.tOver.value.needsUpdate = true;
+  TERM = await MED.image(VERT ? '/media/shortA_term_v.jpg' : '/media/term_4293.jpg'); GIT = B.gitScreen();   // 9:16: part 1's vertical last frame in the screen's centre strip
+  over.uniforms.tOver.value = VERT ? (await MED.image('/media/shortA_last_v.jpg')).clone() : TERM.clone(); over.uniforms.tOver.value.colorSpace = THREE.NoColorSpace; over.uniforms.tOver.value.needsUpdate = true;
   for (let i = 0; i < Math.min(N3D, N); i++) { const r = R[i]; setLOD(i > 0); const room = new Room(r.cast, r.feed ? { feed: r.feed } : { video: r.video }); room.R = r; scene.add(room.root); ROOMS3D.push(room); }
   setLOD(false);
   HERO = ROOMS3D[0]; HERO.screen.material.map = TERM; HERO.screen.material.color.setScalar(1); HERO.screen.material.needsUpdate = true;
   ROOMS3D.slice(1).forEach((rm) => { if (rm.screen) rm.screen.material.color.set(0x23324a); });
   IMP = buildImpostors(); buildGlow();
   // the billboard (the hook goes up word by word) and the tower clock, now a participant counter
-  BOARD = B.billboardTower(-15, -40, 0.32, { bw: 12.8, bh: 7.2, y: 36.5, h: 44 }); scene.add(BOARD);
+  // 9:16: the billboard stands square-on behind the meeting's column instead of off to the left (where a narrow frame cuts it in half)
+  BOARD = VERT ? B.billboardTower(BASE.x + 0.5 * PX, -46, 0, { bw: 12.8, bh: 7.2, y: 40, h: 47 }) : B.billboardTower(-15, -40, 0.32, { bw: 12.8, bh: 7.2, y: 36.5, h: 44 }); scene.add(BOARD);
   for (let n = 0; n <= 5; n++) HOOKTEX.push(B.hookBoard(n));
-  TOWER = new THREE.Group(); const tb = new THREE.Mesh(new THREE.BoxGeometry(11, 46, 7), new THREE.MeshBasicMaterial({ color: 0x14172c })); tb.position.y = 23; TOWER.add(tb);
-  COUNTER = B.counterSign(); COUNTER.position.set(0, 44.5, 3.7); COUNTER.scale.setScalar(1.6); TOWER.add(COUNTER); TOWER.position.set(15, 0, -36); TOWER.rotation.y = -0.28; scene.add(TOWER);
+  // 9:16: the counter's tower stands behind the billboard, its sign stacked above the hook (a narrow frame cut it off at the right)
+  const TH = VERT ? 60 : 46;
+  TOWER = new THREE.Group(); const tb = new THREE.Mesh(new THREE.BoxGeometry(11, TH, 7), new THREE.MeshBasicMaterial({ color: 0x14172c })); tb.position.y = TH / 2; TOWER.add(tb);
+  COUNTER = B.counterSign(); COUNTER.position.set(0, TH - 1.5, 3.7); COUNTER.scale.setScalar(1.6); TOWER.add(COUNTER);
+  if (VERT) { TOWER.position.set(BASE.x + 0.5 * PX, 0, -62); } else { TOWER.position.set(15, 0, -36); TOWER.rotation.y = -0.28; } scene.add(TOWER);
   // the meeting's light on the roof: a soft warm pool under the rooms that spreads as the grid grows (no dead-black roof)
   SPILL = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: L.canvasTex(256, 256, (g, w, h) => { const gr = g.createRadialGradient(w / 2, h / 2, 0, w / 2, h / 2, w / 2);
     gr.addColorStop(0, 'rgba(255,226,190,1)'); gr.addColorStop(0.45, 'rgba(220,200,255,0.45)'); gr.addColorStop(1, 'rgba(0,0,0,0)'); g.fillStyle = gr; g.fillRect(0, 0, w, h); }), transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, opacity: 0.16 }));
   SPILL.rotation.x = -Math.PI / 2; scene.add(SPILL);
-  PILL_HERE = B.pill('you are here', 'status', 0.9); PILL_LAPTOP = B.pill('laptop: brought', 'good', 0.44); scene.add(PILL_HERE, PILL_LAPTOP);
+  PILL_HERE = B.pill('you are here', 'status', VERT ? 0.5 : 0.9); PILL_LAPTOP = B.pill('laptop: brought', 'good', VERT ? 0.36 : 0.44); scene.add(PILL_HERE, PILL_LAPTOP);
   window.ready = true;
 }
 
@@ -334,14 +340,39 @@ function buildRig() {
     { t: TM.brought + 0.15, tg: herL.clone().add(V(1.33, 0.08, -0.9)), d: 6.6, yaw: -0.02, pitch: 0.02, fov: 36, ease: easeIO },
     { t: END_PUSH, tg: herL.clone().add(V(1.3, 0.08, -0.9)), d: 6.35, yaw: -0.015, pitch: 0.02, fov: 36, ease: (x) => x },
   ];
+  if (VERT) {   // 9:16: pull back on the growing wall (it may run off the sides), frame the four-line letters, centre on her column
+    const kd = [1, 1, 1.6, 1.6, 1.7, 1.5, 1.45, 1.4, 1.3, 1.25];
+    kd.forEach((k, i) => { if (!RIG[i].fn) RIG[i].d *= k; });
+    // the four-line letters inside the Shorts safe zone: pulled back, and sitting up and left of centre (clear of the
+    // caption block at the bottom and the button column on the right)
+    RIG[10].d = 215; RIG[11].d = 232; RIG[12].d = 226;
+    RIG[10].tg = RIG[10].tg.clone().add(V(8, -2, 0));   // the launch: LOOK lands inside the top of the frame
+    for (const i of [11, 12]) RIG[i].tg = RIG[i].tg.clone().add(V(5.7, -15, 0));
+    const her = [[13, -0.05, -1.0, 14], [14, -0.05, -1.0, 13], [15, 0.0, -0.9, 8.4], [16, 0.0, -0.9, 8.1]];
+    for (const [i, y, z, d] of her) { RIG[i].tg = herL.clone().add(V(0, y, z)); RIG[i].d = d; RIG[i].yaw *= 0.5; }
+  }
 }
+// 9:16 only: the 16:9 rig eases toward the NEXT doubling's centre between hits (fine in a wide frame); in a narrow frame
+// that leaves the rooms off to one side, so x follows the centre of the rooms that exist, moving as each copy slides in
+const GRID_CX = [0, 1, 2, 3, 4, 5, 6, 7, 8].map((g) => { let s = 0; const n = 1 << g; for (let i = 0; i < n; i++) s += slotOf(i)[0]; return BASE.x + (s / n) * PX; });
+function gridCX(t) { let g = 0; for (let k = 1; k <= 8; k++) if (t >= TM.gen[k]) g = k; if (g === 0) return GRID_CX[0];
+  return lerp(GRID_CX[g - 1], GRID_CX[g], easeIO(clamp((t - TM.gen[g]) / (TM.genDur[g] + 0.15)))); }
+function gridCols(t) { let g = 0; for (let k = 1; k <= 8; k++) if (t >= TM.gen[k]) g = k; const c = (x) => 1 << Math.ceil(x / 2);
+  return g === 0 ? 1 : lerp(c(g - 1), c(g), easeIO(clamp((t - TM.gen[g]) / (TM.genDur[g] + 0.15)))); }
 function rigCam(t) {
   let i = 0; while (i < RIG.length - 2 && t > RIG[i + 1].t) i++;
   const a0 = RIG[i], b0 = RIG[i + 1]; const e = (b0.ease || easeIO)(clamp((t - a0.t) / (b0.t - a0.t)));
   const a = a0.fn ? { ...a0, ...a0.fn() } : a0, b = b0.fn ? { ...b0, ...b0.fn() } : b0;
+  const fovAt = lerp(a.fov, b.fov, e);
   const tg = a.tg.clone().lerp(b.tg, e), d = Math.exp(lerp(Math.log(a.d), Math.log(b.d), e)), yaw = lerp(a.yaw, b.yaw, e), pitch = lerp(a.pitch, b.pitch, e);
-  const p = tg.clone().add(V(Math.sin(yaw) * Math.cos(pitch), Math.sin(pitch), Math.cos(yaw) * Math.cos(pitch)).multiplyScalar(d));
-  return { p, l: tg, up: V(0, 1, 0), fov: lerp(a.fov, b.fov, e), near: clamp(d * 0.01, 0.02, 0.6) };
+  let dd = d, yy = yaw;
+  const wv = VERT ? sstep(RIG[1].t, RIG[2].t, t) * (1 - sstep(RIG[9].t, RIG[10].t, t)) : 0;
+  if (wv > 0) {   // 9:16: the narrow frame follows the meeting's real centre, square-on, wide enough for it (eased in and out)
+    const wpd = 2 * Math.tan(fovAt * Math.PI / 360) * (W / H), dFit = gridCols(t) * PX / (wpd * 0.82), vis = wpd * clamp(dFit, d, d * 1.7);   // vis: frame width at the wall; +3.5% of it sits the wall left, clear of the button column
+    tg.x = lerp(tg.x, gridCX(Math.min(t, RIG[9].t)), wv) + 0.035 * vis * wv; yy = lerp(yaw, yaw * 0.25, wv); dd = lerp(d, clamp(dFit, d, d * 1.7), wv);
+  }
+  const p = tg.clone().add(V(Math.sin(yy) * Math.cos(pitch), Math.sin(pitch), Math.cos(yy) * Math.cos(pitch)).multiplyScalar(dd));
+  return { p, l: tg, up: V(0, 1, 0), fov: fovAt, near: clamp(dd * 0.01, 0.02, 0.6) };
 }
 // 3) the end: a push into the laptop she's holding up, settling on her and the screen (git push --force), sharp
 const END_PUSH = 56.62;
@@ -392,6 +423,8 @@ window.renderTime = async (t) => {
   const k1 = L.backOut(clamp((t - (TM.dont + 0.3)) / 0.4)) * (1 - easeIn(clamp((t - (TM.brought - 0.25)) / 0.2))), k2 = L.backOut(clamp((t - TM.brought) / 0.35));
   PILL_HERE.visible = k1 > 0.01; PILL_HERE.position.copy(hp).add(side).add(V(PILL_HERE.userData.w / 2, 0.55, 0)); PILL_HERE.scale.setScalar(Math.max(0.001, k1));
   PILL_LAPTOP.visible = k2 > 0.01; PILL_LAPTOP.position.copy(hp).add(side).add(V(PILL_LAPTOP.userData.w / 2, 0.15, 0)); PILL_LAPTOP.scale.setScalar(Math.max(0.001, k2));
+  if (VERT) {   // 9:16: no room beside her column, so the pills sit centred in front of the foot of her room
+    const foot = hp.clone().add(V(0, -RH / 2 + 0.34, 0.6)); PILL_HERE.position.copy(foot); PILL_LAPTOP.position.copy(foot).add(V(-0.12, 0, 0)); }   // laptop pill nudged left: its right end stays left of 0.88 W on the final push
   // camera (and its motion blur: where the frame centre was a frame ago, a short shutter)
   cam.position.copy(c.p); cam.up.copy(c.up); cam.lookAt(c.l); cam.fov = c.fov; cam.near = c.near || 0.05; cam.updateProjectionMatrix();
   { cam.updateMatrixWorld(true); const pc = new THREE.PerspectiveCamera(cp.fov, W / H, 0.01, 10); pc.position.copy(cp.p); pc.up.copy(cp.up); pc.lookAt(cp.l); pc.updateMatrixWorld(true);
