@@ -30,7 +30,7 @@ X = "https://x.com/adita_zzz"
 # live home page. Keep it here so a rebuild never drops it.
 GSC_VERIFY = "KsjTLDJ1Qvirn6xuLeXUbLTs20i_d3ELdcQKPKiwSVM"
 ABOUT = ("aditazzz makes AI-assisted music about technology, artificial intelligence, coding, philosophy and the human "
-         "experience. Every music video is animated entirely in code with Claude.")
+         "experience. The music videos are animated in code with tools including Claude and Codex.")
 ARTIST = {"@type": "MusicGroup", "@id": SITE + "/#artist", "name": "aditazzz", "url": SITE + "/", "image": SITE + "/assets/aditazzz.jpg",
           "description": ABOUT, "genre": ["AI Doompop", "Darkwave", "Synthpop"],
           "sameAs": [YT, SPOTIFY, INSTAGRAM, X, LINKTREE, LINKEDIN, REDDIT, "https://github.com/aditazzz"]}
@@ -286,7 +286,7 @@ def page(*, path, title, desc, image, image_alt, body, ld, og_type="website", ex
 </main>
 <footer class="foot"><div class="wrap">
   <p class="links"><a href="{SUB}">YouTube</a><a href="{SPOTIFY}">Spotify</a><a href="{INSTAGRAM}">Instagram</a><a href="{X}">X</a><a href="{REDDIT}">r/aidoompop</a><a href="{REPO}">GitHub</a><a href="{LINKEDIN}">LinkedIn</a><a href="{LINKTREE}">All links</a></p>
-  <p class="fine">Songs, lyrics and concepts by aditazzz. Videos made in code with Claude. The code is MIT-licensed; the songs, lyrics and artwork are all rights reserved.</p>
+  <p class="fine">Songs, lyrics and concepts by aditazzz. Videos made in code with Claude and Codex. The code is MIT-licensed; the songs, lyrics and artwork are all rights reserved.</p>
 </div></footer>
 <script src="/assets/site.js?v={ASSET_V}" defer></script>
 </body>
@@ -345,7 +345,7 @@ def main(out):
         rows = code_table(md); lines = sum(n for _, n, _ in rows)
         lyr, nlines = lyrics_html(os.path.join(folder, "lyrics.txt"))
         code, first_line, more, main = excerpt(folder)
-        mm = re.search(r"Video by (Claude [A-Za-z]+ [\d.]+)", md); model = mm.group(1) if mm else "Claude"
+        mm = re.search(r"<!-- model: (.*?) -->", md) or re.search(r"Video by (Claude [A-Za-z]+ [\d.]+)", md); model = mm.group(1) if mm else "Claude"
         songs.append(dict(slug=slug, id=v["id"], date=v["date"], secs=v["secs"], title=title, story=story, md=md,
                           rows=rows, lines=lines, lyrics=lyr, code=code, first=first_line, more=more, main=main, model=model,
                           js=is_js(main)))
@@ -390,7 +390,7 @@ def main(out):
         IMG_SIZES[img] = Image.open(os.path.join(d, "thumbnail.jpg")).size
         watch = f"https://www.youtube.com/watch?v={s['id']}"
         story = re.sub(r"\*+|`|\[([^\]]+)\]\([^)]+\)", r"\1", s["story"])   # plain text for meta tags
-        long_desc = story or f"{s['title']}, a music video by aditazzz animated entirely in code with Claude."
+        long_desc = story or f"{s['title']}, a music video by aditazzz animated in code with {s['model']}."
         # leading with the title and artist keeps every description unique (alternate versions share a story)
         desc = clip(f"{s['title']} by aditazzz. {long_desc}" if story else long_desc)
         title = song_title(s["title"])
@@ -399,7 +399,7 @@ def main(out):
         table = "".join(f'<tr><td><a href="{REPO}/blob/main/songs/{s["slug"]}/{f}"><code>{esc(f)}</code></a></td>'
                         f'<td class="num">{n:,}</td><td>{md_inline(w)}</td></tr>' for f, n, w in s["rows"])
         cm = "//" if s["js"] else "#"   # the credit is a comment in the code's own language
-        attrib = (f'{cm} From "{s["title"]}" by aditazzz, a music video written in code with Claude.\n'
+        attrib = (f'{cm} From "{s["title"]}" by aditazzz, a music video made in code with {s["model"]}.\n'
                   f"{cm} Watch: https://youtu.be/{s['id']}\n{cm} Subscribe: {SUB}\n"
                   f"{cm} Code: {REPO}/tree/main/songs/{s['slug']} (MIT). If you use it, please credit aditazzz and link the video.\n\n")
         nxt = songs[(i + 1) % len(songs)]
@@ -430,7 +430,7 @@ def main(out):
       <img src="thumbnail.jpg" alt="{esc(s['title'])}: music video thumbnail" width="960" height="540">
       <span class="play" aria-hidden="true"></span>
     </button>
-    <p class="under"><a href="{watch}">Watch on YouTube</a> · {mmss(s['secs'])} · video by {esc(s['model'])} · <a class="subscribe" href="{SUB}">Subscribe to @adita_zzz</a></p>
+    <p class="under"><a href="{watch}">Watch on YouTube</a> · {mmss(s['secs'])} · made with {esc(s['model'])} · <a class="subscribe" href="{SUB}">Subscribe to @adita_zzz</a></p>
   </div>
 
   <section class="code" aria-labelledby="code-h">
@@ -483,9 +483,9 @@ def main(out):
         behind_html = (f'<div class="empty"><p class="big">The first one is on its way.</p><p>Until then: '
                        f'<a href="#how">how a video gets made</a>, <a href="{REPO}">every line of code on GitHub</a>, or '
                        f'<a href="{SUB}">subscribe on YouTube</a> to catch it when it lands.</p></div>')
-    home_title = "aditazzz: AI music & music videos made in code with Claude"
+    home_title = "aditazzz: AI music & music videos made in code with Claude and Codex"
     home_desc = (f"aditazzz makes AI-assisted music about technology, AI, coding, philosophy and the human experience. "
-                 f"{len(songs)} music videos, every frame animated in code with Claude.")
+                 f"{len(songs)} music videos animated frame by frame in code.")
     ld = {"@context": "https://schema.org", "@graph": [
         WEBSITE, ARTIST,
         {"@type": "WebPage", "@id": SITE + "/", "url": SITE + "/", "name": home_title, "description": home_desc,
@@ -496,7 +496,7 @@ def main(out):
     body = f"""<section class="hero wrap"><div class="hero-text">
   <p class="eyebrow">AI Doompop · darkwave · synthpop</p>
   <h1>Music videos <em>written in code.</em></h1>
-  <p class="lead">I'm aditazzz, a data and AI engineer who writes songs about AI, code and tech life. I write the lyrics and the concept and make each track in Suno. Claude then writes a program that draws the music video frame by frame, synced to the vocals word by word.</p>
+  <p class="lead">I'm aditazzz, a data and AI engineer who writes songs about AI, code and tech life. I write the lyrics and the concept and make each track in Suno. I make the video code with Claude and Codex, rendering it frame by frame and syncing it to the vocals word by word.</p>
   <p class="cta"><a class="btn" href="{SUB}">Subscribe on YouTube</a><a class="btn ghost" href="{SPOTIFY}">Listen on Spotify</a></p>
   {socials()}
   <dl class="stats"><div><dt>Videos</dt><dd>{len(songs)}</dd></div><div><dt>Lines of code</dt><dd>{total:,}</dd></div><div><dt>Video editors</dt><dd>0</dd></div></dl>
@@ -521,7 +521,7 @@ def main(out):
   <ol>
     <li><h3>The song</h3><p>I write the lyrics and the concept, then make the track in Suno. A small script notches out the steady hum AI music generators leave under a track.</p></li>
     <li><h3>The sync</h3><p>The vocals are separated, transcribed and lined up with the lyrics, so every sung word gets a timestamp. Beats and sections come from the audio too.</p></li>
-    <li><h3>The scene</h3><p>Each video is its own program, made with Claude: Python for the 2D videos, a three.js 3D scene for the newer ones. I direct it like a film and review every still.</p></li>
+    <li><h3>The scene</h3><p>Each video is its own program, made with Claude and Codex: Python for the 2D videos, a three.js 3D scene for the newer ones. I direct it like a film and review every still.</p></li>
     <li><h3>The render</h3><p>Every frame is drawn at 30 fps on my own computer, in 16:9 for YouTube and 9:16 for Shorts. Captions are a separate layer that goes on the quiet part of the picture, so every video also exists without them. The same pipeline cuts the Shorts, makes the thumbnail (one design on every video), writes the copy, uploads it and adds its page to this site.</p></li>
   </ol>
   <p class="more">All of it is open source: <a href="{REPO}">the pipeline and every scene on GitHub</a>.</p>
@@ -546,7 +546,7 @@ def main(out):
         'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' +
         "".join(f"  <url><loc>{u}</loc><lastmod>{d}</lastmod>{i}</url>\n" for u, d, i in urls) + "</urlset>\n")
     open(os.path.join(out, "README.md"), "w").write(
-        f"# aditazzz.github.io\n\nThe website for [aditazzz]({SITE}): AI Doompop music videos written in code with Claude.\n\n"
+        f"# aditazzz.github.io\n\nThe website for [aditazzz]({SITE}): AI Doompop music videos written in code with Claude and Codex.\n\n"
         f"It's generated by [`tools/build_site.py`]({REPO}/blob/main/tools/build_site.py) in the "
         f"[code repo]({REPO}); edit there, not here.\n")
     print(f"built {len(songs)} video pages, {total:,} lines of code -> {out}")

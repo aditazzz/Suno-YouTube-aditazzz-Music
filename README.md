@@ -1,4 +1,4 @@
-# aditazzz music videos, made in code by Claude
+# aditazzz music videos, made in code
 
 [![YouTube: @adita_zzz](https://img.shields.io/badge/YouTube-%40adita__zzz-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/@adita_zzz?sub_confirmation=1) [![Spotify: aditazzz](https://img.shields.io/badge/Spotify-aditazzz-1DB954?logo=spotify&logoColor=white)](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv) [![Instagram: @aditazzz.music](https://img.shields.io/badge/Instagram-%40aditazzz.music-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/aditazzz.music/) [![LinkedIn: Adita Zeqollari](https://img.shields.io/badge/LinkedIn-Adita%20Zeqollari-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aditazeqollari) [![Reddit: r/aidoompop](https://img.shields.io/badge/Reddit-r%2Faidoompop-FF4500?logo=reddit&logoColor=white)](https://www.reddit.com/r/aidoompop/)
 
@@ -6,16 +6,13 @@
 
 I'm **aditazzz**, a data/AI engineer who writes songs. I write the lyrics and concepts, make the tracks with
 [Suno](https://suno.com), and direct a music video for each one on my YouTube channel
-[**@adita_zzz**](https://www.youtube.com/@adita_zzz?sub_confirmation=1). Claude builds the videos in code. Not in a
-video editor, and not with an AI video generator: for each song, Claude writes a program (Python, and for four of them JavaScript with Three.js) that draws every frame,
-synced to the vocals word by word. Most of the videos in this repo were made by Claude Opus 5.5 and a few by
-Claude Fable 5.1; each song page says which. The songs are
+[**@adita_zzz**](https://www.youtube.com/@adita_zzz?sub_confirmation=1). I make the video code with Claude and Codex, using Python, Three.js, Remotion and Blender to render each frame and sync it to the song. Each song page identifies the tools used. The songs are
 on [Spotify](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv), and all of them, with lyrics, are on
 [aditazzz.github.io](https://aditazzz.github.io).
 
-This repo is that code. It has **35 music videos**, **64,650 lines of scene code** and the pipeline
-that turns a finished song into a full music video, Shorts, thumbnails and a YouTube upload. Every song folder links to
-its video, so you can watch one and then read how it was drawn.
+This repo contains the film source and the shared pipeline that turns a finished song into a full music video, Shorts, thumbnails and a YouTube upload. Each song folder links to its video and explains how it was drawn.
+
+Latest release: [You Said You Needed Space](songs/you-said-you-needed-space), a living Earth and satellite film made with Claude Fable 5.1 and Codex Astra.
 
 ## How a video gets made
 

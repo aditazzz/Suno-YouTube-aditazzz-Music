@@ -1,0 +1,164 @@
+{
+  "_doc": "The three Living Earth shots of the mix (MIX.md), as parameters. Read by remotion/src/blocking/le.ts (the cameras) and living_earth/render_le.sh (the frame ranges, via living_earth/le_frames.py + timing/timing_v0.yaml). Times are anchors in the timing file's grammar; the engine's own song clock (SceneTimeline) uses the same provisional grid, so section-relative keys line up until the take re-times both.",
+  "fps": 30,
+  "shots": {
+    "LE0": {
+      "title": "H1 'Her, first' (hook30, her OK Sat Nov 7): the prologue, her night network full frame, one light leaving; the pull-back dries into the pencil circle of the title page (wet-edge dissolve in build/hook30_h1/hook_h1.py)",
+      "start": "coldOpen",
+      "end": "intro+2.2",
+      "camera": "keys",
+      "composition": "LE1440",
+      "keys": [
+        {
+          "at": "coldOpen",
+          "daz": -2,
+          "el": 20,
+          "la": 0.9,
+          "sx": 0.46,
+          "sy": 0.56,
+          "fov": 30,
+          "roll": 0
+        },
+        {
+          "at": "intro",
+          "daz": 1,
+          "el": 19.5,
+          "la": 1.0,
+          "sx": 0.47,
+          "sy": 0.54,
+          "fov": 30,
+          "roll": 0
+        },
+        {
+          "at": "intro+1.2",
+          "daz": 4,
+          "el": 19,
+          "la": 2.1,
+          "sx": 0.494,
+          "sy": 0.5,
+          "fov": 30,
+          "roll": 0
+        },
+        {
+          "at": "intro+2.2",
+          "daz": 5,
+          "el": 19,
+          "la": 2.13,
+          "sx": 0.494,
+          "sy": 0.5,
+          "fov": 30,
+          "roll": 0
+        }
+      ],
+      "netGain": 2.0,
+      "netGain_note": "the night network's gain for this shot (BlockingFilm's constant is 0.9; Film.tsx's final-chorus level is ~1.2). At song time 0 the network would be at its dimmest; the prologue runs it at the final-chorus level.",
+      "end_note": "the approved bloom key is intro+0.3 .. intro+2.0+0.3 (4.8-9.4 s); the render must outlive the dissolve, so the shot ends at intro+2.2 (10.19 s, 306 frames), not the pitch's intro+1.2",
+      "pulses": [
+        {
+          "at": "coldOpen+0.1",
+          "lat": -1.5,
+          "lon": 22.5,
+          "speed": 0.1,
+          "strength": 0.6
+        },
+        {
+          "at": "coldOpen+1.0",
+          "lat": 38.7,
+          "lon": -9.2,
+          "speed": 0.14,
+          "strength": 0.5
+        },
+        {
+          "at": "intro",
+          "lat": -3.1,
+          "lon": -60.0,
+          "speed": 0.12,
+          "strength": 0.5
+        }
+      ],
+      "pulses_note": "the prologue's own network pulses (the final chorus's grammar: a front, a 2-3 s tail), keyed to the timing map; `at` = anchor; lat/lon as chorus 1's (the Congo, the Tagus, the Amazon). Read by le.ts lePulses().",
+      "keys_note": "her-centre keys like LE3. The cold open holds the approved H1_a framing (la 0.90) and starts the pull; through the intro the pull-back runs to la 2.10, where her disc is the pencil circle of the title page (R 330 at (1265, 720) in the 1440p frame: sx 0.494, sy 0.50; angular radius asin(1/e^2.1) at fov 30), reached at intro+1.2 and held while the render dries into the paint (to intro+2.2)."
+    },
+    "LE1": {
+      "title": "chorus-1 terminator plate: the photograph tipped into Plate IV ('fig. 4: you, riding my dusk line')",
+      "start": "chorus1/L4-0.5",
+      "end": "chorus1/L6+0.3",
+      "camera": "film",
+      "camera_note": "the blocking's own chorus-1 camera: C1-D's landing on 'chase' (her half-lit disc, the gold line lower-left to upper-right, him hung near the lens) through the glint on 'disappear'. Nothing new to key.",
+      "composition": "LE1080",
+      "frames_note": "mounted in a 1150x670 photo in the 1440p page; 1080p is plenty"
+    },
+    "LE2": {
+      "title": "C01, her sunrise: the full-page photograph of chorus 2 (and Short 2's loop)",
+      "start": "chorus2/L4-0.5",
+      "end": "chorus2/L6+0.3",
+      "camera": "film",
+      "camera_note": "the blocking's chorus-2 camera as approved for the hook (C2-D: sunrise 3 on 'chase', C01's first frame, then the hold). The Short's own 9:16 keys render from the BLOCK916 composition as before.",
+      "composition": "LE1440"
+    },
+    "LE3": {
+      "title": "the final chorus, full frame: one continuous orbital move over her night network, across the gold line, the tiny machine",
+      "start": "instrumental+2.0",
+      "end": "countdown",
+      "camera": "le3",
+      "composition": "LE1440",
+      "le3": {
+        "_doc": "her-centre keys (tR 0) like chorus 1's L3: az/el = the lens's place round her (deg), la = ln(distance in Earth radii), sx/sy = where her centre sits on screen, fov deg. Sun angle: THETA ~69 deg at L3 (az AZ3 ~ -36); this move starts 55 deg further round on her night side and ends 8 deg past L3, so the gold line enters from the right and crosses. FIRST PASS: check on the first GPU stills (render_le.sh stills LE3) before the full render.",
+        "keys": [
+          {
+            "at": "instrumental+2.0",
+            "daz": -55,
+            "el": 30,
+            "la": 1.18,
+            "sx": 0.58,
+            "sy": 0.56,
+            "fov": 30,
+            "roll": 0
+          },
+          {
+            "at": "finalChorus",
+            "daz": -42,
+            "el": 28,
+            "la": 1.12,
+            "sx": 0.62,
+            "sy": 0.58,
+            "fov": 30,
+            "roll": 0
+          },
+          {
+            "at": "finalChorus+4.0",
+            "daz": -20,
+            "el": 24,
+            "la": 1.04,
+            "sx": 0.7,
+            "sy": 0.62,
+            "fov": 29,
+            "roll": 0
+          },
+          {
+            "at": "finalChorus+8.0",
+            "daz": -2,
+            "el": 22,
+            "la": 0.98,
+            "sx": 0.78,
+            "sy": 0.66,
+            "fov": 28,
+            "roll": 0
+          },
+          {
+            "at": "countdown",
+            "daz": 8,
+            "el": 19,
+            "la": 0.94,
+            "sx": 0.83,
+            "sy": 0.67,
+            "fov": 27,
+            "roll": 0
+          }
+        ]
+      },
+      "spin": 18,
+      "spin_note": "le_gpu, Nov 7: the final-chorus block's earth.spin keys are the blocking's own dive choreography (18 -> -20 in 1.5 beats at bar 7.2, then a 147 deg step to COUNTDOWN_SPIN at bar 9.3, meant to happen inside the cloud deck). In the orbital they showed as a 38 deg whip at 175.5-176.7 s and a hard pop at 180.67 s (frame 5420->5421, mean diff 15-26/255). A Living Earth shot with `spin` holds that value (deg, the same unit as the sections' earth.spin) for its whole length; 18 is the value the shot had for its first 21.5 s (the stills the CD saw at 154/162/170 s). Only the geography of the last 10 s changes."
+    }
+  }
+}

@@ -1,0 +1,7 @@
+build/
+node_modules/
+remotion/public/
+*.blend
+*.blend1
+__pycache__/
+._*

@@ -1,0 +1,6 @@
+# Minimal song.yaml (Nov 6, CD concepts pass) so studio.review can build pages for this film.
+# Audio: her Sun Nov 8 take (her call 11:21: "Yeah today's version"); the Nov 6 `You Say You Needed Space.wav` is retired.
+title: You Said You Needed Space
+slug: you-said-you-needed-space
+audio: "You Said You Needed Space (clean).wav"   # hum notched by studio.clean (27 + 850 + 900 Hz); original: You Said You Needed Space.wav
+model: Claude Fable 5.1   # her "Yes", Nov 6 17:45 PT: the whole film is made with Fable (covers read "Made with Claude Fable 5.1")

@@ -1,0 +1,72 @@
+"""him_post.py: Blender RGBA frames of him -> the film's him layer (earth_him_wire, Nov 9).
+  .venv/bin/python living_earth/him3d/him_post.py <run> <169|916> <src dir with him_#####.png + meta.json> <version tag>
+  .venv/bin/python living_earth/him3d/him_post.py --manifest live|stage   rewrite remotion/src/le/film/him/manifest.gen.ts from the LIVE clips
+                                                                          (build/him_wire/manifest_live) or from everything posted (staging, for my own bundle)
+  .venv/bin/python living_earth/him3d/him_post.py --promote <run> [...]    a posted clip goes live (both formats), then the live manifest is rewritten
+Per frame: soften to the master's sharpness, let his real lights bloom (as him_comp.py did: only what is really bright), fade with
+the run's alpha (meta.json), crop to what is left, write an 8-bit straight-alpha PNG to remotion/public/le/him/<run>_<ver>/<fmt>/h_<film frame>.png.
+The bloom is baked into the same PNG as a coloured translucent halo (screen over the plate ~ "over" with alpha = the halo's brightest channel).
+Then the manifest (frame -> crop box + how much of him is there) is regenerated; frames are written BEFORE the manifest names them."""
+import cv2, json, numpy as np, os, sys, glob, time
+SONG = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+PUB = os.path.join(SONG, 'remotion/public'); MAN = os.path.join(SONG, 'build/him_wire/manifest'); LIVE = os.path.join(SONG, 'build/him_wire/manifest_live'); GEN = os.path.join(SONG, 'remotion/src/le/film/him/manifest.gen.ts')
+G = lambda im, s: cv2.GaussianBlur(im, (0, 0), s)
+
+def post(run, fmt, src, ver, bloom_gain=1.0):
+    meta = json.load(open(os.path.join(src, 'meta.json'))); W, H = meta['res']; k = W / 2560 if fmt == '169' else 0.675
+    tr = json.load(open(os.path.join(SONG, 'build/him_wire/tracks', run + '.json')))
+    rel = f'le/him/{run}_{ver}/{fmt}'; out = os.path.join(PUB, rel); os.makedirs(out, exist_ok=True); frames = {}; t0 = time.time()
+    for m in meta['frames']:
+        f = m['f']; p = os.path.join(src, f'him_{f:05d}.png')
+        if m['alpha'] <= 0.004 or not os.path.exists(p): continue
+        im = cv2.imread(p, cv2.IMREAD_UNCHANGED).astype(np.float32); im /= 65535.0 if im.max() > 255 else 255.0
+        if im.shape[1] != W: im = cv2.resize(im, (W, H), interpolation=cv2.INTER_CUBIC)       # a half-size test render
+        a = im[..., 3]; ys, xs = np.nonzero(a > 0.002)
+        if not len(xs): continue
+        mg = int(230 * k); x0, x1, y0, y1 = max(0, xs.min() - mg), min(W, xs.max() + mg + 1), max(0, ys.min() - mg), min(H, ys.max() + mg + 1)
+        rgb, a = im[y0:y1, x0:x1, :3], im[y0:y1, x0:x1, 3:4]
+        pm = G(np.concatenate([rgb * a, a], axis=2), 0.5 * k if fmt == '169' else 0.4); a = pm[..., 3:4]; pm = pm[..., :3]
+        lum = rgb.max(axis=2, keepdims=True); hot = pm * np.clip((lum - 0.80) / 0.2, 0, 1)
+        bloom = np.clip((0.55 * G(hot, 7 * k) + 0.45 * G(hot, 26 * k) + 0.25 * G(hot, 70 * k)) * bloom_gain, 0, 1)
+        C = 1 - (1 - np.clip(pm, 0, 1)) * (1 - bloom); A = 1 - (1 - a) * (1 - bloom.max(axis=2, keepdims=True))
+        C *= m['alpha']; A *= m['alpha']
+        ys, xs = np.nonzero(A[..., 0] > 1.2 / 255)
+        if not len(xs): continue
+        cx0, cx1, cy0, cy1 = xs.min(), xs.max() + 1, ys.min(), ys.max() + 1; C, A = C[cy0:cy1, cx0:cx1], A[cy0:cy1, cx0:cx1]
+        rs = np.random.default_rng(f); st = np.concatenate([C / np.maximum(A, 1e-4), A], axis=2) * 255 + rs.uniform(-0.5, 0.5, (*A.shape[:2], 4)).astype(np.float32) * (A < 0.999)
+        cv2.imwrite(os.path.join(out, f'h_{f:05d}.png'), np.clip(st + 0.5, 0, 255).astype(np.uint8), [cv2.IMWRITE_PNG_COMPRESSION, 4])
+        w = (tr[fmt]['frames'][f - tr['f0']].get('w') or 0.0) if tr['f0'] <= f <= tr['f1'] else 0.0
+        frames[f] = [int(x0 + cx0), int(y0 + cy0), int(cx1 - cx0), int(cy1 - cy0), int(round(100 * min(1.0, m['alpha'] / max(w, 1e-3))))]
+    os.makedirs(MAN, exist_ok=True)
+    json.dump(dict(run=run, ver=ver, fmt=fmt, slots=tr['slots'], res=[W, H], dir=rel, frames=frames), open(os.path.join(MAN, f'{run}_{fmt}.json'), 'w'))
+    sz = sum(os.path.getsize(x) for x in glob.glob(out + '/h_*.png')) / 1e6
+    print(f'[him_post] {run} {fmt} {ver}: {len(frames)} frames -> {out} ({sz:.0f} MB, {time.time() - t0:.0f} s)')
+
+def manifest(src=None):
+    clips = {'169': [], '916': []}; os.makedirs(LIVE, exist_ok=True)
+    for p in sorted(glob.glob((src or LIVE) + '/*.json')):
+        m = json.load(open(p)); fr = {int(k): v for k, v in m['frames'].items()}
+        if not fr or any(not os.path.exists(os.path.join(PUB, m['dir'], f'h_{f:05d}.png')) for f in fr): print('[manifest] skip (frames missing)', p); continue
+        f0, f1 = min(fr), max(fr)
+        clips[m['fmt']].append(dict(run=m['run'], slots=m['slots'], dir=m['dir'], f0=f0, res=m['res'], fr=[fr.get(f) for f in range(f0, f1 + 1)]))
+    body = json.dumps(clips, separators=(',', ':'))
+    src = ("// GENERATED by living_earth/him3d/him_post.py (earth_him_wire): the 3D him clips that exist under public/. Do not edit.\n"
+           "// fr[i] = film frame f0 + i: [x, y, w, h (px in res), cover 0..100 = how much of him is on screen apart from the engine's slot blend] or null.\n"
+           "export type HimFr = [number, number, number, number, number] | null;\n"
+           "export type HimClip = { run: string; slots: string[]; dir: string; f0: number; res: [number, number]; fr: HimFr[] };\n"
+           f"export const HIM_CLIPS = {body} as unknown as Record<'169' | '916', HimClip[]>;\n")
+    tmp = GEN + '.tmp'; open(tmp, 'w').write(src); os.replace(tmp, GEN)
+    print('[manifest]', {k: [c['run'] for c in v] for k, v in clips.items()})
+
+if __name__ == '__main__':
+    import shutil
+    if sys.argv[1] == '--manifest': manifest(MAN if sys.argv[2] == 'stage' else LIVE)
+    elif sys.argv[1] == '--promote':
+        os.makedirs(LIVE, exist_ok=True)
+        for run in sys.argv[2:]:
+            for fmt in ('169', '916'):
+                p = os.path.join(MAN, f'{run}_{fmt}.json')
+                if os.path.exists(p): shutil.copy(p, LIVE); print('[promote]', run, fmt, json.load(open(p))['ver'])
+                else: print('[promote] no clip', run, fmt)
+        manifest(LIVE)
+    else: post(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], float(sys.argv[5]) if len(sys.argv) > 5 else 1.0)
