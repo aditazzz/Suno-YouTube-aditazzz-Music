@@ -1,0 +1,36 @@
+{
+ "shot": "s47",
+ "what": "Ooh, look what we can do: the push continues to the window (reflections, then full light on 'do')",
+ "keys": [
+  {
+   "t": 124.04,
+   "pos": [
+    3.4,
+    16.8,
+    26
+   ],
+   "target": [
+    4,
+    17.6,
+    0
+   ],
+   "fov": 27,
+   "roll": 0
+  },
+  {
+   "t": 125.7,
+   "pos": [
+    4,
+    18,
+    5
+   ],
+   "target": [
+    4,
+    18,
+    -10
+   ],
+   "fov": 32,
+   "roll": 0
+  }
+ ]
+}

@@ -1,0 +1,1780 @@
+{
+ "heading": "Run It \u00b7 rough cut plan (creative director, Nov 9 2026)",
+ "label": "rough cut",
+ "end": 198.0,
+ "fps": 30,
+ "covers": "Every lyric prompt, the downbeat its world change lands on, the audio edits. at = the world change (the picture's shot boundary; review stills show the result), sung = the prompt's sung onset, land = the downbeat (bar from the drum-MIDI tempo map). Plan: ROUGHCUT_PLAN.md.",
+ "grammar": "Each word types into the prompt bar on its sung onset. The world change lands on the first downbeat at or after the line's payoff word (payoff - 0.30 s): in the verses that is the next bar's kick (type, then the band executes it), in the choruses it falls on the word itself. 0.30 s before the land the payoff word lifts out of the bar and flies to what it changes, arriving on the downbeat. Exceptions are named per shot (bridge pairs on beat 3, the stop at bar 20 beat 2).",
+ "audio_edits": [
+  {
+   "id": "E1",
+   "name": "the stop before the first chorus (recommended; A/B in the rough cut)",
+   "cut": 38.21,
+   "back": 39.68,
+   "what": "Mix out at bar 20 beat 2 (the song already drops its drums there); vocal stem alone for 'Watch me make it' and the 'Bigger' pickup; the full mix back hard on bar 21 = CH1. 4 ms ramps at the cut, none at the return."
+  },
+  {
+   "id": "E2",
+   "name": "the zero-g silence (recommended)",
+   "cut": 92.75,
+   "back": 94.7,
+   "what": "Mix out on bar 48 (drums already drop here); vocal stem alone for 'put the car back first' and the 'Bigger' pickup (94.21); the full mix back on bar 49 = CH2, with the car's impact."
+  },
+  {
+   "id": "E3",
+   "name": "the crash: dead silence at 'Out of memory.' (her ask)",
+   "cut": 151.42,
+   "vocal_in": 154.36,
+   "vocal_out": 155.34,
+   "back": 155.34,
+   "what": "Hard cut of everything on bar 78 (3 ms ramp, so it's a cut, not a click). 151.42-154.36 is pure digital silence (2.94 s). 154.36-155.34 the vocal stem alone: 'Out of memory.' (mute the stem's -60 dB 'time' reverb tail before it). The mix returns on bar 80 with the song's own 3-beat drum hit = the reboot. Music fully out 3.92 s. If 2.94 s of silence tests long, the fallback cut is bar 78 beat 3 (152.40)."
+  },
+  {
+   "id": "E4",
+   "name": "the outro: whisper over a fading pulse (her ask)",
+   "cut": 178.83,
+   "end": 198.0,
+   "what": "From bar 92 (178.83, after 'Take me back' ends 178.24) the full mix is replaced (one-beat crossfade) by: a pulse = the drum stem's kick (low-passed ~180 Hz) + the synth stem pad, fading from -10 dB at 178.83 to -30 dB by bar 100 (194.48); and the vocal stem's 'Undo.' (180.40, 186.00, 188.00), 'Perfect.' (194.64), 'Ship it.' (195.44) treated as a whisper (about -8 dB, high-pass 180 Hz, de-essed, a little air at 10 kHz, short dark room). The 'ho' ad-libs (~181.8, ~183.6) come out. The song's loud last hit (195.95-196.93, the loudest moment of the track) comes out. On bar 101 (196.44): one soft kick + one UI click (the cursor clicking the dot), then the pad alone to 198.00 at the opening pad's level (-31 dB at 0:00), so the audio loops into the first frame too. A true whisper can't be made from a sung take: the rough cut uses the treated stem; for the master a real whispered take of the five words is better (fork in the plan)."
+  }
+ ],
+ "shots": [
+  {
+   "at": 0.0,
+   "t": 1.6,
+   "title": "s01 Cold open: the white page (frame 0 = the end of the loop)",
+   "sec": "INTRO",
+   "text": "prompt bar centred, empty, cursor blinking in half notes \u00b7 MEMORY 0%",
+   "meter": "0% #ececf2 (white)",
+   "change": "Frame 0 is the last frame of 'Ship it.': the white bloom from the clicked dot settling into a paper-white page (#F4F3F0, faint grey dot grid). The bar sits centred like a fresh session; the cursor blinks on the pad's pulse.",
+   "medium": "2D Remotion",
+   "cam": "locked, a 2% breathing drift",
+   "eggs": "none yet: the frame is the first loop seam (it IS the last frame's bloom).",
+   "notes": "Never black. This is also the end card of the loop, so it must read as a clean, deliberate design frame."
+  },
+  {
+   "at": 5.99,
+   "t": 6.44,
+   "title": "s02 New session.",
+   "sec": "INTRO",
+   "lyric": "New session.",
+   "sung": [
+    {
+     "line": "New session.",
+     "sung": 4.56
+    }
+   ],
+   "land": 5.99,
+   "land_bar": "bar 4",
+   "payoff_word": "session @ 5.04",
+   "text": "\u203a New session. \u00b7 MEMORY 0% (the meter builds in)",
+   "meter": "0% #ececf2 (white)",
+   "change": "The session opens: the dot grid fades in from the bar outward in a ring wave, the MEMORY meter draws itself top right at 0%. UI springs (no pops).",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "the meter's empty track ticks on the pad's quarter notes before anything is in memory."
+  },
+  {
+   "at": 11.96,
+   "t": 12.41,
+   "title": "s03 Blank page: pull back to the infinite canvas",
+   "sec": "INTRO",
+   "lyric": "Blank page.",
+   "sung": [
+    {
+     "line": "Blank page.",
+     "sung": 11.2
+    }
+   ],
+   "land": 11.96,
+   "land_bar": "bar 7",
+   "payoff_word": "page @ 11.60",
+   "text": "\u203a Blank page. \u00b7 MEMORY 0%",
+   "meter": "0% #ececf2 (white)",
+   "change": "One fast eased pull-back (bass downbeat): our frame is a single white artboard 'Frame 1 \u00b7 1920x1080' on a light-grey infinite canvas. Around it, faint greyed ghost artboards: the whole film as a storyboard.",
+   "medium": "2D Remotion",
+   "cam": "dolly out x6 in 0.9 s, ease-out, settle",
+   "eggs": "the ghost artboards are labelled with the film's later scenes (city \u00b7 moons \u00b7 out of memory \u00b7 undo) with tiny thumbnails: the whole plan is on screen at 0:12, pause to read it."
+  },
+  {
+   "at": 15.92,
+   "t": 16.37,
+   "title": "s04 Okay. Let's go. (drums in: slam into the frame)",
+   "sec": "INTRO",
+   "lyric": "Okay. / Let's go.",
+   "sung": [
+    {
+     "line": "Okay.",
+     "sung": 14.32
+    },
+    {
+     "line": "Let's go.",
+     "sung": 15.2
+    }
+   ],
+   "land": 15.92,
+   "land_bar": "bar 9",
+   "payoff_word": "go @ 15.68",
+   "text": "\u203a Okay. \u2192 \u203a Let's go. \u00b7 MEMORY 1%",
+   "meter": "1% #ececf2 (white)",
+   "change": "Grouped (two short words, one downbeat): on bar 9, where the drums enter, the camera slams back into the artboard in 3 frames, the artboard fills the screen exactly; every kick from here sends a shockwave through the dot grid.",
+   "medium": "2D Remotion",
+   "cam": "dolly in, 3-frame slam, 1-frame overshoot, settle",
+   "eggs": "the artboard label flips to 'Frame 1 \u00b7 recording?' for one frame.",
+   "notes": "The first drum hit of the song is the first hard move of the film."
+  },
+  {
+   "at": 17.9,
+   "t": 18.35,
+   "title": "s05 Make the screen go dark",
+   "sec": "V1",
+   "lyric": "Make the screen go dark",
+   "sung": [
+    {
+     "line": "Make the screen go dark",
+     "sung": 16.24
+    }
+   ],
+   "land": 17.9,
+   "land_bar": "bar 10",
+   "payoff_word": "dark @ 17.12",
+   "text": "\u203a Make the screen go dark \u00b7 MEMORY 1%",
+   "meter": "1% #ececf2 (white)",
+   "change": "The white page inverts to near-black (#050507) in an iris that opens from the prompt bar, 6 frames, on the downbeat. The dot grid goes from grey-on-white to white at 8%. Biggest luminance change in the film.",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "the artboard label (now tiny, bottom-left) renames to 'Frame 1 (dark mode)'."
+  },
+  {
+   "at": 19.88,
+   "t": 20.33,
+   "title": "s06 Put a little dot in the middle",
+   "sec": "V1",
+   "lyric": "Put a little dot in the middle",
+   "sung": [
+    {
+     "line": "Put a little dot in the middle",
+     "sung": 17.76
+    }
+   ],
+   "land": 19.88,
+   "land_bar": "bar 11",
+   "payoff_word": "middle @ 19.04",
+   "text": "\u203a Put a little dot in the middle \u00b7 MEMORY 2%",
+   "meter": "2% #ececf2 (white)",
+   "change": "A white dot drops into dead centre with squash, overshoot and settle; nearby grid dots catch its light.",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "it lands 1 px off centre and nudges itself to centre on beat 2."
+  },
+  {
+   "at": 21.86,
+   "t": 22.31,
+   "title": "s07 Make it breathe to the kick",
+   "sec": "V1",
+   "lyric": "Make it breathe to the kick",
+   "sung": [
+    {
+     "line": "Make it breathe to the kick",
+     "sung": 19.76
+    }
+   ],
+   "land": 21.86,
+   "land_bar": "bar 12",
+   "payoff_word": "kick @ 21.04",
+   "text": "\u203a Make it breathe to the kick \u00b7 MEMORY 2%",
+   "meter": "2% #ececf2 (white)",
+   "change": "The dot starts breathing on every real kick (drum MIDI kick notes): scale +14% on the hit, ease back over the beat, a thin ring ripples out and lights the grid as it passes.",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "the rings only fire on kicks, never on snares: pause on a snare frame, the dot is at rest."
+  },
+  {
+   "at": 23.85,
+   "t": 24.3,
+   "title": "s08 Make it pink, a little pinker",
+   "sec": "V1",
+   "lyric": "Make it pink, a little pinker",
+   "sung": [
+    {
+     "line": "Make it pink, a little pinker",
+     "sung": 21.76
+    }
+   ],
+   "land": 23.85,
+   "land_bar": "bar 13",
+   "payoff_word": "pinker @ 23.04",
+   "text": "\u203a Make it pink, a little pinker \u00b7 MEMORY 3% (approved frame 1)",
+   "meter": "3% #ececf2 (white)",
+   "change": "Pink on the downbeat (#ff8fc0), 'a little pinker' one beat later (#ff6fae). Pink is the dot's colour for the rest of the film and appears nowhere else.",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "the colour picker swatch flashes by the dot for 4 frames with the hex: #FF6FAE."
+  },
+  {
+   "at": 25.83,
+   "t": 26.28,
+   "title": "s09 Give me one red button",
+   "sec": "V1",
+   "lyric": "Give me one red button",
+   "sung": [
+    {
+     "line": "Give me one red button",
+     "sung": 24.16
+    }
+   ],
+   "land": 25.83,
+   "land_bar": "bar 14",
+   "payoff_word": "button @ 24.96",
+   "text": "\u203a Give me one red button \u00b7 MEMORY 4%",
+   "meter": "4% #ececf2 (white)",
+   "change": "An unlabeled red button pops (squash/settle) bottom right, at the approved frame-1 spot.",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "it casts a faint red light on the grid, like the dot casts pink."
+  },
+  {
+   "at": 27.81,
+   "t": 28.26,
+   "title": "s10 Don't tell me what it does",
+   "sec": "V1",
+   "lyric": "Don't tell me what it does",
+   "sung": [
+    {
+     "line": "Don't tell me what it does",
+     "sung": 25.76
+    }
+   ],
+   "land": 27.81,
+   "land_bar": "bar 15",
+   "payoff_word": "does @ 26.88",
+   "text": "\u203a Don't tell me what it does \u00b7 MEMORY 4%",
+   "meter": "4% #ececf2 (white)",
+   "change": "A tooltip starts to rise from the button ('This button\u2026') and is redacted to a black bar on the downbeat.",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "the redacted text, on a single frame before the bar lands, reads 'starts recording'."
+  },
+  {
+   "at": 29.8,
+   "t": 30.25,
+   "title": "s11 Nobody touch it",
+   "sec": "V1",
+   "lyric": "Nobody touch it",
+   "sung": [
+    {
+     "line": "Nobody touch it",
+     "sung": 27.36
+    }
+   ],
+   "land": 29.8,
+   "land_bar": "bar 16",
+   "payoff_word": "it @ 28.32",
+   "text": "\u203a Nobody touch it \u00b7 MEMORY 5%",
+   "meter": "5% #ececf2 (white)",
+   "change": "A clear glass safety cover drops over the button and clicks shut on the downbeat.",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "a tiny pigeon silhouette crosses the top of frame for 6 frames (the pigeon that presses it later)."
+  },
+  {
+   "at": 31.78,
+   "t": 32.23,
+   "title": "s12 Okay, now press it (the press)",
+   "sec": "V1",
+   "lyric": "Okay, now press it",
+   "sung": [
+    {
+     "line": "Okay, now press it",
+     "sung": 29.28
+    }
+   ],
+   "land": 31.78,
+   "land_bar": "bar 17",
+   "payoff_word": "it @ 30.32",
+   "text": "\u203a Okay, now press it \u00b7 MEMORY 6% \u00b7 '\u25cf REC 00:00' appears",
+   "meter": "6% #ececf2 (white)",
+   "change": "The cursor flips the cover and presses on the downbeat: a zoom punch on the kick, the grid flashes once, and a small '\u25cf REC' timecode starts by the meter. The canvas has a camera now: everything after can move.",
+   "medium": "2D Remotion",
+   "cam": "zoom punch 6% in 2 frames, settle over 10",
+   "eggs": "the REC clock counts the real film time from the press; it is the answer to 'what does it do' (it started recording this video)."
+  },
+  {
+   "at": 33.76,
+   "t": 34.21,
+   "title": "s13 Zoom in, zoom out",
+   "sec": "PRE1",
+   "lyric": "Zoom in, zoom out",
+   "sung": [
+    {
+     "line": "Zoom in, zoom out",
+     "sung": 31.84
+    }
+   ],
+   "land": 33.76,
+   "land_bar": "bar 18",
+   "payoff_word": "out @ 33.04",
+   "text": "\u203a Zoom in, zoom out \u00b7 MEMORY 7%",
+   "meter": "7% #ececf2 (white)",
+   "change": "Zoom in on the downbeat (x3 into the dot), zoom out on beat 3 (back past the full frame).",
+   "medium": "2D Remotion",
+   "cam": "two eased zooms, beat 1 and beat 3",
+   "eggs": "at x3 the grid dots are tiny artboards too (fractal canvas)."
+  },
+  {
+   "at": 35.74,
+   "t": 36.19,
+   "title": "s14 Turn the whole thing upside down",
+   "sec": "PRE1",
+   "lyric": "Turn the whole thing upside down",
+   "sung": [
+    {
+     "line": "Turn the whole thing upside down",
+     "sung": 33.44
+    }
+   ],
+   "land": 35.74,
+   "land_bar": "bar 19",
+   "payoff_word": "down @ 34.96",
+   "text": "\u203a Turn the whole thing upside down \u00b7 MEMORY 8%",
+   "meter": "8% #ececf2 (white)",
+   "change": "The whole canvas rolls 180 degrees over the bar; the UI (bar, meter) stays upright in screen space.",
+   "medium": "2D Remotion",
+   "cam": "roll 180, ease in-out over 4 beats",
+   "eggs": "upside down, the red button's shadow falls up."
+  },
+  {
+   "at": 37.72,
+   "t": 38.11,
+   "title": "s15 One more thing, one more thing",
+   "sec": "PRE1",
+   "lyric": "One more thing, one more thing",
+   "sung": [
+    {
+     "line": "One more thing, one more thing",
+     "sung": 35.44
+    }
+   ],
+   "land": 37.72,
+   "land_bar": "bar 20",
+   "payoff_word": "thing @ 36.96",
+   "text": "\u203a One more thing, one more thing \u00b7 MEMORY 9%",
+   "meter": "9% #ececf2 (white)",
+   "change": "Two more things pop around the dot on the downbeat and beat 3: a second, tiny red button and a tiny pigeon.",
+   "medium": "2D Remotion",
+   "cam": "roll back to upright on the downbeat",
+   "eggs": "the tiny red button is unlabeled too; the pigeon is the one from 0:30."
+  },
+  {
+   "at": 38.21,
+   "t": 38.66,
+   "title": "s16 Watch me make it (the stop: music out)",
+   "sec": "PRE1",
+   "lyric": "Watch me make it",
+   "sung": [
+    {
+     "line": "Watch me make it",
+     "sung": 37.84
+    }
+   ],
+   "land": 38.21,
+   "land_bar": "bar 20 beat 2",
+   "text": "\u203a Watch me make it \u00b7 MEMORY 9%",
+   "meter": "9% #ececf2 (white)",
+   "change": "AUDIO EDIT E1: at bar 20 beat 2 (where the song's drums stop) the music cuts out; only her voice. The picture freezes mid-move, the cursor hovers, one held breath. The prompt lands with the drop (next shot).",
+   "medium": "2D Remotion",
+   "cam": "freeze",
+   "eggs": "the REC clock keeps counting through the freeze.",
+   "notes": "Deliberate grouping: this prompt's world change IS the drop at 39.68, shared with 'Bigger, brighter'."
+  },
+  {
+   "at": 39.68,
+   "t": 40.13,
+   "title": "s17 Bigger, brighter (the first drop)",
+   "sec": "CH1",
+   "lyric": "Bigger, brighter",
+   "sung": [
+    {
+     "line": "Bigger, brighter",
+     "sung": 39.24
+    }
+   ],
+   "land": 39.68,
+   "land_bar": "bar 21",
+   "payoff_word": "brighter @ 39.84",
+   "text": "\u203a Bigger, brighter \u00b7 MEMORY 11%",
+   "meter": "11% #ececf2 (white)",
+   "change": "Music back hard. The dot scales x3, the whole canvas brightens a stop, bloom restrained; every element jumps to life on the kick.",
+   "medium": "2D Remotion",
+   "cam": "push in + parallax wake",
+   "eggs": "none (pure impact)."
+  },
+  {
+   "at": 41.65,
+   "t": 42.1,
+   "title": "s18 Light it up, set it on fire",
+   "sec": "CH1",
+   "lyric": "Light it up, set it on fire",
+   "sung": [
+    {
+     "line": "Light it up, set it on fire",
+     "sung": 40.72
+    }
+   ],
+   "land": 41.65,
+   "land_bar": "bar 22",
+   "payoff_word": "fire @ 41.68",
+   "text": "\u203a Light it up, set it on fire \u00b7 MEMORY 13%",
+   "meter": "13% #ececf2 (white)",
+   "change": "Lands on 'fire': flat vector flames ring the dot (warm amber, geometric, not photoreal), light beams sweep.",
+   "medium": "2D Remotion",
+   "cam": "slow push",
+   "eggs": "the flames are the same five shapes as the dot's breathing rings, cut up."
+  },
+  {
+   "at": 43.61,
+   "t": 44.06,
+   "title": "s19 Make it spin, make it shine",
+   "sec": "CH1",
+   "lyric": "Make it spin, make it shine",
+   "sung": [
+    {
+     "line": "Make it spin, make it shine",
+     "sung": 42.52
+    }
+   ],
+   "land": 43.61,
+   "land_bar": "bar 23",
+   "payoff_word": "spin @ 43.76",
+   "text": "\u203a Make it spin, make it shine \u00b7 MEMORY 15%",
+   "meter": "15% #ececf2 (white)",
+   "change": "Spin on the downbeat ('spin' 43.36): the composition rotates; 'shine' on beat 3: a specular sweep across every shape.",
+   "medium": "2D Remotion",
+   "cam": "counter-rotation so the dot stays upright",
+   "eggs": "the red button spins the other way."
+  },
+  {
+   "at": 45.58,
+   "t": 46.03,
+   "title": "s20 Make the whole world move in time",
+   "sec": "CH1",
+   "lyric": "Make the whole world move in time",
+   "sung": [
+    {
+     "line": "Make the whole world move in time",
+     "sung": 45.28
+    }
+   ],
+   "land": 45.58,
+   "land_bar": "bar 24",
+   "payoff_word": "whole @ 45.68",
+   "text": "\u203a Make the whole world move in time \u00b7 MEMORY 17%",
+   "meter": "17% #ececf2 (white)",
+   "change": "Every element bounces on every beat (not just kicks), in unison: the canvas becomes a metronome.",
+   "medium": "2D Remotion",
+   "cam": "locked so the unison reads",
+   "eggs": "one grid dot is a beat late, every bar."
+  },
+  {
+   "at": 47.55,
+   "t": 48.0,
+   "title": "s21 Bigger, louder",
+   "sec": "CH1",
+   "lyric": "Bigger, louder",
+   "sung": [
+    {
+     "line": "Bigger, louder",
+     "sung": 47.2
+    }
+   ],
+   "land": 47.55,
+   "land_bar": "bar 25",
+   "payoff_word": "louder @ 47.68",
+   "text": "\u203a Bigger, louder \u00b7 MEMORY 19%",
+   "meter": "19% #ececf2 (white)",
+   "change": "Camera pulls back to show twice as much canvas filling up; speaker-cone rings pulse out from the dot.",
+   "medium": "2D Remotion",
+   "cam": "pull back x2",
+   "eggs": "the ghost artboards from 0:12 come back into view at the edges."
+  },
+  {
+   "at": 49.51,
+   "t": 49.96,
+   "title": "s22 Turn the bass into a tower",
+   "sec": "CH1",
+   "lyric": "Turn the bass into a tower",
+   "sung": [
+    {
+     "line": "Turn the bass into a tower",
+     "sung": 48.32
+    }
+   ],
+   "land": 49.51,
+   "land_bar": "bar 26",
+   "payoff_word": "tower @ 49.60",
+   "text": "\u203a Turn the bass into a tower \u00b7 MEMORY 21%",
+   "meter": "21% #ececf2 (white)",
+   "change": "Lands on 'tower': the bass becomes a stacked-bar tower rising from behind the dot, each block driven by the real bass stem level.",
+   "medium": "2D Remotion",
+   "cam": "tilt up with the tower",
+   "eggs": "the tower is the first building of the V2 city (same silhouette, same windows)."
+  },
+  {
+   "at": 51.48,
+   "t": 51.93,
+   "title": "s23 Run it, run it / Let me see what we can do",
+   "sec": "CH1",
+   "lyric": "Run it, run it / Let me see what we can do",
+   "sung": [
+    {
+     "line": "Run it, run it",
+     "sung": 50.64
+    },
+    {
+     "line": "Let me see what we can do",
+     "sung": 51.36
+    }
+   ],
+   "land": 51.48,
+   "land_bar": "bar 27",
+   "payoff_word": "run @ 50.64",
+   "text": "\u203a Run it, run it \u2192 \u203a Let me see what we can do \u00b7 MEMORY 24%",
+   "meter": "24% #ececf2 (white)",
+   "change": "Grouped (the two lines overlap one downbeat): on bar 27 a '\u25b6 Run' plays the whole composition at full speed; across the held 'do' the camera swoops 180 degrees around it (2.5D parallax) and every shape snaps into one formation on bar 29 (55.41).",
+   "medium": "2D Remotion",
+   "cam": "180-degree 2.5D swoop bars 27-29",
+   "eggs": "the formation is the film's loop symbol: a circle with an arrow."
+  },
+  {
+   "at": 59.35,
+   "t": 59.8,
+   "title": "s24 Run it (run it): 1 becomes 4",
+   "sec": "POST1",
+   "lyric": "Run it (run it)",
+   "sung": [
+    {
+     "line": "Run it (run it)",
+     "sung": 57.52
+    }
+   ],
+   "land": 59.35,
+   "land_bar": "bar 31",
+   "payoff_word": "(run @ 58.32",
+   "text": "\u203a Run it (run it) \u00b7 MEMORY 27%",
+   "meter": "27% #ececf2 (white)",
+   "change": "Her 'Run it' is typed by her cursor, the echo '(run it)' by a second, ghost cursor. The composition duplicates into a 2x2 grid of variants (each slightly different).",
+   "medium": "2D Remotion",
+   "cam": "pull back",
+   "eggs": "the ghost cursor is the model answering: it only ever types what's in parentheses."
+  },
+  {
+   "at": 61.31,
+   "t": 61.76,
+   "title": "s25 Run it (run it): 4 becomes 16",
+   "sec": "POST1",
+   "lyric": "Run it (run it)",
+   "sung": [
+    {
+     "line": "Run it (run it)",
+     "sung": 60.24
+    }
+   ],
+   "land": 61.31,
+   "land_bar": "bar 32",
+   "payoff_word": "run @ 60.24",
+   "text": "\u203a Run it (run it) \u00b7 MEMORY 30%",
+   "meter": "30% #ececf2 (white)",
+   "change": "2x2 becomes 4x4 on the downbeat.",
+   "medium": "2D Remotion",
+   "cam": "pull back",
+   "eggs": "one tile is the film's final frame (white dot + cursor)."
+  },
+  {
+   "at": 67.22,
+   "t": 67.67,
+   "title": "s26 Ooh, look what we can do: the variant wall",
+   "sec": "POST1",
+   "lyric": "Ooh, look what we can do",
+   "sung": [
+    {
+     "line": "Ooh, look what we can do",
+     "sung": 64.24
+    }
+   ],
+   "land": 67.22,
+   "land_bar": "bar 35",
+   "payoff_word": "do @ 66.96",
+   "text": "\u203a Ooh, look what we can do \u00b7 MEMORY 33%",
+   "meter": "33% #ececf2 (white)",
+   "change": "A long drift across a wall of hundreds of variants (instanced), lit by their own dots.",
+   "medium": "2D Remotion",
+   "cam": "slow diagonal truck",
+   "eggs": "one variant on the wall is upside down (the 0:35 roll)."
+  },
+  {
+   "at": 71.15,
+   "t": 71.6,
+   "title": "s27 Ooh, look what we can do: collapse to one dot",
+   "sec": "POST1",
+   "lyric": "Ooh, look what we can do",
+   "sung": [
+    {
+     "line": "Ooh, look what we can do",
+     "sung": 69.12
+    }
+   ],
+   "land": 71.15,
+   "land_bar": "bar 37",
+   "payoff_word": "do @ 70.64",
+   "text": "\u203a Ooh, look what we can do \u00b7 MEMORY 34%",
+   "meter": "34% #ececf2 (white)",
+   "change": "On bar 37 the whole wall collapses into a single pink dot at centre: clean slate for the city.",
+   "medium": "2D Remotion",
+   "cam": "push in to the dot",
+   "eggs": "the collapse is the same move as the outro's undo (foreshadow)."
+  },
+  {
+   "at": 73.12,
+   "t": 73.57,
+   "title": "s28 Turn the dot into a city",
+   "sec": "V2",
+   "lyric": "Turn the dot into a city",
+   "sung": [
+    {
+     "line": "Turn the dot into a city",
+     "sung": 71.04
+    }
+   ],
+   "land": 73.12,
+   "land_bar": "bar 38",
+   "payoff_word": "city @ 72.08",
+   "text": "\u203a Turn the dot into a city \u00b7 MEMORY 36%",
+   "meter": "36% #ececf2 (white)",
+   "change": "The dot unfolds like a pop-up book: buildings rise from it on 16ths, calm blue night, few warm amber windows.",
+   "medium": "2.5D Remotion (layered parallax)",
+   "cam": "slow push, then a lateral truck along the street",
+   "eggs": "the red button reappears on a lamp post (approved frame 2)."
+  },
+  {
+   "at": 75.08,
+   "t": 75.53,
+   "title": "s29 Make it rain on just one side",
+   "sec": "V2",
+   "lyric": "Make it rain on just one side",
+   "sung": [
+    {
+     "line": "Make it rain on just one side",
+     "sung": 72.56
+    }
+   ],
+   "land": 75.08,
+   "land_bar": "bar 39",
+   "payoff_word": "side @ 73.92",
+   "text": "\u203a Make it rain on just one side \u00b7 MEMORY 37%",
+   "meter": "37% #ececf2 (white)",
+   "change": "Rain on the left half only, with a hard vertical edge mid-frame; puddles only on the left.",
+   "medium": "2.5D Remotion",
+   "cam": "truck",
+   "eggs": "a tiny guy with an umbrella stands exactly on the edge, half wet."
+  },
+  {
+   "at": 77.05,
+   "t": 77.5,
+   "title": "s30 Purple Porsche, yellow brakes",
+   "sec": "V2",
+   "lyric": "Purple Porsche, yellow brakes",
+   "sung": [
+    {
+     "line": "Purple Porsche, yellow brakes",
+     "sung": 74.88
+    }
+   ],
+   "land": 77.05,
+   "land_bar": "bar 40",
+   "payoff_word": "brakes @ 76.08",
+   "text": "\u203a Purple Porsche, yellow brakes \u00b7 MEMORY 38% (approved frame 2)",
+   "meter": "38% #ececf2 (white)",
+   "change": "The GT3 RS (Ultraviolet purple, yellow calipers) rolls in and stops with a brake dip on the downbeat; the calipers catch the light.",
+   "medium": "2.5D Remotion (car drawn as approved frame 2)",
+   "cam": "truck matches the car, stops with it",
+   "eggs": "its plate reads RUN IT; it's parked on the dry (right) side."
+  },
+  {
+   "at": 79.02,
+   "t": 79.47,
+   "title": "s31 Make the traffic lights collide",
+   "sec": "V2",
+   "lyric": "Make the traffic lights collide",
+   "sung": [
+    {
+     "line": "Make the traffic lights collide",
+     "sung": 76.48
+    }
+   ],
+   "land": 79.02,
+   "land_bar": "bar 41",
+   "payoff_word": "collide @ 77.60",
+   "text": "\u203a Make the traffic lights collide \u00b7 MEMORY 40%",
+   "meter": "40% #ececf2 (white)",
+   "change": "Two traffic lights (blinking on the hi-hat since the city rose) lean in and bonk on the downbeat; their colours swap.",
+   "medium": "2.5D Remotion",
+   "cam": "locked wide",
+   "eggs": "after the bonk both show green, forever."
+  },
+  {
+   "at": 80.98,
+   "t": 81.43,
+   "title": "s32 Put a little guy in every window",
+   "sec": "V2",
+   "lyric": "Put a little guy in every window",
+   "sung": [
+    {
+     "line": "Put a little guy in every window",
+     "sung": 78.48
+    }
+   ],
+   "land": 80.98,
+   "land_bar": "bar 42",
+   "payoff_word": "window @ 79.68",
+   "text": "\u203a Put a little guy in every window \u00b7 MEMORY 43%",
+   "meter": "43% #ececf2 (white)",
+   "change": "Windows light in a cascade across the skyline, a tiny guy in each (the lyric beats the 'few lit windows' default here; the amber stays low).",
+   "medium": "2.5D Remotion",
+   "cam": "slow push toward one building",
+   "eggs": "one window has two guys (one is the pigeon)."
+  },
+  {
+   "at": 82.95,
+   "t": 83.4,
+   "title": "s33 Make him type like he's wired",
+   "sec": "V2",
+   "lyric": "Make him type like he's wired",
+   "sung": [
+    {
+     "line": "Make him type like he's wired",
+     "sung": 80.32
+    }
+   ],
+   "land": 82.95,
+   "land_bar": "bar 43",
+   "payoff_word": "wired @ 81.84",
+   "text": "\u203a Make him type like he's wired \u00b7 MEMORY 46%",
+   "meter": "46% #ececf2 (white)",
+   "change": "Every guy types on the 16th-note hats; screens flicker in sync.",
+   "medium": "2.5D Remotion",
+   "cam": "push into a window row",
+   "eggs": "readable screens on pause: one types the NEXT lyric before it's sung; 'while True: run_it()'; a bug ticket 'rain only renders on the left half'; one asleep on his keyboard; 'nobody touch the red button'."
+  },
+  {
+   "at": 84.92,
+   "t": 85.37,
+   "title": "s34 Make the pigeons fly in circles / Now a little higher, higher",
+   "sec": "V2",
+   "lyric": "Make the pigeons fly in circles / Now a little higher, higher",
+   "sung": [
+    {
+     "line": "Make the pigeons fly in circles",
+     "sung": 82.4
+    },
+    {
+     "line": "Now a little higher, higher",
+     "sung": 84.08
+    }
+   ],
+   "land": 84.92,
+   "land_bar": "bar 44",
+   "payoff_word": "circles @ 83.60",
+   "text": "\u203a Make the pigeons fly in circles \u2192 \u203a Now a little higher, higher \u00b7 MEMORY 48%",
+   "meter": "48% #ececf2 (white)",
+   "change": "Grouped (both land on bar 44): the pigeons wheel into a circle on the downbeat and climb a step on each held 'higher' (beats 2 and 3).",
+   "medium": "2.5D Remotion",
+   "cam": "tilt up with them",
+   "eggs": "the flock's circle is the loop symbol again."
+  },
+  {
+   "at": 88.84,
+   "t": 89.29,
+   "title": "s35 Turn off gravity",
+   "sec": "PRE2",
+   "lyric": "Turn off gravity",
+   "sung": [
+    {
+     "line": "Turn off gravity",
+     "sung": 86.86,
+     "timing_source": "vocal MIDI (aligner interpolated 85.43)"
+    }
+   ],
+   "land": 88.84,
+   "land_bar": "bar 46",
+   "text": "\u203a Turn off gravity \u00b7 MEMORY 51%",
+   "meter": "51% #ececf2 (white)",
+   "change": "Everything floats up on the downbeat: guys, cars, traffic lights, rain drops hang in the air.",
+   "medium": "2.5D Remotion",
+   "cam": "slow tilt up",
+   "eggs": "the rain on the left keeps its hard edge even while floating."
+  },
+  {
+   "at": 90.8,
+   "t": 91.25,
+   "title": "s36 Just for the birds",
+   "sec": "PRE2",
+   "lyric": "Just for the birds",
+   "sung": [
+    {
+     "line": "Just for the birds",
+     "sung": 89.06,
+     "timing_source": "vocal MIDI (aligner interpolated 87.79)"
+    }
+   ],
+   "land": 90.8,
+   "land_bar": "bar 47",
+   "text": "\u203a Just for the birds \u00b7 MEMORY 52%",
+   "meter": "52% #ececf2 (white)",
+   "change": "Everything drops back down with a squash on the downbeat, except the birds, who keep floating.",
+   "medium": "2.5D Remotion",
+   "cam": "locked",
+   "eggs": "one pigeon floats upside down, delighted."
+  },
+  {
+   "at": 92.75,
+   "t": 93.2,
+   "title": "s37 Now for everybody (Wait,) the zero-g silence",
+   "sec": "PRE2",
+   "lyric": "Now for everybody",
+   "sung": [
+    {
+     "line": "Now for everybody",
+     "sung": 90.53,
+     "timing_source": "vocal MIDI"
+    }
+   ],
+   "land": 92.75,
+   "land_bar": "bar 48",
+   "text": "\u203a Now for everybody \u2192 \u203a Wait, put the car back first \u00b7 MEMORY 55%",
+   "meter": "55% #ececf2 (white)",
+   "change": "AUDIO EDIT E2: on bar 48 the music cuts out (the song already drops its drums here) and everything, the car too, lifts into zero-g in silence. 'Wait,' was typed a beat too late. Over 'put the car back first' the cursor grabs the floating car and drags it down: the only thing moving.",
+   "medium": "2.5D Remotion",
+   "cam": "slow drift in the silence",
+   "eggs": "the tiny guys float out of their windows still typing."
+  },
+  {
+   "at": 94.7,
+   "t": 95.15,
+   "title": "s38 Car back on the road \u2192 Bigger, brighter (the impact is the drop)",
+   "sec": "CH2",
+   "lyric": "Wait, put the car back first / Bigger, brighter",
+   "sung": [
+    {
+     "line": "Wait, put the car back first",
+     "sung": 92.25,
+     "timing_source": "vocal MIDI ('Wait' 92.25, 'put' 92.98)"
+    },
+    {
+     "line": "Bigger, brighter",
+     "sung": 94.4
+    }
+   ],
+   "land": 94.7,
+   "land_bar": "bar 49",
+   "payoff_word": "brighter @ 94.88",
+   "text": "\u203a Bigger, brighter \u00b7 MEMORY 59%",
+   "meter": "59% #ececf2 (white)",
+   "change": "Grouped: the car touches down on beat 4 (94.21, the 'Bigger' pickup) and lands with a squash on bar 49; its impact shockwave IS the chorus: music back, the city jumps bigger and brighter, everything else falls back.",
+   "medium": "2.5D Remotion",
+   "cam": "impact shake (2 frames), push up",
+   "eggs": "the car lands exactly in its old parking spot."
+  },
+  {
+   "at": 96.65,
+   "t": 97.1,
+   "title": "s39 Light it up, set it on fire (city)",
+   "sec": "CH2",
+   "lyric": "Light it up, set it on fire",
+   "sung": [
+    {
+     "line": "Light it up, set it on fire",
+     "sung": 95.44
+    }
+   ],
+   "land": 96.65,
+   "land_bar": "bar 50",
+   "payoff_word": "fire @ 96.88",
+   "text": "\u203a Light it up, set it on fire \u00b7 MEMORY 62%",
+   "meter": "62% #ececf2 (white)",
+   "change": "Fireworks over the skyline on 'fire'; the tower from CH1 lights its crown.",
+   "medium": "2.5D Remotion",
+   "cam": "crane up",
+   "eggs": "the fireworks burst in the shape of the CH1 flames."
+  },
+  {
+   "at": 98.61,
+   "t": 99.06,
+   "title": "s40 Make it spin, make it shine (city)",
+   "sec": "CH2",
+   "lyric": "Make it spin, make it shine",
+   "sung": [
+    {
+     "line": "Make it spin, make it shine",
+     "sung": 98.24
+    }
+   ],
+   "land": 98.61,
+   "land_bar": "bar 51",
+   "payoff_word": "spin @ 98.72",
+   "text": "\u203a Make it spin, make it shine \u00b7 MEMORY 64%",
+   "meter": "64% #ececf2 (white)",
+   "change": "The city turns on a turntable (layered orbit); 'shine' on beat 3: a light sweep across every glass facade.",
+   "medium": "2.5D Remotion",
+   "cam": "2.5D orbit",
+   "eggs": "the rain edge rotates with the city."
+  },
+  {
+   "at": 100.57,
+   "t": 101.02,
+   "title": "s41 Make the whole world move in time (city)",
+   "sec": "CH2",
+   "lyric": "Make the whole world move in time",
+   "sung": [
+    {
+     "line": "Make the whole world move in time",
+     "sung": 100.24
+    }
+   ],
+   "land": 100.57,
+   "land_bar": "bar 52",
+   "payoff_word": "whole @ 100.64",
+   "text": "\u203a Make the whole world move in time \u00b7 MEMORY 66%",
+   "meter": "66% #ececf2 (white)",
+   "change": "Every building bounces on the beat, windows strobe in sync: the city becomes a speaker.",
+   "medium": "2.5D Remotion",
+   "cam": "locked wide",
+   "eggs": "the late grid dot from CH1 is now a late building."
+  },
+  {
+   "at": 102.52,
+   "t": 102.97,
+   "title": "s42 Bigger, louder (city)",
+   "sec": "CH2",
+   "lyric": "Bigger, louder",
+   "sung": [
+    {
+     "line": "Bigger, louder",
+     "sung": 102.16
+    }
+   ],
+   "land": 102.52,
+   "land_bar": "bar 53",
+   "payoff_word": "louder @ 102.72",
+   "text": "\u203a Bigger, louder \u00b7 MEMORY 68%",
+   "meter": "68% #ececf2 (white)",
+   "change": "The camera pulls out to show the city doubled, rings of sound across the rooftops.",
+   "medium": "2.5D Remotion",
+   "cam": "pull back",
+   "eggs": "\u2014"
+  },
+  {
+   "at": 104.48,
+   "t": 104.93,
+   "title": "s43 Turn the bass into a tower (city)",
+   "sec": "CH2",
+   "lyric": "Turn the bass into a tower",
+   "sung": [
+    {
+     "line": "Turn the bass into a tower",
+     "sung": 103.36
+    }
+   ],
+   "land": 104.48,
+   "land_bar": "bar 54",
+   "payoff_word": "tower @ 104.56",
+   "text": "\u203a Turn the bass into a tower \u00b7 MEMORY 70%",
+   "meter": "70% #ececf2 (white)",
+   "change": "The bass tower returns as the city's tallest skyscraper, floors driven by the real bass stem.",
+   "medium": "2.5D Remotion",
+   "cam": "tilt up the tower",
+   "eggs": "its top floor is the red button."
+  },
+  {
+   "at": 106.44,
+   "t": 106.89,
+   "title": "s44 Run it, run it / Let me see what we can do (city)",
+   "sec": "CH2",
+   "lyric": "Run it, run it / Let me see what we can do",
+   "sung": [
+    {
+     "line": "Run it, run it",
+     "sung": 105.68
+    },
+    {
+     "line": "Let me see what we can do",
+     "sung": 106.24
+    }
+   ],
+   "land": 106.44,
+   "land_bar": "bar 55",
+   "payoff_word": "run @ 105.68",
+   "text": "\u203a Run it, run it \u2192 \u203a Let me see what we can do \u00b7 MEMORY 73%",
+   "meter": "73% #ececf2 (white)",
+   "change": "Grouped as in CH1: '\u25b6 Run' plays the city at full speed (traffic streaks, windows cycling), and on bar 57 (110.35, 'do') everything locks into one perfect still pose.",
+   "medium": "2.5D Remotion",
+   "cam": "big 2.5D arc bars 55-57",
+   "eggs": "\u2014"
+  },
+  {
+   "at": 112.3,
+   "t": 112.75,
+   "title": "s45 Run it (run it): render pass 1",
+   "sec": "POST2",
+   "lyric": "Run it (run it)",
+   "sung": [
+    {
+     "line": "Run it (run it)",
+     "sung": 111.1,
+     "timing_source": "vocal MIDI (aligner interpolated 111.28)"
+    }
+   ],
+   "land": 112.3,
+   "land_bar": "bar 58",
+   "text": "\u203a Run it (run it) \u00b7 MEMORY 76% \u00b7 pass label 'shading'",
+   "meter": "76% #ececf2 (white)",
+   "change": "Each 'run it' turns on a render pass: the flat city gets soft shading and ambient occlusion on the downbeat.",
+   "medium": "2.5D Remotion",
+   "cam": "slow push toward one lit window",
+   "eggs": "a small pass label in the corner, like a renderer: shading \u2192 shadows \u2192 reflections \u2192 light."
+  },
+  {
+   "at": 116.21,
+   "t": 116.66,
+   "title": "s46 Run it (run it): render pass 2, the match-cut to 3D",
+   "sec": "POST2",
+   "lyric": "Run it (run it)",
+   "sung": [
+    {
+     "line": "Run it (run it)",
+     "sung": 115.12
+    }
+   ],
+   "land": 116.21,
+   "land_bar": "bar 60",
+   "payoff_word": "run @ 115.12",
+   "text": "\u203a Run it (run it) \u00b7 MEMORY 78% \u00b7 pass 'shadows'",
+   "meter": "78% #ececf2 (white)",
+   "change": "On bar 60 the 2.5D city match-cuts to the Blender city rendered flat (workbench colours matched to the 2.5D palette) and real shadows switch on. The audience can't see the seam; they see light become real.",
+   "medium": "Blender 3D (match-cut from the 2.5D city)",
+   "cam": "same push, now a real 3D camera",
+   "eggs": "\u2014",
+   "notes": "3D earns it: the film's thesis is the quality jump; real shadow, reflection and light can't be faked in 2D."
+  },
+  {
+   "at": 122.08,
+   "t": 122.53,
+   "title": "s47 Ooh, look what we can do: reflections",
+   "sec": "POST2",
+   "lyric": "Ooh, look what we can do",
+   "sung": [
+    {
+     "line": "Ooh, look what we can do",
+     "sung": 116.24
+    }
+   ],
+   "land": 122.08,
+   "land_bar": "bar 63",
+   "payoff_word": "do @ 122.08",
+   "text": "\u203a Ooh, look what we can do \u00b7 MEMORY 81% \u00b7 pass 'reflections'",
+   "meter": "81% #ececf2 (white)",
+   "change": "Through the long held 'Ooh', reflections and wet streets come up pass by pass; on 'do' (bar 63) full lighting: the city is real.",
+   "medium": "Blender 3D",
+   "cam": "push continues to a window",
+   "eggs": "the tiny guys are now real little 3D figures."
+  },
+  {
+   "at": 126.0,
+   "t": 126.45,
+   "title": "s48 Ooh, look what we can do: push through into the world",
+   "sec": "POST2\u2192BRIDGE",
+   "lyric": "Ooh, look what we can do",
+   "sung": [
+    {
+     "line": "Ooh, look what we can do",
+     "sung": 124.0
+    }
+   ],
+   "land": 126.0,
+   "land_bar": "bar 65",
+   "payoff_word": "do @ 125.68",
+   "text": "\u203a Ooh, look what we can do \u00b7 MEMORY 84%",
+   "meter": "84% #ececf2 (white)",
+   "change": "On bar 65 (the bridge's downbeat) the camera pushes through the window and out the far side of the city: a real ocean at night, reflections, a low sun on the horizon.",
+   "medium": "Blender 3D",
+   "cam": "push-through, then a slow crane up",
+   "eggs": "the window we fly through belongs to the guy typing the lyrics."
+  },
+  {
+   "at": 127.96,
+   "t": 128.41,
+   "title": "s49 Add a moon / Add another",
+   "sec": "BRIDGE",
+   "lyric": "Add a moon / Add another",
+   "sung": [
+    {
+     "line": "Add a moon",
+     "sung": 126.4
+    },
+    {
+     "line": "Add another",
+     "sung": 127.36
+    }
+   ],
+   "land": 127.96,
+   "land_bar": "bar 66",
+   "payoff_word": "another @ 127.68",
+   "text": "\u203a Add a moon \u2192 \u203a Add another \u00b7 MEMORY 85%",
+   "meter": "85% #ececf2 (white)",
+   "change": "Two prompts per bar here: moon 1 rises on beat 3 of bar 65 (126.98, on 'moon'), moon 2 on the bar-66 downbeat. Both reflect in the ocean.",
+   "medium": "Blender 3D",
+   "cam": "slow crane",
+   "eggs": "moon 2 is slightly smaller and a little late."
+  },
+  {
+   "at": 129.91,
+   "t": 130.36,
+   "title": "s50 Make them fall in love with each other",
+   "sec": "BRIDGE",
+   "lyric": "Make them fall in love with each other",
+   "sung": [
+    {
+     "line": "Make them fall in love with each other",
+     "sung": 128.32
+    }
+   ],
+   "land": 129.91,
+   "land_bar": "bar 67",
+   "payoff_word": "other @ 129.68",
+   "text": "\u203a Make them fall in love with each other \u00b7 MEMORY 86%",
+   "meter": "86% #ececf2 (white)",
+   "change": "The moons begin to orbit each other, drifting toward the sun (the eclipse is set up here, paid at bar 76).",
+   "medium": "Blender 3D",
+   "cam": "slow orbit",
+   "eggs": "seen from above (bar 75 roll), their orbit trails draw a heart."
+  },
+  {
+   "at": 130.89,
+   "t": 131.34,
+   "title": "s51 Make it tasteful (beat 3)",
+   "sec": "BRIDGE",
+   "lyric": "Make it tasteful",
+   "sung": [
+    {
+     "line": "Make it tasteful",
+     "sung": 130.24
+    }
+   ],
+   "land": 130.89,
+   "land_bar": "bar 67 beat 3",
+   "payoff_word": "tasteful @ 130.56",
+   "text": "\u203a Make it tasteful \u00b7 MEMORY 87%",
+   "meter": "87% #ececf2 (white)",
+   "change": "On the snare (bar 67 beat 3): the grade settles to a restrained film look, saturation down, a soft halo on the moons.",
+   "medium": "Blender 3D",
+   "cam": "\u2014",
+   "eggs": "\u2014"
+  },
+  {
+   "at": 131.87,
+   "t": 132.32,
+   "title": "s52 Make it weird",
+   "sec": "BRIDGE",
+   "lyric": "Make it weird",
+   "sung": [
+    {
+     "line": "Make it weird",
+     "sung": 131.28
+    }
+   ],
+   "land": 131.87,
+   "land_bar": "bar 68",
+   "payoff_word": "weird @ 131.52",
+   "text": "\u203a Make it weird \u00b7 MEMORY 88%",
+   "meter": "88% #ececf2 (white)",
+   "change": "For one bar: the ocean turns to slow liquid chrome and the buildings stretch tall like taffy; clean, not ugly.",
+   "medium": "Blender 3D",
+   "cam": "\u2014",
+   "eggs": "the moons blink."
+  },
+  {
+   "at": 132.84,
+   "t": 133.29,
+   "title": "s53 Make the ocean disappear (beat 3)",
+   "sec": "BRIDGE",
+   "lyric": "Make the ocean disappear",
+   "sung": [
+    {
+     "line": "Make the ocean disappear",
+     "sung": 132.24
+    }
+   ],
+   "land": 132.84,
+   "land_bar": "bar 68 beat 3",
+   "payoff_word": "disappear @ 132.96",
+   "text": "\u203a Make the ocean disappear \u00b7 MEMORY 88%",
+   "meter": "88% #ececf2 (white)",
+   "change": "The ocean is deleted on the snare: underneath is the black design canvas and its dot grid from V1.",
+   "medium": "Blender 3D",
+   "cam": "\u2014",
+   "eggs": "the pink dot is still there, tiny, on the canvas under the sea."
+  },
+  {
+   "at": 135.78,
+   "t": 136.23,
+   "title": "s54 Bring it back / Every wave",
+   "sec": "BRIDGE",
+   "lyric": "Bring it back / Every wave",
+   "sung": [
+    {
+     "line": "Bring it back",
+     "sung": 133.76
+    },
+    {
+     "line": "Every wave",
+     "sung": 134.48
+    }
+   ],
+   "land": 135.78,
+   "land_bar": "bar 70",
+   "payoff_word": "wave @ 134.72",
+   "text": "\u203a Bring it back \u2192 \u203a Every wave \u00b7 MEMORY 89%",
+   "meter": "89% #ececf2 (white)",
+   "change": "The ocean snaps back mirror-flat on beat 3 of bar 69 (134.80, 'back'); on bar 70 every wave rises at once from the centre out.",
+   "medium": "Blender 3D",
+   "cam": "low over the water",
+   "eggs": "\u2014"
+  },
+  {
+   "at": 136.76,
+   "t": 137.21,
+   "title": "s55 Sixty frames, don't make me wait (beat 3)",
+   "sec": "BRIDGE",
+   "lyric": "Sixty frames, don't make me wait",
+   "sung": [
+    {
+     "line": "Sixty frames, don't make me wait",
+     "sung": 135.28
+    }
+   ],
+   "land": 136.76,
+   "land_bar": "bar 70 beat 3",
+   "payoff_word": "wait @ 136.80",
+   "text": "\u203a Sixty frames, don't make me wait \u00b7 MEMORY 90% (amber) \u00b7 '24 fps' \u2192 '60 fps'",
+   "meter": "90% #ffb347 (amber)",
+   "change": "On 'wait' (beat 3, 136.76): an fps readout by the meter flips 24 \u2192 60 and the motion goes from stepped to buttery. The meter turns amber at 90%.",
+   "medium": "Blender 3D",
+   "cam": "\u2014",
+   "eggs": "the readout says 60; the rough cut runs at 30 (a 60 fps master is an option, see the plan)."
+  },
+  {
+   "at": 137.74,
+   "t": 138.19,
+   "title": "s56 Delete Mondays",
+   "sec": "BRIDGE",
+   "lyric": "Delete Mondays",
+   "sung": [
+    {
+     "line": "Delete Mondays",
+     "sung": 137.28
+    }
+   ],
+   "land": 137.74,
+   "land_bar": "bar 71",
+   "payoff_word": "mondays @ 137.68",
+   "text": "\u203a Delete Mondays \u00b7 MEMORY 90%",
+   "meter": "90% #ffb347 (amber)",
+   "change": "A clean week calendar floats over the city; the MON column strikes through and collapses, the week reflows to six days.",
+   "medium": "Blender 3D",
+   "cam": "\u2014",
+   "eggs": "the calendar shows the real week, and Monday Nov 9 2026 (release-night) is the day that gets deleted."
+  },
+  {
+   "at": 139.69,
+   "t": 140.14,
+   "title": "s57 Move the sun",
+   "sec": "BRIDGE",
+   "lyric": "Move the sun",
+   "sung": [
+    {
+     "line": "Move the sun",
+     "sung": 138.4
+    }
+   ],
+   "land": 139.69,
+   "land_bar": "bar 72",
+   "payoff_word": "sun @ 138.88",
+   "text": "\u203a Move the sun \u00b7 MEMORY 91%",
+   "meter": "91% #ffb347 (amber)",
+   "change": "A 3D move gizmo (red/green/blue axis arrows) appears on the sun; the cursor drags it up between the moons.",
+   "medium": "Blender 3D",
+   "cam": "wide",
+   "eggs": "the gizmo snaps the sun to the exact centre of frame (where the dot was)."
+  },
+  {
+   "at": 141.64,
+   "t": 142.09,
+   "title": "s58 Make it vertical for everyone (the car drives up the tower)",
+   "sec": "BRIDGE",
+   "lyric": "Make it vertical for everyone",
+   "sung": [
+    {
+     "line": "Make it vertical for everyone",
+     "sung": 139.52
+    }
+   ],
+   "land": 141.64,
+   "land_bar": "bar 73",
+   "payoff_word": "everyone @ 140.56",
+   "text": "\u203a Make it vertical for everyone \u00b7 MEMORY 92%",
+   "meter": "92% #ffb347 (amber)",
+   "change": "The 16:9 frame squeezes to a 9:16 phone frame for one bar and the camera rolls 90 degrees: the GT3 RS drives straight up the face of the bass tower. Back to 16:9 on bar 74.",
+   "medium": "Blender 3D (hero: the car)",
+   "cam": "roll 90 + pillarbox to 9:16",
+   "eggs": "in the 9:16 deliverable the joke inverts: the frame goes wide for one bar.",
+   "notes": "3D earns it: the car is a hero object and this is its one hero shot."
+  },
+  {
+   "at": 143.6,
+   "t": 144.05,
+   "title": "s59 Make the city clap on two and four",
+   "sec": "BRIDGE",
+   "lyric": "Make the city clap on two and four",
+   "sung": [
+    {
+     "line": "Make the city clap on two and four",
+     "sung": 141.52
+    }
+   ],
+   "land": 143.6,
+   "land_bar": "bar 74",
+   "payoff_word": "four @ 143.12",
+   "text": "\u203a Make the city clap on two and four \u00b7 MEMORY 93%",
+   "meter": "93% #ffb347 (amber)",
+   "change": "Every lit window flashes and the tiny guys clap on beats 2 and 4 (the snare).",
+   "medium": "Blender 3D",
+   "cam": "slow lateral",
+   "eggs": "one tiny guy claps on 1 and 3."
+  },
+  {
+   "at": 145.55,
+   "t": 146.0,
+   "title": "s60 Turn the ceiling into the floor (the roll begins)",
+   "sec": "BRIDGE",
+   "lyric": "Turn the ceiling into the floor",
+   "sung": [
+    {
+     "line": "Turn the ceiling into the floor",
+     "sung": 143.44
+    }
+   ],
+   "land": 145.55,
+   "land_bar": "bar 75",
+   "payoff_word": "floor @ 144.96",
+   "text": "\u203a Turn the ceiling into the floor \u00b7 MEMORY 93%",
+   "meter": "93% #ffb347 (amber)",
+   "change": "The camera rolls 180 over the bar: the city hangs from an ocean sky, the moons reflected overhead. The roll doesn't stop (next shot).",
+   "medium": "Blender 3D",
+   "cam": "barrel roll part 1 (0 \u2192 180)",
+   "eggs": "the moons' orbit trails read as a heart."
+  },
+  {
+   "at": 147.51,
+   "t": 147.96,
+   "title": "s61 Make it Sunday, make it night (THE PEAK)",
+   "sec": "BRIDGE",
+   "lyric": "Make it Sunday, make it night",
+   "sung": [
+    {
+     "line": "Make it Sunday, make it night",
+     "sung": 145.44
+    }
+   ],
+   "land": 147.51,
+   "land_bar": "bar 76",
+   "payoff_word": "night @ 146.72",
+   "text": "\u203a Make it Sunday, make it night \u00b7 MEMORY 94% amber (approved frame 3)",
+   "meter": "94% #ffb347 (amber)",
+   "change": "'Sunday': warm gold light floods in as the roll continues; 'night' (beat 3): the moons slide across the sun; on bar 76 the roll lands upright on totality: two moons eclipse the sun into a white-gold ring over the city, the city's lights come on in one wave. The most beautiful frame of the film; hold it.",
+   "medium": "Blender 3D (hero: the eclipse)",
+   "cam": "barrel roll part 2 (180 \u2192 360), lands on the downbeat, then still",
+   "eggs": "\u2014",
+   "notes": "3D earns it: real light, real ocean reflection of the ring. Payoff frame t = just after totality."
+  },
+  {
+   "at": 149.47,
+   "t": 149.92,
+   "title": "s62 Make me feel like I'm on time (then the render chokes)",
+   "sec": "BRIDGE",
+   "lyric": "Make me feel like I'm on time",
+   "sung": [
+    {
+     "line": "Make me feel like I'm on time",
+     "sung": 147.2
+    }
+   ],
+   "land": 149.47,
+   "land_bar": "bar 77",
+   "payoff_word": "time @ 149.36",
+   "text": "\u203a Make me feel like I'm on time \u00b7 MEMORY 97% \u2192 99%",
+   "meter": "97% #ffb347 (amber)",
+   "change": "'time' lands exactly on bar 77: every clock in the city snaps to the same time. Then the song drops its drums (149.95) and the render starts to choke: the fps readout falls 60 \u2192 24 \u2192 8 \u2192 2, tiles re-render in blocks, the meter climbs to 99%.",
+   "medium": "Blender 3D",
+   "cam": "still, then stutter",
+   "eggs": "the clocks show 2:29, the film's real timecode. One frame before the crash a pigeon lands on the rooftop red button (the cause)."
+  },
+  {
+   "at": 151.42,
+   "t": 151.87,
+   "title": "s63 CRASH: dead silence",
+   "sec": "BREAK",
+   "land": 151.42,
+   "land_bar": "bar 78",
+   "text": "no prompt typed; bar border turns red \u00b7 MEMORY 100% red",
+   "meter": "100% #ff3b52 (red)",
+   "change": "AUDIO EDIT E3: hard cut to digital silence on bar 78. The real scene fails: Blender wireframe, materials fall back to the true magenta checkerboard, debug labels pop in on the silent beats ('sun.mat \u2014 not found', 'ocean.tex \u2014 missing', 'city_lod3 \u2014 failed'). First time loud colour floods the screen.",
+   "medium": "Blender 3D (wireframe + real missing-texture) + 2D labels",
+   "cam": "frozen, a 1 px jitter",
+   "eggs": "the log also lists 'pigeon.001 \u2014 pressed button'.",
+   "notes": "The labels land on the silent grid (bar 78 beat 3, bar 79 beat 1, bar 79 beat 3) so the pulse is felt without sound."
+  },
+  {
+   "at": 155.34,
+   "t": 155.79,
+   "title": "s64 Out of memory. (sung in the silence) \u2192 reboot",
+   "sec": "BREAK\u2192FINAL",
+   "lyric": "Out of memory.",
+   "sung": [
+    {
+     "line": "Out of memory.",
+     "sung": 154.4
+    }
+   ],
+   "land": 155.34,
+   "land_bar": "bar 80",
+   "payoff_word": "memory @ 154.80",
+   "text": "\u203a Out of memory. (red bar, approved frame 4) \u00b7 MEMORY 100%",
+   "meter": "100% #ff3b52 (red)",
+   "change": "Her 'Out of memory.' alone in the silence (154.36); on bar 80 the music comes back with the song's own drum hit (the reboot): the crashed world shrinks to a card and the HISTORY panel opens.",
+   "medium": "2D Remotion over the crash still",
+   "cam": "\u2014",
+   "eggs": "the history panel's last item is 'Out of memory.' in red."
+  },
+  {
+   "at": 157.3,
+   "t": 157.75,
+   "title": "s65 Make it smaller",
+   "sec": "FINAL",
+   "lyric": "Make it smaller",
+   "sung": [
+    {
+     "line": "Make it smaller",
+     "sung": 156.88
+    }
+   ],
+   "land": 157.3,
+   "land_bar": "bar 81",
+   "payoff_word": "smaller @ 157.52",
+   "text": "\u203a Make it smaller \u00b7 MEMORY 88%",
+   "meter": "88% #ececf2 (white)",
+   "change": "The crashed world (as a card) shrinks to a thumbnail; the meter starts to fall.",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "every thumbnail in the history panel is a real frame from the film."
+  },
+  {
+   "at": 159.26,
+   "t": 159.71,
+   "title": "s66 Make it quiet",
+   "sec": "FINAL",
+   "lyric": "Make it quiet",
+   "sung": [
+    {
+     "line": "Make it quiet",
+     "sung": 158.88
+    }
+   ],
+   "land": 159.26,
+   "land_bar": "bar 82",
+   "payoff_word": "quiet @ 159.36",
+   "text": "\u203a Make it quiet \u00b7 MEMORY 80%",
+   "meter": "80% #ececf2 (white)",
+   "change": "The glitch labels and magenta fade out; the meter goes from red back to white.",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "\u2014"
+  },
+  {
+   "at": 163.19,
+   "t": 163.64,
+   "title": "s67 Keep the beat and lose the riot",
+   "sec": "FINAL",
+   "lyric": "Keep the beat and lose the riot",
+   "sung": [
+    {
+     "line": "Keep the beat and lose the riot",
+     "sung": 160.8
+    }
+   ],
+   "land": 163.19,
+   "land_bar": "bar 84",
+   "payoff_word": "riot @ 162.32",
+   "text": "\u203a Keep the beat and lose the riot \u00b7 MEMORY 64%",
+   "meter": "64% #ececf2 (white)",
+   "change": "Everything but the dot files away into the history panel; the pink dot is back, breathing on the kick.",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "\u2014"
+  },
+  {
+   "at": 165.16,
+   "t": 165.61,
+   "title": "s68 Just the dot, just the dark",
+   "sec": "FINAL",
+   "lyric": "Just the dot, just the dark",
+   "sung": [
+    {
+     "line": "Just the dot, just the dark",
+     "sung": 162.96
+    }
+   ],
+   "land": 165.16,
+   "land_bar": "bar 85",
+   "payoff_word": "dark @ 164.32",
+   "text": "\u203a Just the dot, just the dark \u00b7 MEMORY 56%",
+   "meter": "56% #ececf2 (white)",
+   "change": "The dot grid fades: only the dark and the dot.",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "\u2014"
+  },
+  {
+   "at": 167.12,
+   "t": 167.57,
+   "title": "s69 Just a little beating heart / Make it smaller",
+   "sec": "FINAL",
+   "lyric": "Just a little beating heart / Make it smaller",
+   "sung": [
+    {
+     "line": "Just a little beating heart",
+     "sung": 164.96
+    },
+    {
+     "line": "Make it smaller",
+     "sung": 166.88
+    }
+   ],
+   "land": 167.12,
+   "land_bar": "bar 86",
+   "payoff_word": "smaller @ 167.28",
+   "text": "\u203a Just a little beating heart \u2192 \u203a Make it smaller \u00b7 MEMORY 50%",
+   "meter": "50% #ececf2 (white)",
+   "change": "Grouped (both land on bar 86): the dot shrinks to half and its breath turns into a heartbeat (lub-dub on 1 and the 'and' of 1).",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "\u2014"
+  },
+  {
+   "at": 169.07,
+   "t": 169.52,
+   "title": "s70 Make it simple",
+   "sec": "FINAL",
+   "lyric": "Make it simple",
+   "sung": [
+    {
+     "line": "Make it simple",
+     "sung": 168.72
+    }
+   ],
+   "land": 169.07,
+   "land_bar": "bar 87",
+   "payoff_word": "simple @ 169.20",
+   "text": "\u203a Make it simple \u00b7 MEMORY 46%",
+   "meter": "46% #ececf2 (white)",
+   "change": "The UI simplifies: history panel slides off, only the bar, the meter and the dot.",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "\u2014"
+  },
+  {
+   "at": 171.02,
+   "t": 171.47,
+   "title": "s71 One white light against the black",
+   "sec": "FINAL",
+   "lyric": "One white light against the black",
+   "sung": [
+    {
+     "line": "One white light against the black",
+     "sung": 170.56
+    }
+   ],
+   "land": 171.02,
+   "land_bar": "bar 88",
+   "payoff_word": "light @ 171.20",
+   "text": "\u203a One white light against the black \u00b7 MEMORY 44%",
+   "meter": "44% #ececf2 (white)",
+   "change": "On 'light' (bar 88) the pink dot turns white: the only time it changes colour.",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "the REC dot by the meter turns white too."
+  },
+  {
+   "at": 172.97,
+   "t": 173.42,
+   "title": "s72 Run it, run it (typed with no voice)",
+   "sec": "FINAL",
+   "lyric": "Run it, run it",
+   "sung": [
+    {
+     "line": "Run it, run it",
+     "sung": null,
+     "timing_source": "NOT SUNG: no vocal 172.65-175.90 (vocal stem + MIDI + backing stem all empty)"
+    }
+   ],
+   "land": 172.97,
+   "land_bar": "bar 89",
+   "text": "\u203a Run it, run it (typed by itself, on the beat) \u00b7 MEMORY 43%",
+   "meter": "43% #ececf2 (white)",
+   "change": "She doesn't sing this line (bars 89-90 have no vocal). The bar types it by itself, a word per beat, no human cursor; the white light pulses twice (bar 89, bar 90).",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "the only prompt in the film nobody says out loud."
+  },
+  {
+   "at": 176.88,
+   "t": 177.33,
+   "title": "s73 Take me back",
+   "sec": "FINAL",
+   "lyric": "Take me back",
+   "sung": [
+    {
+     "line": "Take me back",
+     "sung": 176.0
+    }
+   ],
+   "land": 176.88,
+   "land_bar": "bar 91",
+   "payoff_word": "back @ 176.64",
+   "text": "\u203a Take me back \u00b7 MEMORY 41%",
+   "meter": "41% #ececf2 (white)",
+   "change": "The HISTORY panel opens again on the right; the world's pieces (moons, the car, buildings, pigeons) reappear around the white dot, drifting.",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "\u2014"
+  },
+  {
+   "at": 180.79,
+   "t": 181.24,
+   "title": "s74 Undo. (1)",
+   "sec": "OUTRO",
+   "lyric": "Undo.",
+   "sung": [
+    {
+     "line": "Undo.",
+     "sung": 180.4
+    }
+   ],
+   "land": 180.79,
+   "land_bar": "bar 93",
+   "payoff_word": "undo @ 180.40",
+   "text": "\u203a Undo. \u00b7 MEMORY 41% \u2192 28% (approved frame 5)",
+   "meter": "28% #ececf2 (white)",
+   "change": "AUDIO EDIT E4 from bar 92: whisper over a fading pulse. On bar 93 the history highlight jumps up a block; the outer pieces spiral into the dot (frame-5 look).",
+   "medium": "2D Remotion (approved frame 5)",
+   "cam": "locked",
+   "eggs": "the highlighted history line is the prompt whose world is being sucked in."
+  },
+  {
+   "at": 186.64,
+   "t": 187.09,
+   "title": "s75 Undo. (2)",
+   "sec": "OUTRO",
+   "lyric": "Undo.",
+   "sung": [
+    {
+     "line": "Undo.",
+     "sung": 186.0
+    }
+   ],
+   "land": 186.64,
+   "land_bar": "bar 96",
+   "payoff_word": "undo @ 186.00",
+   "text": "\u203a Undo. \u00b7 MEMORY 15%",
+   "meter": "15% #ececf2 (white)",
+   "change": "The car and the buildings spiral in.",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "\u2014"
+  },
+  {
+   "at": 188.6,
+   "t": 189.05,
+   "title": "s76 Undo. (3)",
+   "sec": "OUTRO",
+   "lyric": "Undo.",
+   "sung": [
+    {
+     "line": "Undo.",
+     "sung": 188.0
+    }
+   ],
+   "land": 188.6,
+   "land_bar": "bar 97",
+   "payoff_word": "undo @ 188.00",
+   "text": "\u203a Undo. \u00b7 MEMORY 5%",
+   "meter": "5% #ececf2 (white)",
+   "change": "The last pieces go in; the highlight reaches 'New session'. One white light against the black.",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "\u2014"
+  },
+  {
+   "at": 194.48,
+   "t": 194.93,
+   "title": "s77 Perfect.",
+   "sec": "OUTRO",
+   "lyric": "Perfect.",
+   "sung": [
+    {
+     "line": "Perfect.",
+     "sung": 194.64
+    }
+   ],
+   "land": 194.48,
+   "land_bar": "bar 100",
+   "payoff_word": "perfect @ 194.64",
+   "text": "\u203a Perfect. \u00b7 MEMORY 1%",
+   "meter": "1% #ececf2 (white)",
+   "change": "The history panel closes. Stillness: the white light, the bar. For one beat the empty bar shows a grey autocomplete suggestion: '\u203a subscribe' (the film's subscribe ask, in-world; 34 px+).",
+   "medium": "2D Remotion",
+   "cam": "locked",
+   "eggs": "the suggestion is the only prompt the model ever proposes to her."
+  },
+  {
+   "at": 196.44,
+   "t": 196.89,
+   "title": "s78 Ship it. \u2192 the click \u2192 New session (loop)",
+   "sec": "OUTRO",
+   "lyric": "Ship it.",
+   "sung": [
+    {
+     "line": "Ship it.",
+     "sung": 195.44
+    }
+   ],
+   "land": 196.44,
+   "land_bar": "bar 101",
+   "payoff_word": "it @ 195.74",
+   "text": "\u203a Ship it. \u00b7 MEMORY 0% (approved frame 6)",
+   "meter": "0% #ececf2 (white)",
+   "change": "On bar 101 the cursor clicks the white dot (the only sound effect in the film: one soft click): the dot was the button all along. The white light blooms to fill the frame and becomes the white page of frame 0: the video loops seamlessly into 'New session.'",
+   "medium": "2D Remotion (approved frame 6)",
+   "cam": "locked, then the bloom",
+   "eggs": "the REC clock stops at 03:18 and reads 'shipped'.",
+   "notes": "The last frame must equal the first frame."
+  }
+ ]
+}

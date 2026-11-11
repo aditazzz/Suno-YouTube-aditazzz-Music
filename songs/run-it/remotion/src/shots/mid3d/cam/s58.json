@@ -1,0 +1,67 @@
+{
+ "shot": "s58",
+ "what": "CUT to the car set: pillarbox 9:16 + roll 90, the car drives straight up the 'tower'; unroll into the cut back",
+ "keys": [
+  {
+   "t": 141.64,
+   "pos": [
+    2996,
+    5,
+    34
+   ],
+   "target": [
+    2996,
+    5,
+    0
+   ],
+   "fov": 34,
+   "roll": 0,
+   "cut": true
+  },
+  {
+   "t": 141.94,
+   "pos": [
+    2998,
+    5,
+    34
+   ],
+   "target": [
+    2998,
+    5,
+    0
+   ],
+   "fov": 34,
+   "roll": 90
+  },
+  {
+   "t": 143.35,
+   "pos": [
+    3010,
+    5,
+    34
+   ],
+   "target": [
+    3010,
+    5,
+    0
+   ],
+   "fov": 34,
+   "roll": 90
+  },
+  {
+   "t": 143.59,
+   "pos": [
+    3012,
+    5,
+    34
+   ],
+   "target": [
+    3012,
+    5,
+    0
+   ],
+   "fov": 34,
+   "roll": 0
+  }
+ ]
+}

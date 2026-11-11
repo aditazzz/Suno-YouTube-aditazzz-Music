@@ -1,0 +1,21 @@
+{
+ "shot": "s60",
+ "what": "barrel roll part 1, 0 -> 180 by bar 75 beat 3",
+ "keys": [
+  {
+   "t": 146.53,
+   "pos": [
+    0,
+    4.3,
+    -72
+   ],
+   "target": [
+    0,
+    30,
+    -600
+   ],
+   "fov": 40,
+   "roll": 180
+  }
+ ]
+}

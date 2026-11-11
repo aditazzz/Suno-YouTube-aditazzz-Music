@@ -1,0 +1,37 @@
+{
+ "shot": "s46",
+ "what": "Run it (run it): the match-cut to 3D, same slow push toward one lit window, real shadows switch on",
+ "keys": [
+  {
+   "t": 116.21,
+   "pos": [
+    0,
+    10,
+    110
+   ],
+   "target": [
+    0,
+    15,
+    0
+   ],
+   "fov": 22,
+   "roll": 0,
+   "cut": true
+  },
+  {
+   "t": 122.08,
+   "pos": [
+    2,
+    14.5,
+    58
+   ],
+   "target": [
+    3,
+    16.5,
+    0
+   ],
+   "fov": 24,
+   "roll": 0
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+title: Run It
+audio: Run It (clean).wav
+stems: audio/stems
+folder: Run It
+model_credit: Claude Fable 5.2
+status: concept_approved
+thumb_lines:
+- RUN
+- IT
+youtube:
+  title: Run It - Look What I Can Do Part 2 - Claude Fable 5.2
+  hook: Every lyric in this song is a prompt. A pink dot becomes a city, the city gets a purple sports car with
+    yellow brakes, gravity gets switched off, and Claude builds all of it by hand on a workbench at night. Then
+    one more prompt breaks everything.
+  credit: 'I made this video in code with Claude Fable 5.2: a 3D workbench built in Blender from Python, React (Remotion)
+    screens, every move timed to a sung word.'
+  credit_short: Every frame is code I made with Claude.
+  question: Which prompt would you try before hitting Undo?
+  pinned: 'One more prompt. What could go wrong?
+
+
+    Which detail on the workbench did you catch on the second watch? Mine is Monday.'
+  made_with: 'Song: Suno (lyrics, concept and direction by aditazzz)
+
+    The workbench (1:11 to 2:35): modeled, animated and rendered in Blender from Python, with Claude Fable 5.2
+
+    Opening and ending: React (Remotion), with Claude Opus 5.5 and Claude Fable 5.2; finishing help from Codex GPT-6
+
+    3D car model: "Porsche 911 GT3 RS (991.1) ''16" by Mona x Supercars (https://sketchfab.com/Car2022), CC BY 4.0,
+    modified (repainted Ultraviolet, yellow calipers)'
+  hashtags:
+  - RunIt
+  - ClaudeAI
+  - AIMusicVideo
+  - Blender
+  - CreativeCoding
+  tags:
+  - Run It
+  - aditazzz
+  - claude code
+  - creative coding
+  - music video
+  - Blender
+  - Remotion
+  - AI music
+  - slopcore
+  - Suno
+  - Codex
+  hidden_jokes: true
+  pause_line: ⏸ Pause on the week planner at 2:17. Monday has eight meetings.
+  intro: '🌐 Site: https://aditazzz.github.io/videos/run-it/ | 💻 Code: https://github.com/aditazzz/Suno-YouTube-aditazzz-Music/tree/main/songs/run-it'
+  chapters:
+    INTRO: New session
+    V1: Put a little dot in the middle
+    CH1: Bigger, brighter
+    POST1: Run it
+    V2: Turn the dot into a city
+    CH2: Light it up
+    POST2: Look what we can do
+    BRIDGE: Add a moon. Add another.
+    FINAL: Out of memory
+    OUTRO: Undo. Perfect. Ship it.
+  community_post: 'I wrote a song where every lyric is a prompt. Then Claude had to actually build it. By hand.
+    On a workbench. At night.
+
+
+    "Run It" (Look What I Can Do, Part 2) is out now. Which prompt would you have added before it ran out of memory?
+    👇'
+  numbers: '5,940 frames at 1440p, all rendered on my MacBook
+
+    2,542 of them are the 3D workbench: 25 shots built from about 2,800 lines of Python
+
+    84 lyric lines, 376 words synced to the vocal'
+brand_accent: yellow
+instagram:
+  edit_caption: 'I asked Claude for one dot. Then a city. Then rain on just one side. Then no gravity.
+
+    Then one more prompt. It ran out of memory.
+
+
+    Look What I Can Do, Part 2: a song where every lyric is a prompt, built with the AI that had to keep up. 🎬
+
+
+    Full video on YouTube, link in bio.
+
+    .
+
+    .
+
+    .
+
+    .
+
+    .
+
+    #aditazzz #claudecode #aimusic #vibecoding #techhumor
+
+    .
+
+    .
+
+    .
+
+    AI music video, Claude Fable 5.2, made with Claude Code, coded music video, Blender animation, Look What I Can
+    Do Part 2, AI doompop, slopcore, tech humor, developer humor, AI satire, prompt engineering, vibe coding, data
+    engineer, music producer, new music, indie artist'
+  hashtags:
+  - aditazzz
+  - claudecode
+  - aimusic
+  - vibecoding
+  - techhumor

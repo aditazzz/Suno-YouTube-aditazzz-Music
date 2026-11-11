@@ -1,0 +1,51 @@
+{
+ "shot": "s48",
+ "what": "push through the window on the bar-65 downbeat and out over the bay; then a slow crane up",
+ "keys": [
+  {
+   "t": 126.0,
+   "pos": [
+    4,
+    18,
+    0.2
+   ],
+   "target": [
+    4,
+    18,
+    -20
+   ],
+   "fov": 40,
+   "roll": 0
+  },
+  {
+   "t": 126.5,
+   "pos": [
+    4,
+    19.5,
+    -24
+   ],
+   "target": [
+    4,
+    24,
+    -300
+   ],
+   "fov": 46,
+   "roll": 0
+  },
+  {
+   "t": 127.96,
+   "pos": [
+    2,
+    26,
+    -46
+   ],
+   "target": [
+    0,
+    60,
+    -700
+   ],
+   "fov": 44,
+   "roll": 0
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "shot": "s62",
+ "what": "still (slow push) then the stutter: the camera itself is fine, the world time steps 24/8/2 fps",
+ "keys": [
+  {
+   "t": 151.4,
+   "pos": [
+    0,
+    4.7,
+    -80
+   ],
+   "target": [
+    0,
+    30,
+    -600
+   ],
+   "fov": 40,
+   "roll": 360,
+   "still": true
+  }
+ ]
+}

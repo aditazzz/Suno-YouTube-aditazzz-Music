@@ -1,0 +1,36 @@
+{
+ "shot": "s57",
+ "what": "wide: pull back and tilt up; the gizmo drags the sun to (960,470), where the dot was",
+ "keys": [
+  {
+   "t": 139.69,
+   "pos": [
+    0,
+    16,
+    -64
+   ],
+   "target": [
+    0,
+    115,
+    -600
+   ],
+   "fov": 46,
+   "roll": 0
+  },
+  {
+   "t": 141.64,
+   "pos": [
+    1.5,
+    16.4,
+    -66
+   ],
+   "target": [
+    0,
+    115,
+    -600
+   ],
+   "fov": 46,
+   "roll": 0
+  }
+ ]
+}

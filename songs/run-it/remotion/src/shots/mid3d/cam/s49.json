@@ -1,0 +1,21 @@
+{
+ "shot": "s49",
+ "what": "slow crane while the moons rise",
+ "keys": [
+  {
+   "t": 129.91,
+   "pos": [
+    -4,
+    31,
+    -58
+   ],
+   "target": [
+    0,
+    80,
+    -800
+   ],
+   "fov": 44,
+   "roll": 0
+  }
+ ]
+}

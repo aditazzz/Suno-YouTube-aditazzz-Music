@@ -1,0 +1,21 @@
+{
+ "shot": "s53",
+ "what": "(ocean disappears, beat 3) still descending",
+ "keys": [
+  {
+   "t": 133.82,
+   "pos": [
+    -12,
+    20,
+    -70
+   ],
+   "target": [
+    0,
+    70,
+    -800
+   ],
+   "fov": 43,
+   "roll": 0
+  }
+ ]
+}

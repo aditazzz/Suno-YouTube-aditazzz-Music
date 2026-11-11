@@ -1,0 +1,37 @@
+{
+ "shot": "s59",
+ "what": "CUT back to the bay: slow lateral truck while the city claps on the snare",
+ "keys": [
+  {
+   "t": 143.6,
+   "pos": [
+    -26,
+    6,
+    -70
+   ],
+   "target": [
+    -4,
+    42,
+    -600
+   ],
+   "fov": 40,
+   "roll": 0,
+   "cut": true
+  },
+  {
+   "t": 145.55,
+   "pos": [
+    0,
+    4,
+    -70
+   ],
+   "target": [
+    0,
+    30,
+    -600
+   ],
+   "fov": 40,
+   "roll": 0
+  }
+ ]
+}

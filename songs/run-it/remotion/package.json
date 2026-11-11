@@ -1,0 +1,17 @@
+{
+  "name": "run-it",
+  "private": true,
+  "description": "Run It: the opening, the ending and the on-screen UI, in Remotion",
+  "scripts": {
+    "studio": "remotion studio"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^8.17.14",
+    "@remotion/cli": "^4.0.539",
+    "@remotion/three": "^4.0.539",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.539",
+    "three": "^0.169.0"
+  }
+}

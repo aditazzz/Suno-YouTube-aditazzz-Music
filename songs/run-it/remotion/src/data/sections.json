@@ -1,0 +1,114 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "",
+  "first_word_t": 4.259999942779541,
+  "e": 4.259999942779541,
+  "kind": "intro"
+ },
+ {
+  "name": "INTRO",
+  "s": 4.259999942779541,
+  "first_line": "New session.",
+  "first_word_t": 4.559999942779541,
+  "e": 16.137868480725622,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 16.137868480725622,
+  "first_line": "Make the screen go dark",
+  "first_word_t": 16.239999771118164,
+  "e": 32.02031746031746,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE1",
+  "s": 32.02031746031746,
+  "first_line": "Zoom in, zoom out",
+  "first_word_t": 31.83999991416931,
+  "e": 37.94140589569161,
+  "kind": "pre"
+ },
+ {
+  "name": "CH1",
+  "s": 37.94140589569161,
+  "first_line": "Bigger, brighter",
+  "first_word_t": 39.239999771118164,
+  "e": 57.608707482993196,
+  "kind": "chorus"
+ },
+ {
+  "name": "POST1",
+  "s": 57.608707482993196,
+  "first_line": "Run it (run it)",
+  "first_word_t": 57.519999980926514,
+  "e": 71.37814058956916,
+  "kind": "post"
+ },
+ {
+  "name": "V2",
+  "s": 71.37814058956916,
+  "first_line": "Turn the dot into a city",
+  "first_word_t": 71.03999996185303,
+  "e": 85.14757369614513,
+  "kind": "verse"
+ },
+ {
+  "name": "PRE2",
+  "s": 85.14757369614513,
+  "first_line": "Turn off gravity",
+  "first_word_t": 85.42857131361961,
+  "e": 92.9726984126984,
+  "kind": "pre"
+ },
+ {
+  "name": "CH2",
+  "s": 92.9726984126984,
+  "first_line": "Bigger, brighter",
+  "first_word_t": 94.39999997615814,
+  "e": 110.57342403628118,
+  "kind": "chorus"
+ },
+ {
+  "name": "POST2",
+  "s": 110.57342403628118,
+  "first_line": "Run it (run it)",
+  "first_word_t": 111.27999973297119,
+  "e": 126.22367346938775,
+  "kind": "post"
+ },
+ {
+  "name": "BRIDGE",
+  "s": 126.22367346938775,
+  "first_line": "Add a moon",
+  "first_word_t": 126.39999961853027,
+  "e": 153.62321995464853,
+  "kind": "bridge"
+ },
+ {
+  "name": "BREAK",
+  "s": 153.62321995464853,
+  "first_line": "Out of memory.",
+  "first_word_t": 154.40000009536743,
+  "e": 155.5504761904762,
+  "kind": "other"
+ },
+ {
+  "name": "FINAL",
+  "s": 155.5504761904762,
+  "first_line": "Make it smaller",
+  "first_word_t": 156.87999963760376,
+  "e": 179.04907029478457,
+  "kind": "chorus"
+ },
+ {
+  "name": "OUTRO",
+  "s": 179.04907029478457,
+  "first_line": "Undo.",
+  "first_word_t": 180.39999997615814,
+  "e": 198.0,
+  "kind": "outro"
+ }
+]

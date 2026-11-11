@@ -1,0 +1,37 @@
+{
+ "shot": "s61",
+ "what": "barrel roll part 2, 180 -> 360, lands upright on totality (147.51); then hold, a slow 2% push",
+ "keys": [
+  {
+   "t": 147.51,
+   "pos": [
+    0,
+    4.5,
+    -74
+   ],
+   "target": [
+    0,
+    30,
+    -600
+   ],
+   "fov": 40,
+   "roll": 360,
+   "still": true
+  },
+  {
+   "t": 149.47,
+   "pos": [
+    0,
+    4.6,
+    -77
+   ],
+   "target": [
+    0,
+    30,
+    -600
+   ],
+   "fov": 40,
+   "roll": 360
+  }
+ ]
+}

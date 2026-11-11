@@ -1,0 +1,21 @@
+{
+ "shot": "s50",
+ "what": "slow orbit as the moons start orbiting each other",
+ "keys": [
+  {
+   "t": 131.87,
+   "pos": [
+    -14,
+    32,
+    -64
+   ],
+   "target": [
+    -2,
+    90,
+    -800
+   ],
+   "fov": 44,
+   "roll": 0
+  }
+ ]
+}

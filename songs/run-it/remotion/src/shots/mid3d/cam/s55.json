@@ -1,0 +1,21 @@
+{
+ "shot": "s55",
+ "what": "sixty frames: a slow glide forward (stepped before 'wait', buttery after)",
+ "keys": [
+  {
+   "t": 136.76,
+   "pos": [
+    0,
+    5.2,
+    -84
+   ],
+   "target": [
+    0,
+    42,
+    -700
+   ],
+   "fov": 42,
+   "roll": 0
+  }
+ ]
+}

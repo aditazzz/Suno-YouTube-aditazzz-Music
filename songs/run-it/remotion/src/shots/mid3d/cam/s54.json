@@ -1,0 +1,21 @@
+{
+ "shot": "s54",
+ "what": "low over the water: every wave rises from the centre out",
+ "keys": [
+  {
+   "t": 135.78,
+   "pos": [
+    -2,
+    5,
+    -80
+   ],
+   "target": [
+    0,
+    40,
+    -700
+   ],
+   "fov": 42,
+   "roll": 0
+  }
+ ]
+}
