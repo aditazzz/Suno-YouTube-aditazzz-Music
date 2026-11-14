@@ -10,7 +10,7 @@
 
 ## What you see
 
-Look What I Can Do, Part 2. The first song was me asking for more. This one is the session itself: a prompt bar at the
+One more prompt after Look What I Can Do. The first song was me asking for more. This one is the session itself: a prompt bar at the
 bottom of the screen, a memory meter in the corner, and every line I sing typed into it as a prompt.
 
 - **New session (0:00):** a dark screen, a little pink dot in the middle that breathes on the kick, one red button nobody is supposed to touch. The first chorus is flat and loud: one dot becomes four, sixteen, a wall of variants, then one dot again.
