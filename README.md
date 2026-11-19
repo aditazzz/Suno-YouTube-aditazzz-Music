@@ -1,8 +1,8 @@
 # aditazzz music videos, made in code
 
-[![YouTube: @adita_zzz](https://img.shields.io/badge/YouTube-%40adita__zzz-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/@adita_zzz?sub_confirmation=1) [![Spotify: aditazzz](https://img.shields.io/badge/Spotify-aditazzz-1DB954?logo=spotify&logoColor=white)](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv) [![Instagram: @aditazzz.music](https://img.shields.io/badge/Instagram-%40aditazzz.music-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/aditazzz.music/) [![LinkedIn: Adita Zeqollari](https://img.shields.io/badge/LinkedIn-Adita%20Zeqollari-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aditazeqollari) [![Reddit: r/aidoompop](https://img.shields.io/badge/Reddit-r%2Faidoompop-FF4500?logo=reddit&logoColor=white)](https://www.reddit.com/r/aidoompop/)
+[![Music videos made in code: a grid of thumbnails](docs/img/hero.jpg)](https://www.youtube.com/@adita_zzz/videos)
 
-[![A wall of thumbnails from the music videos in this repo](docs/img/wall.jpg)](https://www.youtube.com/@adita_zzz/videos)
+[![YouTube: @adita_zzz](https://img.shields.io/badge/YouTube-%40adita__zzz-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/@adita_zzz?sub_confirmation=1) [![Spotify: aditazzz](https://img.shields.io/badge/Spotify-aditazzz-1DB954?logo=spotify&logoColor=white)](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv) [![Instagram: @aditazzz.music](https://img.shields.io/badge/Instagram-%40aditazzz.music-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/aditazzz.music/) [![LinkedIn: Adita Zeqollari](https://img.shields.io/badge/LinkedIn-Adita%20Zeqollari-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aditazeqollari) [![Reddit: r/aidoompop](https://img.shields.io/badge/Reddit-r%2Faidoompop-FF4500?logo=reddit&logoColor=white)](https://www.reddit.com/r/aidoompop/)
 
 I'm **aditazzz**, a data/AI engineer who writes songs. I write the lyrics and concepts, make the tracks with
 [Suno](https://suno.com), and direct a music video for each one on my YouTube channel
@@ -13,6 +13,8 @@ on [Spotify](https://open.spotify.com/artist/7mi7sz2NTgTWUAj1zmijJv), and all of
 This repo contains the film source and the shared pipeline that turns a finished song into a full music video, Shorts, thumbnails and a YouTube upload. Each song folder links to its video and explains how it was drawn.
 
 Latest release: [You Said You Needed Space](songs/you-said-you-needed-space), a living Earth and satellite film made with Claude Fable 5.1 and Codex Astra.
+
+[![A wall of thumbnails from the music videos in this repo](docs/img/wall.jpg)](https://www.youtube.com/@adita_zzz/videos)
 
 ## How a video gets made
 
