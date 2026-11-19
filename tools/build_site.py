@@ -289,6 +289,7 @@ def page(*, path, title, desc, image, image_alt, body, ld, og_type="website", ex
   <p class="fine">Songs, lyrics and concepts by aditazzz. Videos made in code with Claude and Codex. The code is MIT-licensed; the songs, lyrics and artwork are all rights reserved.</p>
 </div></footer>
 <script src="/assets/site.js?v={ASSET_V}" defer></script>
+<script>function loadScript(a){{var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}}loadScript(function(){{beTracker.t({{hash:"7d8776e33ca85149cc73ebd49900fd36"}})}});</script>
 </body>
 </html>
 """
@@ -344,11 +345,12 @@ def main(out):
         story = " ".join(l.lstrip("> ").strip() for l in md.splitlines() if l.startswith(">")).strip()
         rows = code_table(md); lines = sum(n for _, n, _ in rows)
         lyr, nlines = lyrics_html(os.path.join(folder, "lyrics.txt"))
-        code, first_line, more, main = excerpt(folder)
+        has_code = bool(rows) or os.path.exists(os.path.join(folder, "scene.py"))
+        code, first_line, more, main = excerpt(folder) if has_code else ("", 0, False, "")   # no code yet: no code panel
         mm = re.search(r"<!-- model: (.*?) -->", md) or re.search(r"Video by (Claude [A-Za-z]+ [\d.]+)", md); model = mm.group(1) if mm else "Claude"
         songs.append(dict(slug=slug, id=v["id"], date=v["date"], secs=v["secs"], title=title, story=story, md=md,
                           rows=rows, lines=lines, lyrics=lyr, code=code, first=first_line, more=more, main=main, model=model,
-                          js=is_js(main)))
+                          js=is_js(main), has_code=has_code))
     songs.sort(key=lambda s: s["date"], reverse=True)
 
     if os.path.isdir(out):
@@ -421,19 +423,10 @@ def main(out):
             {"@type": "BreadcrumbList", "@id": SITE + path + "#crumbs", "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "Videos", "item": SITE + "/"},
                 {"@type": "ListItem", "position": 2, "name": s["title"], "item": SITE + path}]}]}
-        body = f"""<article class="wrap song">
-  <p class="crumb"><a href="/#videos">Videos</a> <span aria-hidden="true">/</span> {esc(s['title'])}</p>
-  <h1>{esc(s['title'])}</h1>
-  {f'<p class="story">{md_inline(s["story"])}</p>' if s['story'] else ''}
-  <div class="player">
-    <button class="yt" data-id="{s['id']}" aria-label="Play {esc(s['title'])}">
-      <img src="thumbnail.jpg" alt="{esc(s['title'])}: music video thumbnail" width="960" height="540">
-      <span class="play" aria-hidden="true"></span>
-    </button>
-    <p class="under"><a href="{watch}">Watch on YouTube</a> · {mmss(s['secs'])} · made with {esc(s['model'])} · <a class="subscribe" href="{SUB}">Subscribe to @adita_zzz</a></p>
-  </div>
-
-  <section class="code" aria-labelledby="code-h">
+        files_panel = f"""  <section class="files"><h2>Files</h2>
+    <div class="tablewrap"><table><thead><tr><th>File</th><th class="num">Lines</th><th>What it draws</th></tr></thead><tbody>{table}</tbody></table></div>
+  </section>""" if s["rows"] else ""
+        code_panel = f"""  <section class="code" aria-labelledby="code-h">
     <div class="code-head"><h2 id="code-h">The code behind it</h2>
       <p>Every frame of this video is {'drawn by a JavaScript program (a Three.js film, rendered in a headless browser)' if s['js'] else 'rendered by a Python program, over photographic plates' if 'photographic plates' in s['md'] else 'drawn by a Python program'}. This is the heart of it, from <code>{esc(s['main'])}</code>, line {s['first']}.</p></div>
     <div class="term" data-lock>
@@ -446,12 +439,23 @@ def main(out):
     </div>
     <p class="more"><a href="{REPO}/tree/main/songs/{s['slug']}">Read all {s['lines']:,} lines on GitHub</a>. If you use it, credit aditazzz and link the video.</p>
   </section>
+""" if s["has_code"] else ""
+        body = f"""<article class="wrap song">
+  <p class="crumb"><a href="/#videos">Videos</a> <span aria-hidden="true">/</span> {esc(s['title'])}</p>
+  <h1>{esc(s['title'])}</h1>
+  {f'<p class="story">{md_inline(s["story"])}</p>' if s['story'] else ''}
+  <div class="player">
+    <button class="yt" data-id="{s['id']}" aria-label="Play {esc(s['title'])}">
+      <img src="thumbnail.jpg" alt="{esc(s['title'])}: music video thumbnail" width="960" height="540">
+      <span class="play" aria-hidden="true"></span>
+    </button>
+    <p class="under"><a href="{watch}">Watch on YouTube</a> · {mmss(s['secs'])} · made with {esc(s['model'])} · <a class="subscribe" href="{SUB}">Subscribe to @adita_zzz</a></p>
+  </div>
 
+{code_panel}
   {'<section><h2>What you see</h2>' + seen + '</section>' if seen else ''}
 
-  <section class="files"><h2>Files</h2>
-    <div class="tablewrap"><table><thead><tr><th>File</th><th class="num">Lines</th><th>What it draws</th></tr></thead><tbody>{table}</tbody></table></div>
-  </section>
+{files_panel}
 
   {'<section><h2>By the numbers</h2>' + nums + '</section>' if nums else ''}
 
@@ -466,7 +470,7 @@ def main(out):
 
     # ---- home
     cards = "".join(f"""<li><a href="/videos/{s['slug']}/"><img src="/videos/{s['slug']}/thumbnail.jpg" alt="{esc(s['title'])}" width="960" height="540" loading="{'eager' if i < 3 else 'lazy'}">
-      <span class="t">{esc(s['title'])}</span><span class="m">{mmss(s['secs'])} · {s['lines']:,} lines of code</span></a></li>""" for i, s in enumerate(songs))
+      <span class="t">{esc(s['title'])}</span><span class="m">{mmss(s['secs'])}{f" · {s['lines']:,} lines of code" if s['lines'] else ""}</span></a></li>""" for i, s in enumerate(songs))
     shorts = json.load(open(os.path.join(ROOT, "site", "shorts.json"), encoding="utf-8"))
     behind = json.load(open(os.path.join(ROOT, "site", "behind.json"), encoding="utf-8"))
     titles = {s["slug"]: s["title"] for s in songs}

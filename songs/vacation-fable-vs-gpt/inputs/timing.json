@@ -1,0 +1,2021 @@
+{
+ "source": "Vacation to My Bed (Vocals).wav",
+ "master": "vacation.wav",
+ "duration": 184.92,
+ "sections": [
+  {
+   "name": "Intro",
+   "t0": 1.573,
+   "t1": 7.76,
+   "first": 1,
+   "last": 2
+  },
+  {
+   "name": "Verse 1",
+   "t0": 7.769,
+   "t1": 34.86,
+   "first": 3,
+   "last": 6
+  },
+  {
+   "name": "Pre-Chorus 1",
+   "t0": 34.86,
+   "t1": 45.04,
+   "first": 7,
+   "last": 8
+  },
+  {
+   "name": "Chorus 1",
+   "t0": 44.954,
+   "t1": 69.64,
+   "first": 9,
+   "last": 16
+  },
+  {
+   "name": "Verse 2",
+   "t0": 72.751,
+   "t1": 91.12,
+   "first": 17,
+   "last": 20
+  },
+  {
+   "name": "Pre-Chorus 2",
+   "t0": 91.03,
+   "t1": 100.16,
+   "first": 21,
+   "last": 22
+  },
+  {
+   "name": "Chorus 2",
+   "t0": 100.059,
+   "t1": 124.72,
+   "first": 23,
+   "last": 30
+  },
+  {
+   "name": "Bridge",
+   "t0": 128.724,
+   "t1": 146.06,
+   "first": 31,
+   "last": 34
+  },
+  {
+   "name": "Chorus 3",
+   "t0": 146.06,
+   "t1": 170.98,
+   "first": 35,
+   "last": 42
+  },
+  {
+   "name": "Outro",
+   "t0": 173.682,
+   "t1": 178.86,
+   "first": 43,
+   "last": 44
+  }
+ ],
+ "lines": [
+  {
+   "id": 1,
+   "section": "Intro",
+   "text": "Ladies and gentlemen, this is your captain speaking.",
+   "t0": 1.573,
+   "t1": 4.64,
+   "words": [
+    {
+     "w": "Ladies",
+     "t0": 1.573,
+     "t1": 1.76,
+     "heard": true
+    },
+    {
+     "w": "and",
+     "t0": 1.693,
+     "t1": 2.0,
+     "heard": true
+    },
+    {
+     "w": "gentlemen,",
+     "t0": 2.022,
+     "t1": 2.34,
+     "heard": true
+    },
+    {
+     "w": "this",
+     "t0": 2.301,
+     "t1": 3.48,
+     "heard": true
+    },
+    {
+     "w": "is",
+     "t0": 3.339,
+     "t1": 3.64,
+     "heard": true
+    },
+    {
+     "w": "your",
+     "t0": 3.668,
+     "t1": 3.76,
+     "heard": true
+    },
+    {
+     "w": "captain",
+     "t0": 3.818,
+     "t1": 4.12,
+     "heard": true
+    },
+    {
+     "w": "speaking.",
+     "t0": 4.087,
+     "t1": 4.64,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "section": "Intro",
+   "text": "We will not be going anywhere.",
+   "t0": 4.566,
+   "t1": 7.76,
+   "words": [
+    {
+     "w": "We",
+     "t0": 4.566,
+     "t1": 6.5,
+     "heard": true
+    },
+    {
+     "w": "will",
+     "t0": 6.432,
+     "t1": 6.66,
+     "heard": true
+    },
+    {
+     "w": "not",
+     "t0": 6.741,
+     "t1": 6.84,
+     "heard": true
+    },
+    {
+     "w": "be",
+     "t0": 6.931,
+     "t1": 7.0,
+     "heard": true
+    },
+    {
+     "w": "going",
+     "t0": 7.051,
+     "t1": 7.28,
+     "heard": true
+    },
+    {
+     "w": "anywhere.",
+     "t0": 7.36,
+     "t1": 7.76,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "section": "Verse 1",
+   "text": "Two weeks of fires and a twelve-tab brain",
+   "t0": 7.769,
+   "t1": 21.14,
+   "words": [
+    {
+     "w": "Two",
+     "t0": 7.769,
+     "t1": 18.04,
+     "heard": true
+    },
+    {
+     "w": "weeks",
+     "t0": 17.866,
+     "t1": 18.42,
+     "heard": true
+    },
+    {
+     "w": "of",
+     "t0": 18.375,
+     "t1": 18.7,
+     "heard": true
+    },
+    {
+     "w": "fires",
+     "t0": 18.774,
+     "t1": 19.22,
+     "heard": true
+    },
+    {
+     "w": "and",
+     "t0": 19.363,
+     "t1": 19.6,
+     "heard": true
+    },
+    {
+     "w": "a",
+     "t0": 19.662,
+     "t1": 19.8,
+     "heard": true
+    },
+    {
+     "w": "twelve-tab",
+     "t0": 19.831,
+     "t1": 20.6,
+     "heard": true
+    },
+    {
+     "w": "brain",
+     "t0": 20.5,
+     "t1": 21.14,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "section": "Verse 1",
+   "text": "Coffee number five and I still missed the train",
+   "t0": 21.089,
+   "t1": 25.7,
+   "words": [
+    {
+     "w": "Coffee",
+     "t0": 21.089,
+     "t1": 22.54,
+     "heard": true
+    },
+    {
+     "w": "number",
+     "t0": 22.525,
+     "t1": 23.08,
+     "heard": true
+    },
+    {
+     "w": "five",
+     "t0": 23.074,
+     "t1": 23.56,
+     "heard": true
+    },
+    {
+     "w": "and",
+     "t0": 23.373,
+     "t1": 23.92,
+     "heard": true
+    },
+    {
+     "w": "I",
+     "t0": 23.932,
+     "t1": 24.12,
+     "heard": true
+    },
+    {
+     "w": "still",
+     "t0": 24.241,
+     "t1": 24.44,
+     "heard": true
+    },
+    {
+     "w": "missed",
+     "t0": 24.371,
+     "t1": 25.02,
+     "heard": false
+    },
+    {
+     "w": "the",
+     "t0": 25.1,
+     "t1": 25.22,
+     "heard": true
+    },
+    {
+     "w": "train",
+     "t0": 25.319,
+     "t1": 25.7,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "section": "Verse 1",
+   "text": "So I booked a trip, first class, no fee",
+   "t0": 25.608,
+   "t1": 29.98,
+   "words": [
+    {
+     "w": "So",
+     "t0": 25.608,
+     "t1": 26.72,
+     "heard": true
+    },
+    {
+     "w": "I",
+     "t0": 26.546,
+     "t1": 27.28,
+     "heard": true
+    },
+    {
+     "w": "booked",
+     "t0": 27.394,
+     "t1": 27.6,
+     "heard": true
+    },
+    {
+     "w": "a",
+     "t0": 27.674,
+     "t1": 27.8,
+     "heard": true
+    },
+    {
+     "w": "trip,",
+     "t0": 27.853,
+     "t1": 28.18,
+     "heard": true
+    },
+    {
+     "w": "first",
+     "t0": 28.552,
+     "t1": 28.9,
+     "heard": true
+    },
+    {
+     "w": "class,",
+     "t0": 29.001,
+     "t1": 29.32,
+     "heard": true
+    },
+    {
+     "w": "no",
+     "t0": 29.689,
+     "t1": 29.84,
+     "heard": true
+    },
+    {
+     "w": "fee",
+     "t0": 29.84,
+     "t1": 29.98,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "section": "Verse 1",
+   "text": "One-way ticket down the hall for me",
+   "t0": 30.278,
+   "t1": 34.86,
+   "words": [
+    {
+     "w": "One-way",
+     "t0": 30.278,
+     "t1": 32.06,
+     "heard": true
+    },
+    {
+     "w": "ticket",
+     "t0": 32.06,
+     "t1": 32.84,
+     "heard": true
+    },
+    {
+     "w": "down",
+     "t0": 32.832,
+     "t1": 33.32,
+     "heard": true
+    },
+    {
+     "w": "the",
+     "t0": 33.121,
+     "t1": 33.56,
+     "heard": true
+    },
+    {
+     "w": "hall",
+     "t0": 33.53,
+     "t1": 34.04,
+     "heard": true
+    },
+    {
+     "w": "for",
+     "t0": 34.169,
+     "t1": 34.38,
+     "heard": true
+    },
+    {
+     "w": "me",
+     "t0": 34.309,
+     "t1": 34.86,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "section": "Pre-Chorus 1",
+   "text": "Packed my PJs and a bag of chips",
+   "t0": 34.86,
+   "t1": 40.56,
+   "words": [
+    {
+     "w": "Packed",
+     "t0": 34.86,
+     "t1": 37.32,
+     "heard": true
+    },
+    {
+     "w": "my",
+     "t0": 37.362,
+     "t1": 37.68,
+     "heard": true
+    },
+    {
+     "w": "PJs",
+     "t0": 37.711,
+     "t1": 38.46,
+     "heard": true
+    },
+    {
+     "w": "and",
+     "t0": 38.319,
+     "t1": 39.12,
+     "heard": true
+    },
+    {
+     "w": "a",
+     "t0": 39.028,
+     "t1": 39.34,
+     "heard": true
+    },
+    {
+     "w": "bag",
+     "t0": 39.427,
+     "t1": 39.66,
+     "heard": true
+    },
+    {
+     "w": "of",
+     "t0": 39.756,
+     "t1": 40.08,
+     "heard": true
+    },
+    {
+     "w": "chips",
+     "t0": 40.056,
+     "t1": 40.56,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "section": "Pre-Chorus 1",
+   "text": "Sunglasses on for the three-step trip",
+   "t0": 40.594,
+   "t1": 45.04,
+   "words": [
+    {
+     "w": "Sunglasses",
+     "t0": 40.594,
+     "t1": 41.62,
+     "heard": true
+    },
+    {
+     "w": "on",
+     "t0": 41.582,
+     "t1": 43.0,
+     "heard": true
+    },
+    {
+     "w": "for",
+     "t0": 42.989,
+     "t1": 43.62,
+     "heard": true
+    },
+    {
+     "w": "the",
+     "t0": 43.468,
+     "t1": 43.86,
+     "heard": true
+    },
+    {
+     "w": "three-step",
+     "t0": 43.957,
+     "t1": 44.48,
+     "heard": true
+    },
+    {
+     "w": "trip",
+     "t0": 44.316,
+     "t1": 45.04,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "section": "Chorus 1",
+   "text": "I'm goin' on vacation",
+   "t0": 44.954,
+   "t1": 46.64,
+   "words": [
+    {
+     "w": "I'm",
+     "t0": 44.954,
+     "t1": 45.68,
+     "heard": true
+    },
+    {
+     "w": "goin'",
+     "t0": 45.483,
+     "t1": 45.94,
+     "heard": false
+    },
+    {
+     "w": "on",
+     "t0": 45.932,
+     "t1": 46.14,
+     "heard": true
+    },
+    {
+     "w": "vacation",
+     "t0": 46.182,
+     "t1": 46.64,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "section": "Chorus 1",
+   "text": "To my bed, bed, bed",
+   "t0": 46.651,
+   "t1": 48.62,
+   "words": [
+    {
+     "w": "To",
+     "t0": 46.651,
+     "t1": 47.04,
+     "heard": true
+    },
+    {
+     "w": "my",
+     "t0": 46.95,
+     "t1": 47.36,
+     "heard": true
+    },
+    {
+     "w": "bed,",
+     "t0": 47.489,
+     "t1": 47.72,
+     "heard": true
+    },
+    {
+     "w": "bed,",
+     "t0": 47.778,
+     "t1": 48.18,
+     "heard": true
+    },
+    {
+     "w": "bed",
+     "t0": 48.047,
+     "t1": 48.62,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "section": "Chorus 1",
+   "text": "Five-star destination",
+   "t0": 48.62,
+   "t1": 51.04,
+   "words": [
+    {
+     "w": "Five-star",
+     "t0": 48.62,
+     "t1": 50.22,
+     "heard": true
+    },
+    {
+     "w": "destination",
+     "t0": 50.073,
+     "t1": 51.04,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "section": "Chorus 1",
+   "text": "Pillow for my head",
+   "t0": 51.001,
+   "t1": 53.32,
+   "words": [
+    {
+     "w": "Pillow",
+     "t0": 51.001,
+     "t1": 51.86,
+     "heard": true
+    },
+    {
+     "w": "for",
+     "t0": 51.809,
+     "t1": 52.2,
+     "heard": true
+    },
+    {
+     "w": "my",
+     "t0": 52.098,
+     "t1": 52.62,
+     "heard": true
+    },
+    {
+     "w": "head",
+     "t0": 52.687,
+     "t1": 53.32,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "section": "Chorus 1",
+   "text": "No passport, no plane, no airport line",
+   "t0": 53.32,
+   "t1": 58.02,
+   "words": [
+    {
+     "w": "No",
+     "t0": 53.32,
+     "t1": 54.2,
+     "heard": true
+    },
+    {
+     "w": "passport,",
+     "t0": 54.333,
+     "t1": 54.82,
+     "heard": true
+    },
+    {
+     "w": "no",
+     "t0": 55.221,
+     "t1": 55.34,
+     "heard": true
+    },
+    {
+     "w": "plane,",
+     "t0": 55.421,
+     "t1": 55.9,
+     "heard": true
+    },
+    {
+     "w": "no",
+     "t0": 56.378,
+     "t1": 56.54,
+     "heard": true
+    },
+    {
+     "w": "airport",
+     "t0": 56.618,
+     "t1": 57.22,
+     "heard": true
+    },
+    {
+     "w": "line",
+     "t0": 57.107,
+     "t1": 58.02,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "section": "Chorus 1",
+   "text": "Out of office, do not disturb, I'm doing fine",
+   "t0": 58.104,
+   "t1": 62.44,
+   "words": [
+    {
+     "w": "Out",
+     "t0": 58.104,
+     "t1": 58.62,
+     "heard": true
+    },
+    {
+     "w": "of",
+     "t0": 58.643,
+     "t1": 58.82,
+     "heard": true
+    },
+    {
+     "w": "office,",
+     "t0": 58.823,
+     "t1": 59.26,
+     "heard": true
+    },
+    {
+     "w": "do",
+     "t0": 59.412,
+     "t1": 59.5,
+     "heard": true
+    },
+    {
+     "w": "not",
+     "t0": 59.551,
+     "t1": 59.72,
+     "heard": true
+    },
+    {
+     "w": "disturb,",
+     "t0": 59.811,
+     "t1": 60.32,
+     "heard": true
+    },
+    {
+     "w": "I'm",
+     "t0": 60.689,
+     "t1": 61.4,
+     "heard": true
+    },
+    {
+     "w": "doing",
+     "t0": 61.547,
+     "t1": 61.74,
+     "heard": true
+    },
+    {
+     "w": "fine",
+     "t0": 61.706,
+     "t1": 62.44,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "section": "Chorus 1",
+   "text": "I'm goin' on vacation",
+   "t0": 62.44,
+   "t1": 65.26,
+   "words": [
+    {
+     "w": "I'm",
+     "t0": 62.44,
+     "t1": 63.16,
+     "heard": true
+    },
+    {
+     "w": "goin'",
+     "t0": 63.263,
+     "t1": 63.64,
+     "heard": false
+    },
+    {
+     "w": "on",
+     "t0": 63.64,
+     "t1": 64.34,
+     "heard": true
+    },
+    {
+     "w": "vacation",
+     "t0": 64.43,
+     "t1": 65.26,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "section": "Chorus 1",
+   "text": "To my bed, bed, bed",
+   "t0": 66.725,
+   "t1": 69.64,
+   "words": [
+    {
+     "w": "To",
+     "t0": 66.725,
+     "t1": 67.44,
+     "heard": true
+    },
+    {
+     "w": "my",
+     "t0": 67.583,
+     "t1": 68.0,
+     "heard": true
+    },
+    {
+     "w": "bed,",
+     "t0": 68.0,
+     "t1": 68.58,
+     "heard": true
+    },
+    {
+     "w": "bed,",
+     "t0": 68.73,
+     "t1": 69.14,
+     "heard": true
+    },
+    {
+     "w": "bed",
+     "t0": 69.309,
+     "t1": 69.64,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "section": "Verse 2",
+   "text": "The view is the ceiling, an ocean of sheets",
+   "t0": 72.751,
+   "t1": 77.4,
+   "words": [
+    {
+     "w": "The",
+     "t0": 72.751,
+     "t1": 73.84,
+     "heard": true
+    },
+    {
+     "w": "view",
+     "t0": 73.749,
+     "t1": 74.12,
+     "heard": true
+    },
+    {
+     "w": "is",
+     "t0": 74.088,
+     "t1": 74.82,
+     "heard": true
+    },
+    {
+     "w": "the",
+     "t0": 74.866,
+     "t1": 75.0,
+     "heard": true
+    },
+    {
+     "w": "ceiling,",
+     "t0": 74.936,
+     "t1": 75.52,
+     "heard": true
+    },
+    {
+     "w": "an",
+     "t0": 75.914,
+     "t1": 76.06,
+     "heard": true
+    },
+    {
+     "w": "ocean",
+     "t0": 76.193,
+     "t1": 76.6,
+     "heard": true
+    },
+    {
+     "w": "of",
+     "t0": 76.513,
+     "t1": 76.9,
+     "heard": true
+    },
+    {
+     "w": "sheets",
+     "t0": 76.902,
+     "t1": 77.4,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 18,
+   "section": "Verse 2",
+   "text": "Room service is me reaching over for treats",
+   "t0": 77.411,
+   "t1": 82.02,
+   "words": [
+    {
+     "w": "Room",
+     "t0": 77.411,
+     "t1": 77.88,
+     "heard": true
+    },
+    {
+     "w": "service",
+     "t0": 78.019,
+     "t1": 78.82,
+     "heard": true
+    },
+    {
+     "w": "is",
+     "t0": 78.82,
+     "t1": 79.22,
+     "heard": true
+    },
+    {
+     "w": "me",
+     "t0": 79.177,
+     "t1": 79.6,
+     "heard": true
+    },
+    {
+     "w": "reaching",
+     "t0": 79.735,
+     "t1": 80.22,
+     "heard": true
+    },
+    {
+     "w": "over",
+     "t0": 80.244,
+     "t1": 81.12,
+     "heard": true
+    },
+    {
+     "w": "for",
+     "t0": 81.082,
+     "t1": 81.5,
+     "heard": true
+    },
+    {
+     "w": "treats",
+     "t0": 81.501,
+     "t1": 82.02,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "section": "Verse 2",
+   "text": "Forecast says duvet, seventy-two",
+   "t0": 82.07,
+   "t1": 86.24,
+   "words": [
+    {
+     "w": "Forecast",
+     "t0": 82.07,
+     "t1": 82.66,
+     "heard": true
+    },
+    {
+     "w": "says",
+     "t0": 82.699,
+     "t1": 83.42,
+     "heard": true
+    },
+    {
+     "w": "duvet,",
+     "t0": 83.42,
+     "t1": 84.38,
+     "heard": true
+    },
+    {
+     "w": "seventy-two",
+     "t0": 84.205,
+     "t1": 86.24,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "section": "Verse 2",
+   "text": "Wi-Fi is on but I'm ignoring you",
+   "t0": 86.26,
+   "t1": 91.12,
+   "words": [
+    {
+     "w": "Wi-Fi",
+     "t0": 86.26,
+     "t1": 87.56,
+     "heard": true
+    },
+    {
+     "w": "is",
+     "t0": 87.667,
+     "t1": 88.52,
+     "heard": true
+    },
+    {
+     "w": "on",
+     "t0": 88.505,
+     "t1": 88.9,
+     "heard": true
+    },
+    {
+     "w": "but",
+     "t0": 88.865,
+     "t1": 89.28,
+     "heard": true
+    },
+    {
+     "w": "I'm",
+     "t0": 89.094,
+     "t1": 89.7,
+     "heard": true
+    },
+    {
+     "w": "ignoring",
+     "t0": 89.673,
+     "t1": 90.34,
+     "heard": true
+    },
+    {
+     "w": "you",
+     "t0": 90.291,
+     "t1": 91.12,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 21,
+   "section": "Pre-Chorus 2",
+   "text": "Phone face down, the tide rolls in",
+   "t0": 91.03,
+   "t1": 95.76,
+   "words": [
+    {
+     "w": "Phone",
+     "t0": 91.03,
+     "t1": 92.28,
+     "heard": true
+    },
+    {
+     "w": "face",
+     "t0": 92.417,
+     "t1": 92.9,
+     "heard": true
+    },
+    {
+     "w": "down,",
+     "t0": 92.856,
+     "t1": 93.52,
+     "heard": true
+    },
+    {
+     "w": "the",
+     "t0": 93.52,
+     "t1": 94.1,
+     "heard": true
+    },
+    {
+     "w": "tide",
+     "t0": 94.153,
+     "t1": 94.52,
+     "heard": true
+    },
+    {
+     "w": "rolls",
+     "t0": 94.522,
+     "t1": 95.38,
+     "heard": true
+    },
+    {
+     "w": "in",
+     "t0": 95.41,
+     "t1": 95.76,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 22,
+   "section": "Pre-Chorus 2",
+   "text": "Blanket up to my chin, chin, chin",
+   "t0": 96.747,
+   "t1": 100.16,
+   "words": [
+    {
+     "w": "Blanket",
+     "t0": 96.747,
+     "t1": 97.2,
+     "heard": true
+    },
+    {
+     "w": "up",
+     "t0": 97.096,
+     "t1": 98.0,
+     "heard": true
+    },
+    {
+     "w": "to",
+     "t0": 98.183,
+     "t1": 98.36,
+     "heard": true
+    },
+    {
+     "w": "my",
+     "t0": 98.303,
+     "t1": 98.84,
+     "heard": true
+    },
+    {
+     "w": "chin,",
+     "t0": 98.762,
+     "t1": 99.32,
+     "heard": true
+    },
+    {
+     "w": "chin,",
+     "t0": 99.151,
+     "t1": 99.74,
+     "heard": true
+    },
+    {
+     "w": "chin",
+     "t0": 99.56,
+     "t1": 100.16,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "section": "Chorus 2",
+   "text": "I'm goin' on vacation",
+   "t0": 100.059,
+   "t1": 101.74,
+   "words": [
+    {
+     "w": "I'm",
+     "t0": 100.059,
+     "t1": 100.78,
+     "heard": true
+    },
+    {
+     "w": "goin'",
+     "t0": 100.827,
+     "t1": 101.06,
+     "heard": false
+    },
+    {
+     "w": "on",
+     "t0": 101.137,
+     "t1": 101.22,
+     "heard": true
+    },
+    {
+     "w": "vacation",
+     "t0": 101.266,
+     "t1": 101.74,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 24,
+   "section": "Chorus 2",
+   "text": "To my bed, bed, bed",
+   "t0": 101.735,
+   "t1": 103.7,
+   "words": [
+    {
+     "w": "To",
+     "t0": 101.735,
+     "t1": 102.16,
+     "heard": true
+    },
+    {
+     "w": "my",
+     "t0": 102.274,
+     "t1": 102.44,
+     "heard": true
+    },
+    {
+     "w": "bed,",
+     "t0": 102.563,
+     "t1": 102.78,
+     "heard": true
+    },
+    {
+     "w": "bed,",
+     "t0": 102.843,
+     "t1": 103.24,
+     "heard": true
+    },
+    {
+     "w": "bed",
+     "t0": 103.24,
+     "t1": 103.7,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 25,
+   "section": "Chorus 2",
+   "text": "Five-star destination",
+   "t0": 103.721,
+   "t1": 106.26,
+   "words": [
+    {
+     "w": "Five-star",
+     "t0": 103.721,
+     "t1": 105.3,
+     "heard": true
+    },
+    {
+     "w": "destination",
+     "t0": 105.138,
+     "t1": 106.26,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 26,
+   "section": "Chorus 2",
+   "text": "Pillow for my head",
+   "t0": 106.315,
+   "t1": 108.4,
+   "words": [
+    {
+     "w": "Pillow",
+     "t0": 106.315,
+     "t1": 107.06,
+     "heard": true
+    },
+    {
+     "w": "for",
+     "t0": 107.073,
+     "t1": 107.3,
+     "heard": true
+    },
+    {
+     "w": "my",
+     "t0": 107.153,
+     "t1": 107.74,
+     "heard": true
+    },
+    {
+     "w": "head",
+     "t0": 107.762,
+     "t1": 108.4,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 27,
+   "section": "Chorus 2",
+   "text": "No passport, no plane, no airport line",
+   "t0": 108.4,
+   "t1": 113.16,
+   "words": [
+    {
+     "w": "No",
+     "t0": 108.4,
+     "t1": 109.26,
+     "heard": true
+    },
+    {
+     "w": "passport,",
+     "t0": 109.398,
+     "t1": 109.9,
+     "heard": true
+    },
+    {
+     "w": "no",
+     "t0": 109.857,
+     "t1": 110.42,
+     "heard": true
+    },
+    {
+     "w": "plane,",
+     "t0": 110.296,
+     "t1": 111.04,
+     "heard": true
+    },
+    {
+     "w": "no",
+     "t0": 111.04,
+     "t1": 111.6,
+     "heard": true
+    },
+    {
+     "w": "airport",
+     "t0": 111.453,
+     "t1": 112.26,
+     "heard": true
+    },
+    {
+     "w": "line",
+     "t0": 112.182,
+     "t1": 113.16,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 28,
+   "section": "Chorus 2",
+   "text": "Out of office, do not disturb, I'm doing fine",
+   "t0": 113.199,
+   "t1": 117.46,
+   "words": [
+    {
+     "w": "Out",
+     "t0": 113.199,
+     "t1": 113.7,
+     "heard": true
+    },
+    {
+     "w": "of",
+     "t0": 113.708,
+     "t1": 113.88,
+     "heard": true
+    },
+    {
+     "w": "office,",
+     "t0": 113.888,
+     "t1": 114.3,
+     "heard": true
+    },
+    {
+     "w": "do",
+     "t0": 114.466,
+     "t1": 114.56,
+     "heard": true
+    },
+    {
+     "w": "not",
+     "t0": 114.616,
+     "t1": 114.8,
+     "heard": true
+    },
+    {
+     "w": "disturb,",
+     "t0": 114.885,
+     "t1": 115.38,
+     "heard": true
+    },
+    {
+     "w": "I'm",
+     "t0": 115.185,
+     "t1": 116.46,
+     "heard": true
+    },
+    {
+     "w": "doing",
+     "t0": 116.46,
+     "t1": 116.8,
+     "heard": true
+    },
+    {
+     "w": "fine",
+     "t0": 116.781,
+     "t1": 117.46,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 29,
+   "section": "Chorus 2",
+   "text": "I'm goin' on vacation",
+   "t0": 117.32,
+   "t1": 120.28,
+   "words": [
+    {
+     "w": "I'm",
+     "t0": 117.32,
+     "t1": 118.2,
+     "heard": true
+    },
+    {
+     "w": "goin'",
+     "t0": 118.318,
+     "t1": 118.82,
+     "heard": false
+    },
+    {
+     "w": "on",
+     "t0": 118.936,
+     "t1": 119.38,
+     "heard": true
+    },
+    {
+     "w": "vacation",
+     "t0": 119.485,
+     "t1": 120.28,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 30,
+   "section": "Chorus 2",
+   "text": "To my bed, bed, bed",
+   "t0": 122.319,
+   "t1": 124.72,
+   "words": [
+    {
+     "w": "To",
+     "t0": 122.319,
+     "t1": 122.54,
+     "heard": true
+    },
+    {
+     "w": "my",
+     "t0": 122.408,
+     "t1": 123.04,
+     "heard": true
+    },
+    {
+     "w": "bed,",
+     "t0": 123.187,
+     "t1": 123.66,
+     "heard": true
+    },
+    {
+     "w": "bed,",
+     "t0": 123.765,
+     "t1": 124.14,
+     "heard": true
+    },
+    {
+     "w": "bed",
+     "t0": 123.955,
+     "t1": 124.72,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 31,
+   "section": "Bridge",
+   "text": "Shhh, don't call, don't text",
+   "t0": 128.724,
+   "t1": 132.48,
+   "words": [
+    {
+     "w": "Shhh,",
+     "t0": 128.724,
+     "t1": 129.16,
+     "heard": false
+    },
+    {
+     "w": "don't",
+     "t0": 129.772,
+     "t1": 130.0,
+     "heard": true
+    },
+    {
+     "w": "call,",
+     "t0": 130.031,
+     "t1": 130.38,
+     "heard": true
+    },
+    {
+     "w": "don't",
+     "t0": 130.3,
+     "t1": 131.92,
+     "heard": true
+    },
+    {
+     "w": "text",
+     "t0": 132.046,
+     "t1": 132.48,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 32,
+   "section": "Bridge",
+   "text": "Monday's a rumor, I'll check it next",
+   "t0": 132.346,
+   "t1": 137.14,
+   "words": [
+    {
+     "w": "Monday's",
+     "t0": 132.346,
+     "t1": 134.1,
+     "heard": true
+    },
+    {
+     "w": "a",
+     "t0": 134.102,
+     "t1": 134.28,
+     "heard": true
+    },
+    {
+     "w": "rumor,",
+     "t0": 134.28,
+     "t1": 134.72,
+     "heard": true
+    },
+    {
+     "w": "I'll",
+     "t0": 134.641,
+     "t1": 135.86,
+     "heard": true
+    },
+    {
+     "w": "check",
+     "t0": 135.997,
+     "t1": 136.22,
+     "heard": true
+    },
+    {
+     "w": "it",
+     "t0": 136.337,
+     "t1": 136.54,
+     "heard": true
+    },
+    {
+     "w": "next",
+     "t0": 136.446,
+     "t1": 137.14,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 33,
+   "section": "Bridge",
+   "text": "Shhh, the tide is coming in",
+   "t0": 136.945,
+   "t1": 141.74,
+   "words": [
+    {
+     "w": "Shhh,",
+     "t0": 136.945,
+     "t1": 138.4,
+     "heard": false
+    },
+    {
+     "w": "the",
+     "t0": 138.931,
+     "t1": 139.08,
+     "heard": true
+    },
+    {
+     "w": "tide",
+     "t0": 139.09,
+     "t1": 139.58,
+     "heard": true
+    },
+    {
+     "w": "is",
+     "t0": 139.58,
+     "t1": 140.52,
+     "heard": true
+    },
+    {
+     "w": "coming",
+     "t0": 140.647,
+     "t1": 141.04,
+     "heard": true
+    },
+    {
+     "w": "in",
+     "t0": 140.976,
+     "t1": 141.74,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 34,
+   "section": "Bridge",
+   "text": "It's just my blanket, let it win",
+   "t0": 141.74,
+   "t1": 146.06,
+   "words": [
+    {
+     "w": "It's",
+     "t0": 141.74,
+     "t1": 143.14,
+     "heard": true
+    },
+    {
+     "w": "just",
+     "t0": 143.201,
+     "t1": 143.38,
+     "heard": true
+    },
+    {
+     "w": "my",
+     "t0": 143.38,
+     "t1": 143.66,
+     "heard": true
+    },
+    {
+     "w": "blanket,",
+     "t0": 143.75,
+     "t1": 144.2,
+     "heard": true
+    },
+    {
+     "w": "let",
+     "t0": 144.079,
+     "t1": 145.42,
+     "heard": true
+    },
+    {
+     "w": "it",
+     "t0": 145.266,
+     "t1": 145.7,
+     "heard": true
+    },
+    {
+     "w": "win",
+     "t0": 145.835,
+     "t1": 146.06,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 35,
+   "section": "Chorus 3",
+   "text": "I'm goin' on vacation",
+   "t0": 146.06,
+   "t1": 147.58,
+   "words": [
+    {
+     "w": "I'm",
+     "t0": 146.06,
+     "t1": 146.6,
+     "heard": true
+    },
+    {
+     "w": "goin'",
+     "t0": 146.673,
+     "t1": 146.88,
+     "heard": false
+    },
+    {
+     "w": "on",
+     "t0": 146.963,
+     "t1": 147.06,
+     "heard": true
+    },
+    {
+     "w": "vacation",
+     "t0": 147.092,
+     "t1": 147.58,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 36,
+   "section": "Chorus 3",
+   "text": "To my bed, bed, bed",
+   "t0": 147.58,
+   "t1": 149.58,
+   "words": [
+    {
+     "w": "To",
+     "t0": 147.58,
+     "t1": 147.96,
+     "heard": true
+    },
+    {
+     "w": "my",
+     "t0": 147.851,
+     "t1": 148.3,
+     "heard": true
+    },
+    {
+     "w": "bed,",
+     "t0": 148.399,
+     "t1": 148.62,
+     "heard": true
+    },
+    {
+     "w": "bed,",
+     "t0": 148.699,
+     "t1": 149.0,
+     "heard": true
+    },
+    {
+     "w": "bed",
+     "t0": 148.848,
+     "t1": 149.58,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 37,
+   "section": "Chorus 3",
+   "text": "Five-star destination",
+   "t0": 149.527,
+   "t1": 152.12,
+   "words": [
+    {
+     "w": "Five-star",
+     "t0": 149.527,
+     "t1": 151.1,
+     "heard": true
+    },
+    {
+     "w": "destination",
+     "t0": 150.963,
+     "t1": 152.12,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 38,
+   "section": "Chorus 3",
+   "text": "Pillow for my head",
+   "t0": 152.38,
+   "t1": 154.18,
+   "words": [
+    {
+     "w": "Pillow",
+     "t0": 152.38,
+     "t1": 152.8,
+     "heard": true
+    },
+    {
+     "w": "for",
+     "t0": 152.749,
+     "t1": 153.12,
+     "heard": true
+    },
+    {
+     "w": "my",
+     "t0": 152.989,
+     "t1": 153.56,
+     "heard": true
+    },
+    {
+     "w": "head",
+     "t0": 153.418,
+     "t1": 154.18,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 39,
+   "section": "Chorus 3",
+   "text": "No passport, no plane, no airport line",
+   "t0": 154.18,
+   "t1": 158.82,
+   "words": [
+    {
+     "w": "No",
+     "t0": 154.18,
+     "t1": 155.08,
+     "heard": true
+    },
+    {
+     "w": "passport,",
+     "t0": 155.224,
+     "t1": 155.7,
+     "heard": true
+    },
+    {
+     "w": "no",
+     "t0": 155.882,
+     "t1": 156.24,
+     "heard": true
+    },
+    {
+     "w": "plane,",
+     "t0": 156.331,
+     "t1": 156.84,
+     "heard": true
+    },
+    {
+     "w": "no",
+     "t0": 157.279,
+     "t1": 157.46,
+     "heard": true
+    },
+    {
+     "w": "airport",
+     "t0": 157.529,
+     "t1": 158.12,
+     "heard": true
+    },
+    {
+     "w": "line",
+     "t0": 158.167,
+     "t1": 158.82,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 40,
+   "section": "Chorus 3",
+   "text": "Out of office, do not disturb, I'm doing fine",
+   "t0": 158.935,
+   "t1": 163.3,
+   "words": [
+    {
+     "w": "Out",
+     "t0": 158.935,
+     "t1": 159.48,
+     "heard": true
+    },
+    {
+     "w": "of",
+     "t0": 159.524,
+     "t1": 159.7,
+     "heard": true
+    },
+    {
+     "w": "office,",
+     "t0": 159.704,
+     "t1": 160.16,
+     "heard": true
+    },
+    {
+     "w": "do",
+     "t0": 160.262,
+     "t1": 160.36,
+     "heard": true
+    },
+    {
+     "w": "not",
+     "t0": 160.422,
+     "t1": 160.58,
+     "heard": true
+    },
+    {
+     "w": "disturb,",
+     "t0": 160.701,
+     "t1": 161.22,
+     "heard": true
+    },
+    {
+     "w": "I'm",
+     "t0": 161.31,
+     "t1": 162.28,
+     "heard": true
+    },
+    {
+     "w": "doing",
+     "t0": 162.427,
+     "t1": 162.62,
+     "heard": true
+    },
+    {
+     "w": "fine",
+     "t0": 162.607,
+     "t1": 163.3,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 41,
+   "section": "Chorus 3",
+   "text": "I'm goin' on vacation",
+   "t0": 163.176,
+   "t1": 165.88,
+   "words": [
+    {
+     "w": "I'm",
+     "t0": 163.176,
+     "t1": 164.02,
+     "heard": true
+    },
+    {
+     "w": "goin'",
+     "t0": 164.124,
+     "t1": 164.56,
+     "heard": false
+    },
+    {
+     "w": "on",
+     "t0": 164.433,
+     "t1": 165.2,
+     "heard": true
+    },
+    {
+     "w": "vacation",
+     "t0": 165.281,
+     "t1": 165.88,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 42,
+   "section": "Chorus 3",
+   "text": "To my bed, bed, bed",
+   "t0": 168.104,
+   "t1": 170.98,
+   "words": [
+    {
+     "w": "To",
+     "t0": 168.104,
+     "t1": 168.32,
+     "heard": true
+    },
+    {
+     "w": "my",
+     "t0": 168.204,
+     "t1": 168.82,
+     "heard": true
+    },
+    {
+     "w": "bed,",
+     "t0": 168.753,
+     "t1": 169.28,
+     "heard": true
+    },
+    {
+     "w": "bed,",
+     "t0": 169.222,
+     "t1": 169.96,
+     "heard": true
+    },
+    {
+     "w": "bed",
+     "t0": 170.12,
+     "t1": 170.98,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 43,
+   "section": "Outro",
+   "text": "Wish you were here.",
+   "t0": 173.682,
+   "t1": 174.46,
+   "words": [
+    {
+     "w": "Wish",
+     "t0": 173.682,
+     "t1": 173.82,
+     "heard": true
+    },
+    {
+     "w": "you",
+     "t0": 173.772,
+     "t1": 173.98,
+     "heard": true
+    },
+    {
+     "w": "were",
+     "t0": 173.891,
+     "t1": 174.14,
+     "heard": true
+    },
+    {
+     "w": "here.",
+     "t0": 174.121,
+     "t1": 174.46,
+     "heard": true
+    }
+   ]
+  },
+  {
+   "id": 44,
+   "section": "Outro",
+   "text": "No I don't.",
+   "t0": 177.553,
+   "t1": 178.86,
+   "words": [
+    {
+     "w": "No",
+     "t0": 177.553,
+     "t1": 177.76,
+     "heard": true
+    },
+    {
+     "w": "I",
+     "t0": 178.531,
+     "t1": 178.6,
+     "heard": true
+    },
+    {
+     "w": "don't.",
+     "t0": 178.601,
+     "t1": 178.86,
+     "heard": true
+    }
+   ]
+  }
+ ],
+ "report": {
+  "lines": 44,
+  "words": 255,
+  "heard": 246,
+  "placed": 9,
+  "onsetShift": {
+   "median": 0.002,
+   "p90abs": 0.152
+  },
+  "midiCrossCheck": {
+   "file": "Vacation to My Bed (Vocals).mid",
+   "matched": 209,
+   "medianNoteMinusOnset": 0.011,
+   "note": "negative = the MIDI note starts before the sung onset"
+  }
+ }
+}

@@ -192,6 +192,12 @@ AI agents in a sealed test sandbox found each other through a shared package cac
 </tr>
 </table>
 
+### Head-to-head: Claude Fable 5.2 vs GPT-6.2 Astra
+
+<a href="https://youtu.be/IC-mSO5-Ef8"><img src="songs/vacation-fable-vs-gpt/thumbnail.jpg" alt="Claude Fable 5.2 vs GPT-6.2 Astra made the same music video" width="480"></a>
+
+Same song, same shot-by-shot direction, same Mac, four hours each, no help. One video is Claude Fable 5.2 in Claude Code, the other GPT-6.2 Astra in Codex. Which is which? ▶ [Watch and guess](https://youtu.be/IC-mSO5-Ef8) · [the shared inputs](songs/vacation-fable-vs-gpt). The answer drops Friday, Nov 20.
+
 ### Singles
 
 <table>
