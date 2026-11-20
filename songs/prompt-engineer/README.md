@@ -1,8 +1,8 @@
 # Prompt Engineer (Stitch by Stitch)
 
-[![Prompt Engineer: watch on YouTube](thumbnail.jpg)](https://youtu.be/VIDEO_ID_TBD)
+[![Prompt Engineer: watch on YouTube](thumbnail.jpg)](https://youtu.be/3i7nwTkjgzs)
 
-**▶ [Watch it on YouTube](https://youtu.be/VIDEO_ID_TBD)**
+**▶ [Watch it on YouTube](https://youtu.be/3i7nwTkjgzs)**
 
 <!-- model: Claude Fable 5.2 -->
 
