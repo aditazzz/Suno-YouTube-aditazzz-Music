@@ -1,0 +1,817 @@
+{
+ "D1": {
+  "src": "build/stills/S7_D1/D1.png",
+  "kind": "final"
+ },
+ "D7": {
+  "src": "build/stills/S7_D1/D7_region.png",
+  "kind": "final"
+ },
+ "cat_plain": {
+  "src": "build/stills/S7_D1/cat_plain.png",
+  "kind": "final"
+ },
+ "C1": {
+  "src": "build/stills/S8_C/C1.png",
+  "kind": "final"
+ },
+ "C0": {
+  "src": "build/stills/S8_C/C0.png",
+  "kind": "final"
+ },
+ "C2": {
+  "src": "build/stills/S8_C/C2.png",
+  "kind": "final"
+ },
+ "C3": {
+  "src": "build/stills/S8_C/C3.png",
+  "kind": "final"
+ },
+ "R4": {
+  "src": "build/stills/S18_R4/R4.png",
+  "kind": "final"
+ },
+ "routine_full": {
+  "src": "build/stills/S17_routine/full.png",
+  "kind": "final"
+ },
+ "routine_hpc": {
+  "src": "build/stills/S17_routine/her_plate_cooper.png",
+  "kind": "final"
+ },
+ "routine_meter_unlit": {
+  "src": "build/stills/S17_routine/meter_unlit_region.png",
+  "kind": "final"
+ },
+ "routine_bowslip": {
+  "src": "build/stills/S17_routine/cooper_bowslip_region.png",
+  "kind": "final"
+ },
+ "phone_7G": {
+  "src": "build/screens_real/phone_7G/16x9",
+  "first": 3547,
+  "last": 3627,
+  "ext": "jpg"
+ },
+ "phone_7H": {
+  "src": "build/screens_real/phone_7H/16x9",
+  "first": 3616,
+  "last": 3696,
+  "ext": "jpg"
+ },
+ "phone_8D": {
+  "src": "build/screens_real/phone_8D/16x9",
+  "first": 3894,
+  "last": 3974,
+  "ext": "jpg"
+ },
+ "phone_7G_916": {
+  "src": "build/screens_real/phone_7G/9x16",
+  "first": 3547,
+  "last": 3627,
+  "ext": "jpg"
+ },
+ "phone_7H_916": {
+  "src": "build/screens_real/phone_7H/9x16",
+  "first": 3616,
+  "last": 3696,
+  "ext": "jpg"
+ },
+ "phone_8D_916": {
+  "src": "build/screens_real/phone_8D/9x16",
+  "first": 3894,
+  "last": 3974,
+  "ext": "jpg"
+ },
+ "glass_8E": {
+  "src": "build/screens/glass_8E/glass_uv",
+  "first": 3963,
+  "last": 4113,
+  "ext": "png"
+ },
+ "tv_9A": {
+  "src": "build/screens/tv_9A/tex",
+  "first": 4240,
+  "last": 4390,
+  "ext": "jpg"
+ },
+ "tv_9C": {
+  "src": "build/screens/tv_9C/tex",
+  "first": 4449,
+  "last": 4529,
+  "ext": "jpg"
+ },
+ "tv_9D": {
+  "src": "build/screens/tv_9D/tex",
+  "first": 4518,
+  "last": 4598,
+  "ext": "jpg"
+ },
+ "tv_9G_frozen": {
+  "src": "build/screens/tv_9G/frozen.png",
+  "kind": "final"
+ },
+ "h4": {
+  "src": "build/heroes/h4_bail/final",
+  "first": 4558,
+  "last": 4593,
+  "ext": "jpg",
+  "kind": "final"
+ },
+ "party_clean": {
+  "src": "build/heroes/h4_bail/final/plate_clean.png",
+  "kind": "final"
+ },
+ "layout": {
+  "S7": {
+   "size": [
+    4320,
+    2430
+   ],
+   "door": {
+    "hinge_empty": "TR_door_hinge",
+    "axis": "z",
+    "hinge_world": [
+     -0.676,
+     -0.27,
+     0.0
+    ],
+    "open_rad": 0.0,
+    "hinge_top_px": [
+     1339.4,
+     419.9,
+     3.46
+    ],
+    "hinge_bottom_px": [
+     1339.4,
+     2335.4,
+     3.46
+    ],
+    "leaf_box": [
+     1338.5,
+     419.0,
+     2981.5,
+     2336.7
+    ]
+   },
+   "locks": {
+    "TR_PIV_deadbolt": {
+     "pivot_px": [
+      2861.2,
+      1335.9,
+      3.474
+     ],
+     "box": [
+      2848.8,
+      1290.9,
+      2870.9,
+      1380.6
+     ],
+     "open": 0.0,
+     "locked": 1.5708
+    },
+    "TR_PIV_chain": {
+     "pivot_px": [
+      3000.0,
+      975.0,
+      3.5
+     ],
+     "box": [
+      2935.1,
+      966.1,
+      3021.8,
+      1259.7
+     ],
+     "locked": 0.0,
+     "hang": -1.3963
+    },
+    "TR_PIV_floorbolt": {
+     "pivot_px": [
+      2907.0,
+      2142.7,
+      3.486
+     ],
+     "box": [
+      2892.4,
+      2134.5,
+      2917.4,
+      2270.4
+     ],
+     "up": 0.0,
+     "locked": -0.05
+    },
+    "TR_PIV_mailslot_flap": {
+     "pivot_px": [
+      2464.6,
+      1978.9,
+      3.447
+     ],
+     "box": [
+      2321.4,
+      1978.5,
+      2607.9,
+      2015.8
+     ],
+     "open": -1.2217,
+     "shut": 0.0
+    },
+    "how": "deadbolt / chain: rotation_euler.y = open|hang -> locked; floorbolt: location.z += locked; flap: rotation_euler.x = shut -> open"
+   },
+   "lobby_clock": {
+    "pivot_px": [
+     3596.6,
+     491.8,
+     4.53
+    ],
+    "radius_m": 0.115,
+    "rim_top_px": [
+     3596.6,
+     385.2,
+     4.53
+    ],
+    "rim_right_px": [
+     3634.0,
+     473.0,
+     4.415
+    ],
+    "hands": "none (code)"
+   },
+   "digital_clock": {
+    "face_corners_px": [
+     [
+      2529.2,
+      948.3,
+      5.119
+     ],
+     [
+      2808.2,
+      948.3,
+      5.119
+     ],
+     [
+      2808.2,
+      1055.0,
+      5.119
+     ],
+     [
+      2529.2,
+      1055.0,
+      5.119
+     ]
+    ],
+    "note": "blns NS_clock; its 3:59 text is NS_clock_t"
+   },
+   "sign": {
+    "pivot_hook_px": [
+     2160.0,
+     593.0
+    ],
+    "box": [
+     1927,
+     544,
+     2392,
+     969
+    ],
+    "note": "pendulum about the hook (x axis in the glass plane); faces: sign_blank / sign_back_at_6 / sign_open, RGBA crops at box"
+   },
+   "usage_plate": {
+    "box": [
+     1785,
+     974,
+     2534,
+     1115
+    ]
+   },
+   "mail_slot": {
+    "her": [
+     2299.8,
+     1947.2,
+     2628.7,
+     2039.8
+    ],
+    "lobby": [
+     2299.2,
+     1944.3,
+     2626.8,
+     2036.4
+    ]
+   },
+   "cat": {
+    "TR_cat": {
+     "pivot_px": [
+      1934.3,
+      287.2,
+      3.35
+     ],
+     "box": [
+      1657.3,
+      70.6,
+      2229.5,
+      730.9
+     ]
+    },
+    "TR_PIV_cat_lid_L": {
+     "pivot_px": [
+      1702.2,
+      154.4,
+      3.275
+     ],
+     "box": [
+      1688.9,
+      141.2,
+      1716.8,
+      170.9
+     ]
+    },
+    "TR_PIV_cat_lid_R": {
+     "pivot_px": [
+      1758.6,
+      154.4,
+      3.275
+     ],
+     "box": [
+      1745.4,
+      141.2,
+      1773.0,
+      170.9
+     ]
+    },
+    "TR_PIV_cat_ear_L": {
+     "pivot_px": [
+      1698.8,
+      128.4,
+      3.324
+     ],
+     "box": [
+      1669.2,
+      70.6,
+      1728.1,
+      137.7
+     ]
+    },
+    "TR_PIV_cat_ear_R": {
+     "pivot_px": [
+      1774.6,
+      128.4,
+      3.324
+     ],
+     "box": [
+      1745.5,
+      70.6,
+      1803.4,
+      137.7
+     ]
+    },
+    "TR_PIV_cat_tail": {
+     "pivot_px": [
+      2211.3,
+      227.5,
+      3.275
+     ],
+     "box": [
+      2177.6,
+      206.0,
+      2229.5,
+      730.9
+     ]
+    },
+    "TR_PIV_cat_tail_tip": {
+     "pivot_px": [
+      2211.3,
+      612.3,
+      3.275
+     ],
+     "box": [
+      2195.8,
+      606.8,
+      2226.9,
+      730.9
+     ]
+    },
+    "TR_PIV_cat_paw": {
+     "pivot_px": [
+      1821.7,
+      238.4,
+      3.29
+     ],
+     "box": [
+      1790.8,
+      227.6,
+      1844.5,
+      370.1
+     ]
+    },
+    "TR_cat_head": {
+     "pivot_px": [
+      1736.2,
+      184.0,
+      3.32
+     ],
+     "box": [
+      1657.3,
+      100.9,
+      1812.6,
+      264.4
+     ]
+    },
+    "head_region": [
+     1657.3,
+     70.6,
+     1812.6,
+     264.4
+    ]
+   },
+   "door_frame_px": {
+    "top_left": [
+     1273.9,
+     353.2,
+     3.46
+    ],
+    "top_right": [
+     3046.1,
+     353.2,
+     3.46
+    ],
+    "bottom_left": [
+     1273.9,
+     2380.3,
+     3.46
+    ],
+    "bottom_right": [
+     3046.1,
+     2380.3,
+     3.46
+    ]
+   }
+  },
+  "S8": {
+   "still": "S8 C the close, clean",
+   "size": [
+    4320,
+    2430
+   ],
+   "camera": "blns NS_camA2 (approved close camera), 50mm f/3.2 focus on him, Eevee 64 samples",
+   "glass_corners_TL_TR_BR_BL": [
+    [
+     -1304.6,
+     -2992.0
+    ],
+    [
+     5668.8,
+     -3160.7
+    ],
+    [
+     5601.8,
+     5240.5
+    ],
+    [
+     -1240.9,
+     5082.1
+    ]
+   ],
+   "glass_plane_y_m": -0.27,
+   "clock": {
+    "what": "lobby clock display, digits removed (time is code, behind him, out of focus: blur the code digits to match)",
+    "corners_TL_TR_BR_BL": [
+     [
+      3263.8,
+      119.0
+     ],
+     [
+      3909.7,
+      115.3
+     ],
+     [
+      3908.7,
+      351.2
+     ],
+     [
+      3263.2,
+      354.1
+     ]
+    ],
+    "approved_digits": "3:59 in JBMono-700, cream (.86,.80,.66), cap height .095 m",
+    "focus_distance_m": 2.923,
+    "focus_on_m": 1.451
+   },
+   "paddle_face_centre_C1": [
+    3866.7,
+    804.4
+   ],
+   "paddle_grip_C1": [
+    3858.8,
+    2530.8
+   ],
+   "eyes": {
+    "L": [
+     1575.1,
+     914.2
+    ],
+    "R": [
+     2538.2,
+     916.5
+    ]
+   },
+   "files": {
+    "C1.png": "the approved close, clean glass, paddle up, clock blank",
+    "C0.png": "paddle down out of frame (swung low at his side), same face",
+    "C0s.png": "smear C0 -> C1, shutter open across the move (hold 2 frames)",
+    "C2.png": "C1 with eyes to the bubble (upper left of the glass)",
+    "C3.png": "C1 with eyes up-right toward the clock"
+   }
+  },
+  "S16": {
+   "still": "S16 the party in layers",
+   "size": [
+    2880,
+    1620
+   ],
+   "camera": "RT_cam (approved party camera, blrroutine frame 6 v2)",
+   "samples": 160,
+   "groups": {
+    "tv_guests": {
+     "objects": 52,
+     "box": [
+      1098,
+      0,
+      2699,
+      1010
+     ]
+    },
+    "console_guests": {
+     "objects": 26,
+     "box": [
+      1846,
+      750,
+      2306,
+      1072
+     ]
+    },
+    "floor_line": {
+     "objects": 39,
+     "box": [
+      2134,
+      1124,
+      2830,
+      1572
+     ]
+    },
+    "guest_by_her": {
+     "objects": 13,
+     "box": [
+      64,
+      1155,
+      291,
+      1579
+     ]
+    },
+    "horn_guest": {
+     "objects": 15,
+     "box": [
+      1584,
+      1165,
+      1796,
+      1594
+     ]
+    },
+    "streamers": {
+     "objects": 56,
+     "box": [
+      0,
+      0,
+      2880,
+      1620
+     ]
+    },
+    "balloons": {
+     "objects": 8,
+     "box": [
+      33,
+      0,
+      2880,
+      1454
+     ]
+    },
+    "confetti": {
+     "objects": 11,
+     "box": [
+      0,
+      0,
+      2880,
+      1620
+     ]
+    },
+    "cat_hat": {
+     "objects": 2,
+     "box": [
+      1914,
+      1232,
+      1964,
+      1294
+     ]
+    }
+   },
+   "unassigned_party_objects": [],
+   "guests_head_pivots": {
+    "PT_p_con0": [
+     1950.1,
+     887.1
+    ],
+    "PT_p_con1": [
+     2141.4,
+     887.1
+    ],
+    "PT_p_hang": [
+     2331.8,
+     835.3
+    ],
+    "PT_p_horn": [
+     1740.9,
+     1341.1
+    ],
+    "PT_p_left": [
+     189.1,
+     1330.0
+    ],
+    "PT_p_line0": [
+     2282.1,
+     1325.7
+    ],
+    "PT_p_line1": [
+     2482.0,
+     1305.5
+    ],
+    "PT_p_line2": [
+     2668.1,
+     1279.6
+    ],
+    "PT_p_outC": [
+     1930.5,
+     117.3
+    ],
+    "PT_p_outL": [
+     1220.3,
+     188.5
+    ],
+    "PT_p_outR": [
+     2590.4,
+     194.1
+    ]
+   },
+   "vacuum": {
+    "box": [
+     1829,
+     1268,
+     2070,
+     1502
+    ],
+    "display_box": [
+     1847,
+     1411,
+     2070,
+     1502
+    ]
+   },
+   "note": "layers are disjoint (mutual holdout): stack in any order over room_no_party; guests cast no shadow in room_no_party (it is the room before the party)",
+   "tv_screen_TL_TR_BR_BL": [
+    [
+     1312.5,
+     80.8
+    ],
+    [
+     2453.2,
+     80.8
+    ],
+    [
+     2449.7,
+     735.2
+    ],
+    [
+     1313.0,
+     735.2
+    ]
+   ]
+  },
+  "S17": {
+   "still": "S17 the routine in layers",
+   "size": [
+    2880,
+    1620
+   ],
+   "camera": "RT_cam (approved routine camera, blrroutine frame 6 v0)",
+   "samples": 160,
+   "tv_screen": {
+    "object": "RT_scr",
+    "note": "TL TR BR BL as seen by the camera (projected; check the order against the frame)",
+    "corners": [
+     [
+      2453.2,
+      80.8
+     ],
+     [
+      1312.5,
+      80.8
+     ],
+     [
+      1313.0,
+      735.2
+     ],
+     [
+      2449.7,
+      735.2
+     ]
+    ]
+   },
+   "plate_meter_bars_in_order": {
+    "note": "ten bars, first = the end nearest +Y; bars 8-10 are the red ones (blroom: k >= 7)",
+    "px": [
+     [
+      859.2,
+      1615.1
+     ],
+     [
+      879.7,
+      1614.2
+     ],
+     [
+      900.2,
+      1613.3
+     ],
+     [
+      920.7,
+      1612.5
+     ],
+     [
+      941.3,
+      1611.6
+     ],
+     [
+      961.8,
+      1610.7
+     ],
+     [
+      982.3,
+      1609.8
+     ],
+     [
+      1002.8,
+      1609.0
+     ],
+     [
+      1023.3,
+      1608.1
+     ],
+     [
+      1043.8,
+      1607.2
+     ]
+    ]
+   },
+   "her_box": [
+    392,
+    159,
+    1523,
+    1560
+   ],
+   "regions": {
+    "meter_unlit_region.png": [
+     729,
+     1579,
+     1173,
+     1620
+    ],
+    "cooper_bowslip_region.png": [
+     875,
+     665,
+     1538,
+     1620
+    ]
+   },
+   "pivots": {
+    "cooper_bow": [
+     1223.2,
+     1488.3
+    ],
+    "plate_centre": [
+     1010.8,
+     1502.1
+    ]
+   },
+   "files": {
+    "full.png": "the frame",
+    "her_plate_cooper.png": "RGBA: her + plate + Cooper (vibration jitter layer); no shadow (contact shadow = code)",
+    "meter_unlit_region.png": "the plate meter bars off (lit segments are code), crop at regions box",
+    "cooper_bowslip_region.png": "bow slipped, crop at regions box"
+   },
+   "note_bz": "BZ_ shake-mark meshes are left out of every layer (they are code)",
+   "bow_slip": {
+    "chosen": [
+     0.022,
+     0.006,
+     -30
+    ],
+    "note": "slid toward his ear in the picture plane, tilted; the camera ray reaches the bow"
+   }
+  }
+ }
+}

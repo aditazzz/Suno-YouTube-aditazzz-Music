@@ -1,0 +1,2554 @@
+{
+ "M1": {
+  "src": "build/stills/S6_M1/plate.png",
+  "kind": "final",
+  "size": [
+   5760,
+   3240
+  ],
+  "file": "first30/M1.jpg"
+ },
+ "M1_needle": {
+  "src": "build/stills/S6_M1/needle.png",
+  "kind": "final",
+  "size": [
+   5760,
+   3240
+  ],
+  "file": "first30/M1_needle.png"
+ },
+ "S6_M1_layout": {
+  "still": "S6 M1 the meter at 200%",
+  "size": [
+   5760,
+   3240
+  ],
+  "camera": "blns NS_camC (approved meter camera), Eevee 64 samples",
+  "pivot": [
+   4426.8,
+   948.8
+  ],
+  "dial_points": {
+   "right_0deg": [
+    4985.4,
+    948.8
+   ],
+   "top_90deg": [
+    4435.5,
+    384.4
+   ],
+   "left_180deg": [
+    3868.2,
+    948.8
+   ],
+   "bottom_270deg": [
+    4418.2,
+    1506.8
+   ]
+  },
+  "dial_points_world_radius_m": 0.13,
+  "dial_plane": "the four points are on the dial face circle (radius r) at those angles in the dial plane, CCW from +X as seen from the front",
+  "needle": {
+   "layer": "needle.png",
+   "rendered_at_value": 20.4,
+   "rendered_at_angle_deg": -4.5,
+   "value_to_angle": "angle_deg = 225 - 270 * value / 24 (0 at lower left, 24 at lower right, clockwise on screen)",
+   "red_from_value": 18,
+   "tip_world_len_m": 0.0936,
+   "note": "pivot = hub centre; rotate in the dial plane through the homography of dial_points"
+  },
+  "ticks": {
+   "0": [
+    4055.1,
+    1316.4
+   ],
+   "6": [
+    3949.0,
+    748.6
+   ],
+   "12": [
+    4434.9,
+    424.1
+   ],
+   "18": [
+    4910.8,
+    748.6
+   ],
+   "20": [
+    4946.3,
+    948.8
+   ],
+   "21": [
+    4934.2,
+    1050.5
+   ],
+   "22": [
+    4902.7,
+    1148.1
+   ],
+   "23": [
+    4853.0,
+    1237.9
+   ],
+   "24": [
+    4787.1,
+    1316.4
+   ]
+  },
+  "plate_digit": {
+   "what": "GLASSES OF WATER value, blank in the plate (digits are code, split-flap)",
+   "right_aligned_at": [
+    5070.9,
+    1938.9
+   ],
+   "box": [
+    [
+     4780.6,
+     1847.5
+    ],
+    [
+     5093.8,
+     1847.5
+    ],
+    [
+     5089.7,
+     2030.2
+    ],
+    [
+     4777.0,
+     2030.2
+    ]
+   ],
+   "font": "JBMono-700",
+   "cap_height_world_m": 0.03
+  },
+  "label_hours_awake": [
+   4429.4,
+   780.1
+  ],
+  "plates_labels_box": [
+   [
+    3630.0,
+    1800.0
+   ],
+   [
+    5115.9,
+    2422.8
+   ]
+  ],
+  "files": {
+   "plate.png": "the meter, needle removed (hub stays), plate digit blank",
+   "needle.png": "needle + hub alone, RGBA, everything else holdout"
+  }
+ },
+ "C0": {
+  "src": "build/stills/S8_C/C0.png",
+  "kind": "final",
+  "size": [
+   4320,
+   2430
+  ],
+  "file": "first30/C0.jpg"
+ },
+ "C0s": {
+  "src": "build/stills/S8_C/C0s.png",
+  "kind": "final",
+  "size": [
+   4320,
+   2430
+  ],
+  "file": "first30/C0s.jpg"
+ },
+ "C1": {
+  "src": "build/stills/S8_C/C1.png",
+  "kind": "final",
+  "size": [
+   4320,
+   2430
+  ],
+  "file": "first30/C1.jpg"
+ },
+ "S8_C_layout": {
+  "still": "S8 C the close, clean",
+  "size": [
+   4320,
+   2430
+  ],
+  "camera": "blns NS_camA2 (approved close camera), 50mm f/3.2 focus on him, Eevee 64 samples",
+  "glass_corners_TL_TR_BR_BL": [
+   [
+    -1304.6,
+    -2992.0
+   ],
+   [
+    5668.8,
+    -3160.7
+   ],
+   [
+    5601.8,
+    5240.5
+   ],
+   [
+    -1240.9,
+    5082.1
+   ]
+  ],
+  "glass_plane_y_m": -0.27,
+  "clock": {
+   "what": "lobby clock display, digits removed (time is code, behind him, out of focus: blur the code digits to match)",
+   "corners_TL_TR_BR_BL": [
+    [
+     3263.8,
+     119.0
+    ],
+    [
+     3909.7,
+     115.3
+    ],
+    [
+     3908.7,
+     351.2
+    ],
+    [
+     3263.2,
+     354.1
+    ]
+   ],
+   "approved_digits": "3:59 in JBMono-700, cream (.86,.80,.66), cap height .095 m",
+   "focus_distance_m": 2.923,
+   "focus_on_m": 1.451
+  },
+  "paddle_face_centre_C1": [
+   3866.7,
+   804.4
+  ],
+  "paddle_grip_C1": [
+   3858.8,
+   2530.8
+  ],
+  "eyes": {
+   "L": [
+    1575.1,
+    914.2
+   ],
+   "R": [
+    2538.2,
+    916.5
+   ]
+  },
+  "files": {
+   "C1.png": "the approved close, clean glass, paddle up, clock blank",
+   "C0.png": "paddle down out of frame (swung low at his side), same face",
+   "C0s.png": "smear C0 -> C1, shutter open across the move (hold 2 frames)",
+   "C2.png": "C1 with eyes to the bubble (upper left of the glass)",
+   "C3.png": "C1 with eyes up-right toward the clock"
+  }
+ },
+ "ripple": {
+  "frames": [
+   768,
+   769,
+   770,
+   771,
+   772,
+   773,
+   774,
+   775,
+   776,
+   777,
+   778,
+   779,
+   780,
+   781,
+   782,
+   783,
+   784,
+   785,
+   786,
+   787,
+   788,
+   789,
+   790,
+   791,
+   792,
+   793,
+   794,
+   795,
+   796,
+   797,
+   798,
+   799,
+   800,
+   801,
+   802,
+   803,
+   804,
+   805,
+   806,
+   807,
+   808,
+   809,
+   810,
+   811,
+   812,
+   813,
+   814,
+   815,
+   816,
+   817,
+   818,
+   819,
+   820,
+   821,
+   822,
+   823,
+   824,
+   825,
+   826,
+   827,
+   828,
+   829,
+   830,
+   831,
+   832,
+   833,
+   834,
+   835,
+   836,
+   837,
+   838,
+   839,
+   840,
+   841,
+   842,
+   843,
+   844,
+   845,
+   846,
+   847,
+   848
+  ],
+  "size": [
+   1360,
+   1620
+  ]
+ },
+ "S7/D1": {
+  "src": "build/stills/S7_D1/D1.png",
+  "kind": "final",
+  "size": [
+   4320,
+   2430
+  ],
+  "file": "first30/D1.jpg"
+ },
+ "S7/D1open_upright": {
+  "src": "build/stills/S7_D1/D1open_upright.png",
+  "kind": "final",
+  "size": [
+   4320,
+   2430
+  ],
+  "file": "first30/D1open_upright.jpg"
+ },
+ "S7/D1open_smear": {
+  "src": "build/stills/S7_D1/D1open_smear.png",
+  "kind": "final",
+  "size": [
+   4320,
+   2430
+  ],
+  "file": "first30/D1open_smear.jpg"
+ },
+ "S7/D1open_bow": {
+  "src": "build/stills/S7_D1/D1open_bow.png",
+  "kind": "final",
+  "size": [
+   4320,
+   2430
+  ],
+  "file": "first30/D1open_bow.jpg"
+ },
+ "S7/D1p_region": {
+  "src": "build/stills/S7_D1/D1p_region.png",
+  "kind": "final",
+  "size": [
+   954,
+   1799
+  ],
+  "file": "first30/D1p_region.jpg"
+ },
+ "S7/D1nod_region": {
+  "src": "build/stills/S7_D1/D1nod_region.png",
+  "kind": "final",
+  "size": [
+   926,
+   723
+  ],
+  "file": "first30/D1nod_region.jpg"
+ },
+ "S7/leaf": {
+  "src": "build/stills/S7_D1/leaf.png",
+  "kind": "final",
+  "size": [
+   1646,
+   1921
+  ],
+  "off": [
+   1337,
+   417
+  ],
+  "file": "first30/S7/leaf.png"
+ },
+ "S7/lock_deadbolt_open": {
+  "src": "build/stills/S7_D1/lock_deadbolt_open.png",
+  "kind": "final",
+  "size": [
+   49,
+   197
+  ],
+  "off": [
+   0,
+   0
+  ],
+  "file": "first30/S7/lock_deadbolt_open.png"
+ },
+ "S7/lock_deadbolt_locked": {
+  "src": "build/stills/S7_D1/lock_deadbolt_locked.png",
+  "kind": "final",
+  "size": [
+   49,
+   197
+  ],
+  "off": [
+   0,
+   0
+  ],
+  "file": "first30/S7/lock_deadbolt_locked.png"
+ },
+ "S7/lock_chain_open": {
+  "src": "build/stills/S7_D1/lock_chain_open.png",
+  "kind": "final",
+  "size": [
+   223,
+   696
+  ],
+  "off": [
+   0,
+   0
+  ],
+  "file": "first30/S7/lock_chain_open.png"
+ },
+ "S7/lock_chain_locked": {
+  "src": "build/stills/S7_D1/lock_chain_locked.png",
+  "kind": "final",
+  "size": [
+   223,
+   696
+  ],
+  "off": [
+   0,
+   0
+  ],
+  "file": "first30/S7/lock_chain_locked.png"
+ },
+ "S7/lock_floorbolt_open": {
+  "src": "build/stills/S7_D1/lock_floorbolt_open.png",
+  "kind": "final",
+  "size": [
+   55,
+   299
+  ],
+  "off": [
+   0,
+   0
+  ],
+  "file": "first30/S7/lock_floorbolt_open.png"
+ },
+ "S7/lock_floorbolt_locked": {
+  "src": "build/stills/S7_D1/lock_floorbolt_locked.png",
+  "kind": "final",
+  "size": [
+   55,
+   299
+  ],
+  "off": [
+   0,
+   0
+  ],
+  "file": "first30/S7/lock_floorbolt_locked.png"
+ },
+ "S7/cat_plain": {
+  "src": "build/stills/S7_D1/cat_plain.png",
+  "kind": "final",
+  "size": [
+   664,
+   766
+  ],
+  "off": [
+   0,
+   0
+  ],
+  "file": "first30/S7/cat_plain.png"
+ },
+ "S7/cat_yawn": {
+  "src": "build/stills/S7_D1/cat_yawn.png",
+  "kind": "final",
+  "size": [
+   664,
+   766
+  ],
+  "off": [
+   0,
+   0
+  ],
+  "file": "first30/S7/cat_yawn.png"
+ },
+ "S7_layout": {
+  "camera": "TR_cam_S7",
+  "size": [
+   4320,
+   2430
+  ],
+  "state": "shut",
+  "him": {
+   "head_px": [
+    2182.3,
+    1505.4,
+    3.76
+   ],
+   "arm_loc": [
+    0.02,
+    0.03,
+    0.0
+   ]
+  },
+  "lens": 35.0,
+  "fstop": 2.799999952316284,
+  "loc": [
+   0.0,
+   -3.73,
+   0.96
+  ],
+  "note": "pixels at the delivery size; [x, y, depth_m]; boxes [x0, y0, x1, y1]",
+  "door": {
+   "hinge_empty": "TR_door_hinge",
+   "axis": "z",
+   "hinge_world": [
+    -0.676,
+    -0.27,
+    0.0
+   ],
+   "open_rad": 0.0,
+   "hinge_top_px": [
+    1339.4,
+    419.9,
+    3.46
+   ],
+   "hinge_bottom_px": [
+    1339.4,
+    2335.4,
+    3.46
+   ],
+   "leaf_box": [
+    1338.5,
+    419.0,
+    2981.5,
+    2336.7
+   ]
+  },
+  "locks": {
+   "TR_PIV_deadbolt": {
+    "pivot_px": [
+     2861.2,
+     1335.9,
+     3.474
+    ],
+    "box": [
+     2848.8,
+     1290.9,
+     2870.9,
+     1380.6
+    ],
+    "open": 0.0,
+    "locked": 1.5708
+   },
+   "TR_PIV_chain": {
+    "pivot_px": [
+     3000.0,
+     975.0,
+     3.5
+    ],
+    "box": [
+     2935.1,
+     966.1,
+     3021.8,
+     1259.7
+    ],
+    "locked": 0.0,
+    "hang": -1.3963
+   },
+   "TR_PIV_floorbolt": {
+    "pivot_px": [
+     2907.0,
+     2142.7,
+     3.486
+    ],
+    "box": [
+     2892.4,
+     2134.5,
+     2917.4,
+     2270.4
+    ],
+    "up": 0.0,
+    "locked": -0.05
+   },
+   "TR_PIV_mailslot_flap": {
+    "pivot_px": [
+     2464.6,
+     1978.9,
+     3.447
+    ],
+    "box": [
+     2321.4,
+     1978.5,
+     2607.9,
+     2015.8
+    ],
+    "open": -1.2217,
+    "shut": 0.0
+   },
+   "how": "deadbolt / chain: rotation_euler.y = open|hang -> locked; floorbolt: location.z += locked; flap: rotation_euler.x = shut -> open"
+  },
+  "cat": {
+   "TR_cat": {
+    "pivot_px": [
+     1934.3,
+     287.2,
+     3.35
+    ],
+    "box": [
+     1657.3,
+     70.6,
+     2229.5,
+     730.9
+    ]
+   },
+   "TR_PIV_cat_lid_L": {
+    "pivot_px": [
+     1702.2,
+     154.4,
+     3.275
+    ],
+    "box": [
+     1688.9,
+     141.2,
+     1716.8,
+     170.9
+    ]
+   },
+   "TR_PIV_cat_lid_R": {
+    "pivot_px": [
+     1758.6,
+     154.4,
+     3.275
+    ],
+    "box": [
+     1745.4,
+     141.2,
+     1773.0,
+     170.9
+    ]
+   },
+   "TR_PIV_cat_ear_L": {
+    "pivot_px": [
+     1698.8,
+     128.4,
+     3.324
+    ],
+    "box": [
+     1669.2,
+     70.6,
+     1728.1,
+     137.7
+    ]
+   },
+   "TR_PIV_cat_ear_R": {
+    "pivot_px": [
+     1774.6,
+     128.4,
+     3.324
+    ],
+    "box": [
+     1745.5,
+     70.6,
+     1803.4,
+     137.7
+    ]
+   },
+   "TR_PIV_cat_tail": {
+    "pivot_px": [
+     2211.3,
+     227.5,
+     3.275
+    ],
+    "box": [
+     2177.6,
+     206.0,
+     2229.5,
+     730.9
+    ]
+   },
+   "TR_PIV_cat_tail_tip": {
+    "pivot_px": [
+     2211.3,
+     612.3,
+     3.275
+    ],
+    "box": [
+     2195.8,
+     606.8,
+     2226.9,
+     730.9
+    ]
+   },
+   "TR_PIV_cat_paw": {
+    "pivot_px": [
+     1821.7,
+     238.4,
+     3.29
+    ],
+    "box": [
+     1790.8,
+     227.6,
+     1844.5,
+     370.1
+    ]
+   },
+   "TR_cat_head": {
+    "pivot_px": [
+     1736.2,
+     184.0,
+     3.32
+    ],
+    "box": [
+     1657.3,
+     100.9,
+     1812.6,
+     264.4
+    ]
+   },
+   "head_region": [
+    1657.3,
+    70.6,
+    1812.6,
+    264.4
+   ]
+  },
+  "lobby_clock": {
+   "pivot_px": [
+    3596.6,
+    491.8,
+    4.53
+   ],
+   "radius_m": 0.115,
+   "rim_top_px": [
+    3596.6,
+    385.2,
+    4.53
+   ],
+   "rim_right_px": [
+    3634.0,
+    473.0,
+    4.415
+   ],
+   "hands": "none (code)"
+  },
+  "digital_clock": {
+   "face_corners_px": [
+    [
+     2529.2,
+     948.3,
+     5.119
+    ],
+    [
+     2808.2,
+     948.3,
+     5.119
+    ],
+    [
+     2808.2,
+     1055.0,
+     5.119
+    ],
+    [
+     2529.2,
+     1055.0,
+     5.119
+    ]
+   ],
+   "note": "blns NS_clock; its 3:59 text is NS_clock_t"
+  },
+  "gauge": {
+   "hub_px": [
+    2665.5,
+    1296.5,
+    5.151
+   ],
+   "points": {
+    "0": [
+     2590.5,
+     1371.5,
+     5.151
+    ],
+    "6": [
+     2567.6,
+     1256.0,
+     5.151
+    ],
+    "12": [
+     2665.5,
+     1190.5,
+     5.151
+    ],
+    "18": [
+     2763.4,
+     1256.0,
+     5.151
+    ],
+    "24": [
+     2740.4,
+     1371.5,
+     5.151
+    ]
+   },
+   "needle": "NS_g_needle",
+   "label_hidden": false
+  },
+  "tally_windows": [
+   [
+    3338.8,
+    1360.5,
+    3372.0,
+    1416.4
+   ],
+   [
+    3375.9,
+    1360.5,
+    3409.2,
+    1416.4
+   ]
+  ],
+  "ticket_strip": {
+   "object": "TR_ticket_strip",
+   "box": [
+    3236.2,
+    1209.0,
+    3305.0,
+    1284.2
+   ]
+  },
+  "slip": {
+   "object": "TR_slip",
+   "corners_px": [
+    [
+     2408.5,
+     1760.5,
+     3.971
+    ],
+    [
+     2520.0,
+     1761.5,
+     3.964
+    ],
+    [
+     2518.8,
+     1751.4,
+     4.039
+    ],
+    [
+     2409.4,
+     1750.4,
+     4.046
+    ]
+   ]
+  },
+  "desk_parcel": {
+   "box": [
+    2387.1,
+    1661.9,
+    2574.4,
+    1778.9
+   ],
+   "pct_window": [
+    2515.4,
+    1695.7,
+    2545.8,
+    1713.1
+   ]
+  },
+  "mail_slot": {
+   "her": [
+    2299.8,
+    1947.2,
+    2628.7,
+    2039.8
+   ],
+   "lobby": [
+    2299.2,
+    1944.3,
+    2626.8,
+    2036.4
+   ]
+  },
+  "parcels_rgba": {
+   "TR_prgba00": [
+    1894.5,
+    2245.1,
+    2045.7,
+    2398.6
+   ],
+   "TR_prgba01": [
+    2256.3,
+    2252.2,
+    2450.1,
+    2403.4
+   ]
+  },
+  "sign": {
+   "pivot_hook_px": [
+    2160.0,
+    593.0
+   ],
+   "box": [
+    1927,
+    544,
+    2392,
+    969
+   ],
+   "note": "pendulum about the hook (x axis in the glass plane); faces: sign_blank / sign_back_at_6 / sign_open, RGBA crops at box"
+  },
+  "her_anchor": {
+   "threshold_squat": [
+    0.0,
+    -0.57,
+    0.0
+   ],
+   "mail_slot_squat": [
+    0.25,
+    -0.59,
+    0.0
+   ],
+   "note": "world metres, her side; the stills job places her Rain pose here (the doormat top is z .012)"
+  },
+  "door_frame_px": {
+   "top_left": [
+    1273.9,
+    353.2,
+    3.46
+   ],
+   "top_right": [
+    3046.1,
+    353.2,
+    3.46
+   ],
+   "bottom_left": [
+    1273.9,
+    2380.3,
+    3.46
+   ],
+   "bottom_right": [
+    3046.1,
+    2380.3,
+    3.46
+   ]
+  },
+  "him_region": [
+   1780,
+   555,
+   2599,
+   2430
+  ],
+  "head_region": [
+   1720,
+   950,
+   2646,
+   1672
+  ],
+  "usage_plate": {
+   "box": [
+    1919,
+    1046,
+    2400,
+    1140
+   ]
+  },
+  "lock_regions": {
+   "TR_PIV_deadbolt": [
+    2835,
+    1237,
+    2884,
+    1434
+   ],
+   "TR_PIV_chain": [
+    2874,
+    754,
+    3097,
+    1449
+   ],
+   "TR_PIV_floorbolt": [
+    2877,
+    2052,
+    2932,
+    2351
+   ]
+  },
+  "cat_region": [
+   1611,
+   17,
+   2275,
+   783
+  ],
+  "region_note": "D1p_region / D7_region boxes are written after the pose (keys D1p_region, D7_region)",
+  "files": {
+   "D1.png": "door shut, him soft behind, paddle parked (down)",
+   "D1p_region.png": "paddle up beside his head (crop at him_region)",
+   "D1nod_region.png": "the nod (crop at head_region)",
+   "D7_region.png": "hands folded + the engraved USAGE LIMIT REACHED plate (crop at him_region U plate)",
+   "D1open_upright.png / D1open_smear.png / D1open_bow.png": "door open (80 deg into the lobby), him upright / smear / bow",
+   "leaf.png": "RGBA: the door leaf alone (shut)",
+   "doorway_empty.png": "no leaf, no him",
+   "lock_<name>_<open|locked>.png": "RGBA crops at lock_regions (glass hidden)",
+   "sign_blank/back_at_6/open.png": "RGBA crops at sign.box",
+   "cat_plain/moustache/yawn.png": "RGBA crops at cat_region"
+  },
+  "D1p_region": [
+   1797,
+   619,
+   2751,
+   2418
+  ],
+  "D7_region": [
+   1807,
+   619,
+   2571,
+   2418
+  ]
+ },
+ "S4/plate_nostrip": {
+  "src": "build/stills/S4_T2/plate_nostrip.png",
+  "kind": "final",
+  "size": [
+   2880,
+   1620
+  ],
+  "file": "first30/plate_nostrip.jpg"
+ },
+ "S4/strip": {
+  "src": "build/stills/S4_T2/strip.png",
+  "kind": "final",
+  "size": [
+   2880,
+   1620
+  ],
+  "off": [
+   0,
+   0
+  ],
+  "file": "first30/S4/strip.png"
+ },
+ "S4_layout": {
+  "camera": "TR_cam_S4",
+  "size": [
+   2880,
+   1620
+  ],
+  "state": "work",
+  "him": {
+   "head_px": [
+    -473.5,
+    1342.8,
+    1.518
+   ],
+   "arm_loc": [
+    0.3,
+    0.63,
+    0.0
+   ]
+  },
+  "lens": 46.0,
+  "fstop": 5.599999904632568,
+  "loc": [
+   0.7,
+   -1.05,
+   0.98
+  ],
+  "note": "pixels at the delivery size; [x, y, depth_m]; boxes [x0, y0, x1, y1]",
+  "door": {
+   "hinge_empty": "TR_door_hinge",
+   "axis": "z",
+   "hinge_world": [
+    -0.676,
+    -0.27,
+    0.0
+   ],
+   "open_rad": 1.3963,
+   "hinge_top_px": [
+    -12688.0,
+    -5229.9,
+    0.397
+   ],
+   "hinge_bottom_px": [
+    -10733.6,
+    8199.5,
+    0.461
+   ],
+   "leaf_box": [
+    -12735.0,
+    -5234.0,
+    -1846.7,
+    8204.1
+   ]
+  },
+  "locks": {
+   "TR_PIV_deadbolt": {
+    "pivot_px": [
+     -2126.2,
+     924.6,
+     1.678
+    ],
+    "box": [
+     -2178.1,
+     842.7,
+     -2107.4,
+     1007.3
+    ],
+    "open": 0.0,
+    "locked": 1.5708
+   },
+   "TR_PIV_chain": {
+    "pivot_px": [
+     510.7,
+     -180.5,
+     0.788
+    ],
+    "box": [
+     260.2,
+     -242.8,
+     570.9,
+     936.9
+    ],
+    "locked": 0.0,
+    "hang": -1.3963
+   },
+   "TR_PIV_floorbolt": {
+    "pivot_px": [
+     -2022.3,
+     2329.2,
+     1.744
+    ],
+    "box": [
+     -2079.0,
+     2311.7,
+     -1989.7,
+     2552.1
+    ],
+    "up": 0.0,
+    "locked": -0.05
+   },
+   "TR_PIV_mailslot_flap": {
+    "pivot_px": [
+     -2787.5,
+     2397.3,
+     1.373
+    ],
+    "box": [
+     -3162.4,
+     2260.7,
+     -2468.4,
+     2645.5
+    ],
+    "open": -1.2217,
+    "shut": 0.0
+   },
+   "how": "deadbolt / chain: rotation_euler.y = open|hang -> locked; floorbolt: location.z += locked; flap: rotation_euler.x = shut -> open"
+  },
+  "cat": {
+   "TR_cat": {
+    "pivot_px": [
+     -7745.6,
+     -5852.1,
+     0.407
+    ],
+    "box": [
+     -15725.5,
+     -10875.9,
+     -4506.3,
+     -2538.5
+    ]
+   },
+   "TR_PIV_cat_lid_L": {
+    "pivot_px": [
+     -13505.8,
+     -9658.2,
+     0.288
+    ],
+    "box": [
+     -13795.1,
+     -9902.3,
+     -12773.7,
+     -9089.9
+    ]
+   },
+   "TR_PIV_cat_lid_R": {
+    "pivot_px": [
+     -12446.4,
+     -9289.8,
+     0.299
+    ],
+    "box": [
+     -12714.2,
+     -9521.2,
+     -11783.1,
+     -8756.2
+    ]
+   },
+   "TR_PIV_cat_ear_L": {
+    "pivot_px": [
+     -11733.9,
+     -8650.3,
+     0.332
+    ],
+    "box": [
+     -13086.3,
+     -9958.7,
+     -10636.8,
+     -7965.4
+    ]
+   },
+   "TR_PIV_cat_ear_R": {
+    "pivot_px": [
+     -10563.9,
+     -8259.9,
+     0.347
+    ],
+    "box": [
+     -11755.7,
+     -9475.8,
+     -9589.8,
+     -7628.5
+    ]
+   },
+   "TR_PIV_cat_tail": {
+    "pivot_px": [
+     -6029.9,
+     -6485.1,
+     0.387
+    ],
+    "box": [
+     -6474.2,
+     -6836.2,
+     -4935.7,
+     -2538.5
+    ]
+   },
+   "TR_PIV_cat_tail_tip": {
+    "pivot_px": [
+     -5802.9,
+     -3496.2,
+     0.399
+    ],
+    "box": [
+     -6162.7,
+     -3678.7,
+     -5414.9,
+     -2538.5
+    ]
+   },
+   "TR_PIV_cat_paw": {
+    "pivot_px": [
+     -10747.3,
+     -7720.5,
+     0.327
+    ],
+    "box": [
+     -13461.0,
+     -8524.3,
+     -10226.7,
+     -6655.1
+    ]
+   },
+   "TR_cat_head": {
+    "pivot_px": [
+     -11202.6,
+     -8015.4,
+     0.337
+    ],
+    "box": [
+     -14911.5,
+     -10875.9,
+     -8725.8,
+     -6105.2
+    ]
+   },
+   "head_region": [
+    -14911.5,
+    -10875.9,
+    -8725.8,
+    -6105.2
+   ]
+  },
+  "lobby_clock": {
+   "pivot_px": [
+    2141.9,
+    -760.7,
+    1.968
+   ],
+   "radius_m": 0.115,
+   "rim_top_px": [
+    2143.5,
+    -979.8,
+    1.964
+   ],
+   "rim_right_px": [
+    2239.3,
+    -846.1,
+    1.857
+   ],
+   "hands": "none (code)"
+  },
+  "digital_clock": {
+   "face_corners_px": [
+    [
+     100.4,
+     171.0,
+     2.291
+    ],
+    [
+     658.3,
+     188.0,
+     2.374
+    ],
+    [
+     660.0,
+     390.3,
+     2.379
+    ],
+    [
+     103.5,
+     380.6,
+     2.297
+    ]
+   ],
+   "note": "blns NS_clock; its 3:59 text is NS_clock_t"
+  },
+  "gauge": {
+   "hub_px": [
+    393.7,
+    846.8,
+    2.381
+   ],
+   "points": {
+    "0": [
+     246.6,
+     991.6,
+     2.363
+    ],
+    "6": [
+     197.4,
+     771.3,
+     2.35
+    ],
+    "12": [
+     391.4,
+     645.7,
+     2.376
+    ],
+    "18": [
+     583.5,
+     768.7,
+     2.408
+    ],
+    "24": [
+     541.3,
+     985.5,
+     2.407
+    ]
+   },
+   "needle": "NS_g_needle",
+   "label_hidden": false
+  },
+  "tally_windows": [
+   [
+    1788.3,
+    1324.9,
+    1913.2,
+    1550.7
+   ],
+   [
+    1924.8,
+    1318.6,
+    2048.2,
+    1542.2
+   ]
+  ],
+  "ticket_strip": {
+   "object": "TR_ticket_strip",
+   "box": [
+    1391.1,
+    743.4,
+    1678.5,
+    1075.5
+   ]
+  },
+  "slip": {
+   "object": "TR_slip",
+   "corners_px": [
+    [
+     -983.3,
+     2361.5,
+     1.161
+    ],
+    [
+     -623.0,
+     2335.1,
+     1.179
+    ],
+    [
+     -539.8,
+     2236.5,
+     1.253
+    ],
+    [
+     -877.4,
+     2259.8,
+     1.234
+    ]
+   ]
+  },
+  "desk_parcel": {
+   "box": [
+    -1178.7,
+    2003.0,
+    -441.9,
+    2518.8
+   ],
+   "pct_window": [
+    -745.8,
+    2208.7,
+    -639.5,
+    2272.6
+   ]
+  },
+  "mail_slot": {
+   "her": [
+    -3249.9,
+    2183.6,
+    -2434.6,
+    2733.8
+   ],
+   "lobby": [
+    -3295.3,
+    2184.6,
+    -2471.2,
+    2735.4
+   ]
+  },
+  "parcels_rgba": {
+   "TR_prgba00": [
+    -6104.6,
+    5590.1,
+    -3967.1,
+    7560.9
+   ],
+   "TR_prgba01": [
+    -3386.6,
+    5200.1,
+    -1825.3,
+    6686.8
+   ]
+  },
+  "sign": {
+   "object": "RM_SIGN",
+   "box": [
+    -3844.7,
+    -16607.3,
+    28449.0,
+    3233.5
+   ]
+  },
+  "her_anchor": {
+   "threshold_squat": [
+    0.0,
+    -0.57,
+    0.0
+   ],
+   "mail_slot_squat": [
+    0.25,
+    -0.59,
+    0.0
+   ],
+   "note": "world metres, her side; the stills job places her Rain pose here (the doormat top is z .012)"
+  },
+  "door_frame_px": {
+   "top_left": [
+    -13759.7,
+    -5996.8,
+    0.382
+   ],
+   "top_right": [
+    639.1,
+    -2793.9,
+    0.735
+   ],
+   "bottom_left": [
+    -11477.0,
+    8697.5,
+    0.449
+   ],
+   "bottom_right": [
+    706.4,
+    5156.4,
+    0.803
+   ]
+  },
+  "files": {
+   "plate.png": "the jamb close, ticket 41 out of the mouth, tally digit windows blank (digits are code)",
+   "plate_nostrip.png": "the same without the ticket (it is pulled out in code)",
+   "strip.png": "RGBA: the ticket alone (41 printed); its faint shadow is code"
+  },
+  "strip_box": [
+   1391,
+   743,
+   1678,
+   1075
+  ]
+ },
+ "S7_lockstrip": {
+  "box": [
+   2800,
+   720,
+   3130,
+   2390
+  ],
+  "states": [
+   "s0",
+   "s0h",
+   "s1",
+   "s2",
+   "s3"
+  ],
+  "knob_px": [
+   2861.2,
+   1335.9
+  ],
+  "s0_vs_D1_p99": 0
+ },
+ "S7_2C/K0": {
+  "src": "build/stills/S7_2C/K0.png",
+  "kind": "final",
+  "size": [
+   4320,
+   2430
+  ],
+  "file": "first30/S7_2C/K0.jpg"
+ },
+ "S7_2C/K1": {
+  "src": "build/stills/S7_2C/K1.png",
+  "kind": "final",
+  "size": [
+   4320,
+   2430
+  ],
+  "file": "first30/S7_2C/K1.jpg"
+ },
+ "S7_2C/P2": {
+  "src": "build/stills/S7_2C/P2.png",
+  "kind": "final",
+  "size": [
+   4320,
+   2430
+  ],
+  "file": "first30/S7_2C/P2.jpg"
+ },
+ "S7_locks": {
+  "chain_smear": {
+   "src": "build/stills/S7_locks/lock_chain_smear.png",
+   "kind": "final",
+   "size": [
+    4320,
+    2430
+   ],
+   "file": "first30/S7_locks/chain_smear.jpg",
+   "lock_px": [
+    2260.5,
+    1059.0
+   ]
+  },
+  "floor_open": {
+   "src": "build/stills/S7_locks/lock_floorbolt_open.png",
+   "kind": "final",
+   "size": [
+    4320,
+    2430
+   ],
+   "file": "first30/S7_locks/floor_open.jpg",
+   "lock_px": [
+    2163.5,
+    1332.0
+   ]
+  },
+  "knob_locked": {
+   "src": "build/stills/S7_locks/lock_knob_locked.png",
+   "kind": "final",
+   "size": [
+    4320,
+    2430
+   ],
+   "file": "first30/S7_locks/knob_locked.jpg",
+   "lock_px": [
+    2260.0,
+    1245.5
+   ]
+  },
+  "floor_locked": {
+   "src": "build/stills/S7_locks/lock_floorbolt_locked.png",
+   "kind": "final",
+   "size": [
+    4320,
+    2430
+   ],
+   "file": "first30/S7_locks/floor_locked.jpg",
+   "lock_px": [
+    2163.5,
+    1828.5
+   ]
+  },
+  "knob_open": {
+   "src": "build/stills/S7_locks/lock_knob_open.png",
+   "kind": "final",
+   "size": [
+    4320,
+    2430
+   ],
+   "file": "first30/S7_locks/knob_open.jpg",
+   "lock_px": [
+    2261.5,
+    1245.5
+   ]
+  },
+  "chain_locked": {
+   "src": "build/stills/S7_locks/lock_chain_locked.png",
+   "kind": "final",
+   "size": [
+    4320,
+    2430
+   ],
+   "file": "first30/S7_locks/chain_locked.jpg",
+   "lock_px": [
+    2260.5,
+    1059.0
+   ]
+  },
+  "chain_open": {
+   "src": "build/stills/S7_locks/lock_chain_open.png",
+   "kind": "final",
+   "size": [
+    4320,
+    2430
+   ],
+   "file": "first30/S7_locks/chain_open.jpg",
+   "lock_px": [
+    889.5,
+    1722.0
+   ]
+  }
+ },
+ "NS": {
+  "NS1": {
+   "size": [
+    5760,
+    5400
+   ],
+   "windows": [
+    {
+     "i": 32,
+     "box": [
+      2211,
+      4600,
+      2316,
+      4771
+     ],
+     "file": "first30/NS1/win_32.png"
+    },
+    {
+     "i": 33,
+     "box": [
+      2387,
+      4600,
+      2493,
+      4771
+     ],
+     "file": "first30/NS1/win_33.png"
+    },
+    {
+     "i": 34,
+     "box": [
+      2564,
+      4600,
+      2670,
+      4771
+     ],
+     "file": "first30/NS1/win_34.png"
+    },
+    {
+     "i": 35,
+     "box": [
+      2740,
+      4600,
+      2846,
+      4771
+     ],
+     "file": "first30/NS1/win_35.png"
+    },
+    {
+     "i": 36,
+     "box": [
+      2917,
+      4600,
+      3023,
+      4771
+     ],
+     "file": "first30/NS1/win_36.png"
+    },
+    {
+     "i": 37,
+     "box": [
+      3094,
+      4600,
+      3199,
+      4771
+     ],
+     "file": "first30/NS1/win_37.png"
+    },
+    {
+     "i": 38,
+     "box": [
+      3270,
+      4600,
+      3376,
+      4771
+     ],
+     "file": "first30/NS1/win_38.png"
+    },
+    {
+     "i": 39,
+     "box": [
+      3447,
+      4600,
+      3553,
+      4771
+     ],
+     "file": "first30/NS1/win_39.png"
+    },
+    {
+     "i": 24,
+     "box": [
+      2211,
+      4278,
+      2316,
+      4449
+     ],
+     "file": "first30/NS1/win_24.png"
+    },
+    {
+     "i": 25,
+     "box": [
+      2387,
+      4278,
+      2493,
+      4449
+     ],
+     "file": "first30/NS1/win_25.png"
+    },
+    {
+     "i": 26,
+     "box": [
+      2564,
+      4278,
+      2670,
+      4449
+     ],
+     "file": "first30/NS1/win_26.png"
+    },
+    {
+     "i": 27,
+     "box": [
+      2740,
+      4278,
+      2846,
+      4449
+     ],
+     "file": "first30/NS1/win_27.png"
+    },
+    {
+     "i": 28,
+     "box": [
+      2917,
+      4278,
+      3023,
+      4449
+     ],
+     "file": "first30/NS1/win_28.png"
+    },
+    {
+     "i": 29,
+     "box": [
+      3094,
+      4278,
+      3199,
+      4449
+     ],
+     "file": "first30/NS1/win_29.png"
+    },
+    {
+     "i": 30,
+     "box": [
+      3270,
+      4278,
+      3376,
+      4449
+     ],
+     "file": "first30/NS1/win_30.png"
+    },
+    {
+     "i": 31,
+     "box": [
+      3447,
+      4278,
+      3553,
+      4449
+     ],
+     "file": "first30/NS1/win_31.png"
+    },
+    {
+     "i": 16,
+     "box": [
+      2211,
+      3957,
+      2316,
+      4128
+     ],
+     "file": "first30/NS1/win_16.png"
+    },
+    {
+     "i": 17,
+     "box": [
+      2387,
+      3957,
+      2493,
+      4128
+     ],
+     "file": "first30/NS1/win_17.png"
+    },
+    {
+     "i": 18,
+     "box": [
+      2564,
+      3957,
+      2670,
+      4128
+     ],
+     "file": "first30/NS1/win_18.png"
+    },
+    {
+     "i": 19,
+     "box": [
+      2740,
+      3957,
+      2846,
+      4128
+     ],
+     "file": "first30/NS1/win_19.png"
+    },
+    {
+     "i": 20,
+     "box": [
+      2917,
+      3957,
+      3023,
+      4128
+     ],
+     "file": "first30/NS1/win_20.png"
+    },
+    {
+     "i": 21,
+     "box": [
+      3094,
+      3957,
+      3199,
+      4128
+     ],
+     "file": "first30/NS1/win_21.png"
+    },
+    {
+     "i": 22,
+     "box": [
+      3270,
+      3957,
+      3376,
+      4128
+     ],
+     "file": "first30/NS1/win_22.png"
+    },
+    {
+     "i": 23,
+     "box": [
+      3447,
+      3957,
+      3553,
+      4128
+     ],
+     "file": "first30/NS1/win_23.png"
+    },
+    {
+     "i": 8,
+     "box": [
+      2211,
+      3635,
+      2316,
+      3806
+     ],
+     "file": "first30/NS1/win_08.png"
+    },
+    {
+     "i": 9,
+     "box": [
+      2387,
+      3635,
+      2493,
+      3806
+     ],
+     "file": "first30/NS1/win_09.png"
+    },
+    {
+     "i": 10,
+     "box": [
+      2564,
+      3635,
+      2670,
+      3806
+     ],
+     "file": "first30/NS1/win_10.png"
+    },
+    {
+     "i": 11,
+     "box": [
+      2740,
+      3635,
+      2846,
+      3806
+     ],
+     "file": "first30/NS1/win_11.png"
+    },
+    {
+     "i": 12,
+     "box": [
+      2917,
+      3635,
+      3023,
+      3806
+     ],
+     "file": "first30/NS1/win_12.png"
+    },
+    {
+     "i": 13,
+     "box": [
+      3094,
+      3635,
+      3199,
+      3806
+     ],
+     "file": "first30/NS1/win_13.png"
+    },
+    {
+     "i": 14,
+     "box": [
+      3270,
+      3635,
+      3376,
+      3806
+     ],
+     "file": "first30/NS1/win_14.png"
+    },
+    {
+     "i": 15,
+     "box": [
+      3447,
+      3635,
+      3553,
+      3806
+     ],
+     "file": "first30/NS1/win_15.png"
+    },
+    {
+     "i": 0,
+     "box": [
+      2211,
+      3313,
+      2316,
+      3485
+     ],
+     "file": "first30/NS1/win_00.png"
+    },
+    {
+     "i": 1,
+     "box": [
+      2387,
+      3313,
+      2493,
+      3485
+     ],
+     "file": "first30/NS1/win_01.png"
+    },
+    {
+     "i": 2,
+     "box": [
+      2564,
+      3313,
+      2670,
+      3485
+     ],
+     "file": "first30/NS1/win_02.png"
+    },
+    {
+     "i": 3,
+     "box": [
+      2740,
+      3313,
+      2846,
+      3485
+     ],
+     "file": "first30/NS1/win_03.png"
+    },
+    {
+     "i": 4,
+     "box": [
+      2917,
+      3313,
+      3023,
+      3485
+     ],
+     "file": "first30/NS1/win_04.png"
+    },
+    {
+     "i": 5,
+     "box": [
+      3094,
+      3313,
+      3199,
+      3485
+     ],
+     "file": "first30/NS1/win_05.png"
+    },
+    {
+     "i": 6,
+     "box": [
+      3270,
+      3313,
+      3376,
+      3485
+     ],
+     "file": "first30/NS1/win_06.png"
+    },
+    {
+     "i": 7,
+     "box": [
+      3447,
+      3313,
+      3553,
+      3485
+     ],
+     "file": "first30/NS1/win_07.png"
+    }
+   ],
+   "sign_region": [
+    2012,
+    2843,
+    3748,
+    3897
+   ],
+   "clock": {
+    "pivot": [
+     2261.5,
+     4761.6
+    ],
+    "face_radius_m": 0.39,
+    "points_12_3_6_9": [
+     [
+      2261.5,
+      4712.1
+     ],
+     [
+      2311.0,
+      4761.6
+     ],
+     [
+      2261.5,
+      4811.2
+     ],
+     [
+      2212.0,
+      4761.6
+     ]
+    ],
+    "hands": "removed (time is code): hour .25 m, minute .37 m long, ink, hub .028 m; front face is the one facing the camera"
+   },
+   "tail": {
+    "layer": "tail.png (RGBA, cropped to region)",
+    "region": [
+     517,
+     941,
+     2139,
+     3109
+    ],
+    "rendered_swing_deg": 22,
+    "swing_convention": "rotation about the pivot in the picture plane; + = the low end toward screen left (the tail lies in a plane parallel to the image, so a 2D rotation is exact)",
+    "pivot": [
+     1381.3,
+     1173.7
+    ],
+    "low_point": [
+     1324.8,
+     2845.1
+    ],
+    "root_note": "the root end is cut flat at the pivot: keep the pivot above the visible frame"
+   },
+   "lobby_glass": [
+    2761.3,
+    4998.2,
+    3008.4,
+    5272.1
+   ],
+   "floors": {
+    "floors": [
+     {
+      "floor_from_bottom": 1,
+      "y_bottom": 4838.8,
+      "y_top": 4514.8
+     },
+     {
+      "floor_from_bottom": 2,
+      "y_bottom": 4514.8,
+      "y_top": 4190.8
+     },
+     {
+      "floor_from_bottom": 3,
+      "y_bottom": 4190.8,
+      "y_top": 3866.8
+     },
+     {
+      "floor_from_bottom": 4,
+      "y_bottom": 3866.8,
+      "y_top": 3542.8
+     },
+     {
+      "floor_from_bottom": 5,
+      "y_bottom": 3542.8,
+      "y_top": 3218.8
+     }
+    ],
+    "lobby_band": [
+     4838.8,
+     5273.7
+    ],
+    "facade_x": [
+     2107.9,
+     3652.1
+    ],
+    "roof_y": 3111.1
+   },
+   "camera": {
+    "name": "rl_street CAM_OPEN (1A hook: loc 2,-31,0.8, level), same lens and x-shift; frame extended upward",
+    "lens_mm": 21.28,
+    "frame0_16x9": [
+     0,
+     2160,
+     5760,
+     5400
+    ],
+    "note": "frame0_16x9 = the approved look-test framing (open_1158 / open_0200) at 2x its pixels; the rest is the rise and the sky"
+   },
+   "tenants": {
+    "merge": {
+     "floor_from_bottom": 4,
+     "col": 2,
+     "code_index": 10
+    },
+    "cursor": {
+     "floor_from_bottom": 3,
+     "col": 5,
+     "code_index": 21
+    },
+    "shutdown": {
+     "floor_from_bottom": 2,
+     "col": 1,
+     "code_index": 25
+    }
+   },
+   "fg": true,
+   "tail_file": true,
+   "sign_add_max": 183
+  },
+  "NS2t": {
+   "size": [
+    5760,
+    8640
+   ],
+   "clock": {
+    "pivot": [
+     856.7,
+     6406.5
+    ],
+    "face_radius_m": 0.39,
+    "points_12_3_6_9": [
+     [
+      856.7,
+      6234.9
+     ],
+     [
+      1028.2,
+      6406.5
+     ],
+     [
+      856.7,
+      6578.0
+     ],
+     [
+      685.1,
+      6406.5
+     ]
+    ],
+    "hands": "removed (time is code): hour .25 m, minute .37 m long, ink, hub .028 m; front face is the one facing the camera"
+   },
+   "door": [
+    2463.4,
+    7182.5,
+    3296.6,
+    8106.1
+   ],
+   "address": {
+    "text": "1 TERMINAL PLACE",
+    "letters": [
+     2499.1,
+     7045.2,
+     3260.3,
+     7129.6
+    ],
+    "transom": [
+     2438.0,
+     7019.4,
+     3322.0,
+     7157.2
+    ],
+    "note": "brass letters on the entry transom (made here). At a landing frame 6.9 m wide (2560 px of the plate) its cap height is the letters box height x 2560/2560"
+   },
+   "floors": {
+    "floors": [
+     {
+      "floor_from_bottom": 1,
+      "y_bottom": 6648.2,
+      "y_top": 5551.9
+     },
+     {
+      "floor_from_bottom": 2,
+      "y_bottom": 5551.9,
+      "y_top": 4455.6
+     },
+     {
+      "floor_from_bottom": 3,
+      "y_bottom": 4455.6,
+      "y_top": 3359.4
+     },
+     {
+      "floor_from_bottom": 4,
+      "y_bottom": 3359.4,
+      "y_top": 2263.1
+     },
+     {
+      "floor_from_bottom": 5,
+      "y_bottom": 2263.1,
+      "y_top": 1166.9
+     }
+    ],
+    "lobby_band": [
+     6648.2,
+     8119.7
+    ],
+    "facade_x": [
+     267.6,
+     5492.4
+    ],
+    "roof_y": 802.7
+   },
+   "sign": {
+    "letters": [
+     1630.8,
+     405.3,
+     4129.2,
+     815.6
+    ],
+    "structure": [
+     1515.9,
+     359.7,
+     4244.1,
+     923.4
+    ]
+   }
+  },
+  "NS2w": {
+   "size": [
+    4320,
+    2430
+   ],
+   "clock": {
+    "pivot": [
+     1570.7,
+     1779.4
+    ],
+    "face_radius_m": 0.39,
+    "points_12_3_6_9": [
+     [
+      1570.7,
+      1729.5
+     ],
+     [
+      1620.6,
+      1779.4
+     ],
+     [
+      1570.7,
+      1829.4
+     ],
+     [
+      1520.7,
+      1779.4
+     ]
+    ],
+    "hands": "removed (time is code): hour .25 m, minute .37 m long, ink, hub .028 m; front face is the one facing the camera"
+   },
+   "floors": {
+    "floors": [
+     {
+      "floor_from_bottom": 1,
+      "y_bottom": 1849.8,
+      "y_top": 1530.5
+     },
+     {
+      "floor_from_bottom": 2,
+      "y_bottom": 1530.5,
+      "y_top": 1211.2
+     },
+     {
+      "floor_from_bottom": 3,
+      "y_bottom": 1211.2,
+      "y_top": 891.9
+     },
+     {
+      "floor_from_bottom": 4,
+      "y_bottom": 891.9,
+      "y_top": 572.6
+     },
+     {
+      "floor_from_bottom": 5,
+      "y_bottom": 572.6,
+      "y_top": 253.3
+     }
+    ],
+    "lobby_band": [
+     1849.8,
+     2278.5
+    ],
+    "facade_x": [
+     1399.1,
+     2920.9
+    ],
+    "roof_y": 147.2
+   },
+   "sign": {
+    "letters": [
+     1796.1,
+     31.5,
+     2523.9,
+     151.0
+    ],
+    "structure": [
+     1762.7,
+     18.2,
+     2557.3,
+     182.4
+    ],
+    "region": [
+     1304,
+     0,
+     3016,
+     922
+    ]
+   },
+   "tail": {
+    "layer": "tail.png (RGBA, cropped to region)",
+    "region": [
+     298,
+     0,
+     1582,
+     366
+    ],
+    "rendered_swing_deg": 12,
+    "swing_convention": "rotation about the pivot in the picture plane; + = the low end toward screen left (the tail lies in a plane parallel to the image, so a 2D rotation is exact)",
+    "pivot": [
+     842.5,
+     -1415.1
+    ],
+    "low_point": [
+     1036.8,
+     141.1
+    ],
+    "root_note": "the root end is cut flat at the pivot: keep the pivot above the visible frame"
+   },
+   "grey": true,
+   "tail_file": true
+  }
+ },
+ "S7_2C_layout": {
+  "camera": {
+   "loc": [
+    0.3267,
+    1.0413,
+    1.2719
+   ],
+   "lens": 34.0,
+   "fstop": 5.599999904632568,
+   "shift": [
+    0.05000000074505806,
+    0.1574999988079071
+   ]
+  },
+  "rim_box": [
+   1419,
+   1388,
+   2413,
+   2371
+  ],
+  "disc_centre_px": [
+   1917.1,
+   1886.0
+  ],
+  "disc_diameter_over_H": 0.405,
+  "his_skull_box": [
+   2299,
+   938,
+   4320,
+   2430
+  ],
+  "knock_px": [
+   1533.7,
+   908.1
+  ],
+  "knock_world": [
+   0.5265688300132751,
+   -0.27550002932548523,
+   1.0998075008392334
+  ],
+  "her_eye_px": [
+   1953.9,
+   227.3
+  ],
+  "her_eye_blocked_by": null,
+  "her_box": [
+   0,
+   0,
+   4320,
+   2430
+  ],
+  "crop916_centre_x": 0.444,
+  "crop916": [
+   1233,
+   0,
+   2598,
+   2430
+  ],
+  "crop916_holds_disc_and_knock": true,
+  "her_mouth_px": [
+   1954.0,
+   256.4
+  ],
+  "chain_box": [
+   847,
+   633,
+   1784,
+   805
+  ],
+  "her_face_box": [
+   1686,
+   0,
+   2310,
+   770
+  ],
+  "his_parts_over_her_face_box": [
+   [
+    "TR_lock_chain",
+    [
+     927,
+     680,
+     1709,
+     761
+    ]
+   ],
+   [
+    "TR_lock_chain_knob",
+    [
+     1668,
+     689,
+     1727,
+     750
+    ]
+   ],
+   [
+    "TR_lock_chain_slot",
+    [
+     1336,
+     706,
+     1740,
+     729
+    ]
+   ],
+   [
+    "TR_lock_chain_track",
+    [
+     1295,
+     666,
+     1784,
+     765
+    ]
+   ]
+  ],
+  "paddle_box": [
+   1419,
+   1388,
+   2413,
+   2430
+  ],
+  "fist_crop": [
+   1273,
+   648,
+   1793,
+   1168
+  ],
+  "face_crop": [
+   1653,
+   -72,
+   2253,
+   527
+  ]
+ }
+}

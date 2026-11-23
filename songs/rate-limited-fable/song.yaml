@@ -1,0 +1,4 @@
+title: Rate Limited
+model_credit: Claude Fable 5.2   # the model that made THIS video (the earlier Opus video is songs/rate-limited)
+ai_music: true
+tail: 7.0                        # the end card after the film

@@ -1,0 +1,15 @@
+{
+  "name": "rate-limited",
+  "private": true,
+  "description": "Rate Limited: the music video, built in code (Remotion) on approved stills. node_modules is a symlink to songs/run-it/remotion/node_modules (remotion 4.0.539).",
+  "scripts": {
+    "data": "python3 tools/build_data.py",
+    "studio": "python3 tools/build_data.py && remotion studio src/index.ts"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.539",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.539"
+  }
+}

@@ -90,6 +90,7 @@ def code_table(md):
 
 
 def lyrics_html(path):
+    if not os.path.exists(path): return "", 0   # no lyrics.txt (e.g. waiting on the official ones): no lyrics section
     stanzas, cur, label = [], [], None
     for line in open(path, encoding="utf-8").read().splitlines():
         line = line.strip()
@@ -459,7 +460,7 @@ def main(out):
 
   {'<section><h2>By the numbers</h2>' + nums + '</section>' if nums else ''}
 
-  <section class="lyrics"><h2>Lyrics</h2><p class="by">Words and music by aditazzz.</p>{s['lyrics']}</section>
+  {f'<section class="lyrics"><h2>Lyrics</h2><p class="by">Words and music by aditazzz.</p>{s["lyrics"]}</section>' if s['lyrics'] else ''}
 
   <aside class="next"><a href="/videos/{nxt['slug']}/"><img src="/videos/{nxt['slug']}/thumbnail.jpg" alt="" width="320" height="180" loading="lazy">
     <span><small>Next video</small>{esc(nxt['title'])}</span></a></aside>

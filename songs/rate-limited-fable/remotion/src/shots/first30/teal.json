@@ -1,0 +1,90 @@
+{
+ "_note": "rl_first30_v3 red rule: original public file -> teal recolor (build/first30/tools/prep_teal.py)",
+ "teal_lab": [
+  46.9,
+  -12.5,
+  2.1
+ ],
+ "map": {
+  "first30/S4/plate_nostrip.jpg": {
+   "file": "first30/teal/S4_plate_nostrip.jpg",
+   "box": [
+    1184,
+    35,
+    1790,
+    851
+   ],
+   "residual_red_px": 0,
+   "max_change_outside_mask": 0.0,
+   "box_median_L_C_before": [
+    49.8,
+    42.4
+   ],
+   "max_channel": 227
+  },
+  "first30/S7/D1.jpg": {
+   "file": "first30/teal/S7_D1.jpg",
+   "box": [
+    3183,
+    1045,
+    3333,
+    1240
+   ],
+   "residual_red_px": 0,
+   "max_change_outside_mask": 0.0,
+   "box_median_L_C_before": [
+    50.2,
+    43.0
+   ],
+   "max_channel": 246
+  },
+  "first30/S7/D1open_upright.jpg": {
+   "file": "first30/teal/S7_D1open_upright.jpg",
+   "box": [
+    3183,
+    1045,
+    3333,
+    1240
+   ],
+   "residual_red_px": 0,
+   "max_change_outside_mask": 0.0,
+   "box_median_L_C_before": [
+    50.2,
+    43.0
+   ],
+   "max_channel": 247
+  },
+  "first30/S7/D1open_smear.jpg": {
+   "file": "first30/teal/S7_D1open_smear.jpg",
+   "box": [
+    3183,
+    1045,
+    3333,
+    1240
+   ],
+   "residual_red_px": 0,
+   "max_change_outside_mask": 0.0,
+   "box_median_L_C_before": [
+    50.2,
+    43.0
+   ],
+   "max_channel": 235
+  },
+  "first30/S7/D1open_bow.jpg": {
+   "file": "first30/teal/S7_D1open_bow.jpg",
+   "box": [
+    3183,
+    1045,
+    3333,
+    1240
+   ],
+   "residual_red_px": 0,
+   "max_change_outside_mask": 0.0,
+   "box_median_L_C_before": [
+    50.2,
+    43.0
+   ],
+   "max_channel": 246
+  }
+ }
+}

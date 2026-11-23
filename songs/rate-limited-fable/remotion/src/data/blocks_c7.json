@@ -1,0 +1,1188 @@
+{
+ "frames": 6598,
+ "source": "PLAN7 \u00a71",
+ "blocks": [
+  {
+   "id": "B01",
+   "n": 1,
+   "sec": "1",
+   "from": 0,
+   "to": 76,
+   "dur": 76,
+   "kind": "PUNCH",
+   "old": [
+    "1A"
+   ],
+   "plan_old": "1A",
+   "cuts": [
+    24,
+    42,
+    59
+   ],
+   "designed": []
+  },
+  {
+   "id": "B02",
+   "n": 2,
+   "sec": "1",
+   "from": 76,
+   "to": 286,
+   "dur": 210,
+   "kind": "FLOW",
+   "old": [
+    "1B",
+    "1C"
+   ],
+   "plan_old": "1B+1C",
+   "cuts": [
+    216
+   ],
+   "designed": []
+  },
+  {
+   "id": "B03",
+   "n": 3,
+   "sec": "1",
+   "from": 286,
+   "to": 356,
+   "dur": 70,
+   "kind": "FLOW",
+   "old": [
+    "1D"
+   ],
+   "plan_old": "1D",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B04",
+   "n": 4,
+   "sec": "1",
+   "from": 356,
+   "to": 426,
+   "dur": 70,
+   "kind": "FLOW",
+   "old": [
+    "1E"
+   ],
+   "plan_old": "1E",
+   "cuts": [],
+   "designed": [
+    [
+     414,
+     426,
+     "wall dolly out"
+    ]
+   ]
+  },
+  {
+   "id": "B05",
+   "n": 5,
+   "sec": "1",
+   "from": 426,
+   "to": 530,
+   "dur": 104,
+   "kind": "FLOW",
+   "old": [
+    "1F",
+    "1G"
+   ],
+   "plan_old": "1F+1G",
+   "cuts": [
+    478
+   ],
+   "designed": [
+    [
+     426,
+     438,
+     "wall dolly in"
+    ],
+    [
+     442,
+     448,
+     "stamp pose cut on the clap (1F, one soft frame + hit)"
+    ],
+    [
+     492,
+     500,
+     "1G hit on the beat"
+    ]
+   ]
+  },
+  {
+   "id": "B06",
+   "n": 6,
+   "sec": "1",
+   "from": 530,
+   "to": 565,
+   "dur": 35,
+   "kind": "PUNCH",
+   "old": [
+    "1H"
+   ],
+   "plan_old": "1H",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B07",
+   "n": 7,
+   "sec": "1",
+   "from": 565,
+   "to": 635,
+   "dur": 70,
+   "kind": "PUNCH",
+   "old": [
+    "1I"
+   ],
+   "plan_old": "1I",
+   "cuts": [
+    617,
+    621,
+    626
+   ],
+   "designed": []
+  },
+  {
+   "id": "B08",
+   "n": 8,
+   "sec": "2",
+   "from": 635,
+   "to": 704,
+   "dur": 69,
+   "kind": "PUNCH",
+   "old": [
+    "2A"
+   ],
+   "plan_old": "2A",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B09",
+   "n": 9,
+   "sec": "2",
+   "from": 704,
+   "to": 774,
+   "dur": 70,
+   "kind": "PUNCH",
+   "old": [
+    "2B"
+   ],
+   "plan_old": "2B",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B10",
+   "n": 10,
+   "sec": "2",
+   "from": 774,
+   "to": 913,
+   "dur": 139,
+   "kind": "FLOW",
+   "old": [
+    "2C",
+    "2D"
+   ],
+   "plan_old": "2C+2D",
+   "cuts": [
+    843
+   ],
+   "designed": []
+  },
+  {
+   "id": "B11",
+   "n": 11,
+   "sec": "2",
+   "from": 913,
+   "to": 1121,
+   "dur": 208,
+   "kind": "FLOW",
+   "old": [
+    "2E",
+    "2F"
+   ],
+   "plan_old": "2E+2F",
+   "cuts": [
+    1052
+   ],
+   "designed": []
+  },
+  {
+   "id": "B12",
+   "n": 12,
+   "sec": "2",
+   "from": 1121,
+   "to": 1190,
+   "dur": 69,
+   "kind": "PUNCH",
+   "old": [
+    "2G"
+   ],
+   "plan_old": "2G",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B13",
+   "n": 13,
+   "sec": "3",
+   "from": 1190,
+   "to": 1330,
+   "dur": 140,
+   "kind": "FLOW",
+   "old": [
+    "3A",
+    "3B"
+   ],
+   "plan_old": "3A+3B",
+   "cuts": [
+    1260
+   ],
+   "designed": [
+    [
+     1248,
+     1272,
+     "wall dolly through the wall"
+    ]
+   ]
+  },
+  {
+   "id": "B14",
+   "n": 14,
+   "sec": "3",
+   "from": 1330,
+   "to": 1451,
+   "dur": 121,
+   "kind": "FLOW",
+   "old": [
+    "3C"
+   ],
+   "plan_old": "3C",
+   "cuts": [],
+   "designed": [
+    [
+     1334,
+     1400,
+     "pull-to-refresh x3 (phone UI)"
+    ]
+   ]
+  },
+  {
+   "id": "B15",
+   "n": 15,
+   "sec": "4",
+   "from": 1451,
+   "to": 1590,
+   "dur": 139,
+   "kind": "FLOW",
+   "old": [
+    "4T"
+   ],
+   "plan_old": "4T (a)",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B16",
+   "n": 16,
+   "sec": "4",
+   "from": 1590,
+   "to": 1650,
+   "dur": 60,
+   "kind": "PUNCH",
+   "old": [
+    "4T"
+   ],
+   "plan_old": "4T (b)",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B17",
+   "n": 17,
+   "sec": "4",
+   "from": 1650,
+   "to": 1712,
+   "dur": 62,
+   "kind": "PUNCH",
+   "old": [
+    "4T"
+   ],
+   "plan_old": "4T (c)",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B18",
+   "n": 18,
+   "sec": "4",
+   "from": 1712,
+   "to": 1851,
+   "dur": 139,
+   "kind": "FLOW",
+   "old": [
+    "4E"
+   ],
+   "plan_old": "4E",
+   "cuts": [],
+   "designed": [
+    [
+     1750,
+     1822,
+     "begging A/B pose swaps on the beats (kept, PLAN7 row 18)"
+    ]
+   ]
+  },
+  {
+   "id": "B19",
+   "n": 19,
+   "sec": "4",
+   "from": 1851,
+   "to": 1920,
+   "dur": 69,
+   "kind": "FLOW",
+   "old": [
+    "4F"
+   ],
+   "plan_old": "4F",
+   "cuts": [
+    1869
+   ],
+   "designed": [
+    [
+     1865,
+     1906,
+     "her three backing-off steps (smeared)"
+    ],
+    [
+     1908,
+     1920,
+     "wall dolly out"
+    ]
+   ]
+  },
+  {
+   "id": "B20",
+   "n": 20,
+   "sec": "4",
+   "from": 1920,
+   "to": 1990,
+   "dur": 70,
+   "kind": "PUNCH",
+   "old": [
+    "4G"
+   ],
+   "plan_old": "4G",
+   "cuts": [],
+   "designed": [
+    [
+     1920,
+     1932,
+     "wall dolly in"
+    ]
+   ]
+  },
+  {
+   "id": "B21",
+   "n": 21,
+   "sec": "4",
+   "from": 1990,
+   "to": 2129,
+   "dur": 139,
+   "kind": "FLOW",
+   "old": [
+    "4H"
+   ],
+   "plan_old": "4H",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B22",
+   "n": 22,
+   "sec": "4",
+   "from": 2129,
+   "to": 2302,
+   "dur": 173,
+   "kind": "FLOW",
+   "old": [
+    "4I",
+    "4J"
+   ],
+   "plan_old": "4I+4J",
+   "cuts": [
+    2233
+   ],
+   "designed": []
+  },
+  {
+   "id": "B23",
+   "n": 23,
+   "sec": "5",
+   "from": 2302,
+   "to": 2372,
+   "dur": 70,
+   "kind": "PUNCH x3",
+   "old": [
+    "5A"
+   ],
+   "plan_old": "5A",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B24",
+   "n": 24,
+   "sec": "5",
+   "from": 2372,
+   "to": 2511,
+   "dur": 139,
+   "kind": "FLOW",
+   "old": [
+    "5B"
+   ],
+   "plan_old": "5B",
+   "cuts": [
+    2441
+   ],
+   "designed": []
+  },
+  {
+   "id": "B25",
+   "n": 25,
+   "sec": "5",
+   "from": 2511,
+   "to": 2719,
+   "dur": 208,
+   "kind": "FLOW",
+   "old": [
+    "5D",
+    "5E"
+   ],
+   "plan_old": "5D+5E",
+   "cuts": [
+    2580
+   ],
+   "designed": [
+    [
+     2630,
+     2638,
+     "5E screen scroll"
+    ]
+   ]
+  },
+  {
+   "id": "B26",
+   "n": 26,
+   "sec": "5",
+   "from": 2719,
+   "to": 2858,
+   "dur": 139,
+   "kind": "FLOW",
+   "old": [
+    "5H"
+   ],
+   "plan_old": "5H",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B27",
+   "n": 27,
+   "sec": "6",
+   "from": 2858,
+   "to": 2927,
+   "dur": 69,
+   "kind": "PUNCH",
+   "old": [
+    "6A"
+   ],
+   "plan_old": "6A",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B28",
+   "n": 28,
+   "sec": "6",
+   "from": 2927,
+   "to": 2997,
+   "dur": 70,
+   "kind": "PUNCH",
+   "old": [
+    "6B"
+   ],
+   "plan_old": "6B",
+   "cuts": [
+    2945
+   ],
+   "designed": []
+  },
+  {
+   "id": "B29",
+   "n": 29,
+   "sec": "6",
+   "from": 2997,
+   "to": 3066,
+   "dur": 69,
+   "kind": "FLOW",
+   "old": [
+    "6C"
+   ],
+   "plan_old": "6C",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B30",
+   "n": 30,
+   "sec": "6",
+   "from": 3066,
+   "to": 3136,
+   "dur": 70,
+   "kind": "FLOW",
+   "old": [
+    "6D"
+   ],
+   "plan_old": "6D",
+   "cuts": [
+    3101
+   ],
+   "designed": []
+  },
+  {
+   "id": "B31",
+   "n": 31,
+   "sec": "7",
+   "from": 3136,
+   "to": 3275,
+   "dur": 139,
+   "kind": "FLOW",
+   "old": [
+    "7A",
+    "7B"
+   ],
+   "plan_old": "7A+7B",
+   "cuts": [
+    3205
+   ],
+   "designed": []
+  },
+  {
+   "id": "B32",
+   "n": 32,
+   "sec": "7",
+   "from": 3275,
+   "to": 3344,
+   "dur": 69,
+   "kind": "PUNCH",
+   "old": [
+    "7C"
+   ],
+   "plan_old": "7C",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B33",
+   "n": 33,
+   "sec": "7",
+   "from": 3344,
+   "to": 3414,
+   "dur": 70,
+   "kind": "PUNCH",
+   "old": [
+    "7D"
+   ],
+   "plan_old": "7D",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B34",
+   "n": 34,
+   "sec": "7",
+   "from": 3414,
+   "to": 3553,
+   "dur": 139,
+   "kind": "FLOW",
+   "old": [
+    "7E1"
+   ],
+   "plan_old": "7E1",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B35",
+   "n": 35,
+   "sec": "7",
+   "from": 3553,
+   "to": 3622,
+   "dur": 69,
+   "kind": "PUNCH",
+   "old": [
+    "7G"
+   ],
+   "plan_old": "7G",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B36",
+   "n": 36,
+   "sec": "7",
+   "from": 3622,
+   "to": 3691,
+   "dur": 69,
+   "kind": "FLOW",
+   "old": [
+    "7H"
+   ],
+   "plan_old": "7H",
+   "cuts": [
+    3657
+   ],
+   "designed": [
+    [
+     3655,
+     3671,
+     "his hand sets THE glass down (rl7_p2 stepped frames)"
+    ]
+   ]
+  },
+  {
+   "id": "B37",
+   "n": 37,
+   "sec": "8",
+   "from": 3691,
+   "to": 3830,
+   "dur": 139,
+   "kind": "FLOW",
+   "old": [
+    "8A"
+   ],
+   "plan_old": "8A",
+   "cuts": [
+    3761
+   ],
+   "designed": []
+  },
+  {
+   "id": "B38",
+   "n": 38,
+   "sec": "8",
+   "from": 3830,
+   "to": 3969,
+   "dur": 139,
+   "kind": "FLOW",
+   "old": [
+    "8D"
+   ],
+   "plan_old": "8D",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B39",
+   "n": 39,
+   "sec": "8",
+   "from": 3969,
+   "to": 4108,
+   "dur": 139,
+   "kind": "FLOW",
+   "old": [
+    "8E"
+   ],
+   "plan_old": "8E",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B40",
+   "n": 40,
+   "sec": "8",
+   "from": 4108,
+   "to": 4177,
+   "dur": 69,
+   "kind": "PUNCH",
+   "old": [
+    "8F"
+   ],
+   "plan_old": "8F",
+   "cuts": [],
+   "designed": [
+    [
+     4142,
+     4146,
+     "429 snaps back lit on the beat (strike flicker)"
+    ],
+    [
+     4144,
+     4152,
+     "visor digits -> dark -> eyes (K grammar)"
+    ]
+   ]
+  },
+  {
+   "id": "B41",
+   "n": 41,
+   "sec": "8",
+   "from": 4177,
+   "to": 4246,
+   "dur": 69,
+   "kind": "PUNCH",
+   "old": [
+    "8G"
+   ],
+   "plan_old": "8G",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B42",
+   "n": 42,
+   "sec": "9",
+   "from": 4246,
+   "to": 4385,
+   "dur": 139,
+   "kind": "FLOW",
+   "old": [
+    "9A"
+   ],
+   "plan_old": "9A",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B43",
+   "n": 43,
+   "sec": "9",
+   "from": 4385,
+   "to": 4455,
+   "dur": 70,
+   "kind": "PUNCH",
+   "old": [
+    "9B"
+   ],
+   "plan_old": "9B",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B44",
+   "n": 44,
+   "sec": "9",
+   "from": 4455,
+   "to": 4593,
+   "dur": 138,
+   "kind": "FLOW",
+   "old": [
+    "9C"
+   ],
+   "plan_old": "9C",
+   "cuts": [
+    4507,
+    4556
+   ],
+   "designed": []
+  },
+  {
+   "id": "B45",
+   "n": 45,
+   "sec": "9",
+   "from": 4593,
+   "to": 4732,
+   "dur": 139,
+   "kind": "FLOW",
+   "old": [
+    "9E1",
+    "9E2"
+   ],
+   "plan_old": "9E1+9E2",
+   "cuts": [
+    4662
+   ],
+   "designed": [
+    [
+     4608,
+     4614,
+     "9E1 burst 1 (TV pop, Cooper launched)"
+    ],
+    [
+     4624,
+     4632,
+     "9E1 burst 2 + landing"
+    ]
+   ]
+  },
+  {
+   "id": "B46",
+   "n": 46,
+   "sec": "9",
+   "from": 4732,
+   "to": 4784,
+   "dur": 52,
+   "kind": "PUNCH",
+   "old": [
+    "9F"
+   ],
+   "plan_old": "9F",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B47",
+   "n": 47,
+   "sec": "9",
+   "from": 4784,
+   "to": 4836,
+   "dur": 52,
+   "kind": "PUNCH",
+   "old": [
+    "9G"
+   ],
+   "plan_old": "9G",
+   "cuts": [],
+   "designed": [
+    [
+     4799,
+     4803,
+     "neon Cool"
+    ],
+    [
+     4808,
+     4812,
+     "neon Cool Cool"
+    ],
+    [
+     4816,
+     4820,
+     "neon Cool Cool Cool"
+    ]
+   ]
+  },
+  {
+   "id": "B48",
+   "n": 48,
+   "sec": "10-11",
+   "from": 4836,
+   "to": 4975,
+   "dur": 139,
+   "kind": "FLOW",
+   "old": [
+    "10A"
+   ],
+   "plan_old": "10A",
+   "cuts": [],
+   "designed": [
+    [
+     4866,
+     4892,
+     "10A chat scrolls up as messages land (phone UI)"
+    ]
+   ]
+  },
+  {
+   "id": "B49",
+   "n": 49,
+   "sec": "10-11",
+   "from": 4975,
+   "to": 5148,
+   "dur": 173,
+   "kind": "FLOW",
+   "old": [
+    "10B",
+    "11A"
+   ],
+   "plan_old": "10B+11A",
+   "cuts": [
+    5061,
+    5076
+   ],
+   "designed": [
+    [
+     4994,
+     5016,
+     "neon buzz -> dark -> RETIRE ME! strike"
+    ],
+    [
+     5025,
+     5034,
+     "I'M EXHAUSTED strike"
+    ],
+    [
+     5064,
+     5088,
+     "wall dolly through the wall"
+    ],
+    [
+     5111,
+     5126,
+     "he rises in 4 stepped states, the camera tilting up with him"
+    ]
+   ]
+  },
+  {
+   "id": "B50",
+   "n": 50,
+   "sec": "10-11",
+   "from": 5148,
+   "to": 5217,
+   "dur": 69,
+   "kind": "FLOW",
+   "old": [
+    "11B"
+   ],
+   "plan_old": "11B",
+   "cuts": [
+    5168
+   ],
+   "designed": []
+  },
+  {
+   "id": "B51",
+   "n": 51,
+   "sec": "10-11",
+   "from": 5217,
+   "to": 5320,
+   "dur": 103,
+   "kind": "FLOW",
+   "old": [
+    "11C",
+    "11D"
+   ],
+   "plan_old": "11C+11D",
+   "cuts": [
+    5234,
+    5269,
+    5291
+   ],
+   "designed": [
+    [
+     5219,
+     5226,
+     "dimmer turn (knob states)"
+    ]
+   ]
+  },
+  {
+   "id": "B52",
+   "n": 52,
+   "sec": "10-11",
+   "from": 5320,
+   "to": 5390,
+   "dur": 70,
+   "kind": "FLOW",
+   "old": [
+    "11E"
+   ],
+   "plan_old": "11E",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B53",
+   "n": 53,
+   "sec": "12",
+   "from": 5390,
+   "to": 5597,
+   "dur": 207,
+   "kind": "FLOW",
+   "old": [
+    "12A",
+    "12B"
+   ],
+   "plan_old": "12A+12B",
+   "cuts": [
+    5458,
+    5493,
+    5528,
+    5562
+   ],
+   "designed": [
+    [
+     5487,
+     5494,
+     "neon flicker to the next line (12B)"
+    ],
+    [
+     5522,
+     5529,
+     "neon flicker (12B)"
+    ],
+    [
+     5556,
+     5563,
+     "neon flicker (12B)"
+    ]
+   ]
+  },
+  {
+   "id": "B54",
+   "n": 54,
+   "sec": "12",
+   "from": 5597,
+   "to": 5805,
+   "dur": 208,
+   "kind": "FLOW",
+   "old": [
+    "12D",
+    "12E"
+   ],
+   "plan_old": "12D+12E",
+   "cuts": [
+    5666
+   ],
+   "designed": [
+    [
+     5629,
+     5636,
+     "the faint lands on the beat (smeared fall + thump)"
+    ],
+    [
+     5749,
+     5757,
+     "candles blown out (gutter)"
+    ]
+   ]
+  },
+  {
+   "id": "B55",
+   "n": 55,
+   "sec": "12",
+   "from": 5805,
+   "to": 5874,
+   "dur": 69,
+   "kind": "PUNCH",
+   "old": [
+    "12F"
+   ],
+   "plan_old": "12F",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B56",
+   "n": 56,
+   "sec": "12",
+   "from": 5874,
+   "to": 5943,
+   "dur": 69,
+   "kind": "FLOW",
+   "old": [
+    "12G"
+   ],
+   "plan_old": "12G",
+   "cuts": [],
+   "designed": []
+  },
+  {
+   "id": "B57",
+   "n": 57,
+   "sec": "12",
+   "from": 5943,
+   "to": 6116,
+   "dur": 173,
+   "kind": "FLOW",
+   "old": [
+    "12H",
+    "12I"
+   ],
+   "plan_old": "12H+12I",
+   "cuts": [
+    6012
+   ],
+   "designed": []
+  },
+  {
+   "id": "B58",
+   "n": 58,
+   "sec": "13",
+   "from": 6116,
+   "to": 6185,
+   "dur": 69,
+   "kind": "PUNCH",
+   "old": [
+    "13A"
+   ],
+   "plan_old": "13A",
+   "cuts": [],
+   "designed": [
+    [
+     6176,
+     6185,
+     "13A smile (pose change on the beat)"
+    ]
+   ]
+  },
+  {
+   "id": "B59",
+   "n": 59,
+   "sec": "13",
+   "from": 6185,
+   "to": 6254,
+   "dur": 69,
+   "kind": "FLOW",
+   "old": [
+    "13B"
+   ],
+   "plan_old": "13B",
+   "cuts": [
+    6236
+   ],
+   "designed": []
+  },
+  {
+   "id": "B60",
+   "n": 60,
+   "sec": "13",
+   "from": 6254,
+   "to": 6358,
+   "dur": 104,
+   "kind": "FLOW",
+   "old": [
+    "13C",
+    "13D"
+   ],
+   "plan_old": "13C+13D",
+   "cuts": [
+    6323
+   ],
+   "designed": []
+  },
+  {
+   "id": "B61",
+   "n": 61,
+   "sec": "13",
+   "from": 6358,
+   "to": 6598,
+   "dur": 240,
+   "kind": "FLOW",
+   "old": [
+    "13E"
+   ],
+   "plan_old": "13E",
+   "cuts": [
+    6424,
+    6496,
+    6505,
+    6521
+   ],
+   "designed": [
+    [
+     6370,
+     6380,
+     "stamp on the beat"
+    ],
+    [
+     6494,
+     6510,
+     "cat flop + the lid shuts"
+    ]
+   ]
+  }
+ ]
+}

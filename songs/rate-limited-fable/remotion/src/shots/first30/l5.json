@@ -1,0 +1,348 @@
+{
+ "mode": "final",
+ "A8": {
+  "size": [
+   2560,
+   1440
+  ],
+  "files": {
+   "plate": "8A/plate.jpg",
+   "plate_cooper": "8A/plate_cooper.jpg",
+   "ind": "8A/ind.jpg",
+   "meter": "8A/meter.jpg"
+  },
+  "meter_lcd": [
+   320.8,
+   419.6
+  ],
+  "meter_box": [
+   304.1,
+   337.4,
+   432.7,
+   1012.6
+  ],
+  "car_box": [
+   841.1,
+   448.7,
+   2425.1,
+   1177.4
+  ],
+  "cooper_box": [
+   293.7,
+   554.0,
+   868.4,
+   1027.1
+  ],
+  "her_mark": {
+   "feet": [
+    -7.9384,
+    -3.95,
+    0.15
+   ],
+   "feet_px": [
+    78.0,
+    1037.9
+   ],
+   "note": "where her walk ends, left of the meter (rollout: her pass)"
+  },
+  "front_plate": [
+   1160.2,
+   939.5
+  ],
+  "meter_insert": {
+   "still": "L5 8A meter insert",
+   "size": [
+    2560,
+    1440
+   ],
+   "camera": {
+    "loc": [
+     -7.8952,
+     -3.6065,
+     1.444
+    ],
+    "aim": [
+     -7.4407,
+     -4.1388,
+     1.464
+    ],
+    "lens_mm": 50,
+    "fstop": 2.8
+   },
+   "citation_px": [
+    798.1,
+    1127.4
+   ],
+   "lcd_429": [
+    1467.6,
+    675.2,
+    1673.1,
+    778.9
+   ],
+   "lcd_retry": [
+    1300.4,
+    872.3,
+    1842.3,
+    924.6
+   ],
+   "lcd": [
+    1235.8,
+    605.2,
+    1913.1,
+    975.5
+   ]
+  }
+ },
+ "addr": {
+  "ns2t": {
+   "region": [
+    2278,
+    6913,
+    3482,
+    7278
+   ],
+   "size": [
+    5760,
+    8640
+   ],
+   "letters": [
+    2463.3,
+    7056.7,
+    3297.1,
+    7119.4
+   ],
+   "file": "l5/addr_ns2t.png"
+  },
+  "ns1": {
+   "region": [
+    2657,
+    4869,
+    3113,
+    5076
+   ],
+   "size": [
+    5760,
+    5400
+   ],
+   "letters": [
+    2761.2,
+    4960.9,
+    3008.4,
+    4979.5
+   ],
+   "file": "l5/addr_ns1.png"
+  },
+  "ns2w": {
+   "region": [
+    1935,
+    1877,
+    2385,
+    2083
+   ],
+   "size": [
+    4320,
+    2430
+   ],
+   "letters": [
+    2038.6,
+    1968.8,
+    2281.5,
+    1987.1
+   ],
+   "file": "l5/addr_ns2w.png"
+  }
+ },
+ "post_dial": {
+  "file": "post_dial.png",
+  "half_m": 0.47454749999999996,
+  "R_m": 0.345
+ },
+ "A1": {
+  "file": "l5/cat_peek.png",
+  "size": [
+   2400,
+   168
+  ],
+  "tail_root_x": 766.9,
+  "head": [
+   1664.9,
+   23.100000000000023
+  ]
+ },
+ "B13": {
+  "size": [
+   4320,
+   2430
+  ],
+  "floors": {
+   "floors": [
+    {
+     "floor_from_bottom": 1,
+     "y_bottom": 1849.8,
+     "y_top": 1530.5
+    },
+    {
+     "floor_from_bottom": 2,
+     "y_bottom": 1530.5,
+     "y_top": 1211.2
+    },
+    {
+     "floor_from_bottom": 3,
+     "y_bottom": 1211.2,
+     "y_top": 891.9
+    },
+    {
+     "floor_from_bottom": 4,
+     "y_bottom": 891.9,
+     "y_top": 572.6
+    },
+    {
+     "floor_from_bottom": 5,
+     "y_bottom": 572.6,
+     "y_top": 253.3
+    }
+   ],
+   "lobby_band": [
+    1849.8,
+    2278.5
+   ],
+   "facade_x": [
+    1399.1,
+    2920.9
+   ],
+   "roof_y": 147.2
+  },
+  "sign": {
+   "letters": [
+    1796.1,
+    31.5,
+    2523.9,
+    151.0
+   ],
+   "structure": [
+    1762.7,
+    18.2,
+    2557.3,
+    182.4
+   ]
+  },
+  "door": [
+   2038.7,
+   2005.5,
+   2281.3,
+   2274.5
+  ],
+  "tail": {
+   "layer": "tail.png (RGBA, cropped to region)",
+   "region": [
+    298,
+    0,
+    1582,
+    366
+   ],
+   "rendered_swing_deg": 12,
+   "swing_convention": "rotation about the pivot in the picture plane; + = the low end toward screen left (the tail lies in a plane parallel to the image, so a 2D rotation is exact)",
+   "pivot": [
+    842.5,
+    -1415.1
+   ],
+   "low_point": [
+    1036.8,
+    141.1
+   ],
+   "root_note": "the root end is cut flat at the pivot: keep the pivot above the visible frame"
+  },
+  "clock": {
+   "pivot": [
+    1570.9,
+    1779.6
+   ],
+   "case_radius_m": 0.4519,
+   "dial_radius_m": 0.345,
+   "face_points_12_3_6_9": [
+    [
+     1570.9,
+     1721.7
+    ],
+    [
+     1628.8,
+     1779.6
+    ],
+    [
+     1570.9,
+     1837.5
+    ],
+    [
+     1513.0,
+     1779.6
+    ]
+   ]
+  },
+  "crops": {
+   "mid": [
+    1391.5,
+    1478.8,
+    2928.5,
+    2343.4
+   ],
+   "door": [
+    1775.7,
+    1911.1,
+    2544.3,
+    2343.4
+   ]
+  },
+  "files": {
+   "whole": "13B/whole.jpg",
+   "mid": "13B/mid.jpg",
+   "door": "13B/door.jpg",
+   "tail": "13B/tail.png"
+  }
+ },
+ "H12": {
+  "size": [
+   2560,
+   1440
+  ],
+  "frames": 69,
+  "of": 69,
+  "first": {
+   "car_box": [
+    742.6,
+    743.5,
+    2045.8,
+    1346.1
+   ],
+   "plate": [
+    904.4,
+    1142.8
+   ],
+   "clock": {
+    "pivot": [
+     1135.8,
+     203.6
+    ],
+    "case_radius_m": 0.4519,
+    "dial_radius_m": 0.345,
+    "face_points_12_3_6_9": [
+     [
+      1137.3,
+      114.6
+     ],
+     [
+      1205.9,
+      237.9
+     ],
+     [
+      1134.2,
+      294.5
+     ],
+     [
+      1058.5,
+      165.9
+     ]
+    ]
+   }
+  }
+ }
+}

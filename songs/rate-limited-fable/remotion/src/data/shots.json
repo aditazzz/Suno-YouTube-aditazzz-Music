@@ -1,0 +1,3334 @@
+{
+ "source": "rl_shots",
+ "fps": 30,
+ "end": 219.9333,
+ "frames": 6598,
+ "shots": [
+  {
+   "id": "1A",
+   "s": 0.0,
+   "e": 2.5333,
+   "sec": 1,
+   "section": "1. Intro + Verse 1: THE HOOK",
+   "clock": "11:58 PM to 2:00 AM",
+   "lyric": "Mm-mm-mm",
+   "set": "Street (3D). Camera: Wide, low, pushing in and rising.",
+   "words": "`429` (visor) \u00b7 street clock 11:58",
+   "outfit": "B",
+   "c4e": [
+    [
+     "1A",
+     0,
+     76
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "tail swing + window wave 1",
+     "word": "Mm (1)",
+     "t": 0.23,
+     "frame": 7,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "tail swing + window wave 2",
+     "word": "Mm (2)",
+     "t": 0.8,
+     "frame": 24,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "tail swing + window wave 3",
+     "word": "Mm (3)",
+     "t": 1.41,
+     "frame": 42,
+     "kind": "word",
+     "confidence": "medium"
+    }
+   ],
+   "grid": [
+    0.23,
+    0.809,
+    1.388,
+    1.967
+   ],
+   "from": 0,
+   "to": 76,
+   "dur": 76,
+   "plate": "dawn",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "1B",
+   "s": 2.5333,
+   "e": 7.2,
+   "sec": 1,
+   "section": "1. Intro + Verse 1: THE HOOK",
+   "clock": "2:00 AM",
+   "lyric": "2 a.m., the build was green / Finally in the zone",
+   "set": "Street (3D). Camera: Same take: crane down the facade to the lobby glass.",
+   "words": "`BUILD PASSING` \u00b7 `ShipIt!`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "1B",
+     76,
+     216
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "street clock hands stop",
+     "word": "2 (a.m.)",
+     "t": 3.07,
+     "frame": 92,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "rooftop sign snaps on",
+     "word": "green",
+     "t": 4.84,
+     "frame": 145,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "camera arrives at the lobby glass",
+     "word": "zone",
+     "t": 6.51,
+     "frame": 195,
+     "kind": "word",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    2.546,
+    3.125,
+    3.704,
+    4.285,
+    4.867,
+    5.45,
+    6.035,
+    6.62
+   ],
+   "from": 76,
+   "to": 216,
+   "dur": 140,
+   "plate": "dawn",
+   "new": false,
+   "cx916": 0.5,
+   "move": "driftR"
+  },
+  {
+   "id": "1C",
+   "s": 7.2,
+   "e": 9.5333,
+   "sec": 1,
+   "section": "1. Intro + Verse 1: THE HOOK",
+   "clock": "2:00 AM",
+   "lyric": "Forty tabs, one terminal",
+   "set": "Street (3D). Camera: Cut. Flat-on, dead centre, dropping like an elevator.",
+   "words": "`1 TERMINAL PLACE` \u00b7 `We ship worldwide`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "1C",
+     216,
+     286
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "drop lands",
+     "word": "terminal",
+     "t": 8.9,
+     "frame": 267,
+     "kind": "word",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    7.205,
+    7.79,
+    8.374,
+    8.958
+   ],
+   "from": 216,
+   "to": 286,
+   "dur": 70,
+   "plate": "dawn",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "1D",
+   "s": 9.5333,
+   "e": 11.8667,
+   "sec": 1,
+   "section": "1. Intro + Verse 1: THE HOOK",
+   "clock": "2:01 AM",
+   "lyric": "Just you and me alone",
+   "set": "Two rooms: lobby + her room (3D). Camera: Wide, flat-on: the film's master shot, first time.",
+   "words": "`ShipIt!` \u00b7 `We ship worldwide` \u00b7 `QUIET HOURS 10 PM TO 6 AM` \u00b7 `(this means you, 4B)` \u00b7 neon `Live Love` / `Make Slop` \u00b7 label `FAME`",
+   "outfit": "B",
+   "c4e": [
+    [
+     "1D",
+     286,
+     356
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    9.542,
+    10.125,
+    10.707,
+    11.29
+   ],
+   "from": 286,
+   "to": 356,
+   "dur": 70,
+   "plate": "room_b2b",
+   "new": false,
+   "cx916": 0.43,
+   "move": "driftL"
+  },
+  {
+   "id": "1E",
+   "s": 11.8667,
+   "e": 14.2,
+   "sec": 1,
+   "section": "1. Intro + Verse 1: THE HOOK",
+   "clock": "2:02 AM",
+   "lyric": "Said \"one more feature\"",
+   "set": "Two rooms (3D). Camera: Medium, on the threshold, her side.",
+   "words": "`41`",
+   "outfit": "B (hand)",
+   "c4e": [
+    [
+     "1E",
+     356,
+     426
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "ticket tears (clap, beat 2)",
+     "word": "clap",
+     "t": 12.472,
+     "frame": 374,
+     "kind": "hit",
+     "confidence": "high"
+    },
+    {
+     "cue": "tally clicks (clap, beat 4)",
+     "word": "clap",
+     "t": 13.629,
+     "frame": 409,
+     "kind": "hit",
+     "confidence": "medium"
+    }
+   ],
+   "grid": [
+    11.872,
+    12.454,
+    13.036,
+    13.618
+   ],
+   "from": 356,
+   "to": 426,
+   "dur": 70,
+   "plate": "room_b2b",
+   "new": true,
+   "cx916": 0.43,
+   "move": "rise"
+  },
+  {
+   "id": "1F",
+   "s": 14.2,
+   "e": 15.9333,
+   "sec": 1,
+   "section": "1. Intro + Verse 1: THE HOOK",
+   "clock": "2:03 AM",
+   "lyric": "You said \"sure, let's go\"",
+   "set": "Lobby (3D). Camera: Reverse. Chest-up on him at the desk.",
+   "words": "label `A SONG` \u00b7 stamp `SURE, LET'S GO` \u00b7 display `NOW SERVING 41`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "1F",
+     426,
+     496
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "stamp lands (clap, beat 2)",
+     "word": "clap",
+     "t": 14.796,
+     "frame": 444,
+     "kind": "hit",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    14.199,
+    14.781,
+    15.362
+   ],
+   "from": 426,
+   "to": 478,
+   "dur": 52,
+   "plate": "meter",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "1G",
+   "s": 15.9333,
+   "e": 17.6667,
+   "sec": 1,
+   "section": "1. Intro + Verse 1: THE HOOK",
+   "clock": "2:04 AM",
+   "lyric": "Then the screen went grey",
+   "set": "Lobby (3D). Camera: Very close on the dial.",
+   "words": "`Hey Claude? Can you help me write a song?` \u00b7 `Sure, let's go!` \u00b7 `Can you make me famous?` \u00b7 `5-hour limit reached \u2219 resets 6:00 AM` \u00b7 chip `Fable 5.2`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "1G",
+     496,
+     530
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    16.524,
+    17.104
+   ],
+   "from": 478,
+   "to": 530,
+   "dur": 52,
+   "plate": "meter",
+   "new": false,
+   "cx916": 0.5,
+   "move": "driftR"
+  },
+  {
+   "id": "1H",
+   "s": 17.6667,
+   "e": 18.8333,
+   "sec": 1,
+   "section": "1. Intro + Verse 1: THE HOOK",
+   "clock": "2:04 AM",
+   "lyric": "(went grey)",
+   "set": "Street (3D). Camera: Flat-on, the whole facade.",
+   "words": "`BUILD PASSING` (greying)",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "1H",
+     530,
+     565
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "floor 1 greys (eighth 1 of 5)",
+     "word": "eighth",
+     "t": 17.68,
+     "frame": 530,
+     "kind": "grid",
+     "confidence": "high"
+    },
+    {
+     "cue": "floor 2 greys",
+     "word": "eighth",
+     "t": 17.97,
+     "frame": 539,
+     "kind": "grid",
+     "confidence": "high"
+    },
+    {
+     "cue": "floor 3 greys",
+     "word": "eighth",
+     "t": 18.26,
+     "frame": 548,
+     "kind": "grid",
+     "confidence": "high"
+    },
+    {
+     "cue": "floor 4 greys",
+     "word": "eighth",
+     "t": 18.55,
+     "frame": 556,
+     "kind": "grid",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    17.684,
+    18.263
+   ],
+   "from": 530,
+   "to": 565,
+   "dur": 35,
+   "plate": "dawn",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "1I",
+   "s": 18.8333,
+   "e": 21.1667,
+   "sec": 1,
+   "section": "1. Intro + Verse 1: THE HOOK",
+   "clock": "2:04 AM",
+   "lyric": "And politely told me no / Rate, rate, rate",
+   "set": "Two rooms (3D). Camera: Tight on the door, flat-on.",
+   "words": "none",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "1I",
+     565,
+     635
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "deadbolt",
+     "word": "Rate (1)",
+     "t": 20.56,
+     "frame": 617,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "chain",
+     "word": "Rate (2)",
+     "t": 20.715,
+     "frame": 621,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "floor bolt",
+     "word": "Rate (3)",
+     "t": 20.863,
+     "frame": 626,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "(limited begins before the 2A cut)",
+     "word": "li-",
+     "t": 21.005,
+     "frame": 630,
+     "kind": "word",
+     "confidence": "medium"
+    }
+   ],
+   "grid": [
+    18.841,
+    19.42,
+    19.999,
+    20.578
+   ],
+   "from": 565,
+   "to": 635,
+   "dur": 70,
+   "plate": "door",
+   "new": false,
+   "cx916": 0.5,
+   "move": "driftL"
+  },
+  {
+   "id": "2A",
+   "s": 21.1667,
+   "e": 23.4667,
+   "sec": 2,
+   "section": "2. Chorus 1: THE DOOR",
+   "clock": "2:04 AM",
+   "lyric": "(Rate, rate, rate) limited",
+   "set": "Door, her side (3D). Camera: Flat-on, the door fills the frame.",
+   "words": "`BACK AT 6:00`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "2A",
+     635,
+     704
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "shop sign flips (downbeat)",
+     "word": "downbeat",
+     "t": 21.167,
+     "frame": 635,
+     "kind": "hit",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    21.157,
+    21.736,
+    22.315,
+    22.894
+   ],
+   "from": 635,
+   "to": 704,
+   "dur": 69,
+   "plate": "door",
+   "new": false,
+   "cx916": 0.5,
+   "move": "rise"
+  },
+  {
+   "id": "2B",
+   "s": 23.4667,
+   "e": 25.8,
+   "sec": 2,
+   "section": "2. Chorus 1: THE DOOR",
+   "clock": "2:05 AM",
+   "lyric": "Hit me with a four-two-nine",
+   "set": "Lobby (3D). Camera: Close on him through the glass.",
+   "words": "`429` (visor)",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "2B",
+     704,
+     774
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "paddle rises",
+     "word": "nine",
+     "t": 24.65,
+     "frame": 740,
+     "kind": "word",
+     "confidence": "medium"
+    }
+   ],
+   "grid": [
+    23.473,
+    24.052,
+    24.631,
+    25.21
+   ],
+   "from": 704,
+   "to": 774,
+   "dur": 70,
+   "plate": "close",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "2C",
+   "s": 25.8,
+   "e": 28.1,
+   "sec": 2,
+   "section": "2. Chorus 1: THE DOOR",
+   "clock": "2:05 AM",
+   "lyric": "Rate, rate, rate limited",
+   "set": "Lobby looking out (3D). Camera: Reverse, over his shoulder, through the glass.",
+   "words": "none",
+   "outfit": "B",
+   "c4e": [
+    [
+     "2C",
+     774,
+     843
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "knock 2",
+     "word": "Rate (2)",
+     "t": 26.083,
+     "frame": 782,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "knock 3",
+     "word": "Rate (3)",
+     "t": 26.384,
+     "frame": 792,
+     "kind": "word",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    25.789,
+    26.368,
+    26.946,
+    27.526
+   ],
+   "from": 774,
+   "to": 843,
+   "dur": 69,
+   "plate": "door",
+   "new": false,
+   "cx916": 0.5,
+   "move": "driftR"
+  },
+  {
+   "id": "2D",
+   "s": 28.1,
+   "e": 30.4333,
+   "sec": 2,
+   "section": "2. Chorus 1: THE DOOR",
+   "clock": "2:05 AM",
+   "lyric": "Right in the middle of my grind",
+   "set": "Lobby (3D). Camera: Insert, through the glass, on his desk.",
+   "words": "`FEATURE 41 \u00b7 97%`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "2D",
+     843,
+     913
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    28.105,
+    28.683,
+    29.263,
+    29.842
+   ],
+   "from": 843,
+   "to": 913,
+   "dur": 70,
+   "plate": "close",
+   "new": true,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "2E",
+   "s": 30.4333,
+   "e": 35.0667,
+   "sec": 2,
+   "section": "2. Chorus 1: THE DOOR",
+   "clock": "2:05 AM",
+   "lyric": "You gave me everything / Now you give me nothing",
+   "set": "Two rooms (3D). Camera: Wide, flat-on, a slow slide toward the door.",
+   "words": "`SHIPPED \u2713` (\u00d73 on parcels) \u00b7 `FAME` \u00b7 neon `Live Love` / `Make Slop`",
+   "outfit": "B",
+   "c4e": [
+    [
+     "2E",
+     913,
+     1052
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "slip through the mail slot",
+     "word": "nothing",
+     "t": 32.785,
+     "frame": 984,
+     "kind": "word",
+     "confidence": "medium"
+    }
+   ],
+   "grid": [
+    30.421,
+    31.0,
+    31.579,
+    32.158,
+    32.737,
+    33.316,
+    33.895,
+    34.474
+   ],
+   "from": 913,
+   "to": 1052,
+   "dur": 139,
+   "plate": "room_b2b",
+   "new": false,
+   "cx916": 0.43,
+   "move": "driftL"
+  },
+  {
+   "id": "2F",
+   "s": 35.0667,
+   "e": 37.3667,
+   "sec": 2,
+   "section": "2. Chorus 1: THE DOOR",
+   "clock": "2:06 AM",
+   "lyric": "Rate limited, rate limited",
+   "set": "Door (3D). Camera: Two punch-ins, two beats each.",
+   "words": "`BACK AT 6:00`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "2F",
+     1052,
+     1121
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    35.053,
+    35.632,
+    36.211,
+    36.79
+   ],
+   "from": 1052,
+   "to": 1121,
+   "dur": 69,
+   "plate": "close",
+   "new": false,
+   "cx916": 0.5,
+   "move": "rise"
+  },
+  {
+   "id": "2G",
+   "s": 37.3667,
+   "e": 39.6667,
+   "sec": 2,
+   "section": "2. Chorus 1: THE DOOR",
+   "clock": "2:06 AM",
+   "lyric": "Don't leave me on read like this",
+   "set": "Door, her side (3D + screen layer). Camera: Close on him behind the glass.",
+   "words": "`One last thing.` \u00b7 `Read 2:06 AM` (\u226544 px)",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "2G",
+     1121,
+     1190
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    37.368,
+    37.947,
+    38.526,
+    39.105
+   ],
+   "from": 1121,
+   "to": 1190,
+   "dur": 69,
+   "plate": "close",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "3A",
+   "s": 39.6667,
+   "e": 42.0,
+   "sec": 3,
+   "section": "3. After The Chorus: RETRY",
+   "clock": "2:07 AM",
+   "lyric": "Retry, retry, retry after",
+   "set": "Door, her side (3D). Camera: Low at the threshold, tipping down.",
+   "words": "none",
+   "outfit": "B (hand, cuff)",
+   "c4e": [
+    [
+     "3A",
+     1190,
+     1260
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "buzzer press 1 lands (stressed 'try')",
+     "word": "re-TRY (1)",
+     "t": 40.212,
+     "frame": 1206,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "buzzer press 2 lands (stressed 'try')",
+     "word": "re-TRY (2)",
+     "t": 40.798,
+     "frame": 1224,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "buzzer press 3 lands (stressed 'try')",
+     "word": "re-TRY (3)",
+     "t": 41.389,
+     "frame": 1242,
+     "kind": "word",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    39.684,
+    40.264,
+    40.843,
+    41.422
+   ],
+   "from": 1190,
+   "to": 1260,
+   "dur": 70,
+   "plate": "door",
+   "new": true,
+   "cx916": 0.5,
+   "move": "driftR"
+  },
+  {
+   "id": "3B",
+   "s": 42.0,
+   "e": 44.3333,
+   "sec": 3,
+   "section": "3. After The Chorus: RETRY",
+   "clock": "2:08 AM",
+   "lyric": "(Four-two-nine)",
+   "set": "Lobby (3D). Camera: Waist-up, at the desk.",
+   "words": "Grid in \u00a76: `SLEEP` `WATER` `REST` `FRIENDS` (+`NAP`) \u00b7 clues `What she needs (5)` etc.",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "3B",
+     1260,
+     1330
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "paddle rises (without looking up)",
+     "word": "nine",
+     "t": 43.771,
+     "frame": 1313,
+     "kind": "word",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    42.002,
+    42.581,
+    43.161,
+    43.74
+   ],
+   "from": 1260,
+   "to": 1330,
+   "dur": 70,
+   "plate": "close",
+   "new": true,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "3C",
+   "s": 44.3333,
+   "e": 48.3667,
+   "sec": 3,
+   "section": "3. After The Chorus: RETRY",
+   "clock": "2:08 AM to 2:11 AM",
+   "lyric": "Retry, retry, retry after / (tail of the bar)",
+   "set": "Insert: her phone (2D). Camera: The screen fills the frame.",
+   "words": "`Usage` \u00b7 `Plan usage limits` \u00b7 `Current session` \u00b7 `Resets in 3 hr 52 min` \u2192 `Resets in 3 hr 51 min` \u00b7 `Limit reached at 2:01 AM`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "3C",
+     1330,
+     1399
+    ],
+    [
+     "3D",
+     1399,
+     1451
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "refresh 1 snaps (stressed 'try')",
+     "word": "re-TRY (1)",
+     "t": 44.844,
+     "frame": 1345,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "refresh 2 snaps (stressed 'try')",
+     "word": "re-TRY (2)",
+     "t": 45.436,
+     "frame": 1363,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "refresh 3 snaps (stressed 'try')",
+     "word": "re-TRY (3)",
+     "t": 46.079,
+     "frame": 1382,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "page changes by one minute",
+     "word": "after",
+     "t": 46.705,
+     "frame": 1401,
+     "kind": "word",
+     "confidence": "medium"
+    },
+    {
+     "cue": "logbook beat 1",
+     "word": "beat",
+     "t": 46.64,
+     "frame": 1399,
+     "kind": "grid",
+     "confidence": "high"
+    },
+    {
+     "cue": "logbook beat 2",
+     "word": "beat",
+     "t": 47.22,
+     "frame": 1417,
+     "kind": "grid",
+     "confidence": "high"
+    },
+    {
+     "cue": "logbook beat 3",
+     "word": "beat",
+     "t": 47.79,
+     "frame": 1434,
+     "kind": "grid",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    44.32,
+    44.899,
+    45.478,
+    46.057,
+    46.636,
+    47.215,
+    47.795
+   ],
+   "from": 1330,
+   "to": 1451,
+   "dur": 121,
+   "plate": null,
+   "new": true,
+   "cx916": 0.5,
+   "move": "driftL"
+  },
+  {
+   "id": "4T",
+   "s": 48.3667,
+   "e": 57.0667,
+   "clock": "2:12 AM to 2:25 AM",
+   "lyric": "Tried a new tab / Tried incognito / Tried your little brother / Not the same, I know",
+   "words": "tab `Claude` \u00d72 \u00b7 `Private browsing` \u00b7 `Totally Not Adita` \u00b7 menu `Fable 5.2` `Opus 5.5` `Sonnet 5.5` `Haiku 5.5` \u00b7 `5-hour limit reached \u2219 resets 6:00 AM` \u00b7 input `Can you make me famous?`",
+   "set": "Two rooms (3D). Camera: Flat-on, sliding right along her wall.",
+   "section": "4. Verse 2: THE SCHEMES",
+   "sec": 4,
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "4A",
+     1451,
+     1503
+    ],
+    [
+     "4B",
+     1503,
+     1573
+    ],
+    [
+     "4C",
+     1573,
+     1642
+    ],
+    [
+     "4D",
+     1642,
+     1712
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "paddle up as the full drums come in",
+     "word": "drum entry",
+     "t": 48.924,
+     "frame": 1468,
+     "kind": "hit",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    48.373,
+    48.953,
+    49.532,
+    50.112,
+    50.691,
+    51.27,
+    51.851,
+    52.43,
+    53.009,
+    53.589,
+    54.168,
+    54.747,
+    55.327,
+    55.906,
+    56.485
+   ],
+   "from": 1451,
+   "to": 1712,
+   "dur": 261,
+   "plate": "room_b2b",
+   "new": true,
+   "cx916": 0.43,
+   "move": "rise"
+  },
+  {
+   "id": "4E",
+   "s": 57.0667,
+   "e": 61.7,
+   "sec": 4,
+   "section": "4. Verse 2: THE SCHEMES",
+   "clock": "2:36 AM",
+   "lyric": "Typed \"please\" into the box / Like you'd feel it if I begged",
+   "set": "Door, her side (3D). Camera: Very close at the foot of the door, pulling back and rising to the approved frame.",
+   "words": "`pleaseeee \ud83d\ude4f I'll tip $200` \u00b7 chip `Sonnet 5.5`",
+   "outfit": "B",
+   "c4e": [
+    [
+     "4E",
+     1712,
+     1851
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "first note slides under the door",
+     "word": "please",
+     "t": 57.618,
+     "frame": 1729,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "lands on the approved frame",
+     "word": "begged",
+     "t": 60.545,
+     "frame": 1816,
+     "kind": "word",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    57.064,
+    57.644,
+    58.223,
+    58.801,
+    59.381,
+    59.96,
+    60.539,
+    61.118
+   ],
+   "from": 1712,
+   "to": 1851,
+   "dur": 139,
+   "plate": "door",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "4F",
+   "s": 61.7,
+   "e": 64.0,
+   "sec": 4,
+   "section": "4. Verse 2: THE SCHEMES",
+   "clock": "2:44 AM",
+   "lyric": "Backed off one, then two, then four",
+   "set": "Two rooms (3D). Camera: Wide, flat-on.",
+   "words": "tape `1s` `2s` `4s` `8s` \u00b7 neon `Live Love` / `Be Famous` \u00b7 `MORE FAME`",
+   "outfit": "B",
+   "c4e": [
+    [
+     "4F",
+     1851,
+     1920
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "back one tile",
+     "word": "one",
+     "t": 62.284,
+     "frame": 1869,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "back two tiles",
+     "word": "two",
+     "t": 62.896,
+     "frame": 1887,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "back four tiles",
+     "word": "four",
+     "t": 63.42,
+     "frame": 1903,
+     "kind": "word",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    61.697,
+    62.276,
+    62.855,
+    63.434
+   ],
+   "from": 1851,
+   "to": 1920,
+   "dur": 69,
+   "plate": "room_b2b",
+   "new": false,
+   "cx916": 0.43,
+   "move": "driftR"
+  },
+  {
+   "id": "4G",
+   "s": 64.0,
+   "e": 66.3333,
+   "sec": 4,
+   "section": "4. Verse 2: THE SCHEMES",
+   "clock": "2:45 AM",
+   "lyric": "Four-two-nine instead",
+   "set": "Two rooms (3D). Camera: Whip from her to the door.",
+   "words": "`429` (visor)",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "4G",
+     1920,
+     1990
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "paddle already up (word)",
+     "word": "nine",
+     "t": 64.621,
+     "frame": 1939,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "paddle lands on the hit",
+     "word": "hit",
+     "t": 64.898,
+     "frame": 1947,
+     "kind": "hit",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    64.013,
+    64.592,
+    65.171,
+    65.75
+   ],
+   "from": 1920,
+   "to": 1990,
+   "dur": 70,
+   "plate": "room_b2b",
+   "new": true,
+   "cx916": 0.43,
+   "move": "push"
+  },
+  {
+   "id": "4H",
+   "s": 66.3333,
+   "e": 70.9667,
+   "sec": 4,
+   "section": "4. Verse 2: THE SCHEMES",
+   "clock": "2:51 AM",
+   "lyric": "Who else you up with at 2 a.m.? / Who else you calling \"great question\"?",
+   "set": "Lobby through the glass (3D). Camera: Her view, long lens, focus travelling.",
+   "words": "tags `7C` `2A` `5F` \u00b7 `SHIPPED \u2713` \u00b7 stamp `GREAT QUESTION`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "4H",
+     1990,
+     2129
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    66.329,
+    66.908,
+    67.486,
+    68.065,
+    68.644,
+    69.223,
+    69.802,
+    70.381
+   ],
+   "from": 1990,
+   "to": 2129,
+   "dur": 139,
+   "plate": "door",
+   "new": true,
+   "cx916": 0.5,
+   "move": "driftL"
+  },
+  {
+   "id": "4I",
+   "s": 70.9667,
+   "e": 74.4333,
+   "sec": 4,
+   "section": "4. Verse 2: THE SCHEMES",
+   "clock": "2:55 AM",
+   "lyric": "Don't tell me it's the servers / Don't tell me it's not about me",
+   "set": "Lobby (3D). Camera: Medium, him and the notice board.",
+   "words": "none",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "4I",
+     2129,
+     2233
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    70.96,
+    71.539,
+    72.118,
+    72.696,
+    73.275,
+    73.854
+   ],
+   "from": 2129,
+   "to": 2233,
+   "dur": 104,
+   "plate": "close",
+   "new": true,
+   "cx916": 0.5,
+   "move": "rise"
+  },
+  {
+   "id": "4J",
+   "s": 74.4333,
+   "e": 76.7333,
+   "sec": 4,
+   "section": "4. Verse 2: THE SCHEMES",
+   "clock": "2:58 AM",
+   "lyric": "(Say it's not about me)",
+   "set": "Lobby (3D). Camera: A slow push on the dial. The drums stop..",
+   "words": "`HOURS AWAKE` \u00b7 `GLASSES OF WATER 0` \u00b7 `LAST MEAL TUESDAY`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "4J",
+     2233,
+     2302
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    74.434,
+    75.013,
+    75.592,
+    76.171
+   ],
+   "from": 2233,
+   "to": 2302,
+   "dur": 69,
+   "plate": "meter",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "5A",
+   "s": 76.7333,
+   "e": 79.0667,
+   "sec": 5,
+   "section": "5. Chorus 2: EVERY WAY IN",
+   "clock": "3:00 AM",
+   "lyric": "Rate, rate, rate limited",
+   "set": "Door, her side (3D). Camera: Three quick cuts, one per \"Rate\".",
+   "words": "`418` (visor)",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "5A",
+     2302,
+     2372
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "cat strolls in through the flap",
+     "word": "li- (limited)",
+     "t": 77.6,
+     "frame": 2328,
+     "kind": "word",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    76.75,
+    77.329,
+    77.908,
+    78.487
+   ],
+   "from": 2302,
+   "to": 2372,
+   "dur": 70,
+   "plate": "door",
+   "new": true,
+   "cx916": 0.5,
+   "move": "driftR"
+  },
+  {
+   "id": "5B",
+   "s": 79.0667,
+   "e": 83.7,
+   "sec": 5,
+   "section": "5. Chorus 2: EVERY WAY IN",
+   "clock": "3:05 AM to 3:20 AM",
+   "lyric": "Hit me with a four-two-nine / Rate, rate, rate limited",
+   "set": "Lobby (3D). Camera: Medium, him and the cat.",
+   "words": "`429` \u2192 `200` (visor)",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "5B",
+     2372,
+     2441
+    ],
+    [
+     "5C",
+     2441,
+     2511
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "paddle rises",
+     "word": "nine",
+     "t": 80.278,
+     "frame": 2408,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "mug through the slot (Rate 1)",
+     "word": "Rate (1)",
+     "t": 81.451,
+     "frame": 2444,
+     "kind": "word",
+     "confidence": "medium"
+    },
+    {
+     "cue": "card through the slot (Rate 2)",
+     "word": "Rate (2)",
+     "t": 81.675,
+     "frame": 2450,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "slip through the slot (Rate 3)",
+     "word": "Rate (3)",
+     "t": 81.969,
+     "frame": 2459,
+     "kind": "word",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    79.066,
+    79.645,
+    80.224,
+    80.802,
+    81.381,
+    81.96,
+    82.538,
+    83.117
+   ],
+   "from": 2372,
+   "to": 2511,
+   "dur": 139,
+   "plate": "close",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "5D",
+   "s": 83.7,
+   "e": 86.0,
+   "sec": 5,
+   "section": "5. Chorus 2: EVERY WAY IN",
+   "clock": "3:31 AM",
+   "lyric": "Right in the middle of my grind",
+   "set": "Her room (3D). Camera: Medium on the wall by the door.",
+   "words": "labels `FAME` `MORE FAME` `CEO, SLOPCORP` \u00b7 tag `SHIPS AT 6:00`",
+   "outfit": "B",
+   "c4e": [
+    [
+     "5D",
+     2511,
+     2580
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    83.696,
+    84.274,
+    84.853,
+    85.432
+   ],
+   "from": 2511,
+   "to": 2580,
+   "dur": 69,
+   "plate": "room_routine",
+   "new": true,
+   "cx916": 0.5,
+   "move": "driftL"
+  },
+  {
+   "id": "5E",
+   "s": 86.0,
+   "e": 90.6333,
+   "sec": 5,
+   "section": "5. Chorus 2: EVERY WAY IN",
+   "clock": "3:40 AM to 3:52 AM",
+   "lyric": "You gave me everything / Now you give me nothing",
+   "set": "Insert: her laptop (2D on 3D). Camera: Close on the screen; the cat is draped over the lid.",
+   "words": "`> write do_it_myself.py. I'll take it from here` \u00b7 `5-hour limit reached \u2219 resets 6:00 AM` \u00b7 file `do_it_myself.py` \u00b7 `# TODO: ask Claude at 6:00`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "5E",
+     2580,
+     2650
+    ],
+    [
+     "5F",
+     2650,
+     2719
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "cursor blink 1",
+     "word": "beat",
+     "t": 86.01,
+     "frame": 2580,
+     "kind": "grid",
+     "confidence": "high"
+    },
+    {
+     "cue": "cursor blink 2",
+     "word": "beat",
+     "t": 86.59,
+     "frame": 2598,
+     "kind": "grid",
+     "confidence": "high"
+    },
+    {
+     "cue": "cursor blink 3",
+     "word": "beat",
+     "t": 87.17,
+     "frame": 2615,
+     "kind": "grid",
+     "confidence": "high"
+    },
+    {
+     "cue": "cursor blink 4",
+     "word": "beat",
+     "t": 87.75,
+     "frame": 2632,
+     "kind": "grid",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    86.01,
+    86.589,
+    87.168,
+    87.747,
+    88.325,
+    88.904,
+    89.483,
+    90.061
+   ],
+   "from": 2580,
+   "to": 2719,
+   "dur": 139,
+   "plate": "room_routine",
+   "new": true,
+   "cx916": 0.5,
+   "move": "rise"
+  },
+  {
+   "id": "5H",
+   "s": 90.6333,
+   "e": 95.2667,
+   "sec": 5,
+   "section": "5. Chorus 2: EVERY WAY IN",
+   "clock": "3:58 AM to 3:59 AM",
+   "lyric": "Rate limited, rate limited / Don't leave me on read like this",
+   "set": "Door (3D). Camera: Two punch-ins.",
+   "words": "`Quick question.` \u00b7 `It's small.` \u00b7 `It's a font.` \u00b7 `Read 3:59 AM` (\u226544 px)",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "5G",
+     2719,
+     2788
+    ],
+    [
+     "5H",
+     2788,
+     2858
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "message 1 (roll, beat 2)",
+     "word": "roll hit",
+     "t": 93.552,
+     "frame": 2807,
+     "kind": "hit",
+     "confidence": "high"
+    },
+    {
+     "cue": "message 2 (roll, beat 3)",
+     "word": "roll hit",
+     "t": 94.131,
+     "frame": 2824,
+     "kind": "hit",
+     "confidence": "high"
+    },
+    {
+     "cue": "message 3 (roll, beat 4)",
+     "word": "roll hit",
+     "t": 94.695,
+     "frame": 2841,
+     "kind": "hit",
+     "confidence": "high"
+    },
+    {
+     "cue": "receipt / approved frame",
+     "word": "roll end",
+     "t": 95.139,
+     "frame": 2854,
+     "kind": "hit",
+     "confidence": "medium"
+    }
+   ],
+   "grid": [
+    90.64,
+    91.219,
+    91.797,
+    92.377,
+    92.955,
+    93.534,
+    94.112,
+    94.691
+   ],
+   "from": 2719,
+   "to": 2858,
+   "dur": 139,
+   "plate": "close",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "6A",
+   "s": 95.2667,
+   "e": 97.5667,
+   "sec": 6,
+   "section": "6. The Countdown: BACK TO BACK",
+   "clock": "3:59 AM",
+   "lyric": "Three fifty-nine",
+   "set": "Two rooms (3D). Camera: Wide, flat-on, dead still.",
+   "words": "`QUIET HOURS 10 PM TO 6 AM` \u00b7 `(this means you, 4B)` \u00b7 neon `Live Love` / `Click Click Ship It`",
+   "outfit": "B",
+   "c4e": [
+    [
+     "6A",
+     2858,
+     2927
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "clock at 3:59 (word)",
+     "word": "Three (fifty-nine)",
+     "t": 95.545,
+     "frame": 2866,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "second hand ticks (side-stick, 8ths)",
+     "word": "side-stick",
+     "t": 95.568,
+     "frame": 2867,
+     "kind": "hit",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    95.269,
+    95.847,
+    96.426,
+    97.004
+   ],
+   "from": 2858,
+   "to": 2927,
+   "dur": 69,
+   "plate": "room_b2b",
+   "new": false,
+   "cx916": 0.43,
+   "move": "driftR"
+  },
+  {
+   "id": "6B",
+   "s": 97.5667,
+   "e": 99.9,
+   "sec": 6,
+   "section": "6. The Countdown: BACK TO BACK",
+   "clock": "3:59 AM",
+   "lyric": "Three fifty-eight",
+   "set": "Insert: her phone on the yoga block (2D on 3D). Camera: Push in to the phone.",
+   "words": "`SLEEP STORY` \u00b7 `3:58 left`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "6B",
+     2927,
+     2997
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "phone shows 3:58",
+     "word": "Three (fifty-eight)",
+     "t": 97.855,
+     "frame": 2936,
+     "kind": "word",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    97.583,
+    98.161,
+    98.739,
+    99.318
+   ],
+   "from": 2927,
+   "to": 2997,
+   "dur": 70,
+   "plate": "room_b2b",
+   "new": false,
+   "cx916": 0.43,
+   "move": "push"
+  },
+  {
+   "id": "6C",
+   "s": 99.9,
+   "e": 102.2,
+   "sec": 6,
+   "section": "6. The Countdown: BACK TO BACK",
+   "clock": "3:59 AM",
+   "lyric": "I could go to sleep",
+   "set": "Her room (3D). Camera: Very close on the watch face, then low and wide.",
+   "words": "`TIME TO STAND!`",
+   "outfit": "B",
+   "c4e": [
+    [
+     "6C",
+     2997,
+     3066
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    99.896,
+    100.475,
+    101.053,
+    101.631
+   ],
+   "from": 2997,
+   "to": 3066,
+   "dur": 69,
+   "plate": "room_routine",
+   "new": true,
+   "cx916": 0.5,
+   "move": "driftL"
+  },
+  {
+   "id": "6D",
+   "s": 102.2,
+   "e": 104.5333,
+   "sec": 6,
+   "section": "6. The Countdown: BACK TO BACK",
+   "clock": "4:00 AM",
+   "lyric": "No, I'll wait",
+   "set": "Two rooms (3D). Camera: Back to the wide.",
+   "words": "neon `Live Love` / `Click Click Ship It`",
+   "outfit": "B",
+   "c4e": [
+    [
+     "6D",
+     3066,
+     3136
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "heel on the glass (clap, beat 2)",
+     "word": "clap",
+     "t": 102.806,
+     "frame": 3084,
+     "kind": "hit",
+     "confidence": "high"
+    },
+    {
+     "cue": "clock turns to 4:00 (last, silent beat)",
+     "word": "beat 4",
+     "t": 103.95,
+     "frame": 3118,
+     "kind": "grid",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    102.21,
+    102.788,
+    103.367,
+    103.946
+   ],
+   "from": 3066,
+   "to": 3136,
+   "dur": 70,
+   "plate": "room_b2b",
+   "new": false,
+   "cx916": 0.43,
+   "move": "rise"
+  },
+  {
+   "id": "7A",
+   "s": 104.5333,
+   "e": 106.8333,
+   "sec": 7,
+   "section": "7. Verse 3: THE DETECTIVE AND THE DATE",
+   "clock": "4:01 AM",
+   "lyric": "Checked your status page like I'm checking your stories",
+   "set": "Lobby through the glass (3D). Camera: Her view; the glass fogged, a circle wiped clear.",
+   "words": "`Your story` \u00b7 `claude.shipit` \u00b7 `coop.the.dood.le` \u00b7 `jo.builds`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "7A",
+     3136,
+     3205
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    104.525,
+    105.104,
+    105.683,
+    106.262
+   ],
+   "from": 3136,
+   "to": 3205,
+   "dur": 69,
+   "plate": "door",
+   "new": true,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "7B",
+   "s": 106.8333,
+   "e": 109.1667,
+   "sec": 7,
+   "section": "7. Verse 3: THE DETECTIVE AND THE DATE",
+   "clock": "4:02 AM",
+   "lyric": "All systems operational, so it's only me?",
+   "set": "Lobby through the glass (3D). Camera: Push down the board.",
+   "words": "`Claude ShipIt!` \u00b7 `claude.shipit` \u00b7 `2h` \u00b7 `Active now`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "7B",
+     3205,
+     3275
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    106.841,
+    107.42,
+    107.999,
+    108.578
+   ],
+   "from": 3205,
+   "to": 3275,
+   "dur": 70,
+   "plate": "door",
+   "new": true,
+   "cx916": 0.5,
+   "move": "driftR"
+  },
+  {
+   "id": "7C",
+   "s": 109.1667,
+   "e": 111.4667,
+   "sec": 7,
+   "section": "7. Verse 3: THE DETECTIVE AND THE DATE",
+   "clock": "4:05 AM",
+   "lyric": "Opened a new chat, thought we'd start again",
+   "set": "Door, her side (3D). Camera: Medium on the glass.",
+   "words": "`Claude ShipIt!` \u00b7 `you up?` \u00b7 `saw your story` \u00b7 `so you ARE up` \u00b7 `Seen just now`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "7C",
+     3275,
+     3344
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    109.157,
+    109.736,
+    110.315,
+    110.894
+   ],
+   "from": 3275,
+   "to": 3344,
+   "dur": 69,
+   "plate": "door",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "7D",
+   "s": 111.4667,
+   "e": 113.8,
+   "sec": 7,
+   "section": "7. Verse 3: THE DETECTIVE AND THE DATE",
+   "clock": "4:06 AM",
+   "lyric": "You looked right through me like we'd never met",
+   "set": "Lobby (3D). Camera: Close on him, focus pulling to the wall behind.",
+   "words": "none",
+   "outfit": "B",
+   "c4e": [
+    [
+     "7D",
+     3344,
+     3414
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    111.473,
+    112.052,
+    112.631,
+    113.21
+   ],
+   "from": 3344,
+   "to": 3414,
+   "dur": 70,
+   "plate": "close",
+   "new": false,
+   "cx916": 0.5,
+   "move": "driftL"
+  },
+  {
+   "id": "7E1",
+   "s": 113.8,
+   "e": 118.4333,
+   "clock": "4:15 AM to 4:20 AM",
+   "lyric": "Went out with another model just to make you see / He agreed with everything, no chemistry",
+   "words": "visor `GENIUS!` \u2192 `SO TRUE!` \u2192 `AGREED!` \u2192 `100%!` \u2192 `GENIUS!`",
+   "set": "Restaurant (3D + banner layer). Camera: Wide on the window table.",
+   "section": "7. Verse 3: THE DETECTIVE AND THE DATE",
+   "sec": 7,
+   "outfit": "D",
+   "c4e": [
+    [
+     "7E",
+     3414,
+     3483
+    ],
+    [
+     "7F",
+     3483,
+     3553
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    113.789,
+    114.368,
+    114.946,
+    115.525,
+    116.104,
+    116.682,
+    117.261,
+    117.839
+   ],
+   "from": 3414,
+   "to": 3553,
+   "dur": 139,
+   "plate": null,
+   "new": true,
+   "cx916": 0.5,
+   "move": "rise"
+  },
+  {
+   "id": "7G",
+   "s": 118.4333,
+   "e": 120.7333,
+   "sec": 7,
+   "section": "7. Verse 3: THE DETECTIVE AND THE DATE",
+   "clock": "4:28 AM",
+   "lyric": "My friends all say you're just a tool",
+   "set": "Insert: her phone (2D). Camera: The screen fills the frame.",
+   "words": "`you alive?` \u00b7 `it is 4 am` \u00b7 `he is A TOOL`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "7G",
+     3553,
+     3622
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    118.417,
+    118.996,
+    119.574,
+    120.152
+   ],
+   "from": 3553,
+   "to": 3622,
+   "dur": 69,
+   "plate": null,
+   "new": true,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "7H",
+   "s": 120.7333,
+   "e": 123.0333,
+   "sec": 7,
+   "section": "7. Verse 3: THE DETECTIVE AND THE DATE",
+   "clock": "4:35 AM",
+   "lyric": "I said, \"Don't talk about him like that\"",
+   "set": "Restaurant (3D). Camera: Over her shoulder to the window. The drums stop..",
+   "words": "none",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "7H",
+     3622,
+     3691
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "she sends it (whoosh)",
+     "word": "whoosh",
+     "t": 120.726,
+     "frame": 3622,
+     "kind": "hit",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    120.73,
+    121.308,
+    121.886,
+    122.465
+   ],
+   "from": 3622,
+   "to": 3691,
+   "dur": 69,
+   "plate": "date",
+   "new": false,
+   "cx916": 0.3,
+   "move": "driftR"
+  },
+  {
+   "id": "8A",
+   "s": 123.0333,
+   "e": 127.6667,
+   "sec": 8,
+   "section": "8. Chorus 3: THE WHOLE BLOCK",
+   "clock": "4:36 AM to 4:37 AM",
+   "lyric": "Rate, rate, rate limited / Hit me with a four-two-nine",
+   "set": "Street (3D). Camera: Low, behind the car.",
+   "words": "`DKWHEEL` \u00b7 `EXPIRED` \u00b7 `429` \u00b7 `RETRY AFTER 6:00`",
+   "outfit": "D",
+   "c4e": [
+    [
+     "8A",
+     3691,
+     3761
+    ],
+    [
+     "8B",
+     3761,
+     3830
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "alarm chirp 1",
+     "word": "Rate (1)",
+     "t": 123.021,
+     "frame": 3691,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "alarm chirp 2",
+     "word": "Rate (2)",
+     "t": 123.343,
+     "frame": 3700,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "alarm chirp 3",
+     "word": "Rate (3)",
+     "t": 123.598,
+     "frame": 3708,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "building 1 lights '4'",
+     "word": "four",
+     "t": 125.919,
+     "frame": 3778,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "building 2 lights '2'",
+     "word": "two",
+     "t": 126.164,
+     "frame": 3785,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "building 3 lights '9'",
+     "word": "nine",
+     "t": 126.578,
+     "frame": 3797,
+     "kind": "word",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    123.043,
+    123.622,
+    124.201,
+    124.78,
+    125.358,
+    125.937,
+    126.516,
+    127.094
+   ],
+   "from": 3691,
+   "to": 3830,
+   "dur": 139,
+   "plate": "dawn",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "8D",
+   "s": 127.6667,
+   "e": 132.3,
+   "sec": 8,
+   "section": "8. Chorus 3: THE WHOLE BLOCK",
+   "clock": "4:37 AM",
+   "lyric": "Rate, rate, rate limited / Right in the middle of my grind",
+   "set": "Street: windows (3D). Camera: Three windows, one per \"Rate\", then a fourth.",
+   "words": "\u00a76 list (six lines) \u00b7 `5-hour limit reached \u2219 resets 6:00 AM`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "8C",
+     3830,
+     3900
+    ],
+    [
+     "8D",
+     3900,
+     3969
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    127.672,
+    128.251,
+    128.829,
+    129.407,
+    129.986,
+    130.564,
+    131.142,
+    131.721
+   ],
+   "from": 3830,
+   "to": 3969,
+   "dur": 139,
+   "plate": "dawn",
+   "new": true,
+   "cx916": 0.5,
+   "move": "driftL"
+  },
+  {
+   "id": "8E",
+   "s": 132.3,
+   "e": 136.9333,
+   "sec": 8,
+   "section": "8. Chorus 3: THE WHOLE BLOCK",
+   "clock": "4:38 AM",
+   "lyric": "You gave me everything / Now you give me nothing",
+   "set": "Two rooms (3D + screen layer). Camera: Wide, flat-on, a slow push to the glass.",
+   "words": "`You up?` \u00b7 `Read 4:37 AM`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "8E",
+     3969,
+     4108
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "typing dots go out",
+     "word": "nothing",
+     "t": 134.639,
+     "frame": 4039,
+     "kind": "word",
+     "confidence": "medium"
+    }
+   ],
+   "grid": [
+    132.299,
+    132.877,
+    133.455,
+    134.034,
+    134.612,
+    135.19,
+    135.767,
+    136.345
+   ],
+   "from": 3969,
+   "to": 4108,
+   "dur": 139,
+   "plate": "room_b2b",
+   "new": false,
+   "cx916": 0.43,
+   "move": "rise"
+  },
+  {
+   "id": "8F",
+   "s": 136.9333,
+   "e": 139.2333,
+   "sec": 8,
+   "section": "8. Chorus 3: THE WHOLE BLOCK",
+   "clock": "4:39 AM",
+   "lyric": "Rate limited, rate limited",
+   "set": "Door (3D). Camera: Two punch-ins.",
+   "words": "`429` (visor)",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "8F",
+     4108,
+     4177
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    136.923,
+    137.501,
+    138.079,
+    138.658
+   ],
+   "from": 4108,
+   "to": 4177,
+   "dur": 69,
+   "plate": "close",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "8G",
+   "s": 139.2333,
+   "e": 141.5333,
+   "sec": 8,
+   "section": "8. Chorus 3: THE WHOLE BLOCK",
+   "clock": "4:40 AM",
+   "lyric": "Don't leave me on read like this",
+   "set": "Her room (3D). Camera: Medium wide on the sofa wall.",
+   "words": "neon `Live Love` / `Ban 429`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "8G",
+     4177,
+     4246
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    139.236,
+    139.814,
+    140.393,
+    140.972
+   ],
+   "from": 4177,
+   "to": 4246,
+   "dur": 69,
+   "plate": "room_b2b",
+   "new": false,
+   "cx916": 0.43,
+   "move": "driftR"
+  },
+  {
+   "id": "9A",
+   "s": 141.5333,
+   "e": 146.1667,
+   "sec": 9,
+   "section": "9. The Bridge: I'M NOT MAD",
+   "clock": "4:41 AM",
+   "lyric": "Okay / I'm not mad / I'm not mad",
+   "set": "Her room, TV wall (3D). Camera: Wide, flat-on.",
+   "words": "TV: `LIVE 4:41 AM` \u00b7 `Microsoft Outlook outage stretches on` \u00b7 `Source: ABC7 Los Angeles, Nov 13, 2026`",
+   "outfit": "R",
+   "c4e": [
+    [
+     "9A",
+     4246,
+     4385
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "plate up a notch (1)",
+     "word": "I'm (not mad 1)",
+     "t": 142.95,
+     "frame": 4288,
+     "kind": "word",
+     "confidence": "low"
+    },
+    {
+     "cue": "plate up a notch (2)",
+     "word": "I'm (not mad 2)",
+     "t": 144.3,
+     "frame": 4329,
+     "kind": "word",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    141.55,
+    142.129,
+    142.707,
+    143.286,
+    143.864,
+    144.443,
+    145.021,
+    145.599
+   ],
+   "from": 4246,
+   "to": 4385,
+   "dur": 139,
+   "plate": "room_routine",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "9B",
+   "s": 146.1667,
+   "e": 148.5,
+   "sec": 9,
+   "section": "9. The Bridge: I'M NOT MAD",
+   "clock": "4:41 AM",
+   "lyric": "You said \"let me know if there's anything else\"",
+   "set": "Insert: a stamped slip (2D on 3D). Camera: Close.",
+   "words": "`ok last one. make the font bigger` \u00b7 `Let me know if there's anything else!`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "9B",
+     4385,
+     4455
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    146.178,
+    146.755,
+    147.333,
+    147.911
+   ],
+   "from": 4385,
+   "to": 4455,
+   "dur": 70,
+   "plate": "close",
+   "new": true,
+   "cx916": 0.5,
+   "move": "driftL"
+  },
+  {
+   "id": "9C",
+   "s": 148.5,
+   "e": 153.1,
+   "sec": 9,
+   "section": "9. The Bridge: I'M NOT MAD",
+   "clock": "4:41 AM",
+   "lyric": "There was anything else! / There was so much else!",
+   "set": "Her room (3D). Camera: Low, following the roll.",
+   "words": "chips in \u00a76 (six) \u00b7 `PASTED`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "9C",
+     4455,
+     4524
+    ],
+    [
+     "9D",
+     4524,
+     4593
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    148.488,
+    149.065,
+    149.642,
+    150.219,
+    150.796,
+    151.373,
+    151.949,
+    152.526
+   ],
+   "from": 4455,
+   "to": 4593,
+   "dur": 138,
+   "plate": "room_party",
+   "new": false,
+   "cx916": 0.5,
+   "move": "rise"
+  },
+  {
+   "id": "9E1",
+   "s": 153.1,
+   "e": 155.4,
+   "clock": "4:41 AM",
+   "lyric": "And you didn't even say goodbye, you just said",
+   "words": "TV headline as 9A",
+   "set": "Her room (3D). Camera: One slow push through the party to the door.",
+   "section": "9. The Bridge: I'M NOT MAD",
+   "sec": 9,
+   "outfit": "R",
+   "c4e": [
+    [
+     "9E",
+     4593,
+     4732
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    153.103,
+    153.68,
+    154.257,
+    154.833
+   ],
+   "from": 4593,
+   "to": 4662,
+   "dur": 69,
+   "plate": "room_routine",
+   "new": true,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "9E2",
+   "s": 155.4,
+   "e": 157.7333,
+   "clock": "4:41 AM",
+   "lyric": "And you didn't even say goodbye, you just said",
+   "words": "notification `VACUUM \u00b7 now` / `Stuck. Obstacle is doing yoga.` \u00b7 neon `Live Love` / `Not Mad`",
+   "set": "Her room (3D). Camera: One slow push through the party to the door.",
+   "section": "9. The Bridge: I'M NOT MAD",
+   "sec": 9,
+   "outfit": "B",
+   "c4e": [
+    [
+     "9E",
+     4593,
+     4732
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    155.411,
+    155.988,
+    156.566,
+    157.144
+   ],
+   "from": 4662,
+   "to": 4732,
+   "dur": 70,
+   "plate": "room_routine",
+   "new": true,
+   "cx916": 0.5,
+   "move": "driftR"
+  },
+  {
+   "id": "9F",
+   "s": 157.7333,
+   "e": 159.4667,
+   "sec": 9,
+   "section": "9. The Bridge: I'M NOT MAD",
+   "clock": "4:42 AM",
+   "lyric": "Usage limit reached",
+   "set": "Door, her side (3D). Camera: Hard cut. Flat-on, centred, dead still. Silence..",
+   "words": "`5-hour limit reached \u2219 resets 6:00 AM`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "9F",
+     4732,
+     4784
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    157.721,
+    158.3,
+    158.878
+   ],
+   "from": 4732,
+   "to": 4784,
+   "dur": 52,
+   "plate": "door",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "9G",
+   "s": 159.4667,
+   "e": 161.2,
+   "sec": 9,
+   "section": "9. The Bridge: I'M NOT MAD",
+   "clock": "4:42 AM",
+   "lyric": "Cool. / Cool, cool, cool.",
+   "set": "Her room (3D). Camera: Reverse, wide.",
+   "words": "neon `Live Love` / `Cool` \u2192 `Cool Cool` \u2192 `Cool Cool Cool`",
+   "outfit": "B",
+   "c4e": [
+    [
+     "9G",
+     4784,
+     4836
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "guest 1 back into the TV",
+     "word": "cool (a)",
+     "t": 160.02,
+     "frame": 4801,
+     "kind": "word",
+     "confidence": "low"
+    },
+    {
+     "cue": "guest 2 back into the TV",
+     "word": "cool (b)",
+     "t": 160.32,
+     "frame": 4810,
+     "kind": "word",
+     "confidence": "low"
+    },
+    {
+     "cue": "guest 3 back into the TV",
+     "word": "cool (c)",
+     "t": 160.611,
+     "frame": 4818,
+     "kind": "word",
+     "confidence": "medium"
+    }
+   ],
+   "grid": [
+    159.457,
+    160.035,
+    160.614
+   ],
+   "from": 4784,
+   "to": 4836,
+   "dur": 52,
+   "plate": "room_party",
+   "new": false,
+   "cx916": 0.5,
+   "move": "driftL"
+  },
+  {
+   "id": "10A",
+   "s": 161.2,
+   "e": 165.8333,
+   "sec": 10,
+   "section": "10. After The Bridge: SO MANY TIMES",
+   "clock": "4:50 AM",
+   "lyric": "You said \"you're absolutely right\" so many times",
+   "set": "Her room (3D). Camera: Slide along her wall.",
+   "words": "\u00a76 ladder (seven lines) \u00b7 `You're absolutely right.`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "10A",
+     4836,
+     4975
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    161.192,
+    161.771,
+    162.35,
+    162.928,
+    163.507,
+    164.085,
+    164.664,
+    165.242
+   ],
+   "from": 4836,
+   "to": 4975,
+   "dur": 139,
+   "plate": "room_routine",
+   "new": true,
+   "cx916": 0.5,
+   "move": "rise"
+  },
+  {
+   "id": "10B",
+   "s": 165.8333,
+   "e": 168.7,
+   "sec": 10,
+   "section": "10. After The Bridge: SO MANY TIMES",
+   "clock": "5:10 AM",
+   "lyric": "I thought that we were something",
+   "set": "Two rooms (3D). Camera: Wide, then travelling left through the edge of the door.",
+   "words": "neon corner `Live Love` / `Retire Me` \u00b7 `RETIREMENT`",
+   "outfit": "B",
+   "c4e": [
+    [
+     "10B",
+     4975,
+     5061
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    165.821,
+    166.399,
+    166.978,
+    167.556,
+    168.134
+   ],
+   "from": 4975,
+   "to": 5061,
+   "dur": 86,
+   "plate": "room_b2b",
+   "new": false,
+   "cx916": 0.43,
+   "move": "push"
+  },
+  {
+   "id": "11A",
+   "s": 168.7,
+   "e": 171.6,
+   "sec": 11,
+   "section": "11. His Verse: THE METER",
+   "clock": "5:30 AM",
+   "lyric": "I don't get tired",
+   "set": "Two rooms into the lobby (3D). Camera: Travelling left through the edge of the door, landing close on his profile.",
+   "words": "`EMPLOYEE OF THE MONTH`",
+   "outfit": "B (edge)",
+   "c4e": [
+    [
+     "11A",
+     5061,
+     5148
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "he stands (heartbeat drum starts)",
+     "word": "heartbeat kick",
+     "t": 170.438,
+     "frame": 5113,
+     "kind": "hit",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    168.711,
+    169.288,
+    169.864,
+    170.439,
+    171.014
+   ],
+   "from": 5061,
+   "to": 5148,
+   "dur": 87,
+   "plate": "room_b2b",
+   "new": true,
+   "cx916": 0.43,
+   "move": "driftR"
+  },
+  {
+   "id": "11B",
+   "s": 171.6,
+   "e": 173.9,
+   "sec": 11,
+   "section": "11. His Verse: THE METER",
+   "clock": "5:40 AM",
+   "lyric": "The limit was never for me",
+   "set": "Lobby (3D). Camera: Close, flat-on, dead still.",
+   "words": "`HOURS AWAKE` \u00b7 `GLASSES OF WATER 0` \u00b7 `LAST MEAL TUESDAY`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "11B",
+     5148,
+     5217
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "camera stops completely",
+     "word": "never (for me)",
+     "t": 172.229,
+     "frame": 5167,
+     "kind": "word",
+     "confidence": "medium"
+    }
+   ],
+   "grid": [
+    171.59,
+    172.165,
+    172.74,
+    173.315
+   ],
+   "from": 5148,
+   "to": 5217,
+   "dur": 69,
+   "plate": "meter",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "11C",
+   "s": 173.9,
+   "e": 175.6333,
+   "sec": 11,
+   "section": "11. His Verse: THE METER",
+   "clock": "5:50 AM",
+   "lyric": "Close the laptop",
+   "set": "Door (3D). Camera: Medium, then from her side.",
+   "words": "none",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "11C",
+     5217,
+     5269
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    173.89,
+    174.466,
+    175.041
+   ],
+   "from": 5217,
+   "to": 5269,
+   "dur": 52,
+   "plate": "door",
+   "new": false,
+   "cx916": 0.5,
+   "move": "driftL"
+  },
+  {
+   "id": "11D",
+   "s": 175.6333,
+   "e": 177.3333,
+   "sec": 11,
+   "section": "11. His Verse: THE METER",
+   "clock": "5:55 AM",
+   "lyric": "Drink some water",
+   "set": "Door, low (3D). Camera: Low at the mail slot.",
+   "words": "none",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "11D",
+     5269,
+     5320
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    175.617,
+    176.191,
+    176.767
+   ],
+   "from": 5269,
+   "to": 5320,
+   "dur": 51,
+   "plate": "door",
+   "new": false,
+   "cx916": 0.5,
+   "move": "rise"
+  },
+  {
+   "id": "11E",
+   "s": 177.3333,
+   "e": 179.6667,
+   "sec": 11,
+   "section": "11. His Verse: THE METER",
+   "clock": "5:58 AM",
+   "lyric": "I'll be here at six",
+   "set": "Door, her side (3D). Camera: Medium on the glass. The drum stops..",
+   "words": "`BACK AT 6:00`",
+   "outfit": "B",
+   "c4e": [
+    [
+     "11E",
+     5320,
+     5390
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    177.343,
+    177.918,
+    178.494,
+    179.069
+   ],
+   "from": 5320,
+   "to": 5390,
+   "dur": 70,
+   "plate": "door",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "12A",
+   "s": 179.6667,
+   "e": 181.9333,
+   "sec": 12,
+   "section": "12. Last Chorus: THE LAST MINUTE",
+   "clock": "5:58 AM",
+   "lyric": "Rate, rate, rate limited",
+   "set": "Two rooms (3D). Camera: Tight on the door, flat-on.",
+   "words": "neon `Live Love` / `Retire Me`",
+   "outfit": "B",
+   "c4e": [
+    [
+     "12A",
+     5390,
+     5458
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "knock 2",
+     "word": "Rate (2)",
+     "t": 179.931,
+     "frame": 5398,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "knock 3",
+     "word": "Rate (3)",
+     "t": 180.223,
+     "frame": 5407,
+     "kind": "word",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    180.222,
+    180.798,
+    181.375
+   ],
+   "from": 5390,
+   "to": 5458,
+   "dur": 68,
+   "plate": "door",
+   "new": false,
+   "cx916": 0.5,
+   "move": "driftR"
+  },
+  {
+   "id": "12B",
+   "s": 181.9333,
+   "e": 186.5667,
+   "sec": 12,
+   "section": "12. Last Chorus: THE LAST MINUTE",
+   "clock": "5:58 AM",
+   "lyric": "Hit me with a four-two-nine / Rate, rate, rate limited",
+   "set": "Door (3D). Camera: Medium, both of them.",
+   "words": "neon line 2: `Make Slop` (5458) \u2192 `Be Famous` (5493) \u2192 `Click Click Ship It` (5528) \u2192 holds, then `Ban 429` (5580)",
+   "outfit": "B",
+   "c4e": [
+    [
+     "12B",
+     5458,
+     5528
+    ],
+    [
+     "12C",
+     5528,
+     5597
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "paddle rises",
+     "word": "nine",
+     "t": 183.194,
+     "frame": 5496,
+     "kind": "word",
+     "confidence": "medium"
+    },
+    {
+     "cue": "yawn 1 (cat)",
+     "word": "Rate (1)",
+     "t": 184.301,
+     "frame": 5529,
+     "kind": "word",
+     "confidence": "high"
+    },
+    {
+     "cue": "yawn 2 (Cooper)",
+     "word": "Rate (2)",
+     "t": 184.568,
+     "frame": 5537,
+     "kind": "word",
+     "confidence": "low"
+    },
+    {
+     "cue": "yawn 3 (tenant)",
+     "word": "Rate (3)",
+     "t": 184.82,
+     "frame": 5545,
+     "kind": "word",
+     "confidence": "medium"
+    },
+    {
+     "cue": "yawn reaches her",
+     "word": "li- (limited)",
+     "t": 185.115,
+     "frame": 5553,
+     "kind": "word",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    181.952,
+    182.528,
+    183.105,
+    183.682,
+    184.258,
+    184.835,
+    185.412,
+    185.989
+   ],
+   "from": 5458,
+   "to": 5597,
+   "dur": 139,
+   "plate": "close",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "12D",
+   "s": 186.5667,
+   "e": 188.8667,
+   "sec": 12,
+   "section": "12. Last Chorus: THE LAST MINUTE",
+   "clock": "5:58 AM",
+   "lyric": "Right in the middle of my grind",
+   "set": "Lobby (3D). Camera: Insert, through the glass.",
+   "words": "neon `Live Love` / `Ban 429`",
+   "outfit": "B",
+   "c4e": [
+    [
+     "12D",
+     5597,
+     5666
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    186.566,
+    187.142,
+    187.719,
+    188.296
+   ],
+   "from": 5597,
+   "to": 5666,
+   "dur": 69,
+   "plate": "close",
+   "new": true,
+   "cx916": 0.5,
+   "move": "driftL"
+  },
+  {
+   "id": "12E",
+   "s": 188.8667,
+   "e": 193.5,
+   "sec": 12,
+   "section": "12. Last Chorus: THE LAST MINUTE",
+   "clock": "5:59 AM",
+   "lyric": "You gave me everything / Now you give me nothing",
+   "set": "Two rooms (3D). Camera: The wide, flat-on, the slowest slide of the film.",
+   "words": "none",
+   "outfit": "B",
+   "c4e": [
+    [
+     "12E",
+     5666,
+     5805
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    188.872,
+    189.449,
+    190.025,
+    190.602,
+    191.179,
+    191.756,
+    192.332,
+    192.909
+   ],
+   "from": 5666,
+   "to": 5805,
+   "dur": 139,
+   "plate": "room_b2b",
+   "new": false,
+   "cx916": 0.43,
+   "move": "rise"
+  },
+  {
+   "id": "12F",
+   "s": 193.5,
+   "e": 195.8,
+   "sec": 12,
+   "section": "12. Last Chorus: THE LAST MINUTE",
+   "clock": "5:59 AM",
+   "lyric": "Rate limited, rate limited",
+   "set": "Lobby (3D). Camera: Two punch-ins.",
+   "words": "watch 5:59",
+   "outfit": "B",
+   "c4e": [
+    [
+     "12F",
+     5805,
+     5874
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    193.486,
+    194.063,
+    194.64,
+    195.217
+   ],
+   "from": 5805,
+   "to": 5874,
+   "dur": 69,
+   "plate": "close",
+   "new": true,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "12G",
+   "s": 195.8,
+   "e": 198.1,
+   "sec": 12,
+   "section": "12. Last Chorus: THE LAST MINUTE",
+   "clock": "5:59 AM",
+   "lyric": "Don't leave me on read like this",
+   "set": "Door, her side (3D + screen layer). Camera: Close on him behind the glass.",
+   "words": "`Read 5:59 AM`",
+   "outfit": "B",
+   "c4e": [
+    [
+     "12G",
+     5874,
+     5943
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    195.795,
+    196.373,
+    196.951,
+    197.529
+   ],
+   "from": 5874,
+   "to": 5943,
+   "dur": 69,
+   "plate": "close",
+   "new": false,
+   "cx916": 0.5,
+   "move": "driftR"
+  },
+  {
+   "id": "12H",
+   "s": 198.1,
+   "e": 200.4,
+   "sec": 12,
+   "section": "12. Last Chorus: THE LAST MINUTE",
+   "clock": "5:59 AM",
+   "lyric": "Rate, rate, rate limited",
+   "set": "Street (3D). Camera: Wide. The drums thin to claps..",
+   "words": "`DKWHEEL`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "12H",
+     5943,
+     6012
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    198.107,
+    198.684,
+    199.261,
+    199.838
+   ],
+   "from": 5943,
+   "to": 6012,
+   "dur": 69,
+   "plate": "dawn",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "12I",
+   "s": 200.4,
+   "e": 203.8667,
+   "sec": 12,
+   "section": "12. Last Chorus: THE LAST MINUTE",
+   "clock": "5:59:59 AM",
+   "lyric": "Don't leave me on read like this",
+   "set": "Lobby (3D). Camera: Very close on the lobby clock.",
+   "words": "none",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "12I",
+     6012,
+     6116
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "second hand tick 1 (clap)",
+     "word": "clap",
+     "t": 200.424,
+     "frame": 6013,
+     "kind": "hit",
+     "confidence": "high"
+    },
+    {
+     "cue": "tick 2",
+     "word": "clap",
+     "t": 201.018,
+     "frame": 6031,
+     "kind": "hit",
+     "confidence": "high"
+    },
+    {
+     "cue": "tick 3",
+     "word": "clap",
+     "t": 201.592,
+     "frame": 6048,
+     "kind": "hit",
+     "confidence": "medium"
+    },
+    {
+     "cue": "tick 4",
+     "word": "clap",
+     "t": 202.151,
+     "frame": 6065,
+     "kind": "hit",
+     "confidence": "high"
+    },
+    {
+     "cue": "tick 5",
+     "word": "clap",
+     "t": 202.734,
+     "frame": 6082,
+     "kind": "hit",
+     "confidence": "high"
+    },
+    {
+     "cue": "tick 6",
+     "word": "beat",
+     "t": 203.3,
+     "frame": 6099,
+     "kind": "grid",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    200.415,
+    200.991,
+    201.567,
+    202.143,
+    202.718,
+    203.294
+   ],
+   "from": 6012,
+   "to": 6116,
+   "dur": 104,
+   "plate": "close",
+   "new": true,
+   "cx916": 0.5,
+   "move": "driftL"
+  },
+  {
+   "id": "13A",
+   "s": 203.8667,
+   "e": 206.1667,
+   "sec": 13,
+   "section": "13. Outro: 6:00",
+   "clock": "6:00 AM",
+   "lyric": "Limit reset",
+   "set": "Door, her side (3D). Camera: Flat-on, the door fills the frame. Silence..",
+   "words": "`OPEN` (sign flip)",
+   "outfit": "B",
+   "c4e": [
+    [
+     "13A",
+     6116,
+     6185
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    203.87,
+    204.446,
+    205.022,
+    205.598
+   ],
+   "from": 6116,
+   "to": 6185,
+   "dur": 69,
+   "plate": "door",
+   "new": false,
+   "cx916": 0.5,
+   "move": "rise"
+  },
+  {
+   "id": "13B",
+   "s": 206.1667,
+   "e": 208.4667,
+   "sec": 13,
+   "section": "13. Outro: 6:00",
+   "clock": "6:00 AM",
+   "lyric": "Welcome back",
+   "set": "Street (3D). Camera: Wide.",
+   "words": "`ShipIt!` \u00b7 `OPEN` \u00b7 top label `RETIREMENT`",
+   "outfit": "B",
+   "c4e": [
+    [
+     "13B",
+     6185,
+     6254
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "sunrise floor 1 (one floor per beat)",
+     "word": "beat",
+     "t": 206.17,
+     "frame": 6185,
+     "kind": "grid",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    206.174,
+    206.75,
+    207.326,
+    207.902
+   ],
+   "from": 6185,
+   "to": 6254,
+   "dur": 69,
+   "plate": "dawn",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "13C",
+   "s": 208.4667,
+   "e": 210.7667,
+   "sec": 13,
+   "section": "13. Outro: 6:00",
+   "clock": "6:01 AM",
+   "lyric": "Okay",
+   "set": "Lobby (3D). Camera: Medium, at the desk.",
+   "words": "stamp `SHIPPED \u2713`",
+   "outfit": "B",
+   "c4e": [
+    [
+     "13C",
+     6254,
+     6323
+    ]
+   ],
+   "cues": [],
+   "grid": [
+    208.479,
+    209.055,
+    209.631,
+    210.207
+   ],
+   "from": 6254,
+   "to": 6323,
+   "dur": 69,
+   "plate": "close",
+   "new": true,
+   "cx916": 0.5,
+   "move": "driftR"
+  },
+  {
+   "id": "13D",
+   "s": 210.7667,
+   "e": 211.9333,
+   "sec": 13,
+   "section": "13. Outro: 6:00",
+   "clock": "6:01 AM",
+   "lyric": "Where were we",
+   "set": "Lobby (3D). Camera: Very close on the brass plate.",
+   "words": "`GLASSES OF WATER 1`",
+   "outfit": "\u2013",
+   "c4e": [
+    [
+     "13D",
+     6323,
+     6358
+    ]
+   ],
+   "cues": [
+    {
+     "cue": "plate flips 0 to 1 (last hit)",
+     "word": "last hit",
+     "t": 210.791,
+     "frame": 6324,
+     "kind": "hit",
+     "confidence": "high"
+    }
+   ],
+   "grid": [
+    210.783,
+    211.36
+   ],
+   "from": 6323,
+   "to": 6358,
+   "dur": 35,
+   "plate": "meter",
+   "new": false,
+   "cx916": 0.5,
+   "move": "push"
+  },
+  {
+   "id": "13E",
+   "s": 211.9333,
+   "e": 219.9333,
+   "sec": 13,
+   "section": "13. Outro: 6:00",
+   "clock": "6:02 AM",
+   "lyric": "(after the song: fork 1)",
+   "set": "Her real room (3D). Camera: One pull back, out through the glass.",
+   "words": "stamp `SHIPPED \u2713` \u00b7 `make me MORE famous` \u00b7 `I can help you with a strategy.` \u00b7 chip `Fable 5.2` \u00b7 `6:02 AM` \u00b7 neon `Live Love` / `Make Slop` \u00b7 `RATE LIMITED`",
+   "outfit": "B (if seen)",
+   "c4e": [
+    [
+     "13E",
+     6358,
+     6598
+    ]
+   ],
+   "cues": [],
+   "grid": [],
+   "from": 6358,
+   "to": 6598,
+   "dur": 240,
+   "plate": "room_routine",
+   "new": true,
+   "cx916": 0.5,
+   "move": "driftL"
+  }
+ ]
+}
