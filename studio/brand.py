@@ -292,9 +292,14 @@ def draw_tag(im, tag, x, y, accent):
     im.paste(chip, (int(x), int(y)), chip)
 
 
-def brand_cover(picture, lines, sub=None, side="left", accent=None, tag=None, model=None, ink=None, credit_col=None):
-    """ink: color of the headline's first line(s) (default the brand ink); credit_col: the credit line's color (default white)."""
+def brand_cover(picture, lines, sub=None, side="left", accent=None, tag=None, model=None, ink=None, credit_col=None,
+                credit_only=False):
+    """ink: color of the headline's first line(s) (default the brand ink); credit_col: the credit line's color (default white).
+    credit_only: the film's frame with just the credit as the two-line headline, MADE WITH / CLAUDE <MODEL> in the accent."""
     im = picture.convert("RGB").resize((W, H), Image.LANCZOS)
+    if credit_only:
+        headline(im, ["MADE WITH", (model or MODEL).upper()], None, side, MY, accent, tag, ink=ink)
+        return im
     if LOCKUP:                                           # the old layout: photo chip + italic description
         bottom = lockup(im)
         if lines: headline(im, lines, sub, side, bottom, accent, tag)
@@ -324,7 +329,7 @@ def song_cover(song, frame, slug=None, c=None):
     side = c.get("side", song.get("thumb_hook_side", "left"))
     accent = ACCENTS[c.get("accent", song.get("brand_accent", "green"))]
     return brand_cover(pic, lines, c.get("sub", song.get("thumb_sub")), side, accent, c.get("tag", song.get("brand_tag")),
-                       c.get("model", song.get("model_credit")))
+                       c.get("model", song.get("model_credit")), credit_only=bool(c.get("credit_only")))
 
 
 # ---------------------------------------------------------------- driver
