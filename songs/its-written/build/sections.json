@@ -1,0 +1,82 @@
+[
+ {
+  "name": "INTRO",
+  "s": 0.0,
+  "first_line": "",
+  "first_word_t": 3.111473922902494,
+  "e": 3.111473922902494,
+  "kind": "intro"
+ },
+ {
+  "name": "INTRO",
+  "s": 3.111473922902494,
+  "first_line": "Mm, a dream, a wind, a road",
+  "first_word_t": 3.6199998378753664,
+  "e": 30.766439909297052,
+  "kind": "intro"
+ },
+ {
+  "name": "V1",
+  "s": 30.766439909297052,
+  "first_line": "The camel driver told me what it means",
+  "first_word_t": 30.319999992847443,
+  "e": 46.95074829931973,
+  "kind": "verse"
+ },
+ {
+  "name": "CH1",
+  "s": 46.95074829931973,
+  "first_line": "It's written",
+  "first_word_t": 48.31999969482422,
+  "e": 65.31773242630385,
+  "kind": "chorus"
+ },
+ {
+  "name": "V2",
+  "s": 65.31773242630385,
+  "first_line": "Lost my money, so I found the shop",
+  "first_word_t": 66.96000003814697,
+  "e": 74.48961451247166,
+  "kind": "verse"
+ },
+ {
+  "name": "CH2",
+  "s": 74.48961451247166,
+  "first_line": "It's written",
+  "first_word_t": 76.0,
+  "e": 95.08571428571429,
+  "kind": "chorus"
+ },
+ {
+  "name": "BREAK",
+  "s": 95.08571428571429,
+  "first_line": "Who wrote it? Don't know",
+  "first_word_t": 95.27999973297119,
+  "e": 120.16326530612245,
+  "kind": "other"
+ },
+ {
+  "name": "V3",
+  "s": 120.16326530612245,
+  "first_line": "War in the dunes, so the caravan halts",
+  "first_word_t": 121.67999994754791,
+  "e": 129.24226757369615,
+  "kind": "verse"
+ },
+ {
+  "name": "FINAL",
+  "s": 129.24226757369615,
+  "first_line": "It's written",
+  "first_word_t": 130.7199993133545,
+  "e": 158.91736961451247,
+  "kind": "chorus"
+ },
+ {
+  "name": "OUTRO",
+  "s": 158.91736961451247,
+  "first_line": "Then someone at the well looks up",
+  "first_word_t": 158.59999990463257,
+  "e": 187.6,
+  "kind": "outro"
+ }
+]

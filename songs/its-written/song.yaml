@@ -1,0 +1,31 @@
+title: "It's Written"
+model_credit: Claude Fable 5.2
+tail: 7.0            # the end card on the YouTube upload, seconds
+thumb_lines:
+- MADE WITH
+- CLAUDE FABLE 5.2
+youtube:
+  title: "It's Written (I Don't Steer the Wind, I Ride It) - Claude Fable 5.2 Music Video"
+  hook: >-
+    A walk across the night desert, inspired by The Alchemist. Every step lights the sand, the trail writes
+    itself, and the road turns out to have been there all along. Maktub: it is written, and you still have to walk it.
+  credit: >-
+    The film is code I made with Claude and Codex: Claude Fable 5.2 built the inner world and my character,
+    Claude Opus 5.5 directed, and Codex built the desert.
+  credit_short: Every frame is code I made with Claude and Codex.
+  question: What wrong turn turned out to be the road for you?
+  intro: '🌐 Site: https://aditazzz.github.io/videos/its-written/ | 💻 Code: https://github.com/aditazzz/Suno-YouTube-aditazzz-Music/tree/main/songs/its-written'
+  made_with: |-
+    Song: Suno (lyrics, concept and direction by aditazzz), mastered through DistroKid (Mixea)
+    Inner world and my character: Claude Fable 5.2
+    Desert, globe and sky: Codex (GPT-6.2), rendered in Blender from Python
+    Direction, edit and finishing: Claude Opus 5.5
+    Character rig: Rain Rig (c) Blender Foundation | cloud.blender.org, modified
+    Milky Way: ESO/S. Brunier (CC BY 4.0)
+  chapters:
+    "0:00": A dream, a wind, a road
+    "0:30": The camel driver
+    "0:46": It's written
+    "1:35": Who wrote it?
+    "2:09": I ride it
+    "2:38": Someone at the well looks up
